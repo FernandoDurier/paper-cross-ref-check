@@ -16,4 +16,5 @@ done
 python index.py
 python clean-json.py
 python 1st-deep-clean.py
+python graphis.py
 
