@@ -1,0 +1,1013 @@
+{
+    "abstract": {
+        "p": "This paper presents a supervised learning method for irony detection in Arabic tweets. A binary classifier uses four groups of fAebatsutrreasctwhose efficiency has been empirically proved in other languages such as French, English, Italian, Dutch and Japanese. Our first results are encouraging and show that state of the art features can be successfully applied to Arabic language with an accuracy This paper presents a supervised learning method for irony detection in Arabic tweets. A binary classifier uses four groups of of 72.76%. features whose efficiency has been empirically proved in other languages such as French, English, Italian, Dutch and Japanese. Our fiK\u00a9resy2tw0re1os7rudTlst:hseaArAreaubetinhccotowrsue.reaPtgsui;bnolgipsiahnnieoddnsbahynoawElylsstihesav;tiiesrrotanBtye.Vdoe.ftetchteioanr;t sfuepaeturvriessedc alenarbneinsguccessfully applied to Arabic language with an accuracy oPfe7er2-.r7e6v%iew. under responsibility of the scienticfi committee of the 3rd International Conference on Arabic Computational Linguistics."
+    },
+    "affiliation": [
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff0",
+            "addr-line": "118 Route de Narbonne, F-31062 Toulouse Cedex 9",
+            "country": {
+                "#text": "France",
+                "@country": "FR"
+            },
+            "institution": "IRIT, CNRS, Toulouse University",
+            "label": "0"
+        },
+        {
+            "#text": ",",
+            "@id": "aff1",
+            "country": {
+                "#text": "France",
+                "@country": "FR"
+            },
+            "institution": "LIMSI, CNRS, Univ. Paris-Sud, Universite ? Paris-Saclay",
+            "label": "1"
+        },
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff2",
+            "addr-line": "Route de Tunis, 3021 SFAX",
+            "country": {
+                "#text": "Tunisia",
+                "@country": "TN"
+            },
+            "institution": "MIRACL, Sfax Technology Center",
+            "label": "2"
+        }
+    ],
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Dubai"
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "United Arab Emirates"
+        },
+        {
+            "@contrib-type": "author",
+            "email": "jihen.karoui@irit.fr",
+            "string-name": "c a Jihen Karoui"
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Farah BSanoa",
+            "xref": {
+                "#text": "2",
+                "@ref-type": "aff",
+                "@rid": "aff2"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "rla MZit"
+        },
+        {
+            "@contrib-type": "author",
+            "email": "moriceau@limsi.fr",
+            "string-name": "Ve\u00b4ronique Moriceau"
+        }
+    ],
+    "journal": "ProPcerodciaedCiaomCpoumteprutSecriSenccieen",
+    "keywords": [
+        "Arabic tweets",
+        "opinion analysis",
+        "irony detection",
+        "supervised learning"
+    ],
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/soukhria-towards-an-irony-detection-system-for-arabic-in-social-media.json",
+    "pub_date": {
+        "year": "2017"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Irony as relevant inappropriateness",
+                "fpage": "793",
+                "lpage": "826",
+                "source": "Journal of pragmatics 32 (6)",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "S.",
+                    "surname": "Attardo"
+                },
+                "year": "2000"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Contextualized sarcasm detection on twitter",
+                "fpage": "574",
+                "lpage": "577",
+                "source": "In: Proceedings of the International Conference on Web and Social Media. ICWSM",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Bamman"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N. A.",
+                        "surname": "Smith"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Modelling irony in twitter: Feature analysis and evaluation",
+                "fpage": "4258",
+                "lpage": "4264",
+                "source": "In: Proceedings of LREC",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "F.",
+                        "surname": "Barbieri"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "H.",
+                        "surname": "Saggion"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          ,\n          \n          , Bened\u00b4?ruiz,\n          \n          ,\n          \n          . Anersys:\n          \n          .\n          \n          . Springer, pp.\n          \n          -\n          \n          .",
+                "article-title": "An arabic named entity recognition system based on maximum entropy",
+                "fpage": "143",
+                "lpage": "153",
+                "source": "In: International Conference on Intelligent Text Processing and Computational Linguistics",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Benajiba"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "surname": "J. M."
+                    }
+                ],
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .",
+                "article-title": "Automatic satire detection: Are you having a laugh? In: Proceedings of the ACL-IJCNLP conference",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Burfoot"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Baldwin"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          .",
+                "article-title": "An impact analysis of features in a classification approach to irony detection in product reviews",
+                "source": "ACL",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Buschmeier"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Cimiano"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Klinger"
+                    }
+                ],
+                "volume": "42",
+                "year": [
+                    "2014",
+                    "2014"
+                ]
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ...!\n          \n          .\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": [
+                    "Clues for detecting irony in user-generated contents: oh",
+                    "! it's so easy;-)"
+                ],
+                "fpage": "53",
+                "lpage": "56",
+                "source": "In: Proceedings of the 1st international CIKM workshop on Topic-sentiment analysis for mass opinion. ACM",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Carvalho"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Sarmento"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M. J.",
+                        "surname": "Silva"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "E. D.",
+                        "surname": "Oliveira"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Translating irony in political commentary texts from english into arabic",
+                "fpage": "216",
+                "issue": "3",
+                "lpage": "240",
+                "source": "Babel",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "R.",
+                    "surname": "Chakhachiro"
+                },
+                "volume": "53",
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "On the pretense theory of irony",
+                "fpage": "121",
+                "issue": "1",
+                "lpage": "126",
+                "source": "Journal of Experimental Psychology: General",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "H. H.",
+                        "surname": "Clark"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R. J.",
+                        "surname": "Gerrig"
+                    }
+                ],
+                "volume": "113",
+                "year": "1984"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Irony in conversation",
+                "fpage": "523",
+                "lpage": "553",
+                "source": "Language in Society 28",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "R.",
+                    "surname": "Clift"
+                },
+                "year": "1999"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Semi-supervised recognition of sarcastic sentences in twitter and amazon",
+                "fpage": "107",
+                "lpage": "116",
+                "source": [
+                    "In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning",
+                    "CoNLL '10"
+                ],
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "[12]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Open issues in the sentiment analysis of arabic social media: A case study",
+                "fpage": "215",
+                "lpage": "220",
+                "source": "In: 2013 9th International Conference on Innovations in Information Technology (IIT)",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S. R.",
+                        "surname": "El-Beltagy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Ali"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "[13]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          . Semeval-2015 task 11:\n          \n          .\n          \n          \n          ,\n          \n          .\n          \n          , p.\n          \n          .",
+                "article-title": [
+                    "Sentiment Analysis of Figurative Language in Twitter",
+                    "Co-located with NAACL"
+                ],
+                "fpage": "470478",
+                "source": [
+                    "In: Proceedings of SemEval",
+                    "ACL"
+                ],
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Ghosh"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "G.",
+                        "surname": "Li"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Veale"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Shutova"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Barnden"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    }
+                ],
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          , Istanbul, Turkey. pp.\n          \n          -\n          \n          .",
+                "article-title": "Annotating irony in a novel italian corpus for sentiment analysis",
+                "fpage": "1",
+                "lpage": "7",
+                "source": "In: Proceedings of the 4th Workshop on Corpora for Research on Emotion Sentiment and Social Signals",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Gianti"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Bosco"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Patti"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Bolioli"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L. D.",
+                        "surname": "Caro"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "[15]\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Irony in talk among friends",
+                "fpage": "5",
+                "lpage": "27",
+                "source": "Metaphor and symbol 15 (1-2)",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "R. W.",
+                    "surname": "Gibbs"
+                },
+                "year": "2000"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "[16]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          . In:\n          \n          . ACL, pp.\n          \n          -\n          \n          .",
+                "article-title": [
+                    "Identifying sarcasm in twitter: a closer look",
+                    "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume 2"
+                ],
+                "fpage": "581",
+                "lpage": "586",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Gonzalez-Ibanez"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Muresan"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.",
+                        "surname": "Wacholde"
+                    }
+                ],
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "[17]\n          \n          ,\n          \n          , Morgan,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Syntax and semantics",
+                "fpage": "41",
+                "lpage": "58",
+                "source": "Logic and conversation 3",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "H. P.",
+                        "surname": "Grice"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Cole"
+                    },
+                    {
+                        "surname": "J. L."
+                    }
+                ],
+                "year": "1975"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "[18]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "A speech act analysis of irony",
+                "fpage": "77",
+                "issue": "1",
+                "lpage": "109",
+                "source": "Journal of Pragmatics",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "H.",
+                    "surname": "Haverkate"
+                },
+                "volume": "14",
+                "year": "1990"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "[19]\n          \n          ,\n          \n          ,\n          \n          . Irony, Sarcasm,\n          \n          .\n          \n          , pp.\n          \n          -\n          \n          .",
+                "fpage": "113",
+                "lpage": "128",
+                "source": "Elsevier Science and Technology, Ch. 7 In: Sentiment Analysis in Social Networks",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "I.",
+                        "surname": "Hernandez"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "given-names": "and Sentiment",
+                        "surname": "Analysis"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "[20]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          , Volume\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Towards a contextual pragmatic model to detect irony in tweets",
+                "fpage": "644",
+                "lpage": "650",
+                "source": "In: Proceedings of ACL-IJCNLP",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Karoui"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "F.",
+                        "surname": "Benamara"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Moriceau"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.",
+                        "surname": "Aussenac-Gilles"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L. H.",
+                        "surname": "Belguith"
+                    }
+                ],
+                "volume": "2",
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "[21]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Learning explicit and implicit arabic discourse relations",
+                "fpage": "398",
+                "issue": "4",
+                "lpage": "416",
+                "source": "Journal of King Saud UniversityComputer and Information Sciences",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "I.",
+                        "surname": "Keskes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "F. B.",
+                        "surname": "Zitoune"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L. H.",
+                        "surname": "Belguith"
+                    }
+                ],
+                "volume": "26",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": "[22]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "The differential role of ridicule in sarcasm and irony",
+                "fpage": "1",
+                "issue": "1",
+                "lpage": "15",
+                "source": "Metaphor and Symbol",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C. J.",
+                        "surname": "Lee"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A. N.",
+                        "surname": "Katz"
+                    }
+                ],
+                "volume": "13",
+                "year": "1998"
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": "[23]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          to Subjectivity,\n          \n          . New Brunswick, NJ: ACL, pp.\n          \n          -\n          \n          .",
+                "article-title": [
+                    "The perfect solution for detecting sarcasm in tweets# not",
+                    "Sentiment and Social Media Analysis"
+                ],
+                "fpage": "29",
+                "lpage": "37",
+                "source": "In: Proceedings of the 4th Workshop on Computational Approaches",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Liebrecht"
+                    },
+                    {
+                        "#text": ", F., van den,",
+                        "given-names": "B. A.",
+                        "surname": "Kunneman"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": "[24]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Who cares about sarcastic tweets? investigating the impact of sarcasm on sentiment analysis",
+                "fpage": "4238",
+                "lpage": "4243",
+                "source": "In: LREC",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Maynard"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M. A.",
+                        "surname": "Greenwood"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": "[25]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "An arabic twitter corpus for subjectivity and sentiment analysis",
+                "fpage": "2268",
+                "lpage": "2273",
+                "source": "In: LREC",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Refaee"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Rieser"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": "[26]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Making objective decisions from subjective data: Detecting irony in customer reviews",
+                "fpage": "754",
+                "issue": "4",
+                "lpage": "760",
+                "source": "Decision Support Systems",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    }
+                ],
+                "volume": "53",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": "[27]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "A multidimensional approach for detecting irony in twitter",
+                "fpage": "239",
+                "lpage": "268",
+                "source": "Language resources and evaluation 47 (1)",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Veale"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": "[28]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          , (on line).",
+                "article-title": "Lexconn: A french lexicon of discourse connectives",
+                "source": "Discours, Multidisciplinary Perspectives on Signalling Text Organisation",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Roze"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Danlos"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Muller"
+                    }
+                ],
+                "volume": "10",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": "[29]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .",
+                "article-title": "Sentiment lexicons for arabic social media",
+                "source": "In: Proceedings of LREC.",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "M.",
+                        "surname": "Saif"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Mohammad"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Svetlana"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": "[30]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "A contrastive study of ironic expressions in english and arabic",
+                "fpage": "795",
+                "issue": "2",
+                "lpage": "817",
+                "source": "College of Basic Education Researchers Journal",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Sigar"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Z.",
+                        "surname": "Taha"
+                    }
+                ],
+                "volume": "12",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": "[31]\n          \n          , Wilson,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Irony and the use-mention distinction",
+                "fpage": "295",
+                "lpage": "318",
+                "source": "Radical pragmatics 49",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Sperber"
+                    },
+                    {
+                        "surname": "D."
+                    }
+                ],
+                "year": "1981"
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": "[32]\n          \n          , Herna\u00b4ndez Far\u00b4?as,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          , In press.",
+                "article-title": "Figurative messages and affect in twitter: Differences between #irony, #sarcasm and #not. Knowledge-Based SystemsAvailable on line",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Sulis"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D. I.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Patti"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Ruffo"
+                    },
+                    {
+                        "surname": "G."
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .",
+                "article-title": "Icwsm-a great catchy name: Semi-supervised recognition of sarcastic sentences in online product reviews",
+                "source": "In: ICWSM.",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": "[34]\n          \n          ,\n          \n          .\n          \n          .\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "A unified theory of irony and its computational formalization",
+                "fpage": "962",
+                "lpage": "967",
+                "source": "In: Proceedings of the 16th Conference on Computational linguistics. ACL",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "A.",
+                    "surname": "Utsumi"
+                },
+                "year": "1996"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": "[35]\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Stylistic and contextual effects in irony processing",
+                "fpage": "1369",
+                "lpage": "1374",
+                "source": "In: Proceedings of the 26th Annual Meeting of the Cognitive Science Society",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "A.",
+                    "surname": "Utsumi"
+                },
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": "[36]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Computational irony: A survey and new perspectives",
+                "fpage": "467",
+                "issue": "4",
+                "lpage": "483",
+                "source": "Artificial Intelleligence Review",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "B. C.",
+                    "surname": "Wallace"
+                },
+                "volume": "43",
+                "year": "2015"
+            }
+        }
+    ],
+    "title": "SOUKHRIA: Towards an Irony Detection System for Arabic in 2017, Dubai, United Arab Emirates Social Media SOUKHRIA: Towards an Irony Detection System for Arabic in"
+}

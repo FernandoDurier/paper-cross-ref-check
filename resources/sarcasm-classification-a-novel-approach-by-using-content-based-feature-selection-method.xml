@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Procedia Computer Science</journal-title>
+      </journal-title-group>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Sarcasm classification: A novel approach by using Content Based Sarcasm classification: A novel approach by using Content Based Sarcasm classification: A novel approach by using Content Based Feature Selection Method Feature Selection Method Feature Selection Method</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>H M Keerthi Kumar</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+          <xref ref-type="aff" rid="aff1">1</xref>
+          <xref ref-type="aff" rid="aff2">2</xref>
+          <xref ref-type="aff" rid="aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>B S Harish</string-name>
+          <email>bsharish@sjce.ac.in</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+          <xref ref-type="aff" rid="aff1">1</xref>
+          <xref ref-type="aff" rid="aff2">2</xref>
+          <xref ref-type="aff" rid="aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>H M Keerthi Kumar</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+          <xref ref-type="aff" rid="aff1">1</xref>
+          <xref ref-type="aff" rid="aff2">2</xref>
+          <xref ref-type="aff" rid="aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>B S Harish a</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+          <xref ref-type="aff" rid="aff1">1</xref>
+          <xref ref-type="aff" rid="aff2">2</xref>
+          <xref ref-type="aff" rid="aff3">3</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Department of Information Science and Engineering, Sri Jayachamarajendra College of Engineering</institution>
+          ,
+          <addr-line>Mysuru</addr-line>
+          ,
+          <country country="IN">India</country>
+        </aff>
+        <aff id="aff1">
+          <label>1</label>
+          <institution>a Department of Information ScJiSenScReeasnedarEchngFionuenerdiantgio</institution>
+          ,
+          <addr-line>nS,riJSJaSyTaIchCaammapruasj,enMdyrsauCruo</addr-line>
+          ,
+          <institution>llIengdeiaof Engineering</institution>
+          ,
+          <addr-line>Mysuru</addr-line>
+          ,
+          <country country="IN">India</country>
+        </aff>
+        <aff id="aff2">
+          <label>2</label>
+          <institution>a JSS Research Foundation, JSS TI Campus, Mysuru, India Department of Information Science and Engineering, Sri Jayachamarajendra College of Engineering</institution>
+          ,
+          <addr-line>Mysuru</addr-line>
+          ,
+          <country country="IN">India</country>
+        </aff>
+        <aff id="aff3">
+          <label>3</label>
+          <institution>a, b H M Keerthi Kumar B S Harish JSS Research Foundation, JSS TI C</institution>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2018</year>
+      </pub-date>
+      <volume>00</volume>
+      <issue>2018</issue>
+      <fpage>000</fpage>
+      <lpage>000</lpage>
+      <abstract>
+        <p>KCeoymwpourtdins:g SanardcaCs mom;Cmlausnsificcaatitioonn;(IFCeaAtuCreCS-2el0e1ct8io).n; k-means clustering. IAnbrsetcreancttdecades, social media sites such as twitter, facebook, and review site produces huge number of textual information posted Ibnyrmecaennyt duesceards.esT,hseocuisaelrmtednidasstiotesexsupcrehssashtiws/ihtteerr,sfeancteimboeonkt,ianntdhreevfoierwm soitfesparrocdaustciecsuhtutegreanncuems.bTerhoefstaerxctausatlicinufottremraantcioenupsousatlelyd In recent decades, social media sites such as twitter, facebook, and review site produces huge number of textual information posted sbhyifmtsatnhye upsoelrasr.itTyhoef utseexrt tfernodms ntoegeaxtipvreestso hpios/shiteirveseanntdimleiknetwi niseth.eThfoer mautoofmsatriccasctliacssuitfitecraatinocneso.fTshaercsaasrtcicasutitcteruatntecreasncpereusseunatlliyn by many users. The user tends to express his/her sentiment in the form of sarcastic utterances. The sarcastic utterance usually tsehxifttsisthaevpeorylarcihtyalolefntgeexttafsrokm.Itneregqautiivrestoa psoysitteimve tahnadt cliaknewmisaen.agTehetoaudteotmecatticconcltaesnstifibcaasteidonteoxft sparrocpaesrtitciesutoterrafneacteusrepsrepsreensteinnt shifts the polarity of text from negative to positive and likewise. The automatic classification of sarcastic utterances present in itenxstairscaastviceruyttcehra nllceensg.eIntatshki.s Irtegreaqrdu,irtehse apaspyestrepmrotphoastecannomvaenlaagpeprtoadchetetoctcclaosnstiefnyt sbaarcseadstitcextetxptroupsienrgtiecsonotrenfetabtuasresd pfereastuenret text is a very challenge task. It requires a system that can manage to detect content based text properties or features present isnelesacrticoanstmiceut httoedra.nTchees.pIrnoptohsisedreagpaprrdo,atchhe cpoanpseirstpsroofptowseo astangoevefelaatpuprerosaeclhectoiocnlamsseitfhyodsatrocassetliecct emxtosutsrinepgrecsoenntteanttivbeafseeadtufreeast.uIrne in sarcastic utterances. In this regard, the paper propose a novel approach to classify sarcastic text using content based feature sfierlsetcsttiaognem,ceothnovde.ntTiohneaplrfoepaotusered saeplpercotiaocnh mcoenthsiosdts osufctwhoasstCagHeI-fseqautuare,seInlefcotrimonatmioenthGoadinto(IsGel)ecatnmdoMsturtuepalreIsnefnotramtiavteiofnea(tMurIe)s.aIrne selection method. The proposed approach consists of two stage feature selection method to select most representative features. In ufisrsetdsttoagse,leccotnrveelenvtaionntafleafetuarteusresusbelseect.tiTohnemseltehcotdesd sfuecahturaes sCuHbsIe-stqaurearfeu,rIthneforrrmefiantieodnuGsianign s(eIGco)nadnsdtaMgeu.tuInalseIncofonrdmsattaigoen, (kM-mI)eaanres first stage, conventional feature selection methods such as CHI-square, Information Gain (IG) and Mutual Information (MI) are culsuesdtetroinsgelaelcgtorreiltehvmanitsfuesaetudrteos seulbescettm.Tohset rseeplerecstedntfaetaivtuerfeeasutubrseetamaroenfgurstihmerilraerfifneeadtuuressin.gThsecsoenledcstetadgfee.aItnurseescoanredcsltaasgseifi,ked-muesaings used to select relevant features subset. The selected feature subset are further refined using second stage. In second stage, k-means tcwluostcelrainssgifiaelgrsorSituhpmpoisrtuVsedcttoor sMelaechtimneos(tSrVepMre)seantdatRivaenfdeoamturFeoarmesotn(gRFsi)m.Tilahrefpearotuproesse.dThapepsreolaechtedoufte-apteurrfeosrmaraenccleastshiefieedxiussting clustering algorithm is used to select most representative feature among similar features. The selected features are classified using tmweothcoldassiinfietersrmSsuopfpoPrtecViesicotonr, RMeaccahlli,nFe-m(SeVaMsu)reaonnd ARmanadzoomn pFrordeusctt(rReFvi)e.wThdeatpasroetp.osed approach out-performance the existing Selection and peer-review under responsibility of the scientific committee of the 8th International Conference on Advances in</p>
+      </abstract>
+      <kwd-group>
+        <kwd>Sarcasm</kwd>
+        <kwd>Classification</kwd>
+        <kwd>Feature Selection</kwd>
+        <kwd>k-means clustering</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>-</title>
+      <p>www.elsevier.com/locate/procedia
+b
+b
+b
+b
+b
+two classifiers Support Vector Machine (SVM) and Random Forest (RF). The proposed approach out-performance the existing
+methods in terms of Precision, Recall, F-measure on Amazon product review dataset.</p>
+    </sec>
+    <sec id="sec-2">
+      <title>1. Introduction</title>
+    </sec>
+    <sec id="sec-3">
+      <title>1. Introduction</title>
+    </sec>
+    <sec id="sec-4">
+      <title>1. Introduction</title>
+      <p>
+        In internet era, advance in usage of social media sites such as twitter, facebook, and review site produces a large
+In internet era, advance in usage of social media sites such as twitter, facebook, and review site produces a large
+amount of textual information. The textual information serves as a vital source to identify public/user?s opinion or
+amount of textual information. The textual information serves as a vital source to identify public/user?s opinion or
+sentiment towards political party, products or an event [
+        <xref ref-type="bibr" rid="ref20">20</xref>
+        ]. The sentiments expressed by public/users are in the form
+      </p>
+      <p>
+        In internet era, advance in usage of social media sites such as twitter, facebook, and review site produces a large
+amount of textual information. The textual information serves as a vital source to identify public/user?s opinion or
+sentiment towards political party, products or an event [
+        <xref ref-type="bibr" rid="ref20">20</xref>
+        ]. The sentiments expressed by public/users are in the form
+of positive, negative or neutral polarity. The textual information in social media sites plays a crucial role in decision
+sentiment towards political party, products or an event [
+        <xref ref-type="bibr" rid="ref20">20</xref>
+        ]. The sentiments expressed by public/users are in the form
+of positive, negative or neutral polarity. The textual information in social media sites plays a crucial role in decision
+support systems and individual decision makers [
+        <xref ref-type="bibr" rid="ref7">7</xref>
+        ]. The process of automating identification of sentiment in a text is
+of positive, negative or neutral polarity. The textual information in social media sites plays a crucial role in decision
+support systems and individual decision makers [
+        <xref ref-type="bibr" rid="ref7">7</xref>
+        ]. The process of automating identification of sentiment in a text is
+known as Sentiment Analysis (SA).
+support systems and individual decision makers [
+        <xref ref-type="bibr" rid="ref7">7</xref>
+        ]. The process of automating identification of sentiment in a text is
+known as Sentiment Analysis (SA).
+known as Sentiment Analysis (SA).
+      </p>
+      <p>
+        ? Corresponding author.
+Sentiment analysis (SA) is considered as a classification task, which classifies text into positive, negative or neutral
+polarity. Many characters influences SA process in social media sites namely: (a) characters limits in blogs, (b) use
+of slang words, (c) use of non-literal language, such as irony/sarcasm and many more. The major challenge in SA is
+present of irony/sarcasm in text, which literally shifts the polarity of the sentences. Sarcasm is a sophisticated form of
+sentiment which acts as an interfering factor that can flip the polarity of the text [
+        <xref ref-type="bibr" rid="ref15">15</xref>
+        ]. Sarcasm is often characterized
+as ironic content which is used to insult, mock, or amuse. The process of identifying and classification of sarcastic
+content present in a text is known as sarcasm detection/classification [
+        <xref ref-type="bibr" rid="ref2">2</xref>
+        ].
+      </p>
+      <p>
+        Recently automatic sarcasm detection has attracted the attention of research fraternity from both Machine Learning
+(ML) and Natural Language Processing (NLP) domains [
+        <xref ref-type="bibr" rid="ref6">6</xref>
+        ][
+        <xref ref-type="bibr" rid="ref19">19</xref>
+        ]. NLP based approach uses linguistic features and
+lexicon corpus to understand the subjective information. On the other hand, ML approaches uses supervised or
+unsupervised learning techniques for understanding sarcastic sentence based on label or unlabeled text.
+In sarcasm detection, linguistic and content based text properties or features play a vital role in deciding a text is
+sarcastic or not. Linguistic feature concentrate more on punctuations, patterns, hyperbole, ellipsis etc. On the other
+hand, content based text property more rely on the term or words appear in the text. In this paper, content based text
+properties are used to extract more discriminative terms or features to classify a text into sarcastic or non-sarcastic
+content.
+      </p>
+      <p>The social media site contains large volume of textual data which outrages human?s ability to understand and
+handle. ML plays an important role to discover patterns for such high dimensionality data. It is a challenging task for
+ML algorithms to find relevant and non-redundant data from social media sites, which exhibits the characteristics
+of variety, veracity and volume of data. While performing data preprocessing and representation, a huge number of
+unfamiliar terms or features are collected. These unfamiliar features may consist of irrelevant and redundant features,
+which significantly increase the computational cost of learning process. Whenever the dimensionality of data is high
+its computational cost will also be high, which intern tends to decline the accuracy of ML algorithm. Hence, the curse
+of dimensionality is solved by selecting relevant and non-redundant features. The process of selecting relevant and
+non-redundant features is known as feature selection method. The feature selection methods become more scalable,
+reliable and accurate by selecting discriminative features from unfamiliar relevant features.</p>
+      <p>
+        Many research community [
+        <xref ref-type="bibr" rid="ref15">15</xref>
+        ][
+        <xref ref-type="bibr" rid="ref14">14</xref>
+        ][
+        <xref ref-type="bibr" rid="ref4">4</xref>
+        ][
+        <xref ref-type="bibr" rid="ref5">5</xref>
+        ][
+        <xref ref-type="bibr" rid="ref10">10</xref>
+        ] concentrated their work on the feature selection such as CHI-square
+[
+        <xref ref-type="bibr" rid="ref17">17</xref>
+        ], Information Gain (IG) [
+        <xref ref-type="bibr" rid="ref11">11</xref>
+        ], Mutual Information (MI) [
+        <xref ref-type="bibr" rid="ref13">13</xref>
+        ] and many more on social media textual data. Tripathy
+et al., in [
+        <xref ref-type="bibr" rid="ref18">18</xref>
+        ] presented classification of sentiment reviews using n-gram features. The method extracts features based
+on uni-gram, bi-gram, trigram and their combinations with Term frequency - Inverse document frequency (TF-IDF)
+schema. The methods are classified using machine learning algorithms such as Nave Bayes (NB), Maximum Entropy
+(ME), Stochastic Gradient Descent (SGD), and Support Vector Machine (SVM). Mukherjee et al., in [
+        <xref ref-type="bibr" rid="ref12">12</xref>
+        ] extracted
+features based on content word, function word, part of speech tags and their combination to detect sarcastic content.
+The method tests a range of different feature sets using NB and Fuzzy C-means (FCM) to classify tweet into sarcastic
+or non-sarcastic content over tweeter data.
+      </p>
+      <p>
+        Reganti et al., in [
+        <xref ref-type="bibr" rid="ref14">14</xref>
+        ] briefed automatic sarcasm detection in tweets, product reviews and newswire articles. The
+method extracts generic features based on lexicon and baseline features. The baseline feature such as character
+ngrams, word n-grams, word skipgrams are extracted and combine with lexicon features. The methods are classified
+using ensemble classifier such as Logistic Regression (LR), Decision Tree (DT) and Random Forest (RF) classifiers.
+Buschmeier et al., in [
+        <xref ref-type="bibr" rid="ref3">3</xref>
+        ] described the impact of features in classification of irony detection in product reviews. The
+method extracts text feature based on Bag-of-Words (BoW) features and lexicon based features. The methods are
+classified using SVM, LR, DT, RF and NB classifiers. Similarly, Filatova in [
+        <xref ref-type="bibr" rid="ref9">9</xref>
+        ] demonstrated the sentiment flow
+shifts (from negative to positive and likewise) in sarcasm detection. The method captures the presence of sarcasm in
+product reviews and identifies the shift in polarity of sentiment label assigned to the product reviews. The method
+classifies polarity using K-Nearest Neighbor (KNN), SVM (Linear and Radial Basis Function), DT, RF, AdaBoost
+and LR classifiers.
+      </p>
+      <p>
+        Chakraborty et al., in [
+        <xref ref-type="bibr" rid="ref4">4</xref>
+        ] provides an insight on process of learning representation or features using Deep Learning
+on Word2vec model. The model uses two diverse essences such as Continuous Bag-of-Words model (CBOW) and
+Skip-Gram on IMDB movie reviews. The comparative analysis are drawn on performance of k-means and k-means++
+clustering algorithm. Similarly, Chormunge and Jena in [
+        <xref ref-type="bibr" rid="ref5">5</xref>
+        ], proposed feature selection based on correlation based
+feature selection with Clustering for high dimensional data. The feature selection method eliminates irrelevant features
+by using k-means clustering method and then non-redundant features are selected by correlation measure from each
+cluster. The methods are compared with renowned feature selection method such as ReliefF and Information Gain
+(IG) methods using NB classifier. Sarkar et al., in [
+        <xref ref-type="bibr" rid="ref16">16</xref>
+        ] presented a novel feature selection method for text
+classification. The method uses two layer of feature selection based on CHI-square feature selection method and clustering
+technique to select more discriminative features. The extracted feature subsets are classified using NB, DT, SVM and
+KNN classifiers.
+      </p>
+      <p>
+        In literature, many researchers used various feature selection methods to select relevant features from high
+dimensionality feature space. The existing work concentrates more on dimensionality reduction by selecting relevant features
+using feature selection methods. The main objective of this paper is to present two stage feature selection method
+to select most representative features. The feature selection method selects the relevant feature subset from high
+dimensionality feature space. However, selected feature subset may have features which convey similar information.
+The features exhibits similar information can be grouped and most representative features can be selected. Due to
+this reason, the proposed work applies two stage feature selection method to select representative features. In first
+stage, conventional feature selection method such as CHI-square, IG and Mutual Information (MI) are used to select
+relevant features subset. The selected feature subset from conventional feature selection methods are further refined
+using second stage. In second stage, k-means clustering algorithm is used to select most representative feature among
+similar features. The selected features are classified using various classifiers such as SVM and RF classifiers on
+Amazon product review dataset [
+        <xref ref-type="bibr" rid="ref8">8</xref>
+        ].
+      </p>
+      <p>The rest of the paper is organized as follows: Section 2 depicts the methodology of the proposed model. The detailed
+experimental results and discussion are presented in section 3. Finally, the paper concludes with stating future scopes
+in section 4.</p>
+    </sec>
+    <sec id="sec-5">
+      <title>2. Methodology</title>
+      <p>This section depicts the detailed description of methodology of the proposed two stage feature selection method.
+The proposed model is used to select more representative features to classify text into sarcastic or non-sarcastic
+contents. The block diagram of the proposed model is presented in Fig. 1.
+The various steps involved in proposed method are: Firstly, the raw text data is preprocessed using various
+preprocessing techniques. Further, features are extracted and represented using uni-gram representation with term frequency
+schema. The extracted features are in high dimension, which need to be reduced or refined using feature selection
+methods. The proposed feature selection method is applied to select more discriminative features. The proposed
+feature selection method uses two stages of feature selection. In first stage, conventional feature selection such as
+CHIsquare (?2), Information Gain (IG) and Mutual Information (MI) methods are used to select discriminative features.
+The selected features are further refined in second stage of feature selection. In second stage, k-means clustering
+algorithm is used to select most representative features from feature subset selected in first stage feature selection method.
+The k-means clustering algorithm is one of the simplest and most popular clustering techniques, which clusters similar
+information into k number of groups or cluster. Hence, in this work k-means clustering algorithm is used to select most
+representative features of each group. Finally, the feature subset obtained using proposed feature selection method is
+classified using two classifiers such as SVM and RF classifiers.</p>
+      <sec id="sec-5-1">
+        <title>2.1. Preprocessing</title>
+        <p>During preprocessing, non-trivial and less informative terms are eliminated, which doesn?t contribute to the
+classification processes. Initially, words are converted into lower case and then various preprocessing techniques are applied.
+In this work, the product reviews are preprocessed by eliminating stop words, digits and punctuations. The
+preprocessed reviews are represented using uni-gram representation model with term frequency (t f ) schema. Let m be the
+number of reviews and n be the number of terms or features represented in Term Document Matrix (T DM). The entry
+T DMi j indicates the corresponding t f of ith review of jth feature.</p>
+      </sec>
+      <sec id="sec-5-2">
+        <title>2.2. Proposed Feature Selection Method</title>
+        <p>The proposed feature selection method consists of two stages: In first stage, the conventional feature selections
+method is used to select relevant feature subsets. The conventional feature selection methods such as CHI-square
+(?2), Information Gain (IG) and Mutual Information (MI) feature selection methods are used. These features selection
+methods are widely used to select relevant feature subset in text processing domain. The Chi-square (?2) is used
+to test whether the occurrence of a specific term and the occurrence of a specific class are independent. IG gives
+the information that?s gained by knowing the value of the attribute, which is the difference between entropy of the
+distribution before the split and the entropy of the distribution after split. Similarly, MI calculates mutual dependence
+of the two random variables. The outcome of each feature selection method will be scores (S ) corresponding to each
+feature. The scores (S ) are arranged in descending order to select most relevant features which contain high feature
+score. The feature subsets are selected by fixing threshold value (T ) empirically. The selected features subset using
+conventional feature selection method is represented using Term Document Matrix T DM (m × T ) where m represent
+number of reviews and T indicates number of feature subset selected from feature selection methods. The selected
+feature subset (T ) may have features which convey similar information. To select most representative features among
+the feature subset (T ), second stage feature selection method are applied. Algorithm 1 depicts the first stage feature
+selection method.</p>
+        <sec id="sec-5-2-1">
+          <title>Algorithm 1: First stage of Feature selection method</title>
+          <p>Data: Term Document Matrix T DM (m × n), m number of reviews, n total number of features, Features scores</p>
+          <p>S , F number of features
+Result: Term Document Matrix T DM (m × T )
+Initialize threshold value to T;
+Step 1: S =FS method [T DM]
+Step 2: S ={s1, s2, ...., sn}
+Step 3: Sort S in descending order
+Step 4: Select first T number of features based on S
+Step 5: F = {F1, F2, ...., FT}</p>
+          <p>compute score for each feature using CHI, MI and IG feature selection methods
+Selected features subset using feature selection method are represented in Term Document Matrix T DM (m × T ),
+where m represent number of reviews and T indicates number of feature subset selected from feature selection method.
+Further, we transpose T DM (T × m), where each row represents number of features T and column indicates number
+of reviews m.</p>
+          <p>
+            In second stage, similarity based algorithm is used to select most representative feature. In this work, similarity
+based k-means clustering algorithm is used to select most representative feature from each clusters (k). The most
+representative features from each cluster are selected based on the feature nearer to its cluster center. The algorithm
+works iteratively to assign features to one of the k cluster based on the similar features. To determine the optimal
+number of cluster (k) is one of the open question in clustering. In this work, the number of cluster (k) is initialized
+to threshold value (NC), where NC is number of clusters varied from ?T to T as mentioned in [
+            <xref ref-type="bibr" rid="ref16">16</xref>
+            ]. Algorithm 2
+2
+end
+end
+Step 3: Assign F j to nearest cluster center vi
+Step 4: Update cluster center
+Step 5: for i ? to 1 by NC do
+          </p>
+          <p>F j
+v(t + 1)= j=i
+i</p>
+          <p>| vi |
+end
+until v(t ? 1) - v(t) &lt; ?, t=t+1;
+Step 6: for i ? to 1 by NC do</p>
+          <p>Step 7:F j=min j dist j ? i(vi, F ji)</p>
+          <p>Step 8: F=F ? F j
+end
+find representative feature for each cluster center
+elucidates second stage Feature selection method.</p>
+        </sec>
+        <sec id="sec-5-2-2">
+          <title>Algorithm 2: Second stage of Feature selection method</title>
+          <p>Data: Term Document Matrix T DM (T × m), T total number of features, m number of reviews, number of
+cluster NC= ?T to T</p>
+          <p>2
+Result: Term Document Matrix T DM (m × NC)
+Initialize NC number of cluster center, t=0, F={ }, V0 = {V10, V02, ...., V0NC}
+repeat</p>
+          <p>Step 1: for i ? to 1 by NC do</p>
+          <p>Step 2: for j ? to 1 by T do</p>
+          <p>Di j = dist(Vti,F j) compute distance between cluster center and feature F j (Euclidean norm is used
+to calculate the distance)
+Further, the feature subset F, which consists of NC number of features are represented in Term Document Matrix
+T DM(m × NC), where m is the number of reviews and NC is the number features (NC &lt; T &lt; n).</p>
+        </sec>
+      </sec>
+      <sec id="sec-5-3">
+        <title>2.3. Classification</title>
+        <p>
+          In order to determine the efficacy of the proposed feature selection method, the two classifiers linear Support Vector
+Machine (SVM) and Random Forest (RF) classifiers are used. The SVM is a statistical classification approach which
+can be used for both classification and regression challenges [
+          <xref ref-type="bibr" rid="ref21">21</xref>
+          ]. On the other hand, RF is an automatic learning
+technique which combines the concepts of random subspaces and bagging [
+          <xref ref-type="bibr" rid="ref1">1</xref>
+          ]. These two classifiers are widely used
+in classification of sarcastic content [
+          <xref ref-type="bibr" rid="ref3">3</xref>
+          ][
+          <xref ref-type="bibr" rid="ref14">14</xref>
+          ].
+        </p>
+      </sec>
+    </sec>
+    <sec id="sec-6">
+      <title>3. Experimental Result and Discussion</title>
+      <sec id="sec-6-1">
+        <title>3.1. Dataset</title>
+        <p>This section describes the details of the experiment conducted to evaluate the proposed feature selection method.</p>
+        <p>
+          The experiment is conducted on Amazon product reviews created by [
+          <xref ref-type="bibr" rid="ref8">8</xref>
+          ] using crowd sourcing platform Amazon
+Mechanical Turk. The dataset consists of 1,254 Amazon product reviews, which consists of 437 sarcastic and 817
+non-sarcastic reviews. The structure of the dataset contains star-rating and the reviews. Here, star-rating are ranged
+between 1star to 5star and review text are in English language.
+        </p>
+      </sec>
+      <sec id="sec-6-2">
+        <title>3.2. Experimental setup</title>
+        <p>
+          In this work, experiments are conducted using 80:20 split on Amazon product review dataset [
+          <xref ref-type="bibr" rid="ref8">8</xref>
+          ]. The various
+preprocessing techniques are applied on Amazon product review dataset. Once the dataset is preprocessed, the terms are
+represented using unigram with term frequency (t f ) schema. The total number of features obtained are 20,985
+distinct features. Further, the proposed feature selection method is applied on the 20,985 distinct features. The proposed
+feature selection method consists of two stages: In first stage, feature subsets are selected in between 1,000 to 20,000
+features by empirically. During this process, 10000 feature subset yield promising results compared to other feature
+subsets. In second stage, k-means clustering is used to select most representative feature subset from first stage feature
+selection method. The number of cluster (k) is varied from 1000 to 5000 as explained in section 2.2. The obtained
+feature subsets from second stage are classified using linear Support Vector Machine (SVM) and Random Forest (RF)
+classifiers. We initialized number of trees to 100 in RF classifier by empirically. The performance of proposed feature
+selection method is evaluated using classification accuracy and F-measure as a metric.
+        </p>
+      </sec>
+      <sec id="sec-6-3">
+        <title>3.3. Experimental results</title>
+        <p>To report the performance of various classifiers, experiments are varied in number of features from 1,000 to 20,000
+using CHI-square (?2), Information Gain (IG) and Mutual Information (MI) feature selection methods and found
+10000 feature numbers yield competitive accuracy compared to other feature sets. Hence, experiments are conducted
+on 10000 features in first stage of feature selection method. The Table 1 shows the performance of the classifiers on
+original Term Document Matrix (T DM) and various feature selection methods. MI with 10000 features gives 75.60%
+classification accuracy with 0.675 F-measure compared to other feature selection methods using SVM classifier.
+Similarly, IG with 10000 features gives 72.40% classification accuracy with F-measure of 0.595 for RF classifiers.
+Further, k-means clustering algorithm is applied on 10000 features obtained from feature selection methods. As
+explained in section 2.2, the numbers of cluster are varied from 1000 to 5000. The Fig. 2 depicts the classification
+accuracy of proposed method with various number of cluster using SVM and RF classifiers. From Fig. 2 (a), we
+observed that the CHI-square with k-means achieve maximum accuracy for 4500 feature set, IG with k-means gives
+maximum accuracy for 5000 feature set compared to respective feature set using SVM classifier. Similarly, MI with
+k-means yield maximum accuracy for 5000 feature set compared to other feature set and other combinations using
+SVM classifier. On the other hand, Fig. 2 (b) depicts the results of various feature selection methods for different
+number of cluster in k-means using RF classifier. The MI with k-means yield maximum accuracy for 3000 feature subset
+compared to CHI-square with k-means for 4000 and IG with k-means for 3000 feature subset using RF classifier.
+Further, table 2 depicts the performance of proposed approach (feature selection + clustering) using SVM and RF
+classifiers. The proposed method (MI + k-means) for 5000 number of features achieve highest classification accuracy
+of 79.40% and 0.711 F-measure using SVM classifier. On the other hand, proposed method (MI + k-means) achieves
+77.20% classification accuracy and 0.696 F-measure for 4500 number of features using RF classifier. From table 2, the
+proposed method (MI + k-means) outperforms in term of number of features, classification accuracy and F-measure
+compared to other feature selection combinations using SVM and RF classifiers.</p>
+        <p>The table 3 summarizes results of proposed method in terms of reduction in number of features along with
+improvement in classification accuracy. The proposed method (MI + k-means) exhibits 86% of reduction with 3000 number
+of features compared to original features (20985), which intern enhances the classification accuracy by 11% using
+RF classifier. On the other hand, the proposed method (MI + k-means) achieve 76% reduction in number of features
+(5000) with increase of classification accuracy by 16% using SVM classifier.</p>
+      </sec>
+      <sec id="sec-6-4">
+        <title>3.4. Comparisons with existing methods</title>
+        <p>
+          From literature, Buschmeier et al. [
+          <xref ref-type="bibr" rid="ref3">3</xref>
+          ] and Reganti et al. [
+          <xref ref-type="bibr" rid="ref14">14</xref>
+          ], elucidates sarcasm/irony detection on product review
+dataset [
+          <xref ref-type="bibr" rid="ref8">8</xref>
+          ] using SVM and RF classifier. The similar sets of experiments are conducted and comparison results are
+presented in Table 4. However, same dataset is used for various purposes using different approaches [
+          <xref ref-type="bibr" rid="ref9">9</xref>
+          ]. Hence,
+the proposed approach is compared with [
+          <xref ref-type="bibr" rid="ref3">3</xref>
+          ] and [
+          <xref ref-type="bibr" rid="ref14">14</xref>
+          ] in Table 4. The proposed method (MI + k-means) with 5000
+number of feature set exhibits maximum performance in term of Precision, Recall and F-measure using SVM classifier.
+Similarly, proposed method (MI + k-means) with 3000 number of feature depicts maximum performance in Precision,
+Recall and F-measure using RF classifier.
+        </p>
+        <p>
+          The table 4 elucidates the comparisons of proposed method with existing methods. In Reganti et al. [
+          <xref ref-type="bibr" rid="ref14">14</xref>
+          ], the baseline
+features such as character n-grams, word n-grams, word skipgrams are used but total number of feature are not stated
+clearly. Hence, proposed method is compared with F-measure metric obtained from SVM and RF classifier. From
+table 4, it can be concluded that the proposed method outperforms the existing methods in terms of Precision, Recall,
+F-measure using SVM and RF classifiers.
+        </p>
+        <p>Fmeasure
+0.329</p>
+      </sec>
+      <sec id="sec-6-5">
+        <title>3.5. Result Analysis and Discussion</title>
+        <p>The feature selection method reduce the high dimensionality feature space by selecting relevant features set from
+original features based on scores. However, selected feature subset may have features which convey similar
+information. To select most representative features among selected feature subset, two stage feature selection method is
+applied. The advantage of proposed two stage feature selection method is to select most representative features which
+convey similar information among feature subset. The proposed method uses two stage feature selection method
+using conventional feature selection method and k-means similarity clustering algorithm. The performance of proposed
+method (conventional feature selection method with k-means) depends on the feature set selected using first stage. In
+first stage, features depend on the feature selection algorithm used. In this experiment, the conventional feature
+selection methods such as CHI-square (?2), Information Gain (IG) and Mutual Information (MI) feature selection methods
+are used. It is noticeable from table 1, that first stage feature selection method using conventional feature selection
+method reduces the high dimensionality feature space, which intern increases the classification accuracy of the
+classifiers. The MI and IG feature selection method yields maximum accuracy using SVM and RF classifiers, respectively.
+The CHI-square (?2) is used to measure the lack of independence between the specific term and the specific class.
+IG gives the information gained by knowing the value of the attribute, which is the difference between entropy of
+the distribution before the split and the entropy of the distribution after split. Similarly, MI calculates mutual
+dependence of the two random variables. In second stage feature selection method, k-means clustering algorithm groups the
+similar features into specified number of clusters. Here, features are grouped based on the similarities which convey
+similar information. The most representative feature of each cluster, which is nearer to cluster centers are selected.
+The Fig. 2 (a) and 2 (b) presents the variation of classification accuracy from 1000 to 5000 features set using SVM
+and RF classifiers. The MI with k-means consistently outrages other feature selection combinations using SVM and
+RF classifiers. The MI with k-means yields promising results compared to other combination because MI compares
+the probability of observing feature and class together (the joint probability) instead of observing feature and class
+independently. Due to this reason, MI accumulates the similar information features together. On the other hand,
+kmeans groups the similar information, which intern reduces the feature spaces with increasing classification accuracy.
+Hence, the combination of these methods exhibits maximum accuracy on both the classifiers. The table 2 depicts
+comparisons of various feature selection with k-means algorithm. From table 2 results, the proposed method reduces the
+number of features set with increasing classification accuracy. A crucial observation is note in table 3, which depicts
+the summary of percentage reduction in features and the improvement of classification accuracy in proposed method.
+To evaluate the proposed method in table 4, the proposed method is compared with the existing methods. From table
+4, it can be concluded that the proposed method outperforms other existing methods in classifying sarcastic content
+present in product review dataset.</p>
+      </sec>
+    </sec>
+    <sec id="sec-7">
+      <title>4. Conclusion and Future work</title>
+      <p>In this work, we propose a novel approach to classify sarcastic text using content based feature selection method.
+The proposed approach consists of two stage feature selection method to select most representative features. In first
+stage, conventional feature selection methods are used to select relevant features subset. The selected feature subset
+from conventional feature selection methods such as CHI-square, IG and Mutual Information (MI) are further refined
+using second stage. In second stage, k-means clustering algorithm is used to select most representative feature among
+similar features. The selected features are classified using various classifiers such as SVM and RF classifiers. The
+results of the proposed approach (MI + clustering) outperform the exiting methods in terms of Precision, Recall,
+Fmeasure on benchmark dataset.</p>
+      <p>In future, the proposed work can be extended to (a) n-gram (bi-gram, trigram) representation, (b) various feature
+selection methods and (c) variance of k-means clustering techniques along with different classifiers which enhances the
+classification accuracies. Further, the proposed approach can be also extended to various fields such as text
+classification, sentiment analysis, information retrieval and many more.</p>
+    </sec>
+    <sec id="sec-8">
+      <title>Acknowledgements</title>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          [1]
+          <string-name>
+            <given-names>Al</given-names>
+            <surname>Amrani</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Y.</given-names>
+            ,
+            <surname>Lazaar</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.</given-names>
+            ,
+            <surname>El Kadiri</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>K.E.</surname>
+          </string-name>
+          ,
+          <year>2018</year>
+          .
+          <article-title>Random forest and support vector machine based hybrid approach to sentiment analysis</article-title>
+          .
+          <source>Procedia Computer Science</source>
+          <volume>127</volume>
+          ,
+          <fpage>511</fpage>
+          -
+          <lpage>520</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          [2]
+          <string-name>
+            <surname>Bharti</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Vachha</surname>
+            ,
+            <given-names>B.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Pradhan</surname>
+            ,
+            <given-names>R.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Babu</surname>
+            ,
+            <given-names>K.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Jena</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <year>2016</year>
+          .
+          <article-title>Sarcastic sentiment detection in tweets streamed in real time: a big data approach</article-title>
+          .
+          <source>Digital Communications and Networks</source>
+          <volume>2</volume>
+          ,
+          <fpage>108</fpage>
+          -
+          <lpage>121</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          [3]
+          <string-name>
+            <surname>Buschmeier</surname>
+            ,
+            <given-names>K.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Cimiano</surname>
+            ,
+            <given-names>P.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Klinger</surname>
+            ,
+            <given-names>R.</given-names>
+          </string-name>
+          ,
+          <year>2014</year>
+          .
+          <article-title>An impact analysis of features in a classification approach to irony detection in product reviews</article-title>
+          ,
+          <source>in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis</source>
+          , pp.
+          <fpage>42</fpage>
+          -
+          <lpage>49</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          [4]
+          <string-name>
+            <surname>Chakraborty</surname>
+            ,
+            <given-names>K.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Bhattacharyya</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Bag</surname>
+            ,
+            <given-names>R.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Hassanien</surname>
+            ,
+            <given-names>A.E.</given-names>
+          </string-name>
+          ,
+          <year>2018</year>
+          .
+          <article-title>Comparative sentiment analysis on a set of movie reviews using deep learning approach</article-title>
+          ,
+          <source>in: International Conference on Advanced Machine Learning Technologies and Applications</source>
+          , Springer. pp.
+          <fpage>311</fpage>
+          -
+          <lpage>318</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          [5]
+          <string-name>
+            <surname>Chormunge</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Jena</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <year>2018</year>
+          .
+          <article-title>Correlation based feature selection with clustering for high dimensional data</article-title>
+          .
+          <source>Journal of Electrical Systems and Information Technology</source>
+          , doi:https://doi.org/10.1016/j.jesit.
+          <year>2017</year>
+          .
+          <volume>06</volume>
+          .004.
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          [6]
+          <string-name>
+            <surname>Dave</surname>
+            ,
+            <given-names>A.D.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Desai</surname>
+            ,
+            <given-names>N.P.</given-names>
+          </string-name>
+          ,
+          <year>2016</year>
+          .
+          <article-title>A comprehensive study of classification techniques for sarcasm detection on textual data, in: Electrical, Electronics, and Optimization Techniques (ICEEOT</article-title>
+          ), International Conference on, IEEE. pp.
+          <fpage>1985</fpage>
+          -
+          <lpage>1991</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          [7]
+          <string-name>
+            <surname>Fersini</surname>
+            ,
+            <given-names>E.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Messina</surname>
+            ,
+            <given-names>E.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Pozzi</surname>
+            ,
+            <given-names>F.A.</given-names>
+          </string-name>
+          ,
+          <year>2014</year>
+          .
+          <article-title>Sentiment analysis: Bayesian ensemble learning</article-title>
+          .
+          <source>Decision support systems 68</source>
+          ,
+          <fpage>26</fpage>
+          -
+          <lpage>38</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          [8]
+          <string-name>
+            <surname>Filatova</surname>
+            ,
+            <given-names>E.</given-names>
+          </string-name>
+          ,
+          <year>2012</year>
+          .
+          <article-title>Irony and sarcasm: Corpus generation and analysis using crowdsourcing, in: LREC, Citeseer</article-title>
+          . pp.
+          <fpage>392</fpage>
+          -
+          <lpage>398</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <surname>Filatova</surname>
+            ,
+            <given-names>E.</given-names>
+          </string-name>
+          ,
+          <year>2017</year>
+          .
+          <article-title>Sarcasm detection using sentiment flow shifts</article-title>
+          ,
+          <source>in: FLAIRS-30, Association for the Advancement of Artificial Intelligence</source>
+          . pp.
+          <fpage>264</fpage>
+          -
+          <lpage>269</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          [10]
+          <string-name>
+            <surname>Harish</surname>
+            ,
+            <given-names>B.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Revanasiddappa</surname>
+            ,
+            <given-names>M.</given-names>
+          </string-name>
+          ,
+          <year>2017</year>
+          .
+          <article-title>A comprehensive survey on various feature selection methods to categorize text documents</article-title>
+          .
+          <source>International Journal of Computer Applications</source>
+          <volume>164</volume>
+          ,
+          <fpage>1</fpage>
+          -
+          <lpage>7</lpage>
+          . doi:
+          <volume>10</volume>
+          .5120/ijca2017913711.
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          [11]
+          <string-name>
+            <surname>Lee</surname>
+            ,
+            <given-names>C.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Lee</surname>
+            ,
+            <given-names>G.G.</given-names>
+          </string-name>
+          ,
+          <year>2006</year>
+          .
+          <article-title>Information gain and divergence-based feature selection for machine learning-based text categorization</article-title>
+          .
+          <source>Information processing &amp; management 42</source>
+          ,
+          <fpage>155</fpage>
+          -
+          <lpage>165</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          [12]
+          <string-name>
+            <surname>Mukherjee</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          , Bala,
+          <string-name>
+            <surname>P.K.</surname>
+          </string-name>
+          ,
+          <year>2017</year>
+          .
+          <article-title>Sarcasm detection in microblogs using na¨?ve bayes and fuzzy clustering</article-title>
+          .
+          <source>Technology in Society 48</source>
+          ,
+          <fpage>19</fpage>
+          -
+          <lpage>27</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>
+          [13] Novovic?ova´,
+          <string-name>
+            <surname>J.</surname>
+          </string-name>
+          , Mal´?k,
+          <string-name>
+            <given-names>A.</given-names>
+            ,
+            <surname>Pudil</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>P.</surname>
+          </string-name>
+          ,
+          <year>2004</year>
+          .
+          <article-title>Feature selection using improved mutual information for text classification, in: Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition (SPR) and Structural and Syntactic Pattern Recognition (SSPR</article-title>
+          ), Springer. pp.
+          <fpage>1010</fpage>
+          -
+          <lpage>1017</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>
+          [14]
+          <string-name>
+            <surname>Reganti</surname>
+            ,
+            <given-names>A.N.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Maheshwari</surname>
+            ,
+            <given-names>T.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Kumar</surname>
+            ,
+            <given-names>U.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Das</surname>
+            ,
+            <given-names>A.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Bajpai</surname>
+            ,
+            <given-names>R.</given-names>
+          </string-name>
+          ,
+          <year>2016</year>
+          .
+          <article-title>Modeling satire in english text for automatic detection</article-title>
+          ,
+          <source>in: Data Mining Workshops (ICDMW)</source>
+          ,
+          <source>2016 IEEE 16th International Conference on, IEEE</source>
+          . pp.
+          <fpage>970</fpage>
+          -
+          <lpage>977</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>
+          [15]
+          <string-name>
+            <surname>Riloff</surname>
+            ,
+            <given-names>E.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Qadir</surname>
+            ,
+            <given-names>A.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Surve</surname>
+            ,
+            <given-names>P.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>De Silva</surname>
+            ,
+            <given-names>L.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Gilbert</surname>
+            ,
+            <given-names>N.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Huang</surname>
+            ,
+            <given-names>R.</given-names>
+          </string-name>
+          ,
+          <year>2013</year>
+          .
+          <article-title>Sarcasm as contrast between a positive sentiment and negative situation</article-title>
+          ,
+          <source>in: Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing</source>
+          , pp.
+          <fpage>704</fpage>
+          -
+          <lpage>714</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>
+          [16]
+          <string-name>
+            <surname>Sarkar</surname>
+            ,
+            <given-names>S.D.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Goswami</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Agarwal</surname>
+            ,
+            <given-names>A.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Aktar</surname>
+            ,
+            <given-names>J.</given-names>
+          </string-name>
+          ,
+          <year>2014</year>
+          .
+          <article-title>A novel feature selection technique for text classification using naive bayes</article-title>
+          .
+          <source>International scholarly research notices</source>
+          <year>2014</year>
+          ,
+          <fpage>1</fpage>
+          -
+          <lpage>10</lpage>
+          . doi:http://dx.doi.org/10.1155/
+          <year>2014</year>
+          /717092.
+        </mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>
+          [17]
+          <string-name>
+            <surname>Song</surname>
+            ,
+            <given-names>F.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Liu</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Yang</surname>
+            ,
+            <given-names>J.</given-names>
+          </string-name>
+          ,
+          <year>2005</year>
+          .
+          <article-title>A comparative study on text representation schemes in text categorization</article-title>
+          .
+          <source>Pattern analysis and applications 8</source>
+          ,
+          <fpage>199</fpage>
+          -
+          <lpage>209</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>
+          [18]
+          <string-name>
+            <surname>Tripathy</surname>
+            ,
+            <given-names>A.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Agrawal</surname>
+            ,
+            <given-names>A.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Rath</surname>
+            ,
+            <given-names>S.K.</given-names>
+          </string-name>
+          ,
+          <year>2016</year>
+          .
+          <article-title>Classification of sentiment reviews using n-gram machine learning approach</article-title>
+          .
+          <source>Expert Systems with Applications</source>
+          <volume>57</volume>
+          ,
+          <fpage>117</fpage>
+          -
+          <lpage>126</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>
+          [19]
+          <string-name>
+            <surname>Wallace</surname>
+            ,
+            <given-names>B.C.</given-names>
+          </string-name>
+          ,
+          <year>2015</year>
+          .
+          <article-title>Computational irony: A survey and new perspectives</article-title>
+          .
+          <source>Artificial Intelligence Review</source>
+          <volume>43</volume>
+          ,
+          <fpage>467</fpage>
+          -
+          <lpage>483</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>
+          [20]
+          <string-name>
+            <surname>Wang</surname>
+            ,
+            <given-names>G.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Sun</surname>
+            ,
+            <given-names>J.</given-names>
+          </string-name>
+          , Ma, J.,
+          <string-name>
+            <surname>Xu</surname>
+            ,
+            <given-names>K.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Gu</surname>
+            ,
+            <given-names>J.</given-names>
+          </string-name>
+          ,
+          <year>2014</year>
+          .
+          <article-title>Sentiment classification: The contribution of ensemble learning</article-title>
+          .
+          <source>Decision support systems 57</source>
+          ,
+          <fpage>77</fpage>
+          -
+          <lpage>93</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>
+          [21]
+          <string-name>
+            <surname>Witten</surname>
+            ,
+            <given-names>I.H.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Frank</surname>
+            ,
+            <given-names>E.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Hall</surname>
+            ,
+            <given-names>M.A.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Pal</surname>
+            ,
+            <given-names>C.J.</given-names>
+          </string-name>
+          ,
+          <year>2016</year>
+          .
+          <article-title>Data Mining: Practical machine learning tools and techniques</article-title>
+          . Morgan Kaufmann.
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+

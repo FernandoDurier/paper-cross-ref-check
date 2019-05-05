@@ -1,7 +1,8 @@
 import json
 import os
 
-paperdirectory = "/Users/fernandodurier/Desktop/sarcasm-paper-review"
+#paperdirectory = "/Users/fernandodurier/Desktop/sarcasm-paper-review"
+paperdirectory = 'C:/Users/ferna/Documents/development/paper-cross-ref-check/resources'
 
 data=[]
 cleandata=[]
@@ -39,10 +40,10 @@ for d in data:
                         author+=(', '+a['given-name'])
                     author+=(', ')
             else:
-                if 'surname' in a:
-                    author+=(a['surname'])
-                if 'given-name' in a:
-                    author+=(', '+a['given-name'])
+                if 'surname' in r['mixed-citation']['string-name']:
+                    author+=(r['mixed-citation']['string-name']['surname'])
+                if 'given-name' in r['mixed-citation']['string-name']:
+                    author+=(', '+r['mixed-citation']['string-name']['given-name'])
                 author+=(', ')
             authors+=author+', '
             

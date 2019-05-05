@@ -1,0 +1,1090 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": null,
+            "article-meta": {
+                "title-group": {
+                    "article-title": "Contributions to the Study of Fake News in Portuguese: New Corpus and Automatic Detection Results"
+                },
+                "contrib-group": {
+                    "contrib": [
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Rafael A. Monteiro",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff2",
+                                "#text": "2"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Roney L. S. Santos",
+                            "email": "roneysantosg@usp.br",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff2",
+                                "#text": "2"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Thiago A. S. Pardo",
+                            "email": "taspardo@icmc.usp.br",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff2",
+                                "#text": "2"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Tiago A. de Almeida",
+                            "email": "talmeida@ufscar.br",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Evandro E. S. Ruiz",
+                            "email": "evandro@usp.br",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff3",
+                                "#text": "3"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Oto A. Vale",
+                            "email": "otovale@ufscar.br",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff1",
+                                "#text": "1"
+                            }
+                        }
+                    ],
+                    "aff": [
+                        {
+                            "@id": "aff0",
+                            "label": "0",
+                            "institution": "Federal University of Sa~o Carlos - Sorocaba",
+                            "country": {
+                                "@country": "BR",
+                                "#text": "Brazil"
+                            },
+                            "#text": ","
+                        },
+                        {
+                            "@id": "aff1",
+                            "label": "1",
+                            "institution": "Interinstitutional Center for Computational Linguistics (NILC) Federal University of Sa~o Carlos - Sa~o Carlos",
+                            "country": {
+                                "@country": "BR",
+                                "#text": "Brazil"
+                            },
+                            "#text": ","
+                        },
+                        {
+                            "@id": "aff2",
+                            "label": "2",
+                            "institution": "Interinstitutional Center for Computational Linguistics (NILC) University of Sa~o Paulo - Sa~o Carlos",
+                            "country": {
+                                "@country": "BR",
+                                "#text": "Brazil"
+                            },
+                            "#text": ","
+                        },
+                        {
+                            "@id": "aff3",
+                            "label": "3",
+                            "institution": "University of Sa~o Paulo - Ribeira~o Preto",
+                            "country": {
+                                "@country": "BR",
+                                "#text": "Brazil"
+                            },
+                            "#text": ","
+                        }
+                    ]
+                },
+                "abstract": {
+                    "p": "Fake news are a problem of our time. They may in uence a large number of people on a wide range of subjects, from politics to health. Although they have always existed, the volume of fake news has recently increased due to the soaring number of users of social networks and instant messengers. These news may cause direct losses to people and corporations, as fake news may include defamation of people, products and companies. Moreover, the scarcity of labeled datasets, mainly in Portuguese, prevents training classi ers to automatically lter such documents. In this paper, we investigate the issue for the Portuguese language. Inspired by previous initiatives for other languages, we introduce the rst reference corpus in this area for Portuguese, composed of aligned true and fake news, which we analyze to uncover some of their linguistic characteristics. Then, using machine learning techniques, we run some automatic detection methods in this corpus, showing that good results may be achieved."
+                },
+                "kwd-group": {
+                    "kwd": [
+                        "Fake news",
+                        "Reference corpus",
+                        "Linguistic features",
+                        "Machine learning"
+                    ]
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": [
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref20",
+                                "#text": "20"
+                            },
+                            "#text": "Since the earliest times, long before the advent of computers and the web, fake\nnews (also known as deceptive news) were transmitted through the oral\ntradition, in the form of rumors (face to face) or in the yellow/sensational press,\neither to \\innocently\" talk about other people lives, or to intentionally harm the\nreputation of other people or rival companies. Nowadays, social networks and\ninstant messenger apps have allowed such news to reach an audience that was\nnever imagined before the web era. Due to their appealing nature, they spread\nrapidly [\n        \n        ], in uencing people behavior on several subjects, from healthy\nissues (e.g., by revealing miraculous medicines) to politics and economy (as in the\nrecent Cambridge Analytica/Facebook scandal5 and in the Brexit situation6)."
+                        },
+                        "As the spread of fake news has reached a critical point, initiatives to ght\nback fake news have emerged. On the one hand, journalistic agencies have\nsupported fact checking sites (e.g., Ag^encia Lupa7 and Boatos.org8) and big digital\ncompanies (as Facebook9) have attempted to block fake news and to educate\nusers. On the other hand, academic e orts have been made by studying how\nsuch news spread, the behavior of the users that produce and read them, and\nlanguage usage characteristics of fake news, in order to identify such news. This\nlast research line - on language characteristics - has been mainly explored in the\nNatural Language Processing (NLP) area.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref12 ref24 ref7",
+                                    "#text": "7, 12, 24"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref1 ref11 ref16 ref18",
+                                    "#text": "1, 11, 16, 18"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref10 ref3",
+                                    "#text": "3, 10"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref14",
+                                    "#text": "14"
+                                }
+                            ],
+                            "#text": "In NLP, the attempts to deal with fake news are relatively recent, both on\nthe theoretical (e.g., [\n        \n        ]) and practical points of view ([\n        \n        ]).\nSome previous work has showed that humans perform poorly on separating true\nfrom fake news [\n        \n        ] and that the domain may a ect this [\n        \n        ], but others have\nproduced promising automatic results. Despite the advances already made, the\nlack of available corpora may compromise the evaluation of di erent approaches."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                }
+                            ],
+                            "#text": "To ll this important gap, in this paper we investigate the issue of fake news\ndetection for the Portuguese language. Inspired by previous initiatives for other\nlanguages, to the best of our knowledge, we introduce the rst reference corpus\nin this area for Portuguese. This corpus is composed of aligned true and fake\nnews, which we analyze to uncover some of their linguistic characteristics. Then,\nusing traditional machine learning techniques and following some of the ideas of\n[\n        \n        ] and [\n        \n        ], we perform tests on the automatic detection of fake news, achieving\ngood results. One of our main goals is that our corpus and methods may support\nfuture researches in the area."
+                        },
+                        "The remainder of this paper is organized as follows. In Section 2, we brie y\nreview the essential related work. Section 3 o ers details about the newly-created\ncorpus. In Section 4, we report our machine learning approaches for fake news\ndetection. Finally, Section 5 concludes this paper.\n2"
+                    ]
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "Related Work",
+                    "p": [
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref17",
+                                "#text": "17"
+                            },
+                            "#text": "According to [\n        \n        ], there are three main types of deception in texts: (i) the ones\nwith humor, clearly for fun, using sarcasm to produce satires and parodies; (ii)\n5 http://fortune.com/2018/04/10/facebook-cambridge-analytica-what-happened/\n6\nhttps://www.theguardian.com/technology/2017/may/07/the-great-british-brexitrobbery-hijacked-democracy/\n7 http://piaui.folha.uol.com.br/lupa/\n8 http://www.boatos.org/\n9\nhttps://newsroom.fb.com/news/2017/04/working-to-stop-misinformation-andfalse-news/\nfake content, which intends to deceive people and to cause confusion; and (iii)\nrumors, which are non-con rmed and usually publicly accepted information.\nFake content, in particular, may appear in di erent contexts. Fake news are a\ntype of it, as well as fake reviews, for instance, that are tailored to harm or to\npromote something."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref15",
+                                    "#text": "15"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref18",
+                                    "#text": "18"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref14",
+                                    "#text": "14"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref8",
+                                    "#text": "8"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref21",
+                                    "#text": "21"
+                                }
+                            ],
+                            "#text": "Although the recent interest growing in the area, there are several available\ncorpora of di erent types of deception. In [\n        \n        ], the authors present three datasets\nrelated to social topics, such as opinions on abortion, death penalty, and feelings\nabout a best friend, containing 100 deceptive and 100 truthful sentences. In [\n        \n        ],\nthe authors build two datasets containing satirical and true news in four di erent\ndomains (civics, science, business, and \\soft\" news), totalizing 240 samples. In\n[\n        \n        ], two datasets are collected on the celebrity news domain. The rst one\nconsists in emulating journalistic writing style, using Amazon Mechanical Turk,\nresulting in 240 fake news. The second one is collected from the web, following\nsimilar guidelines to the previous dataset (aiming to identify fake content that\nnaturally occurs on the web), resulting in 100 fake and 100 legitimate news.\nOther corpora are available in English, such as the Emergent [\n        \n        ] and LIAR\n[\n        \n        ] corpora. For Portuguese, it is possible to nd some websites that compile\ntrue and fake news for fact checking (as the ones cited in the previous section),\nbut they often present comments about the news (and not the original texts\nthemselves) and are not ready-to-use corpora for NLP purposes."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "5"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref24",
+                                    "#text": "24"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref1",
+                                    "#text": "1"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref15",
+                                    "#text": "15"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref14",
+                                    "#text": "14"
+                                }
+                            ],
+                            "#text": "Some methods for detecting deceptive content have been investigated,\nusing varied textual features, as commented by [\n        \n        ] and systematized in [\n        \n        ]. [\n        \n        ]\nstudies false declarations in social networks, looking for clues of falsi cation\n(lies, contradictions and distortions), exaggeration (modi ers and superlatives),\nomission (lack of information, half truths) and deception (subject change,\nirrelevant information and misconception). [\n        \n        ] proposes to look at the amount of\nverbs and modi ers (adjectives and adverbs), complexity, pausality, uncertainty,\nnon-immediacy, expressivity, diversity and informality features. In [\n        \n        ], [\n        \n        ] and\n[\n        \n        ], the authors compare the performance of classi ers using n-grams/bag of\nwords, part of speech tags and syntactic information, readability metrics and\nword semantic classes."
+                        },
+                        "Despite the e orts already made, as far as we know, there is no public and\nlabeled dataset of fake news written in Portuguese. The absence of representative\ndata may seriously impact the processes of development, evaluation and\ncomparison of automatic detection methods. In what follows, we report our e orts\nto build the rst reliable corpus in this area for Portuguese.\n3"
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "The Fake.Br Corpus",
+                    "p": [
+                        "In order to create a reliable corpus, we have collected and labeled real\nsamples written in Portuguese. The corpus { simply called \\Fake.Br Corpus\" { is\ncomposed of true and fake news that were manually aligned, focusing only on\nBrazilian Portuguese. To the best of our knowledge, there is no other similar\navailable corpus for this language.",
+                        "Collecting texts to the corpus was not a simple task. It took some months\nto manually nd and check available fake news in the web and, then, to\nsemiautomatically look for corresponding true news for each fake one. The manual\nstep was necessary to check the details of the fake news and if they were in fact\nfake, as we wanted to guarantee the quality and reliability of the corpus.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref17",
+                                    "#text": "17"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref13",
+                                    "#text": "13"
+                                }
+                            ],
+                            "#text": "The alignment of true and fake news is relevant for both linguistic studies and\nmachine learning purposes, as positive and negative instances are important for\nvalidating linguistic patterns and automatic learning, depending on the adopted\napproach. Besides this, the alignment is a desired characteristic of the corpus, as\npointed by [\n        \n        ], which also suggests the following for assembling the corpus: news\nshould be in plain text format, as this is usually more appropriate for NLP; the\nnews must have similar sizes (usually in number of words) in order to avoid bias\nin learning, but, if this is not the case, size normalization (e.g., text truncation)\nmay be carried out when necessary; speci cation of a time period for collecting\nthe texts, as writing style may change in time and this may harm the corpus\npurposes; maintenance of pragmatic factors, e.g., the original link to the news,\nas such information may be useful in the future for fact checking tasks [\n        \n        ]."
+                        },
+                        "Overall, we collected 7,200 news, with exact 3,600 true and 3,600 fake news.\nAll of them are in plain text format, with each one in a di erent le. We kept\nsize homogeneity as much as we could, but some true news are longer than the\nfake ones. We established a 2 years time interval for the news, from January of\n2016 to January of 2018, but there were cases of fake news in this time period\nthat referred to true news of a time before this. We did not consider this as\na problem and kept these news in the corpus. Finally, we saved all the links\nand other metadata information (such as the author, date of publication, and\nquantity of comments and visualizations, when possible) that was available.",
+                        "We manually analyzed and collected all the available fake news (including\ntheir titles) in the corresponding time period from 4 websites: Diario do Brasil\n(3,338 news10), A Folha do Brasil (190 news), The Jornal Brasil (65 news) e\nTop Five TV (7 news). Finally, we ltered out those news that presented half\ntruths11, keeping only the ones that were entirely fake.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref19",
+                                    "#text": "19"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref4",
+                                    "#text": "4"
+                                }
+                            ],
+                            "#text": "The true news in the corpus were collected in a semiautomatic way. In a\nrst step, using a web crawler, we collected news from major news agencies in\nBrazil, namely, G1, Folha de S~ao Paulo and Estad~ao. The crawler searched in the\ncorresponding webpages of these agencies for keywords of the fake news, which\nwere nouns and verbs that occurred in the fake news titles and the most frequent\nwords in the texts (ignoring stopwords). About 40,000 true news were collected\nthis way. Then, for each fake news, we applied a lexical similarity measure (the\ncosine measure presented in [\n        \n        ]), choosing the most similar ones to the fake\nnews, and performed a nal manual veri cation to guarantee that the fake and\ntrue news were in fact subject-related. It is interesting to add that there were\ncases in that the true news explicitly denied the corresponding fake one (see,\n10 We could realize that most of the checked sites shared many fake news.\n11 Half truth may be de ned as the case in which some actual facts are told in order\nto give support to false facts [\n        \n        ].\ne.g., the rst example in Table 1), but others were merely on the same topic\n(second example in Table 1)."
+                        },
+                        "Fake True\nMichel Temer propo~e m do carnaval por Michel Temer n~ao quer o m do Carnaval\n20 anos, \\PEC dos gastos\". Michel Temer por 20 anos. Not cias falsas misturam\na rmou que na~o deve haver gastos com proximidade dos festejos, crise econo^mica\naparatos super uos sem pensar primeira- e medidas impopulares do governo do\nmente na educaca~o do Brasil. A medida peemedebista.\npretende calcelar o carnaval de 2018.",
+                        "Acabou a mordomia ! Ingresso mais barato Ingresso feminino barato como marketing\npra mulher e ilegal. Baladas que davam `na~o inferioriza mulher', diz ju za do DF.\nmeia entrada para mulher, ou ate mesmo A rmaca~o consta em decisa~o sobre precos\ngratuidade, esto na ilegalidade agora. diferentes para homens e mulheres em festa\nAcabou o preconceito com os homens nas no Lago Paranoa. `Pratica permite que\ncasas de show de todo o Brasil. mulher possa optar por participar de tais\neventos sociais', diz texto.",
+                        "Overall, the collected news may be divided into 6 big categories regarding\ntheir main subjects: politics, TV & celebrities, society & daily news, science &\ntechnology, economy, and religion. In order to guarantee consistency and\nannotation quality, the texts were manually labeled with the categories. Table 2 shows\nthe distribution of texts by category. As expected, politics is the most frequent\none.",
+                        "Table 3 shows a overall comparison of the news, including the average number\nof tokens and sentences, as well as several other features. It is interesting to notice\nsome di erences, e.g., spelling errors were more frequent in the fake news.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref23",
+                                    "#text": "23"
+                                }
+                            ],
+                            "#text": "Finally, we adopted the proposal of [\n        \n        ] to compute other linguistic features\nthat may serve as indications of fake content, to know: (i) pausality, which checks\nthe frequency of pauses in a text, computed as the number of punctuation signals\nover the number of sentences; (ii) emotiveness, which is an indication of language\nexpressiveness in a message [\n        \n        ], computed as the sum of the number of adjectives\nand adverbs over the sum of nouns and verbs; (iii) uncertainty, measured by\nthe number of modal verbs and occurrences of passive voices; and (iv)\nnonimmediacy, measured by the number of 1st and 2nd pronouns. Table 4 shows\nthe values of these features in the corpus. The higher di erences in uncertainty\nand non-immediacy values are due to the size di erence of the texts, as these\ntwo metrics are not normalized.\nMotivated to create an automatic classi er of fake news, we run some tests using\nmachine learning over the Fake.Br corpus. To guarantee a fair classi cation, we\nhave normalized the size of the texts (in number of words) by truncating the\nlonger texts to the size of their aligned counterparts."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref6",
+                                    "#text": "6"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref9",
+                                    "#text": "9"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref2",
+                                    "#text": "2"
+                                }
+                            ],
+                            "#text": "Following [\n        \n        ], we run the widely used SVM technique [\n        \n        ] (the LinearSVC\nimplementation in Scikit-learn, with default parameters). We tried di erent\nfeatures of [\n        \n        ] and [\n        \n        ]:\n{ bag of words/unigrams (simply indicating whether each word occurred or\nnot in the text, using boolean values), after case folding, stopword12 and\npunctuation removal, and stemming;\n{ the (normalized) number of occurrences of each part of speech tag, as\nindicated by the NLPNet tagger [\n        \n        ];\n{ the (normalized) number of occurrences of semantic classes, as indicated\nby LIWC for Brazilian Portuguese [\n        \n        ], which is an enriched lexicon that\nassociates to each word one or more possible semantic classes (from a set of\n64 available classes);\n{ and the pausality, emotiveness, (normalized) uncertainty and (normalized)\nnon-immediacy features."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                }
+                            ],
+                            "#text": "Still following the work of [\n        \n        ], we used an evaluation strategy of 5-fold\ncrossvalidation. We computed the traditional precision, recall and F-measure metrics\nfor each class, as well as general accuracy. Table 5 shows the average results\nthat we achieved for di erent feature sets. The rst three rows refer to features\nof [\n        \n        ], while the fourth is a combination of them; the next four rows are the\nfeatures of [\n        \n        ], also followed by their combination; we then combine the best\nfeatures of both initiatives; and, nally, we combine all the features (in the last\nrow).\nBag of words alone could (surprisingly) achieve good results (88% of\nFmeasure, for both true and fake news), and other features (including the ones of\n[\n        \n        ]) did not help to signi cantly improve this. It is interesting that most of the\nmethods performed similarly for the two classes."
+                        },
+                        "We show in Table 6 the confusion matrix for the bag of words classi cation.\nOne may see that there is still room for improvements. In our opinion,\nmisclassifying (and, consequently, ltering out) true news is more harmful than not\n12 We also remove numeric values in order to help avoiding sparsity.\ndetecting some fake news (the same logic of spam detection), and this must have\nmore attention in the future.",
+                        "We checked that the classi cation errors are correlated with the news\ncategories in the following way: 11.6% of the political texts were misclassi ed; for\nTV & celebrities, 10.4%; for society & daily news, 12.3%; for science &\ntechnology, 16.1%; for economy, 18.1%; and, for religion, 20.4%. Economy and religion\ncategories appear to be the most di cult ones, but this may have happened due\nto fewer learning instances that we have for such categories.",
+                        "We have also run some other machine learning techniques, from di erent\nparadigms, as Na\u007fve-Bayes, Random Forest, and Multilayer Perceptron (with\nthe default parameters of Scikit-learn). Additionally, we tried bag of words with\ndi erent minimum numbers of occurrence in the corpus, as well as other values\nfor the occurrence of words, as their (normalized) frequency (instead of boolean 0\nor 1 values). Multilayer Perceptron could achieve 90% of accuracy. Considering\nwords with at least 3 occurrences produced the same results; from 5 to more\noccurrences, the results start to slightly fall. Using word frequency (instead of\nboolean values) did not improve the results.",
+                        "One nal test was to run the experiments without truncating the size of the\ntexts. The use of full texts achieved impressive 96% of accuracy with bag of\nwords, but this classi cation is probably biased, as true texts are signi cantly\nlonger than the fake ones.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                }
+                            ],
+                            "#text": "It is interesting that, in our case, di erently from [\n        \n        ], part of speech tags did\nnot produce the best results. Such di erence is probably explained by the dataset.\nWhile our dataset is \\spontaneous\" (to the extent that such nomenclature makes\nsense for fake news), collected from the web, [\n        \n        ] used a dataset of a di erent\nnature (in fact, the authors used sentences), produced by hired people to the\ntask."
+                        },
+                        "Overall, the achieved results were above our expectations. One factor that\nmay help explaining such good results is that we have ltered out news with half\ntruth, which might make things more complex (and equally interesting). This\nremains for future work, as we comment below.\n5"
+                    ]
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "Conclusions",
+                    "p": [
+                        "To the best of our knowledge, we have presented the rst reference corpus for\nfake news detection for Portuguese - the Fake.Br corpus. More than this, we\nhave run some experiments, following some well known attempts in the area,\nand produced good results, considering the apparent di culty of the task. We\nhope that our corpus may foster research in the area and that the methods we\ntested instigate new ones in the future.",
+                        "For future work, we hope to identify other features that may help\ndistinguishing the remaining misclassi ed examples, as well as to test other classi cation\ntechniques, using, e.g., distributional representations and methods. We also aim\nat dealing with other deception types, such as satiric texts and fake opinion\nreviews, and with more complex cases, as the news including half truth.",
+                        "More information about this work and the related tools and resources may\nbe found at the OPINANDO project website13."
+                    ]
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "Acknowledgments References",
+                    "p": "The authors are grateful to FAPESP, CAPES and CNPq for supporting this\nwork.\n13 https://sites.google.com/icmc.usp.br/opinando/"
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Appling",
+                                    "given-names": "D.S.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Briscoe",
+                                    "given-names": "E.J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Hutto",
+                                    "given-names": "C.J.:",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Discriminative models for predicting deception strategies",
+                            "source": "In: Proceedings of the 24th International Conference on World Wide Web",
+                            "volume": "947",
+                            "issue": "952",
+                            "year": "2015",
+                            "#text": "1.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Balage",
+                                    "surname": "Filho"
+                                },
+                                {
+                                    "given-names": "P.P.",
+                                    "surname": "Pardo",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "T.A."
+                                },
+                                {
+                                    "surname": "S.M.:"
+                                }
+                            ],
+                            "article-title": "An evaluation of the brazilian portuguese liwc dictionary for sentiment analysis",
+                            "source": "In: Proceedings of the 9th Brazilian Symposium in Information and Human Language Technology",
+                            "volume": "215",
+                            "issue": "219",
+                            "year": "2013",
+                            "#text": "2.\n          \n          ,\n          \n          ,\n          \n          , Alu sio,\n          \n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Charles",
+                                    "given-names": "F."
+                                },
+                                {
+                                    "surname": "Bond",
+                                    "given-names": "J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "DePaulo",
+                                    "given-names": "B.M.:",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Accuracy of deception judgments",
+                            "source": "Personality and Social Psychology Review",
+                            "volume": [
+                                "10",
+                                "214"
+                            ],
+                            "issue": "3",
+                            "fpage": "234",
+                            "year": "2006",
+                            "#text": "3.\n          \n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Clem",
+                                "given-names": "S.",
+                                "#text": ","
+                            },
+                            "article-title": "Post-truth and vices opposed to truth",
+                            "source": "Journal of the Society of Christian Ethics",
+                            "volume": [
+                                "37",
+                                "97"
+                            ],
+                            "issue": "2",
+                            "fpage": "116",
+                            "year": "2017",
+                            "#text": "4.\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Conroy",
+                                    "given-names": "N.J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V.L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Chen",
+                                    "given-names": "Y.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": [
+                                "Automatic deception detection: Methods for nding fake news",
+                                "Information Science with Impact: Research in and for the Community"
+                            ],
+                            "source": "In: Proceedings of the 78th ASIS&T Annual",
+                            "volume": "82",
+                            "issue": [
+                                "1",
+                                "82",
+                                "4"
+                            ],
+                            "year": "2015",
+                            "#text": "5.\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          Meeting:\n          \n          . pp.\n          \n          :\n          \n          {\n          \n          :\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Cortes",
+                                    "given-names": "C.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Vapnik",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Support-vector networks",
+                            "source": "Machine Learning",
+                            "volume": [
+                                "20",
+                                "273"
+                            ],
+                            "issue": "3",
+                            "fpage": "297",
+                            "year": "1995",
+                            "#text": "6.\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Duran",
+                                    "given-names": "N.D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Hall",
+                                    "given-names": "C.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "McCarthy",
+                                    "given-names": "P.M.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "McNamara",
+                                    "given-names": "D.S.:",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "The linguistic correlates of conversational deceprion: comparing natural language processing technologies",
+                            "source": "Applied Psycholinguistics",
+                            "volume": [
+                                "31",
+                                "439"
+                            ],
+                            "issue": "3",
+                            "fpage": "462",
+                            "year": "2010",
+                            "#text": "7.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Ferreira",
+                                    "given-names": "W.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Vlachos",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": [
+                                "Emergent: a novel data-set for stance classi cation",
+                                "Association for Computational Linguistics ("
+                            ],
+                            "source": "In: Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+                            "volume": "1163",
+                            "fpage": "1168",
+                            "year": "2016",
+                            "#text": "8.\n          \n          ,\n          \n          :\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          .\n          \n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Fonseca",
+                                "given-names": "E.R.",
+                                "#text": ","
+                            },
+                            "article-title": ": A deep architecture for non-projective dependency parsing",
+                            "source": "In: Proceedings of the NAACL-HLT Workshop on Vector Space Modeling for NLP",
+                            "year": "2015",
+                            "#text": "9.\n          \n          , Alu sio, S.M.\n          \n          .\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "George",
+                                    "given-names": "J.F.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Keane",
+                                    "given-names": "B.T.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Deception detection by third party observers",
+                            "source": "In: Paper presented at the deception detection symposium, 39th Annual Hawaii International Conference on System Sciences",
+                            "year": "2006",
+                            "#text": "10.\n          \n          ,\n          \n          :\n          \n          .\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Gimenes",
+                                    "given-names": "G.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Cordeiro",
+                                    "given-names": "R.L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rodrigues-Jr",
+                                    "given-names": "J.F.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Orfel: E cient detection of defamation or illegitimate promotion in online recommendation",
+                            "source": "Information Sciences",
+                            "volume": [
+                                "379",
+                                "274"
+                            ],
+                            "fpage": "287",
+                            "year": "2017",
+                            "#text": "11.\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          ,\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Hauch",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Blandn-Gitlin",
+                                    "given-names": "I.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Masip",
+                                    "given-names": "J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Sporer",
+                                    "given-names": "S.L.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Are computers e ective lie detectors? a meta-analysis of linguistic cues to deception",
+                            "source": "Personality and Social Psychology Review",
+                            "volume": [
+                                "19",
+                                "307"
+                            ],
+                            "issue": "4",
+                            "fpage": "342",
+                            "year": "2015",
+                            "#text": "12.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Musskopf"
+                                },
+                                {
+                                    "surname": "newsd4faef2281aa"
+                                }
+                            ],
+                            "article-title": [
+                                "A ci^encia da detecc~ao de fake news",
+                                "a-ci%C3%AAncia-da-detec%C3%A7%C3%A3o-de-fake-"
+                            ],
+                            "year": "September 2017",
+                            "#text": "13.\n          \n          , I.:\n          \n          . https://medium.com/datascience-brigade/\n          \n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Perez-Rosas",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Kleinberg",
+                                    "given-names": "B.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Lefevre",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Mihalcea",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Automatic detection of fake news",
+                            "source": "CoRR abs/1708",
+                            "year": "2017",
+                            "#text": "14.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          .07104 (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Perez-Rosas",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Mihalcea"
+                                }
+                            ],
+                            "article-title": "Cross-cultural deception detection",
+                            "source": "In: Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics",
+                            "volume": "440",
+                            "issue": "445",
+                            "year": "2014",
+                            "#text": "15.\n          \n          ,\n          \n          , R.:\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Perez-Rosas",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Mihalcea"
+                                }
+                            ],
+                            "article-title": "Experiments in open domain deception detection",
+                            "source": "In: Proceedings of the Conference on Empirical Methods in Natural Language Processing",
+                            "volume": "1120",
+                            "issue": "1125",
+                            "year": "2015",
+                            "#text": "16.\n          \n          ,\n          \n          , R.:\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V.L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Chen",
+                                    "given-names": "Y.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Conroy",
+                                    "given-names": "N.J.:",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Deception detection for news: Three types of fakes",
+                            "source": "Proceedings of the Association for Information Science and Technology",
+                            "volume": "52",
+                            "issue": [
+                                "1",
+                                "4"
+                            ],
+                            "year": "2015",
+                            "#text": "17.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ), 1{\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V.L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Conroy",
+                                    "given-names": "N.J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Chen",
+                                    "given-names": "Y.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Cornwell",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Fake news or truth? using satirical cues to detect potentially misleading news",
+                            "source": "In: Proceedings of 15th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+                            "volume": "7",
+                            "issue": "17",
+                            "year": "2016",
+                            "#text": "18.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Salton",
+                                    "given-names": "G.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "McGill",
+                                    "given-names": "M.J.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "Introduction to Modern Information Retrieval. McGrawHill, Inc",
+                            "year": "1986",
+                            "#text": "19.\n          \n          ,\n          \n          :\n          \n          ., New York, NY, USA (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Vosoughi",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Roy",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Aral",
+                                    "given-names": "S.:",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "The spread of true and false news online",
+                            "source": "Science",
+                            "volume": [
+                                "359",
+                                "1146"
+                            ],
+                            "issue": "6380",
+                            "fpage": "1151",
+                            "year": "2018",
+                            "#text": "20.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref21",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Wang"
+                            },
+                            "article-title": "\\liar, liar pants on re\": A new benchmark dataset for fake news detection",
+                            "source": "In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics",
+                            "year": "2017",
+                            "#text": "21.\n          \n          , W.Y.:\n          \n          .\n          \n          . Vancouver, BC, Canada (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref22",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhou",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Burgoon",
+                                    "given-names": "J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Twitchell",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Qin",
+                                    "given-names": "T.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Nunamaker",
+                                    "given-names": "J.:",
+                                    "#text": "Jr.,"
+                                }
+                            ],
+                            "article-title": "A comparison of classi cation methods for predicting deception in computer-mediated communication",
+                            "source": "Journal of Management Information Systems",
+                            "volume": [
+                                "20",
+                                "139"
+                            ],
+                            "issue": "4",
+                            "fpage": "165",
+                            "year": "2004",
+                            "#text": "22.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref23",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhou",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Twitchell",
+                                    "given-names": "D.P.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Qin",
+                                    "given-names": "T.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Burgoon",
+                                    "given-names": "J.K.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Nunamaker",
+                                    "given-names": "J.F.",
+                                    "#text": ","
+                                }
+                            ],
+                            "article-title": "An exploratory study into deception detection in text-based computer-mediated communication",
+                            "source": "In: Proceedings of the 36th Annual Hawaii International Conference on System Sciences",
+                            "year": [
+                                "2003",
+                                "2003"
+                            ],
+                            "#text": "23.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          ,\n          \n          (\n          \n          )"
+                        }
+                    },
+                    {
+                        "@id": "ref24",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhou",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Zhang"
+                                }
+                            ],
+                            "article-title": "Following linguistic footprints: Automatic deception detection in online communication",
+                            "source": "Communications of the ACM - Enterprise Information Integration: and other tools for merging data 51(9)",
+                            "volume": "119",
+                            "fpage": "122",
+                            "year": "2008",
+                            "#text": "24.\n          \n          ,\n          \n          , D.:\n          \n          .\n          \n          ,\n          \n          {\n          \n          (\n          \n          )"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

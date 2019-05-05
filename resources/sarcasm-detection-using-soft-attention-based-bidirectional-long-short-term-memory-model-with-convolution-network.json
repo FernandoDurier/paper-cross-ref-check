@@ -1,0 +1,2592 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": {
+                "journal-title-group": {
+                    "journal-title": "VOLUME"
+                }
+            },
+            "article-meta": {
+                "title-group": {
+                    "article-title": "Sarcasm Detection Using Soft Attention-Based Bidirectional Long Short-Term Memory Model With Convolution Network"
+                },
+                "contrib-group": {
+                    "contrib": [
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "LE HOANG SON",
+                            "xref": [
+                                {
+                                    "@ref-type": "aff",
+                                    "@rid": "aff2",
+                                    "#text": "2"
+                                },
+                                {
+                                    "@ref-type": "aff",
+                                    "@rid": "aff3",
+                                    "#text": "3"
+                                }
+                            ]
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "AKSHI KUMAR",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "SAURABH RAJ SANGWAN",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "ANSHIKA ARORA",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "ANAND NAYYAR",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff4",
+                                "#text": "4"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "MOHAMED ABDEL-BASSET",
+                            "email": "analyst_mohamed@zu.edu.eg",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff1",
+                                "#text": "1"
+                            }
+                        }
+                    ],
+                    "aff": [
+                        {
+                            "@id": "aff0",
+                            "label": "0",
+                            "institution": "Department of Computer Science & Engineering, Delhi Technological University",
+                            "addr-line": "Delhi 110042",
+                            "country": {
+                                "@country": "IN",
+                                "#text": "India"
+                            },
+                            "#text": ",\n          \n          ,"
+                        },
+                        {
+                            "@id": "aff1",
+                            "label": "1",
+                            "institution": "Department of Operations Research, Faculty of Computers and Informatics, Zagazig University",
+                            "addr-line": "Zagazig 44519",
+                            "country": {
+                                "@country": "EG",
+                                "#text": "Egypt"
+                            },
+                            "#text": ",\n          \n          ,"
+                        },
+                        {
+                            "@id": "aff2",
+                            "label": "2",
+                            "institution": "Division of Data Science, Ton Duc Thang University",
+                            "addr-line": "Ho Chi Minh 700000",
+                            "country": {
+                                "@country": "VN",
+                                "#text": "Vietnam"
+                            },
+                            "#text": ",\n          \n          ,"
+                        },
+                        {
+                            "@id": "aff3",
+                            "label": "3",
+                            "institution": "Faculty of Information Technology, Ton Duc Thang University",
+                            "addr-line": "Ho Chi Minh 700000",
+                            "country": {
+                                "@country": "VN",
+                                "#text": "Vietnam"
+                            },
+                            "#text": ",\n          \n          ,"
+                        },
+                        {
+                            "@id": "aff4",
+                            "label": "4",
+                            "institution": "Graduate School, Duy Tan University",
+                            "addr-line": "Da Nang 550000",
+                            "country": {
+                                "@country": "VN",
+                                "#text": "Vietnam"
+                            },
+                            "#text": ",\n          \n          ,"
+                        }
+                    ]
+                },
+                "pub-date": {
+                    "year": "2019"
+                },
+                "volume": "7",
+                "issue": "2019",
+                "fpage": "23319",
+                "lpage": "23328",
+                "history": {
+                    "date": [
+                        {
+                            "@date-type": "accepted",
+                            "day": "11",
+                            "month": "2",
+                            "year": "2019"
+                        },
+                        {
+                            "@date-type": "received",
+                            "day": "30",
+                            "month": "1",
+                            "year": "2019"
+                        }
+                    ]
+                },
+                "abstract": {
+                    "p": "A large community of research has been developed in recent years to analyze social media and social networks, with the aim of understanding, discovering insights, and exploiting the available information. The focus has shifted from conventional polarity classi cation to contemporary applicationoriented ne-grained aspects such as, emotions, sarcasm, stance, rumor, and hate speech detection in the user-generated content. Detecting a sarcastic tone in natural language hinders the performance of sentiment analysis tasks. The majority of the studies on automatic sarcasm detection emphasize on the use of lexical, syntactic, or pragmatic features that are often unequivocally expressed through gurative literary devices such as words, emoticons, and exclamation marks. In this paper, we propose a deep learning model called sAtt-BLSTM convNet that is based on the hybrid of soft attention-based bidirectional long shortterm memory (sAtt-BLSTM) and convolution neural network (convNet) applying global vectors for word representation (GLoVe) for building semantic word embeddings. In addition to the feature maps generated by the sAtt-BLSTM, punctuation-based auxiliary features are also merged into the convNet. The robustness of the proposed model is investigated using balanced (tweets from benchmark SemEval 2015 Task 11) and unbalanced (approximately 40000 random tweets using the Sarcasm Detector tool with 15000 sarcastic and 25000 non-sarcastic messages) datasets. An experimental study using the training- and test-set accuracy metrics is performed to compare the proposed deep neural model with convNet, LSTM, and bidirectional LSTM with/without attention and it is observed that the novel sAtt-BLSTM convNet model outperforms others with a superior sarcasm-classi cation accuracy of 97.87% for the Twitter dataset and 93.71% for the random-tweet dataset."
+                },
+                "kwd-group": {
+                    "kwd": [
+                        "Sarcasm",
+                        "deep learning",
+                        "attention",
+                        "social data"
+                    ]
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": [
+                        "I. INTRODUCTION\nThe biggest challenge in sentiment analysis tasks is to\naccurately determine the veracity of the statement in literal\nsense so as to classify text on the basis of polarity\n(positive or negative). Sentiment analysis achieves decent results\nin the case of literal language as it conveys the expected\ninterpretation. However, the use of gurative language that\nis inherently emblematic represents something other than the\nconcrete meaning, thereby making sentiment analysis a\nnon",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref1",
+                                "#text": "1"
+                            },
+                            "#text": "The associate editor coordinating the review of this manuscript and\napproving it for publication was Muhammad Imran.\ntrivial problem. ``Sarcasm is de ned as a speci c type of\nsentiment where people express their negative feelings using\npositive or intensi ed positive words in the text'' [\n        \n        ]. It is\na rhetoric narrative that presents a communicatively\nsignificant discord between the actual situation and the utterance\ncontent. For example, a tweet/post, ``It is wonderful feeling\nto waste hours in traf c jams!'' clearly indicates this\ndiscord between the actual situation of ``being stuck in traf c\njam'' and the utterance content ``wonderful.'' This contrast\nand shift of sentiments in sarcastic expressions validates\nsarcasm as a special instance of sentiment analysis.\nTherefore, the detection of sarcastic expressions will enhance\n2169-3536 2019 IEEE. Translations and content mining are permitted for academic research only."
+                        },
+                        "Personal use is also permitted, but republication/redistribution requires IEEE permission.\nSee http://www.ieee.org/publications_standards/publications/rights/index.html for more information.\nthe automatic sentiment analysis of huge and diverse social\nweb data.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref2",
+                                "#text": "2"
+                            },
+                            "#text": "Automatic sarcasm detection is typically a\ntextclassi cation problem, which relies on a variety of\nfeatureextraction and learning techniques. In general, the Twitter\npost size characterizes short text with a character limit of 280,\nwhich is insuf cient in providing the desired word\ncooccurrence data. This data sparseness is challenging for\nconventional learning models based on statistical features, such\nas term frequency inverse document frequency (TF-IDF) or\nco-occurrence. Deep learning architectures have proven\ncapabilities when dealing with natural language, as they can learn\nby example, offer a exible set of modeling alternatives while\ncurtailing feature engineering, scale up to big data, exploit\nunlabeled data to detect trends and identify patterns too\ncomplex for humans to notice, and be used for multitask\nlearning [\n        \n        ]. The primary contribution of this work includes:\nImproving the performance of the sentiment\nanalysis task by building, training and evaluating a deep\nlearning model, sAtt-BLSTM convNet, a hybrid of\nsoft attention-based bidirectional long short-term\nmemory (sAtt-BLSTM) and convolution neural network\n(convNet)\nFeature engineering for automatic sarcasm detection\nusing gurative literary devices such as words,\nemoticons, and exclamation marks."
+                        },
+                        "Performance benchmarking by testing different kinds of\nmodels and datasets for sarcastic tone classi cation in\nreal-time.",
+                        "The proposed deep learning model, sAtt-BLSTM convNet,\nhas eight layers:",
+                        "Input Layer: The input tweet to the model.",
+                        "Embedding Layer: Each word within tweet is mapped\ninto a low dimension vector using GloVe. This look-up\nencodes the input into real-valued vectors called\nembedding vectors.",
+                        "BLSTM layer: The output of the word-embedding layer\nis fed into the BLSTM layer. The purpose of this layer\nis to learn high-level features from the previous step.",
+                        "Attention Layer: Asoft attention mechanism (based on\nsoftmax) is used, which generates semantic context\nvectors. These are merged with the BLSTM output features\nand auxiliary features to train the convNet.",
+                        "Convolution Layer: The convolution operation is\nperformed to obtain a convolved feature vector.",
+                        "Activation Layer: A Recti ed Linear Unit (ReLU)\nactivation function is applied on the feature vectors (output\nof convNet layer).",
+                        "Down-sampling Layer: The max-pooling operation is\nused as a down-sampling strategy in convNets.",
+                        "Representation Layer: A fully connected layer that\nconsists of a linear transformation layer and softmax\nactivation function to generate the output predictions.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref3",
+                                "#text": "3"
+                            },
+                            "#text": "To build word embeddings, GloVe [\n        \n        ], which generates\na word vector table, is used. GloVe is a count-based model\nof representing words by feature vectors. This model maps\nall the tokenized words in each tweet to its respective word\nvector table. Proper padding is performed to unify the\nfeature vector matrix. This matrix is given as an input to the\nbidirectional long-short-term-memory (BLSTM) layer. The\nBLSTM networks set up an additional layer to the\nunidirectional LSTM networks, where the hidden-to-hidden\nconnections ow in opposite temporal order. The network thus\nexploits information from the past and the future. The output\nvector representation from the BLSTM is transformed into an\nattention-weighted sum of these output vectors. This\nwordlevel attention hypothesis relies on valuable words within\ntext that contribute to the meaning in context, and thus\ncomputes attention probabilities over the input stimuli from the\nBLSTM. Consequently, the output feature representations\nfrom BLSTM are concatenated together as the output of\nthe attention layer, which, combined with auxiliary features,\nis provided as input to the convNet. The convNet consists of\nmultiple lters with a variable-size window connected to a\nsmall part of the input to generate a convolved feature map."
+                        },
+                        "Several lters are used to extract features in a convolution\nlayer and each lter gives an activation map. The next layer is\nthe activation layer, or the ReLU layer, which introduces\nnonlinearity to the network and generates a recti ed feature map.\nThis recti ed feature map is fed to the pooling layer to reduce\nthe dimensionality of the feature map. A k-max pooling\noperation is employed, which selects the top k features with\nrespect to the various hidden layers and generates a pooled\nfeature map. This pooled feature map is input to the fully\nconnected softmax layer, which calculates the probability of\nany output word and classi es the tweet as sarcastic or\nnonsarcastic.",
+                        "Basic sentiment analysis tools have dif culty\ndistinguishing between positive and negative statements,\nespecially when sarcasm, irony, and mixed feelings\nare included discretely or in combination. Practical\nmodels to predict sarcastic text are thus imperative,\nand the proposed model combines semantics from the\nattention-based bidirectional LSTM network with\nauxiliary pragmatic features to a deep convolution network\nfor enhanced prediction performance.",
+                        "The multiple layers involve nonlinearity that aids\nlearning complex representations.",
+                        "The rest of the paper is structured as follows. Section 2\nbrie y discusses the pertinent work within the domain of\nsentiment analysis and deep learning based automatic sarcasm\ndetection followed by Section 3, which illustrates the\nproposed sAtt-BLSTM convNet model and its working details.\nSection 4 explicates the results and provides an analysis of\nthe same. The nal section, Section 5, concludes the study\nand expounds upon the scope of future work.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref4",
+                                    "#text": "4"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "5"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref4",
+                                    "#text": "4"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref6",
+                                    "#text": "6"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref7",
+                                    "#text": "7"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref8",
+                                    "#text": "8"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref11",
+                                    "#text": "11"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref12",
+                                    "#text": "12"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref13",
+                                    "#text": "13"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref14",
+                                    "#text": "14"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref15",
+                                    "#text": "15"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref6",
+                                    "#text": "6"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "16"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref17",
+                                    "#text": "17"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref18",
+                                    "#text": "18"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref19",
+                                    "#text": "19"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref20",
+                                    "#text": "20"
+                                }
+                            ],
+                            "#text": "II. RELATED WORK\nThe growing pursuit of Internet users in all forms of social\nmedia has intensi ed researchers' interest to intelligently\nmine the content available, both quantitatively and\nqualitatively. Twitter, currently the most famous micro-blog,\nconnects people across the globe and has a high level of user\ninvolvement. It has gradually emerged as a huge source of\nsentiment-rich data [\n        \n        ]. The keyword ``sentiment analysis''\nwas initially witnessed in the published work [\n        \n        ] in 2003,\nand since then, both primary [\n        \n        ], [\n        \n        ], [\n        \n        ] and secondary\nstudies have been reported across pertinent literature [\n        \n        ] [\n        \n        ].\nFurthermore, the literature is well-equipped with studies\npertaining to sentiment analysis using machine learning\nparadigms on speci cally textual user-generated online\ncontent on social media. Alou and El Saddik [\n        \n        ] proposed a\nmodel for sentiment analysis of football speci c tweets using\nthree classi ers, namely, support vector machine,\nmultinomial Navies Bayes and random forest. Pai and Liu [\n        \n        ] put\nforward a model for prediction of vehicle sales by sentiment\nanalysis of twitter data and stock market values using least\nsquares support vector regression. Research using deep\nlearning models for sentiment analysis has also been reported.\nTseng et al. [\n        \n        ] analyzed textual opinions found in teaching\nevaluation questionnaires and applied the analysis results to\nassisting the selection of outstanding teaching faculty\nmembers using attention-based LSTM. Wu and Chi [\n        \n        ] proposed\na model having quadratic connections of LSTM capable\nof capturing complex semantic representations of natural\nlanguage texts and evaluated on the benchmark dataset,\nthe Stanford Sentiment Treebank. Bouazizi and Ohtsuki [\n        \n        ]\nextended the concept of binary or ternary classi cation\nand proposed an approach to classify text collected from\nTwitter into seven sentiment classes. The authors further\nproposed [\n        \n        ] multi-class sentiment analysis which addresses\nthe identi cation of the exact sentiment conveyed by the\nuser using the task of quanti cation that identi es all the\nexisting sentiments within a tweet instead of attributing a\nsingle sentiment label to it. Zhang et al. [\n        \n        ] proposed a\nmodel combining convolution neural network and\nbidirectional gated recurrent unit for sentence semantic classi\ncation. Han et al. [\n        \n        ] used CNN and BLSTM to design\nfour kinds of memory network models for text sentiment\nclassi cation. Fu et al. [\n        \n        ] proposed a lexicon-enhanced\nLSTM model that uses sentiment lexicon as extra information\npre-training a word sentiment classi er. Wang et al. [\n        \n        ]\nproposed a sophisticated algorithm based on deep learning\nand information geometry for sentiment classi cation."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref21",
+                                    "#text": "21"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref23",
+                                    "#text": "23"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref24",
+                                    "#text": "24"
+                                }
+                            ],
+                            "#text": "Signi cant studies exemplify sarcasm as a contradiction in\npolarity [\n        \n        ], [\n        \n        ]. Sarcasm detection has been reported as a\nnon-trivial challenge for sentiment analysis across literature\nstudies. There have been expansive efforts by researchers to\ninvestigate sarcasm-detection techniques on various social\nmedia channels as a sub-task of sentiment analysis [\n        \n        ].\nBouazizi and Ohtsuki [\n        \n        ] propose a pattern-based approach\nto detect sarcasm on Twitter considering four sets of features\nthat cover the different types of sarcasms."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref25",
+                                    "#text": "25"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref26",
+                                    "#text": "26"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref27",
+                                    "#text": "27"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref28",
+                                    "#text": "28"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref29",
+                                    "#text": "29"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref30",
+                                    "#text": "30"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref31",
+                                    "#text": "31"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref32",
+                                    "#text": "32"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref33",
+                                    "#text": "33"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref34",
+                                    "#text": "34"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref35",
+                                    "#text": "35"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref36",
+                                    "#text": "36"
+                                }
+                            ],
+                            "#text": "Architectures based on deep learning techniques have\ngained popularity in natural language programming\napplications as they are capable of handling data sparseness\nin unbalanced datasets. Studies on bullying and verbal\naggression have been reported deep neural network for\nshort-text sentiment analysis [\n        \n        ]. A few such approaches\nhave been reported for automatic sarcasm detection as well.\nFelbo et al. [\n        \n        ] proposed a DeepMoji model, which is based\non the occurrences of emoji, for detecting the emotional\ncontent on Twitter. It uses a variant of LSTM, a 6-layer model\nthat is a hybrid of BLSTM and the attention mechanism for\nthe detection of sarcastic tweets. A new convolution\nnetworkbased architecture is presented in [\n        \n        ] that learn user\nembeddings in addition to utterance-based embeddings, which\nallows the authors to learn user-speci c context. The\nsimilarity between word embeddings is used by Joshi et al. [\n        \n        ]\nas features for sarcasm detection. The authors have\nconcatenated features from previous works to these word\nembeddingbased features. Ghosh and Veale [\n        \n        ] have built a model\ncombining a convNet with a recurrent neural network (RNN,\nlong short-term memory) followed by a deep neural network.\nIt is observed that this approach shows an improvement for\nthe deep learning architecture when compared with\nrecursive SVM. In [\n        \n        ], models based on a pre-trained convNet\nhave been developed that are used to extract emotion,\nsentiment, and even personality features for sarcasm detection.\nIn another study, [\n        \n        ], bidirectional LSTM is used to\ncapture syntactic and semantic information over tweets, along\nwith a pooling neural network to extract contextual features\nautomatically from history tweets. Performance using neural\nfeatures is compared with discrete manual features and an\nimprovement is observed. Attention mechanism has been\npreviously used by researchers in the domain of natural language\nunderstanding as it selectively focuses on information-rich\nphrases within the sequence of sentence. Recently, authors\nSeo et al. [\n        \n        ] and Wang et al. [\n        \n        ] demonstrated the effective\nuse of attention for compression and question-answering.\nIII. AUTOMATED SARCASM DETECTION\nThe proposed framework for automatic sarcasm detection has\nfour key components, namely, (A) data acquisition, (B)\npreprocessing, (C) implementation of the sAtt-BLSTM\nconvNet model, and (D) evaluation using performance measures.\nThese are explained in detail in the following subsections.\nA. DATASET ACQUISITION\nTo evaluate the performance of the proposed model, the\nfollowing datasets have been used for empirical analysis. The\npurpose of using two varied datasets was to further validate\nthe results achieved and determine the robustness of the\nselected features and the model trained on these features.\n1) BALANCED DATASET: SEMEVAL 2015 TASK 11\nThe original SemEval dataset consists of 20000\nhashtagannotated tweets, which were created for the Twitter\nsentiment analysis task. SemEval 2015 task 11 [\n        \n        ] de ned the\nchallenge as a ``dataset for sentiment analysis of gurative\nlanguage on Twitter.'' The objective of the task is speci cally\nto evaluate the use of gurative language, where the word\nor phrase described as `` gurative'' meant that it is being\nused in a way that was symbolic and represented something\nother than its concrete meaning. Although gurative language\nencompasses an extensive variety of literary tools and\ntechniques, such as similes, emoticons, metaphor, personi\ncation, idiom, and hyperbole, this benchmark dataset contains\ntweets with speci c gurative types, namely, sarcasm, irony,\nand metaphor. The sarcasm corpus is thus constructed by\ncollecting self-annotated tweets with the hashtags #irony,\n#sarcasm, and #not. Although there is a subtle difference\nbetween the three, we consider all of them in the same\ncategory for performing this empirical analysis. Thus, this\nstudy is also indicative of how this generalization in uences\nthe obtained results. The experiments used the SemEval 2013\ntask 2 dataset as the negative class data [\n        \n        ]. Manual perusal\nof the two datasets revealed that both contain tweets from\ngeneral topics, thus avoiding any bias in our experimentation.\nTo collect data for the experiments, we tried to retrieve\n15961 tweets using a list of the dataset's tweet ids provided,\nout of which 7994 are sarcastic and 7324 are non-sarcastic.\n2) IMBLANCED DATASET: RANDOM TWEETS\nIn real time, the presence of sarcasm in tweets is less frequent.\nA randomly sampled dataset containing 15,000 sarcastic\nand 25,000 non-sarcastic tweets is built using the Sarcasm\nDetector tool.1\nB. PRE-PROCESSING\nAfter the data acquisition, to intelligently mine the text,\nthe tweets are pre-processed to clean and transform the\ndata for feature extraction [\n        \n        ]. These include the following\nprocesses."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref37",
+                                    "#text": "37"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref38",
+                                    "#text": "38"
+                                }
+                            ],
+                            "#text": "URLs, mentions, hashtags, and numbers in the tweets\nare replaced with placeholders\nAll tweets are tokenized by the Natural Language\nToolkit (NLTK) [\n        \n        ]\nAll tokens are sampled in lowercase\nAll tweets are stemmed to the root word using Porter's\nStemmer [\n        \n        ]\nAll non-ASCII-English characters were removed,\nto limit the domain of data to the English language\nAll words are replaced by pre-trained GloVe word\nvectors. Words that do not exist in the pre-trained\nembeddings are set to a zero vector\nSeveral auxiliary features are used to enhance the\nclassication model. These are primarily pragmatic markers\nconcerned with language use. We consider the following ve\npunctuation-based features that help understand the subtleties\nof sarcasm in text, as these indicate gurative text and\nsymbolic clues within the text:"
+                        },
+                        "Number of exclamation marks (!) in the tweet\nNumber of question marks (?) in the tweet\nNumber of periods (.) in the tweet\nNumber of capital letters in the tweet",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref28",
+                                "#text": "28"
+                            },
+                            "#text": "Number of uses of ``or'' in the tweet\nC. THE PROPOSED sATT-BLSTM CONVNET MODEL\nThe proposed deep learning model uses 8 layers: the input\nlayer, embedding layer, BLSTM layer, attention layer,\nconvolution layer, activation and ReLU layer, max pooling layer,\nand representation layer. Fig. 1 depicts the architecture of\nthe proposed multi-layer model. The details of each layer are\nprovided in the subsequent subsections.\n1) INPUT LAYER\nThe tweets after pre-processing are fed to the input layer. The\ninput layer is connected to the embedding layer, which builds\nword embeddings using GloVe.\n2) EMBEDDING LAYER\nThe embedding layer maps the input into real-valued vectors\nusing encoding from look-up tables. Word embeddings\nfacilitate learned word representations. The bene ts of extracting\nfeatures based on word embedding to detect sarcasm have\nbeen recently reported [\n        \n        ]. In this study, to build word\nembeddings, GloVe, which generates a word vector table,\nis used. GloVe is a count-based model of representing words\nby feature vectors. This log-bilinear model studies the\nrelationship of words by counting the number of times they\nco-occur. Thus, this model aids in mapping all the tokenized\nwords in each tweet to their respective word vector tables.\nProper padding is performed to unify the feature vector\nmatrix. That is, if the total number of given tweets is Z and\nthere is a tweet X with t tokens, generation of a word vector\nTable 5 with dimension d of the word vectors is completed\nusing GloVe. Thus, for all Z, each t in X is mapped to its\nrespective V. After this mapping, each X is expressed as\na vector of the word embeddings concatenation (E). Thus,\nthe feature vector matrix is obtained as shown in (1)."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref39",
+                                    "#text": "39"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref28",
+                                    "#text": "28"
+                                }
+                            ],
+                            "#text": "F D U C B C T C P C E;\n(1)\nwhere C is the concatenation operator of the vector. The\ntweets are of varying length, so to unify the feature vector\nmatrix representation of tweets, the tweets with the maximum\nlength in the given corpus are used as a threshold value. This\nis done basically to x the length of the tweet matrix. Hence,\nfor all the tweets that were shorter than this threshold, zero\npadding was performed. This matrix was nally fed as input\n(i.e., F) to the BLSTM layer.\n3) BLSTM LAYER\nLSTM is an RNN that contains special units in the recurrent\nhidden layer called memory blocks [\n        \n        ]. Self-connections\nexist within the memory cells. There is an input, output, and\nforget gate for each memory cell. The hidden layer of LSTM\nis also called the LSTM cell. LSTM has the capability to plot\nlong-term dependencies by de ning each memory cell with\na set of gates <d , where d is the memory dimension of the\nhidden state of LSTM [\n        \n        ]. At each iteration t, the LSTM cell\nhas the layer input xt and the layer output ht . LSTM contains\nthree gates, which are functions of the current input xt and\nhidden state ht 1: input gate it, forget gate ft, and output gate\not. The cell also takes the cell input state st , the cell output\nstate ct , and the previous cell output state ct 1 into account\nwhile training and updating parameters."
+                        },
+                        "The input gate, forget gate, output gate, and input cell state\ncan be calculated using equations (2) (7).",
+                        "it D\nft D\not D\n(wix xt C wih ht 1 C bi)\n(wfx xt C wfh ht 1 C bf )\n(wox xt C woh ht 1 C bo)\nst D tanh wsx xt C wsh ht 1 C bs\nct D ft",
+                        "ct 1 C it\nht D tanh .ct /\not\nst\n(2)\n(3)\n(4)\n(5)\n(6)\n(7)"
+                    ]
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "In equations (2) (7),",
+                    "p": [
+                        "is the element-wise product;\nwi wf wo ws are weighing factors used for mapping the\nhidden layer input to the three gates and the input cell\nstate;\nbi bf bo bs are bias vectors;\nis the gate activation function, which is normally the\nsigmoid function;\ntanh is the hyperbolic tangent function.",
+                        "The nal output of the LSTM layer is a vector of all the\noutputs, represented by (8).",
+                        "Yt D [ht n; :::::::; ht 1]\n(8)",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref40",
+                                    "#text": "40"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref40",
+                                    "#text": "40"
+                                }
+                            ],
+                            "#text": "The bidirectional LSTM connects two hidden layers to a\nsingle output layer. The forward-layer output sequence h!\nis iteratively calculated using inputs in a positive sequence\nfrom time t-n to time t-1, while the backward-layer output\nsequence, h$ is calculated using the reversed inputs from\ntime t-n to t-1 [\n        \n        ]. Both the forward- and backward-layer\noutputs are calculated by using the standard LSTM updating\nequations. This creates two copies of the hidden layer, one t\nin the input sequences as is and one as a reversed copy of the\ninput sequence [\n        \n        ]. These representations are concatenated\ntogether using the attention mechanism. That is, the BLSTM\nlayer generates an output vector in which each element is\ncalculated by using (9)."
+                        },
+                        "yt D",
+                        ".h!t; h$t/\nwhere is a soft attention function to combine the two output\nsequences. By this means, our model can capture as many\nsalient words from both directions as possible. Thus, similar\nto that of the LSTM layer, the nal output of the BLSTM\nlayer can be represented by a vector (10).",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref41",
+                                    "#text": "41"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref42",
+                                    "#text": "42"
+                                }
+                            ],
+                            "#text": "YtD [yt n; :::::::;yt 1]\n4) ATTENTION LAYER\nThe idea of attention [\n        \n        ] has originated by the observation\nthat each word contributes to the meaning of tweet (sentence)\ndifferently that is; all words do not contribute equally to the\nrepresentation of the sentence meaning. The users reading\ntext can intuitively identify important, meaningful parts of the\nsentence. The attention mechanism adds an additional\nstructure to the network, which is learned as part of the standard\nmodel training via back-propagation. A deterministic,\ndifferentiable attention mechanism, known as soft attention [\n        \n        ],\nis used, where the weights on each location are usually given\nby a softmax, and the output of the attention module is a\nweighted sum of representations at each location. This whole\nprocess can be described by a differentiable function, so that\ntraining can be performed jointly with the rest of the network\nusing back-propagation."
+                        },
+                        "We use a word-level attention mechanism to focus on\nthe words that have a closer semantic relationship to the\nsentence meaning. That is, the word-level attention is applied\nto the feature representations of BLSTM. The output is thus a\nweighted combination of all the input states, not just the last\nstate. The attention mechanism gives an attention score ei;t to\neach word t in the sentence i, as given by (11).",
+                        "ei;t D g(Wht c);\nwhere g is an activation function.\n(9)\n(10)\n(11)\nThen the weight probability ai;t of each ht is computed\nby (12).\n(12)\nai;t D",
+                        "exp(ei;t )\nPT",
+                        "kD1 exp(ei;k )"
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "Auxilary Features",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref42",
+                                    "#text": "42"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref43",
+                                    "#text": "43"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref44",
+                                    "#text": "44"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref45",
+                                    "#text": "45"
+                                }
+                            ],
+                            "#text": "Pragmatic features, such as punctuation or repetition of\nwords, aid in understanding the subtleties of sarcasm in text,\nas these indicate gurative text and symbolic clues within the\ntext. Punctuation is considered ideal for the representation of\nsyntactic features, as the punctuation features contribute to a\nsubstantial boost in classi cation quality [\n        \n        ]. These can be\nexempli ed by the use of exclamation points/marks, repeated\nletters (especially vowels), or uppercase letters (ALL CAPS)\nin textual messages such as tweets/posts. A few examples\nwhere these punctuation features impact the emotion quotient\nin text are given below:\n\u00e2 An exclamation point or exclamation mark (!) intensi es\nthe emotional content preserving the semantic\norientation [\n        \n        ]. For example: ``The location is great!!!!'' is\nmore intense than ``The location is great.''\n\u00e2 Repeated letters (especially vowels) added to elongate\nthe spelling of a word (e.g., ``haaaaaaapppyyy'') is used\nto emphasize the word or to express enthusiasm in\ncomputer-mediated communication [\n        \n        ].\n\u00e2 Capitalization, such as explicitly using ALL CAPS\nto emphasize a sentiment-relevant word with other\nnon-capitalized words in the document, increases the\nintensity of the sentiment preserving semantic\norientation [\n        \n        ]. For example, ``Simply LOVED the place!'' is\nmore intense than ``Simply loved the place!''"
+                        },
+                        "Thus, sarcasm detection can be made easy by observing the\nsyntactic pattern of tweet to identify punctuation such as:\n\u00e2 Number of contiguous question marks, exclamation\npoints, and combinations thereof\n\u00e2 Whether the last token contains a question mark or\nexclamation point\n\u00e2 Occurrence of punctuation sequences such\nas ``!!!'' and ``?!''",
+                        "In this study, the set of punctuation-based features shown\nin Table1 are extracted for each tweet.\n5) CONVOLUTION LAYER\nConvNet has two primary parts, namely, feature learning\n(Conv, ReLU, and Pool) and classi cation (fully connected\nand softmax). The output features of the sAtt BLSTM are\ncombined with auxiliary features and provided as input to\nthe convNet. Each convolving lter has a variable window\nsize (s), height, and width. This window slides over to the\ninput matrix and calculates localized feature vector (vj) for\neach possible word (window size) using a nonlinear activation\nfunction (f) and a bias (ba).",
+                        "A transition matrix (T) is generated for each lter. This\nlter comprises of a layer of weights (weight matrix, W) that\nare applied to parts of the input matrix to obtain a single unit\nas the output. This is performed for the bias and weight during\nthe network-learning adjustment, as illustrated in (13).\n(13)\n(14)\nvjD f T:FjVjCs 1Cba",
+                        "Here, FjVjCs 1shows the local vector from position j to\nj C s 1 in F. Hence, formation of this vj together with\nthe completion of the convolution operation generates a new\nvector, n, as in (14).",
+                        "n D [v1; v2; v3; : : : :; vd sC1]",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref46",
+                                    "#text": "46"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref47",
+                                    "#text": "47"
+                                }
+                            ],
+                            "#text": "After the sliding operation, the output from each part is\nthen combined in order to obtain the resultant output, called\nthe transformed feature map, that serves as the input to the\nnext layer: the ReLU Layer.\n6) RELU LAYER\nThe activation or ReLU Layer [\n        \n        ] is applied for dealing with\nthe nonlinearity in the convNet model. It generates a recti ed\nfeature map, which is fed to the pooling layer to reduce the\ndimensionality of the feature map.\n7) POOLING LAYER\nIn this work, max pooling [\n        \n        ] is used, which takes the\nlargest element from the recti ed feature map. It reduces\nthe dimensionality of the feature map and helps retain the\nmost signi cant features. The k-max pooling operation (p) is\nperformed for feature selection that chooses the top k features\nconforming to various hidden layers, where p is expressed\nas (15)."
+                        },
+                        "p D max fv1;v2; v3; : : : :;vd sC1g\n(15)\n8) REPRESNTATION LAYER\nThe output layer is a fully connected layer that consists of\nthe softmax activation function. The pooled feature map is\ninput to the fully connected softmax layer, which calculates\nthe probability of any output word and classi es the tweet as\nsarcastic or non-sarcastic as an output. The output vector of\nthe softmax layer (O(z)) is as (16).",
+                        "O(z)DT(z)O(z 1)Cb(az);\n(16)\nwhere",
+                        "O(z 1) denotes the output vector the pooling layer\nT (z) is the transition matrix\nb(az) represents the bias factor of softmax layer.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref48",
+                                "#text": "48"
+                            },
+                            "#text": "Thus, using a fully connected softmax layer yields the\nprobability-distribution [\n        \n        ] of the sarcasm detection (Pd),\nwhich is denoted using (17)."
+                        },
+                        "[exp (Oj[Z] )]\nPd .j j X ; / D [Pn\nkD1 exp (Oj[Z] )]\n;\n(17)\nwhere is the parameter of the model and j is the class label.\nD. RESULTS AND ANALYSIS\nFor discussing the results, the empirical analysis has been\nbroadly divided into two parts: (i) parameter setting for the\nproposed model and (ii) comparison with multiple baselines\non the basis of classi cation accuracy.\n1) PARAMETER SETTING\nOptimal selection of parameters is imperative to achieve\nsuperlative performance results. We use the validation data\nto tune the hyper-parameters so as to obtain the best results.\nTable 2 lists the values used in this work.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref49 ref50",
+                                "#text": "49, 50"
+                            },
+                            "#text": "The weights of the network are randomly initialized from\na Gaussian distribution with variance scaled to 0.01, and the\nbiases are initialized to zero except the forget-gate bias, which\nis initialized to 1.\n2) PERFORMANCE RESULT\nThe proposed model is evaluated to predict sarcasm in\ntweets using two datasets, namely SemEval 2015 task 11 and\nrandom tweets containing a total of 40,000 tweets. The\nresults have been assessed using key performance indicators\n(accuracy, recall, precision, and F-measure [\n        \n        ]).\nTable 3 lists the results of the proposed sAtt-BLSTM convNet\nmodel implemented on the two datasets and Fig. 2 depicts the\nresults graphically.\n3) COMPARISON WITH BASELINE DEEP LEARNING\nMODELS RESULT\nWe compare the results of the proposed model with three\nother deep learning architectures, namely, LSTM, BLSTM\nwithout attention, and convNet. The word embedding was\nperformed using GloVe for each baseline model and the\nevaluation was made for both datasets using the four key\nperformance indicators. The results obtained for LSTM, BLSTM\nwithout attention, BLSTM with attention and convNet are\nshown in Tables 4, 5, 6 and 7, respectively."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref51",
+                                "#text": "51"
+                            },
+                            "#text": "It can be clearly observed that the proposed sAtt- BLSTM\nconvNet outperforms the other models with an accuracy\nof 91.60% achieved for the SemEval dataset and 88.28% for\nrandom tweets. LSTM shows the least accuracy of 84.89%\nand 79.75% for the SemEval and random tweet datasets,\nrespectively. The models, in order from lowest to highest\naccuracy, are LSTM < BLSTM without Attention < BLSTM\nwith Attention < convNet < sAtt-BLSTM convNet. The best\nrecall is also observed for the proposed sAtt-BLSTM convNet\nfor both the datasets. However, the convNet model\ndemonstrates the best precision value of 92.19% for the SemEval\ndataset, whereas the proposed sAtt-BLSTM convNet model\nshows the best precision for the random tweets. Table 8\nsummarizes the comparison of the accuracy results obtained by\nthe above ve models. Fig. 3 graphically illustrates these\ncomparative results.\nSocial media is an informal means of communication that\nincludes considerable use of slang, malformed words, short\nforms, colloquial expressions, mash-up words, etc. All these\namplify the ambiguity, vagueness, and imprecision in the\navailable social web content and makes the task of\nanalyzing generic and speci c sentiment computationally dif cult.\nSarcasm is a speci c type of sentiment and its automatic\ndetection is a dynamic area of research. In this work, we\nproposed sAtt-BLSTM convNet, a hybrid of soft attention-based\nbidirectional long short-term memory (sAtt-BLSTM) and\nconvolution neural network (convNet), to detect sarcasm in\nshort text (tweets). Semantic word embeddings and pragmatic\nauxiliary features were used to train the network. The\nproposed model demonstrates the highest classi cation accuracy\nfor both the datasets as compared to the baseline models. The\nuse of mash-up languages and novelty in vocabulary with\nadvanced architectures [\n        \n        ] [81] add to the challenges of\nautomated detection of sarcasm and characterize some open\nproblems for future research within the domain."
+                        },
+                        "AKSHI KUMAR received the B.E. degree (Hons.)\nin computer science and engineering from\nMaharishi Dayanand University, Rohtak, in 2003,\nthe M.Tech. (Hons.) in computer science and\nengineering from Guru Gobind Singh Indraprastha\nUniversity, Delhi, in 2005, and the Ph.D. degree in\ncomputer engineering (Web mining) from the\nFaculty of Technology, University of Delhi, in 2011.",
+                        "She has been with the university for the past ten\nyears. She is currently an Assistant Professor with\nthe Department of Computer Science & Engineering, Delhi Technological\nUniversity (formerly Delhi College of Engineering). Her research interests\ninclude intelligent systems, user-generated big-data, social media analytics,\nand soft computing.",
+                        "ANSHIKA ARORA received the B.Tech. degree in\ncomputer science and engineering from the\nUniversity of Delhi, New Delhi, India, in 2017. She is\ncurrently pursuing the M.Tech. degree in software\nengineering with Delhi Technological University,\nDelhi, India. Her research interests include social\nWeb, sentiment analysis, and machine learning.",
+                        "MOHAMED ABDEL-BASSET received the B.Sc.,\nM.Sc., and Ph.D. degrees in information systems\nand technology from the Faculty of Computers\nand Informatics, Zagazig University, Egypt. He is\nworking on the application of multi-objective\nand robust meta-heuristic optimization techniques.",
+                        "He has published more than 150 articles in\ninternational journals and conference proceedings. His\ncurrent research interests include optimization,\noperations research, data mining, computational\nintelligence, applied statistics, decision support systems, robust optimization,\nengineering optimization, multi-objective optimization, swarm intelligence,\nevolutionary algorithms, and arti cial neural networks. He holds the program\nchair in many conferences in the elds of decision making analysis, big data,\noptimization, complexity and the Internet of Things, and editorial\ncollaboration in some journals of high impact. He is also an/a Editor/Reviewer in\ndifferent international journals and conferences."
+                    ]
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "S. K.",
+                                    "surname": "Bharti"
+                                },
+                                {
+                                    "given-names": "B.",
+                                    "surname": "Vachha"
+                                },
+                                {
+                                    "given-names": "R. K.",
+                                    "surname": "Pradhan"
+                                },
+                                {
+                                    "given-names": "K. S.",
+                                    "surname": "Babu"
+                                },
+                                {
+                                    "given-names": "S. K.",
+                                    "surname": "Jena"
+                                }
+                            ],
+                            "article-title": "`Sarcastic sentiment detection in tweets streamed in real time: A big data approach",
+                            "volume": "2",
+                            "issue": "3",
+                            "fpage": "108",
+                            "lpage": "121",
+                            "year": "2016",
+                            "#text": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Digit. Commun. Netw., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "S. N.",
+                                    "surname": "Sivanandam"
+                                },
+                                {
+                                    "given-names": "S. N.",
+                                    "surname": "Deepa"
+                                }
+                            ],
+                            "article-title": "Principles of Soft Computing (With CD)",
+                            "year": "2007",
+                            "#text": "[2]\n          \n          and\n          \n          ,\n          \n          . Hoboken, NJ, USA: Wiley,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Pennington"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Socher"
+                                },
+                                {
+                                    "given-names": "C.",
+                                    "surname": "Manning"
+                                }
+                            ],
+                            "article-title": "Global vectors for word representation",
+                            "source": "in Proc. Conf. Empirical Methods Natural Lang. Process. (EMNLP)",
+                            "year": "2014",
+                            "fpage": "1532",
+                            "lpage": "1543",
+                            "#text": "[3]\n          \n          ,\n          \n          , and\n          \n          , ``Glove:\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Jaiswal"
+                                }
+                            ],
+                            "article-title": "`Empirical study of Twitter and Tumblr for sentiment analysis using soft computing techniques",
+                            "source": "in Proc. World Congr. Eng. Comput. Sci.",
+                            "year": "2017",
+                            "fpage": "1",
+                            "lpage": "5",
+                            "#text": "[4]\n          \n          and\n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Dave"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Lawrence"
+                                },
+                                {
+                                    "given-names": "D. M.",
+                                    "surname": "Pennock"
+                                }
+                            ],
+                            "article-title": "`Mining the peanut gallery: Opinion extraction and semantic classi cation of product reviews",
+                            "source": "in Proc. 12th Int. Conf. World Wide Web",
+                            "year": "2003",
+                            "fpage": "519",
+                            "lpage": "528",
+                            "#text": "[5]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Bouazizi"
+                                },
+                                {
+                                    "given-names": "T.",
+                                    "surname": "Ohtsuki"
+                                }
+                            ],
+                            "article-title": "`A pattern-based approach for multi-class sentiment analysis in Twitter,'' IEEE Access",
+                            "volume": "5",
+                            "fpage": "20617",
+                            "lpage": "20639",
+                            "year": "2017",
+                            "#text": "[6]\n          \n          and\n          \n          , `\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "S.",
+                                "surname": "Shayaa"
+                            },
+                            "article-title": "``Sentiment analysis of big data: Methods, applications",
+                            "volume": "6",
+                            "fpage": "37807",
+                            "lpage": "37827",
+                            "year": "2018",
+                            "#text": "[7]\n          \n          et al.,\n          \n          , and open challenges,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "T. M.",
+                                    "surname": "Sebastian"
+                                }
+                            ],
+                            "article-title": "`Sentiment analysis: A perspective on its past, present",
+                            "source": "'' Int. J. Intell. Syst. Appl.",
+                            "volume": "4",
+                            "issue": "10",
+                            "fpage": "1",
+                            "lpage": "14",
+                            "year": "2012",
+                            "#text": "[8]\n          \n          and\n          \n          , `\n          \n          and future,\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "T. M.",
+                                    "surname": "Sebastian"
+                                }
+                            ],
+                            "source": "Sentiment analysis on Twitter,'' Int. J. Comput. Sci. Issues",
+                            "volume": "9",
+                            "issue": "3",
+                            "fpage": "372",
+                            "lpage": "378",
+                            "year": "2012",
+                            "#text": "[9]\n          \n          and\n          \n          , ``\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "T.",
+                                    "surname": "Al-Moslmi"
+                                },
+                                {
+                                    "given-names": "N.",
+                                    "surname": "Omar"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Abdullah"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Albared"
+                                }
+                            ],
+                            "article-title": "`Approaches to cross-domain sentiment analysis: A systematic literature review",
+                            "source": "'' IEEE Access",
+                            "volume": "5",
+                            "fpage": "16173",
+                            "lpage": "16192",
+                            "year": "2017",
+                            "#text": "[10]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Jaiswal"
+                                },
+                                {
+                                    "surname": "Pract"
+                                }
+                            ],
+                            "article-title": "`Systematic literature review of sentiment analysis on Twitter using soft computing techniques,'' Concurrency Comput",
+                            "fpage": "e5107",
+                            "year": "2019",
+                            "volume": "10",
+                            "#text": "[11]\n          \n          and\n          \n          , `\n          \n          .,\n          \n          . Exper., p.\n          \n          ,\n          \n          . doi:\n          \n          .1002/cpe.5107."
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Alou"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "El"
+                                },
+                                {
+                                    "surname": "Saddik"
+                                }
+                            ],
+                            "article-title": "`Sentiment identi cation in football-speci c tweets,'' IEEE Access",
+                            "volume": "6",
+                            "fpage": "78609",
+                            "lpage": "78621",
+                            "year": "2018",
+                            "#text": "[12]\n          \n          and\n          \n          \n          , `\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "P. F.",
+                                    "surname": "Pai"
+                                },
+                                {
+                                    "given-names": "C. H.",
+                                    "surname": "Liu"
+                                }
+                            ],
+                            "article-title": "`Predicting vehicle sales by sentiment analysis of Twitter data and stock market values",
+                            "volume": "6",
+                            "fpage": "57655",
+                            "lpage": "57662",
+                            "year": "2018",
+                            "#text": "[13]\n          \n          and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "C. W.",
+                                    "surname": "Tseng"
+                                },
+                                {
+                                    "given-names": "J. J.",
+                                    "surname": "Chou"
+                                },
+                                {
+                                    "given-names": "Y. C.",
+                                    "surname": "Tsai"
+                                }
+                            ],
+                            "article-title": "`Text mining analysis of teaching evaluation questionnaires for the selection of outstanding teaching faculty members",
+                            "volume": "6",
+                            "fpage": "72870",
+                            "lpage": "72879",
+                            "year": "2018",
+                            "#text": "[14]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D.",
+                                    "surname": "Wu"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Chi"
+                                }
+                            ],
+                            "article-title": "`Long short-term memory with quadratic connections in recursive neural networks for representing compositional semantics",
+                            "volume": "5",
+                            "fpage": "16077",
+                            "lpage": "16083",
+                            "year": "2017",
+                            "#text": "[15]\n          \n          and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Bouazizi"
+                                },
+                                {
+                                    "given-names": "T.",
+                                    "surname": "Ohtsuki"
+                                }
+                            ],
+                            "article-title": "`Multi-class sentiment analysis in Twitter: What if classi cation is not the answer",
+                            "volume": "6",
+                            "fpage": "64486",
+                            "lpage": "64502",
+                            "year": "2018",
+                            "#text": "[16]\n          \n          and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D.",
+                                    "surname": "Zhang"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Hong"
+                                },
+                                {
+                                    "surname": "Y"
+                                },
+                                {
+                                    "given-names": "Y.",
+                                    "surname": "Chen"
+                                }
+                            ],
+                            "article-title": "`Combining convolution neural network and bidirectional gated recurrent unit for sentence semantic classi cation",
+                            "volume": "6",
+                            "fpage": "73750",
+                            "lpage": "73759",
+                            "year": "2018",
+                            "#text": "[17]\n          \n          , L. Tian,\n          \n          , F. Han,\n          \n          . Ren, and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Han"
+                                },
+                                {
+                                    "surname": "J"
+                                }
+                            ],
+                            "article-title": "`Attention-based memory network for text sentiment classi cation",
+                            "volume": "6",
+                            "fpage": "68302",
+                            "lpage": "68310",
+                            "year": "2018",
+                            "#text": "[18]\n          \n          ,\n          \n          . Liu, and G. Liu, `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "X.",
+                                    "surname": "Fu"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Yang"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Fang"
+                                },
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Wang"
+                                }
+                            ],
+                            "article-title": "`Lexicon-enhanced LSTM with attention for general sentiment analysis",
+                            "source": "'' IEEE Access",
+                            "volume": "6",
+                            "fpage": "71884",
+                            "lpage": "71891",
+                            "year": "2018",
+                            "#text": "[19]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Wang"
+                                },
+                                {
+                                    "given-names": "Z. H.",
+                                    "surname": "Ning"
+                                },
+                                {
+                                    "given-names": "C.",
+                                    "surname": "Xiao"
+                                },
+                                {
+                                    "given-names": "T.",
+                                    "surname": "Li"
+                                }
+                            ],
+                            "article-title": "`Sentiment classi cation based on information geometry and deep belief networks",
+                            "source": "'' IEEE Access",
+                            "volume": "6",
+                            "fpage": "35206",
+                            "lpage": "35213",
+                            "year": "2018",
+                            "#text": "[20]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref21",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "E.",
+                                "surname": "Camp"
+                            },
+                            "source": "'' No\u00fbs",
+                            "volume": "46",
+                            "issue": "4",
+                            "fpage": "587",
+                            "lpage": "634",
+                            "year": "2012",
+                            "#text": "[21]\n          \n          , ``Sarcasm, pretense, and the semantics/pragmatics distinction,\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          , Dec.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref22",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "E.",
+                                    "surname": "Riloff"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Qadir"
+                                },
+                                {
+                                    "given-names": "P.",
+                                    "surname": "Surve"
+                                },
+                                {
+                                    "given-names": "L. D.",
+                                    "surname": "Silva"
+                                },
+                                {
+                                    "given-names": "N.",
+                                    "surname": "Gilbert"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Huang"
+                                }
+                            ],
+                            "article-title": "`Sarcasm as contrast between a positive sentiment and negative situation",
+                            "source": "in Proc. EMNLP",
+                            "volume": "13",
+                            "year": "2013",
+                            "fpage": "704",
+                            "lpage": "714",
+                            "#text": "[22]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,''\n          \n          , vol.\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref23",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "E.",
+                                    "surname": "Cambria"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Poria"
+                                },
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Bisio"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Bajpai"
+                                },
+                                {
+                                    "surname": "and I. Chaturvedi"
+                                }
+                            ],
+                            "article-title": "`The CLSA model: A novel framework for concept-level sentiment analysis",
+                            "source": "'' in Proc. Int. Conf. Intell. Text Process. Comput. Linguistics",
+                            "year": "2015",
+                            "fpage": "3",
+                            "lpage": "22",
+                            "#text": "[23]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , `\n          \n          ,\n          \n          . London, U.K.: Springer,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref24",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Bouazizi"
+                                },
+                                {
+                                    "given-names": "T. O.",
+                                    "surname": "Ohtsuki"
+                                }
+                            ],
+                            "article-title": "`A pattern-based approach for sarcasm detection on Twitter,'' IEEE Access",
+                            "volume": "4",
+                            "fpage": "5477",
+                            "lpage": "5488",
+                            "year": "2016",
+                            "#text": "[24]\n          \n          and\n          \n          , `\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref25",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "C.",
+                                    "surname": "Junyi"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Yan"
+                                }
+                            ],
+                            "article-title": [
+                                "and",
+                                "`Verbal aggression detection on Twitter comments: Convolutional neural network for short-text sentiment analysis"
+                            ],
+                            "source": "'' Neural Comput. Appl.",
+                            "fpage": "1",
+                            "lpage": "10",
+                            "year": "2018",
+                            "volume": "10",
+                            "#text": "[25]\n          \n          ,\n          \n          ,\n          \n          K.-C. Wong, `\n          \n          ,\n          \n          , pp.\n          \n          \n          , Mar.\n          \n          . doi:\n          \n          .1007/s00521-018-3442-0."
+                        }
+                    },
+                    {
+                        "@id": "ref26",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "B.",
+                                    "surname": "Felbo"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Mislove"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "S\u00f8gaard"
+                                },
+                                {
+                                    "surname": "I. Rahwan"
+                                },
+                                {
+                                    "surname": "S. Lehmann."
+                                }
+                            ],
+                            "year": "2017",
+                            "article-title": "``Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm",
+                            "#text": "[26]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1708.00524."
+                        }
+                    },
+                    {
+                        "@id": "ref27",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Amir"
+                                },
+                                {
+                                    "given-names": "B. C.",
+                                    "surname": "Wallace"
+                                },
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Lyu"
+                                },
+                                {
+                                    "surname": "P. C. M. J. Silva."
+                                }
+                            ],
+                            "year": "2016",
+                            "article-title": "``Modelling context with user embeddings for sarcasm detection in social media",
+                            "#text": "[27]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1607.00976"
+                        }
+                    },
+                    {
+                        "@id": "ref28",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Joshi"
+                                },
+                                {
+                                    "given-names": "P.",
+                                    "surname": "Bhattacharyya"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Carman"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Saraswati"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Shukla"
+                                },
+                                {
+                                    "surname": "Hum"
+                                }
+                            ],
+                            "article-title": "`How do cultural differences impact the quality of sarcasm annotation?: A case study of indian annotators and american text",
+                            "source": "in Proc. 10th SIGHUM Workshop Lang",
+                            "year": "2016",
+                            "fpage": "95",
+                            "lpage": "99",
+                            "#text": "[28]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,''\n          \n          . Technol. Cultural Heritage, Social Sci.,\n          \n          .,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref29",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Ghosh"
+                                },
+                                {
+                                    "given-names": "T.",
+                                    "surname": "Veale"
+                                }
+                            ],
+                            "article-title": "`Fracking sarcasm using neural network,''",
+                            "source": "in Proc. 7th Workshop Comput. Approaches Subjectivity",
+                            "year": "2016",
+                            "fpage": "161",
+                            "lpage": "169",
+                            "#text": "[29]\n          \n          and\n          \n          , `\n          \n          \n          , Sentiment Social Media Anal.,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref30",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "F. A.",
+                                    "surname": "Gers"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Schmidhuber"
+                                },
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Cummins"
+                                }
+                            ],
+                            "article-title": "`Learning to forget: Continual prediction with LSTM,'",
+                            "source": "in Proc. 9th Int. Conf. Artif. Neural Netw. (ICANN)",
+                            "year": "1999",
+                            "fpage": "1",
+                            "lpage": "20",
+                            "#text": "[30]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          '\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref31",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Zhang"
+                                },
+                                {
+                                    "given-names": "Y.",
+                                    "surname": "Zhang"
+                                }
+                            ],
+                            "article-title": "`Tweet sarcasm detection using deep neural network,''",
+                            "source": "in Proc. 26th Int. Conf. Comput. Linguistics, Tech. Papers (COLING)",
+                            "year": "2016",
+                            "fpage": "2449",
+                            "lpage": "2460",
+                            "#text": "[31]\n          \n          ,\n          \n          , and G. Fu, `\n          \n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref32",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Seo"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Kembhavi"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Farhadi"
+                                },
+                                {
+                                    "surname": "H. Hajishirzi."
+                                }
+                            ],
+                            "year": "2016",
+                            "article-title": "``Bidirectional attention ow for machine comprehension",
+                            "#text": "[32]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1611.01603"
+                        }
+                    },
+                    {
+                        "@id": "ref33",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "W.",
+                                    "surname": "Wang"
+                                },
+                                {
+                                    "given-names": "N.",
+                                    "surname": "Yang"
+                                },
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Wei"
+                                },
+                                {
+                                    "given-names": "B.",
+                                    "surname": "Chang"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Zhou"
+                                },
+                                {
+                                    "given-names": "Microsoft",
+                                    "surname": "Res"
+                                }
+                            ],
+                            "article-title": "Machine reading comprehension with self-matching networks,'' Natural Lang",
+                            "source": "Tech. Rep. 05",
+                            "year": "2017",
+                            "#text": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , ``R-NET:\n          \n          . Comput. Group,\n          \n          . Asia, Beijing, China,\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref34",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "A.",
+                                "surname": "Ghosh"
+                            },
+                            "article-title": "Sentiment analysis of gurative language in twitte",
+                            "source": "in Proc. 9th Int. Workshop Semantic Eval. (SemEval)",
+                            "year": "2015",
+                            "fpage": "470",
+                            "lpage": "478",
+                            "#text": "[34]\n          \n          et al., ``Semeval-2015 task 11:\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref35",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Hltcoe"
+                                },
+                                {
+                                    "surname": "GA"
+                                }
+                            ],
+                            "source": [
+                                "task 2: Sentiment analysis in Twitter,'' Assoc. Comput. Linguistics",
+                                "Tech. Rep. 2"
+                            ],
+                            "issue": "2013",
+                            "fpage": "312",
+                            "#text": "[35]\n          \n          , ``Semeval-2013\n          \n          , Atlanta,\n          \n          , USA,\n          \n          ,\n          \n          , p.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref36",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "I.",
+                                    "surname": "Guyon"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Elisseeff"
+                                }
+                            ],
+                            "article-title": "`An introduction to feature extraction,'' in Feature Extraction",
+                            "year": "2006",
+                            "fpage": "1",
+                            "lpage": "25",
+                            "#text": "[36]\n          \n          and\n          \n          , `\n          \n          . Berlin, Germany: Springer,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref37",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "E.",
+                                    "surname": "Loper"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Bird"
+                                }
+                            ],
+                            "article-title": "The natural language toolkit",
+                            "source": "in Proc. ACL Workshop Effective Tools Methodol. Teach. Natural Lang. Process. Comput. Linguistics, Assoc. Comput. Linguistics",
+                            "volume": "1",
+                            "issue": "2002",
+                            "fpage": "63",
+                            "lpage": "70",
+                            "#text": "[37]\n          \n          and\n          \n          , ``NLTK:\n          \n          ,''\n          \n          , vol.\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref38",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "M. F.",
+                                "surname": "Porter"
+                            },
+                            "article-title": "`An algorithm for suf x stripping",
+                            "source": "'' Program",
+                            "volume": "14",
+                            "issue": "3",
+                            "fpage": "130",
+                            "lpage": "137",
+                            "year": "1980",
+                            "#text": "[38]\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          . [Online]. Available: https://tartarus.org/martin/ PorterStemmer/"
+                        }
+                    },
+                    {
+                        "@id": "ref39",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Salehinejad"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Baarbe"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Sankar"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Barfett"
+                                },
+                                {
+                                    "surname": "S. Valaee."
+                                }
+                            ],
+                            "year": [
+                                "2017",
+                                "1801"
+                            ],
+                            "article-title": "``Recent advances in recurrent neural networks",
+                            "#text": "[39]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , E. Colak, and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/\n          \n          .01078"
+                        }
+                    },
+                    {
+                        "@id": "ref40",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Graves"
+                                },
+                                {
+                                    "given-names": "N.",
+                                    "surname": "Jaitly"
+                                },
+                                {
+                                    "surname": "-R. Mohamed"
+                                }
+                            ],
+                            "article-title": "`Hybrid speech recognition with deep bidirectional LSTM,'",
+                            "source": "in Proc. IEEE Workshop Autom. Speech Recognit. Understand. (ASRU)",
+                            "year": [
+                                "Dec",
+                                "2013"
+                            ],
+                            "fpage": "273",
+                            "lpage": "278",
+                            "#text": "[40]\n          \n          ,\n          \n          , and A.\n          \n          , `\n          \n          '\n          \n          ,\n          \n          .\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref41",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M. T.",
+                                    "surname": "Luong"
+                                },
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Pham"
+                                },
+                                {
+                                    "given-names": "C. D.",
+                                    "surname": "Manning"
+                                }
+                            ],
+                            "year": "2015",
+                            "article-title": "``Effective approaches to attention-based neural machine translation",
+                            "#text": "[41]\n          \n          ,\n          \n          , and\n          \n          . (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1508.04025"
+                        }
+                    },
+                    {
+                        "@id": "ref42",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Xu"
+                                },
+                                {
+                                    "surname": "Jun"
+                                }
+                            ],
+                            "article-title": "``Show, attend and tell: Neural image caption generation with visual attention,''",
+                            "source": "in Proc. Int. Conf. Mach",
+                            "year": [
+                                "2015",
+                                "2048 2057"
+                            ],
+                            "#text": "[42]\n          \n          et al.,\n          \n          \n          . Learn.,\n          \n          .\n          \n          , pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref43",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D.",
+                                    "surname": "Davidov"
+                                },
+                                {
+                                    "given-names": "O.",
+                                    "surname": "Tsur"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Rappoport"
+                                }
+                            ],
+                            "article-title": [
+                                "and",
+                                "`Enhanced sentiment learning using Twitter hashtags and smileys"
+                            ],
+                            "source": "in Proc. 23rd Int. Conf. Comput. Linguistics, Posters, Assoc. Comput. Linguistics",
+                            "year": "2010",
+                            "fpage": "241",
+                            "lpage": "249",
+                            "#text": "[43]\n          \n          ,\n          \n          ,\n          \n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref44",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Thelwall"
+                                },
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Buckley"
+                                }
+                            ],
+                            "article-title": "`Topic-based sentiment analysis for the social Web: The role of mood and issue-related words",
+                            "source": "'' J. Amer. Soc. Inf. Sci. Technol",
+                            "volume": "64",
+                            "issue": "8",
+                            "fpage": "1608",
+                            "lpage": "1617",
+                            "year": "2013",
+                            "#text": "[44]\n          \n          and\n          \n          , `\n          \n          ,\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref45",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "C. H. E.",
+                                    "surname": "Gilbert"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Vader"
+                                }
+                            ],
+                            "article-title": "A parsimonious rule-based model for sentiment analysis of social media text",
+                            "source": "in Proc. 8th Int. Conf. Weblogs Social Media (ICWSM)",
+                            "year": "2014",
+                            "fpage": "1",
+                            "lpage": "10",
+                            "#text": "[45]\n          \n          and\n          \n          , ``VADER:\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref46",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Y.",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Y.",
+                                    "surname": "Yuan"
+                                }
+                            ],
+                            "article-title": "`Convergence analysis of two-layer neural networks with relu activation",
+                            "source": "in Proc. Adv. Neural Inf. Process. Syst.",
+                            "year": "2017",
+                            "fpage": "597",
+                            "lpage": "607",
+                            "#text": "[46]\n          \n          and\n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref47",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Y.",
+                                "surname": "Kim."
+                            },
+                            "year": "2014",
+                            "article-title": "``Convolutional neural networks for sentence classi cation",
+                            "#text": "[47]\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1408.5882."
+                        }
+                    },
+                    {
+                        "@id": "ref48",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Z.",
+                                    "surname": "Jianqiang"
+                                },
+                                {
+                                    "given-names": "Z.",
+                                    "surname": "Xuejun"
+                                }
+                            ],
+                            "article-title": "`Deep convolution neural networks for Twitter sentiment analysis",
+                            "source": "'' IEEE Access",
+                            "volume": "6",
+                            "fpage": "23253",
+                            "lpage": "23260",
+                            "year": "2018",
+                            "#text": "[48]\n          \n          , G. Xiaolin, and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref49",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "D. M. Powers"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Mach"
+                                }
+                            ],
+                            "article-title": "`Evaluation: From precision, recall and F-measure to ROC, informedness, markedness and correlation,''",
+                            "volume": "2",
+                            "issue": "1",
+                            "fpage": "37",
+                            "lpage": "63",
+                            "year": "2011",
+                            "source": "net/2328/27165",
+                            "#text": "[49]\n          \n          , `\n          \n          \n          . Learn. Technol., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          . [Online]. Available: http://hdl.handle."
+                        }
+                    },
+                    {
+                        "@id": "ref50",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "M. P. S.",
+                                    "surname": "Bhatia"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Theor"
+                                }
+                            ],
+                            "article-title": "`A primer on the Web information retrieval paradigm,''",
+                            "volume": "4",
+                            "issue": "7",
+                            "fpage": "657",
+                            "lpage": "662",
+                            "year": "2008",
+                            "#text": "[50]\n          \n          and\n          \n          , `\n          \n          \n          . Appl. Inf. Technol., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref51",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D. J.",
+                                    "surname": "Hemanth"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Anitha"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Naaji"
+                                },
+                                {
+                                    "given-names": "O.",
+                                    "surname": "Geman"
+                                },
+                                {
+                                    "given-names": "D. E.",
+                                    "surname": "Popescu"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`A modi ed deep convolutional neural network for abnormal brain image classi cation",
+                            "volume": "7",
+                            "fpage": "4275",
+                            "lpage": "4283",
+                            "year": "2018",
+                            "#text": "[51]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref52",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Fujita"
+                                }
+                            ],
+                            "article-title": "`Neural-fuzzy with representative sets for prediction of student performance",
+                            "volume": "49",
+                            "issue": "1",
+                            "fpage": "172",
+                            "lpage": "187",
+                            "year": "2019",
+                            "#text": "[52]\n          \n          and\n          \n          , `\n          \n          ,'' Appl. Intell., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref53",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D. J.",
+                                    "surname": "Hemanth"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Anitha"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Mittal"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Med"
+                                }
+                            ],
+                            "article-title": "`Diabetic retinopathy diagnosis from retinal images using modi ed hop eld neural network,''",
+                            "volume": "42",
+                            "issue": "12",
+                            "fpage": "247",
+                            "year": "2018",
+                            "#text": "[53]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          \n          . Syst., vol.\n          \n          , no.\n          \n          , p.\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref54",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D. J.",
+                                    "surname": "Hemanth"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Anitha"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`Brain signal based human emotion analysis by circular back propagation and deep Kohonen neural networks",
+                            "source": "'' Comput. Elect. Eng.",
+                            "volume": "68",
+                            "fpage": "170",
+                            "lpage": "180",
+                            "year": "2018",
+                            "#text": "[54]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , May\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref55",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "C. N.",
+                                    "surname": "Giap"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Chiclana"
+                                },
+                                {
+                                    "given-names": "J.",
+                                    "surname": "Intell"
+                                }
+                            ],
+                            "article-title": "`Dynamic structural neural network,''",
+                            "volume": "34",
+                            "fpage": "2479",
+                            "lpage": "2490",
+                            "year": "2018",
+                            "#text": "[55]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          \n          . Fuzzy Syst., vol.\n          \n          , pp.\n          \n          \n          , Jan.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref56",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "S.",
+                                "surname": "Doss"
+                            },
+                            "article-title": "``APD-JFAD: Accurate prevention and detection of Jelly Fish attack in MANET,'' IEEE Access",
+                            "volume": "6",
+                            "fpage": "56954",
+                            "lpage": "56965",
+                            "year": "2018",
+                            "#text": "[56]\n          \n          et al.,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref57",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D. T.",
+                                    "surname": "Hai"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "T.",
+                                    "surname": "Le"
+                                },
+                                {
+                                    "surname": "Vinh"
+                                }
+                            ],
+                            "article-title": "`Novel fuzzy clustering scheme for 3D wireless sensor networks",
+                            "source": "'' Appl. Soft Comput.",
+                            "volume": "54",
+                            "fpage": "141",
+                            "lpage": "149",
+                            "year": "2017",
+                            "#text": "[57]\n          \n          ,\n          \n          , and\n          \n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , May\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref58",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kapoor"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Gupta"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Jha"
+                                }
+                            ],
+                            "article-title": "`New scheme for underwater acoustically wireless transmission using direct sequence code division multiple access in MIMO systems",
+                            "fpage": "1",
+                            "lpage": "13",
+                            "year": "2018",
+                            "volume": "10",
+                            "#text": "[58]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Wireless Netw., pp.\n          \n          \n          , May\n          \n          . doi:\n          \n          .1007/s11276-018-1750-z."
+                        }
+                    },
+                    {
+                        "@id": "ref59",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kapoor"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Gupta"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Jha"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                }
+                            ],
+                            "article-title": "`Detection of power quality event using histogram of oriented gradients and support vector machine",
+                            "source": "'' Measurement",
+                            "volume": "120",
+                            "fpage": "52",
+                            "lpage": "75",
+                            "year": "2018",
+                            "#text": "[59]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , May\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref60",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kapoor"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Gupta"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Jha"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                }
+                            ],
+                            "article-title": "`Boosting performance of power quality event identi cation with KL divergence measure and standard deviation",
+                            "source": "'' Measurement",
+                            "volume": "126",
+                            "fpage": "134",
+                            "lpage": "142",
+                            "year": "2018",
+                            "#text": "[60]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , Oct.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref61",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "H. V.",
+                                    "surname": "Long"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Ali"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Khan"
+                                },
+                                {
+                                    "given-names": "D. N.",
+                                    "surname": "Tu"
+                                }
+                            ],
+                            "article-title": "`A novel approach for fuzzy clustering based on neutrosophic association matrix",
+                            "source": "doi: 10",
+                            "year": "2018",
+                            "volume": "11",
+                            "#text": "[61]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Comput. Ind. Eng., to be published.\n          \n          .1016/j.cie.\n          \n          .\n          \n          .007."
+                        }
+                    },
+                    {
+                        "@id": "ref62",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "P. T. M. Phuong",
+                                    "given-names": "P. H.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Thong",
+                                    "given-names": "L. H.",
+                                    "#text": ", and"
+                                },
+                                {
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`Theoretical analysis of picture fuzzy clustering: Convergence and property",
+                            "source": "J. Comput. Sci. Cybern",
+                            "volume": "34",
+                            "issue": "1",
+                            "fpage": "17",
+                            "lpage": "32",
+                            "year": "2018",
+                            "#text": "[62]\n          \n          \n          \n          , `\n          \n          ,''\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref63",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Y. H.",
+                                    "surname": "Robinson"
+                                },
+                                {
+                                    "given-names": "E. G.",
+                                    "surname": "Julie"
+                                },
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Saravanan"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "Fault-tolerant disjoint ad-hoc on-demand multipath distance vector routing algorithm in mobile ad-hoc networks",
+                            "source": "'' J. Ambient Intell. Hum. Comput.",
+                            "fpage": "1",
+                            "lpage": "18",
+                            "year": "2019",
+                            "volume": "10",
+                            "#text": "[63]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , ``FDAOMDV:\n          \n          ,\n          \n          , pp.\n          \n          \n          , Nov.\n          \n          . doi:\n          \n          .1007/s12652-018-1126-3."
+                        }
+                    },
+                    {
+                        "@id": "ref64",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Saravanan"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`Real-time water quality monitoring using Internet of Things in SCADA,'' Environ",
+                            "volume": "190",
+                            "issue": "9",
+                            "fpage": "556",
+                            "year": "2018",
+                            "#text": "[64]\n          \n          , E. Anusuya,\n          \n          , and\n          \n          , `\n          \n          . Monitor. Assessment, vol.\n          \n          , no.\n          \n          , p.\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref65",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Saravanan"
+                                },
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Aswini"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`How to prevent maritime border collision for Fisheries? A design of real-time automatic identi cation system",
+                            "source": "'' Earth Sci. Inform",
+                            "fpage": "1",
+                            "lpage": "12",
+                            "year": "2019",
+                            "volume": "10",
+                            "#text": "[65]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          ., pp.\n          \n          \n          , Nov.\n          \n          . doi:\n          \n          .1007/s12145-018-0371-5."
+                        }
+                    },
+                    {
+                        "@id": "ref66",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Singh"
+                                },
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Singh"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Aziz"
+                                }
+                            ],
+                            "article-title": [
+                                "and",
+                                "`Congestion control in wireless sensor networks by hybrid multi-objective optimization algorithm"
+                            ],
+                            "volume": "138",
+                            "fpage": "90",
+                            "lpage": "107",
+                            "year": "2018",
+                            "#text": "[66]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          , `\n          \n          ,'' Comput. Netw., vol.\n          \n          , pp.\n          \n          \n          , Jun.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref67",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "N.",
+                                    "surname": "Singh"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Chiclana"
+                                },
+                                {
+                                    "given-names": "J.-P.",
+                                    "surname": "Magnot"
+                                }
+                            ],
+                            "article-title": "`A new fusion of salp swarm with sine cosine for optimization of non-linear functions",
+                            "fpage": "1",
+                            "lpage": "28",
+                            "year": "2019",
+                            "volume": "10",
+                            "#text": "[67]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Eng. Comput., pp.\n          \n          \n          , Jan.\n          \n          . doi:\n          \n          .1007/s00366-018-00696-8."
+                        }
+                    },
+                    {
+                        "@id": "ref68",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "surname": "Intell"
+                                },
+                                {
+                                    "surname": "Int"
+                                }
+                            ],
+                            "article-title": "`A novel kernel fuzzy clustering algorithm for geo-demographic analysis",
+                            "source": "'' Inf. Sci.-Inform. Comput. Sci",
+                            "volume": "317",
+                            "fpage": "202",
+                            "lpage": "223",
+                            "year": "2015",
+                            "#text": "[68]\n          \n          , `\n          \n          ,\n          \n          .,\n          \n          . Syst., Appl.,\n          \n          . J., vol.\n          \n          , pp.\n          \n          \n          , Oct.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref69",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "L. H.",
+                                "surname": "Son"
+                            },
+                            "article-title": "`Generalized picture distance measure and applications to picture fuzzy clustering",
+                            "source": "'' Appl. Soft Comput.",
+                            "volume": "46",
+                            "fpage": "284",
+                            "lpage": "295",
+                            "year": "2016",
+                            "#text": "[69]\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , Sep.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref70",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "P. V.",
+                                    "surname": "Hai"
+                                },
+                                {
+                                    "given-names": "Int. J. Fuzzy",
+                                    "surname": "Syst"
+                                }
+                            ],
+                            "article-title": "`A novel multiple fuzzy clustering method based on internal clustering validation measures with gradient descent,''",
+                            "volume": "18",
+                            "issue": "5",
+                            "fpage": "894",
+                            "lpage": "903",
+                            "year": "2016",
+                            "#text": "[70]\n          \n          and\n          \n          , `\n          \n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref71",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "S.",
+                                    "surname": "Jha"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Kumar"
+                                },
+                                {
+                                    "given-names": "J. M.",
+                                    "surname": "Chatterjee"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Khari"
+                                }
+                            ],
+                            "article-title": "`Collaborative handshaking approaches between Internet of computing and Internet of Things towards a smart world: A review from 2009",
+                            "year": [
+                                "2017",
+                                "2018"
+                            ],
+                            "fpage": "1",
+                            "lpage": "18",
+                            "volume": "10",
+                            "#text": "[71]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          \n          ,'' Telecommun. Syst., pp.\n          \n          \n          , Jun.\n          \n          . doi:\n          \n          .1007/s11235-018-0481-x."
+                        }
+                    },
+                    {
+                        "@id": "ref72",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "N. D.",
+                                    "surname": "Tien"
+                                },
+                                {
+                                    "given-names": "Int. J. Fuzzy",
+                                    "surname": "Syst"
+                                }
+                            ],
+                            "article-title": "`Tune up fuzzy C-means for big data: Some novel hybrid clustering algorithms based on initial selection and incremental clustering,''",
+                            "volume": "19",
+                            "issue": "5",
+                            "fpage": "1585",
+                            "lpage": "1602",
+                            "year": "2017",
+                            "#text": "[72]\n          \n          and\n          \n          , `\n          \n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref73",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "T. M.",
+                                    "surname": "Tuan"
+                                }
+                            ],
+                            "article-title": "`A cooperative semi-supervised fuzzy clustering framework for dental X-ray image segmentation,'' Expert Syst",
+                            "source": "Appl.",
+                            "volume": "46",
+                            "fpage": "380",
+                            "lpage": "393",
+                            "year": "2016",
+                            "#text": "[73]\n          \n          and\n          \n          , `\n          \n          .\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , Mar.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref74",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "P. H.",
+                                    "surname": "Thong"
+                                }
+                            ],
+                            "article-title": "`Some novel hybrid forecast methods based on picture fuzzy clustering for weather nowcasting from satellite image sequences",
+                            "volume": "46",
+                            "issue": "1",
+                            "fpage": "1",
+                            "lpage": "15",
+                            "year": "2017",
+                            "#text": "[74]\n          \n          and\n          \n          , `\n          \n          ,'' Appl. Intell., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref75",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "given-names": "T. M.",
+                                    "surname": "Tuan"
+                                }
+                            ],
+                            "article-title": "`Dental segmentation from X-ray images using semi-supervised fuzzy clustering with spatial constraints",
+                            "volume": "59",
+                            "fpage": "186",
+                            "lpage": "195",
+                            "year": "2017",
+                            "#text": "[75]\n          \n          and\n          \n          , `\n          \n          ,'' Eng. Appl. Artif. Intell., vol.\n          \n          , pp.\n          \n          \n          , Mar.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref76",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "N. T.",
+                                    "surname": "Tam"
+                                },
+                                {
+                                    "given-names": "D. T.",
+                                    "surname": "Hai"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`Improving lifetime and network connections of 3D wireless sensor networks based on fuzzy clustering and particle swarm optimization,'' Wireless Netw",
+                            "volume": "24",
+                            "issue": "5",
+                            "fpage": "1477",
+                            "lpage": "1490",
+                            "year": "2018",
+                            "#text": "[76]\n          \n          ,\n          \n          ,\n          \n          , and L. T. Vinh, `\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref77",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "N. D.",
+                                    "surname": "Thanh"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Ali"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`A novel clustering algorithm in a neutrosophic recommender system for medical diagnosis",
+                            "volume": "9",
+                            "issue": "4",
+                            "fpage": "526",
+                            "lpage": "544",
+                            "year": "2017",
+                            "#text": "[77]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Cogn. Comput., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref78",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "P. H.",
+                                    "surname": "Thong"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`Picture fuzzy clustering: A new computational intelligence method,'' Soft Comput",
+                            "volume": "20",
+                            "issue": "9",
+                            "fpage": "3549",
+                            "lpage": "3562",
+                            "year": "2016",
+                            "#text": "[78]\n          \n          and\n          \n          , `\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref79",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "P. H.",
+                                    "surname": "Thong"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                },
+                                {
+                                    "surname": "Syst"
+                                }
+                            ],
+                            "article-title": "`A novel automatic picture fuzzy clustering method based on particle swarm optimization and picture composite cardinality",
+                            "volume": "109",
+                            "fpage": "48",
+                            "lpage": "60",
+                            "year": "2016",
+                            "#text": "[79]\n          \n          and\n          \n          , `\n          \n          ,'' Knowl.-Based\n          \n          ., vol.\n          \n          , pp.\n          \n          \n          , Oct.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref80",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "P. H.",
+                                    "surname": "Thong"
+                                },
+                                {
+                                    "given-names": "L. H.",
+                                    "surname": "Son"
+                                }
+                            ],
+                            "article-title": "`Picture fuzzy clustering for complex data",
+                            "volume": "56",
+                            "fpage": "121",
+                            "lpage": "130",
+                            "year": "2016",
+                            "#text": "[80]\n          \n          and\n          \n          , `\n          \n          ,'' Eng. Appl. Artif. Intell., vol.\n          \n          , pp.\n          \n          \n          , Nov.\n          \n          ."
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,1779 @@
+{
+    "abstract": {
+        "p": null
+    },
+    "affiliation": null,
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Kai Shuy"
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Amy Slivaz"
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Suhang Wangy"
+        },
+        {
+            "@contrib-type": "author",
+            "email": "tangjili@msu.edu",
+            "string-name": "Jiliang Tang \\"
+        },
+        {
+            "@contrib-type": "author",
+            "email": "huan.liug@asu.edu",
+            "string-name": "Huan Liuy"
+        }
+    ],
+    "journal": null,
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/fake-news-detection-on-social-media-a-data-mining-perspective.json",
+    "pub_date": null,
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .",
+                "article-title": "Detecting hoaxes, frauds, and deception in writing style online",
+                "source": "In ISSP'12.",
+                "string-name": [
+                    {
+                        "given-names": "Sadia",
+                        "surname": "Afroz"
+                    },
+                    {
+                        "given-names": "Michael",
+                        "surname": "Brennan"
+                    },
+                    {
+                        "given-names": "Rachel",
+                        "surname": "Greenstadt"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Social media and fake news in the 2016 election",
+                "source": "Technical report, National Bureau of Economic Research",
+                "string-name": [
+                    {
+                        "given-names": "Hunt",
+                        "surname": "Allcott"
+                    },
+                    {
+                        "given-names": "Matthew",
+                        "surname": "Gentzkow"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          \n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "E ects of group pressure upon the modi cation and distortion of judgments. Groups, leadership, and men",
+                "fpage": "236",
+                "string-name": [
+                    {
+                        "given-names": "E",
+                        "surname": "Solomon"
+                    },
+                    {
+                        "#text": "and",
+                        "given-names": "H",
+                        "surname": "Asch"
+                    },
+                    {
+                        "surname": "Guetzkow"
+                    }
+                ],
+                "volume": "222",
+                "year": "1951"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "When fake news becomes real: Combined exposure to multiple news sources and political attitudes of ine cacy, alienation, and cynicism",
+                "fpage": "454",
+                "issue": "3",
+                "source": "Communication Research",
+                "string-name": {
+                    "given-names": "Meital",
+                    "surname": "Balmas"
+                },
+                "volume": [
+                    "41",
+                    "430"
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          , Michael J Cafarella, Stephen Soderland, Matthew Broadhead, and\n          \n          .\n          \n          .",
+                "article-title": "Open information extraction from the web",
+                "source": "In IJCAI'07.",
+                "string-name": [
+                    {
+                        "given-names": "Michele",
+                        "surname": "Banko"
+                    },
+                    {
+                        "given-names": "Oren",
+                        "surname": "Etzioni"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          .",
+                "article-title": "Social bots distort the 2016 us presidential election online discussion",
+                "issue": "11",
+                "source": "First Monday",
+                "string-name": [
+                    {
+                        "given-names": "Alessandro",
+                        "surname": "Bessi"
+                    },
+                    {
+                        "given-names": "Emilio",
+                        "surname": "Ferrara"
+                    }
+                ],
+                "volume": "21",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          , Kostas Tsioutsiouliklis,\n          \n          .\n          \n          .",
+                "article-title": "\" 8 amazing secrets for getting more clicks\": Detecting clickbaits in news streams using article informality",
+                "source": "In AAAI'16.",
+                "string-name": [
+                    {
+                        "given-names": "Prakhar",
+                        "surname": "Biyani"
+                    },
+                    {
+                        "given-names": "and John",
+                        "surname": "Blackmer"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": [
+                    "Blom and Kenneth Reinecke Hansen",
+                    "Click bait: Forward-reference as lure in online news headlines"
+                ],
+                "fpage": [
+                    "87",
+                    "100"
+                ],
+                "source": "Journal of Pragmatics",
+                "string-name": {
+                    "given-names": "Jonas",
+                    "surname": "Nygaard"
+                },
+                "volume": "76",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          , Dannagal Goldthwaite Young, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "The impact of real news about fake news: Intertextual processes and political satire",
+                "fpage": "343",
+                "issue": "3",
+                "source": "International Journal of Public Opinion Research",
+                "string-name": [
+                    {
+                        "given-names": "R Brewer",
+                        "surname": "Paul"
+                    },
+                    {
+                        "given-names": "Michelle",
+                        "surname": "Morreale"
+                    }
+                ],
+                "volume": [
+                    "25",
+                    "323"
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          , Mohammed El-Haddad,\n          \n          .",
+                "article-title": "Ju\u007frgen Pfeffer, and Matt Stempeck. Characterizing the life cycle of online news stories using social media reactions",
+                "source": "In CSCW'14.",
+                "string-name": {
+                    "given-names": "Castillo",
+                    "surname": "Carlos"
+                }
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          , Marcelo Mendoza, and\n          \n          .\n          \n          .",
+                "article-title": "Information credibility on twitter",
+                "source": "In WWW'11.",
+                "string-name": [
+                    {
+                        "given-names": "Castillo",
+                        "surname": "Carlos"
+                    },
+                    {
+                        "given-names": "Barbara",
+                        "surname": "Poblete"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "[12]\n          \n          , Bhargavi Paranjape, Sourya Kakarla, and\n          \n          .\n          \n          .",
+                "article-title": "Stop clickbait: Detecting and preventing clickbaits in online news media",
+                "source": "In ASONAM'16.",
+                "string-name": [
+                    {
+                        "given-names": "Chakraborty",
+                        "surname": "Abhijnan"
+                    },
+                    {
+                        "given-names": "Niloy",
+                        "surname": "Ganguly"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "[13]\n          \n          ,\n          \n          , and Victoria L Rubin.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . ACM,\n          \n          .",
+                "article-title": "Misleading online content: Recognizing clickbait as false news",
+                "fpage": "19",
+                "source": "In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection",
+                "string-name": [
+                    {
+                        "given-names": "Chen",
+                        "surname": "Yimin"
+                    },
+                    {
+                        "surname": "Niall J Conroy"
+                    }
+                ],
+                "volume": "15",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "[14]\n          \n          , Michael Bernstein,\n          \n          \n          .\n          \n          .",
+                "article-title": "Anyone can become a troll: Causes of trolling behavior in online discussions",
+                "source": "In CSCW '17.",
+                "string-name": [
+                    {
+                        "given-names": "Cheng",
+                        "surname": "Justin"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Jure",
+                        "surname": "Cristian DanescuNiculescu-Mizil"
+                    },
+                    {
+                        "surname": "Leskovec"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "[15]\n          \n          , Steven Gianvecchio,\n          \n          , and\n          \n          .\n          \n          ?\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Detecting automation of twitter accounts: Are you a human, bot, or cyborg",
+                "fpage": "824",
+                "issue": "6",
+                "source": "IEEE Transactions on Dependable and Secure Computing",
+                "string-name": [
+                    {
+                        "given-names": "Chu",
+                        "surname": "Zi"
+                    },
+                    {
+                        "given-names": "Haining",
+                        "surname": "Wang"
+                    },
+                    {
+                        "given-names": "Sushil",
+                        "surname": "Jajodia"
+                    }
+                ],
+                "volume": [
+                    "9",
+                    "811"
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "[16]\n          \n          \n          , Prashant Shiralkar, Luis M Rocha,\n          \n          , Filippo Menczer, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):e0128193,\n          \n          .",
+                "article-title": "Computational fact checking from knowledge networks",
+                "issue": "6",
+                "source": "PloS one",
+                "string-name": [
+                    {
+                        "given-names": "Giovanni",
+                        "surname": "Luca"
+                    },
+                    {
+                        "surname": "Ciampaglia"
+                    },
+                    {
+                        "given-names": "Johan",
+                        "surname": "Bollen"
+                    },
+                    {
+                        "given-names": "Alessandro",
+                        "surname": "Flammini"
+                    }
+                ],
+                "volume": "10",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "[17]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          .",
+                "article-title": "Automatic deception detection: Methods for nding fake news",
+                "issue": [
+                    "1",
+                    "4"
+                ],
+                "source": "Proceedings of the Association for Information Science and Technology",
+                "string-name": [
+                    {
+                        "#text": ", Victoria L Rubin, and",
+                        "given-names": "Yimin",
+                        "surname": "Niall J Conroy"
+                    },
+                    {
+                        "surname": "Chen"
+                    }
+                ],
+                "volume": "52",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "[18]\n          \n          ,\n          \n          , Fabiana Zollo, Fabio Petroni, Antonio Scala, Guido Caldarelli,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "The spreading of misinformation online",
+                "fpage": "559",
+                "issue": "3",
+                "source": "Proceedings of the National Academy of Sciences",
+                "string-name": [
+                    {
+                        "given-names": "Michela",
+                        "surname": "Del Vicario"
+                    },
+                    {
+                        "given-names": "Alessandro",
+                        "surname": "Bessi"
+                    },
+                    {
+                        "given-names": "H Eugene",
+                        "surname": "Stanley"
+                    },
+                    {
+                        "given-names": "Walter",
+                        "surname": "Quattrociocchi"
+                    }
+                ],
+                "volume": [
+                    "113",
+                    "554"
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "[19]\n          \n          ,\n          \n          , Alessandro Bessi, Fabiana Zollo, Antonio Scala, Guido Caldarelli, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ,\n          \n          .",
+                "article-title": "Echo chambers: Emotional contagion and group polarization on facebook",
+                "source": "Scienti c Reports",
+                "string-name": [
+                    {
+                        "given-names": "Michela",
+                        "surname": "Del Vicario"
+                    },
+                    {
+                        "given-names": "Gianna",
+                        "surname": "Vivaldo"
+                    },
+                    {
+                        "given-names": "Walter",
+                        "surname": "Quattrociocchi"
+                    }
+                ],
+                "volume": "6",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "[20]\n          \n          et al.\n          \n          .\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Ensemble methods in machine learning",
+                "fpage": "15",
+                "source": "Multiple classi er systems",
+                "string-name": {
+                    "given-names": "G Dietterich",
+                    "surname": "Thomas"
+                },
+                "volume": "1",
+                "year": [
+                    "1857",
+                    "2000"
+                ]
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "[21]\n          \n          , Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Fake news mitigation via point process based intervention",
+                "source": "arXiv preprint arXiv:1703.07823",
+                "string-name": [
+                    {
+                        "given-names": "Farajtabar",
+                        "surname": "Mehrdad"
+                    },
+                    {
+                        "given-names": "Shuang",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Le",
+                        "surname": "Song"
+                    },
+                    {
+                        "given-names": "Hongyuan",
+                        "surname": "Zha"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": "[22]\n          \n          , Ritwik Banerjee, and\n          \n          .\n          \n          .",
+                "article-title": "Syntactic stylometry for deception detection",
+                "source": "In ACL'12.",
+                "string-name": [
+                    {
+                        "given-names": "Feng",
+                        "surname": "Song"
+                    },
+                    {
+                        "given-names": "Yejin",
+                        "surname": "Choi"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": "[23]\n          \n          , Onur Varol, Clayton Davis,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "The rise of social bots",
+                "fpage": "104",
+                "issue": "7",
+                "source": "Communications of the ACM",
+                "string-name": [
+                    {
+                        "given-names": "Ferrara",
+                        "surname": "Emilio"
+                    },
+                    {
+                        "given-names": "Filippo",
+                        "surname": "Menczer"
+                    },
+                    {
+                        "given-names": "Alessandro",
+                        "surname": "Flammini"
+                    }
+                ],
+                "volume": [
+                    "59",
+                    "96"
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": "[24]\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "\u007frnkranz. A study using n-gram features for text categorization",
+                "fpage": "10",
+                "source": "Austrian Research Institute for Arti cal Intelligence",
+                "string-name": {
+                    "given-names": "Johannes",
+                    "surname": "Fu"
+                },
+                "volume": [
+                    "3",
+                    "1"
+                ],
+                "year": [
+                    "1998",
+                    "1998"
+                ]
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": "[25]\n          \n          and\n          \n          .\n          \n          .",
+                "article-title": "Understanding probabilistic classi ers",
+                "source": "ECML'01.",
+                "string-name": [
+                    {
+                        "given-names": "Ashutosh",
+                        "surname": "Garg"
+                    },
+                    {
+                        "given-names": "Dan",
+                        "surname": "Roth"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": "[26]\n          \n          ,\n          \n          , and Daniel F Stone.\n          \n          \n          ,\n          \n          .",
+                "article-title": "Media bias in the marketplace:",
+                "source": "Theory. Technical report, National Bureau of Economic Research",
+                "string-name": [
+                    {
+                        "given-names": "Gentzkow",
+                        "surname": "Matthew"
+                    },
+                    {
+                        "surname": "Jesse M Shapiro"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": "[27]\n          \n          , Hakim Hacid, Cecile Favre, and\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Djamel A Zighed. Information di usion in online social networks: A survey",
+                "fpage": "28",
+                "issue": "2",
+                "source": "ACM Sigmod Record",
+                "string-name": {
+                    "given-names": "Guille",
+                    "surname": "Adrien"
+                },
+                "volume": [
+                    "42",
+                    "17"
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": "[28]\n          \n          , Hemank Lamba, Ponnurangam Kumaraguru, and\n          \n          .\n          \n          .",
+                "article-title": "Faking sandy: characterizing and identifying fake images on twitter during hurricane sandy",
+                "source": "In WWW'13.",
+                "string-name": [
+                    {
+                        "given-names": "Gupta",
+                        "surname": "Aditi"
+                    },
+                    {
+                        "given-names": "Anupam",
+                        "surname": "Joshi"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": "[29]\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .",
+                "article-title": "Evaluating event credibility on twitter",
+                "source": "In PSDM'12.",
+                "string-name": [
+                    {
+                        "given-names": "Gupta",
+                        "surname": "Manish"
+                    },
+                    {
+                        "given-names": "Peixiang",
+                        "surname": "Zhao"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": "[30]\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "A simple generalisation of the area under the roc curve for multiple class classi cation problems",
+                "source": "Machine learning",
+                "string-name": {
+                    "surname": "David J Hand and Robert J Till"
+                },
+                "year": "2001"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": "[31]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .",
+                "article-title": "Detecting check-worthy factual claims in presidential debates",
+                "source": "In CIKM'15.",
+                "string-name": [
+                    {
+                        "given-names": "Hassan",
+                        "surname": "Naeemul"
+                    },
+                    {
+                        "given-names": "Chengkai",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Mark",
+                        "surname": "Tremayne"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": "[32]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "N-gram feature selection for authorship identi cation",
+                "fpage": "86",
+                "source": "Arti - cial Intelligence: Methodology, Systems, and Applications",
+                "string-name": [
+                    {
+                        "given-names": "John",
+                        "surname": "Houvardas"
+                    },
+                    {
+                        "given-names": "Efstathios",
+                        "surname": "Stamatatos"
+                    }
+                ],
+                "volume": "77",
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": "[33]\n          \n          , Jiliang Tang,\n          \n          , and Huan Liu.\n          \n          .",
+                "article-title": "Social spammer detection with sentiment information",
+                "source": "In ICDM'14.",
+                "string-name": [
+                    {
+                        "given-names": "Hu",
+                        "surname": "Xia"
+                    },
+                    {
+                        "given-names": "Huiji",
+                        "surname": "Gao"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": "[34]\n          \n          ,\n          \n          , and Huan Liu.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Online social spammer detection",
+                "fpage": [
+                    "59",
+                    "65"
+                ],
+                "source": "In AAAI'14",
+                "string-name": [
+                    {
+                        "given-names": "Hu",
+                        "surname": "Xia"
+                    },
+                    {
+                        "given-names": "Jiliang",
+                        "surname": "Tang"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": "[35]\n          \n          , Jiliang Tang, Yanchao Zhang, and Huan Liu.\n          \n          .",
+                "article-title": "Social spammer detection in microblogging",
+                "source": "In IJCAI'13.",
+                "string-name": {
+                    "given-names": "Hu",
+                    "surname": "Xia"
+                }
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": "[36]\n          \n          , Juan Cao,\n          \n          , and Yongdong Zhang.\n          \n          .",
+                "article-title": "News credibility evaluation on microblog with a hierarchical propagation model",
+                "source": "In ICDM'14.",
+                "string-name": [
+                    {
+                        "given-names": "Jin",
+                        "surname": "Zhiwei"
+                    },
+                    {
+                        "surname": "Yu-Gang Jiang"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref37",
+            "mixed-citation": {
+                "#text": "[37]\n          \n          , Juan Cao, Yongdong Zhang, and\n          \n          .\n          \n          .",
+                "article-title": "News veri cation by exploiting con icting social viewpoints in microblogs",
+                "source": "In AAAI'16.",
+                "string-name": [
+                    {
+                        "given-names": "Jin",
+                        "surname": "Zhiwei"
+                    },
+                    {
+                        "given-names": "Jiebo",
+                        "surname": "Luo"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref38",
+            "mixed-citation": {
+                "#text": "[38]\n          \n          , Juan Cao, Yongdong Zhang, Jianshe Zhou, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Novel visual and statistical image features for microblogs news veri cation",
+                "fpage": "608",
+                "issue": "3",
+                "source": "IEEE Transactions on Multimedia",
+                "string-name": [
+                    {
+                        "given-names": "Jin",
+                        "surname": "Zhiwei"
+                    },
+                    {
+                        "given-names": "Qi",
+                        "surname": "Tian"
+                    }
+                ],
+                "volume": [
+                    "19",
+                    "598"
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref39",
+            "mixed-citation": {
+                "#text": "[39]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Prospect theory: An analysis of decision under risk",
+                "fpage": "291",
+                "source": "Econometrica: Journal of the econometric society",
+                "string-name": [
+                    {
+                        "given-names": "Daniel",
+                        "surname": "Kahneman"
+                    },
+                    {
+                        "given-names": "Amos",
+                        "surname": "Tversky"
+                    }
+                ],
+                "volume": "263",
+                "year": "1979"
+            }
+        },
+        {
+            "@id": "ref40",
+            "mixed-citation": {
+                "#text": "[40]\n          \n          .\n          \n          ,\n          \n          .",
+                "source": "Rumors: Uses, Interpretation and Necessity. Routledge",
+                "string-name": {
+                    "surname": "Jean-Noel Kapferer"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref41",
+            "mixed-citation": {
+                "#text": "[41]\n          \n          \n          \n          .\n          \n          .",
+                "article-title": "Fake news: A legal perspective",
+                "string-name": [
+                    {
+                        "given-names": "O",
+                        "surname": "David"
+                    },
+                    {
+                        "surname": "Klein and Joshua R Wueller."
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref42",
+            "mixed-citation": {
+                "#text": "[42]\n          \n          , Meeyoung Cha, Kyomin Jung, Wei Chen, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . IEEE,\n          \n          .",
+                "article-title": "Prominent features of rumor propagation in online social media",
+                "fpage": [
+                    "1103",
+                    "1108"
+                ],
+                "source": "In ICDM'13",
+                "string-name": [
+                    {
+                        "given-names": "Kwon",
+                        "surname": "Sejeong"
+                    },
+                    {
+                        "given-names": "Yajun",
+                        "surname": "Wang"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref43",
+            "mixed-citation": {
+                "#text": "[43]\n          \n          , Yoshua Bengio, and Geo rey Hinton.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Deep learning",
+                "fpage": "444",
+                "issue": "7553",
+                "source": "Nature",
+                "string-name": {
+                    "given-names": "LeCun",
+                    "surname": "Yann"
+                },
+                "volume": [
+                    "521",
+                    "436"
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref44",
+            "mixed-citation": {
+                "#text": "[44]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .",
+                "article-title": "Uncovering social spammers: social honeypots+ machine learning",
+                "source": "In SIGIR'10.",
+                "string-name": [
+                    {
+                        "given-names": "Kyumin",
+                        "surname": "Lee"
+                    },
+                    {
+                        "given-names": "James",
+                        "surname": "Caverlee"
+                    },
+                    {
+                        "given-names": "Steve",
+                        "surname": "Webb"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref45",
+            "mixed-citation": {
+                "#text": "[45]\n          \n          . Scan:\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):3{\n          \n          ,\n          \n          .",
+                "article-title": "Deception detection by scienti c content analysis",
+                "issue": [
+                    "8",
+                    "6"
+                ],
+                "source": "Law and Order",
+                "string-name": {
+                    "given-names": "Tony",
+                    "surname": "Lesce"
+                },
+                "volume": "38",
+                "year": "1990"
+            }
+        },
+        {
+            "@id": "ref46",
+            "mixed-citation": {
+                "#text": "[46]\n          \n          ,\n          \n          , Chuishi Meng,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          .",
+                "article-title": "A survey on truth discovery",
+                "fpage": "16",
+                "issue": "2",
+                "source": "ACM Sigkdd Explorations Newsletter",
+                "string-name": [
+                    {
+                        "given-names": "Yaliang",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Jing",
+                        "surname": "Gao"
+                    },
+                    {
+                        "given-names": "Qi",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Lu",
+                        "surname": "Su"
+                    },
+                    {
+                        "given-names": "Bo",
+                        "surname": "Zhao"
+                    },
+                    {
+                        "given-names": "Wei",
+                        "surname": "Fan"
+                    }
+                ],
+                "volume": "17",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref47",
+            "mixed-citation": {
+                "#text": "[47]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .",
+                "article-title": "Auc: a statistically consistent and more discriminating measure than accuracy",
+                "string-name": [
+                    {
+                        "given-names": "X Ling",
+                        "surname": "Charles"
+                    },
+                    {
+                        "given-names": "Jin",
+                        "surname": "Huang"
+                    },
+                    {
+                        "given-names": "and Harry",
+                        "surname": "Zhang"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref48",
+            "mixed-citation": {
+                "#text": "[48]\n          \n          , Wei Gao, Prasenjit Mitra, Sejeong Kwon, Bernard J Jansen,\n          \n          \n          .\n          \n          .",
+                "article-title": "Detecting rumors from microblogs with recurrent neural networks",
+                "string-name": [
+                    {
+                        "given-names": "Ma",
+                        "surname": "Jing"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Meeyoung",
+                        "surname": "Kam-Fai Wong"
+                    },
+                    {
+                        "surname": "Cha"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref49",
+            "mixed-citation": {
+                "#text": "[49]\n          \n          , Wei Gao, Zhongyu Wei, Yueming Lu, and\n          \n          .\n          \n          .",
+                "article-title": "Detect rumors using time series of social context information on microblogging websites",
+                "source": "In CIKM'15.",
+                "string-name": [
+                    {
+                        "given-names": "Ma",
+                        "surname": "Jing"
+                    },
+                    {
+                        "surname": "Kam-Fai Wong"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref50",
+            "mixed-citation": {
+                "#text": "[50]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . ACM,\n          \n          .",
+                "article-title": "Web-based statistical fact checking of textual documents",
+                "fpage": "110",
+                "source": "In Proceedings of the 2nd international workshop on Search and mining user-generated contents",
+                "string-name": [
+                    {
+                        "given-names": "Amr",
+                        "surname": "Magdy"
+                    },
+                    {
+                        "given-names": "Nayer",
+                        "surname": "Wanas"
+                    }
+                ],
+                "volume": "103",
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref51",
+            "mixed-citation": {
+                "#text": "[51]\n          \n          .\n          \n          .",
+                "article-title": "The spread of misinformation in social media",
+                "source": "In WWW'16.",
+                "string-name": {
+                    "given-names": "Filippo",
+                    "surname": "Menczer"
+                }
+            }
+        },
+        {
+            "@id": "ref52",
+            "mixed-citation": {
+                "#text": "[52]\n          \n          and\n          \n          .\n          \n          .",
+                "article-title": "Credbank: A largescale social media corpus with associated credibility annotations",
+                "source": "In ICWSM'15.",
+                "string-name": [
+                    {
+                        "given-names": "Tanushree",
+                        "surname": "Mitra"
+                    },
+                    {
+                        "given-names": "Eric",
+                        "surname": "Gilbert"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref53",
+            "mixed-citation": {
+                "#text": "[53]\n          \n          ,\n          \n          , and\n          \n          .",
+                "article-title": "Stance and sentiment in tweets.",
+                "string-name": [
+                    {
+                        "given-names": "M Mohammad",
+                        "surname": "Saif"
+                    },
+                    {
+                        "given-names": "Parinaz",
+                        "surname": "Sobhani"
+                    },
+                    {
+                        "given-names": "Svetlana",
+                        "surname": "Kiritchenko"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref54",
+            "mixed-citation": {
+                "#text": ",\n          \n          (\n          \n          ):\n          \n          ,\n          \n          .",
+                "fpage": "26",
+                "issue": "3",
+                "source": "ACM Transactions on Internet Technology (TOIT)",
+                "volume": "17",
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref55",
+            "mixed-citation": {
+                "#text": "[54]\n          \n          , Harsh Dani, Justin Sampson, and Huan Liu.\n          \n          .",
+                "article-title": "Can one tamper with the sample api?: Toward neutralizing bias from spam and bot content",
+                "source": "In WWW'16.",
+                "string-name": {
+                    "given-names": "Morstatter",
+                    "surname": "Fred"
+                }
+            }
+        },
+        {
+            "@id": "ref56",
+            "mixed-citation": {
+                "#text": "[55]\n          \n          , Liang Wu,\n          \n          ,\n          \n          and\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Kathleen M Carley,",
+                    "A new approach to bot detection: Striking the balance between precision and recall"
+                ],
+                "source": "In ASONAM'16.",
+                "string-name": [
+                    {
+                        "given-names": "Morstatter",
+                        "surname": "Fred"
+                    },
+                    {
+                        "surname": "Tahora H Nazer"
+                    },
+                    {
+                        "given-names": "Huan",
+                        "surname": "Liu"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref57",
+            "mixed-citation": {
+                "#text": "[56]\n          \n          and\n          \n          .\n          \n          .",
+                "article-title": "Leveraging joint interactions for credibility analysis in news communities",
+                "source": "In CIKM'15.",
+                "string-name": [
+                    {
+                        "given-names": "Subhabrata",
+                        "surname": "Mukherjee"
+                    },
+                    {
+                        "given-names": "Gerhard",
+                        "surname": "Weikum"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref58",
+            "mixed-citation": {
+                "#text": "[57]\n          \n          and\n          \n          ?\n          \n          ,\n          \n          .",
+                "article-title": "Panagiotis Takis Metaxas. The fake news spreading plague: Was it preventable",
+                "source": "arXiv preprint arXiv:1703.06988",
+                "string-name": {
+                    "given-names": "Eni",
+                    "surname": "Mustafaraj"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref59",
+            "mixed-citation": {
+                "#text": "[58]\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ,\n          \n          .",
+                "article-title": "Con rmation bias: A ubiquitous phenomenon in many guises",
+                "fpage": "175",
+                "issue": "2",
+                "source": "Review of general psychology",
+                "string-name": {
+                    "given-names": "S Nickerson.",
+                    "surname": "Raymond"
+                },
+                "volume": "2",
+                "year": "1998"
+            }
+        },
+        {
+            "@id": "ref60",
+            "mixed-citation": {
+                "#text": "[59]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": [
+                    "Jason Rei er",
+                    "When corrections fail: The persistence of political misperceptions"
+                ],
+                "fpage": "330",
+                "issue": "2",
+                "source": "Political Behavior",
+                "string-name": {
+                    "given-names": "Brendan",
+                    "surname": "Nyhan"
+                },
+                "volume": [
+                    "32",
+                    "303"
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref61",
+            "mixed-citation": {
+                "#text": "[60]\n          \n          and\n          \n          .\n          \n          .",
+                "article-title": "The russian rehose of falsehood propaganda model",
+                "string-name": [
+                    {
+                        "given-names": "Christopher",
+                        "surname": "Paul"
+                    },
+                    {
+                        "given-names": "Miriam",
+                        "surname": "Matthews"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref62",
+            "mixed-citation": {
+                "#text": "[61]\n          \n          et al.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "A review on image feature extraction and representation techniques",
+                "fpage": "396",
+                "issue": "4",
+                "source": "International Journal of Multimedia and Ubiquitous Engineering",
+                "string-name": {
+                    "surname": "Dong ping Tian"
+                },
+                "volume": [
+                    "8",
+                    "385"
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref63",
+            "mixed-citation": {
+                "#text": "[62]\n          \n          , Johannes Kiesel, Kevin Reinartz, Janek Bevendor , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "A stylometric inquiry into hyperpartisan and fake news",
+                "source": "arXiv preprint arXiv:1702.05638",
+                "string-name": [
+                    {
+                        "given-names": "Potthast",
+                        "surname": "Martin"
+                    },
+                    {
+                        "given-names": "Benno",
+                        "surname": "Stein"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref64",
+            "mixed-citation": {
+                "#text": "[63]\n          \n          , Sebastian Ko\u007fpsel, Benno Stein, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . Springer,\n          \n          .",
+                "article-title": "Clickbait detection",
+                "fpage": "817",
+                "source": "In European Conference on Information Retrieval",
+                "string-name": [
+                    {
+                        "given-names": "Potthast",
+                        "surname": "Martin"
+                    },
+                    {
+                        "given-names": "Matthias",
+                        "surname": "Hagen"
+                    }
+                ],
+                "volume": "810",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref65",
+            "mixed-citation": {
+                "#text": "[64]\n          \n          , Emily Rosengren,\n          \n          \n          .\n          \n          .",
+                "article-title": "Rumor has it: Identifying misinformation in microblogs",
+                "source": "In EMNLP'11.",
+                "string-name": [
+                    {
+                        "given-names": "Qazvinian",
+                        "surname": "Vahed"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Qiaozhu",
+                        "surname": "Dragomir R Radev"
+                    },
+                    {
+                        "surname": "Mei"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref66",
+            "mixed-citation": {
+                "#text": "[65]\n          \n          , Antonio Scala, and Cass R Sunstein.\n          \n          .\n          \n          .",
+                "source": "Echo chambers on facebook",
+                "string-name": {
+                    "given-names": "Quattrociocchi",
+                    "surname": "Walter"
+                },
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref67",
+            "mixed-citation": {
+                "#text": "[66]\n          \n          ,\n          \n          , and\n          \n          J Conroy.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          .",
+                "article-title": "Deception detection for news: three types of fakes",
+                "issue": [
+                    "1",
+                    "4"
+                ],
+                "source": "Proceedings of the Association for Information Science and Technology",
+                "string-name": [
+                    {
+                        "given-names": "L Rubin",
+                        "surname": "Victoria"
+                    },
+                    {
+                        "surname": "Yimin Chen"
+                    },
+                    {
+                        "surname": "Niall"
+                    }
+                ],
+                "volume": "52",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref68",
+            "mixed-citation": {
+                "#text": "[67]\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Fake news or truth? using satirical cues to detect potentially misleading news",
+                "fpage": "17",
+                "source": "In Proceedings of NAACL-HLT",
+                "string-name": [
+                    {
+                        "given-names": "L Rubin",
+                        "surname": "Victoria"
+                    },
+                    {
+                        "#text": ", Yimin Chen, and",
+                        "given-names": "Sarah",
+                        "surname": "Niall J Conroy"
+                    },
+                    {
+                        "surname": "Cornwell"
+                    }
+                ],
+                "volume": "7",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref69",
+            "mixed-citation": {
+                "#text": "[68]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Truth and deception at the rhetorical structure level",
+                "fpage": "917",
+                "issue": "5",
+                "source": "Journal of the Association for Information Science and Technology",
+                "string-name": [
+                    {
+                        "given-names": "L Rubin",
+                        "surname": "Victoria"
+                    },
+                    {
+                        "given-names": "Tatiana",
+                        "surname": "Lukoianova"
+                    }
+                ],
+                "volume": [
+                    "66",
+                    "905"
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref70",
+            "mixed-citation": {
+                "#text": "[69]\n          \n          , Sungyong Seo, and Yan Liu.\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Csi: A hybrid deep model for fake news",
+                "source": "arXiv preprint arXiv:1703.06959",
+                "string-name": {
+                    "given-names": "Ruchansky",
+                    "surname": "Natali"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref71",
+            "mixed-citation": {
+                "#text": "[70]\n          \n          , Fred Morstatter,\n          \n          , and",
+                "string-name": [
+                    {
+                        "given-names": "Sampson",
+                        "surname": "Justin"
+                    },
+                    {
+                        "surname": "Liang Wu"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref72",
+            "mixed-citation": {
+                "#text": "[88]\n          \n          ,\n          \n          , Fred Morstatter, and Huan Liu.\n          \n          .",
+                "article-title": "Paired restricted boltzmann machine for linked data",
+                "source": "In CIKM'16.",
+                "string-name": [
+                    {
+                        "given-names": "Wang",
+                        "surname": "Suhang"
+                    },
+                    {
+                        "given-names": "Jiliang",
+                        "surname": "Tang"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref73",
+            "mixed-citation": {
+                "#text": "[89]\n          \n          ,\n          \n          ,\n          \n          , Kai Shu, Suhas Ranganath, and Huan Liu.\n          \n          .",
+                "article-title": "What your images reveal: Exploiting visual contents for point-of-interest recommendation",
+                "source": "In WWW'17.",
+                "string-name": [
+                    {
+                        "given-names": "Wang",
+                        "surname": "Suhang"
+                    },
+                    {
+                        "given-names": "Wang",
+                        "surname": "Yilin"
+                    },
+                    {
+                        "given-names": "Jiliang",
+                        "surname": "Tang"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref74",
+            "mixed-citation": {
+                "#text": "[90]\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "\" liar, liar pants on re\": A new benchmark dataset for fake news detection",
+                "source": "arXiv preprint arXiv:1705.00648",
+                "string-name": {
+                    "given-names": "William",
+                    "surname": "Yang Wang"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref75",
+            "mixed-citation": {
+                "#text": "[91]\n          \n          ,\n          \n          ,\n          \n          , Huan Liu, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Unsupervised sentiment analysis for social media images",
+                "fpage": "2379",
+                "source": "In IJCAI",
+                "string-name": [
+                    {
+                        "given-names": "Wang",
+                        "surname": "Yilin"
+                    },
+                    {
+                        "given-names": "Wang",
+                        "surname": "Suhang"
+                    },
+                    {
+                        "given-names": "Jiliang",
+                        "surname": "Tang"
+                    },
+                    {
+                        "given-names": "Baoxin",
+                        "surname": "Li"
+                    }
+                ],
+                "volume": "2378",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref76",
+            "mixed-citation": {
+                "#text": "[92]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Naive realism in everyday life: Implications for social con ict and misunderstanding",
+                "fpage": "135",
+                "source": "Values and knowledge",
+                "string-name": [
+                    {
+                        "given-names": "Andrew",
+                        "surname": "Ward"
+                    },
+                    {
+                        "given-names": "L",
+                        "surname": "Ross"
+                    },
+                    {
+                        "given-names": "E",
+                        "surname": "Reed"
+                    },
+                    {
+                        "given-names": "E",
+                        "surname": "Turiel"
+                    },
+                    {
+                        "given-names": "T",
+                        "surname": "Brown"
+                    }
+                ],
+                "volume": "103",
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref77",
+            "mixed-citation": {
+                "#text": "[93]\n          \n          .\n          \n          .",
+                "article-title": "What computers should know, shouldn't know, and shouldn't believe",
+                "source": "In WWW'17.",
+                "string-name": {
+                    "given-names": "Gerhard",
+                    "surname": "Weikum"
+                }
+            }
+        },
+        {
+            "@id": "ref78",
+            "mixed-citation": {
+                "#text": "[94]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Chapter 5: Mining misinformation in social media",
+                "string-name": [
+                    {
+                        "given-names": "L",
+                        "surname": "Wu"
+                    },
+                    {
+                        "given-names": "F",
+                        "surname": "Morstatter"
+                    },
+                    {
+                        "given-names": "X",
+                        "surname": "Hu"
+                    },
+                    {
+                        "given-names": "H",
+                        "surname": "Liu"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref79",
+            "mixed-citation": {
+                "#text": "[95]\n          \n          , Xia Hu, Fred Morstatter, and Huan Liu.\n          \n          .",
+                "article-title": "Adaptive spammer detection with sparse group modeling",
+                "source": "In ICWSM'17.",
+                "string-name": {
+                    "given-names": "Wu",
+                    "surname": "Liang"
+                }
+            }
+        },
+        {
+            "@id": "ref80",
+            "mixed-citation": {
+                "#text": "[96]\n          \n          ,\n          \n          ,\n          \n          , and Huan Liu.\n          \n          .",
+                "article-title": "Gleaning wisdom from the past: Early detection of emerging rumors in social media",
+                "source": "In SDM'17.",
+                "string-name": [
+                    {
+                        "given-names": "Wu",
+                        "surname": "Liang"
+                    },
+                    {
+                        "given-names": "Jundong",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Xia",
+                        "surname": "Hu"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref81",
+            "mixed-citation": {
+                "#text": "[97]\n          \n          , Fred Morstatter, Xia Hu, and Huan Liu.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Mining misinformation in social media",
+                "fpage": "152",
+                "source": "Big Data in Complex and Social Networks",
+                "string-name": {
+                    "given-names": "Wu",
+                    "surname": "Liang"
+                },
+                "volume": "123",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref82",
+            "mixed-citation": {
+                "#text": "[98]\n          \n          , Pankaj K Agarwal,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Toward computational fact-checking",
+                "fpage": "600",
+                "issue": "7",
+                "source": "Proceedings of the VLDB Endowment",
+                "string-name": [
+                    {
+                        "given-names": "Wu",
+                        "surname": "You"
+                    },
+                    {
+                        "given-names": "Chengkai",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Jun",
+                        "surname": "Yang"
+                    },
+                    {
+                        "given-names": "Cong",
+                        "surname": "Yu"
+                    }
+                ],
+                "volume": [
+                    "7",
+                    "589"
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref83",
+            "mixed-citation": {
+                "#text": "[99]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Automatic detection of rumor on sina weibo",
+                "source": "In Proceedings of the ACM SIGKDD Workshop on Mining Data Semantics, page 13. ACM",
+                "string-name": [
+                    {
+                        "given-names": "Yang",
+                        "surname": "Fan"
+                    },
+                    {
+                        "given-names": "Liu",
+                        "surname": "Yang"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Min",
+                        "surname": "Xiaohui Yu"
+                    },
+                    {
+                        "surname": "Yang"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref84",
+            "mixed-citation": {
+                "#text": "[100]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ,\n          \n          .",
+                "article-title": "Attitudinal e ects of mere exposure",
+                "fpage": "1",
+                "issue": "2p2",
+                "source": "Journal of personality and social psychology",
+                "string-name": [
+                    {
+                        "given-names": "B",
+                        "surname": "Robert"
+                    },
+                    {
+                        "surname": "Zajonc"
+                    }
+                ],
+                "volume": "9",
+                "year": "1968"
+            }
+        },
+        {
+            "@id": "ref85",
+            "mixed-citation": {
+                "#text": "[101]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Mere exposure: A gateway to the subliminal",
+                "fpage": "228",
+                "issue": "6",
+                "source": "Current directions in psychological science",
+                "string-name": [
+                    {
+                        "given-names": "B",
+                        "surname": "Robert"
+                    },
+                    {
+                        "surname": "Zajonc"
+                    }
+                ],
+                "volume": [
+                    "10",
+                    "224"
+                ],
+                "year": "2001"
+            }
+        },
+        {
+            "@id": "ref86",
+            "mixed-citation": {
+                "#text": "[102]\n          \n          , Ahmet Aker, Kalina Bontcheva, Maria Liakata, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Detection and resolution of rumours in social media: A survey",
+                "source": "arXiv preprint arXiv:1704.00656",
+                "string-name": [
+                    {
+                        "given-names": "Zubiaga",
+                        "surname": "Arkaitz"
+                    },
+                    {
+                        "given-names": "Rob",
+                        "surname": "Procter"
+                    }
+                ],
+                "year": "2017"
+            }
+        }
+    ],
+    "title": "Fake News Detection on Social Media: A Data Mining Perspective"
+}

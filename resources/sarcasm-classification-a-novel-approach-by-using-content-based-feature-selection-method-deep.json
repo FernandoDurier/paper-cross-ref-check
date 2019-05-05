@@ -1,0 +1,904 @@
+{
+    "abstract": {
+        "p": "KCeoymwpourtdins:g SanardcaCs mom;Cmlausnsificcaatitioonn;(IFCeaAtuCreCS-2el0e1ct8io).n; k-means clustering. IAnbrsetcreancttdecades, social media sites such as twitter, facebook, and review site produces huge number of textual information posted Ibnyrmecaennyt duesceards.esT,hseocuisaelrmtednidasstiotesexsupcrehssashtiws/ihtteerr,sfeancteimboeonkt,ianntdhreevfoierwm soitfesparrocdaustciecsuhtutegreanncuems.bTerhoefstaerxctausatlicinufottremraantcioenupsousatlelyd In recent decades, social media sites such as twitter, facebook, and review site produces huge number of textual information posted sbhyifmtsatnhye upsoelrasr.itTyhoef utseexrt tfernodms ntoegeaxtipvreestso hpios/shiteirveseanntdimleiknetwi niseth.eThfoer mautoofmsatriccasctliacssuitfitecraatinocneso.fTshaercsaasrtcicasutitcteruatntecreasncpereusseunatlliyn by many users. The user tends to express his/her sentiment in the form of sarcastic utterances. The sarcastic utterance usually tsehxifttsisthaevpeorylarcihtyalolefntgeexttafsrokm.Itneregqautiivrestoa psoysitteimve tahnadt cliaknewmisaen.agTehetoaudteotmecatticconcltaesnstifibcaasteidonteoxft sparrocpaesrtitciesutoterrafneacteusrepsrepsreensteinnt shifts the polarity of text from negative to positive and likewise. The automatic classification of sarcastic utterances present in itenxstairscaastviceruyttcehra nllceensg.eIntatshki.s Irtegreaqrdu,irtehse apaspyestrepmrotphoastecannomvaenlaagpeprtoadchetetoctcclaosnstiefnyt sbaarcseadstitcextetxptroupsienrgtiecsonotrenfetabtuasresd pfereastuenret text is a very challenge task. It requires a system that can manage to detect content based text properties or features present isnelesacrticoanstmiceut httoedra.nTchees.pIrnoptohsisedreagpaprrdo,atchhe cpoanpseirstpsroofptowseo astangoevefelaatpuprerosaeclhectoiocnlamsseitfhyodsatrocassetliecct emxtosutsrinepgrecsoenntteanttivbeafseeadtufreeast.uIrne in sarcastic utterances. In this regard, the paper propose a novel approach to classify sarcastic text using content based feature sfierlsetcsttiaognem,ceothnovde.ntTiohneaplrfoepaotusered saeplpercotiaocnh mcoenthsiosdts osufctwhoasstCagHeI-fseqautuare,seInlefcotrimonatmioenthGoadinto(IsGel)ecatnmdoMsturtuepalreIsnefnotramtiavteiofnea(tMurIe)s.aIrne selection method. The proposed approach consists of two stage feature selection method to select most representative features. In ufisrsetdsttoagse,leccotnrveelenvtaionntafleafetuarteusresusbelseect.tiTohnemseltehcotdesd sfuecahturaes sCuHbsIe-stqaurearfeu,rIthneforrrmefiantieodnuGsianign s(eIGco)nadnsdtaMgeu.tuInalseIncofonrdmsattaigoen, (kM-mI)eaanres first stage, conventional feature selection methods such as CHI-square, Information Gain (IG) and Mutual Information (MI) are culsuesdtetroinsgelaelcgtorreiltehvmanitsfuesaetudrteos seulbescettm.Tohset rseeplerecstedntfaetaivtuerfeeasutubrseetamaroenfgurstihmerilraerfifneeadtuuressin.gThsecsoenledcstetadgfee.aItnurseescoanredcsltaasgseifi,ked-muesaings used to select relevant features subset. The selected feature subset are further refined using second stage. In second stage, k-means tcwluostcelrainssgifiaelgrsorSituhpmpoisrtuVsedcttoor sMelaechtimneos(tSrVepMre)seantdatRivaenfdeoamturFeoarmesotn(gRFsi)m.Tilahrefpearotuproesse.dThapepsreolaechtedoufte-apteurrfeosrmaraenccleastshiefieedxiussting clustering algorithm is used to select most representative feature among similar features. The selected features are classified using tmweothcoldassiinfietersrmSsuopfpoPrtecViesicotonr, RMeaccahlli,nFe-m(SeVaMsu)reaonnd ARmanadzoomn pFrordeusctt(rReFvi)e.wThdeatpasroetp.osed approach out-performance the existing Selection and peer-review under responsibility of the scientific committee of the 8th International Conference on Advances in"
+    },
+    "affiliation": [
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff0",
+            "addr-line": "Mysuru",
+            "country": {
+                "#text": "India",
+                "@country": "IN"
+            },
+            "institution": "Department of Information Science and Engineering, Sri Jayachamarajendra College of Engineering",
+            "label": "0"
+        },
+        {
+            "#text": ",\n          \n          ,\n          \n          ,\n          \n          ,",
+            "@id": "aff1",
+            "addr-line": [
+                "nS,riJSJaSyTaIchCaammapruasj,enMdyrsauCruo",
+                "Mysuru"
+            ],
+            "country": {
+                "#text": "India",
+                "@country": "IN"
+            },
+            "institution": [
+                "a Department of Information ScJiSenScReeasnedarEchngFionuenerdiantgio",
+                "llIengdeiaof Engineering"
+            ],
+            "label": "1"
+        },
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff2",
+            "addr-line": "Mysuru",
+            "country": {
+                "#text": "India",
+                "@country": "IN"
+            },
+            "institution": "a JSS Research Foundation, JSS TI Campus, Mysuru, India Department of Information Science and Engineering, Sri Jayachamarajendra College of Engineering",
+            "label": "2"
+        },
+        {
+            "@id": "aff3",
+            "institution": "a, b H M Keerthi Kumar B S Harish JSS Research Foundation, JSS TI C",
+            "label": "3"
+        }
+    ],
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Feature Selection Method a",
+            "xref": [
+                {
+                    "#text": "0",
+                    "@ref-type": "aff",
+                    "@rid": "aff0"
+                },
+                {
+                    "#text": "1",
+                    "@ref-type": "aff",
+                    "@rid": "aff1"
+                },
+                {
+                    "#text": "2",
+                    "@ref-type": "aff",
+                    "@rid": "aff2"
+                },
+                {
+                    "#text": "3",
+                    "@ref-type": "aff",
+                    "@rid": "aff3"
+                }
+            ]
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "H M Keerthi Kumar",
+            "xref": [
+                {
+                    "#text": "0",
+                    "@ref-type": "aff",
+                    "@rid": "aff0"
+                },
+                {
+                    "#text": "1",
+                    "@ref-type": "aff",
+                    "@rid": "aff1"
+                },
+                {
+                    "#text": "2",
+                    "@ref-type": "aff",
+                    "@rid": "aff2"
+                },
+                {
+                    "#text": "3",
+                    "@ref-type": "aff",
+                    "@rid": "aff3"
+                }
+            ]
+        },
+        {
+            "@contrib-type": "author",
+            "email": "bsharish@sjce.ac.in",
+            "string-name": "B S Harish",
+            "xref": [
+                {
+                    "#text": "0",
+                    "@ref-type": "aff",
+                    "@rid": "aff0"
+                },
+                {
+                    "#text": "1",
+                    "@ref-type": "aff",
+                    "@rid": "aff1"
+                },
+                {
+                    "#text": "2",
+                    "@ref-type": "aff",
+                    "@rid": "aff2"
+                },
+                {
+                    "#text": "3",
+                    "@ref-type": "aff",
+                    "@rid": "aff3"
+                }
+            ]
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "H M Keerthi Kumar",
+            "xref": [
+                {
+                    "#text": "0",
+                    "@ref-type": "aff",
+                    "@rid": "aff0"
+                },
+                {
+                    "#text": "1",
+                    "@ref-type": "aff",
+                    "@rid": "aff1"
+                },
+                {
+                    "#text": "2",
+                    "@ref-type": "aff",
+                    "@rid": "aff2"
+                },
+                {
+                    "#text": "3",
+                    "@ref-type": "aff",
+                    "@rid": "aff3"
+                }
+            ]
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "B S Harish a",
+            "xref": [
+                {
+                    "#text": "0",
+                    "@ref-type": "aff",
+                    "@rid": "aff0"
+                },
+                {
+                    "#text": "1",
+                    "@ref-type": "aff",
+                    "@rid": "aff1"
+                },
+                {
+                    "#text": "2",
+                    "@ref-type": "aff",
+                    "@rid": "aff2"
+                },
+                {
+                    "#text": "3",
+                    "@ref-type": "aff",
+                    "@rid": "aff3"
+                }
+            ]
+        }
+    ],
+    "clean-authors": [
+        "Feature Selection Method a",
+        "H M Keerthi Kumar",
+        "B S Harish",
+        "H M Keerthi Kumar",
+        "B S Harish a"
+    ],
+    "clean-refs": [
+        {
+            "authors": "Amrani, Lazaar, El Kadiri, K.E., , ",
+            "source": "Procedia Computer Science",
+            "title": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Bharti, Vachha, Pradhan, Babu, Jena, , ",
+            "source": "Digital Communications and Networks",
+            "title": "[2]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Buschmeier, Cimiano, Klinger, , ",
+            "source": "in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+            "title": "[3]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Chakraborty, Bhattacharyya, Bag, Hassanien, , ",
+            "source": "in: International Conference on Advanced Machine Learning Technologies and Applications",
+            "title": "[4]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , Springer. pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Chormunge, Jena, , ",
+            "source": "Journal of Electrical Systems and Information Technology",
+            "title": "[5]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          , doi:https://doi.org/10.1016/j.jesit.\n          \n          .\n          \n          .004."
+        },
+        {
+            "authors": "Dave, Desai, , ",
+            "source": null,
+            "title": "[6]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ), International Conference on, IEEE. pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Fersini, Messina, Pozzi, , ",
+            "source": "Decision support systems 68",
+            "title": "[7]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Filatova, , ",
+            "source": null,
+            "title": "[8]\n          \n          ,\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Filatova, , ",
+            "source": "in: FLAIRS-30, Association for the Advancement of Artificial Intelligence",
+            "title": "[9]\n          \n          ,\n          \n          .\n          \n          ,\n          \n          . pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Harish, Revanasiddappa, , ",
+            "source": "International Journal of Computer Applications",
+            "title": "[10]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .5120/ijca2017913711."
+        },
+        {
+            "authors": "Lee, Lee, , ",
+            "source": "Information processing & management 42",
+            "title": "[11]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Mukherjee, P.K., , ",
+            "source": "Technology in Society 48",
+            "title": "[12]\n          \n          , Bala,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "J., Pudil, P., , ",
+            "source": null,
+            "title": "[13] Novovic?ova\u00b4,\n          \n          , Mal\u00b4?k,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ), Springer. pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Reganti, Maheshwari, Kumar, Das, Bajpai, , ",
+            "source": [
+                "in: Data Mining Workshops (ICDMW)",
+                "2016 IEEE 16th International Conference on, IEEE"
+            ],
+            "title": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          ,\n          \n          . pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Riloff, Qadir, Surve, De Silva, Gilbert, Huang, , ",
+            "source": "in: Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+            "title": "[15]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Sarkar, Goswami, Agarwal, Aktar, , ",
+            "source": "International scholarly research notices",
+            "title": "[16]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1155/\n          \n          /717092."
+        },
+        {
+            "authors": "Song, Liu, Yang, , ",
+            "source": "Pattern analysis and applications 8",
+            "title": "[17]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Tripathy, Agrawal, Rath, , ",
+            "source": "Expert Systems with Applications",
+            "title": "[18]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Wallace, , ",
+            "source": "Artificial Intelligence Review",
+            "title": "[19]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Wang, Sun, Xu, Gu, , ",
+            "source": "Decision support systems 57",
+            "title": "[20]\n          \n          ,\n          \n          , Ma, J.,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Witten, Frank, Hall, Pal, , ",
+            "source": null,
+            "title": "[21]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          . Morgan Kaufmann."
+        }
+    ],
+    "journal": "Procedia Computer Science",
+    "keywords": [
+        "Sarcasm",
+        "Classification",
+        "Feature Selection",
+        "k-means clustering"
+    ],
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/sarcasm-classification-a-novel-approach-by-using-content-based-feature-selection-method.json",
+    "pub_date": {
+        "year": "2018"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Random forest and support vector machine based hybrid approach to sentiment analysis",
+                "fpage": "511",
+                "lpage": "520",
+                "source": "Procedia Computer Science",
+                "string-name": [
+                    {
+                        "given-names": "Al",
+                        "surname": "Amrani"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Lazaar"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M.",
+                        "surname": "El Kadiri"
+                    },
+                    {
+                        "surname": "K.E."
+                    }
+                ],
+                "volume": "127",
+                "year": "2018"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Sarcastic sentiment detection in tweets streamed in real time: a big data approach",
+                "fpage": "108",
+                "lpage": "121",
+                "source": "Digital Communications and Networks",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Bharti"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "B.",
+                        "surname": "Vachha"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Pradhan"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Babu"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Jena"
+                    }
+                ],
+                "volume": "2",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "An impact analysis of features in a classification approach to irony detection in product reviews",
+                "fpage": "42",
+                "lpage": "49",
+                "source": "in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Buschmeier"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Cimiano"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Klinger"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , Springer. pp.\n          \n          -\n          \n          .",
+                "article-title": "Comparative sentiment analysis on a set of movie reviews using deep learning approach",
+                "fpage": "311",
+                "lpage": "318",
+                "source": "in: International Conference on Advanced Machine Learning Technologies and Applications",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Chakraborty"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Bhattacharyya"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Bag"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.E.",
+                        "surname": "Hassanien"
+                    }
+                ],
+                "year": "2018"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          , doi:https://doi.org/10.1016/j.jesit.\n          \n          .\n          \n          .004.",
+                "article-title": "Correlation based feature selection with clustering for high dimensional data",
+                "source": "Journal of Electrical Systems and Information Technology",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Chormunge"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Jena"
+                    }
+                ],
+                "volume": "06",
+                "year": [
+                    "2018",
+                    "2017"
+                ]
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ), International Conference on, IEEE. pp.\n          \n          -\n          \n          .",
+                "article-title": "A comprehensive study of classification techniques for sarcasm detection on textual data, in: Electrical, Electronics, and Optimization Techniques (ICEEOT",
+                "fpage": "1985",
+                "lpage": "1991",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.D.",
+                        "surname": "Dave"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.P.",
+                        "surname": "Desai"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Sentiment analysis: Bayesian ensemble learning",
+                "fpage": "26",
+                "lpage": "38",
+                "source": "Decision support systems 68",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Fersini"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Messina"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "F.A.",
+                        "surname": "Pozzi"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          ,\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Irony and sarcasm: Corpus generation and analysis using crowdsourcing, in: LREC, Citeseer",
+                "fpage": "392",
+                "lpage": "398",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "E.",
+                    "surname": "Filatova"
+                },
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          ,\n          \n          .\n          \n          ,\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Sarcasm detection using sentiment flow shifts",
+                "fpage": "264",
+                "lpage": "269",
+                "source": "in: FLAIRS-30, Association for the Advancement of Artificial Intelligence",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "E.",
+                    "surname": "Filatova"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .5120/ijca2017913711.",
+                "article-title": "A comprehensive survey on various feature selection methods to categorize text documents",
+                "fpage": "1",
+                "lpage": "7",
+                "source": "International Journal of Computer Applications",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "B.",
+                        "surname": "Harish"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M.",
+                        "surname": "Revanasiddappa"
+                    }
+                ],
+                "volume": [
+                    "164",
+                    "10"
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Information gain and divergence-based feature selection for machine learning-based text categorization",
+                "fpage": "155",
+                "lpage": "165",
+                "source": "Information processing & management 42",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Lee"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "G.G.",
+                        "surname": "Lee"
+                    }
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "[12]\n          \n          , Bala,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Sarcasm detection in microblogs using na\u00a8?ve bayes and fuzzy clustering",
+                "fpage": "19",
+                "lpage": "27",
+                "source": "Technology in Society 48",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Mukherjee"
+                    },
+                    {
+                        "surname": "P.K."
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "[13] Novovic?ova\u00b4,\n          \n          , Mal\u00b4?k,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ), Springer. pp.\n          \n          -\n          \n          .",
+                "article-title": "Feature selection using improved mutual information for text classification, in: Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition (SPR) and Structural and Syntactic Pattern Recognition (SSPR",
+                "fpage": "1010",
+                "lpage": "1017",
+                "string-name": [
+                    {
+                        "surname": "J."
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Pudil"
+                    },
+                    {
+                        "surname": "P."
+                    }
+                ],
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          ,\n          \n          . pp.\n          \n          -\n          \n          .",
+                "article-title": "Modeling satire in english text for automatic detection",
+                "fpage": "970",
+                "lpage": "977",
+                "source": [
+                    "in: Data Mining Workshops (ICDMW)",
+                    "2016 IEEE 16th International Conference on, IEEE"
+                ],
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.N.",
+                        "surname": "Reganti"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Maheshwari"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "U.",
+                        "surname": "Kumar"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Das"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Bajpai"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "[15]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Sarcasm as contrast between a positive sentiment and negative situation",
+                "fpage": "704",
+                "lpage": "714",
+                "source": "in: Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Riloff"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Qadir"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Surve"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "De Silva"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.",
+                        "surname": "Gilbert"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Huang"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "[16]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1155/\n          \n          /717092.",
+                "article-title": "A novel feature selection technique for text classification using naive bayes",
+                "fpage": "1",
+                "lpage": "10",
+                "source": "International scholarly research notices",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S.D.",
+                        "surname": "Sarkar"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Goswami"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Agarwal"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Aktar"
+                    }
+                ],
+                "year": [
+                    "2014",
+                    "2014",
+                    "2014"
+                ]
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "[17]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "A comparative study on text representation schemes in text categorization",
+                "fpage": "199",
+                "lpage": "209",
+                "source": "Pattern analysis and applications 8",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "F.",
+                        "surname": "Song"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Liu"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Yang"
+                    }
+                ],
+                "year": "2005"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "[18]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Classification of sentiment reviews using n-gram machine learning approach",
+                "fpage": "117",
+                "lpage": "126",
+                "source": "Expert Systems with Applications",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Tripathy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Agrawal"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.K.",
+                        "surname": "Rath"
+                    }
+                ],
+                "volume": "57",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "[19]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Computational irony: A survey and new perspectives",
+                "fpage": "467",
+                "lpage": "483",
+                "source": "Artificial Intelligence Review",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "B.C.",
+                    "surname": "Wallace"
+                },
+                "volume": "43",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "[20]\n          \n          ,\n          \n          , Ma, J.,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Sentiment classification: The contribution of ensemble learning",
+                "fpage": "77",
+                "lpage": "93",
+                "source": "Decision support systems 57",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "G.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Sun"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Xu"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Gu"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "[21]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          . Morgan Kaufmann.",
+                "article-title": "Data Mining: Practical machine learning tools and techniques",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "I.H.",
+                        "surname": "Witten"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "E.",
+                        "surname": "Frank"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M.A.",
+                        "surname": "Hall"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.J.",
+                        "surname": "Pal"
+                    }
+                ],
+                "year": "2016"
+            }
+        }
+    ],
+    "title": "Sarcasm classification: A novel approach by using Content Based Sarcasm classification: A novel approach by using Content Based Sarcasm classification: A novel approach by using Content Based Feature Selection Method Feature Selection Method"
+}

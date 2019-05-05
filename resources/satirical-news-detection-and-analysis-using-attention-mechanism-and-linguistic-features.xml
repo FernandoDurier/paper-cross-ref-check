@@ -1,0 +1,2182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta />
+    <article-meta>
+      <title-group>
+        <article-title>Satirical News Detection and Analysis using Attention Mechanism and Linguistic Features</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Fan Yang and Arjun Mukherjee</string-name>
+          <email>arjung@uh.edu</email>
+          <email>ffyang11,arjung@uh.edu</email>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Eduard Gragut</string-name>
+          <email>edragut@temple.edu</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Computer and Information Sciences, Temple University</institution>
+        </aff>
+        <aff id="aff1">
+          <label>1</label>
+          <institution>Department of Computer Science, University of Houston</institution>
+        </aff>
+      </contrib-group>
+      <abstract>
+        <p>Satirical news is considered to be entertainment, but it is potentially deceptive and harmful. Despite the embedded genre in the article, not everyone can recognize the satirical cues and therefore believe the news as true news. We observe that satirical cues are often reflected in certain paragraphs rather than the whole document. Existing works only consider documentlevel features to detect the satire, which could be limited. We consider paragraphlevel linguistic features to unveil the satire by incorporating neural network and attention mechanism. We investigate the difference between paragraph-level features and document-level features, and analyze them on a large satirical news dataset. The evaluation shows that the proposed model detects satirical news effectively and reveals what features are important at which level.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>1 Introduction</title>
+      <p>?When information is cheap, attention
+becomes expensive.? ? James Gleick
+Satirical news is considered to be entertainment.
+However, it is not easy to recognize the satire if the
+satirical cues are too subtle to be unmasked and the
+reader lacks the contextual or cultural background.
+The example illustrated in Table 1 is a piece of
+satirical news with subtle satirical cues.</p>
+      <p>
+        Assuming readers interpret satirical news as
+true news, there is not much difference between
+satirical news and fake news in terms of the
+consequence, which may hurt the credibility of the
+media and the trust in the society. In fact, it is
+reported in the Guardian that people may believe
+satirical news and spread them to the public
+re...
+?Kids these days are done with stories where things
+happen,? said CBC consultant and world's oldest child
+psychologist Obadiah Sugarman. ?We'll finally be
+giving them the stiff Victorian morality that I assume is in
+vogue. Not to mention, doing a period piece is a great
+way to make sure white people are adequately
+represented on television.?
+...
+gardless of the ridiculous content1. It is also
+concluded that fake news is similar to satirical news
+via a thorough comparison among true news, fake
+news, and satirical news
+        <xref ref-type="bibr" rid="ref21">(Horne and Adali, 2017)</xref>
+        .
+This paper focuses on satirical news detection to
+ensure the trustworthiness of online news and
+prevent the spreading of potential misleading
+information.
+      </p>
+      <p>
+        Some works tackling fake news and
+misleading information favor to discover the truth
+        <xref ref-type="bibr" rid="ref47 ref48">(Xiao
+et al., 2016; Wan et al., 2016)</xref>
+        through knowledge
+base
+        <xref ref-type="bibr" rid="ref12">(Dong et al., 2015)</xref>
+        and truthfulness
+estimation
+        <xref ref-type="bibr" rid="ref17">(Ge et al., 2013)</xref>
+        . These approaches may
+not be feasible for satirical news because there
+is no ground-truth in the stories. Another track
+of works analyze social network activities
+        <xref ref-type="bibr" rid="ref51">(Zhao
+et al., 2015)</xref>
+        to evaluate the spreading
+information
+        <xref ref-type="bibr" rid="ref19 ref6">(Gupta et al., 2012; Castillo et al., 2011)</xref>
+        . This
+could be ineffective for both fake news and
+satirical news because once they are distributed on the
+social network, the damage has been done.
+Finally, works evaluating culture difference
+        <xref ref-type="bibr" rid="ref2 ref24 ref25 ref37 ref38">(Pe´rezRosas and Mihalcea, 2014)</xref>
+        , psycholinguistic
+features
+        <xref ref-type="bibr" rid="ref35">(Ott et al., 2011)</xref>
+        , and writing styles
+        <xref ref-type="bibr" rid="ref15">(Feng
+et al., 2012)</xref>
+        for deception detection are suitable
+for satirical news detection. These works consider
+features at document level, while we observe that
+satirical cues are usually located in certain
+para1https://www.theguardian.com/media/2016/nov/17/facebookfake-news-satire
+graphs rather than the whole document. This
+indicates that many document level features may be
+superfluous and less effective.
+      </p>
+      <p>
+        To understand how paragraph-level features and
+document-level features are varied towards
+detection decision when only document level labels are
+available, we propose a 4-level neural network
+in a character-word-paragraph-document
+hierarchy and utilize attention mechanism
+        <xref ref-type="bibr" rid="ref2">(Bahdanau
+et al., 2014)</xref>
+        to reveal their relative difference. We
+apply psycholinguistic features, writing stylistic
+features, structural features, and readability
+features to understand satire. The paragraph-level
+features are embedded into attention mechanism
+for selecting highly attended paragraphs, and the
+document-level features are incorporated for the
+final classification. This is the first work that
+unveils satirical cues between paragraph-level and
+document-level through neural networks to our
+knowledge.
+      </p>
+      <p>We make the following contributions in our
+paper:
+? We propose a 4-level hierarchical network for
+satirical news detection. The model detects
+satirical news effectively and incorporates
+attention mechanism to reveal paragraph-level
+satirical cues.
+? We show that paragraph-level features are
+more important than document-level features
+in terms of the psycholinguistic feature,
+writing stylistic feature, and structural feature,
+while the readability feature is more
+important at the document level.
+? We collect satirical news (16,000+) and true
+news (160,000+) from various sources and
+conduct extensive experiments on this
+corpus2.
+2</p>
+    </sec>
+    <sec id="sec-2">
+      <title>Related Work</title>
+      <p>We categorize related works into four categories:
+content-based detection for news genre, truth
+verification and truthfulness evaluation, deception
+detection, and identification of highly attended
+component using attention mechanism.</p>
+      <p>Content-based detection for news
+genre.Content-based methods are
+considerably effective to prevent satirical news from being
+recognized as true news and spreading through
+2https://github.com/fYYw/satire
+social media. Burfoot and Baldwin (2009)
+introduce headline features, profanity, and slang to
+embody satirical news. They consider absurdity
+as the major device in satirical news and model
+this feature by comparing entity combination in a
+given document with Google query results. Rubin
+et al. (2016) also consider absurdity but model
+it through unexpected new name entities. They
+introduce additional features including humor,
+grammar, negative affect, and punctuation to
+empower the detection. Besides satirical news, Chen
+et al. (2015) aim to detect click-baits, whose
+content exaggerates fact. Potthast et al. (2017)
+report a writing style analysis of hyperpartisan
+news. Barbieri et al. (2015) focus on multilingual
+tweets that advertise satirical news.</p>
+      <p>It is noteworthy that satirical news used for
+evaluation in above works are of limited quantity
+(around 200 articles). Diverse examples of satire
+may not be included as discussed by Rubin et al.
+(2016). This issue inspires us to collect more than
+16,000 satirical news for our experiment.</p>
+      <p>
+        Truth discovery and truthfulness
+evaluation. Although truth extraction from inconsistent
+sources
+        <xref ref-type="bibr" rid="ref17 ref27 ref47 ref48">(Ge et al., 2013; Wan et al., 2016; Li et al.,
+2016)</xref>
+        and from conflicting sources
+        <xref ref-type="bibr" rid="ref25 ref26">(Yin et al.,
+2008; Li et al., 2014b)</xref>
+        , truth inference through
+knowledge base
+        <xref ref-type="bibr" rid="ref12">(Dong et al., 2015)</xref>
+        , and
+discovering evolving truth
+        <xref ref-type="bibr" rid="ref28">(Li et al., 2015)</xref>
+        could help
+identify fact and detect fake news, they cannot
+favor much for satirical news as the story is entirely
+made up and the ground-truth is hardly found.
+Analyzing user activities
+        <xref ref-type="bibr" rid="ref14">(Farajtabar et al., 2017)</xref>
+        and interactions
+        <xref ref-type="bibr" rid="ref29 ref3 ref34 ref51 ref6 ref9">(Castillo et al., 2011;
+Mukherjee and Weikum, 2015)</xref>
+        to evaluate the credibility
+may not be appropriate for satirical news as it
+cannot prevent the spreading. Therefore, we utilize
+content-based features, including psycholinguistic
+features, writing stylistic features, structural
+features, and readability features, to address satirical
+news detection.
+      </p>
+      <p>
+        Deception detection. We believe satirical
+news and opinion spam share similar
+characteristics of writing fictitious and deceptive content,
+which can be identified via a psycholinguistic
+consideration
+        <xref ref-type="bibr" rid="ref31 ref35 ref5">(Mihalcea and Strapparava, 2009; Ott
+et al., 2011)</xref>
+        . Beyond that, both syntactic
+stylometry
+        <xref ref-type="bibr" rid="ref15">(Feng et al., 2012)</xref>
+        and behavioral
+features
+        <xref ref-type="bibr" rid="ref32 ref33">(Mukherjee et al., 2013b)</xref>
+        are effective for
+detecting deceptive reviews, while stylistic features
+are practical to deal with obfuscating and
+imitating writings
+        <xref ref-type="bibr" rid="ref1">(Afroz et al., 2012)</xref>
+        . However,
+deceptive content varies among paragraphs in the same
+document, and so does satire. We focus on
+devising and evaluating paragraph-level features to
+reveal the satire in this work. We compare them
+with features at the document level, so we are able
+to tell what features are important at which level.
+      </p>
+      <p>
+        Identification of highly attended component
+using attention mechanism. Attention
+mechanism is widely applied in machine
+translation
+        <xref ref-type="bibr" rid="ref2">(Bahdanau et al., 2014)</xref>
+        , language
+inference
+        <xref ref-type="bibr" rid="ref43">(Rockta¨schel et al., 2015)</xref>
+        , and question
+answering
+        <xref ref-type="bibr" rid="ref44 ref47 ref7 ref8">(Chen et al., 2016a)</xref>
+        . In addition, Yang
+et al. (2016b) propose hierarchical attention
+network to understand both attended words and
+sentences for sentiment classification. Chen et al.
+(2016b) enhance the attention with the support of
+user preference and product information to
+comprehend how user and product affect sentiment
+ratings. Due to the capability of attention
+mechanism, we employ the same strategy to show
+attended component for satirical news. Different
+from above works, we further evaluate
+linguistic features of highly attended paragraphs to
+analyze characteristics of satirical news, which has
+not been explored to our knowledge.
+3
+      </p>
+    </sec>
+    <sec id="sec-3">
+      <title>The Proposed Model</title>
+      <p>We first present our 4-level hierarchical neural
+network and explain how linguistic features can
+be embedded in the network to reveal the
+difference between paragraph level and document level.
+Then we describe the linguistic features.
+3.1</p>
+      <sec id="sec-3-1">
+        <title>The 4-Level Hierarchical Model</title>
+        <p>We build the model in a hierarchy of
+characterword-paragraph-document. The general overview
+of the model can be viewed in Figure 1 and the
+notations are listed in Table 2.</p>
+        <p>Meaning
+Superscript L&gt;omweeracnassmefaotrrixnottraatniospnopsue.rpose;
+Subscript For index purpose.</p>
+        <p>
+          Parameter bW:l,eUar,nwabc,lveab:ialse.arnable weights;
+c: character; x: word; p: paragraph;
+d: document; y~: prediction
+Representation l: linguistic vector; y: label;
+r: reset gate; z: update gate;
+h: hidden state for GRU;
+u: hidden state for attention.
+We use convolutional neural networks (CNN) to
+encode word representation from characters. CNN
+is effective in extracting morphological
+information and name entities
+          <xref ref-type="bibr" rid="ref22 ref27 ref30 ref44 ref49 ref7">(Ma and Hovy, 2016)</xref>
+          , both
+of which are common in news. Each word is
+presented as a sequence of n characters and each
+character is embedded into a low-dimension vector.
+The sequence of characters c is brought to the
+network. A convolution operation with a filter wc
+is applied and moved along the sequence. Max
+pooling is performed to select the most important
+feature generated by the previous operation. The
+word representation xc 2 Rf is generated with f
+filters.
+Assume a sequence of words of paragraph i arrives
+at time t. The current word representation xi;t
+c
+concatenates xi;t from character level with
+pretrained word embedding xie;t, as xi;t = [xic;t; xie;t].
+Examples are given in Figure 1. We implement
+Gated Recurrent Unit (GRU)
+          <xref ref-type="bibr" rid="ref10 ref2">(Cho et al., 2014)</xref>
+          rather than LSTM
+          <xref ref-type="bibr" rid="ref20">(Hochreiter and Schmidhuber,
+1997)</xref>
+          to encode the sequence because GRU has
+fewer parameters. The GRU adopts reset gate
+ri;t and update gate zi;t to control the
+information flow between the input xi;t and the candidate
+state h~i;t. The output hidden state hi;t is computed
+by manipulating previous state hi;t 1 and the
+candidate state h~i;t regarding to zi;t as in Equation 4,
+where denotes element-wise multiplication.
+zi;t = (Wzxi;t + Uzhi;t 1 + bz)
+ri;t = (Wrxi;t + Urhi;t 1 + br)
+h~i;t = tanh(Whxi;t + ri;t
+hi;t = (1
+zi;t)
+hi;t 1 + zi;t
+        </p>
+        <p>h~i;t
+(Uhhi;t 1 + bh))
+(3)
+(1)
+(2)
+(4)</p>
+        <p>To learn a better representation from the past
+and the future, we use bidirectional-GRU
+(BiGRU) to read the sequence of words with
+forward GR!U from xi;1 to xi;t, and backward GRU
+from xi;t to xi;1. The final output of Bi-GRU
+concatenates the last state of GR!U and GRU,
+as [!h i;t; h i;1], to represent the ith paragraph.</p>
+      </sec>
+      <sec id="sec-3-2">
+        <title>3.1.3 Paragraph-Level Attention</title>
+        <p>We observe that not all paragraphs have satire and
+some of them are functional to make the article
+complete, so we incorporate attention mechanism
+to reveal which paragraphs contribute to decision
+making. Assuming a sequence of paragraph
+representations have been constructed from lower
+levels, another Bi-GRU is used to encode these
+representations to a series of new states p1:t, so the
+sequential orders are considered.</p>
+        <p>To decide how paragraphs should be attended,
+we calculate satirical degree i of paragraph i. We
+first convey pi into hidden states ui as in
+Equation 5. Then we product ui with a learnable
+satireaware vector va and feed the result into softmax
+function as in Equation 6. The final document
+representation d is computed as a weighted sum of i
+and pi.</p>
+        <p>ui = tanh(Wapi + ba)
+i =</p>
+        <p>exp(ui&gt;va)
+Ptj=0 exp(uj&gt;va))
+t
+d = X
+i=0
+ipi
+(5)
+(6)
+(7)</p>
+        <p>Linguistic features are leveraged to support
+attending satire paragraph. Besides pi, we represent
+paragraph i based on our linguistic feature set and
+transform it into a high-level feature vector lip via
+multilayer perceptron (MLP). So ui in Equation 5
+is updated to:
+ui = tanh(Wapi + Ualip + ba)
+(8)</p>
+      </sec>
+      <sec id="sec-3-3">
+        <title>3.1.4 Document-Level Classification</title>
+        <p>Similar to the paragraph level, we represent
+document j based on our linguistic feature set and
+transform it into a high-level feature vector ljd via
+MLP. We concatenate dj and ljd together for
+classification. Suppose yj 2 (0; 1) is the label of the
+document j, the prediction y~j and the loss
+function L over N documents are:
+y~j = sigmoid(Wddj + Udljd + bd)
+L =
+1 N</p>
+        <p>X yj log y~j + (1
+N j
+yj ) log(1
+y~j )</p>
+        <p>(9)
+(10)
+3.2</p>
+      </sec>
+      <sec id="sec-3-4">
+        <title>Linguistic Features</title>
+        <p>Linguistic features have been successfully applied
+to expose differences between deceptive and
+genuine content, so we subsume most of the features
+in previous works. The idea of explaining
+fictitious content is extended here to reveal how
+satirical news differs from true news. We divide our
+linguistic features into four families and compute
+them separately for paragraph and document.</p>
+        <p>
+          Psycholinguistic Features: Psychological
+differences are useful for our problem, because
+professional journalists tend to express opinion
+conservatively to avoid unnecessary arguments. On
+the contrary, satirical news includes aggressive
+language for the entertainment purpose. We
+additionally observe true news favors clarity and
+accuracy while satirical news is related to emotional
+cognition. To capture the above observations,
+we employ Linguistic Inquiry and Word Count
+(LIWC)
+          <xref ref-type="bibr" rid="ref36">(Pennebaker et al., 2007)</xref>
+          as our
+psycholinguistic dictionary. Each category of LIWC
+is one independent feature and valued by its
+frequency3.
+        </p>
+      </sec>
+      <sec id="sec-3-5">
+        <title>Writing Stylistic Features: The relative distri</title>
+        <p>
+          bution of part-of-speech (POS) tags reflects
+informative vs. imaginative writing, which contributes
+to detecting deceptions
+          <xref ref-type="bibr" rid="ref25 ref26 ref32 ref33">(Li et al., 2014a;
+Mukherjee et al., 2013a)</xref>
+          . We argue that the stories
+covered by satirical news are based on imagination.
+In addition, POS tags are hints of the underlying
+3Total counts divided by total words.
+#Train
+101,268
+9,538
+#Validation
+33,756
+3,103
+humor
+          <xref ref-type="bibr" rid="ref42">(Reyes et al., 2012)</xref>
+          , which is common in
+satirical news. So we utilize POS tags
+          <xref ref-type="bibr" rid="ref46">(Toutanova
+et al., 2003)</xref>
+          to apprehend satire. Each tag is
+regarded as one independent feature and valued by
+its frequency.
+        </p>
+        <p>
+          Readability Features: We consider
+readability of genuine news would differ from satirical
+news because the former is written by professional
+journalists and tend to be clearer and more
+accurate, while satirical news packs numerous clauses
+to enrich the made-up story as introduced by
+Rubin et al. (2016). Different from their work, we
+use readability metrics, including Flesch
+Reading Ease
+          <xref ref-type="bibr" rid="ref23">(Kincaid et al., 1975)</xref>
+          , Gunning Fog
+Index
+          <xref ref-type="bibr" rid="ref18">(Gunning, 1952)</xref>
+          , Automated Readability
+Index
+          <xref ref-type="bibr" rid="ref45">(Senter and Smith, 1967)</xref>
+          , ColemanLiau
+Index
+          <xref ref-type="bibr" rid="ref11">(Coleman and Liau, 1975)</xref>
+          , and syllable count
+per word, as features.
+        </p>
+        <p>Structural Features: To further reflect the
+structure of news articles, we examine the
+following features: word count, log word count, number
+of punctuations, number of digits, number of
+capital letters, and number of sentences.
+4</p>
+      </sec>
+    </sec>
+    <sec id="sec-4">
+      <title>Experiment and Evaluation</title>
+      <p>We report satirical news detection results and
+show high weighted word features. Then, we
+provide a thorough analysis between paragraph-level
+and document-level features. Finally, we visualize
+an example of satirical news article to demonstrate
+the effectiveness of our work.
+4.1</p>
+      <sec id="sec-4-1">
+        <title>Dataset</title>
+        <p>The satirical news is collected from 14 websites
+that explicitly declare they are offering satire, so
+the correct label can be guaranteed. We also
+notice websites that mix true news, fake news, and
+satirical news. We exclude these websites in this
+work because it requires experts to annotate the
+news articles.</p>
+        <p>
+          We maintain each satire source in only one of
+the train/validation/test sets4 as the cross-domain
+4Train: Onion, the Spoof. Test: SatireWorld,
+Beaverton, Ossurworld. Validation: DailyCurrent, DailyReport,
+EnduringVision, Gomerblog, NationalReport, SatireTribune,
+SatireWire, Syruptrap, and UnconfirmedSource.
+setting in
+          <xref ref-type="bibr" rid="ref25 ref26">(Li et al., 2014a)</xref>
+          . Otherwise, the
+problem may become writing pattern recognition or
+news site classification. We also combined
+different sources together5 as a similar setting of
+leveraging multiple domains
+          <xref ref-type="bibr" rid="ref49 ref50">(Yang et al., 2016a)</xref>
+          .
+The true news is collected from major news
+outlets6 and Google News using FLORIN
+          <xref ref-type="bibr" rid="ref29">(Liu et al.,
+2015)</xref>
+          . The satirical news in the corpus is
+significantly less than true news, reflecting an
+impressionistic view of the reality. We omit headline,
+creation time, and author information so this work
+concentrates on the satire in the article body. We
+realize the corpus may contain different degree of
+satire. Without the annotation, we only consider
+binary classification in this work and leave the
+degree estimation for the future. The split and the
+description of the dataset can be found in Table 3.
+        </p>
+      </sec>
+      <sec id="sec-4-2">
+        <title>4.2 Implementation Detail</title>
+        <p>For SVM, we use the sklearn implementation7.
+We find that using linear kernel and setting
+?class weight? to ?balanced? mostly boost the
+result. We search soft-margin penalty ?C? and find
+high results occur in range [10 1; 10 4]. We use
+the validation set to tune the model so
+selecting hyper-parameters is consistent with neural
+network based model.</p>
+        <p>
+          For neural network based models, we use the
+Theano package
+          <xref ref-type="bibr" rid="ref4">(Bastien et al., 2012)</xref>
+          for
+implementation. The lengths of words, paragraphs,
+and documents are fixed at 24, 128, and 16 with
+necessary padding or truncating. Stochastic
+Gradient Descent is used with initial learning rate
+of 0.3 and decay rate of 0.9. The training is
+early stopped if the F1 drops 5 times
+continuously. Word embeddings are initialized with
+100dimension Glove embeddings
+          <xref ref-type="bibr" rid="ref37">(Pennington et al.,
+2014)</xref>
+          . Character embeddings are randomly
+initialized with 30 dimensions. Specifically for the
+proposed model, the following hyper-parameters
+are estimated based on the validation set and used
+5The combination is chosen to ensure enough training
+examples and balanced validation/test sets.
+        </p>
+        <p>6CNN, DailyMail, WashingtonPost, NYTimes,
+TheGuardian, and Fox.</p>
+        <p>7sklearn.svm.SVC
+SVM word n-grams
+SVM word n-grams + LF
+SVM word + char n-grams
+SVM word + char n-grams + LF
+SVM Rubin et al. (2016)
+SVM Rubin et al. (2016) + char tf-idf + LF
+Bi-GRU
+SVM Doc2Vec Le and Mikolov (2014)
+HAN Yang et al. (2016b)
+4LHN
+4LHNP
+4LHND
+4LHNPD
+in the final test set. The dropout is applied with
+probability of 0.5. The size of the hidden states is
+set at 60. We use 30 filters with window size of 3
+for convolution.
+4.3</p>
+      </sec>
+      <sec id="sec-4-3">
+        <title>Performance of Satirical News Detection</title>
+        <p>We report accuracy, precision, recall, and F1 on
+the validation set and the test set. All metrics
+take satirical news as the positive class. Both
+paragraph-level and document-level linguistic
+features are scaled to have zero mean and unit
+variance, respectively. The compared methods
+include:</p>
+        <p>SVM word n-grams: Unigram and bigrams of
+the words as the baseline. We report 1,2-grams
+because it performs better than other n-grams.</p>
+      </sec>
+      <sec id="sec-4-4">
+        <title>SVM word n-grams + LF: 1,2-word grams</title>
+        <p>
+          plus linguistic features. We omit comparison with
+similar work
+          <xref ref-type="bibr" rid="ref35">(Ott et al., 2011)</xref>
+          as their features are
+subsumed in ours.
+        </p>
+      </sec>
+      <sec id="sec-4-5">
+        <title>SVM word + char n-grams: 1,2-word grams</title>
+        <p>plus bigrams and trigrams of the characters.</p>
+      </sec>
+      <sec id="sec-4-6">
+        <title>SVM word + char n-grams + LF: All the pro</title>
+        <p>posed features are considered.</p>
+      </sec>
+      <sec id="sec-4-7">
+        <title>SVM Rubin et al. (2016): Unigram and bi</title>
+        <p>
+          grams tf-idf with satirical features as proposed
+in
+          <xref ref-type="bibr" rid="ref44">(Rubin et al., 2016)</xref>
+          . We compare with
+          <xref ref-type="bibr" rid="ref44">(Rubin et al., 2016)</xref>
+          rather than
+          <xref ref-type="bibr" rid="ref31 ref5">(Burfoot and Baldwin,
+2009)</xref>
+          as the former claims a better result.
+        </p>
+      </sec>
+      <sec id="sec-4-8">
+        <title>SVM Rubin et al. (2016) + char tf-idf + LF:</title>
+        <p>Include all possible features.</p>
+        <p>Bi-GRU: Bi-GRU for document classification.
+The document representation is the average of the
+hidden state at every time-step.</p>
+        <p>
+          SVM Doc2Vec: Unsupervised method learning
+distributed representation for documents
+          <xref ref-type="bibr" rid="ref2 ref24 ref25 ref37 ref38">(Le and
+Mikolov, 2014)</xref>
+          . The implementation is based on
+Gensim
+          <xref ref-type="bibr" rid="ref41">(R? ehu? r?ek and Sojka, 2010)</xref>
+          .
+        </p>
+        <p>
+          HAN: Hierarchical Attention Network
+          <xref ref-type="bibr" rid="ref49 ref50">(Yang
+et al., 2016b)</xref>
+          for document classification with both
+word-level and sentence-level attention.
+        </p>
+        <p>4LHN: 4-Level Hierarchical Network without
+any linguistic features.</p>
+        <p>4LHNP: 4-Level Hierarchical Network with
+Paragraph-level linguistic features.</p>
+        <p>4LHND: 4-Level Hierarchical Network with
+Document-level linguistic features.</p>
+        <p>4LHNPD: 4-Level Hierarchical Network with
+both Paragraph-level and Document-level
+linguistic features.</p>
+        <p>
+          In Table 4, the performances on the test set
+are generally better than on the validation set due
+to the cross-domain setting. We also explored
+word-level attention
+          <xref ref-type="bibr" rid="ref49 ref50">(Yang et al., 2016b)</xref>
+          , but it
+performed 2% worse than 4LHN. The result of
+Doc2Vec is limited. We suspect the reason could
+be the high imbalanced dataset, as an
+unsupervised learning method for document
+representation heavily relies on the distribution of the
+document.
+4.4
+        </p>
+      </sec>
+      <sec id="sec-4-9">
+        <title>Word Level Analysis</title>
+        <p>True
+: day
+video said the
+but the twitter
+in statement told the
+com pictured</p>
+        <p>Satire
+''
+sources
+continued
+added
+washington dc
+stated
+press
+reporter
+resident
+said that
+We report high weighted word-grams in
+Table 5 based on the SVM model as incorporating
+word-level attention in our neural hierarchy model
+reduces the detection performance. According
+to Table 5, we conclude satirical news mimics
+true news by using news related words, such as
+?stated? and ?reporter?. However, these words
+may be over used so they can be detected. True
+news may use other evidence to support the
+credibility, which explains ?twitter?, ?com?, ?video?,
+and ?pictured?. High weight of ? : ? indicates
+that true news uses colon to list items for clarity.
+High weight of ? '' ? indicates that satirical news
+involves more conversation, which is consistent
+with our observation. The final interesting note is
+satirical news favors ?washington dc?. We suspect
+that satirical news mostly covers politic topics, or
+satire writers do not spend efforts on changing
+locations.
+4.5</p>
+      </sec>
+      <sec id="sec-4-10">
+        <title>Analysis of Weighted Linguistic Features</title>
+        <p>We use 4LHNPD to compare paragraph-level and
+document-level features, as 4LHNPD leverages
+the two-level features into the same framework
+and yields the best result.</p>
+        <p>Because all linguistic features are leveraged into
+MLP with non-linear functions, it is hard to check
+which feature indicates satire. Alternatively, we
+define the importance of linguistic features by
+summing the absolute value of the weights if
+directly connected to the feature. For example,
+the importance I of feature k is given by Ik =
+M1 PmM=0 jwk;mj, where w 2 RK M is the
+directly connected weight, K is the number of
+features, and M is the dimension of the output. This
+metric gives a general idea about how much does
+a feature contribute to the decision making.</p>
+        <p>We first report the scaled importance of the four
+linguistic feature sets by averaging the importance
+of individual linguistic features. Then we report
+individual important features within each set.</p>
+      </sec>
+      <sec id="sec-4-11">
+        <title>4.5.1 Comparing the Four Feature Sets</title>
+        <p>According to Figure 2, the importance of
+paragraph-level features is greater than
+documentlevel features except for the readability feature
+set. It is reasonable to use readability at the
+document level because readability features evaluate
+the understandability of a given text, which
+depends on the content and the presentation. The
+structural feature set is highly weighted for
+selecting attended paragraph, which inspires us to focus
+on individual features inside the structural feature
+set.</p>
+      </sec>
+      <sec id="sec-4-12">
+        <title>4.5.2 Comparing Individual Features</title>
+        <p>Within each set, we rank features based on the
+importance score and report their mean and standard
+deviation before being scaled in Table 6. At
+paragraph level, we use top three attended paragraphs
+for calculating. The respective p-values of all
+features in the table are less than 0.01 based on the
+t-test, indicating satirical news is statistically
+significantly different from true news.</p>
+        <p>
+          Comparing Table 6 and Table 3, we find that
+the word count, capital letters, and punctuations
+in true news are larger than in satirical news at
+the document level, while at paragraph level these
+features in true news are less than in satirical
+news. This indicates satire paragraph could be
+more complex locally. It also could be referred
+as ?sentence complexity?, that ?satirical articles
+tend to pack a great number of clauses into a
+sentence for comedic effect?
+          <xref ref-type="bibr" rid="ref44">(Rubin et al., 2016)</xref>
+          .
+Accordingly, we hypothesize top complex
+paragraphs could represent the entire satire document
+for classification, which we leave for future
+examination.
+        </p>
+        <p>
+          In Table 6, psycholinguistic feature ?Humans?
+is more related to emotional writing than
+control writing
+          <xref ref-type="bibr" rid="ref36">(Pennebaker et al., 2007)</xref>
+          , which
+indicates satirical news is emotional and
+unprofessional compared to true news. The same reason
+also applies to ?Social? and ?Leisure?, where the
+former implies emotional and the latter implies
+control writing. The ?Past? and ?VBN? both have
+higher frequencies in true news, which can be
+explained by the fact that true news covers what
+happened. A similar reason that true news reports
+what happened to others explains a low ?Self? and
+a high ?VBZ? in true news.
+        </p>
+        <p>
+          For writing stylistic features, it is suggested that
+informative writing has more nouns, adjectives,
+prepositions and coordinating conjunctions, while
+imaginative writing has more verbs, adverbs,
+pronouns, and pre-determiners
+          <xref ref-type="bibr" rid="ref40">(Rayson et al., 2001)</xref>
+          .
+This explains higher frequencies of ?RB? and
+?PRP? in satirical news, and higher frequency of
+?NN? and ?CC? in true news. One exception is
+?JJ?, adjectives, which receives the highest weight
+in this feature set and indicates a higher frequency
+in satirical news. We suspect adjective could also
+be related to emotional writing, but more
+experiments are required.
+        </p>
+        <p>
+          Readability suggests satirical news is easier to
+be understood. Considering satirical news is also
+deceptive (as the story is not true), this is
+consistent with works
+          <xref ref-type="bibr" rid="ref1 ref16">(Frank et al., 2008; Afroz et al.,
+2012)</xref>
+          showing deceptive writings are more easily
+comprehended than genuine writings. Finally, true
+news has more digits and a higher ?CD?(Cardinal
+number) frequency, even at the paragraph level,
+because they tend to be clear and accurate.
+4.6
+        </p>
+      </sec>
+      <sec id="sec-4-13">
+        <title>Visualization of Attended Paragraph</title>
+        <p>To explore the attention, we sample one example
+in the validation set and present it in Figure 3. The
+value at the right represents the scaled attention
+score. The high attended paragraphs are longer
+and have more capital letters as they are referring
+different entities. They have more double quotes,
+as multiple conversations are involved.</p>
+        <p>Moreover, we subjectively feel the attended
+paragraph with score 0.98 has a sense of humor
+while the paragraph with score 0.86 has a sense of
+sarcasm, which are common in satire. The
+paragraph with score 1.0 presents controversial topics,
+which could be misleading if the reader cannot
+understand the satire. This is what we expect from
+the attention mechanism. Based on the
+visualization, we also feel this work could be generalized
+to detect figurative languages.</p>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>Conclusion</title>
+      <p>In this paper, we proposed a 4-level hierarchical
+network and utilized attention mechanism to
+understand satire at both paragraph level and
+document level. The evaluation suggests readability
+features support the final classification while
+psycholinguistic features, writing stylistic features,
+and structural features are beneficial at the
+paragraph level. In addition, although satirical news is
+shorter than true news at the document level, we
+find satirical news generally contain paragraphs
+which are more complex than true news at the
+paragraph level. The analysis of individual
+features reveals that the writing of satirical news tends
+to be emotional and imaginative.</p>
+      <p>
+        We will investigate efforts to model satire at the
+paragraph level following our conclusion and
+theoretical backgrounds, such as
+        <xref ref-type="bibr" rid="ref13">(Ermida, 2012)</xref>
+        . We
+plan to go beyond the binary classification and
+explore satire degree estimation. We will generalize
+our approach to reveal characteristics of figurative
+language
+        <xref ref-type="bibr" rid="ref22">(Joshi et al., 2016)</xref>
+        , where different
+paragraphs or sentences may reflect different degrees
+of sarcasm, irony, and humor.
+      </p>
+    </sec>
+    <sec id="sec-6">
+      <title>Acknowledgments</title>
+      <p>The authors would like to thank the anonymous
+reviewers for their comments. This work was
+support in part by the U.S. NSF grants 1546480 and
+1527364.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          <string-name>
+            <given-names>Sadia</given-names>
+            <surname>Afroz</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Michael</given-names>
+            <surname>Brennan</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>Rachel</given-names>
+            <surname>Greenstadt</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>Detecting hoaxes, frauds, and deception in writing style online</article-title>
+          .
+          <source>In 2012 IEEE Symposium on Security and Privacy</source>
+          , pages
+          <fpage>461</fpage>
+          -
+          <lpage>475</lpage>
+          . IEEE.
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          <string-name>
+            <given-names>Dzmitry</given-names>
+            <surname>Bahdanau</surname>
+          </string-name>
+          , Kyunghyun Cho, and
+          <string-name>
+            <given-names>Yoshua</given-names>
+            <surname>Bengio</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>Neural machine translation by jointly learning to align and translate</article-title>
+          .
+          <source>arXiv preprint arXiv:1409</source>
+          .
+          <fpage>0473</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          <string-name>
+            <given-names>Francesco</given-names>
+            <surname>Barbieri</surname>
+          </string-name>
+          , Francesco Ronzano, and
+          <string-name>
+            <given-names>Horacio</given-names>
+            <surname>Saggion</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Do we criticise (and laugh) in the same way? automatic detection of multi-lingual satirical news in twitter</article-title>
+          .
+          <source>In IJCAI</source>
+          , pages
+          <fpage>1215</fpage>
+          -
+          <lpage>1221</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          Fre´de´ric Bastien, Pascal Lamblin, Razvan Pascanu, James Bergstra, Ian Goodfellow, Arnaud Bergeron, Nicolas Bouchard, David Warde-Farley, and
+          <string-name>
+            <given-names>Yoshua</given-names>
+            <surname>Bengio</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>Theano: new features and speed improvements</article-title>
+          .
+          <source>arXiv preprint arXiv:1211</source>
+          .
+          <fpage>5590</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          <string-name>
+            <given-names>Clint</given-names>
+            <surname>Burfoot</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Timothy</given-names>
+            <surname>Baldwin</surname>
+          </string-name>
+          .
+          <year>2009</year>
+          .
+          <article-title>Automatic satire detection: Are you having a laugh? In Proceedings of the ACL-IJCNLP 2009 conference short papers</article-title>
+          , pages
+          <fpage>161</fpage>
+          -
+          <lpage>164</lpage>
+          . Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          <string-name>
+            <given-names>Carlos</given-names>
+            <surname>Castillo</surname>
+          </string-name>
+          , Marcelo Mendoza, and
+          <string-name>
+            <given-names>Barbara</given-names>
+            <surname>Poblete</surname>
+          </string-name>
+          .
+          <year>2011</year>
+          .
+          <article-title>Information credibility on twitter</article-title>
+          .
+          <source>In Proceedings of the 20th international conference on World wide web</source>
+          , pages
+          <fpage>675</fpage>
+          -
+          <lpage>684</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          <string-name>
+            <given-names>Danqi</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          , Jason Bolton, and
+          <string-name>
+            <given-names>Christopher D</given-names>
+            <surname>Manning</surname>
+          </string-name>
+          .
+          <year>2016a</year>
+          .
+          <article-title>A thorough examination of the cnn/daily mail reading comprehension task</article-title>
+          .
+          <source>arXiv preprint arXiv:1606</source>
+          .
+          <fpage>02858</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          <string-name>
+            <given-names>Huimin</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          , Maosong Sun, Cunchao Tu,
+          <string-name>
+            <given-names>Yankai</given-names>
+            <surname>Lin</surname>
+          </string-name>
+          , and Zhiyuan Liu. 2016b.
+          <article-title>Neural sentiment classification with user and product attention</article-title>
+          .
+          <source>In Proceedings of EMNLP.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          <string-name>
+            <given-names>Yimin</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Niall J Conroy</surname>
+          </string-name>
+          , and Victoria L Rubin.
+          <year>2015</year>
+          .
+          <article-title>Misleading online content: Recognizing clickbait as false news</article-title>
+          .
+          <source>In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection</source>
+          , pages
+          <fpage>15</fpage>
+          -
+          <lpage>19</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          <string-name>
+            <given-names>Kyunghyun</given-names>
+            <surname>Cho</surname>
+          </string-name>
+          , Bart Van Merrie¨nboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, and
+          <string-name>
+            <given-names>Yoshua</given-names>
+            <surname>Bengio</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>Learning phrase representations using rnn encoder-decoder for statistical machine translation</article-title>
+          .
+          <source>arXiv preprint arXiv:1406</source>
+          .
+          <fpage>1078</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          <string-name>
+            <given-names>Meri</given-names>
+            <surname>Coleman and Ta Lin Liau</surname>
+          </string-name>
+          .
+          <year>1975</year>
+          .
+          <article-title>A computer readability formula designed for machine scoring</article-title>
+          .
+          <source>Journal of Applied Psychology</source>
+          ,
+          <volume>60</volume>
+          (
+          <issue>2</issue>
+          ):
+          <fpage>283</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          <string-name>
+            <given-names>Xin</given-names>
+            <surname>Luna</surname>
+          </string-name>
+          <string-name>
+            <given-names>Dong</given-names>
+            , Evgeniy Gabrilovich, Kevin Murphy, Van Dang,
+            <surname>Wilko Horn</surname>
+          </string-name>
+          , Camillo Lugaresi, Shaohua Sun,
+          <string-name>
+            <given-names>and Wei</given-names>
+            <surname>Zhang</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Knowledge-based trust: Estimating the trustworthiness of web sources</article-title>
+          .
+          <source>Proceedings of the VLDB Endowment</source>
+          ,
+          <volume>8</volume>
+          (
+          <issue>9</issue>
+          ):
+          <fpage>938</fpage>
+          -
+          <lpage>949</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>
+          <string-name>
+            <given-names>Isabel</given-names>
+            <surname>Ermida</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>News satire in the press: Linguistic construction of humour inspoof news articles. Language and humour in the media</article-title>
+          , page
+          <volume>185</volume>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>
+          <string-name>
+            <given-names>Mehrdad</given-names>
+            <surname>Farajtabar</surname>
+          </string-name>
+          , Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil,
+          <string-name>
+            <given-names>Shuang</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Le</given-names>
+            <surname>Song</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>Hongyuan</given-names>
+            <surname>Zha</surname>
+          </string-name>
+          .
+          <year>2017</year>
+          .
+          <article-title>Fake news mitigation via point process based intervention</article-title>
+          .
+          <source>arXiv preprint arXiv:1703</source>
+          .
+          <fpage>07823</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>
+          <string-name>
+            <given-names>Song</given-names>
+            <surname>Feng</surname>
+          </string-name>
+          , Ritwik Banerjee, and
+          <string-name>
+            <given-names>Yejin</given-names>
+            <surname>Choi</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>Syntactic stylometry for deception detection</article-title>
+          .
+          <source>In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Short Papers-Volume</source>
+          <volume>2</volume>
+          , pages
+          <fpage>171</fpage>
+          -
+          <lpage>175</lpage>
+          . Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>
+          <string-name>
+            <surname>Mark G Frank</surname>
+          </string-name>
+          ,
+          <article-title>Melissa A Menasco,</article-title>
+          and
+          <string-name>
+            <surname>Maureen O'Sullivan</surname>
+          </string-name>
+          .
+          <year>2008</year>
+          .
+          <article-title>Human behavior and deception detection</article-title>
+          .
+          <source>Wiley Handbook of Science and Technology for Homeland Security.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>
+          <string-name>
+            <given-names>Liang</given-names>
+            <surname>Ge</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Jing</given-names>
+            <surname>Gao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Xiaoyi</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>and Aidong</given-names>
+            <surname>Zhang</surname>
+          </string-name>
+          .
+          <year>2013</year>
+          .
+          <article-title>Multi-source deep learning for information trustworthiness estimation</article-title>
+          .
+          <source>In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining</source>
+          , pages
+          <fpage>766</fpage>
+          -
+          <lpage>774</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>
+          <string-name>
+            <given-names>Robert</given-names>
+            <surname>Gunning</surname>
+          </string-name>
+          .
+          <year>1952</year>
+          .
+          <article-title>The technique of clear writing</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>
+          <string-name>
+            <given-names>Manish</given-names>
+            <surname>Gupta</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Peixiang</given-names>
+            <surname>Zhao</surname>
+          </string-name>
+          , and Jiawei Han.
+          <year>2012</year>
+          .
+          <article-title>Evaluating event credibility on twitter</article-title>
+          .
+          <source>In SDM</source>
+          , pages
+          <fpage>153</fpage>
+          -
+          <lpage>164</lpage>
+          . SIAM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>
+          <string-name>
+            <given-names>Sepp</given-names>
+            <surname>Hochreiter</surname>
+          </string-name>
+          and Ju¨rgen Schmidhuber.
+          <year>1997</year>
+          .
+          <article-title>Long short-term memory</article-title>
+          .
+          <source>Neural computation</source>
+          ,
+          <volume>9</volume>
+          (
+          <issue>8</issue>
+          ):
+          <fpage>1735</fpage>
+          -
+          <lpage>1780</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>
+          <string-name>
+            <surname>Benjamin D Horne</surname>
+            and
+            <given-names>Sibel</given-names>
+          </string-name>
+          <string-name>
+            <surname>Adali</surname>
+          </string-name>
+          .
+          <year>2017</year>
+          .
+          <article-title>This just in: Fake news packs a lot in title, uses simpler, repetitive content in text body, more similar to satire than real news</article-title>
+          .
+          <source>arXiv preprint arXiv:1703</source>
+          .
+          <fpage>09398</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref22">
+        <mixed-citation>
+          <string-name>
+            <given-names>Aditya</given-names>
+            <surname>Joshi</surname>
+          </string-name>
+          , Pushpak Bhattacharyya, and Mark James Carman.
+          <year>2016</year>
+          .
+          <article-title>Automatic sarcasm detection: A survey</article-title>
+          .
+          <source>arXiv preprint arXiv:1602</source>
+          .
+          <fpage>03426</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref23">
+        <mixed-citation>
+          <string-name>
+            <surname>J Peter Kincaid</surname>
+          </string-name>
+          , Robert P Fishburne Jr, Richard L Rogers, and Brad S Chissom.
+          <year>1975</year>
+          .
+          <article-title>Derivation of new readability formulas (automated readability index, fog count and flesch reading ease formula) for navy enlisted personnel</article-title>
+          .
+          <source>Technical report, DTIC Document.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref24">
+        <mixed-citation>
+          <string-name>
+            <surname>Quoc</surname>
+            <given-names>V</given-names>
+          </string-name>
+          <string-name>
+            <surname>Le</surname>
+            and
+            <given-names>Tomas</given-names>
+          </string-name>
+          <string-name>
+            <surname>Mikolov</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>Distributed representations of sentences and documents</article-title>
+          . In ICML, volume
+          <volume>14</volume>
+          , pages
+          <fpage>1188</fpage>
+          -
+          <lpage>1196</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref25">
+        <mixed-citation>
+          <string-name>
+            <given-names>Jiwei</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Myle</given-names>
+            <surname>Ott</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Claire</given-names>
+            <surname>Cardie</surname>
+          </string-name>
+          , and
+          <string-name>
+            <surname>Eduard H Hovy</surname>
+          </string-name>
+          .
+          <year>2014a</year>
+          .
+          <article-title>Towards a general rule for identifying deceptive opinion spam</article-title>
+          .
+          <source>In ACL (1)</source>
+          , pages
+          <fpage>1566</fpage>
+          -
+          <lpage>1576</lpage>
+          . Citeseer.
+        </mixed-citation>
+      </ref>
+      <ref id="ref26">
+        <mixed-citation>
+          <string-name>
+            <given-names>Qi</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Yaliang</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Jing</given-names>
+            <surname>Gao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Bo</given-names>
+            <surname>Zhao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Wei</given-names>
+            <surname>Fan</surname>
+          </string-name>
+          , and Jiawei Han.
+          <year>2014b</year>
+          .
+          <article-title>Resolving conflicts in heterogeneous data by truth discovery and source reliability estimation</article-title>
+          .
+          <source>In Proceedings of the 2014 ACM SIGMOD international conference on Management of data</source>
+          , pages
+          <fpage>1187</fpage>
+          -
+          <lpage>1198</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref27">
+        <mixed-citation>
+          <string-name>
+            <given-names>Xian</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Weiyi</given-names>
+            <surname>Meng</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>Yu</given-names>
+            <surname>Clement</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>Verification of fact statements with multiple truthful alternatives</article-title>
+          .
+          <source>In 12th International Conference on Web Information Systems and Technologies.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref28">
+        <mixed-citation>
+          <string-name>
+            <given-names>Yaliang</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Qi</given-names>
+            <surname>Li</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Jing</given-names>
+            <surname>Gao</surname>
+          </string-name>
+          , Lu Su,
+          <string-name>
+            <given-names>Bo</given-names>
+            <surname>Zhao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Wei</given-names>
+            <surname>Fan</surname>
+          </string-name>
+          , and Jiawei Han.
+          <year>2015</year>
+          .
+          <article-title>On the discovery of evolving truth</article-title>
+          .
+          <source>In Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</source>
+          , pages
+          <fpage>675</fpage>
+          -
+          <lpage>684</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref29">
+        <mixed-citation>
+          <string-name>
+            <given-names>Qingyuan</given-names>
+            <surname>Liu</surname>
+          </string-name>
+          , Eduard C Dragut,
+          <string-name>
+            <surname>Arjun Mukherjee</surname>
+            , and
+            <given-names>Weiyi</given-names>
+          </string-name>
+          <string-name>
+            <surname>Meng</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Florin: a system to support (near) real-time applications on user generated content on daily news</article-title>
+          .
+          <source>Proceedings of the VLDB Endowment</source>
+          ,
+          <volume>8</volume>
+          (
+          <issue>12</issue>
+          ):
+          <fpage>1944</fpage>
+          -
+          <lpage>1947</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref30">
+        <mixed-citation>
+          <string-name>
+            <given-names>Xuezhe</given-names>
+            <surname>Ma</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Eduard</given-names>
+            <surname>Hovy</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>End-to-end sequence labeling via bi-directional lstm-cnns-crf</article-title>
+          .
+          <source>In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</source>
+          , pages
+          <fpage>1064</fpage>
+          -
+          <lpage>1074</lpage>
+          , Berlin, Germany. Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref31">
+        <mixed-citation>
+          <string-name>
+            <given-names>Rada</given-names>
+            <surname>Mihalcea</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Carlo</given-names>
+            <surname>Strapparava</surname>
+          </string-name>
+          .
+          <year>2009</year>
+          .
+          <article-title>The lie detector: Explorations in the automatic recognition of deceptive language</article-title>
+          .
+          <source>In Proceedings of the ACLIJCNLP 2009 Conference Short Papers</source>
+          , pages
+          <fpage>309</fpage>
+          -
+          <lpage>312</lpage>
+          . Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref32">
+        <mixed-citation>
+          <string-name>
+            <given-names>Arjun</given-names>
+            <surname>Mukherjee</surname>
+          </string-name>
+          , Abhinav Kumar, Bing Liu, Junhui Wang, Meichun Hsu, Malu Castellanos, and
+          <string-name>
+            <given-names>Riddhiman</given-names>
+            <surname>Ghosh</surname>
+          </string-name>
+          . 2013a.
+          <article-title>Spotting opinion spammers using behavioral footprints</article-title>
+          .
+          <source>In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining</source>
+          , pages
+          <fpage>632</fpage>
+          -
+          <lpage>640</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref33">
+        <mixed-citation>
+          <string-name>
+            <given-names>Arjun</given-names>
+            <surname>Mukherjee</surname>
+          </string-name>
+          , Vivek Venkataraman, Bing Liu, and
+          <string-name>
+            <surname>Natalie</surname>
+            <given-names>S Glance.</given-names>
+          </string-name>
+          2013b.
+          <article-title>What yelp fake review filter might be doing? In ICWSM</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref34">
+        <mixed-citation>
+          <string-name>
+            <given-names>Subhabrata</given-names>
+            <surname>Mukherjee</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Gerhard</given-names>
+            <surname>Weikum</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Leveraging joint interactions for credibility analysis in news communities</article-title>
+          .
+          <source>In Proceedings of the 24th ACM International on Conference on Information and Knowledge Management</source>
+          , pages
+          <fpage>353</fpage>
+          -
+          <lpage>362</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref35">
+        <mixed-citation>
+          <string-name>
+            <given-names>Myle</given-names>
+            <surname>Ott</surname>
+          </string-name>
+          , Yejin Choi,
+          <string-name>
+            <given-names>Claire</given-names>
+            <surname>Cardie</surname>
+          </string-name>
+          , and
+          <string-name>
+            <surname>Jeffrey T Hancock</surname>
+          </string-name>
+          .
+          <year>2011</year>
+          .
+          <article-title>Finding deceptive opinion spam by any stretch of the imagination</article-title>
+          .
+          <source>In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies-Volume</source>
+          <volume>1</volume>
+          , pages
+          <fpage>309</fpage>
+          -
+          <lpage>319</lpage>
+          . Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref36">
+        <mixed-citation>
+          <string-name>
+            <surname>James W Pennebaker</surname>
+          </string-name>
+          ,
+          <article-title>Cindy</article-title>
+          K Chung, Molly Ireland, Amy Gonzales, and
+          <string-name>
+            <surname>Roger</surname>
+          </string-name>
+          J Booth.
+          <year>2007</year>
+          .
+          <article-title>The development and psychometric properties of liwc2007</article-title>
+          . austin, tx, liwc. net.
+        </mixed-citation>
+      </ref>
+      <ref id="ref37">
+        <mixed-citation>
+          <string-name>
+            <surname>Jeffrey</surname>
+            <given-names>Pennington</given-names>
+          </string-name>
+          , Richard Socher, and
+          <string-name>
+            <given-names>Christopher D</given-names>
+            <surname>Manning</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>Glove: Global vectors for word representation</article-title>
+          .
+          <source>In EMNLP</source>
+          , volume
+          <volume>14</volume>
+          , pages
+          <fpage>1532</fpage>
+          -
+          <lpage>1543</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref38">
+        <mixed-citation>
+          <article-title>Vero´nica Pe´rez-</article-title>
+          <string-name>
+            <surname>Rosas</surname>
+            and
+            <given-names>Rada</given-names>
+          </string-name>
+          <string-name>
+            <surname>Mihalcea</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>Cross-cultural deception detection</article-title>
+          .
+          <source>In ACL (2)</source>
+          , pages
+          <fpage>440</fpage>
+          -
+          <lpage>445</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref39">
+        <mixed-citation>
+          <string-name>
+            <given-names>Martin</given-names>
+            <surname>Potthast</surname>
+          </string-name>
+          , Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and
+          <string-name>
+            <given-names>Benno</given-names>
+            <surname>Stein</surname>
+          </string-name>
+          .
+          <year>2017</year>
+          .
+          <article-title>A stylometric inquiry into hyperpartisan and fake news</article-title>
+          .
+          <source>arXiv preprint arXiv:1702</source>
+          .
+          <fpage>05638</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref40">
+        <mixed-citation>
+          <string-name>
+            <given-names>Paul</given-names>
+            <surname>Rayson</surname>
+          </string-name>
+          , Andrew Wilson, and
+          <string-name>
+            <given-names>Geoffrey</given-names>
+            <surname>Leech</surname>
+          </string-name>
+          .
+          <year>2001</year>
+          .
+          <article-title>Grammatical word class variation within the british national corpus sampler</article-title>
+          .
+          <source>Language and Computers</source>
+          ,
+          <volume>36</volume>
+          (
+          <issue>1</issue>
+          ):
+          <fpage>295</fpage>
+          -
+          <lpage>306</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref41">
+        <mixed-citation>
+          <article-title>Radim R? ehu?r?ek</article-title>
+          and
+          <string-name>
+            <given-names>Petr</given-names>
+            <surname>Sojka</surname>
+          </string-name>
+          .
+          <year>2010</year>
+          .
+          <article-title>Software Framework for Topic Modelling with Large Corpora</article-title>
+          .
+          <source>In Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks</source>
+          , pages
+          <fpage>45</fpage>
+          -
+          <lpage>50</lpage>
+          , Valletta, Malta. ELRA. http://is.muni.cz/ publication/884893/en.
+        </mixed-citation>
+      </ref>
+      <ref id="ref42">
+        <mixed-citation>
+          <string-name>
+            <given-names>Antonio</given-names>
+            <surname>Reyes</surname>
+          </string-name>
+          , Paolo Rosso, and
+          <string-name>
+            <given-names>Davide</given-names>
+            <surname>Buscaldi</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>From humor recognition to irony detection: The figurative language of social media</article-title>
+          .
+          <source>Data &amp; Knowledge Engineering</source>
+          ,
+          <volume>74</volume>
+          :
+          <fpage>1</fpage>
+          -
+          <lpage>12</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref43">
+        <mixed-citation>
+          <string-name>
+            <given-names>Tim</given-names>
+            <surname>Rockta</surname>
+          </string-name>
+          ¨schel, Edward Grefenstette, Karl Moritz Hermann, Toma´s? Koc?isky`, and
+          <string-name>
+            <given-names>Phil</given-names>
+            <surname>Blunsom</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Reasoning about entailment with neural attention</article-title>
+          .
+          <source>arXiv preprint arXiv:1509</source>
+          .
+          <fpage>06664</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref44">
+        <mixed-citation>
+          <string-name>
+            <given-names>Victoria</given-names>
+            <surname>Rubin</surname>
+          </string-name>
+          , Niall Conroy, Yimin Chen, and
+          <string-name>
+            <given-names>Sarah</given-names>
+            <surname>Cornwell</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>Fake news or truth? using satirical cues to detect potentially misleading news</article-title>
+          .
+          <source>In Proceedings of the Second Workshop on Computational Approaches</source>
+          to Deception Detection, pages
+          <fpage>7</fpage>
+          -
+          <lpage>17</lpage>
+          , San Diego, California. Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref45">
+        <mixed-citation>
+          <source>RJ Senter and Edgar A Smith</source>
+          .
+          <year>1967</year>
+          .
+          <article-title>Automated readability index</article-title>
+          .
+          <source>Technical report, DTIC Document.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref46">
+        <mixed-citation>
+          <string-name>
+            <given-names>Kristina</given-names>
+            <surname>Toutanova</surname>
+          </string-name>
+          , Dan Klein,
+          <string-name>
+            <surname>Christopher D Manning</surname>
+            , and
+            <given-names>Yoram</given-names>
+          </string-name>
+          <string-name>
+            <surname>Singer</surname>
+          </string-name>
+          .
+          <year>2003</year>
+          .
+          <article-title>Feature-rich part-ofspeech tagging with a cyclic dependency network</article-title>
+          .
+          <source>In Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language TechnologyVolume 1</source>
+          , pages
+          <fpage>173</fpage>
+          -
+          <lpage>180</lpage>
+          . Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref47">
+        <mixed-citation>
+          <string-name>
+            <given-names>Mengting</given-names>
+            <surname>Wan</surname>
+          </string-name>
+          , Xiangyu Chen, Lance Kaplan, Jiawei Han,
+          <string-name>
+            <given-names>Jing</given-names>
+            <surname>Gao</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>Bo</given-names>
+            <surname>Zhao</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>From truth discovery to trustworthy opinion discovery: An uncertainty-aware quantitative modeling approach</article-title>
+          .
+          <source>In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</source>
+          , pages
+          <fpage>1885</fpage>
+          -
+          <lpage>1894</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref48">
+        <mixed-citation>
+          <string-name>
+            <given-names>Houping</given-names>
+            <surname>Xiao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Jing</given-names>
+            <surname>Gao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Qi</given-names>
+            <surname>Li</surname>
+          </string-name>
+          , Fenglong Ma, Lu Su, Yunlong Feng,
+          <string-name>
+            <given-names>and Aidong</given-names>
+            <surname>Zhang</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>Towards confidence in the truth: A bootstrapping based truth discovery approach</article-title>
+          .
+          <source>In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</source>
+          , pages
+          <fpage>1935</fpage>
+          -
+          <lpage>1944</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref49">
+        <mixed-citation>
+          <string-name>
+            <given-names>Fan</given-names>
+            <surname>Yang</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Arjun</given-names>
+            <surname>Mukherjee</surname>
+          </string-name>
+          , and Yifan Zhang. 2016a.
+          <article-title>Leveraging multiple domains for sentiment classification</article-title>
+          .
+          <source>In Proceedings of COLING</source>
+          <year>2016</year>
+          ,
+          <source>the 26th International Conference on Computational Linguistics: Technical Papers</source>
+          , pages
+          <fpage>2978</fpage>
+          -
+          <lpage>2988</lpage>
+          , Osaka, Japan.
+          <source>The COLING 2016 Organizing Committee.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref50">
+        <mixed-citation>
+          <string-name>
+            <given-names>Zichao</given-names>
+            <surname>Yang</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Diyi</given-names>
+            <surname>Yang</surname>
+          </string-name>
+          , Chris Dyer, Xiaodong He,
+          <string-name>
+            <surname>Alex Smola</surname>
+            , and
+            <given-names>Eduard</given-names>
+          </string-name>
+          <string-name>
+            <surname>Hovy</surname>
+          </string-name>
+          . 2016b.
+          <article-title>Hierarchical attention networks for document classification</article-title>
+          .
+          <source>In Proceedings of the 2016 Conference of the North Xiaoxin Yin</source>
+          , Jiawei Han, and
+          <string-name>
+            <given-names>S Yu</given-names>
+            <surname>Philip</surname>
+          </string-name>
+          .
+          <year>2008</year>
+          .
+          <article-title>Truth discovery with multiple conflicting information providers on the web</article-title>
+          .
+          <source>IEEE Transactions on Knowledge and Data Engineering</source>
+          ,
+          <volume>20</volume>
+          (
+          <issue>6</issue>
+          ):
+          <fpage>796</fpage>
+          -
+          <lpage>808</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref51">
+        <mixed-citation>
+          <string-name>
+            <given-names>Zhe</given-names>
+            <surname>Zhao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Paul</given-names>
+            <surname>Resnick</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>Qiaozhu</given-names>
+            <surname>Mei</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Enquiring minds: Early detection of rumors in social media from enquiry posts</article-title>
+          .
+          <source>In Proceedings of the 24th International Conference on World Wide Web</source>
+          , pages
+          <fpage>1395</fpage>
+          -
+          <lpage>1405</lpage>
+          . ACM.
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+

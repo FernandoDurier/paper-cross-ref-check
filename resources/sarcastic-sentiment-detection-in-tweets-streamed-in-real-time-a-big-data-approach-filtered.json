@@ -1,0 +1,1167 @@
+{
+    "abstract": {
+        "p": "journal homepage: www.elsevier.com/locate/dcan"
+    },
+    "affiliation": {
+        "#text": ",\n          \n          ,",
+        "@id": "aff0",
+        "addr-line": "Rourkela 769008",
+        "country": {
+            "#text": "India",
+            "@country": "IN"
+        },
+        "institution": "Department of Computer Science & Engineering, National Institute of Technology",
+        "label": "0"
+    },
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "email": "sbharti1984@gmail.com",
+            "string-name": "S.K. Bharti n",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "bakhtyarvachha@gmail.com",
+            "string-name": "B. Vachha",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "R.K. Pradhan",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "ksathyababu@nitrkl.ac.in",
+            "string-name": "K.S. Babu",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "skjena@nitrkl.ac.in",
+            "string-name": "S.K. Jena",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        }
+    ],
+    "journal": "Digital Communications and Networks",
+    "keywords": [
+        "Big data",
+        "Flume",
+        "Hadoop",
+        "Hive",
+        "MapReduce",
+        "Sarcasm",
+        "Sentiment",
+        "Tweets"
+    ],
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/sarcastic-sentiment-detection-in-tweets-streamed-in-real-time-a-big-data-approach.json",
+    "pub_date": {
+        "year": "2016"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          ,\n          \n          \n          . URL ?http://www. smartinsights.",
+                "article-title": "com/social-media-marketing/social-media-strategy/new-glo bal-social-media-research/?.",
+                "source": "Global Social Media Research Summary",
+                "string-name": {
+                    "given-names": "D.",
+                    "surname": "Chaffey"
+                },
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2]\n          \n          ,\n          \n          , I. Saleh,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Social-network-sourced big data analytics",
+                "fpage": "62",
+                "issue": "5",
+                "lpage": "69",
+                "source": "Internet Comput",
+                "string-name": [
+                    {
+                        "given-names": "W.",
+                        "surname": "Tan"
+                    },
+                    {
+                        "given-names": "M.B.",
+                        "surname": "Blake"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Dustdar"
+                    }
+                ],
+                "volume": "17",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          ,\n          \n          ,\n          \n          , Pacific Northwest National Laboratory,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "State-of-the-Art of Social Media Analytics Research",
+                "fpage": "1",
+                "lpage": "9",
+                "string-name": [
+                    {
+                        "given-names": "Z.N.",
+                        "surname": "Gastelum"
+                    },
+                    {
+                        "surname": "K.M. Whattam"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .",
+                "article-title": "Understanding Big Data: Analytics for Enterprise Class Hadoop and Streaming Data",
+                "string-name": [
+                    {
+                        "given-names": "P.",
+                        "surname": "Zikopoulos"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Eaton"
+                    },
+                    {
+                        "given-names": "Media",
+                        "surname": "McGraw-Hill Osborne"
+                    }
+                ],
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          ,\n          \n          ,\n          \n          , L. De Silva,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Sarcasm as contrast between a positive sentiment and negative situation",
+                "fpage": "704",
+                "lpage": "714",
+                "source": "in: Proceedings of the Conference on Empirical Methods in Natural Language Processing",
+                "string-name": [
+                    {
+                        "given-names": "E.",
+                        "surname": "Riloff"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Qadir"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Surve"
+                    },
+                    {
+                        "given-names": "N.",
+                        "surname": "Gilbert"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Huang"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          . URL ?http://hadoop.apache.org/?.",
+                "string-name": {
+                    "surname": "Hadoop"
+                }
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          , I. Foster,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , IEEE,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "A directory service for configuring high-performance distributed computations",
+                "fpage": "365",
+                "lpage": "375",
+                "source": "in: Proceedings on High Performance Distributed Computing",
+                "string-name": [
+                    {
+                        "given-names": "S.",
+                        "surname": "Fitzgerald"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Kesselman"
+                    },
+                    {
+                        "given-names": "G.",
+                        "surname": "Von Laszewski"
+                    },
+                    {
+                        "given-names": "W.",
+                        "surname": "Smith"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Tuecke"
+                    }
+                ],
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          ,\n          \n          ,\n          \n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "fpage": "107",
+                "issue": "1",
+                "lpage": "113",
+                "source": "Mapreduce: simplified data processing on large clusters, Commun. ACM",
+                "string-name": [
+                    {
+                        "given-names": "J.",
+                        "surname": "Dean"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Ghemawat"
+                    }
+                ],
+                "volume": "51",
+                "year": "2008"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          , Apache Flume:\n          \n          ,\n          \n          ,\n          \n          .",
+                "article-title": "Distributed Log Collection for Hadoop",
+                "source": "Packt Publishing Ltd",
+                "string-name": {
+                    "given-names": "S.",
+                    "surname": "Hoffman"
+                },
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          . URL ?http://flume.apache.org/?.",
+                "string-name": {
+                    "surname": "Flume"
+                }
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , IEEE,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "The Hadoop distributed file system",
+                "fpage": "1",
+                "lpage": "10",
+                "source": "in: Proceedings of 26th Symposium on Mass Storage Systems and Technologies (MSST)",
+                "string-name": [
+                    {
+                        "given-names": "K.",
+                        "surname": "Shvachko"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Kuang"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Radia"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Chansler"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "[12]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , H. Liu,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Hive: a warehousing solution over a map-reduce framework",
+                "fpage": "1626",
+                "issue": "2",
+                "lpage": "1629",
+                "source": "Proc. VLDB Endow",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Thusoo"
+                    },
+                    {
+                        "given-names": "J.S.",
+                        "surname": "Sarma"
+                    },
+                    {
+                        "given-names": "N.",
+                        "surname": "Jain"
+                    },
+                    {
+                        "given-names": "Z.",
+                        "surname": "Shao"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Chakka"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Anthony"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Wyckoff"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Murthy"
+                    }
+                ],
+                "volume": "2",
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "[13]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "A second-order hidden Markov model for part-ofspeech tagging",
+                "fpage": "175",
+                "lpage": "182",
+                "source": "in: Proceedings of the 37th Annual Meeting on Computational Linguistics",
+                "string-name": [
+                    {
+                        "given-names": "S.M.",
+                        "surname": "Thede"
+                    },
+                    {
+                        "given-names": "M.P.",
+                        "surname": "Harper"
+                    },
+                    {
+                        "surname": "ACL"
+                    }
+                ],
+                "year": "1999"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Accurate unlexicalized parsing",
+                "fpage": "423",
+                "lpage": "430",
+                "source": "in: Proceedings of the 41st Annual Meeting on Association for Computational Linguistics",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Klein"
+                    },
+                    {
+                        "given-names": "C.D.",
+                        "surname": "Manning"
+                    },
+                    {
+                        "surname": "ACL"
+                    }
+                ],
+                "year": "2003"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "[15]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "A bio-text mining system based on natural language processing",
+                "fpage": "205",
+                "issue": "4",
+                "lpage": "213",
+                "source": "J. KISS: Comput. Pract",
+                "string-name": [
+                    {
+                        "given-names": "K.",
+                        "surname": "Park"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Hwang"
+                    }
+                ],
+                "volume": "17",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "[16]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Discovering evolutionary theme patterns from text: an exploration of temporal text mining",
+                "fpage": "198",
+                "lpage": "207",
+                "source": "in: Proceedings of the Eleventh ACM SIGKDD International Conference on Knowledge Discovery in Data Mining, ACM",
+                "string-name": [
+                    {
+                        "given-names": "Q.",
+                        "surname": "Mei"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Zhai"
+                    }
+                ],
+                "year": "2005"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "[17]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Sentiment analysis and opinion mining",
+                "fpage": "1",
+                "issue": "1",
+                "lpage": "167",
+                "source": "Synth. Lect. Hum. Lang. Technol",
+                "string-name": {
+                    "given-names": "B.",
+                    "surname": "Liu"
+                },
+                "volume": "5",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "[18]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Identifying sarcasm in twitter: a closer look",
+                "fpage": "581",
+                "lpage": "586",
+                "source": "in: Proceedings of the 49th Annual Meeting on Human Language Technologies",
+                "string-name": [
+                    {
+                        "given-names": "R.",
+                        "surname": "Gonz\u00e1lez-Ib\u00e1nez"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Muresan"
+                    },
+                    {
+                        "given-names": "N.",
+                        "surname": "Wacholder"
+                    },
+                    {
+                        "surname": "ACL"
+                    }
+                ],
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "[19]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , ACM,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Parsing-based sarcasm sentiment recognition in twitter data",
+                "fpage": "1373",
+                "lpage": "1380",
+                "source": "in: Proceedings of the 2015 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)",
+                "string-name": [
+                    {
+                        "given-names": "S.K.",
+                        "surname": "Bharti"
+                    },
+                    {
+                        "given-names": "K.S.",
+                        "surname": "Babu"
+                    },
+                    {
+                        "given-names": "S.K.",
+                        "surname": "Jena"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "[20]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , IEEE,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Indonesian social media sentiment analysis with sarcasm detection",
+                "fpage": "195",
+                "lpage": "198",
+                "source": "in: International Conference on Advanced Computer Science and Information Systems (ICACSIS)",
+                "string-name": [
+                    {
+                        "given-names": "E.",
+                        "surname": "Lunando"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Purwarianti"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "[21]\n          \n          ,\n          \n          ,\n          \n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Mohd, Recognition of sarcasm in tweets based on concept level sentiment analysis and supervised learning approaches",
+                "fpage": "404",
+                "lpage": "413",
+                "source": "in: 28th Pacific Asia Conference on Language, Information and Computation",
+                "string-name": [
+                    {
+                        "given-names": "P.",
+                        "surname": "Tungthamthiti"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Kiyoaki"
+                    },
+                    {
+                        "surname": "M."
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": "[22]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          \n          )\n          \n          -\n          \n          .",
+                "article-title": [
+                    "Mapreduce functions to analyze sentiment information from social big data",
+                    "1) ("
+                ],
+                "fpage": "1",
+                "lpage": "11",
+                "source": "Int. J. Distrib. Sens. Netw",
+                "string-name": [
+                    {
+                        "given-names": "I.",
+                        "surname": "Ha"
+                    },
+                    {
+                        "given-names": "B.",
+                        "surname": "Back"
+                    },
+                    {
+                        "given-names": "B.",
+                        "surname": "Ahn"
+                    }
+                ],
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": "[23]\n          \n          . URL ?http://apiwiki.twitter.com/?,\n          \n          .",
+                "article-title": "Twitter streaming api",
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": "[24]\n          \n          ,\n          \n          . URL ?http://apiwiki.twitter.com/StreamingAPI-Documentation/?,\n          \n          .",
+                "article-title": "Twitter streaming api",
+                "string-name": {
+                    "given-names": "J.",
+                    "surname": "Kalucki"
+                },
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": "[25]\n          \n          , E. Frank,\n          \n          ,\n          \n          , Springer,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Sentiment knowledge discovery in twitter streaming data",
+                "fpage": "1",
+                "lpage": "15",
+                "source": "in: 13th International Conference on Discovery Science",
+                "string-name": {
+                    "given-names": "A.",
+                    "surname": "Bifet"
+                },
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": "[26]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .",
+                "article-title": "Big questions for social media big data: representativeness, validity and other methodological pitfalls",
+                "fpage": "7400",
+                "source": "arXiv preprint arXiv:1403",
+                "string-name": {
+                    "given-names": "Z.",
+                    "surname": "Tufekci"
+                }
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": "[27]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,",
+                "source": "Sentiment Analysis on Twitter Data Using Hadoop.",
+                "string-name": [
+                    {
+                        "given-names": "A.P.",
+                        "surname": "Shirahatti"
+                    },
+                    {
+                        "given-names": "N.",
+                        "surname": "Patil"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Kubasad"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Mujawar"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": "[28]\n          \n          ,\n          \n          , BMC Bioinform.\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "An overview of the Hadoop/mapreduce/hbase framework and its current applications in bioinformatics",
+                "fpage": "1",
+                "issue": "Suppl 12",
+                "lpage": "6",
+                "string-name": {
+                    "given-names": "R.C.",
+                    "surname": "Taylor"
+                },
+                "volume": "11",
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": "[29]\n          \n          ,\n          \n          , Cloudera Impala:\n          \n          . URL ?http://blog?. cloudera. com/blog/2012/10/cloudera",
+                "article-title": [
+                    "Real Time Queries in Apache Hadoop, for Real",
+                    "-impala-real-time-queries-in-apache-hadoop-for-real."
+                ],
+                "string-name": [
+                    {
+                        "given-names": "M.",
+                        "surname": "Kornacker"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Erickson"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": "[30]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , ACL,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Semi-supervised recognition of sarcastic sentences in twitter and amazon",
+                "fpage": "107",
+                "lpage": "116",
+                "source": "in: Proceedings of the Fourteenth Conference on Computational Natural Language Learning",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": "[31]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Irony and sarcasm: Corpus generation and analysis using crowdsourcing",
+                "fpage": "392",
+                "lpage": "398",
+                "source": "in: Proceedings of Language Resources and Evaluation Conference",
+                "string-name": {
+                    "given-names": "E.",
+                    "surname": "Filatova"
+                },
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": "[32]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Two cues for verbal irony: hyperbole and the ironic tone of voice",
+                "fpage": "21",
+                "issue": "1",
+                "lpage": "31",
+                "source": "Metaphor Symb",
+                "string-name": [
+                    {
+                        "given-names": "R.J.",
+                        "surname": "Kreuz"
+                    },
+                    {
+                        "given-names": "R.M.",
+                        "surname": "Roberts"
+                    }
+                ],
+                "volume": "10",
+                "year": "1995"
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          to Figurative Language,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Lexical influences on the perception of sarcasm",
+                "fpage": "1",
+                "lpage": "4",
+                "source": "in: Proceedings of the Workshop on Computational Approaches",
+                "string-name": [
+                    {
+                        "given-names": "R.J.",
+                        "surname": "Kreuz"
+                    },
+                    {
+                        "given-names": "G.M.",
+                        "surname": "Caucci"
+                    },
+                    {
+                        "surname": "ACL"
+                    }
+                ],
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": "[34]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Icwsm-a great catchy name: Semi-supervised recognition of sarcastic sentences in online product reviews",
+                "fpage": "162",
+                "lpage": "169",
+                "source": "in: Proceedings of International Conference on Weblogs and Social Media",
+                "string-name": [
+                    {
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": "[35]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          , vol.\n          \n          , no.\n          \n          , Lawrence Erlbaum Associates, Mahway,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "fpage": "1",
+                "issue": "1",
+                "lpage": "11",
+                "source": "Linguistic Inquiry and Word Count: Liwc",
+                "string-name": [
+                    {
+                        "given-names": "J.W.",
+                        "surname": "Pennebaker"
+                    },
+                    {
+                        "given-names": "M.E.",
+                        "surname": "Francis"
+                    },
+                    {
+                        "given-names": "R.J.",
+                        "surname": "Booth"
+                    }
+                ],
+                "volume": "71",
+                "year": [
+                    "2001",
+                    "2001"
+                ]
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": "[36]\n          \n          ,\n          \n          , et al.,\n          \n          ,\n          \n          , vol.\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Wordnet affect: an affective extension of wordnet",
+                "fpage": "1083",
+                "issue": "2004",
+                "lpage": "1086",
+                "source": "in: Proceedings of Language Resources and Evaluation Conference",
+                "string-name": [
+                    {
+                        "given-names": "C.",
+                        "surname": "Strapparava"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Valitutti"
+                    }
+                ],
+                "volume": "4"
+            }
+        },
+        {
+            "@id": "ref37",
+            "mixed-citation": {
+                "#text": "[37]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Modelling sarcasm in twitter a novel approach",
+                "fpage": "50",
+                "lpage": "58",
+                "source": "in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                "string-name": [
+                    {
+                        "given-names": "F.",
+                        "surname": "Barbieri"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Saggion"
+                    },
+                    {
+                        "given-names": "F.",
+                        "surname": "Ronzano"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref38",
+            "mixed-citation": {
+                "#text": "[38]\n          \n          ,\n          \n          ,\n          \n          , E. De Oliveira,\n          \n          ...!! it's so easy;-),\n          \n          , ACM,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Clues for detecting irony in user-generated contents: oh",
+                "fpage": "53",
+                "lpage": "56",
+                "source": "in: Proceedings of the 1st International CIKM Workshop on Topic-Sentiment Analysis for Mass Opinion",
+                "string-name": [
+                    {
+                        "given-names": "P.",
+                        "surname": "Carvalho"
+                    },
+                    {
+                        "given-names": "L.",
+                        "surname": "Sarmento"
+                    },
+                    {
+                        "given-names": "M.J.",
+                        "surname": "Silva"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref39",
+            "mixed-citation": {
+                "#text": "[39]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , IEEE,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Polarity detection of sarcastic political tweets",
+                "fpage": "625",
+                "lpage": "628",
+                "source": "in: Proceedings of International Conference on Computing for Sustainable Global Development (INDIACom)",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Tayal"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Yadav"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Gupta"
+                    },
+                    {
+                        "given-names": "B.",
+                        "surname": "Rajput"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Kumari"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref40",
+            "mixed-citation": {
+                "#text": "[40]\n          \n          ,\n          \n          , H. Liu,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Sarcasm detection on twitter: a behavioral modeling approach",
+                "fpage": "97",
+                "lpage": "106",
+                "source": "in: Proceedings of the Eighth ACM International Conference on Web Search and Data Mining, ACM",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Rajadesingan"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Zafarani"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref41",
+            "mixed-citation": {
+                "#text": "[41]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Verbal irony as implicit display of ironic environment: distinguishing ironic utterances from nonirony",
+                "fpage": "1777",
+                "issue": "12",
+                "lpage": "1806",
+                "source": "J. Pragmat",
+                "string-name": {
+                    "given-names": "A.",
+                    "surname": "Utsumi"
+                },
+                "volume": "32",
+                "year": "2000"
+            }
+        },
+        {
+            "@id": "ref42",
+            "mixed-citation": {
+                "#text": "[42]\n          \n          ,\n          \n          , A. van den Bosch,\n          \n          ,\n          \n          to Subjectivity,\n          \n          ,\n          \n          , New Brunswick, NJ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": [
+                    "The perfect solution for detecting sarcasm in tweets# not",
+                    "Sentiment and Social Media Analysis"
+                ],
+                "fpage": "29",
+                "lpage": "37",
+                "source": "in: Proceedings of the 4th Workshop on Computational Approaches",
+                "string-name": [
+                    {
+                        "given-names": "C.",
+                        "surname": "Liebrecht"
+                    },
+                    {
+                        "given-names": "F.",
+                        "surname": "Kunneman"
+                    },
+                    {
+                        "surname": "ACL"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref43",
+            "mixed-citation": {
+                "#text": "[43]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Building a large annotated corpus of English: the Penn treebank",
+                "fpage": "313",
+                "issue": "2",
+                "lpage": "330",
+                "source": "Comput. Linguist",
+                "string-name": [
+                    {
+                        "given-names": "M.P.",
+                        "surname": "Marcus"
+                    },
+                    {
+                        "given-names": "M.A.",
+                        "surname": "Marcinkiewicz"
+                    },
+                    {
+                        "given-names": "B.",
+                        "surname": "Santorini"
+                    }
+                ],
+                "volume": "19",
+                "year": "1993"
+            }
+        },
+        {
+            "@id": "ref44",
+            "mixed-citation": {
+                "#text": "[44]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Sentiwordnet: A publicly available lexical resource for opinion mining",
+                "fpage": "417",
+                "lpage": "422",
+                "source": "in: Proceedings of Language Resources and Evaluation Conference",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Esuli"
+                    },
+                    {
+                        "given-names": "F.",
+                        "surname": "Sebastiani"
+                    }
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref45",
+            "mixed-citation": {
+                "#text": "[45]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , Citeseer,\n          \n          .",
+                "article-title": "The american national corpus first release",
+                "source": "in: Proceedings of Language Resources and Evaluation Conference",
+                "string-name": [
+                    {
+                        "given-names": "N.",
+                        "surname": "Ide"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Suderman"
+                    }
+                ],
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref46",
+            "mixed-citation": {
+                "#text": "[46]\n          \n          ,\n          \n          ,\n          \n          , in\n          \n          ,\n          \n          .",
+                "article-title": "The american national corpus: a standardized resource of American English",
+                "source": ": Proceedings of Corpus Linguistics",
+                "string-name": [
+                    {
+                        "given-names": "N.",
+                        "surname": "Ide"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Macleod"
+                    }
+                ],
+                "year": "2001"
+            }
+        },
+        {
+            "@id": "ref47",
+            "mixed-citation": {
+                "#text": "[47]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          (\n          \n          ) (\n          \n          )\n          \n          -\n          \n          .",
+                "article-title": "Statistical techniques for natural language parsing",
+                "fpage": "33",
+                "issue": "4",
+                "lpage": "43",
+                "source": "AI Mag",
+                "string-name": {
+                    "given-names": "E.",
+                    "surname": "Charniak"
+                },
+                "volume": "18",
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref48",
+            "mixed-citation": {
+                "#text": "[48]\n          \n          ,\n          \n          , Packt Publishing Ltd,\n          \n          .",
+                "source": "Python Text Processing with NLTK 2.0 Cookbook",
+                "string-name": {
+                    "given-names": "J.",
+                    "surname": "Perkins"
+                },
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref49",
+            "mixed-citation": {
+                "#text": "[49]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Triplet extraction from sentences",
+                "fpage": "8",
+                "lpage": "12",
+                "source": "in: Proceedings of the 10th International Multiconference on Information Society-IS",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Rusu"
+                    },
+                    {
+                        "given-names": "L.",
+                        "surname": "Dali"
+                    },
+                    {
+                        "given-names": "B.",
+                        "surname": "Fortuna"
+                    },
+                    {
+                        "given-names": "M.",
+                        "surname": "Grobelnik"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Mladenic"
+                    }
+                ],
+                "year": "2007"
+            }
+        }
+    ],
+    "title": "Sarcastic sentiment detection in tweets streamed in real time: a big data approach"
+}

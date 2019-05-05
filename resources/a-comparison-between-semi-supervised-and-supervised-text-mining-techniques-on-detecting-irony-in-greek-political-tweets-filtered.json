@@ -1,0 +1,506 @@
+{
+    "abstract": {
+        "p": "a b s t r a c t The present work describes a classification schema for irony detection in Greek political tweets. Our hypothesis states that humorous political tweets could predict actual election results. The irony detection concept is based on subjective perceptions, so only relying on human-annotator driven labor might not be the best route. The proposed approach relies on limited labeled training data, thus a semi-supervised approach is followed, where collective-learning algorithms take both labeled and unlabeled data into consideration. We compare the semi-supervised results with the supervised ones from a previous research of ours. The hypothesis is evaluated via a correlation study between the irony that a party receives on Twitter, its respective actual election results during the Greek parliamentary elections of May 2012, and the difference between these results and the ones of the preceding elections of 2009. & 2016 Elsevier Ltd. All rights reserved."
+    },
+    "affiliation": {
+        "#text": ",\n          \n          ,",
+        "@id": "aff0",
+        "addr-line": "Corfu",
+        "country": {
+            "#text": "Greece",
+            "@country": "GR"
+        },
+        "institution": "Department of Informatics, Ionian University",
+        "label": "0"
+    },
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Basilis Charalampakis",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "sdimitris@csd.auth.gr",
+            "string-name": "Dimitris Spathis n",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Elias Kouslis",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "kerman@ionio.gr",
+            "string-name": "Katia Kermanidis",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        }
+    ],
+    "journal": "Engineering Applications of Artificial Intelligence",
+    "keywords": [
+        "Irony detection",
+        "Text mining",
+        "Twitter",
+        "Politics"
+    ],
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/a-comparison-between-semi-supervised-and-supervised-text-mining-techniques-on-detecting-irony-in-greek-political-tweets.json",
+    "pub_date": {
+        "year": "2016"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": ", Francesco, Saggion, Horacio,\n          \n          .\n          \n          .",
+                "article-title": "Modelling Irony in Twitter",
+                "source": "In: Proceedings of the Student Research Workshop at the 14th Conference of the European Chapter of the Association for Computational Linguistics.",
+                "string-name": {
+                    "surname": "Barbieri"
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": ", Steven, Loper, Edward, Klein, Ewan,\n          \n          .\n          \n          .",
+                "string-name": [
+                    {
+                        "surname": "Bird"
+                    },
+                    {
+                        "given-names": "Natural",
+                        "surname": "Language Processing with Python. O'Reilly Media Inc"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": ", Leo,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Random forests",
+                "fpage": "5",
+                "issue": "1",
+                "lpage": "32",
+                "source": "Mach. Learn",
+                "string-name": {
+                    "surname": "Breiman"
+                },
+                "volume": "45",
+                "year": "2001"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          . LIBSVM:\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          .",
+                "article-title": "A library for support vector machines",
+                "fpage": "27",
+                "issue": "3",
+                "source": "ACM Trans. Intell. Syst. Technol",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.C.",
+                        "surname": "Chang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.J.",
+                        "surname": "Lin"
+                    }
+                ],
+                "volume": "2",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": ", Henry S.,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "The sound of sarcasm",
+                "fpage": "366",
+                "issue": "5",
+                "lpage": "381",
+                "source": "Speech Commun",
+                "string-name": [
+                    {
+                        "surname": "Cheang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Marc D.",
+                        "surname": "Pell"
+                    }
+                ],
+                "volume": "50",
+                "year": "2008"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": ", John G.,\n          \n          , E. Trigg,\n          \n          . K*:\n          \n          .\n          \n          . Vol.\n          \n          .",
+                "article-title": "an instance-based learner using an entropic distance measure",
+                "source": "In: Proceedings of the 12th International Conference on Machine learning",
+                "string-name": [
+                    {
+                        "surname": "Cleary"
+                    },
+                    {
+                        "surname": "Leonard"
+                    }
+                ],
+                "volume": "5",
+                "year": "1995"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": ", Elanor, Rozza, Alessandro, Arvidsson, Adam,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Echo chamber or public sphere? Predicting political orientation and measuring political homophily in Twitter using big data",
+                "fpage": "317",
+                "issue": "2",
+                "lpage": "332",
+                "source": "J. Commun",
+                "string-name": {
+                    "surname": "Colleoni"
+                },
+                "volume": "64",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": ", Dmitry, Tsur, Oren, Rappoport, Ari,\n          \n          .\n          \n          .",
+                "article-title": "Semi-supervised recognition of sarcastic sentences in twitter and amazon",
+                "source": "In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning. Association for Computational Linguistics.",
+                "string-name": {
+                    "surname": "Davidov"
+                },
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "Pe\u00f1a-Sordo, Jorge, et al.,\n          \n          . ?\n          \n          .\n          \n          . Springer, Berlin, Heidelberg, pp.\n          \n          -\n          \n          .",
+                "article-title": "Filtering Trolling Comments through Collective Classification\"",
+                "fpage": "707",
+                "lpage": "713",
+                "source": "Network and System Security",
+                "string-name": {
+                    "surname": "de-la-"
+                },
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": ", Su, Markert, Katja,\n          \n          .\n          \n          .\n          \n          :\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Subjectivity recognition on word senses via semi-supervised mincuts",
+                    "The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+                    "Association for Computational Linguistics"
+                ],
+                "source": "In: Proceedings of Human Language Technologies",
+                "string-name": {
+                    "surname": "Fangzhong"
+                },
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": ", Jo\u00e3o,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Functional trees",
+                "fpage": "219",
+                "issue": "3",
+                "lpage": "250",
+                "source": "Mach. Learn",
+                "string-name": {
+                    "surname": "Gama"
+                },
+                "volume": "55",
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": ",\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Combining active and semi-supervised learning for spoken language understanding",
+                "fpage": "171",
+                "issue": "2",
+                "lpage": "186",
+                "source": "Speech Commun",
+                "string-name": {
+                    "#text": ", Tur, Hakkani-T\u00fcr, Dilek, Schapire,",
+                    "given-names": "Robert E.",
+                    "surname": "Gokhan"
+                },
+                "volume": "45",
+                "year": "2005"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": ", Roberto, Muresan, Smaranda, Wacholder, Nina,\n          \n          .\n          \n          . In:\n          \n          . Association for Computational Linguistics.",
+                "article-title": [
+                    "Identifying sarcasm in Twitter: a closer look",
+                    "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: Short Papers-Volume 2"
+                ],
+                "string-name": {
+                    "surname": "Gonz\u00e1lez-Ib\u00e1nez"
+                },
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": ", George H.,\n          \n          , Pat,\n          \n          .\n          \n          .\n          \n          . Morgan Kaufmann Publishers Inc.",
+                "article-title": "Estimating continuous distributions in Bayesian classifiers",
+                "source": "In: Proceedings of the Eleventh conference on Uncertainty in artificial intelligence",
+                "string-name": [
+                    {
+                        "surname": "John"
+                    },
+                    {
+                        "surname": "Langley"
+                    }
+                ],
+                "year": "1995"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": ", Bente, Krumsvik, Arne H.,\n          \n          , Tanja,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Social media as a political backchannel: Twitter use during televised election debates in Norway",
+                "fpage": "313",
+                "issue": "3",
+                "lpage": "328",
+                "source": "Aslib J. Inf. Manag",
+                "string-name": [
+                    {
+                        "surname": "Kalsnes"
+                    },
+                    {
+                        "surname": "Storsul"
+                    }
+                ],
+                "volume": "66",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": ", Katia Lida, Maragoudakis, Manolis,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Political sentiment analysis of tweets before and after the Greek elections of May 2012",
+                "fpage": "298",
+                "issue": "3",
+                "lpage": "317",
+                "source": "Int. J. Soc. Netw. Min",
+                "string-name": {
+                    "surname": "Kermanidis"
+                },
+                "volume": "1",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": ", Christine, Kunneman, Florian, van den Bosch, Antal,\n          \n          .\n          \n          .\n          \n          , vol.\n          \n          , p.\n          \n          .",
+                "article-title": "The perfect solution for detecting sarcasm in tweets# not",
+                "fpage": "29",
+                "source": "WASSA",
+                "string-name": {
+                    "surname": "Liebrecht"
+                },
+                "year": [
+                    "2013",
+                    "2013"
+                ]
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": ", Rada, Strapparava, Carlo,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Learning to laugh (automatically): computational models for humor recognition",
+                "fpage": "126",
+                "issue": "2",
+                "lpage": "142",
+                "source": "Comput. Intell",
+                "string-name": {
+                    "surname": "Mihalcea"
+                },
+                "volume": "22",
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": ",\n          \n          , et al.,\n          \n          .\n          \n          .\n          \n          .,\n          \n          -\n          \n          .",
+                "article-title": "Collective classification for text classification",
+                "fpage": "51",
+                "lpage": "69",
+                "source": "Text Min",
+                "string-name": [
+                    {
+                        "surname": "Namata"
+                    },
+                    {
+                        "surname": "Galileo"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": ", Jennifer, Jensen, David,\n          \n          .\n          \n          .",
+                "article-title": "Collective classification with relational dependency networks",
+                "source": "In: Proceedings of the Second International Workshop on Multi-Relational Data Mining.",
+                "string-name": {
+                    "surname": "Neville"
+                },
+                "year": "2003"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": ",\n          \n          . C4.\n          \n          . Morgan Kauffmann, San Mateo.",
+                "article-title": "5: Programming for Machine Learning",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Quinlan"
+                    },
+                    {
+                        "surname": "Ross"
+                    }
+                ],
+                "year": "1993"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": ", Ashwin, Zafarani, Reza, Liu, Huan,\n          \n          .\n          \n          . Arizona State University, Arizona.",
+                "article-title": "Sarcasm detection on twitter: a behavioral modeling approach (Dissertation)",
+                "string-name": {
+                    "surname": "Rajadesingan"
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": ", Antonio, Rosso, Paolo, Veale, Tony,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "A multidimensional approach for detecting irony in twitter",
+                "fpage": "239",
+                "issue": "1",
+                "lpage": "268",
+                "source": "Lang. Resour. Eval",
+                "string-name": {
+                    "surname": "Reyes"
+                },
+                "volume": "47",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": ", Antonio, Rosso, Paolo,\n          \n          .\n          \n          .\n          \n          to Subjectivity and\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Mining subjective knowledge from customer reviews: a specific case of irony detection",
+                    "Association for Computational Linguistics"
+                ],
+                "source": "In: Proceedings of the 2nd Workshop on Computational Approaches",
+                "string-name": [
+                    {
+                        "surname": "Reyes"
+                    },
+                    {
+                        "given-names": "Sentiment",
+                        "surname": "Analysis"
+                    }
+                ],
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": ", Igor, Laorden, Carlos, Bringas, Pablo Garcia,\n          \n          .\n          \n          . SECRYPT.",
+                "article-title": "Collective Classification for Unknown Malware Detection",
+                "string-name": {
+                    "surname": "Santos"
+                },
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": ", Oren, Davidov, Dmitry, Rappoport, Ari,\n          \n          .\n          \n          . ICWSM.",
+                "article-title": "ICWSM-A Great Catchy Name: Semi-Supervised Recognition of Sarcastic Sentences in Online Product Reviews",
+                "string-name": {
+                    "surname": "Tsur"
+                },
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": ", Dan, Cristea, Dan, Stamou, Sofia,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "BalkaNet: ams, methods, results and perspectives. a general overview",
+                "fpage": "9",
+                "issue": "1-2",
+                "lpage": "43",
+                "source": "Rom. J. Inf. Sci. Technol",
+                "string-name": {
+                    "surname": "Tufis"
+                },
+                "volume": "7",
+                "year": "2004"
+            }
+        }
+    ],
+    "title": "A comparison between semi-supervised and supervised text mining techniques on detecting irony in greek political tweets"
+}

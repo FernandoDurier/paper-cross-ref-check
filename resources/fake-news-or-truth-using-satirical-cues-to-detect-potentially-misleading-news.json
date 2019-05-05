@@ -1,0 +1,1825 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": {
+                "journal-title-group": {
+                    "journal-title": "San Diego, California, June"
+                }
+            },
+            "article-meta": {
+                "title-group": {
+                    "article-title": "Fake News or Truth? Using Satirical Cues to Detect Potentially Misleading News."
+                },
+                "contrib-group": {
+                    "aff": {
+                        "@id": "aff0",
+                        "label": "0",
+                        "institution": "Victoria L. Rubin, Niall J. Conroy, Yimin Chen, and Sarah Cornwell Language and Information Technology Research Lab (LIT.RL) Faculty of Information and Media Studies University of Western Ontario",
+                        "addr-line": "London, Ontario",
+                        "country": {
+                            "@country": "CA",
+                            "#text": "CANADA"
+                        },
+                        "#text": ",\n          \n          ,"
+                    }
+                },
+                "pub-date": {
+                    "year": "2016"
+                },
+                "volume": "1",
+                "fpage": "2",
+                "lpage": "17",
+                "abstract": {
+                    "p": null
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": "Satire is an attractive subject in deception\ndetection research: it is a type of deception that\nintentionally incorporates cues revealing its own\ndeceptiveness. Whereas other types of fabrications\naim to instill a false sense of truth in the reader, a\nsuccessful satirical hoax must eventually be\nexposed as a jest. This paper provides a conceptual\noverview of satire and humor, elaborating and\nillustrating the unique features of satirical news,\nwhich mimics the format and style of journalistic\nreporting. Satirical news stories were carefully\nmatched and examined in contrast with their\nlegitimate news counterparts in 12 contemporary\nnews topics in 4 domains (civics, science,\nbusiness, and ?soft? news). Building on previous\nwork in satire detection, we proposed an\nSVMbased algorithm, enriched with 5 predictive\nfeatures (Absurdity, Humor, Grammar, Negative\nAffect, and Punctuation) and tested their\ncombinations on 360 news articles. Our best predicting\nfeature combination (Absurdity, Grammar and\nPunctuation) detects satirical news with a 90%\nprecision and 84% recall (F-score=87%). Our\nwork in algorithmically identifying satirical news\npieces can aid in minimizing the potential\ndeceptive impact of satire."
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "1. Introduction",
+                    "p": {
+                        "xref": [
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref2 ref46",
+                                "#text": "(Buller & Burgoon, 1996; Zhou, Burgoon,\nNunamaker, & Twitchell, 2004)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref34 ref4",
+                                "#text": "(Rubin, Chen, & Conroy,\n2015)"
+                            }
+                        ],
+                        "#text": "In the course of news production, dissemination,\nand consumption, there are ample opportunities to\ndeceive and be deceived. Direct falsifications such\nas journalistic fraud or social media hoaxes pose\nobvious predicaments. While fake or satirical news\nmay be less malicious, they may still mislead\ninattentive readers. Taken at face value, satirical news\ncan intentionally create a false belief in the\nreaders? minds, per classical definitions of deception\n        \n        . The falsehoods are\nintentionally poorly concealed, and beg to be\nunveiled. Yet some readers simply miss the joke, and\nthe fake news is further propagated, with often\ncostly consequences\n        \n        .\n1.1."
+                    }
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "The News Context",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref33",
+                                    "#text": "(Riffkin, 2015)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref29",
+                                    "#text": "(Reilly\n& Nye, 2012)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref40",
+                                    "#text": "(Tsfati,\n2010)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref21",
+                                    "#text": "(Mocanu, Rossi, Zhang, Karsai, &\nQuattrociocchi, 2015)"
+                                }
+                            ],
+                            "#text": "In recent years, there has been a trend towards\ndecreasing confidence in the mainstream media.\nAccording to Gallup polls, only 40% of Americans\ntrust their mass media sources to report the news\n?fully, accurately and fairly?\n        \n        and a\nsimilar survey in the UK has shown that the\nmostread newspapers were also the least-trusted\n        \n        . One effect of this trend has been to\ndrive news readers to rely more heavily on\nalternative information sources, including blogs and\nsocial media, as a means to escape the perceived bias\nand unreliability of mainstream news\n        \n        . Ironically, this may leave the readers even\nmore susceptible to incomplete, false, or\nmisleading information\n        \n        ."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref35 ref44 ref8",
+                                    "#text": "(DePaulo, Charlton, Cooper,\nLindsay, & Muhlenbruck, 1997; Rubin & Conroy,\n2012; Vrij, Mann, & Leal, 2012)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref43",
+                                    "#text": "(Van Swol, 2014)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref24",
+                                    "#text": "(Pennycook, Cheyne, Barr,\nKoehler, & Fugelsang, 2015)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref17",
+                                    "#text": "(LaMarre,\nLandreville, & Beam, 2009)"
+                                }
+                            ],
+                            "#text": "In general, humans are fairly ineffective at\nrecognizing deception\n        \n        . A number of\nfactors may explain why. First, most people show an\ninherent truth-bias\n        \n        : they tend to\nassume that the information they receive is true\nand reliable. Second, some people seem to exhibit\na ?general gullibility?\n        \n        and are inordinately\nreceptive to ideas that they do not fully understand.\nThird, confirmation bias can cause people to\nsimply see only what they want to see ? conservative\nviewers of the news satire program the Colbert\nReport, for example, tend to believe that the\ncomedian?s statements are sincere, while liberal viewers\ntend to recognize the satirical elements\n        \n        .\n1.2."
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "Problem Statement",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref16",
+                                    "#text": "(Howell, 2013)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref34 ref4",
+                                    "#text": "(Chen, Conroy, &\nRubin, 2015)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref11",
+                                    "#text": "(Hango, 2014)"
+                                }
+                            ],
+                            "#text": "High rates of media consumption and low trust in\nnews institutions create an optimal environment for\nthe ?rapid viral spread of information that is either\nintentionally or unintentionally misleading or\nprovocative?\n        \n        . Journalists and other\ncontent producers are incentivized towards speed\nand spectacle over accuracy\n        \n        and content consumers often lack the\nliteracy skills required to interpret news critically\n        \n        . What is needed for both content\nproducers and consumers is an automated assistive\ntool that can save time and cognitive effort by\nflagging/filtering inaccurate or false information."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref25",
+                                "#text": "(Pfaff & Gibbs,\n1997)"
+                            },
+                            "#text": "In developing such a tool, we have chosen news\nsatire as a starting point for the investigation of\ndeliberate deception in news. Unlike subtler forms of\ndeception, satire may feature more obvious cues\nthat reveal its disassociation from truth because the\nobjective of satire is for at least some subset of\nreaders to recognize the joke\n        \n        . And yet, articles from The Onion and other\nsatirical news sources are often shared and even\nreprinted in newspapers as if the stories were true1.\nIn other words, satirical news may mislead readers\nwho are unaware of the satirical nature of news, or\nlacking in the contextual or cultural background to\ninterpret the fake as such. In this paper, we\nexamine the textual features of satire and test for the\nmost reliable cues in differentiating satirical news\nfrom legitimate news."
+                        }
+                    ],
+                    "sec": {
+                        "@id": "sec-4-1",
+                        "title": "Literature Review"
+                    }
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "Satire",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "(Condren,\n2012)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref47",
+                                    "#text": "Ziv\n(1988)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref37",
+                                    "#text": "Simpson (2003)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref26",
+                                    "#text": "(Phiddian, 2013)"
+                                }
+                            ],
+                            "#text": "As a concept, satire has been remarkably hard to\npin down in the scholarly literature\n        \n        . One framework for humor, proposed by\n        \n        , suggests five discrete categories of humor:\naggressive, sexual, social, defensive, and\nintellectual. Satire, according to\n        \n        , is\ncom1 See:\nhttps://www.washingtonpost.com/news/worldviews/wp/2015/06/02/7-times-the-onionwas-lost-in-translation\nplicated because it occupies more than one place in\nthe framework: it clearly has an aggressive and\nsocial function, and often expresses an intellectual\naspect as well. From this, satire can be\nconceptualized as ?a rhetorical strategy (in any medium) that\nseeks wittily to provoke an emotional and\nintellectual reaction in an audience on a matter of public\n? significance?\n        \n        ."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref6",
+                                "#text": "(Condren,\n2014)"
+                            },
+                            "#text": "On the attack, satirical works use a variety of\nrhetorical devices, such as hyperbole, absurdity,\nand obscenity, in order to shock or unease readers.\nTraditionally, satire has been divided into two\nmain styles: Juvenalian, the more overtly hostile of\nthe two, and Horatian, the more playful\n        \n        . Juvenalian satire is characterized by\ncontempt and sarcasm and an often aggressively\npessimistic worldview (e.g., Swift?s A Modest\nProposal). Horatian satire, by contrast, tends more\ntowards teasing, mockery, and black humor (e.g.,\nKubrick?s Dr. Strangelove). In each, there is a mix\nof both laughter and scorn ? though Juvenalian\ntends towards scorn, some hint of laughter must be\npresent and vice versa for Horatian."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref13",
+                                    "#text": "(Highet, 1972: 156)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "(Condren, 2012:\n378)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref10",
+                                    "#text": "(Frye,\n1944: 76)"
+                                }
+                            ],
+                            "#text": "Satire must also serve a purpose beyond simple\nspectacle: it must aspire ?to cure folly and to\npunish evil?\n        \n        . It is not enough to\nsimply mock a target; some form of critique or call\nto action is required. This ?element of\ncensoriousness? or ?ethically critical edge?\n        \n        supplies the social commentary that separates\nsatire from mere invective. However, the\nreceptiveness of an audience to satire?s message\ndepends upon a level of ?common agreement?\n        \n        between the writer and the reader that\nthe target is worthy of both disapproval and\nridicule. This is one way that satire may miss its mark\nwith some readers: they might recognize the\nsatirist?s critique, but simply disagree with his or her\nposition."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref37",
+                                    "#text": "(Simpson,\n2003: 30)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref25",
+                                    "#text": "(Pfaff &\nGibbs, 1997)"
+                                }
+                            ],
+                            "#text": "As a further confounding factor, satire does not\nspeak its message plainly, and hides its critique in\nirony and double-meanings. Though satire aims to\nattack the folly and evil of others, it also serves to\nhighlight the intelligence and wit of its author.\nSatire makes use of opposing scripts, text that is\ncompatible with two different readings\n        \n        , to achieve this effect. The incongruity\nbetween the two scripts is part of what makes\nsatire funny (e.g., when Stephen Colbert, states ?I\ngive people the truth, unfiltered by rational\nargument.?2), but readers who fail to grasp the humor\nbecome, themselves, part of the joke. In this way,\nwe consider satire a type of deception, but one that\nis intended to be found out by at least some subset\nof the audience. Although ?the author mostly\nassumes that readers will recover the absurdity of the\ncreated text, which hopefully will prompt the\nreaders to consider issues beyond the text?\n        \n        , what one reader considers absurd\nmight be perfectly reasonable to another."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref15",
+                                "#text": "Hopper & Bell?s (1984)"
+                            },
+                            "#text": "In his Anatomy of Satire, Highet distinguishes\nsatire from other forms of ?lies and exaggerations\nintended to deceive? (1972: 92). Whereas other\ntypes of fabrications and swindles aim to instill a\nfalse sense of truth in the reader, which benefits the\ndeceiver for as long as it remains undiscovered, a\nsuccessful satirical hoax must eventually be\nexposed. After all, an author of satire cannot be\nappreciated for his or her wit if no one recognizes the\njoke. This interpretation of satire is in line with\n        \n        category of ?benign\nfabrications,? which include make believe, jokes, and\nteasing ? types of deception that are generally both\nsocially acceptable and fairly easy to uncover."
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-6",
+                    "title": "2.2. Satire in News",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref9",
+                                    "#text": "(Ermida,\n2012: 187)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref9",
+                                    "#text": "(Ermida, 2012: 188)"
+                                }
+                            ],
+                            "#text": "News satire is a genre of satire that mimics the\nformat and style of journalistic reporting. The fake\nnews stories are typically inspired by real ones,\nand cover the same range of subject matter: from\npolitics to weather to crime. The satirical aspect\narises when the factual basis of the story is\n?comically extended to a fictitious construction where it\nbecomes incongruous or even absurd, in a way that\nintersects entertainment with criticism?\n        \n        . News satire is most often presented in\nthe Horatian style, where humor softens the impact\nof harshness of the critique ? the spoonful of sugar\nthat helps the medicine go down. More than mere\nlampoon, fake news stories aim to ?arouse the\nreaders? attention, amuse them, and at the same\ntime awaken their capacity to judge contemporary\nsociety?\n        \n        ."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref14",
+                                "#text": "(Hongo, 2016)"
+                            },
+                            "#text": "With the rise of the internet, news satire sites\nsuch as The Onion have become a prolific part of\nthe media ecosystem. Stories from satirical sources\nare frequently shared over social media, where\nthey deceive at least some of their readers. Indeed,\n2 2006 White House Correspondents Dinner: https://youtu.be/2X93u3anTco\npeople are fooled often enough that internet sites\nsuch as Literally Unbelievable\n        \n        have\nsprung up to document these instances."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref39",
+                                "#text": "(The Media Insight Project, 2014)"
+                            },
+                            "#text": "Several factors contribute to the believability of\nfake news online. Recent polls have found that\nonly 60% of Americans read beyond the headline\n        \n        . Furthermore,\non social media platforms like Facebook and\nTwitter, stories which are ?liked? or ?shared? all appear\nin a common visual format. Unless a user looks\nspecifically for the source attribution, an article\nfrom The Onion looks just like an article from a\ncredible source, like The New York Times. In an\neffort to counteract this trend, we propose the\ncreation of an automatic satire detection system."
+                        },
+                        "So, how can satirical news stories be identified?\nErmida (2012: 194-195) proposes the model of\nparodic news satire in Figure 1.\nFor the purposes of this research, we focus on\ncomponent III to inform our investigation into cues\nto differentiate news satire from legitimate news\nreporting. The next section overviews satirical\nnews detection efforts to date and positions them\nas beneficial in the deception detection research.\n3."
+                    ],
+                    "sec": {
+                        "@id": "sec-6-1",
+                        "title": "Detection Methodology Review",
+                        "p": "The methods described in this review demonstrate\npromising results for satire and humor detection.\nThe goal of screening legitimate news content is\nachieved based on the assumption that successful\nidentification of satire is independent from both the\noriginating source of the piece, and its provenance\nas a news document. Instead, Natural Language\nProcessing (NLP) methods in combination with\nmachine learning deal with content directly by\ndetecting language patterns, topicality, sentiment,\nrhetorical devices and word occurrences which are\ncommon to satire and irony. There is a need for a\nunified approach that combines best practices for a\ncomprehensive NLP satire detection system."
+                    }
+                },
+                {
+                    "@id": "sec-7",
+                    "title": "Word Level Features",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref3",
+                                    "#text": "Burfoot & Baldwin (2009)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref20",
+                                    "#text": "(Mihalcea, Strapparava, &\nPulman, 2010)"
+                                }
+                            ],
+                            "#text": "attempted to determine\nwhether or not newswire articles can be\nautomatically classified as satirical. The approach relied on\nlexical and semantic features such as headlines,\nprofanity, or slang, as well as support vector\nmachines (SVMs) on simple bag-of-words features\nwhich were supplemented with feature weighting.\nSimilar attempts have used corpus-based\nrelatedness which uses cosine similarity and tf*idf\nweighting. At the granularity of individual words\nand n-grams, text cues can point to the presence of\nsatire, for example counterfactual words\n(?nevertheless?, ?yet?), and temporal compression words\n(?now?, ?abruptly?)\n        \n        . As a base measure, tf*idf on\nbigrams provided F-score of roughly 65%. The use\nof additional features derived from semantic\nanalysis heuristics improved classifier performance on\njoke detection. Using combined joke specific\nfeatures led to 84% precision, demonstrating\nsynergistic effect of feature combination."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref5 ref9",
+                                "#text": "(III.c, per Ermida, 2012)"
+                            },
+                            "#text": "We hypothesize expanding the possibilities of\nword-level analysis by measuring the utility of\nfeatures like part of speech frequency, and semantic\ncategories such as generalizing terms, time/space\nreferences, positive and negative polarity. In\naddition, we incorporate the use of exaggerated\nlanguage (e.g., profanity, slang, grammar markers)\nand frequent run-on sentences. We take these\nfeatures as indicators of satirical rhetoric component\n        \n        ."
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-8",
+                    "title": "3.2. Semantic Validity",
+                    "p": {
+                        "xref": [
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref31",
+                                "#text": "(Reyes, Rosso, & Buscaldi, 2012)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref3",
+                                "#text": "Burfoot and Baldwin (2009)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref31",
+                                "#text": "(Reyes et al.,\n2012)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref30",
+                                "#text": "(Reyes & Rosso, 2014)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref9",
+                                "#text": "(Ermida, 2012)"
+                            }
+                        ],
+                        "#text": "Satirical news contains a higher likelihood of\nimbalances between concepts expressing temporal\nconsistency, as well as contextual imbalances\n        \n        , for example,\nwell known people in unexpected settings. A\nsimilar idea of unexpectedness was explored by\n        \n        who measured the\npresence of absurdity by defining a notion of\n?semantic validity?: true news stories found on the\nweb will contain differences in the presence of\ncooccurring named entities than those entities found\nin satire. Shallow and deep linguistic layers may\nrepresent relevant information to identify\nfigurative uses of language. For example, ontological\nsemantics such as ambiguity and incongruity, and\nmeta-linguistic devices, such as polarity and\nemotional scenarios can achieve precision accuracy of\n80% for classifying humorous tweets\n        \n        . Semantically disparate concepts can also\ninfluence absurdity, when judged based on semantic\nrelatedness (distance in WordNet hierarchy),\nsummed and normalized\n        \n        .\nIn this study, we use this measure of absurdity as\nan indicator of the pragmatic component (II.b) of\nsatirical news\n        \n        .\n3.3."
+                    }
+                },
+                {
+                    "@id": "sec-9",
+                    "title": "Humor and Opposing Scripts",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref38",
+                                    "#text": "Sj\u00f6bergh and Araki (2007)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref1",
+                                    "#text": "(Attardo, Hempelmann, & Mano, 2002: 35)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref12",
+                                    "#text": "(Hempelmann, Raskin, & Triezenberg,\n2006)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref28",
+                                    "#text": "Polanyi and\nZaenen (2006)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref12",
+                                    "#text": "Hempelmann et\nal. (2006)"
+                                }
+                            ],
+                            "#text": "presented a machine\nlearning approach for classifying sentences as\noneliner jokes or normal sentences. Instead of deep\nanalysis, they rely on weighting derived from a\ncombination of simple features like word overlap\nwith a joke corpus, and ambiguity (number of\ndictionary.com word senses), achieving an 85%\naccuracy. The incongruity (resolution) theory is a\ntheory of comprehension which depends on the\nintroduction of ?latent terms?. Humor is found when\ntwo scripts overlap and oppose. As a joke narration\nevolves, some ?latent? terms are gradually\nintroduced, which set the joke on a train of thought. Yet\nbecause of ambiguous quality of the terms, the\nhumorous input advances on two or more\ninterpretation paths. The interpretation shifts suddenly\nfrom the starting point of the initial sequence:\n?Is the doctor at home?? the patient asked in a whisper.\n?No?, the doctor?s pretty wife whispered back, ?Come\nright in.?\n        \n        The latter path gains more importance as elements\nare added to the current interpretation of the\nreader, and eventually ends up forming the punch line\nof the joke\n        \n        . To detect opposing scripts,\n        \n        suggest a theoretical framework in\nwhich the context of sentiment words shifts the\nvalence of the expressed sentiment.\n        \n        employed Text Meaning Representations\n(TMRs) which are data models aimed at preserving\nvagueness in language while using an ontology\nrepresentation from a fact repository, a\npreprocessor, and an analyzer to transform text. They\npropose an identification method by checking the\nnumber of word senses of the last word that ?make\nsense? in the current context, although no\nperformance evaluation is provided."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref18",
+                                    "#text": "Mihalcea and Liu (2006)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref19",
+                                    "#text": "Mihalcea\nand Pulman (2007)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref20",
+                                    "#text": "(Mihalcea et al., 2010)"
+                                }
+                            ],
+                            "#text": "Other means of joke classification rely on naive\nBayes and SVM based on joke-specific features,\nincluding polysemy and Latent Semantic Analysis\n(LSA) trained on joke data, as well as semantic\nrelatedness.\n        \n        and\n        \n        presented such a system that\nrelies on metrics including knowledge-based\nsimilarity (path between concepts) and corpus based\nsimilarity (term co-occurrence from large corpus).\nThey conclude that the most frequently observed\nsemantic features are negative polarity and\nhumancenteredness. A correct punch line, which\ngenerates surprise, has a minimum relatedness with\nrespect to the set-up. The highest overall precision of\n84% was obtained with models that rely on\njokespecific features, with the LSA model trained on a\njokes corpus\n        \n        . These\nmethods informed our investigation of Ermida?s lexical\ncomponent (III.a) (2012)."
+                        },
+                        "Past research in humor detection provides useful\nheuristics for NLP. A shortcoming is that best\npractices have yet to be combined in a\ncomprehensive detection methodology. For example,\npunchline detection may be employed to longer,\ndiscourse layer content beyond mere one liners,\nthrough the comparison of constituent text\nsegments. Absurdity, measured through the presence\nof atypical named entities, may be extended to\nother contexts. Our examination of satire sources hints\nat the tendency to introduce new, unfamiliar named\nentities at the end of news articles as a form of\nironic non-sequitur.\n3.4."
+                    ]
+                },
+                {
+                    "@id": "sec-10",
+                    "title": "Recognizing Sarcasm and Irony",
+                    "p": {
+                        "xref": [
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref41 ref7",
+                                "#text": "(Tsur, Davidov, & Rappoport,\n2010)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref42",
+                                "#text": "Utsumi (2000)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref41",
+                                "#text": "Tsur, and Rappoport (2010)"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref30 ref32",
+                                "#text": "(Reyes & Rosso, 2014; Reyes,\nRosso, & Veale, 2013)"
+                            }
+                        ],
+                        "#text": "Recognition of sarcasm can benefit many\nsentiment analysis applications and the identification of\nfake news. Sarcasm is defined as ?verbal irony ?\nthe activity of saying or writing the opposite of\nwhat you mean?\n        \n        .\n        \n        introduced a cognitive\ncomputational framework that models the ironic\nenvironment from an axiomatic system depending\nheavily on ?world knowledge? and expectations. It\nrequires analysis of each utterance and its context\nto match predicates in a specific logical formalism.\nDavidov,\n        \n        looked for\nelements to automatically detect sarcasm in online\nproducts reviews, achieving a 77% precision and\n83% recall. They proposed surface features\n(information about the product, company, title, etc.),\nfrequent words or punctuation marks, to represent\nsarcastic texts. Ironic expressions often use such\nmarkers to safely realize their communicative\neffects (e.g., ??Trees died for this book?? - book\nreview; ?All the features you want. Too bad they\ndon?t work!? - smart phone review). Beyond\ngrammar and word polarity, emotional scenarios\ncapture irony in terms of elements which\nsymbolize abstractions such as overall sentiments and\nmoods. Presence of humor may be correlated to\npolarity of positive/negative semantic orientation\nand emotiveness. Using Twitter content, models of\nirony detection were assessed along these linguistic\ncharacteristics, and positive results provide\nvaluable insights into figurative speech in the task of\nsentiment analysis\n        \n        .\n4.\n4.1."
+                    },
+                    "sec": {
+                        "@id": "sec-10-1",
+                        "title": "Methodology"
+                    }
+                },
+                {
+                    "@id": "sec-11",
+                    "title": "Dataset and Data Collection Methods",
+                    "p": [
+                        "In this study we collected and analyzed a dataset of\n360 news articles as a wide-ranging and diverse\ndata sample, representative of the scope of US and\nCanadian national newspapers. The dataset was\ncollected in 2 sets. The first set was collected from\n2 satirical news sites (The Onion and The\nBeaverton) and 2 legitimate news sources (The Toronto\nStar and The New York Times) in 2015. The 240\narticles were aggregated by a 2 x 2 x 4 x 3 design\n(US/Canadian; satirical/legitimate online news;\nvarying across 4 domains (civics, science,\nbusiness, and ?soft? news) with 3 distinct topics within\neach of the 4 domains (see Table 1).",
+                        "CIVICS SCIENCE BUSINESS ?SOFT?\nNEWS\nGun Violence Environment Tech Celebrity\nImmigration Health Finance Sports\nElections Other Sci- Corporate An- Local News\nences nouncements\nTable 1: Sample News Topicality. 5 Canadian and 5\nAmerican satirical and legitimate article pairs were collected on 12\ntopics across 4 domains.",
+                        "For each of the 12 topics, 5 Canadian (from The\nBeaverton) and 5 American (from the Onion)\nsatirical articles were collected. Each satirical piece\nwas then matched to a legitimate news article that\nwas published in the same country, and as closely\nrelated in subject matter as possible. For example,\nin the Environment topic, the Beaverton article\n?Invasive homo sapiens species meet at forestry\nconference to discuss pine beetles? was paired with\na Toronto Star article on invasive species:\n?'Dangerous and invasive' Khapra beetle intercepted at\nPearson?. See Figure 2 for the pairing of the\narticles about Hillary Clinton in the Elections topic.",
+                        "An additional set of 120 articles was collected\nin 2016 to expand the inventory of sources and\ntopics, and to serve as a reliability test for the\nmanual findings within the first set. The second\nset, still evenly distributed between satirical and\nlegitimate news, was drawn from 6 legitimate3 and\n6 satirical4 North American online news sources.",
+                        "Analysis: A trained linguist content-analyzed\neach pair (legitimate vs. satirical), looking for\ninsights on similarities and differences as well as\ntrends in language use and rhetorical devices. For\nmachine learning we used the combined set of 360,\nreserving random 25% of the combined 2 sets data\nfor testing, and performing 10-fold cross-validation\non the training set. The complete dataset is\navailable from the lab?s public website5."
+                    ]
+                },
+                {
+                    "@id": "sec-12",
+                    "title": "Results"
+                },
+                {
+                    "@id": "sec-13",
+                    "title": "Data-Driven Linguistic Observations",
+                    "sec": {
+                        "@id": "sec-13-1",
+                        "title": "Absurdity and Humor: Similar to Burfoot &",
+                        "p": [
+                            "Baldwin (2009), we found that the headlines were\nespecially relevant to detecting satire. While\nlegitimate news articles report new material in the first\nline, satirical articles tend to repeat material from\nthe title. We also found the final line of each article\nrelevant to satire detection. In particular, the final\nline was commonly a ?punchline? that highlighted\nabsurdities in the story or introduced a new\nelement to the joke. This humorous function diverges\nsharply from the standard ?inverted pyramid?\narti3 The Globe and Mail, The Vancouver Sun, Calgary Herald, National Post, The Edmonton\nJournal, The Hamilton Spectator, USA Today, The Wall Street Journal, Los Angeles Times,\nThe New York Post, Newsday, and The Denver Post.\n4 www.cbc.ca/punchline, thelapine.ca, syruptrap.ca, www.thecodfish.com, urbananomie.com,\nwww.newyorker.com/humor/borowitz-report, dailycurrant.com, www.thespoof.com,\nnationalreport.net, worldnewsdailyreport.com, and thepeoplescube.com.\n5 http://victoriarubin.fims.uwo.ca/news-verification/\ncle structure of legitimate news articles, and it\nproved useful in identifying satirical journalism.",
+                            "These observations informed the selection of 2\nfeatures: Absurdity and Humor. For example, the\nfinal line of The Beaverton?s ?Scientists at\nUniversity of the Lord discover that Jesus is Lord?\nintroduces new named entities (indicating absurdity)\nand is semantically dissimilar (indicating humor)\nfrom the remainder of the article:",
+                            {
+                                "xref": {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref3",
+                                    "#text": "Burfoot and Baldwin (2009)"
+                                },
+                                "#text": "?At press time, researchers from Christopher Hitchens\nMemorial University discovered that it was fun to drink a\nlot of Johnny Walker Red Label and call people sheep.?\nWe also observed a high frequency of slang and\nswear words in the satirical news pieces, but unlike\n          \n          , for our dataset these\nfeatures did not add predictive powers."
+                            },
+                            "Sentence Complexity: A noticeable syntactic\ndifference between the satirical and legitimate\narticles was sentence length and complexity.\nEspecially for quotations, the satirical articles tend to pack\na greater number of clauses into a sentence for\ncomedic effect. For example, compare these two\nexcerpts - the first from The Onion, and the second\nfrom its paired article in The New York Times:\n(1) ?Not too long ago, these early people were alive\nand going about their normal daily lives, but sadly, by the\ntime we scaled down the narrow 90-meter chute leading\ninto the cave, they?d already been dead for at least 10,000\ndecades,? said visibly upset University of the\nWitwatersrand paleoanthropologist Lee R. Berger, bemoaning the\nfact that they could have saved the group of human\npredecessors if they had just reached the Rising Star cave\nsystem during the Pleistocene epoch.? - The Onion ?Tearful\nAnthropologists Discover Dead Ancestor of Humans\n100,000 Years Too Late?.",
+                            "(2) ?With almost every bone in the body represented\nmultiple times, Homo naledi is already practically the\nbest-known fossil member of our lineage,? Dr. Berger\nsaid.? - The New York Times ?Homo Naledi, New Species\nin Human Lineage, Is Found in South African Cave?.",
+                            "The Onion?s quotation is 3 times longer; it does\nnot just quote Dr. Berger, but also describes his\nmotive and emotional state. The greater number of\nclauses increases the number of punctuation marks\nfound in satire, which informed the development of\nour successful Punctuation feature. Our Grammar\nfeature set incorporates the complexity of phrasing.\n5.2."
+                        ]
+                    }
+                },
+                {
+                    "@id": "sec-14",
+                    "title": "Our Satirical Detection Approach and"
+                },
+                {
+                    "@id": "sec-15",
+                    "title": "News Satire Features",
+                    "p": "Based on previous methodological advances in\nirony, humor, and satire detection, and our\ndatadriven linguistic observations, we propose and test\na set of 5 satirical news features: Absurdity,\nHumor, Grammar, Negative Affect and Punctuation.\nThe method begins with performing a topic-based\nclassification followed by sentiment-based\nclassification, and feature selection based on absurdity\nand humor heuristics. The training and evaluation\nof our model uses a state-of-the-art method of\nsupport vector machines (SVMs) using a 75% training\nand 25% test split of the dataset, and 10-fold cross\nvalidation applied to the training vectors. We\ncombined cross-validation with the holdout method in\nreporting overall model performance. Cross\nvalidation on our 75% training produced a performance\nprediction on incoming data. We then confirmed\nthis prediction in a second stage using our 25%\nhold out testing set. This allowed us to investigate\nwhich records from the set were incorrectly\npredicted by the model.",
+                    "sec": [
+                        {
+                            "@id": "sec-15-1",
+                            "title": "Text Processing and Feature Weighting: The",
+                            "p": [
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref22",
+                                            "#text": "(Pedregosa et al., 2011)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref22",
+                                            "#text": "(Pedregosa et al., 2011)"
+                                        }
+                                    ],
+                                    "#text": "text classification pipeline was scripted in Python\n2.7 and used the scikit-learn open source machine\nlearning package\n          \n          as the\nprimary SVM classification and model evaluation\nAPI. In our approach, we described news articles\nas sparse feature vectors using a topic-based\nclassification methodology with the term\nfrequencyinverse document frequency (tf*idf) weighting\nscheme. The baseline results for our news corpus\nwas achieved using a linear kernel classifier\n          \n          that assigns positive\ninstances to satire. First, news article text was\npreprocessed, transforming the raw text to a Pandas\ndata structure for use in Python. Stop words were\nremoved, and unigrams and bigrams were\ntokenized. Both the training and test data were\nconverted to tf-idf feature vectors. Term frequency\nvalues were also normalized by article length to\naccount for length variability between satirical and\nlegitimate news articles. The process is\nimplemented as a semi-automated pipeline, summarized\nin Figure 3."
+                                },
+                                "Feature Selection: The Absurdity Feature (Abs)\nwas defined by the unexpected introduction of new\nnamed entities (people, places, locations) within\nthe final sentence of satirical news. To implement\nAbsurdity detection we used the Natural Language\nToolkit6 (NLTK) Part of Speech tagger and Named\nEntity Recognizer to detect the list of named\nentities. We defined the list as the non-empty set\n(LNE), and compared this with the set (NE) of\nnamed entities appearing in the remaining article.\nThe article was deemed absurd when the\nintersection (LNE ? NE) was empty (0=non-absurd,\n1=absurd).",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref20",
+                                        "#text": "(Mihalcea et al., 2010)"
+                                    },
+                                    "#text": "Humor (Hum) detection was based on the\npremises of opposing scripts and maximizing\nsemantic distance between two statements as method\nof punchline identification\n          \n          .\nSimilarly, in a humorous article, the lead and final\nsentence are minimally related. Our modification\nof the punchline detection method assigned the\nbinary value (humor=1) when the relatedness\nbetween the first and last article sentences was the\nminimum with respect to the remaining sentences."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref45",
+                                            "#text": "(Wu & Palmer,\n1994)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref45",
+                                            "#text": "(Wu &\nPalmer, 1994)"
+                                        }
+                                    ],
+                                    "#text": "We used a knowledge-based metric to measure\nthe relatedness between statement pairs in the\narticle and sought to minimize relatedness of the lead\nand last line. Given a metric for word-to-word\nrelatedness, we define the semantic relatedness of\ntwo text segments S1 and S2 using a metric that\ncombines the semantic relatedness of each text\nsegment in turn with respect to the other text\nsegment. For each word w in the segment S1 we\nidentified the word in the segment S2 that has the\nhighest semantic relatedness, as per\n          \n          word-to-word similarity metric. The depth\nof two given concepts in the WordNet taxonomy,\nand the depth of the least common subsumer (LCS)\nwere combined into a similarity score\n          \n          . The same process was applied to\nfind the most similar word in S1 starting with\nwords in S2. The word similarities were weighted,\nsummed, and normalized with the length of each\ntext segment. The resulting relatedness scores were\naveraged."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref23",
+                                        "#text": "(Pennebaker, Boyd, Jordan, & Blackburn, 2015)"
+                                    },
+                                    "#text": "Grammar (Gram) feature vector was the set of\nnormalized term frequencies matched against the\nLinguistic Inquiry and Word Count (LIWC) 2015\ndictionaries, which accounts for the percentage of\n6 http://www.nltk.org/\nwords that reflect different linguistic categories\n          \n          .\nWe counted the presence of parts of speech terms\nincluding adjectives, adverbs, pronouns,\nconjunctions, and prepositions, and assigned each\nnormalized value as the element in a feature array\nrepresenting grammar properties."
+                                },
+                                "Negative Affect (Neg) and Punctuation\n(Pun) were assigned as feature weights\nrepresenting normalized frequencies based on\nterm-forterm comparisons with LIWC 2015 dictionaries.\nValues were assigned based on the presence of\nnegative affect terms and punctuation (periods,\ncomma, colon, semi-colon, question marks,\nexclamation, quotes) in the training and test set.\nFeatures representing Absurdity, Humor, Grammar,\nNegative Affect and Punctuation were introduced\nin succession to train the model, combined overall.\nThe predictive performance was measured at the\nintroduction of each new feature and the best\nperforming features were combined and compared to\nthe overall performance of all 5."
+                            ]
+                        },
+                        {
+                            "@id": "sec-15-2",
+                            "title": "Evaluation",
+                            "p": [
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref22",
+                                            "#text": "(Pedregosa et al., 2011)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref27 ref36",
+                                            "#text": "(Pisarevskaya, 2015; Rubin & Lukoianova,\n2014)"
+                                        }
+                                    ],
+                                    "#text": "We conducted multiple experiments to identify\nthe best-performing combination of features for\nsatirical news identification. We used scikit-learn\n          \n          and the tf*idf F-measure as\nthe baseline (Base, Table 2), with features added\nincrementally. Scikit-learn library contains several\ntools designed for machine learning applications in\nPython7, and has been utilized in the supervised\nlearning applications of real and fake news\ndetection\n          \n          . The Sklearn.svm package is a set of\nsupervised learning methods used for classification,\nregression and outlier detection, capable of\nperforming multi-class classification. We assigned two\nclasses: satirical news (1) and legitimate news (0),\nand used Sklearn.svm.SVC (Support Vector\nClassification) for supervised training with a linear\nkernel algorithm, which is suitable for 2 class training\ndata. Our model was trained on 270 and tested on a\nset of 90 news articles, with equal proportions of\nsatirical and legitimate news. Table 2 presents the\nmeasures of precision, recall, and F-score with\nassociated 10-fold cross validation confidence results\n7 http://scikit-learn.org\nfor our satire detection model. The F-score was\nmaximized in the case when Grammar,\nPunctuation and Absurdity features were used. Precision\nwas highest when Punctuation and Grammar were\nincluded. Absurdity showed the highest recall\nperformance."
+                                },
+                                "FEATURES\nBase (tf-idf)\nBase+Abs\nBase +Hum\nBase+Gram\nBase+Neg\nBase+Pun\nBase+Gram+Pun+Abs\nBase+All"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-16",
+                    "title": "7. Discussion",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref3",
+                                    "#text": "(Burfoot & Baldwin, 2009)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref20",
+                                    "#text": "Mihalcea et al. (2010)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref3",
+                                    "#text": "Burfoot and\nBaldwin (2009)"
+                                }
+                            ],
+                            "#text": "Our findings produced a set of observations about\nthe benefits of detection methods for satire in\nnews, as well as what methods were not useful and\nhow they can be improved. We were able to\nintegrate word level features using an established\nmachine learning approach in text classification, SVM\n        \n        , to derive empirical\ncues indicative to deception. This included\nestablishing a baseline model in the form of tf-idf\nfeature weights, while measuring net effects of\nadditional features against the baseline. Our baseline\nmodel performed with 82% accuracy, an\nimprovement on\n        \n        who achieved\na 65% baseline score with tf-idf method on similar\ninput data. Contrary to our expectations, we\ndiscovered that individual textual features of shallow\nsyntax (parts of speech) and punctuation marks are\nhighly indicative of the presence of satire,\nproducing a detection improvement of 5% (87% F-score).\nThis suggests that the rhetorical component of\nsatire may provide reliable cues to its identification.\nBased on our manual analysis, this finding may be\ndue to the presence of more complex sentence\nstructures (prevalence of dependent clauses) in\nsatirical content, and strategic use of run-on\nsentences for comedic affect. However, this pattern did not\ntranslate to longer sentences per se, since our\naverage words-per-sentence feature did not increase\npredictive accuracy. Also contrary to our\nexpectation, markers such as profanity and slang, word\nlevel features deemed significant by\n        \n        , produced no measurable\nimprovements in our trials. Our dataset may not have\nincluded more extreme examples of satire."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref3",
+                                "#text": "Burfoot and Baldwin?s (2009)"
+                            },
+                            "#text": "One major contribution of the current research is\nthat we were able to integrate a heuristic for\nAbsurdity feature (Abs, Table 2) derived from the\nconcept of semantic validity, the stark and strategic\nuse of mismatched named entities in a story as a\ncomic device.\n        \n        method of translating search results on\ncooccurring entities to an absurdity measure\ninformed our approach, when we noticed that\nsatirical sources often introduce previously\nnonoccurring entities in the final sentence. Compared\nto Burfoot and Baldwin?s 65% performance, our\nresults show a 5% improvement (F-score 87%),\nwhen we added this feature to our baseline. Our\nintuition about named entities proved to be a\ndefining empirical feature of satirical news."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref38",
+                                    "#text": "(Sj\u00f6bergh and Araki, 2007)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref12",
+                                    "#text": "Hempelmann et al. (2006)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref19",
+                                    "#text": "Mihalcea and Pulman\n(2007)"
+                                }
+                            ],
+                            "#text": "Another concept derived from the theoretical\nliterature on humor is the idea of shifting reference\nframes, and incongruity resolution based on the\nsemantic derivation of textual components. We\nadapted methods based on identifying latent terms\n        \n        in punchline detection\nagainst a setup statement. Instead of relying on\nmore complex methods of representing longer text\n(through TMRs per\n        \n        , we\nmodified the semantic distance approach between\nthe lead sentence (setup) and the last sentence\n(punchline) which is hypothesized to be\nmaximized in satire. The results of\n        \n        showed a performance of 84% using\nwordwise semantic distance in WordNet classification.\nOur model showed a comparable performance of\n83% when this feature was added to the baseline,\nopening up another avenue of extending opposing\nscripts to a news corpus."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref32",
+                                "#text": "(Reyes et al., 2013)"
+                            },
+                            "#text": "The presence of polarity in satire has been noted\nin previous methods\n        \n        ; such as\nindicated by positive or negative semantic\norientation, emotiveness, and emotional words. Our\nfindings partially bolster this conclusion when we\ndemonstrated that features representing negative\naffect improved the performance to 83% in the\nidentification task. However, we found no similar\nimprovement when we measured the contrasting\neffect of positive semantic orientation."
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-17",
+                    "title": "8. Conclusions & Future Work",
+                    "p": {
+                        "xref": {
+                            "@ref-type": "bibr",
+                            "@rid": "ref9",
+                            "#text": "(II,\nErmida, 2012)"
+                        },
+                        "#text": "In this paper, we have translated theories of humor,\nirony, and satire into a predictive method for satire\ndetection that reaches relatively high accuracy\nrates (90% precision, 84% recall, 87% F-score).\nSince satirical news is at least part of the time\ndeceptive, identifying satirical news pieces can aid in\nminimizing the potential deceptive impact of\nsatirical news. By analyzing the current news\nproduction landscape captured within our dataset, we\ndemonstrate the feasibility of satire detection\nmethods even when divorced from attribution to a\nsatirical source. Our conceptual contribution is in\nlinking deception detection and computational\nsatire, irony and humor research. Practically, this\nstudy frames fake news as a worthy target for\nfiltering due to its potential to mislead news readers.\nAreas of further investigation can include ways to\ntranslate more complex characteristics of the\nanatomy of satire into linguistic cues. Critique and call\nto action, combined with mockery, is a key\ncomponent of satire, but this critical component\n        \n        has not yet received much attention\nin the field of NLP. This feature could be subject\nto automated discourse-level quantification\nthrough the presence of imperative sentences.\nAlso, our positive results of shallow syntax features\nshowed us that more complex language patterns,\nfor example deep syntax and the ordering of\ngrammatical patterns might also be detectable in\nsatire through techniques such as regular\nexpression pattern matching against a grammatical parse\nof article content."
+                    }
+                },
+                {
+                    "@id": "sec-18",
+                    "title": "Acknowledgments",
+                    "p": "This research has been funded by the Government\nof Canada Social Sciences and Humanities\nResearch Council (SSHRC) Insight Grant\n(#4352015-0065) awarded to Dr. Rubin for the project\nDigital Deception Detection: Identifying\nDeliberate Misinformation in Online News."
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Attardo",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Hempelmann",
+                                    "given-names": "C. F.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Mano",
+                                    "given-names": "S. D.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2002",
+                            "article-title": "Script oppositions and logical mechanisms: Modeling incongruities and their resolutions",
+                            "source": "Humor",
+                            "volume": "15",
+                            "issue": "1",
+                            "fpage": "3",
+                            "lpage": "46",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Buller",
+                                    "given-names": "D. B.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Burgoon",
+                                    "given-names": "J. K.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1996",
+                            "article-title": "Interpersonal Deception Theory",
+                            "source": "Communication Theory",
+                            "volume": "6",
+                            "issue": "3",
+                            "fpage": "203",
+                            "lpage": "242",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Burfoot",
+                                    "given-names": "C.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Baldwin",
+                                    "given-names": "T.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2009",
+                            "article-title": "Automatic satire detection: are you having a laugh? Paper presented at the Proceedings of the ACL-IJCNLP 2009 Conference Short Papers",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          , Suntec, Singapore."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Chen",
+                                    "given-names": "Y.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Conroy",
+                                    "given-names": "N. J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V. L.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2015",
+                            "article-title": "News in an online world: the need for an automatic crap detector. Paper presented at the Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Condren",
+                                "given-names": "C.",
+                                "#text": ","
+                            },
+                            "year": "2012",
+                            "article-title": "Satire and definition",
+                            "source": [
+                                "Humor",
+                                "-0019"
+                            ],
+                            "volume": [
+                                "25",
+                                "10"
+                            ],
+                            "issue": "4",
+                            "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 375. doi:\n          \n          .1515/humor-2012"
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Condren",
+                                "given-names": "C.",
+                                "#text": ","
+                            },
+                            "year": "2014",
+                            "article-title": "Satire",
+                            "source": "Encyclopedia of Humor Studies. Thousand Oaks: Sage Publications",
+                            "#text": "(\n          \n          ).\n          \n          . In S. Attardo (Ed.),\n          \n          , Inc."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Davidov",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Tsur",
+                                    "given-names": "O.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rappoport",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2010",
+                            "article-title": "Semisupervised recognition of sarcastic sentences in twitter and amazon",
+                            "source": "Paper presented at the Fourteenth Conference on Computational Natural Language Learning",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Uppsala, Sweden."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "DePaulo",
+                                    "given-names": "B. M.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Charlton",
+                                    "given-names": "K.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Cooper",
+                                    "given-names": "H.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Lindsay",
+                                    "given-names": "J. J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Muhlenbruck",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1997",
+                            "article-title": "The AccuracyConfidence Correlation in the Detection of Deception",
+                            "source": "Personality and Social Psychology Review",
+                            "volume": "1",
+                            "issue": "4",
+                            "fpage": "346",
+                            "lpage": "357",
+                            "#text": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Ermida",
+                                "given-names": "I.",
+                                "#text": ","
+                            },
+                            "year": "2012",
+                            "article-title": [
+                                "News Satire in the Press: Linguistic Construction of Humour in Spoof News Articles",
+                                "Language and humour in the media"
+                            ],
+                            "source": [
+                                "In J. Chovanec & I. Ermida (Eds.)",
+                                "Newcastle upon Tyne"
+                            ],
+                            "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          .\n          \n          , UK: Cambridge Scholars Pub."
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Frye",
+                                "given-names": "N.",
+                                "#text": ","
+                            },
+                            "year": "1944",
+                            "source": "The Nature of Satire",
+                            "volume": "14",
+                            "issue": "1",
+                            "fpage": "75",
+                            "lpage": "89",
+                            "#text": "(\n          \n          ).\n          \n          . University of Toronto Quarterly,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Hango",
+                                "given-names": "D.",
+                                "#text": ","
+                            },
+                            "year": "2014",
+                            "article-title": "University graduates with lower levels of literacy and numeracy skills",
+                            "#text": "(\n          \n          ).\n          \n          . Statistics Canada Retrieved from http://www.statcan. gc.ca/pub/75-006-x/2014001 /article/14094-eng.htm."
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Hempelmann",
+                                    "given-names": "C.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Raskin",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Triezenberg",
+                                    "given-names": "K. E.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2006",
+                            "article-title": "Computational Humor with Ontological Semantics",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ). Computer, Tell Me a Joke... but Please Make it Funny:\n          \n          . Paper presented at the FLAIRS Conference, Melbourne Beach, Florida, USA."
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Highet",
+                                "given-names": "G.",
+                                "#text": ","
+                            },
+                            "year": "1972",
+                            "source": "The Anatomy of Satire",
+                            "#text": "(\n          \n          ).\n          \n          . Princeton, N.J: Princeton University Press."
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Hongo",
+                                "given-names": "H.",
+                                "#text": ","
+                            },
+                            "year": "2016",
+                            "article-title": "Literally Unbelievable: Stories from The Onion as interpreted by Facebook",
+                            "#text": "(\n          \n          ).\n          \n          . Retrieved from http://literallyunbelievable.org/"
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Hopper",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Bell",
+                                    "given-names": "R. A.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1984",
+                            "article-title": "Broadening the Deception Construct",
+                            "source": "Quarterly Journal of Speech",
+                            "volume": "70",
+                            "issue": "3",
+                            "fpage": "288",
+                            "lpage": "302",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Howell",
+                                "given-names": "L.",
+                                "#text": ","
+                            },
+                            "year": [
+                                "2013",
+                                "2013",
+                                "2013"
+                            ],
+                            "source": "Global Risks",
+                            "#text": "(\n          \n          ).\n          \n          \n          . Retrieved from Cologny/Geneva, Switzerland: http://www3. weforum.org/docs/WEF_GlobalRisks_Report_\n          \n          .pdf"
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "LaMarre",
+                                    "given-names": "H. L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Landreville",
+                                    "given-names": "K. D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Beam",
+                                    "given-names": "M. A.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2009",
+                            "article-title": "The Irony of Satire: Political Ideology and the Motivation to See What You Want to See in The Colbert Report",
+                            "volume": [
+                                "14",
+                                "10"
+                            ],
+                            "issue": "2",
+                            "fpage": "212",
+                            "lpage": "231",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . The International Journal of Press/Politics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/ 1940161208330904"
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Mihalcea",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Liu",
+                                    "given-names": "H.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2006",
+                            "article-title": "A corpus-based approach to finding happiness",
+                            "source": "Paper presented at the AAAI Symposium on Computational Approaches",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          to Analyzing Weblogs."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Mihalcea",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Pulman",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2007",
+                            "article-title": "Characterizing humour: An exploration of features in humorous texts",
+                            "source": "Computational Linguistics and Intelligent Text Processing",
+                            "volume": "4394",
+                            "fpage": "337",
+                            "lpage": "347",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          . In A. Gelbukh (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Berlin Heidelberg: Springer."
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Mihalcea",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Strapparava",
+                                    "given-names": "C.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Pulman",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2010",
+                            "article-title": "Computational models for incongruity detection in humour. Paper presented at the Computational linguistics and intelligent text processing",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          , Iasi, Romania."
+                        }
+                    },
+                    {
+                        "@id": "ref21",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Mocanu",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rossi",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Zhang",
+                                    "given-names": "Q.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Karsai",
+                                    "given-names": "M.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Quattrociocchi",
+                                    "given-names": "W.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": [
+                                "2015",
+                                "2015"
+                            ],
+                            "article-title": "Collective attention in the age of (mis)information",
+                            "volume": [
+                                "51",
+                                "10",
+                                "01"
+                            ],
+                            "fpage": "1198",
+                            "lpage": "1204",
+                            "#text": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . Computers in Human Behavior,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.chb.\n          \n          .\n          \n          .024"
+                        }
+                    },
+                    {
+                        "@id": "ref22",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Pedregosa",
+                                    "given-names": "F.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Varoquaux",
+                                    "given-names": "G.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Gramfort",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Michel",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Thirion",
+                                    "given-names": "B.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Grisel",
+                                    "given-names": "O.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Dubourg",
+                                    "given-names": "V.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2011",
+                            "article-title": "Scikit-learn: Machine learning in Python",
+                            "source": "The Journal of Machine Learning Research",
+                            "volume": "12",
+                            "fpage": "2825",
+                            "lpage": "2830",
+                            "#text": ",\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , . . .\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref23",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Pennebaker",
+                                    "given-names": "J. W.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Boyd",
+                                    "given-names": "R. L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Jordan",
+                                    "given-names": "K.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Blackburn",
+                                    "given-names": "K.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2015",
+                            "article-title": "The Development and Psychometric Properties of LIWC2015",
+                            "source": "net/ 2152/31333",
+                            "#text": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . from University of Texas at Austin http://hdl.handle."
+                        }
+                    },
+                    {
+                        "@id": "ref24",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Pennycook",
+                                    "given-names": "G.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Cheyne",
+                                    "given-names": "J. A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Barr",
+                                    "given-names": "N.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Koehler",
+                                    "given-names": "D. J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Fugelsang",
+                                    "given-names": "J. A.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2015",
+                            "article-title": "On the reception and detection of pseudo-profound bullshit",
+                            "source": "Judgment and Decision Making",
+                            "volume": "10",
+                            "issue": "6",
+                            "fpage": "549",
+                            "lpage": "563",
+                            "#text": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref25",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Pfaff",
+                                    "given-names": "K. L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Gibbs",
+                                    "given-names": "R. W.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1997",
+                            "article-title": "Authorial intentions in understanding satirical texts",
+                            "volume": [
+                                "25",
+                                "10"
+                            ],
+                            "issue": [
+                                "1",
+                                "97"
+                            ],
+                            "fpage": [
+                                "45",
+                                "00006"
+                            ],
+                            "lpage": [
+                                "70",
+                                "5"
+                            ],
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          . Poetics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1016/s0304-422x(\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref26",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Phiddian",
+                                "given-names": "R.",
+                                "#text": ","
+                            },
+                            "year": "2013",
+                            "article-title": "Satire and the limits of literary theories",
+                            "source": "Critical Quarterly",
+                            "volume": "55",
+                            "issue": "3",
+                            "fpage": "44",
+                            "lpage": "58",
+                            "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref27",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Pisarevskaya",
+                                "given-names": "D.",
+                                "#text": ","
+                            },
+                            "year": "2015",
+                            "article-title": [
+                                "Rhetorical Structure Theory as a Feature for Deception Detection in News Reports in the Russian Language",
+                                "Social Media and Web Search (AINL-ISMW) FRUCT Conference"
+                            ],
+                            "source": "Paper presented at the Artificial Intelligence and Natural Language & Information Extraction",
+                            "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          , SaintPetersburg, Russia."
+                        }
+                    },
+                    {
+                        "@id": "ref28",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Polanyi",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Zaenen",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "given-names": "Y.",
+                                    "surname": "Qu"
+                                },
+                                {
+                                    "surname": "Wiebe"
+                                }
+                            ],
+                            "year": "2006",
+                            "article-title": [
+                                "Contextual valence shifters",
+                                "Computing attitude and affect in text: Theory and applications (1 ed"
+                            ],
+                            "fpage": "1",
+                            "lpage": "10",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          . In J. G. Shanahan,\n          \n          , & J.\n          \n          (Eds.),\n          \n          ., pp.\n          \n          -\n          \n          ): Springer Netherlands."
+                        }
+                    },
+                    {
+                        "@id": "ref29",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Reilly",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Nye",
+                                    "given-names": "R.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2012",
+                            "article-title": [
+                                "Power, principles and the press",
+                                "-the-press-Open-Road-andPopulus1"
+                            ],
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          . Retrieved from http://www.theopenroad.com/wp-content/uploads/2012/09/Powerprinciples-and\n          \n          .pdf"
+                        }
+                    },
+                    {
+                        "@id": "ref30",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Reyes",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rosso",
+                                    "given-names": "P.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2014",
+                            "article-title": "On the difficulty of automatically detecting irony: beyond a simple case of negation",
+                            "source": "Knowledge and Information Systems",
+                            "volume": [
+                                "40",
+                                "10"
+                            ],
+                            "issue": "3",
+                            "fpage": "595",
+                            "lpage": "614",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10115-013-0652-8"
+                        }
+                    },
+                    {
+                        "@id": "ref31",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Reyes",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rosso",
+                                    "given-names": "P.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Buscaldi",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": [
+                                "2012",
+                                "2012"
+                            ],
+                            "article-title": "From humor recognition to irony detection: The figurative language of social media",
+                            "source": "Data & Knowledge Engineering",
+                            "volume": [
+                                "74",
+                                "10",
+                                "02"
+                            ],
+                            "fpage": "1",
+                            "lpage": "12",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.datak.\n          \n          .\n          \n          .005"
+                        }
+                    },
+                    {
+                        "@id": "ref32",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Reyes",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rosso",
+                                    "given-names": "P.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Veale",
+                                    "given-names": "T.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2013",
+                            "article-title": "A multidimensional approach for detecting irony in Twitter",
+                            "source": "Language Resources and Evaluation",
+                            "volume": [
+                                "47",
+                                "10"
+                            ],
+                            "issue": "1",
+                            "fpage": "239",
+                            "lpage": "268",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10579-012-9196-x"
+                        }
+                    },
+                    {
+                        "@id": "ref33",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Riffkin",
+                                "given-names": "R.",
+                                "#text": ","
+                            },
+                            "year": [
+                                "2015",
+                                "2015"
+                            ],
+                            "article-title": "-remains-historical-low",
+                            "#text": "(\n          \n          ,\n          \n          /09/28/). Americans' Trust in Media Remains at Historical Low. Gallup. Retrieved from http://www.gallup.com/poll/185927/americanstrust-media\n          \n          .aspx"
+                        }
+                    },
+                    {
+                        "@id": "ref34",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V. L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Chen",
+                                    "given-names": "Y.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Conroy",
+                                    "given-names": "N. J.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2015",
+                            "article-title": "Deception detection for news: three types of fakes. Paper presented at the Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref35",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V. L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Conroy",
+                                    "given-names": "N.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2012",
+                            "article-title": "Discerning truth from deception: Human judgments and automation efforts",
+                            "source": "First Monday",
+                            "volume": "17",
+                            "issue": "3",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ). Retrieved from http://firstmonday.org/ojs/index.php/fm/article/view/ 3933/3170"
+                        }
+                    },
+                    {
+                        "@id": "ref36",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "V. L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Lukoianova",
+                                    "given-names": "T.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2014",
+                            "article-title": "Truth and Deception at the Rhetorical Structure Level",
+                            "source": "Journal of the Association for Information Science and Technology",
+                            "volume": [
+                                "66",
+                                "10"
+                            ],
+                            "issue": "5",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 12. doi:\n          \n          .1002/asi.23216"
+                        }
+                    },
+                    {
+                        "@id": "ref37",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Simpson",
+                                "given-names": "P.",
+                                "#text": ","
+                            },
+                            "year": "2003",
+                            "source": "On the Discourse of Satire: John Benjamins Publishing Company.",
+                            "#text": "(\n          \n          )."
+                        }
+                    },
+                    {
+                        "@id": "ref38",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Sj\u00f6bergh",
+                                    "given-names": "J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Araki",
+                                    "given-names": "K.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2007",
+                            "article-title": "Recognizing humor without recognizing meaning",
+                            "source": "Paper presented at the International Workshop on Fuzzy Logic and Applications",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Camogli, Italy."
+                        }
+                    },
+                    {
+                        "@id": "ref39",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "The",
+                                "surname": "Media Insight Project."
+                            },
+                            "year": "2014",
+                            "article-title": "The rational and attentive news consumer",
+                            "#text": "(\n          \n          ).\n          \n          . Retrieved from https://www.americanpressinstitute.org/publications/ reports/survey-research/rational-attentive-newsconsumer/"
+                        }
+                    },
+                    {
+                        "@id": "ref40",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Tsfati",
+                                "given-names": "Y.",
+                                "#text": ","
+                            },
+                            "year": "2010",
+                            "article-title": "Online News Exposure and Trust in the Mainstream Media: Exploring Possible Associations",
+                            "volume": [
+                                "54",
+                                "10"
+                            ],
+                            "issue": "1",
+                            "fpage": "22",
+                            "lpage": "42",
+                            "#text": "(\n          \n          ).\n          \n          . American Behavioral Scientist,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/0002764210376309"
+                        }
+                    },
+                    {
+                        "@id": "ref41",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Tsur",
+                                    "given-names": "O.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Davidov",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Rappoport",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": [
+                                "2010",
+                                "2010"
+                            ],
+                            "article-title": "ICWSM - A Great Catchy Name: SemiSupervised Recognition of Sarcastic Sentences in Online Product Reviews",
+                            "source": "Paper presented at the Fourth International AAAI Conference on Web and Social Media",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          , May 23- 26\n          \n          ).\n          \n          .\n          \n          , George Washington University, Washington, D.C. USA."
+                        }
+                    },
+                    {
+                        "@id": "ref42",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Utsumi",
+                                "given-names": "A.",
+                                "#text": ","
+                            },
+                            "year": "2000",
+                            "article-title": "Verbal irony as implicit display of ironic environment: Distinguishing ironic utterances from nonirony",
+                            "source": "Journal of Pragmatics",
+                            "volume": [
+                                "32",
+                                "2166"
+                            ],
+                            "issue": [
+                                "12",
+                                "99"
+                            ],
+                            "fpage": [
+                                "1777",
+                                "00116"
+                            ],
+                            "lpage": [
+                                "1806",
+                                "2"
+                            ],
+                            "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref43",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Van Swol",
+                                "given-names": "L.",
+                                "#text": ","
+                            },
+                            "year": "2014",
+                            "article-title": "Truth Bias",
+                            "source": "Encyclopedia of Deception",
+                            "volume": "1",
+                            "fpage": "904",
+                            "lpage": "906",
+                            "#text": "(\n          \n          ).\n          \n          . In T. Levine (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Thousand Oaks, California: SAGE Publications."
+                        }
+                    },
+                    {
+                        "@id": "ref44",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Vrij",
+                                    "given-names": "A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Mann",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Leal",
+                                    "given-names": "S.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2012",
+                            "article-title": "Deception Traits in Psychological Interviewing",
+                            "source": "Journal of Police and Criminal Psychology",
+                            "volume": "28",
+                            "issue": "2",
+                            "fpage": "115",
+                            "lpage": "126",
+                            "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref45",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Wu",
+                                    "given-names": "Z.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Palmer",
+                                    "given-names": "M.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1994",
+                            "article-title": "Verbs semantics and lexical selection. Paper presented at the 32nd Annual Meeting of the Association for Computational Linguistics",
+                            "#text": ", &\n          \n          (\n          \n          ).\n          \n          , Las Cruces, New Mexico."
+                        }
+                    },
+                    {
+                        "@id": "ref46",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhou",
+                                    "given-names": "L.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Burgoon",
+                                    "given-names": "J. K.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Nunamaker",
+                                    "given-names": "J. F.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Twitchell",
+                                    "given-names": "D.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2004",
+                            "article-title": "Automating Linguistics-Based Cues for Detecting Deception in Text-Based Asynchronous Computer-Mediated Communications",
+                            "source": "Group Decision and Negotiation",
+                            "volume": "13",
+                            "issue": "1",
+                            "fpage": "81",
+                            "lpage": "106",
+                            "#text": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref47",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Ziv",
+                                "given-names": "A.",
+                                "#text": ","
+                            },
+                            "year": [
+                                "1988",
+                                "1988"
+                            ],
+                            "article-title": "Teaching and Learning with Humor",
+                            "source": "The Journal of Experimental Education",
+                            "volume": [
+                                "57",
+                                "10"
+                            ],
+                            "issue": "1",
+                            "fpage": "4",
+                            "lpage": "15",
+                            "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1080/00220973.\n          \n          .10806492"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

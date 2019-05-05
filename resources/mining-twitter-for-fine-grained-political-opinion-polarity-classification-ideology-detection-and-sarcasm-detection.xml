@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Mining Twitter for Fine-Grained Political Opin-
+ion Polarity Classification, Ideology Detection and Sarcasm Detection. In
+WSDM</journal-title>
+      </journal-title-group>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Mining Twiter for Fine-Grained Political Opinion Polarity Classification, Ideology Detection and Sarcasm Detection</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Sandeepa Kannangara</string-name>
+          <email>s.kannangara@unsw.edu.au</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>School of Computer Science and Engineering University of New South Wales Sydney NSW 2052</institution>
+          ,
+          <country country="AU">Australia</country>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2018</year>
+      </pub-date>
+      <volume>11</volume>
+      <fpage>751</fpage>
+      <lpage>752</lpage>
+      <abstract>
+        <p>In this paper, we propose three models for socio-political opinion polarity classification of microblog posts. Firstly, a novel probabilistic model, Joint-Entity-Sentiment-Topic (JEST) model, which captures opinions as a combination of the target entity, sentiment and topic, will be proposed. Secondly, a model for ideology detection called JEST-Ideology will be proposed to identify an individual's orientation towards topics/issues and target entities by extending the proposed opinion polarity classification framework. Finally, we propose a novel method to accurately detect sarcastic opinions by utilizing detected fine-grained opinion and ideology.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>INTRODUCTION</title>
+      <p>Opinions in social media platforms provide worldwide access to
+what people think about daily life topics/issues. Thus exploiting
+such a source of information to understand public opinion can
+be very useful in many scenarios, for example by political parties
+interested in monitoring attitudes towards their policies.</p>
+      <p>
+        The opinion mining research field aims to develop automated
+approaches to accurately analyse such opinion data. Although there
+is much previous work on opinion mining, the majority of early
+studies analysed text documents such as product and movie reviews
+[
+        <xref ref-type="bibr" rid="ref5">5</xref>
+        ]. Only a limited number of studies have attempted to analyse
+public opinion in a political context [
+        <xref ref-type="bibr" rid="ref4">4</xref>
+        ]. The nature of political
+discourse which often includes sarcasm and irony makes the analysis
+more challenging.
+      </p>
+      <p>
+        Most political opinion mining studies analysed election datasets
+with the aim of election result prediction. The approaches employed
+range from lexicon based methods [
+        <xref ref-type="bibr" rid="ref8">8</xref>
+        ] to supervised machine
+learning methods using algorithms such as SVM [
+        <xref ref-type="bibr" rid="ref1">1</xref>
+        ] and Deep Learning
+approaches [
+        <xref ref-type="bibr" rid="ref11">11</xref>
+        ] in recent years. However, most work in this area
+focuses on overall sentiment classification, though Maynard and
+Funk [
+        <xref ref-type="bibr" rid="ref8">8</xref>
+        ] considered identification of the opinion target and
+Vijayaraghavan et al. [
+        <xref ref-type="bibr" rid="ref11">11</xref>
+        ] addressed classification of the topics along
+with the sentiment.
+      </p>
+      <p>
+        An opinion is defined as a tuple of four components [
+        <xref ref-type="bibr" rid="ref7">7</xref>
+        ]:
+sentiment orientation, sentiment target, opinion holder, and time. The
+sentiment target is defined as an entity or an entity with possibily
+an aspect of the entity that the sentiment has been expressed upon.
+As an example, if a tweet expresses a negative sentiment towards
+the Labor Party regarding Employment/Jobs, Labor Party is the
+target entity and Employment/Jobs is the aspect of the entity. However,
+the majority of early studies in opinion mining attempted to detect
+only the overall sentiment [
+        <xref ref-type="bibr" rid="ref6">6</xref>
+        ], regardless of the entities mentioned
+and their aspects. After Hu and Liu?s [
+        <xref ref-type="bibr" rid="ref5">5</xref>
+        ] study, fine-grained opinion
+mining/aspect-based opinion mining became prominent. However,
+most of the aspect-based opinion mining studies [
+        <xref ref-type="bibr" rid="ref9">9</xref>
+        ] identified only
+aspect and sentiment by assuming a known target.
+      </p>
+      <p>In this research, we aim to address the current challenges in
+sociopolitical opinion mining from Twitter focusing on the identification
+of target entity, aspect and sentiment for fine-grained opinion
+mining. Identifying an individual?s political ideology/orientation from
+their reviews is also an important task for analysing political
+opinions. In general, opinions expressed toward the issues/topics of
+target entities are often indicative of political ideologies. For that,
+we propose a novel approach utilising the proposed opinion
+mining framework. Further, the presence of sarcasm is identified as
+a challenge for opinion polarity classification since sarcasm can
+potentially flip the polarity of the review. In this research, we will
+propose a novel method to detect sarcasm in tweets.
+2</p>
+    </sec>
+    <sec id="sec-2">
+      <title>THE PROPOSED RESEARCH</title>
+      <p>Overall, the aim of this research is to develop a framework for
+political opinion mining focusing on fine-grained opinion mining,
+sarcasm detection and ideology detection. To evaluate each
+proposed model, we use tweets collected during the 2016 Australasian
+Federal Election.
+2.1</p>
+    </sec>
+    <sec id="sec-3">
+      <title>Fine-Grained Political Opinion Polarity</title>
+    </sec>
+    <sec id="sec-4">
+      <title>Classification</title>
+      <p>
+        In this study, for fine-grained political opinion mining, we aim to
+extract the opinion target (e.g. candidates and political parties),
+topics discussed (e.g. Tax/Negative Gearing, Asylum Seekers/Refugees,
+etc.) and sentiment (Positive, Negative or Neutral) towards the
+target from each tweet. For this, we propose a fine-grained opinion
+mining model, called JEST (Joint-Entity-Sentiment-Topic), to jointly
+model all three dimensions, based on LDA [
+        <xref ref-type="bibr" rid="ref3">3</xref>
+        ].
+      </p>
+      <p>The strength of JEST is that all the component dimensions can
+help to improve each other during the joint modelling process. The
+rationale here is that it is possible to model each dimension as a
+latent variable in a graphical model. To distinguish the aspect and
+entity in the model, we utilize a knowledge base of entities which
+contains common names and hashtags used to represent entities in
+a predefined entity list. In this model, we assume that there is only
+one target entity and several or no topics in each tweet.</p>
+      <p>For evaluation, we use perplexity, which is the standard measure
+for evaluating topic models to compare the model with the selected
+baseline models. Furthermore, we will evaluate the document
+classification performance using distributions of the entity, target and
+sentiment generated by the model. However, since there is no prior
+work that models these three dimensions with similar assumptions,
+we need to select diferent baselines to evaluate each dimension.
+Furthermore, we can do qualitative analysis by manually inspecting
+the quality of the output.</p>
+    </sec>
+    <sec id="sec-5">
+      <title>2.2 Political Orientation Detection</title>
+      <p>For political orientation detection, we aim to identify a Twitter
+user?s political alignment. However, our definition of political
+alignment is a user?s set of political preferences over a range of policy
+positions of a party. For this, knowing the information such as
+user?s opinion towards candidates or parties and topics that are
+discussed in his/her tweets is important. We model such evidence
+in our JEST model and here we propose an extension of JEST, the
+JEST-Ideology model, incorporating the ideology dimension.</p>
+      <p>The JEST model is capable of identifying an entity, sentiment
+and topics for each tweet in the corpus. The JEST-Ideology model
+has a top layer which can identify the favourable topics and entities
+for each user. However, there can be tweets that do not contain
+topics but generally express an opinion towards an entity. We
+consider such situations by modelling the general ideology of the user
+towards entities. The generative process runs through each user
+and then tweets of each user. For the evaluation of the model, we
+can use the same approaches proposed for the JEST model.</p>
+    </sec>
+    <sec id="sec-6">
+      <title>2.3 Sarcasm Detection in Political Tweets</title>
+      <p>
+        Most previous approaches to sarcasm detection treat it as a purely
+linguistic matter, using information such as lexical cues and their
+corresponding sentiment as predictive features [
+        <xref ref-type="bibr" rid="ref2">2</xref>
+        ]. However,
+sarcasm has been extensively studied in the behavioural sciences and
+there are several theories explaining when, how and why sarcasm
+is expressed [
+        <xref ref-type="bibr" rid="ref10">10</xref>
+        ]. Those theories can be represented as contextual
+features by consider the user?s current and previous posts.
+      </p>
+      <p>In this research, we propose to use both linguistic and contextual
+features to detect sarcastic tweets. The accepted view is that sarcasm
+potentially flip the polarity of a review. Therefore, when we know
+the surface polarity of a tweet, to identify the situations where the
+actual polarity is diferent from surface polarity we can use the
+ideology of the author. If the ideology of the author is diferent
+from the surface polarity then we can infer that it is a sarcastic
+tweet. Therefore, as contextual features for the supervised model,
+we can use the ideology of the Twitter user and surface polarity by
+utilizing the results of JEST and JEST-Ideology models.</p>
+      <p>The performance of the proposed approach can be measured
+using accuracy, recall, precision and F-measure. Further, we will
+compare our models with existing sarcasm detection techniques.</p>
+    </sec>
+    <sec id="sec-7">
+      <title>3 CONCLUSION AND FUTURE WORK</title>
+      <p>This paper gives a brief overview of ongoing research on political
+opinion mining. We have identified three main research directions
+to automatically analyse political opinions in Twitter: fine-grained
+opinion polarity classification, ideology detection and sarcasm
+detection. We propose novel topic models, JEST and JEST-Ideology,
+which are capable of fine-grained opinion mining and ideology
+detection respectively. Finally, with the aim of improving opinion
+polarity classification performance, we propose a novel sarcasm
+detection model which uses ideology and fine-grained opinion as
+features with other linguistic features to classify sarcastic opinions.</p>
+      <p>In the future, it is essential to build these proposed models and
+evaluate model performance. A number of experiments are planned
+to select best performing model for each problem. Although, the
+models are proposed for the political domain, they are also
+applicable for other domain. Therefore, we are planning to conduct
+experiments using other datasets from diferent domains to evaluate
+the performance of the proposed models.</p>
+    </sec>
+    <sec id="sec-8">
+      <title>4 ACKNOWLEDGMENTS</title>
+      <p>I would like to sincerely thank my supervisor Wayne Wobcke,
+and Michael Bain, Alfred Krzywicki and Bradford Heap for their
+continuous mentoring and constant support. The work is supported
+by the Data to Decisions Cooperative Research Centre.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          [1]
+          <string-name>
+            <given-names>Akshat</given-names>
+            <surname>Bakliwal</surname>
+          </string-name>
+          , Jennifer Foster, Jennifer van der Puil,
+          <string-name>
+            <surname>Ron O'Brien</surname>
+            ,
+            <given-names>Lamia</given-names>
+          </string-name>
+          <string-name>
+            <surname>Tounsi</surname>
+            , and
+            <given-names>Mark</given-names>
+          </string-name>
+          <string-name>
+            <surname>Hughes</surname>
+          </string-name>
+          .
+          <year>2013</year>
+          .
+          <article-title>Sentiment Analysis of Political Tweets: Towards an Accurate Classifier</article-title>
+          .
+          <source>In Proceedings of the Workshop on Language in Social Media (LASM '13)</source>
+          .
+          <fpage>49</fpage>
+          -
+          <lpage>58</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          [2]
+          <string-name>
+            <given-names>David</given-names>
+            <surname>Bamman</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Noah A.</given-names>
+            <surname>Smith</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Contextualized Sarcasm Detection on Twitter</article-title>
+          .
+          <source>In Proceedings of the Ninth International AAAI Conference on Web and Social Media (ICWSM '15)</source>
+          .
+          <fpage>574</fpage>
+          -
+          <lpage>577</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          [3]
+          <string-name>
+            <surname>David</surname>
+            <given-names>M.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Blei</surname>
+            ,
+            <given-names>Andrew Y.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Ng</surname>
+            , and
+            <given-names>Michael I.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Jordan</surname>
+          </string-name>
+          .
+          <year>2003</year>
+          .
+          <article-title>Latent Dirichlet Allocation</article-title>
+          .
+          <source>Journal of Machine Learning Research</source>
+          <volume>3</volume>
+          (
+          <year>2003</year>
+          ),
+          <fpage>993</fpage>
+          -
+          <lpage>1022</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          [4]
+          <string-name>
+            <given-names>Hsinchun</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>David</given-names>
+            <surname>Zimbra</surname>
+          </string-name>
+          .
+          <year>2010</year>
+          .
+          <article-title>AI and Opinion Mining</article-title>
+          .
+          <source>IEEE Intelligent Systems</source>
+          <volume>25</volume>
+          ,
+          <issue>3</issue>
+          (
+          <year>2010</year>
+          ),
+          <fpage>74</fpage>
+          -
+          <lpage>80</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          [5]
+          <string-name>
+            <given-names>Minqing</given-names>
+            <surname>Hu</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Bing</given-names>
+            <surname>Liu</surname>
+          </string-name>
+          .
+          <year>2004</year>
+          .
+          <article-title>Mining and Summarizing Customer Reviews</article-title>
+          .
+          <source>In Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '04)</source>
+          .
+          <fpage>168</fpage>
+          -
+          <lpage>177</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          [6]
+          <string-name>
+            <given-names>Farhan</given-names>
+            <surname>Hassan</surname>
+          </string-name>
+          <string-name>
+            <surname>Khan</surname>
+          </string-name>
+          , Saba Bashir, and
+          <string-name>
+            <given-names>Usman</given-names>
+            <surname>Qamar</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          . TOM:
+          <article-title>Twitter Opinion Mining Framework Using Hybrid Classification Scheme</article-title>
+          .
+          <source>Decision Support Systems</source>
+          <volume>57</volume>
+          (
+          <year>2014</year>
+          ),
+          <fpage>245</fpage>
+          -
+          <lpage>257</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          [7]
+          <string-name>
+            <given-names>Bing</given-names>
+            <surname>Liu</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>Sentiment Analysis and Opinion Mining</article-title>
+          . Morgan &amp; Claypool.
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          [8]
+          <string-name>
+            <given-names>Diana</given-names>
+            <surname>Maynard</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Adam</given-names>
+            <surname>Funk</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>Automatic Detection of Political Opinions in Tweets</article-title>
+          . In The Semantic Web:
+          <article-title>ESWC 2011 Workshops, Raúl García-Castro, Dieter Fensel</article-title>
+          , and Grigoris Antoniou (Eds.). Springer-Verlag, Berlin,
+          <fpage>88</fpage>
+          -
+          <lpage>99</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <given-names>Guang</given-names>
+            <surname>Qiu</surname>
+          </string-name>
+          , Bing Liu, Jiajun Bu, and
+          <string-name>
+            <given-names>Chun</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          .
+          <year>2011</year>
+          .
+          <article-title>Opinion Word Expansion and Target Extraction through Double Propagation</article-title>
+          .
+          <source>Computational Linguistics</source>
+          <volume>37</volume>
+          ,
+          <issue>1</issue>
+          (
+          <year>2011</year>
+          ),
+          <fpage>9</fpage>
+          -
+          <lpage>27</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          [10]
+          <string-name>
+            <surname>Ashwin</surname>
+            <given-names>Rajadesingan</given-names>
+          </string-name>
+          , Reza Zafarani, and Huan Liu.
+          <year>2015</year>
+          .
+          <article-title>Sarcasm Detection on Twitter: A Behavioral Modeling Approach</article-title>
+          .
+          <source>In Proceedings of the Eighth ACM International Conference on Web Search and Data Mining (WSDM '15)</source>
+          .
+          <fpage>97</fpage>
+          -
+          <lpage>106</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          [11]
+          <string-name>
+            <surname>Prashanth</surname>
+            <given-names>Vijayaraghavan</given-names>
+          </string-name>
+          , Soroush Vosoughi, and
+          <string-name>
+            <given-names>Deb</given-names>
+            <surname>Roy</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>Automatic Detection and Categorization of Election-Related Tweets</article-title>
+          .
+          <source>In Proceedings of the Tenth International Conference on Web and Social Media (ICWSM '16)</source>
+          .
+          <fpage>703</fpage>
+          -
+          <lpage>706</lpage>
+          .
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+

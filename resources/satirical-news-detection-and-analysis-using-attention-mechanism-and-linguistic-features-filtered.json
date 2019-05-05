@@ -1,0 +1,1165 @@
+{
+    "abstract": {
+        "p": "Satirical news is considered to be entertainment, but it is potentially deceptive and harmful. Despite the embedded genre in the article, not everyone can recognize the satirical cues and therefore believe the news as true news. We observe that satirical cues are often reflected in certain paragraphs rather than the whole document. Existing works only consider documentlevel features to detect the satire, which could be limited. We consider paragraphlevel linguistic features to unveil the satire by incorporating neural network and attention mechanism. We investigate the difference between paragraph-level features and document-level features, and analyze them on a large satirical news dataset. The evaluation shows that the proposed model detects satirical news effectively and reveals what features are important at which level."
+    },
+    "affiliation": [
+        {
+            "@id": "aff0",
+            "institution": "Computer and Information Sciences, Temple University",
+            "label": "0"
+        },
+        {
+            "@id": "aff1",
+            "institution": "Department of Computer Science, University of Houston",
+            "label": "1"
+        }
+    ],
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "email": [
+                "arjung@uh.edu",
+                "ffyang11,arjung@uh.edu"
+            ],
+            "string-name": "Fan Yang and Arjun Mukherjee",
+            "xref": {
+                "#text": "1",
+                "@ref-type": "aff",
+                "@rid": "aff1"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "edragut@temple.edu",
+            "string-name": "Eduard Gragut",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        }
+    ],
+    "journal": null,
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/satirical-news-detection-and-analysis-using-attention-mechanism-and-linguistic-features.json",
+    "pub_date": null,
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": ",\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . IEEE.",
+                "article-title": "Detecting hoaxes, frauds, and deception in writing style online",
+                "fpage": "461",
+                "lpage": "475",
+                "source": "In 2012 IEEE Symposium on Security and Privacy",
+                "string-name": [
+                    {
+                        "given-names": "Sadia",
+                        "surname": "Afroz"
+                    },
+                    {
+                        "given-names": "Michael",
+                        "surname": "Brennan"
+                    },
+                    {
+                        "given-names": "Rachel",
+                        "surname": "Greenstadt"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": ", Kyunghyun Cho, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Neural machine translation by jointly learning to align and translate",
+                "fpage": "0473",
+                "source": "arXiv preprint arXiv:1409",
+                "string-name": [
+                    {
+                        "given-names": "Dzmitry",
+                        "surname": "Bahdanau"
+                    },
+                    {
+                        "given-names": "Yoshua",
+                        "surname": "Bengio"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": ", Francesco Ronzano, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          .",
+                "article-title": "Do we criticise (and laugh) in the same way? automatic detection of multi-lingual satirical news in twitter",
+                "fpage": "1215",
+                "lpage": "1221",
+                "source": "In IJCAI",
+                "string-name": [
+                    {
+                        "given-names": "Francesco",
+                        "surname": "Barbieri"
+                    },
+                    {
+                        "given-names": "Horacio",
+                        "surname": "Saggion"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "Fre\u00b4de\u00b4ric Bastien, Pascal Lamblin, Razvan Pascanu, James Bergstra, Ian Goodfellow, Arnaud Bergeron, Nicolas Bouchard, David Warde-Farley, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Theano: new features and speed improvements",
+                "fpage": "5590",
+                "source": "arXiv preprint arXiv:1211",
+                "string-name": {
+                    "given-names": "Yoshua",
+                    "surname": "Bengio"
+                },
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics.",
+                "article-title": "Automatic satire detection: Are you having a laugh? In Proceedings of the ACL-IJCNLP 2009 conference short papers",
+                "fpage": "161",
+                "lpage": "164",
+                "string-name": [
+                    {
+                        "given-names": "Clint",
+                        "surname": "Burfoot"
+                    },
+                    {
+                        "given-names": "Timothy",
+                        "surname": "Baldwin"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": ", Marcelo Mendoza, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Information credibility on twitter",
+                "fpage": "675",
+                "lpage": "684",
+                "source": "In Proceedings of the 20th international conference on World wide web",
+                "string-name": [
+                    {
+                        "given-names": "Carlos",
+                        "surname": "Castillo"
+                    },
+                    {
+                        "given-names": "Barbara",
+                        "surname": "Poblete"
+                    }
+                ],
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": ", Jason Bolton, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "A thorough examination of the cnn/daily mail reading comprehension task",
+                "fpage": "02858",
+                "source": "arXiv preprint arXiv:1606",
+                "string-name": [
+                    {
+                        "given-names": "Danqi",
+                        "surname": "Chen"
+                    },
+                    {
+                        "given-names": "Christopher D",
+                        "surname": "Manning"
+                    }
+                ],
+                "year": "2016a"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": ", Maosong Sun, Cunchao Tu,\n          \n          , and Zhiyuan Liu. 2016b.\n          \n          .",
+                "article-title": "Neural sentiment classification with user and product attention",
+                "source": "In Proceedings of EMNLP.",
+                "string-name": [
+                    {
+                        "given-names": "Huimin",
+                        "surname": "Chen"
+                    },
+                    {
+                        "given-names": "Yankai",
+                        "surname": "Lin"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": ",\n          \n          , and Victoria L Rubin.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Misleading online content: Recognizing clickbait as false news",
+                "fpage": "15",
+                "lpage": "19",
+                "source": "In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection",
+                "string-name": [
+                    {
+                        "given-names": "Yimin",
+                        "surname": "Chen"
+                    },
+                    {
+                        "surname": "Niall J Conroy"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": ", Bart Van Merrie\u00a8nboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Learning phrase representations using rnn encoder-decoder for statistical machine translation",
+                "fpage": "1078",
+                "source": "arXiv preprint arXiv:1406",
+                "string-name": [
+                    {
+                        "given-names": "Kyunghyun",
+                        "surname": "Cho"
+                    },
+                    {
+                        "given-names": "Yoshua",
+                        "surname": "Bengio"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          .",
+                "article-title": "A computer readability formula designed for machine scoring",
+                "fpage": "283",
+                "issue": "2",
+                "source": "Journal of Applied Psychology",
+                "string-name": {
+                    "given-names": "Meri",
+                    "surname": "Coleman and Ta Lin Liau"
+                },
+                "volume": "60",
+                "year": "1975"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": ", Camillo Lugaresi, Shaohua Sun,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          .",
+                "article-title": "Knowledge-based trust: Estimating the trustworthiness of web sources",
+                "fpage": "938",
+                "issue": "9",
+                "lpage": "949",
+                "source": "Proceedings of the VLDB Endowment",
+                "string-name": [
+                    {
+                        "given-names": "Xin",
+                        "surname": "Luna"
+                    },
+                    {
+                        "#text": ", Evgeniy Gabrilovich, Kevin Murphy, Van Dang,",
+                        "given-names": "Dong",
+                        "surname": "Wilko Horn"
+                    },
+                    {
+                        "given-names": "and Wei",
+                        "surname": "Zhang"
+                    }
+                ],
+                "volume": "8",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          , page\n          \n          .",
+                "article-title": "News satire in the press: Linguistic construction of humour inspoof news articles. Language and humour in the media",
+                "string-name": {
+                    "given-names": "Isabel",
+                    "surname": "Ermida"
+                },
+                "volume": "185",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": ", Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Fake news mitigation via point process based intervention",
+                "fpage": "07823",
+                "source": "arXiv preprint arXiv:1703",
+                "string-name": [
+                    {
+                        "given-names": "Mehrdad",
+                        "surname": "Farajtabar"
+                    },
+                    {
+                        "given-names": "Shuang",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Le",
+                        "surname": "Song"
+                    },
+                    {
+                        "given-names": "Hongyuan",
+                        "surname": "Zha"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": ", Ritwik Banerjee, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics.",
+                "article-title": "Syntactic stylometry for deception detection",
+                "fpage": "171",
+                "lpage": "175",
+                "source": "In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Short Papers-Volume",
+                "string-name": [
+                    {
+                        "given-names": "Song",
+                        "surname": "Feng"
+                    },
+                    {
+                        "given-names": "Yejin",
+                        "surname": "Choi"
+                    }
+                ],
+                "volume": "2",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": ",\n          \n          and\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Melissa A Menasco,",
+                    "Human behavior and deception detection"
+                ],
+                "source": "Wiley Handbook of Science and Technology for Homeland Security.",
+                "string-name": [
+                    {
+                        "surname": "Mark G Frank"
+                    },
+                    {
+                        "surname": "Maureen O'Sullivan"
+                    }
+                ],
+                "year": "2008"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Multi-source deep learning for information trustworthiness estimation",
+                "fpage": "766",
+                "lpage": "774",
+                "source": "In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining",
+                "string-name": [
+                    {
+                        "given-names": "Liang",
+                        "surname": "Ge"
+                    },
+                    {
+                        "given-names": "Jing",
+                        "surname": "Gao"
+                    },
+                    {
+                        "given-names": "Xiaoyi",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "and Aidong",
+                        "surname": "Zhang"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .",
+                "article-title": "The technique of clear writing",
+                "string-name": {
+                    "given-names": "Robert",
+                    "surname": "Gunning"
+                },
+                "year": "1952"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": ",\n          \n          , and Jiawei Han.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . SIAM.",
+                "article-title": "Evaluating event credibility on twitter",
+                "fpage": "153",
+                "lpage": "164",
+                "source": "In SDM",
+                "string-name": [
+                    {
+                        "given-names": "Manish",
+                        "surname": "Gupta"
+                    },
+                    {
+                        "given-names": "Peixiang",
+                        "surname": "Zhao"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "and Ju\u00a8rgen Schmidhuber.\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          .",
+                "article-title": "Long short-term memory",
+                "fpage": "1735",
+                "issue": "8",
+                "lpage": "1780",
+                "source": "Neural computation",
+                "string-name": {
+                    "given-names": "Sepp",
+                    "surname": "Hochreiter"
+                },
+                "volume": "9",
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "This just in: Fake news packs a lot in title, uses simpler, repetitive content in text body, more similar to satire than real news",
+                "fpage": "09398",
+                "source": "arXiv preprint arXiv:1703",
+                "string-name": [
+                    {
+                        "#text": "and",
+                        "given-names": "Sibel",
+                        "surname": "Benjamin D Horne"
+                    },
+                    {
+                        "surname": "Adali"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": ", Pushpak Bhattacharyya, and Mark James Carman.\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Automatic sarcasm detection: A survey",
+                "fpage": "03426",
+                "source": "arXiv preprint arXiv:1602",
+                "string-name": {
+                    "given-names": "Aditya",
+                    "surname": "Joshi"
+                },
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": ", Robert P Fishburne Jr, Richard L Rogers, and Brad S Chissom.\n          \n          .\n          \n          .",
+                "article-title": "Derivation of new readability formulas (automated readability index, fog count and flesch reading ease formula) for navy enlisted personnel",
+                "source": "Technical report, DTIC Document.",
+                "string-name": {
+                    "surname": "J Peter Kincaid"
+                },
+                "year": "1975"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          . In ICML, volume\n          \n          , pages\n          \n          -\n          \n          .",
+                "article-title": "Distributed representations of sentences and documents",
+                "fpage": "1188",
+                "lpage": "1196",
+                "string-name": [
+                    {
+                        "given-names": "V",
+                        "surname": "Quoc"
+                    },
+                    {
+                        "#text": "and",
+                        "given-names": "Tomas",
+                        "surname": "Le"
+                    },
+                    {
+                        "surname": "Mikolov"
+                    }
+                ],
+                "volume": "14",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Citeseer.",
+                "article-title": "Towards a general rule for identifying deceptive opinion spam",
+                "fpage": "1566",
+                "lpage": "1576",
+                "source": "In ACL (1)",
+                "string-name": [
+                    {
+                        "given-names": "Jiwei",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Myle",
+                        "surname": "Ott"
+                    },
+                    {
+                        "given-names": "Claire",
+                        "surname": "Cardie"
+                    },
+                    {
+                        "surname": "Eduard H Hovy"
+                    }
+                ],
+                "year": "2014a"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Resolving conflicts in heterogeneous data by truth discovery and source reliability estimation",
+                "fpage": "1187",
+                "lpage": "1198",
+                "source": "In Proceedings of the 2014 ACM SIGMOD international conference on Management of data",
+                "string-name": [
+                    {
+                        "given-names": "Qi",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Yaliang",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Jing",
+                        "surname": "Gao"
+                    },
+                    {
+                        "given-names": "Bo",
+                        "surname": "Zhao"
+                    },
+                    {
+                        "given-names": "Wei",
+                        "surname": "Fan"
+                    }
+                ],
+                "year": "2014b"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": ",\n          \n          , and\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Verification of fact statements with multiple truthful alternatives",
+                "source": "In 12th International Conference on Web Information Systems and Technologies.",
+                "string-name": [
+                    {
+                        "given-names": "Xian",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Weiyi",
+                        "surname": "Meng"
+                    },
+                    {
+                        "given-names": "Yu",
+                        "surname": "Clement"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          , Lu Su,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "On the discovery of evolving truth",
+                "fpage": "675",
+                "lpage": "684",
+                "source": "In Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+                "string-name": [
+                    {
+                        "given-names": "Yaliang",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Qi",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "Jing",
+                        "surname": "Gao"
+                    },
+                    {
+                        "given-names": "Bo",
+                        "surname": "Zhao"
+                    },
+                    {
+                        "given-names": "Wei",
+                        "surname": "Fan"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": ", Eduard C Dragut,\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          .",
+                "article-title": "Florin: a system to support (near) real-time applications on user generated content on daily news",
+                "fpage": "1944",
+                "issue": "12",
+                "lpage": "1947",
+                "source": "Proceedings of the VLDB Endowment",
+                "string-name": [
+                    {
+                        "given-names": "Qingyuan",
+                        "surname": "Liu"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Weiyi",
+                        "surname": "Arjun Mukherjee"
+                    },
+                    {
+                        "surname": "Meng"
+                    }
+                ],
+                "volume": "8",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          , Berlin, Germany. Association for Computational Linguistics.",
+                "article-title": "End-to-end sequence labeling via bi-directional lstm-cnns-crf",
+                "fpage": "1064",
+                "lpage": "1074",
+                "source": "In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+                "string-name": [
+                    {
+                        "given-names": "Xuezhe",
+                        "surname": "Ma"
+                    },
+                    {
+                        "given-names": "Eduard",
+                        "surname": "Hovy"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics.",
+                "article-title": "The lie detector: Explorations in the automatic recognition of deceptive language",
+                "fpage": "309",
+                "lpage": "312",
+                "source": "In Proceedings of the ACLIJCNLP 2009 Conference Short Papers",
+                "string-name": [
+                    {
+                        "given-names": "Rada",
+                        "surname": "Mihalcea"
+                    },
+                    {
+                        "given-names": "Carlo",
+                        "surname": "Strapparava"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": ", Abhinav Kumar, Bing Liu, Junhui Wang, Meichun Hsu, Malu Castellanos, and\n          \n          . 2013a.\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Spotting opinion spammers using behavioral footprints",
+                "fpage": "632",
+                "lpage": "640",
+                "source": "In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining",
+                "string-name": [
+                    {
+                        "given-names": "Arjun",
+                        "surname": "Mukherjee"
+                    },
+                    {
+                        "given-names": "Riddhiman",
+                        "surname": "Ghosh"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": ", Vivek Venkataraman, Bing Liu, and\n          \n          2013b.\n          \n          .",
+                "article-title": "What yelp fake review filter might be doing? In ICWSM",
+                "string-name": [
+                    {
+                        "given-names": "Arjun",
+                        "surname": "Mukherjee"
+                    },
+                    {
+                        "given-names": "S Glance.",
+                        "surname": "Natalie"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Leveraging joint interactions for credibility analysis in news communities",
+                "fpage": "353",
+                "lpage": "362",
+                "source": "In Proceedings of the 24th ACM International on Conference on Information and Knowledge Management",
+                "string-name": [
+                    {
+                        "given-names": "Subhabrata",
+                        "surname": "Mukherjee"
+                    },
+                    {
+                        "given-names": "Gerhard",
+                        "surname": "Weikum"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": ", Yejin Choi,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics.",
+                "article-title": "Finding deceptive opinion spam by any stretch of the imagination",
+                "fpage": "309",
+                "lpage": "319",
+                "source": "In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies-Volume",
+                "string-name": [
+                    {
+                        "given-names": "Myle",
+                        "surname": "Ott"
+                    },
+                    {
+                        "given-names": "Claire",
+                        "surname": "Cardie"
+                    },
+                    {
+                        "surname": "Jeffrey T Hancock"
+                    }
+                ],
+                "volume": "1",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": ",\n          \n          K Chung, Molly Ireland, Amy Gonzales, and\n          \n          J Booth.\n          \n          .\n          \n          . austin, tx, liwc. net.",
+                "article-title": [
+                    "Cindy",
+                    "The development and psychometric properties of liwc2007"
+                ],
+                "string-name": [
+                    {
+                        "surname": "James W Pennebaker"
+                    },
+                    {
+                        "surname": "Roger"
+                    }
+                ],
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref37",
+            "mixed-citation": {
+                "#text": ", Richard Socher, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , volume\n          \n          , pages\n          \n          -\n          \n          .",
+                "article-title": "Glove: Global vectors for word representation",
+                "fpage": "1532",
+                "lpage": "1543",
+                "source": "In EMNLP",
+                "string-name": [
+                    {
+                        "given-names": "Pennington",
+                        "surname": "Jeffrey"
+                    },
+                    {
+                        "given-names": "Christopher D",
+                        "surname": "Manning"
+                    }
+                ],
+                "volume": "14",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref38",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          .",
+                "article-title": [
+                    "Vero\u00b4nica Pe\u00b4rez-",
+                    "Cross-cultural deception detection"
+                ],
+                "fpage": "440",
+                "lpage": "445",
+                "source": "In ACL (2)",
+                "string-name": [
+                    {
+                        "#text": "and",
+                        "given-names": "Rada",
+                        "surname": "Rosas"
+                    },
+                    {
+                        "surname": "Mihalcea"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref39",
+            "mixed-citation": {
+                "#text": ", Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "A stylometric inquiry into hyperpartisan and fake news",
+                "fpage": "05638",
+                "source": "arXiv preprint arXiv:1702",
+                "string-name": [
+                    {
+                        "given-names": "Martin",
+                        "surname": "Potthast"
+                    },
+                    {
+                        "given-names": "Benno",
+                        "surname": "Stein"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref40",
+            "mixed-citation": {
+                "#text": ", Andrew Wilson, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          .",
+                "article-title": "Grammatical word class variation within the british national corpus sampler",
+                "fpage": "295",
+                "issue": "1",
+                "lpage": "306",
+                "source": "Language and Computers",
+                "string-name": [
+                    {
+                        "given-names": "Paul",
+                        "surname": "Rayson"
+                    },
+                    {
+                        "given-names": "Geoffrey",
+                        "surname": "Leech"
+                    }
+                ],
+                "volume": "36",
+                "year": "2001"
+            }
+        },
+        {
+            "@id": "ref41",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          , Valletta, Malta. ELRA. http://is.muni.cz/ publication/884893/en.",
+                "article-title": [
+                    "Radim R? ehu?r?ek",
+                    "Software Framework for Topic Modelling with Large Corpora"
+                ],
+                "fpage": "45",
+                "lpage": "50",
+                "source": "In Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks",
+                "string-name": {
+                    "given-names": "Petr",
+                    "surname": "Sojka"
+                },
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref42",
+            "mixed-citation": {
+                "#text": ", Paolo Rosso, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          -\n          \n          .",
+                "article-title": "From humor recognition to irony detection: The figurative language of social media",
+                "fpage": "1",
+                "lpage": "12",
+                "source": "Data & Knowledge Engineering",
+                "string-name": [
+                    {
+                        "given-names": "Antonio",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "given-names": "Davide",
+                        "surname": "Buscaldi"
+                    }
+                ],
+                "volume": "74",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref43",
+            "mixed-citation": {
+                "#text": "\u00a8schel, Edward Grefenstette, Karl Moritz Hermann, Toma\u00b4s? Koc?isky`, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          .",
+                "article-title": "Reasoning about entailment with neural attention",
+                "fpage": "06664",
+                "source": "arXiv preprint arXiv:1509",
+                "string-name": [
+                    {
+                        "given-names": "Tim",
+                        "surname": "Rockta"
+                    },
+                    {
+                        "given-names": "Phil",
+                        "surname": "Blunsom"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref44",
+            "mixed-citation": {
+                "#text": ", Niall Conroy, Yimin Chen, and\n          \n          .\n          \n          .\n          \n          .\n          \n          to Deception Detection, pages\n          \n          -\n          \n          , San Diego, California. Association for Computational Linguistics.",
+                "article-title": "Fake news or truth? using satirical cues to detect potentially misleading news",
+                "fpage": "7",
+                "lpage": "17",
+                "source": "In Proceedings of the Second Workshop on Computational Approaches",
+                "string-name": [
+                    {
+                        "given-names": "Victoria",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "given-names": "Sarah",
+                        "surname": "Cornwell"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref45",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .",
+                "article-title": "Automated readability index",
+                "source": [
+                    "RJ Senter and Edgar A Smith",
+                    "Technical report, DTIC Document."
+                ],
+                "year": "1967"
+            }
+        },
+        {
+            "@id": "ref46",
+            "mixed-citation": {
+                "#text": ", Dan Klein,\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics.",
+                "article-title": "Feature-rich part-ofspeech tagging with a cyclic dependency network",
+                "fpage": "173",
+                "lpage": "180",
+                "source": "In Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language TechnologyVolume 1",
+                "string-name": [
+                    {
+                        "given-names": "Kristina",
+                        "surname": "Toutanova"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Yoram",
+                        "surname": "Christopher D Manning"
+                    },
+                    {
+                        "surname": "Singer"
+                    }
+                ],
+                "year": "2003"
+            }
+        },
+        {
+            "@id": "ref47",
+            "mixed-citation": {
+                "#text": ", Xiangyu Chen, Lance Kaplan, Jiawei Han,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "From truth discovery to trustworthy opinion discovery: An uncertainty-aware quantitative modeling approach",
+                "fpage": "1885",
+                "lpage": "1894",
+                "source": "In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+                "string-name": [
+                    {
+                        "given-names": "Mengting",
+                        "surname": "Wan"
+                    },
+                    {
+                        "given-names": "Jing",
+                        "surname": "Gao"
+                    },
+                    {
+                        "given-names": "Bo",
+                        "surname": "Zhao"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref48",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          , Fenglong Ma, Lu Su, Yunlong Feng,\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Towards confidence in the truth: A bootstrapping based truth discovery approach",
+                "fpage": "1935",
+                "lpage": "1944",
+                "source": "In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+                "string-name": [
+                    {
+                        "given-names": "Houping",
+                        "surname": "Xiao"
+                    },
+                    {
+                        "given-names": "Jing",
+                        "surname": "Gao"
+                    },
+                    {
+                        "given-names": "Qi",
+                        "surname": "Li"
+                    },
+                    {
+                        "given-names": "and Aidong",
+                        "surname": "Zhang"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref49",
+            "mixed-citation": {
+                "#text": ",\n          \n          , and Yifan Zhang. 2016a.\n          \n          .\n          \n          \n          ,\n          \n          , pages\n          \n          -\n          \n          , Osaka, Japan.",
+                "article-title": "Leveraging multiple domains for sentiment classification",
+                "fpage": "2978",
+                "lpage": "2988",
+                "source": [
+                    "In Proceedings of COLING",
+                    "the 26th International Conference on Computational Linguistics: Technical Papers",
+                    "The COLING 2016 Organizing Committee."
+                ],
+                "string-name": [
+                    {
+                        "given-names": "Fan",
+                        "surname": "Yang"
+                    },
+                    {
+                        "given-names": "Arjun",
+                        "surname": "Mukherjee"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref50",
+            "mixed-citation": {
+                "#text": ",\n          \n          , Chris Dyer, Xiaodong He,\n          \n          \n          . 2016b.\n          \n          .\n          \n          , Jiawei Han, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          .",
+                "article-title": [
+                    "Hierarchical attention networks for document classification",
+                    "Truth discovery with multiple conflicting information providers on the web"
+                ],
+                "fpage": "796",
+                "issue": "6",
+                "lpage": "808",
+                "source": [
+                    "In Proceedings of the 2016 Conference of the North Xiaoxin Yin",
+                    "IEEE Transactions on Knowledge and Data Engineering"
+                ],
+                "string-name": [
+                    {
+                        "given-names": "Zichao",
+                        "surname": "Yang"
+                    },
+                    {
+                        "given-names": "Diyi",
+                        "surname": "Yang"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Eduard",
+                        "surname": "Alex Smola"
+                    },
+                    {
+                        "surname": "Hovy"
+                    },
+                    {
+                        "given-names": "S Yu",
+                        "surname": "Philip"
+                    }
+                ],
+                "volume": "20",
+                "year": "2008"
+            }
+        },
+        {
+            "@id": "ref51",
+            "mixed-citation": {
+                "#text": ",\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM.",
+                "article-title": "Enquiring minds: Early detection of rumors in social media from enquiry posts",
+                "fpage": "1395",
+                "lpage": "1405",
+                "source": "In Proceedings of the 24th International Conference on World Wide Web",
+                "string-name": [
+                    {
+                        "given-names": "Zhe",
+                        "surname": "Zhao"
+                    },
+                    {
+                        "given-names": "Paul",
+                        "surname": "Resnick"
+                    },
+                    {
+                        "given-names": "Qiaozhu",
+                        "surname": "Mei"
+                    }
+                ],
+                "year": "2015"
+            }
+        }
+    ],
+    "title": "Satirical News Detection and Analysis using Attention Mechanism and Linguistic Features"
+}

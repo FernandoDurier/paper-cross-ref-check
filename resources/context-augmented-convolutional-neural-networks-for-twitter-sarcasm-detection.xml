@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta />
+    <article-meta>
+      <title-group>
+        <article-title>Context-aware Convolutional Neural Networks for Twitter Sentiment Analysis in Italian</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Giuseppe Castellucci</string-name>
+          <email>castellucci@ing.uniroma2.it</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Danilo Croce</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Roberto Basili</string-name>
+          <email>basilig@info.uniroma2.it</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Department of Enterprise Engineering University of Roma</institution>
+          ,
+          <addr-line>Tor Vergata Via del Politecnico 1, 00133 Roma</addr-line>
+          ,
+          <country country="IT">Italy</country>
+        </aff>
+      </contrib-group>
+      <abstract>
+        <p>English. This paper describes the Unitor system that participated to the SENTIment POLarity Classification task proposed in Evalita 2016. The system implements a classification workflow made of several Convolutional Neural Network classifiers, that generalize the linguistic information observed in the training tweets by considering also their context. Moreover, sentiment specific information is injected in the training process by using Polarity Lexicons automatically acquired through the automatic analysis of unlabeled collection of tweets. Unitor achieved the best results in the Subjectivity Classification sub-task, and it scored 2nd in the Polarity Classification sub-task, among about 25 different submissions.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>-</title>
+      <p>Italiano. Questo lavoro descrive il
+sistema Unitor valutato nel task di
+SENTIment POLarity Classification proposto
+all?interno di Evalita 2016. Il sistema e´
+basato su un workflow di classificazione
+implementato usando Convolutional
+Neural Network, che generalizzano le evidenze
+osservabili all?interno dei dati di
+addestramento analizzando i loro contesti e
+sfruttando lessici specifici per la analisi
+del sentimento, generati automaticamente.
+Il sistema ha ottenuto ottimi risultati,
+ottenendo la miglior performance nel task di
+Subjectivity Classification e la seconda nel
+task di Polarity Classification.</p>
+    </sec>
+    <sec id="sec-2">
+      <title>1 Introduction</title>
+      <p>
+        In this paper, the Unitor system participating
+in the Sentiment Polarity Classification
+(SENTIPOLC) task (Barbieri et al.,
+        <xref ref-type="bibr" rid="ref1">2016) within the
+Evalita 2016</xref>
+        evaluation campaign is described.
+The system is based on a cascade of three
+classifiers based on Deep Learning methods and it
+has been applied to all the three sub-tasks of
+SENTIPOLC: Subjectivity Classification,
+Polarity Classification and the pilot task called Irony
+Detection. Each classifier is implemented with
+a Convolutional Neural Network (CNN)
+        <xref ref-type="bibr" rid="ref10">(LeCun
+et al., 1998)</xref>
+        according the modeling proposed in
+        <xref ref-type="bibr" rid="ref5">(Croce et al., 2016)</xref>
+        . The adopted solution
+extends the CNN architecture proposed in
+        <xref ref-type="bibr" rid="ref8">(Kim,
+2014)</xref>
+        with (i) sentiment specific information
+derived from an automatically derived polarity
+lexicon
+        <xref ref-type="bibr" rid="ref3 ref4">(Castellucci et al., 2015a)</xref>
+        , and (ii) with the
+contextual information associated with each tweet
+(see
+        <xref ref-type="bibr" rid="ref3 ref4">(Castellucci et al., 2015b)</xref>
+        for more
+information about the contextual modeling in SA in
+Twitter). The Unitor system ranked 1st in the
+Subjectivity Classification task and 2nd in the
+Polarity Detection task among the unconstrained
+systems, resulting as one of the best solution in the
+challenge. It is a remarkable result as the CNNs
+have been trained without any complex feature
+engineering but adopting almost the same modeling
+in each sub-task. The proposed solution allows
+to achieve state-of-the-art results in Subjectivity
+Classification and Polarity Classification task by
+applying unsupervised analysis of unlabeled data
+that can be easily gathered by Twitter.
+      </p>
+      <p>In Section 2 the deep learning architecture
+adopted in Unitor is presented, while the
+classification workflow is presented in 3. In Section
+4 the experimental results are reported and
+discussed, while Section 5 derives the conclusions.
+2</p>
+    </sec>
+    <sec id="sec-3">
+      <title>A Sentiment and Context aware</title>
+    </sec>
+    <sec id="sec-4">
+      <title>Convolutional Neural Networks</title>
+      <p>
+        The Unitor system is based on the
+Convolutional Neural Network (CNN) architecture for text
+classification proposed in
+        <xref ref-type="bibr" rid="ref8">(Kim, 2014)</xref>
+        , and further
+extended in
+        <xref ref-type="bibr" rid="ref5">(Croce et al., 2016)</xref>
+        . This deep
+network is characterized by 4 layers (see Figure 1).
+      </p>
+      <p>
+        The first layer represents the input through word
+embedding: it is a low-dimensional representation
+of words, which is derived by the unsupervised
+analysis of large-scale corpora, with approaches
+similar to
+        <xref ref-type="bibr" rid="ref11">(Mikolov et al., 2013)</xref>
+        . The embedding
+of a vocabulary V is a look-up table E, where
+each element is the d dimensional representation
+of a word. Details about this representation will
+be discussed in the next sections. Let xi 2 Rd be
+the d-dimensional representation of the i-th word.
+A sentence of length n is represented through the
+concatenation of the word vectors composing it,
+i.e., a matrix I whose dimension is n d.
+      </p>
+      <p>The second layer represents the convolutional
+features that are learned during the training stage.
+A filter, or feature detector, W 2 Rf d, is applied
+over the input layer matrix producing the learned
+representations. In particular, a new feature ci is
+learned according to: ci = g(W Ii:i+f 1 + b),
+where g is a non-linear function, such as the
+rectifier function, b 2 R is a bias term and
+Ii:i+f 1 is a portion of the input matrix along
+the first dimension. In particular, the filter slides
+over the input matrix producing a feature map
+c = [c1; : : : ; cn h+1]. The filter is applied over the
+whole input matrix by assuming two key aspects:
+local invariance and compositionality. The former
+specifies that the filter should learn to detect
+patterns in texts without considering their exact
+position in the input. The latter specifies that each
+local patch of height f , i.e., a f -gram, of the input
+should be considered in the learned feature
+representations. Ideally, a f -gram is composed through
+W into a higher level representation.</p>
+      <p>In practice, multiple filters of different heights
+can be applied resulting in a set of learned
+representations, which are combined in a third
+layer through the max-over-time operation, i.e.,
+c~ = maxfcg. It is expected to select the most
+important features, which are the ones with the
+highest value, for each feature map. The
+maxover-time pooling operation serves also to make
+the learned features of a fixed size: it allows to
+deal with variable sentence lengths and to adopt
+the learned features in fully connected layers.</p>
+      <p>This representation is finally used in the fourth
+layer, that is a fully connected softmax layer.
+It classifies the example into one of the
+categories of the task. In particular, this layer is
+characterized by a parameter matrix S and a
+bias term bc that is used to classify a message,
+given the learned representations c~. In
+particular, the final classification y is obtained through
+argmaxy2Y (sof tmax(S c~ + bc)), where Y is
+the set of classes of interest.</p>
+      <p>
+        In order to reduce the risk of over-fitting, two
+forms of regularization are applied, as in
+        <xref ref-type="bibr" rid="ref8">(Kim,
+2014)</xref>
+        . First, a dropout operation over the
+penultimate layer
+        <xref ref-type="bibr" rid="ref7">(Hinton et al., 2012)</xref>
+        is adopted to
+prevent co-adaptation of hidden units by randomly
+dropping out, i.e., setting to zero, a portion of
+the hidden units during forward-backpropagation.
+The second regularization is obtained by
+constraining the l2 norm of S and bc.
+      </p>
+      <sec id="sec-4-1">
+        <title>2.1 Injecting Sentiment Information through</title>
+      </sec>
+      <sec id="sec-4-2">
+        <title>Polarity Lexicons</title>
+        <p>
+          In
+          <xref ref-type="bibr" rid="ref8">(Kim, 2014)</xref>
+          , the use of word embeddings is
+advised to generalize lexical information. These
+word representations can capture paradigmatic
+relationships between lexical items. They are best
+suited to help the generalization of learning
+algorithms in natural language tasks. However,
+paradigmatic relationships do not always reflect
+the relative sentiment between words. In Deep
+Learning, it is a common practice to make the
+input representations trainable in the final learning
+stages. This is a valid strategy, but it makes the
+learning process more complex. In fact, the
+number of learnable parameters increases significantly,
+resulting in the need of more annotated examples
+in order to adequately estimate them.
+        </p>
+        <p>
+          We advocate the adoption of a multi-channel
+input representation, which is typical of CNNs in
+image processing. A first channel is dedicated to
+host representations derived from a word
+embedding. A second channel is introduced to inject
+sentiment information of words through a
+largescale polarity lexicon, which is acquired
+according to the methodology proposed in
+          <xref ref-type="bibr" rid="ref3 ref4">(Castellucci
+et al., 2015a)</xref>
+          . This method leverages on word
+embedding representations to assign polarity
+information to words by transferring it from
+sentences whose polarity is known. The resultant
+lexicons are called Distributional Polarity Lexicons
+(DPLs). The process is based on the capability
+of word embedding to represent both sentences
+and words in the same space
+          <xref ref-type="bibr" rid="ref9">(Landauer and
+Dumais, 1997)</xref>
+          . First, sentences (here tweets) are
+labeled with some polarity classes: in
+          <xref ref-type="bibr" rid="ref3 ref4">(Castellucci
+et al., 2015a)</xref>
+          this labeling is achieved by
+applygood
+luck
+to
+all
+the
+juniors
+tomorrow
+:)
+!
+targeted
+classes
+word embedding
+        </p>
+        <p>
+          DPL
+ing a Distant Supervision
+          <xref ref-type="bibr" rid="ref6">(Go et al., 2009)</xref>
+          heuristic. The labeled dataset is projected in the
+embedding space by applying a simple but effective
+linear combination of the word vectors composing
+each sentence. Then, a polarity classifier is trained
+over these sentences in order to emphasize those
+dimensions of the space more related to the
+polarity classes. The DPL is generated by classifying
+each word (represented in the embedding through
+a vector) with respect to each targeted class, using
+the confidence level of the classification to derive
+a word polarity signature. For example, in a DPL
+the word ottimo is 0:89 positive, 0:04 negative and
+0:07 neutral (see Table 1). For more details, please
+refer to
+          <xref ref-type="bibr" rid="ref3 ref4">(Castellucci et al., 2015a)</xref>
+          .
+        </p>
+        <p>Term w/o DPL</p>
+        <p>pessimo
+ottimo (0.89,0.04,0.07) eccellente
+ottima
+peggior
+peggiore (0.17,0.57,0.26) peggio
+migliore
+deprimente
+triste (0.04,0.82,0.14) tristissima
+felice</p>
+        <p>w/ DPL
+ottima
+eccellente
+fantastico
+peggior
+peggio
+peggiori
+deprimente
+tristissima
+depressa</p>
+        <p>This method has two main advantages: first, it
+allows deriving a signature for each word in the
+embedding to be used in the CNN; second, this
+method allows assigning sentiment information to
+words by observing their usage. This represents
+an interesting setting to observe sentiment related
+phenomena, as often a word does not carry a
+sentiment if not immersed in a context (i.e., a sentence).</p>
+        <p>
+          As proposed in
+          <xref ref-type="bibr" rid="ref5">(Croce et al., 2016)</xref>
+          , in order
+to keep limited the computational complexity of
+the training phase of CNN, we augment each
+vector from the embedding with the polarity scores
+derived from the DPL1. In Table 1, a
+comparison of the most similar words of polarity
+carriers is compared when the polarity lexicon is not
+adopted (second column) and when the
+multichannel schema is adopted (third column). Notice
+that, the DPL positively affects the vector
+representations for SA. For example, the word pessimo
+is no longer in set of the 3-most similar words of
+the word ottimo. The polarity information
+captured in the DPL making words that are
+semantically related and whose polarity agrees nearer in
+the space.
+2.2
+        </p>
+      </sec>
+      <sec id="sec-4-3">
+        <title>Context-aware model for SA in Twitter</title>
+        <p>
+          In
+          <xref ref-type="bibr" rid="ref12 ref3 ref4">(Severyn and Moschitti, 2015)</xref>
+          a pre-training
+strategy is suggested for the Sentiment
+Analysis task. The adoption of heuristically classified
+tweet messages is advised to initialize the network
+parameters. The selection of messages is based
+on the presence of emoticons
+          <xref ref-type="bibr" rid="ref6">(Go et al., 2009)</xref>
+          that can be related to polarities, e.g. :) and :(.
+However, selecting messages only with emoticons
+could potentially introduce many topically
+unrelated messages that use out-of-domain linguistic
+expressions and limiting the contribution of the
+pre-training. We instead suggest to adopt another
+strategy for the selection of pre-training data. We
+draw on the work in (Vanzo et al., 2014), where
+topically related messages of the target domain
+are selected by considering the reply-to or
+hashtag contexts of each message. The former
+(conversational context) is made of the stream of
+messages belonging to the same conversation in
+Twitter, while the latter (hashtag context) is composed
+by tweets preceding a target message and
+sharing at least one hashtag with it. In (Vanzo et al.,
+2014), these messages are first classified through a
+1We normalize the embedding and the DPL vectors before
+the juxtaposition.
+context-unaware SVM classifier. Here, we are
+going to leverage on contextual information for the
+selection of pre-training material for the CNN. We
+select the messages both in the conversation
+context, and we classify them with a context-unaware
+classifier to produce the pre-training dataset.
+3
+        </p>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>The Unitor Classification Workflow</title>
+      <p>The SENTIPOLC challenge is made of three
+subtasks aiming at investigating different aspects of
+the subjectivity of short messages. The first
+subtask is the Subjectivity Classification that consists
+in deciding whether a message expresses
+subjectivity or it is objective. The second task is the
+Polarity Classification: given a subjective tweet
+a system should decide whether a tweet is
+expressing a neutral, positive, negative or conflict
+position. Finally, the Irony Detection sub-task
+aims at finding whether a message is
+expressing ironic content or not. The Unitor system
+tackles each sub-task with a different CNN
+classifier, resulting in a classification workflow that
+is summarized in the Algorithm 1: a message is
+first classified with the Subjectivity CNN-based
+classifier S; in the case the message is classified
+as subjective (subjective=True), it is also
+processed with the other two classifiers, the
+Polarity classifier P and the Irony classifier I. In
+the case the message is first classified as
+objective (subjective=False), the remaining
+classifiers are not invoked.</p>
+      <p>Algorithm 1 Unitor classification workflow.
+1: function T A G(tweet T, cnn S, cnn P, cnn I)
+2: subjective = S(T)
+3: if subjective==True then
+4: polarity = P(T), irony = I(T)
+5: else
+6:
+7:</p>
+      <p>polarity = none, irony = none
+end if
+return subjective, polarity, irony
+8: end function</p>
+      <p>The same CNN architecture is adopted to
+implement all the three classifiers and tweets are
+modeled in the same way for the three sub-tasks.
+Each classifier has been specialized to the
+corresponding sub-task by adopting different selection
+policies of the training material and adapting the
+output layer of the CNN to the sub-task specific
+classes. In detail, the Subjectivity CNN is trained
+over the whole training dataset with respect to the
+classes subjective and objective. The
+Polarity CNN is trained over the subset of
+subjective tweets, with respect to the classes neutral,
+positive, negative and conflict. The
+Irony CNN is trained over the subset of subjective
+tweets, with respect to the classes ironic and
+not-ironic.</p>
+      <p>
+        Each CNN classifier has been trained in the
+two settings specified in the SENTIPOLC
+guidelines: constrained and unconstrained. The
+constrained setting refers to a system that adopted
+only the provided training data. For example, in
+the constrained setting it is forbidden the use of
+a word embedding generated starting from other
+tweets. The unconstrained systems, instead, can
+adopt also other tweets in the training stage. In
+our work, the constrained CNNs are trained
+without using a pre-computed word embedding in the
+input layer. In order to provide input data to the
+neural network, we randomly initialized the word
+embedding, adding them to the parameters to be
+estimated in the training process: in the
+following, we will refer to the constrained
+classification workflow as Unitor. The unconstrained
+CNNs are instead initialized with pre-computed
+word embedding and DPL. Notice that in this
+setting we do not back-propagate over the input layer.
+The word embedding is obtained from a corpus
+downloaded in July 2016 of about 10 millions of
+tweets. A 250-dimensional embedding is
+generated according to a Skip-gram model
+        <xref ref-type="bibr" rid="ref11">(Mikolov et
+al., 2013)</xref>
+        2. Starting from this corpus and the
+generated embedding, we acquired the DPL
+according to the methodology described in Section 2.1.
+The final embedding is obtained by juxtaposing
+the Skip-gram vectors and the DPL3, resulting in a
+253-dimensional representation for about 290; 000
+words, as shown in Figure 1. The resulting
+classification workflow made of unconstrained
+classifier is called Unitor-U1. Notice that these word
+representations represent a richer feature set for
+the CNN, however the cost of obtaining them is
+negligible, as no manual activity is needed.
+      </p>
+      <p>
+        As suggested in
+        <xref ref-type="bibr" rid="ref5">(Croce et al., 2016)</xref>
+        , the
+contextual pre-training (see Section 2.2) is obtained
+by considering the conversational contexts of the
+provided training data. This dataset is made of
+about 2; 200 new messages, that have been
+classified with the Unitor-U1 system. This set of
+2The following settings are adopted: window 5 and
+mincount 10 with hierarchical softmax
+      </p>
+      <p>3Measures adopting only the Skip-gram vectors have been
+pursued in the classifier tuning stage; these have highlighted
+the positive contribution of the DPL.
+messages is adopted to initialize the network
+parameters. In the following, the system adopting
+the pre-trained CNNs is called Unitor-U2.</p>
+      <p>The CNNs have a number of hyper-parameters
+that should be fine-tuned. The parameters we
+investigated are: size of filters, i.e., capturing
+2=3=4=5-grams. We combined together multiple
+filter sizes in the same run. The number of filters
+for each size: we selected this parameter among
+50, 100 and 200. The dropout keep probability
+has been selected among 0:5, 0:8 and 1:0. The
+final parameters has been determined over a
+development dataset, made of the 20% of the training
+material. Other parameters have been kept fixed:
+batch size (100), learning rate (0:001), number
+of epochs (15) and L2 regularization (0:0). The
+CNNs are implemented in Tensorflow4 and they
+have been optimized with the Adam optimizer.
+4</p>
+    </sec>
+    <sec id="sec-6">
+      <title>Experimental Results</title>
+      <p>In Tables 2, 3 and 4 the performances of the
+Unitor systems are reported, respectively for the
+task of Subjectivity Classification, Polarity
+Classification and Irony Detection. In the first Table (2)
+the F-0 measure refers to the F1 measure of the
+objective class, while F-1 refers to the F1
+measure of the subjective class. In the Table 3 the F-0
+measure refers to the F1 measure of the negative
+class, while F-1 refers to the F1 measure of the
+positive class. Notice that in this case, the neutral
+class is mapped to a ?not negative? and ?not
+positive? classification and the conflict class is mapped
+to a ?negative? and ?positive? classification. The
+F-0 and F-1 measures capture also these
+configurations. In Table 4 the F-0 measure refers to the
+F1 measure of the not ironic class, while F-1 refers
+to the F1 measure of the ironic class. Finally,
+FMean is the mean between these F-0 and F-1
+values, and is the score used by the organizers for
+producing the final ranks.</p>
+      <p>System
+Unitor-C
+Unitor-U1
+Unitor-U2</p>
+      <p>F-0
+.6733
+.6784
+.6723</p>
+      <p>F-1
+.7535
+.8105
+.7979</p>
+      <p>
+        F-Mean
+.7134
+.7444
+.7351
+Notice that our unconstrained system
+(Unitor-U1) is the best performing system
+in recognizing when a message is expressing a
+subjective position or not, with a final F-mean of
+4https://www.tensorflow.org/
+:7444 (Table 2). Moreover, also the Unitor-U2
+system is capable of adequately classify whether
+a message is subjective or not. The fact that the
+pre-trained system is not performing as well as
+Unitor-U1, can be ascribed to the fact that the
+pre-training material size is actually small.
+During the classifier tuning phases we adopted also
+the hashtag contexts (about 20; 000 messages)
+(Vanzo et al., 2014) to pre-train our networks: the
+measures over the development set indicated that
+probably the hashtag contexts were introducing
+too many unrelated messages. Moreover, the
+pre-training material has been classified with the
+Unitor-U1 system. It could be the case that
+the adoption of such added material was not so
+effective, as instead demonstrated in
+        <xref ref-type="bibr" rid="ref5">(Croce et
+al., 2016)</xref>
+        . In fact, in that work the pre-training
+material was classified with a totally different
+algorithm (Support Vector Machine) and a totally
+different representation (kernel-based). In this
+setting, the different algorithm and representation
+produced a better and substantially different
+dataset, in terms of covered linguistic phenomena
+and their relationships with the target classes.
+Finally, the constrained version of our system,
+obtained a remarkable score of :7134, demonstrating
+that the random initialization of the input vectors
+can be also adopted for the classification of the
+subjectivity of a message.
+      </p>
+      <p>System
+Unitor-C
+Unitor-U1
+Unitor-U2</p>
+      <p>
+        In Table 3 the Polarity Classification results
+are reported. Also in this task, the performances
+of the unconstrained systems are higher with
+respect to the constrained one (:662 against :6382).
+It demonstrates the usefulness of acquiring
+lexical representations and use them as inputs for
+the CNNs. Notice that the performances of the
+Unitor classifiers are remarkable, as the two
+unconstrained systems rank in 2nd and 3rd position.
+The contribution of the pre-training is not positive,
+as instead measured in
+        <xref ref-type="bibr" rid="ref5">(Croce et al., 2016)</xref>
+        . Again,
+we believe that the problem resides in the size and
+quality of the pre-training dataset.
+      </p>
+      <p>In Table 4 the Irony Detection results are
+reported. Our systems do not perform well, as all
+the submitted systems reported a very low recall</p>
+      <p>
+        F-0
+.9358
+.9373
+.9372
+for the ironic class: for example, the Unitor-U2
+recall is only :0013, while its precision is :4286. It
+can be due mainly to two factors. First, the CNN
+devoted to the classification of the irony of a
+message has been trained with a dataset very skewed
+towards the not-ironic class: in the original dataset
+only 868 over 7409 messages are ironic. Second, a
+CNN observes local features (bi-grams, tri-grams,
+. . . ) without ever considering global constraints.
+Irony, is not a word-level phenomenon but,
+instead, it is related to sentence or even social
+aspects. For example, the best performing system in
+Irony Detection in SENTIPOLC 2014
+        <xref ref-type="bibr" rid="ref2">(Castellucci
+et al., 2014)</xref>
+        adopted a specific feature, which
+estimates the violation of paradigmatic coherence of
+a word with respect to the entire sentence, i.e., a
+global information about a tweet. This is not
+accounted for in the CNN here discussed, and ironic
+sub-phrases are likely to be neglected.
+5
+      </p>
+    </sec>
+    <sec id="sec-7">
+      <title>Conclusions</title>
+      <p>
+        The results obtained by the Unitor system at
+SENTIPOLC 2016 are promising, as the system
+won the Subjectivity Classification sub-task and
+placed in 2nd position in the Polarity
+Classification. While in the Irony Detection the results
+are not satisfactory, the proposed architecture is
+straightforward as its setup cost is very low. In
+fact, the human effort in producing data for the
+CNNs, i.e., the pre-training material and the
+acquisition of the Distributional Polarity Lexicon is
+very limited. In fact, the former can be easily
+acquired with the Twitter Developer API; the latter is
+realized through an unsupervised process
+        <xref ref-type="bibr" rid="ref3 ref4">(Castellucci et al., 2015a)</xref>
+        . In the future, we need to
+better model the irony detection problem, as
+probably the CNN here adopted is not best suited for
+such task. In fact, irony is a more global linguistic
+phenomenon than the ones captured by the (local)
+convolutions operated by a CNN.
+      </p>
+      <p>Andrea Vanzo, Danilo Croce, and Roberto Basili.
+2014. A context-based model for sentiment analysis
+in twitter. In Proc. of 25th COLING, pages 2345?
+2354.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          2016.
+          <article-title>Overview of the EVALITA 2016 SENTiment POLarity Classification Task</article-title>
+          . In Pierpaolo Basile, Anna Corazza, Franco Cutugno, Simonetta Montemagni, Malvina Nissim, Viviana Patti, Giovanni Semeraro, and Rachele Sprugnoli, editors,
+          <source>Proceedings of Third Italian Conference on Computational Linguistics</source>
+          (CLiC-it
+          <year>2016</year>
+          ) &amp;
+          <article-title>Fifth Evaluation Campaign of Natural Language Processing and Speech Tools for Italian</article-title>
+          .
+          <source>Final Workshop (EVALITA</source>
+          <year>2016</year>
+          ).
+          <article-title>Associazione Italiana di Linguistica Computazionale (AILC).</article-title>
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          <string-name>
+            <given-names>Giuseppe</given-names>
+            <surname>Castellucci</surname>
+          </string-name>
+          , Danilo Croce, Diego De Cao, and
+          <string-name>
+            <given-names>Roberto</given-names>
+            <surname>Basili</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>A multiple kernel approach for twitter sentiment analysis in italian</article-title>
+          .
+          <source>In Fourth International Workshop EVALITA</source>
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          <string-name>
+            <given-names>Giuseppe</given-names>
+            <surname>Castellucci</surname>
+          </string-name>
+          , Danilo Croce, and
+          <string-name>
+            <given-names>Roberto</given-names>
+            <surname>Basili</surname>
+          </string-name>
+          . 2015a.
+          <article-title>Acquiring a large scale polarity lexicon through unsupervised distributional methods</article-title>
+          .
+          <source>In Proc. of 20th NLDB</source>
+          , volume
+          <volume>9103</volume>
+          . Springer.
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          <string-name>
+            <given-names>Giuseppe</given-names>
+            <surname>Castellucci</surname>
+          </string-name>
+          , Andrea Vanzo, Danilo Croce, and
+          <string-name>
+            <given-names>Roberto</given-names>
+            <surname>Basili</surname>
+          </string-name>
+          . 2015b.
+          <article-title>Context-aware models for twitter sentiment analysis</article-title>
+          .
+          <source>IJCoL</source>
+          vol.
+          <volume>1</volume>
+          , n. 1
+          <article-title>: Emerging Topics at the 1st CLiC-It Conf</article-title>
+          ., page
+          <volume>69</volume>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          <string-name>
+            <given-names>Danilo</given-names>
+            <surname>Croce</surname>
+          </string-name>
+          , Giuseppe Castellucci, and
+          <string-name>
+            <given-names>Roberto</given-names>
+            <surname>Basili</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>Injecting sentiment information in context-aware convolutional neural networks</article-title>
+          .
+          <source>Proceedings of SocialNLP@ IJCAI</source>
+          ,
+          <year>2016</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          <string-name>
+            <given-names>Alec</given-names>
+            <surname>Go</surname>
+          </string-name>
+          , Richa Bhayani, and
+          <string-name>
+            <given-names>Lei</given-names>
+            <surname>Huang</surname>
+          </string-name>
+          .
+          <year>2009</year>
+          .
+          <article-title>Twitter sentiment classification using distant supervision</article-title>
+          .
+          <source>CS224N Project Report</source>
+          , Stanford.
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          <string-name>
+            <given-names>Geoffrey</given-names>
+            <surname>Hinton</surname>
+          </string-name>
+          , Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and
+          <string-name>
+            <given-names>Ruslan</given-names>
+            <surname>Salakhutdinov</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          .
+          <article-title>Improving neural networks by preventing co-adaptation of feature detectors</article-title>
+          .
+          <source>CoRR, abs/1207</source>
+          .0580.
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          <string-name>
+            <given-names>Yoon</given-names>
+            <surname>Kim</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          .
+          <article-title>Convolutional neural networks for sentence classification</article-title>
+          .
+          <source>In Proceedings EMNLP</source>
+          <year>2014</year>
+          , pages
+          <fpage>1746</fpage>
+          -
+          <lpage>1751</lpage>
+          , Doha, Qatar, October. Association for Computational Linguistics.
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          <string-name>
+            <given-names>Tom</given-names>
+            <surname>Landauer</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Sue</given-names>
+            <surname>Dumais</surname>
+          </string-name>
+          .
+          <year>1997</year>
+          .
+          <article-title>A solution to plato's problem: The latent semantic analysis theory of acquisition, induction and representation of knowledge</article-title>
+          .
+          <source>Psychological Review</source>
+          ,
+          <volume>104</volume>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          <string-name>
+            <surname>Y. LeCun</surname>
+            , L. Bottou,
+            <given-names>Y.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Bengio</surname>
+            , and
+            <given-names>P.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Haffner</surname>
+          </string-name>
+          .
+          <year>1998</year>
+          .
+          <article-title>Gradient-based learning applied to document recognition</article-title>
+          .
+          <source>Proc. of the IEEE</source>
+          ,
+          <volume>86</volume>
+          (
+          <issue>11</issue>
+          ), Nov.
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          <string-name>
+            <given-names>Tomas</given-names>
+            <surname>Mikolov</surname>
+          </string-name>
+          , Ilya Sutskever, Kai Chen, Greg Corrado, and
+          <string-name>
+            <given-names>Jeffrey</given-names>
+            <surname>Dean</surname>
+          </string-name>
+          .
+          <year>2013</year>
+          .
+          <article-title>Distributed representations of words and phrases and their compositionality</article-title>
+          .
+          <source>CoRR, abs/1310</source>
+          .4546.
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          <string-name>
+            <given-names>Aliaksei</given-names>
+            <surname>Severyn</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>Alessandro</given-names>
+            <surname>Moschitti</surname>
+          </string-name>
+          .
+          <year>2015</year>
+          .
+          <article-title>Twitter sentiment analysis with deep convolutional neural networks</article-title>
+          .
+          <source>In Proc. of the SIGIR</source>
+          <year>2015</year>
+          , pages
+          <fpage>959</fpage>
+          -
+          <lpage>962</lpage>
+          , New York, NY, USA. ACM.
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+

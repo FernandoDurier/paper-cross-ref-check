@@ -1,0 +1,2382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta />
+    <article-meta>
+      <title-group>
+        <article-title>Detecting Sarcasm in Multimodal Social Platforms</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Rossano Schifanella</string-name>
+          <email>schifane@di.unito.it</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Paloma de Juan</string-name>
+          <email>pdjuan@yahoo-inc.com</email>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Liangliang Cao</string-name>
+          <email>liangliang@yahoo-</email>
+          <email>liangliang@yahooinc.com</email>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Joel Tetreault</string-name>
+          <email>tetreaul@gmail.com</email>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="editor">
+          <string-name>Sarcasm; Social Media; Multimodal; Deep Learning; NLP</string-name>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>University of Turin</institution>
+          ,
+          <addr-line>Corso Svizzera 185, 10149, Turin</addr-line>
+          ,
+          <country country="IT">Italy</country>
+        </aff>
+        <aff id="aff1">
+          <label>1</label>
+          <institution>Yahoo</institution>
+          ,
+          <addr-line>229 West 43rd Street, New York, NY 10036</addr-line>
+          ,
+          <country country="US">USA</country>
+        </aff>
+      </contrib-group>
+      <fpage>1136</fpage>
+      <lpage>1145</lpage>
+      <abstract>
+        <p>Sarcasm is a peculiar form of sentiment expression, where the surface sentiment di ers from the implied sentiment. The detection of sarcasm in social media platforms has been applied in the past mainly to textual utterances where lexical indicators (such as interjections and intensi ers), linguistic markers, and contextual information (such as user pro les, or past conversations) were used to detect the sarcastic tone. However, modern social media platforms allow to create multimodal messages where audiovisual content is integrated with the text, making the analysis of a mode in isolation partial. In our work, we rst study the relationship between the textual and visual aspects in multimodal posts from three major social media platforms, i.e., Instagram, Tumblr and Twitter, and we run a crowdsourcing task to quantify the extent to which images are perceived as necessary by human annotators. Moreover, we propose two di erent computational frameworks to detect sarcasm that integrate the textual and visual modalities. The rst approach exploits visual semantics trained on an external dataset, and concatenates the semantics features with stateof-the-art textual features. The second method adapts a visual neural network initialized with parameters trained on ImageNet to multimodal sarcastic posts. Results show the positive e ect of combining modalities for the detection of sarcasm across platforms and methods.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>1. INTRODUCTION</title>
+      <p>Sarcasm is a peculiar form of sentiment expression where
+the surface sentiment di ers from the implied sentiment.
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for profit or commercial advantage and that copies bear this notice and the full citation
+on the first page. Copyrights for components of this work owned by others than the
+author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior specific permission
+and/or a fee. Request permissions from permissions@acm.org.</p>
+      <p>MM ?16, October 15 - 19, 2016, Amsterdam, Netherlands
+c 2016 Copyright held by the owner/author(s). Publication rights licensed to ACM.
+ISBN 978-1-4503-3603-1/16/10. . . $15.00
+DOI: http://dx.doi.org/10.1145/2964284.2964321
+Merriam-Webster1 de nes sarcasm as \the use of words that
+mean the opposite of what you really want to say especially in
+order to insult someone, to show irritation, or to be funny."
+Sarcasm is a common phenomenon in social media
+platforms, and the automatic detection of the implied meaning
+of a post is a crucial task for a wide range of applications
+where it is important to assess the speaker's real opinion,
+e.g., product reviews, forums, or sentiment analysis tools.</p>
+      <p>
+        Most approaches to sarcasm detection to date have treated
+the task primarily as a text categorization problem, relying
+on the insight that sarcastic utterances often contain
+lexical indicators (such as interjections and intensi ers) and
+other linguistic markers (such as nonveridicality and
+hyperbole) that signal the sarcasm. In modern online
+platforms, hashtags and emojis are common mechanisms to
+reveal the speaker's true sentiment. These purely text-based
+1http://www.merriam-webster.com/dictionary/sarcasm
+approaches have been shown to be fairly accurate across
+different domains [
+        <xref ref-type="bibr" rid="ref13 ref29 ref30 ref6 ref9">6, 13, 30, 9, 29</xref>
+        ].
+      </p>
+      <p>
+        However, in many occasions this text-only approach fails
+when contextual knowledge is needed to decode the sarcastic
+tone. For example, in Figure 1, \rubbish weather" is the
+opposite of what the image represents (i.e., beautiful weather).
+Without this image, the text could be interpreted as a
+negative comment about the weather in Liverpool. Recently,
+several approaches [
+        <xref ref-type="bibr" rid="ref17 ref19 ref2 ref27 ref37">2, 27, 17, 19, 37</xref>
+        ] have integrated
+contextual cues (e.g., the author's pro le, author's past posts
+and conversations) with the in-post text, showing consistent
+improvements when detecting sarcasm.
+      </p>
+      <p>Previous approaches have failed to consider the media
+linked to the posts as a possible source of contextual
+information. Tweets, for example, can have audiovisual
+content attached to the text. Multimodality is the combination
+of modes of communication (i.e., text, images, animations,
+sounds, etc.) with the purpose to deliver a message to a
+particular audience, and it is present in all major social media
+platforms.</p>
+      <p>In this work, we leverage the contextual information
+carried by visuals to decode the sarcastic tone of multimodal
+posts. Speci cally, we consider two types of visual
+features with di erent model fusion methods for sarcasm
+detection. The rst approach exploits visual semantics trained
+on an external dataset, and concatenates the semantics
+features with state-of-the-art text features. The second method
+adapts a visual neural network initialized with parameters
+trained on ImageNet to multimodal (text+image) sarcastic
+posts. In both methods, we nd that visual features boost
+the performance of the textual models.</p>
+      <p>We summarize our main contributions as follows:
+We study the interplay between textual and visual
+content in sarcastic multimodal posts for three main social
+media platforms, i.e., Instagram, Tumblr and Twitter,
+and discuss a categorization of the role of images in
+sarcastic posts.</p>
+      <p>We quantitatively show the contribution of visuals in
+detecting sarcasm through human labeling. This data
+will be shared with the research community.</p>
+      <p>We are the rst to propose and empirically evaluate
+two alternative frameworks for sarcasm detection that
+use both textual and visual features. We show an
+improvement in performance over textual baselines across
+platforms and methods.</p>
+      <p>We rst discuss related work in Section 2. We then
+describe our data in Section 3, and introduce a categorization
+of the di erent roles images can play in a sarcastic post in
+Section 4. In the same section, we describe how we collect
+human judgments to build a gold set, and analyze the
+distribution of posts with respect to the proposed categories.
+Section 5 describes the details of the two methods for sarcasm
+detection, and Section 6 presents the experiments carried
+out to evaluate the frameworks, and their results. Finally,
+Section 7 concludes the paper, and points to future work.</p>
+    </sec>
+    <sec id="sec-2">
+      <title>RELATED WORK</title>
+      <p>
+        Sarcasm as linguistic phenomenon. While the use of
+irony and sarcasm is well studied from its linguistic and
+psychological aspects [
+        <xref ref-type="bibr" rid="ref12">12</xref>
+        ], automatic recognition of sarcasm has
+become a widely researched subject in recent years due to
+its practical implications in social media platforms. Starting
+from foundational work by Tepperman et al. [
+        <xref ref-type="bibr" rid="ref32">32</xref>
+        ] which uses
+prosodic, spectral (average pitch, pitch slope), and
+contextual (laughter or response to questions) cues to
+automatically detect sarcasm in a spoken dialogue, initial approaches
+mainly addressed linguistic and sentiment features to
+classify sarcastic utterances. Davidov et al. [
+        <xref ref-type="bibr" rid="ref6">6</xref>
+        ] proposed a
+semisupervised approach to classify tweets and Amazon products
+reviews with the use of syntactic and pattern-based features.
+Tsur et al. [
+        <xref ref-type="bibr" rid="ref34">34</xref>
+        ] focus on product reviews and try to identify
+sarcastic sentences looking at the patterns of high-frequency
+and content words. Gonzalez-Iban~ez et al. [
+        <xref ref-type="bibr" rid="ref13">13</xref>
+        ] study the
+role of lexical (unigrams and dictionary-based) and
+pragmatic features such as the presence of positive and negative
+emoticons and the presence of replies in tweets. Rilo et
+al. [
+        <xref ref-type="bibr" rid="ref30">30</xref>
+        ] present a bootstrapping algorithm that
+automatically learns lists of positive sentiment phrases and negative
+situation phrases from sarcastic tweets. They show that
+identifying contrasting contexts yields improved recall for
+sarcasm recognition. More recently, Ghosh et al. [
+        <xref ref-type="bibr" rid="ref9">9</xref>
+        ] propose
+a reframing of sarcasm detection as a type of word sense
+disambiguation problem: given an utterance and a target
+word, identify whether the sense of the target word is literal
+or sarcastic.
+      </p>
+      <p>
+        Sarcasm as contextual phenomenon. Recently it has
+been observed that sarcasm requires some shared knowledge
+between the speaker and the audience; it is a profoundly
+contextual phenomenon [
+        <xref ref-type="bibr" rid="ref2">2</xref>
+        ]. Bamman et al. [
+        <xref ref-type="bibr" rid="ref2">2</xref>
+        ] use
+information about the authors, their relationship to the audience
+and the immediate communicative context to improve
+prediction accuracy. Rajadesingan et al. [
+        <xref ref-type="bibr" rid="ref27">27</xref>
+        ] adopt
+psychological and behavioral studies on when, why, and how sarcasm
+is expressed in communicative acts to develop a behavioral
+model and a set of computational features that merge user's
+current and past tweets as historical context. Joshi et al. [
+        <xref ref-type="bibr" rid="ref17">17</xref>
+        ]
+propose a framework based on the linguistic theory of
+context incongruity and introduce inter-sentential incongruity
+for sarcasm detection by considering the previous post in
+the discussion thread. Khattri et al. [
+        <xref ref-type="bibr" rid="ref19">19</xref>
+        ] present a
+quantitative evidence that historical tweets by an author can provide
+additional context for sarcasm detection. They exploit the
+author's past sentiment on the entities in a tweet to detect
+the sarcastic intent. Wang at al. [
+        <xref ref-type="bibr" rid="ref37">37</xref>
+        ] focus on message-level
+sarcasm detection on Twitter using a context-based model
+that leverages conversations, such as chains of tweets. They
+introduce a complex classi cation model that works over an
+entire tweet sequence and not on one tweet at a time. On
+the same direction, our work is based on the integration
+between linguistic and contextual features extracted from the
+analysis of visuals embedded in multimodal posts.
+Sarcasm beyond text. Modern social media platforms
+allow to create multimodal forms of communication where
+audiovisual content integrates the textual utterance.
+Previous work [
+        <xref ref-type="bibr" rid="ref35">35</xref>
+        ] studied how di erent types of visuals are
+used in relation to irony in written discourse, and which
+pictorial elements contribute to the identi cation of verbal
+irony. Most scholars who looked at the relationship between
+verbal irony and images limited themselves to studying
+visual markers [
+        <xref ref-type="bibr" rid="ref1">1</xref>
+        ]. Usually a visual marker is either used to
+illustrate the literal meaning, or it may also exhibit
+incongruence with the literal evaluation of an ironic utterance
+(incongruence between the literal and intended evaluation).
+Following Kennedy [
+        <xref ref-type="bibr" rid="ref11">11</xref>
+        ], the image itself is usually
+considered not ironic; however, it may sometimes be important in
+deciding whether a verbal utterance is ironic or not.
+According to Verstraten [
+        <xref ref-type="bibr" rid="ref36">36</xref>
+        ], two types of elements play a role
+in the process of meaning-giving in the visual domain of
+static images. These include the mise en scene and
+cinematographic techniques. The mise en scene is concerned
+with the question of who and/or what is shown,
+cinematography deals with the question of how something is shown.
+Despite the similarities in the intent, our work shows few
+novel points: rst of all, we analyze a large sample of
+noncurated posts from three di erent social media platforms,
+while past work focuses mainly on curated content like
+advertisements, cartoons, or art. Moreover, to the best of our
+knowledge, we propose the rst computational model that
+incorporates computer vision techniques to the automatic
+sarcasm detection pipeline.
+      </p>
+      <p>
+        Making sense of images. Recently, a number of research
+studies were devoted to combine visual and textual
+information, motivated by the progress of deep learning. Some
+approaches [
+        <xref ref-type="bibr" rid="ref21 ref8">21, 8</xref>
+        ] pursue a joint space for visual and
+semantic embedding, others consider how to generate captions to
+match the image content [
+        <xref ref-type="bibr" rid="ref23 ref24">24, 23</xref>
+        ], or how to capture the
+sentiment conveyed by an image [
+        <xref ref-type="bibr" rid="ref38 ref4">4, 38</xref>
+        ]. The most
+similar approach to our work is that of [
+        <xref ref-type="bibr" rid="ref31">31</xref>
+        ] which investigates
+the fusion of textual and image information to understand
+metaphors. A key aspect of our work is that it captures the
+relation between the visual and the textual dimensions as
+a whole, e.g., the utterance is not a mere description of an
+image, while in previous studies text is generally adopted to
+depict or model the content of an image.
+      </p>
+    </sec>
+    <sec id="sec-3">
+      <title>DATA</title>
+      <p>To investigate the role images play in sarcasm detection,
+we collect data from three major social platforms that
+allow to post both text and images, namely Instagram (IG),
+Tumblr (TU) and Twitter (TW), using their available
+public APIs. Each of these platforms is originally meant for
+di erent purposes regarding the type of media to be shared.
+Whereas Instagram is an image-centric platform, Twitter is
+a microblogging network. Tumblr allows users to post di
+erent types of content, including \text" or \photo". Regardless
+of the post type, images (one or more) can be added to
+textual posts, and captions can be included in photo posts. The
+text and image restrictions and limitations for each platform
+are presented in Table 1.</p>
+      <p>
+        The three platforms allow users to use hashtags to
+annotate the content, by embedding them in the text (Instagram,
+Twitter), or by adding them through a separate eld
+(Tumblr). To collect positive (i.e., sarcastic) examples, we follow
+a hashtag-based approach by retrieving posts that include
+the tag sarcasm or sarcastic. This is a technique extensively
+used to collect sarcastic examples [
+        <xref ref-type="bibr" rid="ref9">9</xref>
+        ]. Additionally, and for
+all platforms, we lter out posts that are not in English, and
+remove retweets (Twitter) and reblogs (Tumblr) to keep the
+original content only and avoid duplicates.
+      </p>
+      <p>Table 2 shows the distribution of posts with text,
+image(s), or both for each of the three platforms. Instagram
+is the platform where the the textual and visual modalities
+are most used in conjunction; in fact, almost the totality
+of posts have a caption accompanying the image. In
+contrast, less than 8% of the posts on Twitter contain images.
+Among the 63K Tumblr posts, 56.96% are of type \text",
+and 43.04% are of type \photo". This means that most of
+the photo posts contain also text (similar to Instagram, but
+without the limitation on the number of images), but very
+few of the text posts contain images (similar to Twitter, but
+without the character limitation).</p>
+      <sec id="sec-3-1">
+        <title>Filtering the data.</title>
+        <p>
+          To clean up the data and build our nal dataset we apply
+a series of four lters commonly used in literature [
+          <xref ref-type="bibr" rid="ref13 ref27 ref6">13, 6,
+27</xref>
+          ]. First, we discard posts that do no contain any images,
+or whose images are no longer available by the time we
+collect the data; we then discard posts that contain mentions
+(@username) or external links (i.e., URLs that do not
+contain the platform name, or \t.co" or \twimg.com", in the case
+of Twitter), as additional information (e.g., conversational
+history, news story) could be required to understand the
+context of the message. We also discard posts where sarcasm
+or sarcastic is a regular word (not a hashtag), or a hashtag
+that is part of a sentence (i.e., if it is followed by any regular
+words), as we are not interested in messages that explicitly
+address sarcasm (e.g., \I speak uent sarcasm."). Finally,
+we discard posts that might contain memes or ecards (e.g.,
+tag set contains someecards), and posts whose text contains
+less than four regular words.
+        </p>
+        <p>
+          Final dataset. We randomly sample 10,000 posts from
+each platform to build our nal dataset. Given the
+limitations of its public API, and the fact that less than 8% of
+the sarcastic posts have both text and images, only 2,005
+were available for Twitter. We further clean up the data by
+removing internal links and the tags that we used to
+collect the samples (sarcasm and sarcastic). These posts are
+composed of two main aspects: a textual and a visual
+component. When we speak about the textual component, we
+are referring not only to the regular words that form the
+message, but also to emojis and hashtags that might be
+part of that message. These three elements (words, emojis
+and hashtags) are crucial for the interpretation of the post:
+while regular words are generally used to present the literal
+meaning, emojis and hashtags are commonly used to reveal
+the speaker's intended sentiment [
+          <xref ref-type="bibr" rid="ref16">16</xref>
+          ], or to share contextual
+cues with the audience to help decode the sarcasm.
+        </p>
+        <p>Table 3 shows the average number of regular words,
+emojis and tags (after having removed sarcasm/sarcastic) per
+post. Due to its tight character limitation (which also
+accounts for the hashtags), Twitter is the platform with the
+shortest text and the lowest number of tags per post. While
+Tumblr posts are the longest, the average number of tags is
+similar to that of Instagram, which has in turn the highest
+tag-to-word ratio. Indeed, Instagram users seem to express
+heavily through hashtags, especially compared to Twitter
+users, whose posts have a similar average word count. Both
+platforms also have a similar emoji-to-word ratio, which is
+much lower on Tumblr. The fact that there is a
+character limitation for both Instagram and Twitter might justify
+the usage of emojis, which are compact representations of
+concepts and reactions that would be much more verbose if
+expressed in words.</p>
+        <p>Finally, we collect 10,000 negative examples from each
+platform (2,005 from Twitter, to keep the dataset balanced)
+by randomly sampling posts that do not contain sarcasm or
+sarcastic in either the text or the tag set. These negative
+posts are subject to the same processing described above,
+when applicable. To verify that there are no relevant
+topical di erences between the positive and the negative sets
+that could correlate with the presence/absence of sarcastic
+cues, we manually examined a sample of positive and
+negative posts from each platform. We did not observe such
+differences; however, we did nd some recurring topics in the
+positive set, such as weather, food, fashion, etc., but these
+topics were also found in the negative set, only along with
+non-sarcastic observations (e.g., a picture of a greasy slice
+of pizza would be captioned as \healthy" in the positive set,
+but as \unhealthy" in the negative set). This might indicate
+that the range of topics in the positive set is more limited,
+but there is a clear overlap with those in the negative set.</p>
+      </sec>
+    </sec>
+    <sec id="sec-4">
+      <title>CHARACTERIZING THE ROLE OF IM</title>
+    </sec>
+    <sec id="sec-5">
+      <title>AGES IN SARCASTIC POSTS</title>
+      <p>As presented in Section 1, there are two main elements
+to a sarcastic utterance: the context and the meaning or
+sentiment. Detecting sarcasm|at a human level|involves
+evaluating to what extent the intended meaning corresponds
+to a declared or expected response. If this literal meaning
+does not agree with the one implied, the utterance will be
+perceived as sarcastic. In the following sections, we will
+analyze what role text (i.e., words, emojis and tags) and
+images play in the conception of sarcasm.
+4.1</p>
+    </sec>
+    <sec id="sec-6">
+      <title>Defining a Categorization</title>
+      <p>To understand what role images play with respect to these
+two elements, three of the authors independently annotate a
+set of 100 randomly sampled positive posts from each
+platform. The question we are looking to answer is: Is the image
+necessary to nd the post sarcastic? To answer that, we
+rst identify the posts whose sarcastic nature can be
+positively determined by just looking at the text. This text, as
+explained in Section 3, can include words, emojis and tags.
+In many examples, emojis reveal the intended sentiment (in
+contrast to the literal sentiment presented in the regular
+text). Hashtags are generally useful to provide context, but
+can also be used to expose the sentiment. Regardless of
+whether the sarcastic tone is clear from the text or not, the
+image can still provide useful clues to understand the
+intended meaning. The posts where the intended meaning
+can not be inferred from the text alone are precisely what
+we are looking for. In these cases, the image turns out to be
+necessary to interpret the post, providing a depiction of the
+context, or visual clues to unravel the implied sentiment.
+?
+p
+l
+e
+h
+E
+G
+A
+M
+I
+e
+h
+t
+s
+e
+o
+D</p>
+      <sec id="sec-6-1">
+        <title>Is the TEXT enough?</title>
+        <p>Yes
+The text is clearly
+sarcastic; the image
+s provides additional
+eY cues for better
+interpretability and
+engagement.</p>
+        <p>The text is clearly
+o sarcastic; the image
+N does not provide any
+added value.</p>
+        <p>No
+Both are needed to
+interpret the post.</p>
+        <p>The clues to
+understand the
+intended meaning can
+be textual or visual.</p>
+      </sec>
+      <sec id="sec-6-2">
+        <title>Post is not sarcastic.</title>
+        <p>Table 4 summarizes the four possible roles of text and
+image. We will refer to the category that represents the
+combination of the two cases to the left as Text Only, as
+the text from the posts belonging to it should be enough
+to understand the implied sarcasm. Figures 2(a) and 2(b)
+are instances of this category. The posts from the top-left
+case represent a subset of this category, where the image is
+somewhat redundant, but could replace or augment some of
+the textual clues. For instance, the image in Figure 2(b)
+would have been necessary if the tags snow and winter were
+not part of the text. In this case, also the emojis reveal the
+implied sentiment, which makes it unnecessary to infer that
+snow on a spring day is not \beautiful" or \nice", and that
+people are not supposed to wear shorts in such weather.</p>
+        <p>The top right case corresponds to the category that we
+will call Text+Image, where both modalities are required to
+understand the intended meaning. Figure 2(c) belongs to
+this category: the image depicts the context that the text
+refers to. Rather than a sentiment, the text presents an
+observation (\crowds of people") that is the opposite of what
+is shown in the picture (the room is empty). It is worth
+noting that, regardless of the category, many times the
+image itself contains text. In this case, the motivation to use
+an image instead of plain text is generally to provide
+additional information about the context of this text (e.g., a
+chat conversation, a screenshot, a street sign, and so on).
+Figure 2(a) is an example of this case.
+4.2</p>
+      </sec>
+    </sec>
+    <sec id="sec-7">
+      <title>Building a Ground Truth for Sarcasm</title>
+      <p>The data collection process described in Section 3 relies on
+the ability of the authors to self-annotate their posts as
+sarcastic using hashtags. Training a sarcasm detector on noisy
+data is a commonly used approach in literature, especially
+when that data comes from social media platforms.
+However, what the audience perceives as sarcastic is not always
+aligned with the actual intention of the speakers. Our goal
+is to create a curated dataset of multimodal posts whose
+sarcastic nature has been agreed on by both the author and
+the readers, and where both the textual and visual
+components are required to decode the sarcastic tone. To do that,
+(a)
+(b)
+(c)
+we use CrowdFlower,2 a large crowdsourcing platform that
+distributes small, discrete tasks to online contributors. The
+two goals of this annotation task are: 1) characterize the
+distribution of posts with respect to the categories de ned
+in Section 4.1, and evaluate the impact of visuals as a source
+for context for humans; and 2) identify truly sarcastic posts
+by validating the authors' choice to tag them as such.
+Task interface and setup. We focus only on the two main
+categories of interest, Text Only and Text+Image, and
+create two independent tasks. In the rst task, only the text
+(including the tags and emojis) is shown to the annotator,
+along with the question \Is this text sarcastic?". The goal
+is to identify which posts belong to the Text Only category,
+i.e., posts where the textual component is enough to decode
+the sarcasm, and the image has a complementary role. We
+select 1,000 positive posts for this task, using the lters
+dened in Section 3. These posts are randomly sampled from
+the original sources, with no overlap with the dataset
+presented in that Section. We collect 5 annotations for each
+post, where the answer to the question can be \Yes" (text is
+sarcastic), \No" (text is not sarcastic) or \I don't know".</p>
+      <p>For the second experiment, we take only those posts that
+have been marked as non-sarcastic by the majority of the
+annotators on the rst task (i.e., we discard the posts that
+belong to the Text Only category). Now we present both the
+textual and visual components, with the question \Is this
+post sarcastic?", and the same possible answers as before.
+Again, we collect 5 annotations per post.</p>
+      <p>The reason we run two independent experiments is to keep
+the tasks as simple as possible, and to guarantee that the
+judgment of the annotators is not a ected by the
+knowledge that some information is missing. On the rst task,
+annotators are not aware that the posts originally had one
+or more images, and are asked to judge them under that
+impression (same as a text-only based detector would do).
+If we did a two-step experiment instead, annotators would
+learn about the missing image(s) after having annotated the
+very rst post, which would invite them to answer \I don't
+know" based on that indication. We run these experiments
+for both Instagram and Tumblr. Given the limited amount
+of data that we were able to collect for Twitter, and the
+2http://www.crowd ower.com
+fact that only a small percentage of the posts are actually
+multimodal, we do not build a gold set for this platform.</p>
+      <sec id="sec-7-1">
+        <title>Quality control and inter-rater agreement. Test Ques</title>
+        <p>tions (also called Gold Standard in CrowdFlower jargon)
+are curated job units that are used to test and track the
+contributor's performance and lter out bots or unreliable
+contributors. To access the task, workers are rst asked to
+correctly annotate a set of Test Questions in an initial Quiz
+Mode screen, and their performance is tracked throughout
+the experiment with Test Questions randomly inserted in
+every task, disguised as normal units.</p>
+        <p>Judgments from contributors whose accuracy on the Test
+Questions is less than 78% are discarded and marked as not
+trusted.</p>
+      </sec>
+      <sec id="sec-7-2">
+        <title>Task</title>
+        <p>Text Only (task 1)
+Text+Image (task 2)</p>
+      </sec>
+      <sec id="sec-7-3">
+        <title>Matching%</title>
+        <p>IG TU
+80.36 76.11
+74.65 86.40</p>
+      </sec>
+      <sec id="sec-7-4">
+        <title>Fleiss'</title>
+        <p>IG TU
+0.38 0.28
+0.21 0.23</p>
+        <p>
+          To assess the quality of the collected data, we measure the
+level of agreement between annotators (see Table 5).
+Matching% is the percentage of matching judgments per object.
+For both experiments, the agreement is solid, with an
+average value around of 80%. However, the ratio of matching
+votes does not capture entirely the extent to which
+agreement emerges. We therefore compute the standard Fleiss'
+, a statistical measure for assessing the reliability of the
+agreement between a xed number of raters. Consistently,
+the Fleiss' shows a Fair level [
+          <xref ref-type="bibr" rid="ref22">22</xref>
+          ] of agreement where, as
+expected, the second experiment reaches a lower agreement
+due to its intrinsic subjectivity and di culty, even for
+human annotators [
+          <xref ref-type="bibr" rid="ref3">3</xref>
+          ].
+        </p>
+        <p>Results. Table 6 shows the distribution of the 1,000 posts
+with respect to the categories described in Section 4.1. For
+over 60% of the posts (62.20% for Instagram, 76.40% for
+Tumblr) the text alone (task 1) is not enough to determine
+whether they are sarcastic or not. However, when those
+posts are shown with their visual component (task 2), more
+than half (60.13% for Instagram, 58.25% for Tumblr) are
+actually annotated as sarcastic, i.e., these posts were
+misclassi ed as non-sarcastic by the annotators on the rst
+task, so the contribution of the image is crucial. It is
+interesting to note that a non-negligible fraction of the data
+(24.80% for Instagram, 31.90% for Tumblr) was not
+perceived as sarcastic by the majority of the annotators, which
+highlights the existing gap between the authors'
+interpretation of sarcasm and that of the readers, and the amount of
+noise we can expect in the dataset. In summary, the
+majority of the annotators found that both the text and the image
+are necessary to correctly evaluate the tone of the post in
+more than one third of the examples (37.40% for Instagram,
+44.50% for Tumblr). Among these, 51.07% of the Instagram
+posts and 44.27% of the Tumblr posts were agreed to be
+sarcastic by at least 80% of the annotators (D-80), and 22.99%
+(IG) and 31.69% (TU) were unanimously declared sarcastic
+(D-100).</p>
+      </sec>
+    </sec>
+    <sec id="sec-8">
+      <title>AUTOMATED METHODS FOR SARCASM</title>
+    </sec>
+    <sec id="sec-9">
+      <title>DETECTION</title>
+      <p>We investigate two automatic methods for multimodal
+sarcasm detection. The rst, a linear Support Vector
+Machine (SVM) approach, has been commonly used in prior
+work, though this prior work has relied on features extracted
+mainly from the text of the post (or set of posts). In our
+proposal, we combine a number of NLP features with visual
+features extracted from the image. The second approach
+relies on deep learning to fuse a deep network based
+representation of the image with unigrams as textual input. For
+both of these approaches, we evaluate the individual
+contributions of the respective textual and visual features, along
+with their fusion, in Section 6.
+5.1</p>
+    </sec>
+    <sec id="sec-10">
+      <title>SVM Approach</title>
+      <p>
+        For all experiments within this approach, we train a
+binary classi cation model using the sklearn toolkit3 with its
+default settings.4
+NLP Features. Our goal here is to replicate the prior art
+in developing a strong baseline composed of NLP features
+from which to investigate the impact that images have in
+detecting sarcasm. We adopt features commonly found in the
+literature: lexical features which measure aspects of word
+usage and frequency, features which measure the sentiment
+3http://scikit-learn.org/
+4We acknowledge that performance could be improved by
+experimenting with di erent parameters and kernels,
+however, our focus is not on optimizing for the best sarcasm
+detection system, but rather to construct a framework with
+which to show that visual features can complement textual
+features.
+and subjectivity of the post, and word sequences (n-grams).
+We also make use of word embeddings, which has seen
+limited application to this task, save for a few works, such as
+[
+        <xref ref-type="bibr" rid="ref10">10</xref>
+        ], but has been used as a strong baseline in the sister task
+of sentiment analysis [
+        <xref ref-type="bibr" rid="ref7">7</xref>
+        ]. Finally, we select some of our best
+performing features and create a combination feature class.
+A description of each class is listed below:
+lexical: average word length, average word log-frequency
+according to the Google 1TB N-gram corpus,5 number
+of contractions in sentence, average formality score as
+computed in [
+        <xref ref-type="bibr" rid="ref26">26</xref>
+        ].
+subjectivity: subjectivity and sentiment scores as
+computed by the TextBlob module,6 number of passive
+constructions, number of hedge words, number of rst
+person pronouns, number of third person pronouns.
+n-grams: unigrams and bigrams represented as
+onehot features.
+word2vec: average of word vectors using pre-trained
+word2vec embeddings [
+        <xref ref-type="bibr" rid="ref25">25</xref>
+        ]. OOV words are skipped.
+combination: n-grams, word2vec and readability
+features (these include length of post in words and
+characters, as well as the Flesch-Kincaid Grade level score [
+        <xref ref-type="bibr" rid="ref20">20</xref>
+        ]).
+      </p>
+      <p>Text is tokenized using nltk.7 In addition, we treat
+hashtags in Instagram and Twitter, and tags in Tumblr, as well
+as emojis, as part of the text on which the features are
+derived from.</p>
+      <p>
+        Visual Semantics Features (VSF). A key module to
+detect sarcasm is to understand the semantics in images. We
+employ the visual semantics models from Yahoo Flickr
+Creative Commons 100M (YFCC100M) [
+        <xref ref-type="bibr" rid="ref33">33</xref>
+        ], which include a
+diverse collection of complex real-world scenes, ranging from
+200,000 street-life-blogged photos by photographer Andy
+Nystrom to snapshots of daily life, holidays, and events.
+Specifically, the semantics models were built with an o -the-shelf
+deep convolutional neural network using the Ca e
+framework [
+        <xref ref-type="bibr" rid="ref14">14</xref>
+        ], and the penultimate layer of the convolutional
+neural network output as the image-feature representation
+for training classi ers for 1,570 concepts which are popular
+in YFCC100M. Each concept classi er is a binary support
+vector machine, for which positive examples were manually
+labeled based on targeted search/group results, while the
+negatives drew negative examples from a general pool. The
+classi ers cover a diverse collection of visual semantics in
+social media, such as people, animals, objects, foods,
+architecture, and scenery, and will provide a good representation
+of image contents. Examples of concepts include terms such
+as \head", \nsfw", \outside", and \monochrome". In our
+experiments, we use the output of the content classi ers as
+one-hot features for the SVM regression model. Essentially,
+if a concept is detected, no matter what its associated
+condence score, we treat it as a one-hot feature.
+      </p>
+      <p>
+        Multimodal Fusion. We concatenate the textual and
+visual features into a long vector, and once again use the linear
+SVM to train the fusion model. Previous research suggests
+that linear SVMs are t for text classi cation [
+        <xref ref-type="bibr" rid="ref15">15</xref>
+        ], and our
+experiments nd that linear SVM works very robustly to
+combine di erent kinds of features.
+5https://catalog.ldc.upenn.edu/LDC2006T13
+6https://textblob.readthedocs.org/en/dev/
+7http://www.nltk.org/
+      </p>
+    </sec>
+    <sec id="sec-11">
+      <title>Deep Learning Approach</title>
+      <p>
+        Adapted Visual Representation (AVR). The visual
+semantics classi ers described in the previous section are
+limited by a xed vocabulary. To get a stronger visual
+representation, we follow the work in [
+        <xref ref-type="bibr" rid="ref28">28</xref>
+        ] and [
+        <xref ref-type="bibr" rid="ref18">18</xref>
+        ] that adopt a
+deep neural network. We borrow a model trained on
+ImageNet exactly from [
+        <xref ref-type="bibr" rid="ref5">5</xref>
+        ], which is based on roughly one million
+images annotated with 1,000 object classes. There are
+originally seven layers in the model, but we remove the last layer
+of 1,000 neurons which correspond to the objects in
+ImageNet. The second to last layer has 4,096 neurons, which we
+will use to ne-tune with sarcastic and non-sarcastic data.
+Textual Features. If we were to use all the NLP features
+in Section 5.1, our deep learning framework would quickly
+over t given the limited size of the training set. As a
+consequence, a subset of the textual features were used in this
+fusion method. The NLP network is a two two layer
+perceptron based on unigrams only. The size of the rst layer
+of the NLP network is the size of the unigram vocabulary
+for every platform. We employ a hidden layer in the NLP
+network with 512 hidden neurons, which is comparable with
+the number of neurons in the AVR.
+      </p>
+      <sec id="sec-11-1">
+        <title>Multimodal Fusion via Deep Network Adaptation.</title>
+        <p>Figure 3 illustrates the neural network adaptation
+framework. We initialize a network with xed image lters from
+the ImageNet model and random weights in other layers,
+and adapt it to our data. This adaption framework works
+with the deep CNN trained on ImageNet. The
+concatenation layer has 4,608 neurons. We use the rectify function
+as the activation function on all the nonlinear layers except
+for the last layer, which uses softmax over the two classes
+(sarcastic vs. non-sarcastic). Since in practice it is hard to
+nd the global minimum in a deep neural network, we use
+Nesterov Stochastic Gradient Decent with a small random
+batch (size = 128). We nish training after 30 epochs.</p>
+      </sec>
+    </sec>
+    <sec id="sec-12">
+      <title>EVALUATION</title>
+      <p>We evaluate our two methods under the same conditions,
+and with two di erent evaluation settings. For the rst
+evaluation, models are developed on the data as described in
+Section 3, where we train on 50% of the data and evaluate
+on the remaining 50%. Please recall that the three data sets
+are evenly split between sarcastic and non-sarcastic posts,
+with the Instagram and Tumblr data sets containing a total
+of 20K posts each, and Twitter totaling 4,050 posts. We call
+this the Silver Evaluation, since the data is dependent on
+the authors correctly labeling their posts as sarcastic. As we
+saw in Table 6, 24.8% and 31.8% of Instagram and Tumblr
+posts marked by the authors as sarcastic are actually not
+sarcastic. For both the SVM and deep learning methods,
+we show results for Text-Only, Image-Only and the fusion
+of both modalities.</p>
+      <p>Next, we evaluate the respective Instagram and Tumblr
+models on the crowd-curated data sets in Section 4.2
+(henceforth Gold Evaluation). Unlike the evaluation on the
+silver sets, the models are tested on re-judged data, and thus
+are of much higher quality, though there are fewer examples.</p>
+      <p>We use accuracy as our evaluation metric, and the baseline
+accuracy is 50% since all sets are evenly split.
+6.1</p>
+    </sec>
+    <sec id="sec-13">
+      <title>Fusion with SVM</title>
+      <p>6.1.1</p>
+      <p>Evaluation on Silver Set</p>
+      <sec id="sec-13-1">
+        <title>Feature Set</title>
+        <p>lexical
+subjectivity
+1,2-grams
+word2vec
+combination</p>
+        <sec id="sec-13-1-1">
+          <title>VSF only n-gram + VSF combination + VSF</title>
+          <p>IG
+56.7
+61.7
+80.7
+74.9
+81.4</p>
+          <p>We rst evaluate the contribution of the individual NLP
+features from Section 5.1 on the three data sets, as shown in
+the rst main block in Table 7. The top individual feature
+is n-gram (1- and 2-grams), roughly performing at close to
+80% accuracy across all data sets. In fact, even though we
+use three disparate data sets, the performance gures for
+each feature are consistently the same as the the ranking of
+the features. This may suggest that users do not alter the
+way they use sarcasm across platforms, though the best way
+of testing this hypothesis would be to investigate whether
+models trained on one platform, e.g., Twitter, can
+approximate the performance found on the other platforms, e.g.,
+Instagram, when models are trained on native data. Finally,
+merging several of the feature classes into one (combination)
+yields the best performance, exceeding 80% for all data sets.</p>
+          <p>Using only the visual semantics features (VSF) yields an
+accuracy around 65% across the data sets. This is more
+than 15 points lower than the best NLP models; however,
+we were surprised that such a simple feature class actually
+outperformed the lexical and subjectivity features, both of
+which have been used in prior NLP work for the sarcasm
+detection task.</p>
+          <p>Finally, we combine the visual semantics features with
+the two best performing NLP features, i.e., n-grams and the
+combination feature class (last two rows of Table 7). For
+all the three data sets, the model with n-grams + VFS
+outperformed the model solely trained on n-grams by a small
+margin. However, it was not better than using the
+combination features. When combining the visual features with the
+combination features, we achieve the highest performance in
+Instagram (82.3%) and Tumblr (81.0%). In Twitter, the
+fusion produces the second highest performance (80.0%) to the
+80.5% yielded by combination features only. These results
+show that including simple, noisy image-related features can
+improve sarcasm detection, albeit by a small margin.
+6.1.2</p>
+          <p>Evaluation on Gold Set</p>
+          <p>Next, we investigate how well our models perform on the
+curated gold sets in Instagram and Tumblr. For the sake of
+simplicity, we focus our NLP evaluation on just the two top
+performing feature classes: n-grams and combination.</p>
+          <p>Table 8 shows the results for the di erent modalities in
+Instagram. For the NLP features, the combination and
+ngram are tied for the 50% and 100% agreement conditions
+(D-50 and D-100), while combination narrowly outperforms
+its counterpart in the 80% condition (D-80). As in the
+previous silver results, using the VSF only causes a loss in
+performance of nearly 15 points. The best results come from fusing
+n-grams with VSF, yielding a performance improvement of
+about 5% on all three agreement levels. Interestingly, while
+combination + VSF was generally the best feature in the
+silver evaluation, it is the second best here.</p>
+          <p>The Gold Tumblr results in Table 9 show a similar
+pattern with Table 8: the combination features outperform the
+n-gram features by a small margin across all three
+agreement levels, and only using VSF results in a performance
+loss of around 15 points accuracy compared to
+combination. We see the best performance when fusing the NLP
+and VSF features. At the 80% agreement level, n-gram +
+VSF yields a performance of 87.8%, which outperforms the
+best non-fusion performance by 1.8 points (86.0%). At the
+100% agreement level, both fusion sets perform at 89.7%,
+a 5% point improvement. However, at the lower agreement
+rate (50%), the best performing fusion method just narrowly
+misses the combination method (88.5% to 88.8%).</p>
+          <p>The main message from both the silver and gold
+evaluations is that incorporating simple features which describe
+the image in a very traditional framework can improve
+performance. In general, the best performance comes not from
+fusing VSF with combination features, but rather with
+ngrams. We speculate that this may be due to the
+mismatch between the silver and gold sets. We do note that
+in some cases the performance improvement was small or
+non-existent. This is partially due to the noisiness of the
+data, the high baseline set by the NLP features, and also
+the accuracy of the VSF features, which can be viewed as
+hypotheses of what the classi er believes is present in the
+photo, even if weakly present.
+6.2</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-14">
+      <title>Fusion with Deep Network Adaptation</title>
+      <p>Next, we evaluate our deep learning approach on our
+silver and gold sets. We additionally evaluate the model with
+image (AVR) and text (unigram) features only, for which
+the concatenation layer (see Figure 3) still exists but has no
+e ect with single modality input. The three models use the
+same learning rates.
+6.2.1</p>
+      <p>Evaluation on Silver Set</p>
+      <sec id="sec-14-1">
+        <title>Feature Set</title>
+        <p>1-grams</p>
+        <p>AVR only
+1-grams + AVR</p>
+        <p>Table 10 shows the the evaluation on the silver set. It is
+easy to see that fusing the textual and image signals together
+provides the best performance across all three sets, ranging
+from 74.2% in Instagram to 69.7% in Twitter. That con rms
+our hypothesis that the visual aspect plays a role in the
+detection of sarcasm.</p>
+        <p>Another interesting phenomenon is that the image-only
+network outperforms the visual semantics features
+consistently in all three platforms: 73.8% vs. 68.8% in Instagram,
+69.2% vs. 65.7% in Tumblr, and 68.7% vs. 61.7% in
+Twitter. This suggests that the adapted deep CNN better
+captures the diversity of sarcastic images. On the other hand,
+our text-based network is worse than the text models using
+SVM. The reason is mainly because our text network does
+not use bigrams or higher dimensional features. Since the
+visual semantics features are not ne-tuned, the simpler
+fusion by SVM method does not over t the training set. As
+a result, all state-of-the-art NLP features described in
+Section 5.1 can be used in this model.</p>
+        <p>Among the three platforms, the performance in Twitter is
+lower than in the other two. We believe that this is mainly
+due to the small amount of training data (2,000 posts),
+which is an issue for deep learning. Also, given that
+Twitter is mostly a textual platform (especially compared to the
+more image-centric Instagram and Tumblr), the weaker
+textual baseline seems to fail to capture the nuances of sarcasm
+used in this platform.
+6.2.2</p>
+        <p>Evaluation on Gold Set</p>
+      </sec>
+      <sec id="sec-14-2">
+        <title>Feature Set</title>
+        <sec id="sec-14-2-1">
+          <title>1-grams AVR only 1-grams + AVR</title>
+          <p>D-50
+N =374
+69.7
+77.0
+77.8</p>
+          <p>D-80
+N =191
+67.7
+74.6
+78.4</p>
+          <p>D-100
+N =86
+63.1
+74.8
+77.6</p>
+          <p>Our gold results show a similar pattern. In the Tumblr
+set, the fusion of text and image yields the best performance
+over D-50 and D-80, but is narrowly behind just using the
+image on D-100. In the Instagram set, the fusion of text
+and images yields the best performance in all three
+platforms. Since the text feature is limited, the performance of
+deep network adaptation is not as competitive as the SVM
+based fusion method. However, we think the performance of
+deep neural network adaption will be improved with more
+training examples.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-15">
+      <title>CONCLUSIONS</title>
+      <p>To the best of our knowledge, this work represents the rst
+empirical investigation on the impact of images for sarcasm
+detection in social media. In particular, we rst investigate
+the role of images, and quantitatively show that humans use
+visuals as situational context to decode the sarcastic tone of
+a post. The collected and annotated data will be shared with
+the research community. Second, we show that automatic
+methods for sarcasm detection can be improved by taking
+visual information into account. Finally, while most
+previous work has focused on the study of textual utterances on
+Twitter, our research shows breadth by tackling two other
+popular social media platforms: Instagram and Tumblr.</p>
+      <p>We propose two types of multimodal fusion frameworks to
+integrate the visual and textual components, and we
+evaluate them across three social media platforms with
+heterogeneous characteristics. With the use of visual semantics
+features, we observe an improved performance for the noisy
+dataset in the case of Instagram (the most image-centric
+platform), while the impact of images in Tumblr and
+Twitter was not perceived as relevant. We argue that this
+behavior is due to their text-centric nature. In the case of curated
+data though, we observe higher predictive accuracy across
+all the platforms, and across almost all of the agreement
+levels, which suggests that the visual component plays an
+important role when human judgments are involved.</p>
+      <p>By using deep network adaptation, we show a consistent
+increment in performance across the three platforms. Also in
+this case, Instagram was the platform that reached the
+highest accuracy. We have pointed out the weak performance
+of the textual features used in the deep learning approach.
+The challenges that prevent us from using more advanced
+textual features (such as those used in the SVM model) are
+two-fold: 1) given the limited size of the training set, the
+network adaptation method su ers from over tting; adding
+new features does not help when the fusion network can get
+almost perfect accuracy on the training set; and 2) a higher
+dimensionality brings di culties for a fast neural network
+training due to the limitations of the GPU memory.
+Collecting more training data should, at the very least, address
+the over tting issue.</p>
+      <p>Images can be thought of as another form of contextual
+clue, much like the role of previous tweets by a user or the
+overall sarcasm levels of a discussion thus far. In our future
+work, we wish to build a model which integrates all these
+contextual clues within our framework to assess which ones
+have the largest impact per platform. We are also interested
+in including visual sentiment frameworks in the evaluation
+of the sarcastic tone.</p>
+    </sec>
+    <sec id="sec-16">
+      <title>ACKNOWLEDGMENTS</title>
+      <p>This work is partially supported by the project
+\ExceptionOWL: Nonmonotonic Extensions of Description Logics
+and OWL for defeasible inheritance with exceptions",
+Progetti di Ateneo Universita degli Studi di Torino and
+Compagnia di San Paolo, call 2014, line \Excellent (young) PI".</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          [1]
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Attardo</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Eisterhold</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Hay</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>and I. Poggi.</surname>
+          </string-name>
+          <article-title>Multimodal markers of irony and sarcasm</article-title>
+          . Humor-international
+          <source>Journal of Humor Research</source>
+          ,
+          <volume>16</volume>
+          :
+          <fpage>243</fpage>
+          {
+          <fpage>260</fpage>
+          ,
+          <year>2003</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          [2]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Bamman</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>N. A.</given-names>
+            <surname>Smith.</surname>
+          </string-name>
+          <article-title>Contextualized sarcasm detection on twitter</article-title>
+          . In M. Cha,
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Mascolo</surname>
+          </string-name>
+          , and C. Sandvig, editors,
+          <source>Proc. of the Ninth Int. Conference on Web and Social Media, ICWSM</source>
+          , pages
+          <volume>574</volume>
+          {
+          <fpage>577</fpage>
+          . AAAI Press,
+          <year>2015</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          [3]
+          <string-name>
+            <given-names>F.</given-names>
+            <surname>Barbieri</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Saggion</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>F.</given-names>
+            <surname>Ronzano</surname>
+          </string-name>
+          .
+          <article-title>Modelling sarcasm in twitter, a novel approach</article-title>
+          .
+          <source>In Proc. of the Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis</source>
+          , pages
+          <volume>50</volume>
+          {
+          <fpage>58</fpage>
+          ,
+          <string-name>
+            <surname>Baltimore</surname>
+          </string-name>
+          , Maryland,
+          <year>June 2014</year>
+          .
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          [4]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Borth</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Ji</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>S.-F.</given-names>
+            <surname>Chang</surname>
+          </string-name>
+          . Sentibank:
+          <article-title>Large-scale ontology and classi ers for detecting sentiment and emotions in visual content</article-title>
+          .
+          <source>In Proc. of the ACM Int. Conference on Multimedia, MM '13</source>
+          , pages
+          <fpage>459</fpage>
+          {
+          <fpage>460</fpage>
+          , New York, NY, USA,
+          <year>2013</year>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          [5]
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Chat eld</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Simonyan</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Vedaldi</surname>
+          </string-name>
+          ,
+          <article-title>and</article-title>
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Zisserman</surname>
+          </string-name>
+          .
+          <article-title>Return of the devil in the details: delving deep into convolutional nets</article-title>
+          .
+          <source>In BMVC</source>
+          ,
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          [6]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Davidov</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>O.</given-names>
+            <surname>Tsur</surname>
+          </string-name>
+          ,
+          <article-title>and</article-title>
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Rappoport</surname>
+          </string-name>
+          .
+          <article-title>Semi-supervised recognition of sarcastic sentences in twitter and amazon</article-title>
+          .
+          <source>In Proc. of the Conference on Computational Natural Language Learning</source>
+          ,
+          <source>CoNLL '10</source>
+          , pages
+          <fpage>107</fpage>
+          {
+          <fpage>116</fpage>
+          ,
+          <string-name>
+            <surname>Stroudsburg</surname>
+          </string-name>
+          , PA, USA,
+          <year>2010</year>
+          .
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          [7]
+          <string-name>
+            <given-names>M.</given-names>
+            <surname>Faruqui</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Dyer</surname>
+          </string-name>
+          .
+          <article-title>Non-distributional word vector representations</article-title>
+          .
+          <source>In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)</source>
+          , volume
+          <volume>2</volume>
+          , pages
+          <fpage>464</fpage>
+          {
+          <fpage>469</fpage>
+          , Beijing, China,
+          <year>July 2015</year>
+          .
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          [8]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Frome</surname>
+          </string-name>
+          , G. Corrado,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Shlens</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Bengio</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Dean</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.</given-names>
+            <surname>Ranzato</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Mikolov</surname>
+          </string-name>
+          .
+          <article-title>Devise: A deep visual-semantic embedding model</article-title>
+          .
+          <source>In Advances In Neural Information Processing Systems</source>
+          , NIPS,
+          <year>2013</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Ghosh</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>W.</given-names>
+            <surname>Guo</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Muresan</surname>
+          </string-name>
+          .
+          <article-title>Sarcastic or not: Word embeddings to predict the literal or sarcastic meaning of words</article-title>
+          . In L. Marquez,
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Callison-Burch</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Su</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Pighin</surname>
+          </string-name>
+          , and Y. Marton, editors,
+          <source>EMNLP</source>
+          , pages
+          <volume>1003</volume>
+          {
+          <fpage>1012</fpage>
+          . The Association for Computational Linguistics,
+          <year>2015</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          [10]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Ghosh</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>W.</given-names>
+            <surname>Guo</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Muresan</surname>
+          </string-name>
+          .
+          <article-title>Sarcastic or not: Word embeddings to predict the literal or sarcastic meaning of words</article-title>
+          .
+          <source>In Proc. of the Conference on Empirical Methods in Natural Language Processing</source>
+          , pages
+          <volume>1003</volume>
+          {
+          <fpage>1012</fpage>
+          , Lisbon, Portugal,
+          <year>September 2015</year>
+          .
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          [11]
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Gibbs</surname>
+          </string-name>
+          .
+          <source>The Cambridge Handbook of Metaphor and Thought</source>
+          . Cambridge Handbooks in Psychology. Cambridge University Press,
+          <year>2008</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          [12]
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Gibbs</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Colston</surname>
+          </string-name>
+          .
+          <article-title>Irony in Language and Thought: A Cognitive Science Reader</article-title>
+          . Lawrence Erlbaum Associates,
+          <year>2007</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>
+          [13]
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Gonzalez-Iban</surname>
+          </string-name>
+          ~ez, S. Muresan, and
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Wacholder</surname>
+          </string-name>
+          .
+          <article-title>Identifying sarcasm in twitter: A closer look</article-title>
+          .
+          <source>In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)</source>
+          , volume
+          <volume>2</volume>
+          <source>of HLT '11</source>
+          , pages
+          <fpage>581</fpage>
+          {
+          <fpage>586</fpage>
+          ,
+          <string-name>
+            <surname>Stroudsburg</surname>
+          </string-name>
+          , PA, USA,
+          <year>2011</year>
+          .
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>
+          [14]
+          <string-name>
+            <given-names>Y.</given-names>
+            <surname>Jia</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Shelhamer</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Donahue</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Karayev</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Long</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Girshick</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Guadarrama</surname>
+          </string-name>
+          , and T. Darrell. Ca e:
+          <article-title>Convolutional architecture for fast feature embedding</article-title>
+          .
+          <source>arXiv preprint arXiv:1408.5093</source>
+          ,
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>
+          [15]
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Joachims</surname>
+          </string-name>
+          .
+          <article-title>Text categorization with suport vector machines: Learning with many relevant features</article-title>
+          .
+          <source>In Proceedings of the 10th European Conference on Machine Learning</source>
+          ,
+          <source>ECML '98</source>
+          , pages
+          <fpage>137</fpage>
+          {
+          <fpage>142</fpage>
+          , London, UK, UK,
+          <year>1998</year>
+          . Springer-Verlag.
+        </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>
+          [16]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Joshi</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Bhattacharyya</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>M. J.</given-names>
+            <surname>Carman</surname>
+          </string-name>
+          .
+          <article-title>Automatic sarcasm detection: A survey</article-title>
+          .
+          <source>CoRR, abs/1602.03426</source>
+          ,
+          <year>2016</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>
+          [17]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Joshi</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>V.</given-names>
+            <surname>Sharma</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Bhattacharyya</surname>
+          </string-name>
+          .
+          <article-title>Harnessing context incongruity for sarcasm detection</article-title>
+          .
+          <source>In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)</source>
+          , volume
+          <volume>2</volume>
+          , pages
+          <fpage>757</fpage>
+          {
+          <fpage>762</fpage>
+          . The Association for Computer Linguistics,
+          <year>2015</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>
+          [18]
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Karayev</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Hertzmann</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Winnemoeller</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Agarwala</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Darrell</surname>
+          </string-name>
+          .
+          <article-title>Recognizing image style</article-title>
+          .
+          <source>BMVC</source>
+          ,
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>
+          [19]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Khattri</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Joshi</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Bhattacharyya</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>M.</given-names>
+            <surname>Carman</surname>
+          </string-name>
+          .
+          <article-title>Your sentiment precedes you: Using an author's historical tweets to predict sarcasm</article-title>
+          .
+          <source>In Proc. of the Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis</source>
+          , pages
+          <volume>25</volume>
+          {
+          <fpage>30</fpage>
+          ,
+          <string-name>
+            <surname>Lisboa</surname>
+          </string-name>
+          , Portugal,
+          <year>September 2015</year>
+          .
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>
+          [20]
+          <string-name>
+            <given-names>J. P.</given-names>
+            <surname>Kincaid</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R. P.</given-names>
+            <surname>Fishburne</surname>
+          </string-name>
+          <string-name>
+            <surname>Jr.</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R. L.</given-names>
+            <surname>Rogers</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>B. S.</given-names>
+            <surname>Chissom</surname>
+          </string-name>
+          .
+          <article-title>Derivation of new readability formulas (automated readability index, fog count and Flesch reading ease formula) for navy enlisted personnel</article-title>
+          .
+          <source>Technical report, DTIC Document</source>
+          ,
+          <year>1975</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>
+          [21]
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Kiros</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Salakhutdinov</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>R. S.</given-names>
+            <surname>Zemel</surname>
+          </string-name>
+          .
+          <article-title>Unifying visual-semantic embeddings with multimodal neural language models</article-title>
+          .
+          <source>CoRR, abs/1411.2539</source>
+          ,
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref22">
+        <mixed-citation>
+          [22]
+          <string-name>
+            <given-names>J. R.</given-names>
+            <surname>Landis</surname>
+          </string-name>
+          and
+          <string-name>
+            <surname>G. G. Koch.</surname>
+          </string-name>
+          <article-title>The measurement of observer agreement for categorical data</article-title>
+          .
+          <source>Biometrics</source>
+          ,
+          <volume>33</volume>
+          (
+          <issue>1</issue>
+          ),
+          <year>1977</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref23">
+        <mixed-citation>
+          [23]
+          <string-name>
+            <given-names>L.</given-names>
+            <surname>Ma</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Z.</given-names>
+            <surname>Lu</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>L.</given-names>
+            <surname>Shang</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Li</surname>
+          </string-name>
+          .
+          <article-title>Multimodal convolutional neural networks for matching image and sentence</article-title>
+          .
+          <source>CoRR, abs/1504.06063</source>
+          ,
+          <year>2015</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref24">
+        <mixed-citation>
+          [24]
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Mao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>W.</given-names>
+            <surname>Xu</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Y.</given-names>
+            <surname>Yang</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Wang</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>A. L.</given-names>
+            <surname>Yuille</surname>
+          </string-name>
+          .
+          <article-title>Deep captioning with multimodal recurrent neural networks (m-rnn)</article-title>
+          .
+          <source>CoRR, abs/1412.6632</source>
+          ,
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref25">
+        <mixed-citation>
+          [25]
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Mikolov</surname>
+          </string-name>
+          , I. Sutskever,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Chen</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>G. S.</given-names>
+            <surname>Corrado</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Dean</surname>
+          </string-name>
+          .
+          <article-title>Distributed representations of words and phrases and their compositionality</article-title>
+          .
+          <source>In Advances in neural information processing systems</source>
+          , pages
+          <volume>3111</volume>
+          {
+          <fpage>3119</fpage>
+          ,
+          <year>2013</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref26">
+        <mixed-citation>
+          [26]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Pavlick</surname>
+          </string-name>
+          and
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Nenkova</surname>
+          </string-name>
+          .
+          <article-title>Inducing lexical style properties for paraphrase and genre di erentiation</article-title>
+          .
+          <source>In Proc. of the Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</source>
+          , pages
+          <volume>218</volume>
+          {
+          <fpage>224</fpage>
+          , Denver, Colorado, May{June 2015.
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref27">
+        <mixed-citation>
+          [27]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Rajadesingan</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Zafarani</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Liu</surname>
+          </string-name>
+          .
+          <article-title>Sarcasm detection on twitter: A behavioral modeling approach</article-title>
+          .
+          <source>In Proc. of the ACM Int. Conference on Web Search and Data Mining, WSDM '15</source>
+          , pages
+          <fpage>97</fpage>
+          {
+          <fpage>106</fpage>
+          , New York, NY, USA,
+          <year>2015</year>
+          . ACM.
+        </mixed-citation>
+      </ref>
+      <ref id="ref28">
+        <mixed-citation>
+          [28]
+          <string-name>
+            <given-names>A. S.</given-names>
+            <surname>Razavian</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Azizpour</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Sullivan</surname>
+          </string-name>
+          , and
+          <string-name>
+            <surname>S. Carlsson.</surname>
+          </string-name>
+          <article-title>CNN features o -the-shelf: an astounding baseline for recognition</article-title>
+          .
+          <source>CVPR DeepVision workshop</source>
+          ,
+          <year>2014</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref29">
+        <mixed-citation>
+          [29]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Reyes</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Rosso</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Veale</surname>
+          </string-name>
+          .
+          <article-title>A multidimensional approach for detecting irony in twitter</article-title>
+          . Lang. Resour. Eval.,
+          <volume>47</volume>
+          (
+          <issue>1</issue>
+          ):
+          <volume>239</volume>
+          {
+          <fpage>268</fpage>
+          ,
+          <string-name>
+            <surname>Mar</surname>
+          </string-name>
+          .
+          <year>2013</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref30">
+        <mixed-citation>
+          [30]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Rilo</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Qadir</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Surve</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>L. D.</given-names>
+            <surname>Silva</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Gilbert</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Huang</surname>
+          </string-name>
+          .
+          <article-title>Sarcasm as contrast between a positive sentiment and negative situation</article-title>
+          .
+          <source>In EMNLP</source>
+          , pages
+          <volume>704</volume>
+          {
+          <fpage>714</fpage>
+          .
+          <string-name>
+            <surname>ACL</surname>
+          </string-name>
+          ,
+          <year>2013</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref31">
+        <mixed-citation>
+          [31]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Shutova</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Kiela</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Maillard</surname>
+          </string-name>
+          .
+          <article-title>Black holes and white rabbits: Metaphor identi cation with visual features</article-title>
+          .
+          <source>In Proc. of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</source>
+          , pages
+          <volume>160</volume>
+          {
+          <fpage>170</fpage>
+          , San Diego, California, June 2016.
+          <article-title>Association for Computational Linguistics</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref32">
+        <mixed-citation>
+          [32]
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Tepperman</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Traum</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>S. S.</given-names>
+            <surname>Narayanan</surname>
+          </string-name>
+          .
+          <article-title>"yeah right": Sarcasm recognition for spoken dialogue systems</article-title>
+          .
+          <source>In Proc. of InterSpeech</source>
+          , pages
+          <year>1838</year>
+          {
+          <year>1841</year>
+          , Pittsburgh, PA, Sept.
+          <year>2006</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref33">
+        <mixed-citation>
+          [33]
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Thomee</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Elizalde</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D. A.</given-names>
+            <surname>Shamma</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Ni</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>G.</given-names>
+            <surname>Friedland</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Poland</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Borth</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>L.-J.</given-names>
+            <surname>Li</surname>
+          </string-name>
+          .
+          <article-title>Yfcc100m: The new data in multimedia research</article-title>
+          .
+          <source>Communications of the ACM</source>
+          ,
+          <volume>59</volume>
+          (
+          <issue>2</issue>
+          ):
+          <volume>64</volume>
+          {
+          <fpage>73</fpage>
+          ,
+          <year>2016</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref34">
+        <mixed-citation>
+          [34]
+          <string-name>
+            <given-names>O.</given-names>
+            <surname>Tsur</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Davidov</surname>
+          </string-name>
+          ,
+          <article-title>and</article-title>
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Rappoport</surname>
+          </string-name>
+          .
+          <article-title>Semi-Supervised Recognition of Sarcastic Sentences in Online Product Reviews</article-title>
+          . In M. Hearst,
+          <string-name>
+            <given-names>W.</given-names>
+            <surname>Cohen</surname>
+          </string-name>
+          , and S. Gosling, editors,
+          <source>Proc. of the Int. Conference on Weblogs and Social Media (ICWSM-2010)</source>
+          . The AAAI Press, Menlo Park, California,
+          <year>2010</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref35">
+        <mixed-citation>
+          [35]
+          <string-name>
+            <given-names>T.</given-names>
+            <surname>Veale</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Feyaerts</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Forceville</surname>
+          </string-name>
+          .
+          <article-title>Creativity and the Agile Mind: A Multi-Disciplinary Study of a Multi-Faceted Phenomenon</article-title>
+          . Applications of Cognitive Linguistics [ACL].
+          <source>De Gruyter</source>
+          ,
+          <year>2013</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref36">
+        <mixed-citation>
+          [36]
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Verstraten</surname>
+          </string-name>
+          .
+          <article-title>Film Narratology : lm narratives his primary focus, while noting</article-title>
+          . University of Toronto Press,
+          <year>2006</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref37">
+        <mixed-citation>
+          [37]
+          <string-name>
+            <given-names>Z.</given-names>
+            <surname>Wang</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Z.</given-names>
+            <surname>Wu</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Wang</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>Y.</given-names>
+            <surname>Ren</surname>
+          </string-name>
+          .
+          <article-title>Twitter sarcasm detection exploiting a context-based model</article-title>
+          . In J.
+          <string-name>
+            <surname>Wang</surname>
+            ,
+            <given-names>W.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Cellary</surname>
+            ,
+            <given-names>D.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Wang</surname>
+            ,
+            <given-names>H.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Wang</surname>
+            ,
+            <given-names>S.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Chen</surname>
+            ,
+            <given-names>T.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Li</surname>
+            , and
+            <given-names>Y</given-names>
+          </string-name>
+          . Zhang, editors,
+          <source>Web Information Systems Engineering - WISE 2015 - 16th Int. Conference</source>
+          , Miami, FL, USA, November 1-
+          <issue>3</issue>
+          ,
+          <year>2015</year>
+          ,
+          <string-name>
+            <given-names>Proc.</given-names>
+            ,
+            <surname>Part</surname>
+          </string-name>
+          <string-name>
+            <surname>I</surname>
+          </string-name>
+          , volume
+          <volume>9418</volume>
+          of Lecture Notes in Computer Science, pages
+          <volume>77</volume>
+          {
+          <fpage>91</fpage>
+          . Springer,
+          <year>2015</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref38">
+        <mixed-citation>
+          [38]
+          <string-name>
+            <given-names>Q.</given-names>
+            <surname>You</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Luo</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Jin</surname>
+          </string-name>
+          , and
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Yang</surname>
+          </string-name>
+          .
+          <article-title>Robust Image Sentiment Analysis using Progressively Trained and Domain Transferred Deep Networks</article-title>
+          .
+          <source>In AAAI Conference on Arti cial Intelligence (AAAI)</source>
+          ,
+          <year>2015</year>
+          .
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+

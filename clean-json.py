@@ -1,7 +1,8 @@
 import json
 import os
 
-paperdirectory = "/Users/fernandodurier/Desktop/sarcasm-paper-review"
+#paperdirectory = "/Users/fernandodurier/Desktop/sarcasm-paper-review"
+paperdirectory = 'C:/Users/ferna/Documents/development/paper-cross-ref-check/resources'
 
 data = []
 

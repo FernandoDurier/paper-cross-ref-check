@@ -1,0 +1,558 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": null,
+            "article-meta": {
+                "title-group": {
+                    "article-title": "Convolutional Neural Network based Simile Classification System"
+                },
+                "contrib-group": {
+                    "contrib": [
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Manjusha P D",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "M. Tech Student",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "QL manjushapda@gmail.com",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        }
+                    ],
+                    "aff": {
+                        "@id": "aff0",
+                        "label": "0",
+                        "institution": "Raseek C Assistant Professor, Dept. of CSE Govt.Engineering College",
+                        "addr-line": "Palakkad",
+                        "country": {
+                            "@country": "IN",
+                            "#text": "India"
+                        },
+                        "#text": ",\n          \n          ,"
+                    }
+                },
+                "pub-date": {
+                    "year": "2018"
+                },
+                "abstract": {
+                    "p": "-Figurative Language is a kind of language that express ideas with a meaning different from its actual literal interpretation. Social media makes use of a wide range of figurative languages. Among them Simile, Sarcasm, Irony and humor are mostly used. Simile essentially compares two different things and often occur in tweets. People make use of indirect interpretations to express their views. Thus arises the need of detecting other figurative languages occurrence in similes. For proper understanding of text, occurrences of sarcasm, irony and humor in similes is necessary. Current approaches mainly focus on detection of one or two figurative languages at once. This paper proposes classification of different figurative languages at once using deep learning concept such as Convolutional Neural Network (CNN) and machine learning concepts like Support Vector Machine (SVM), Decision Tree, K-nearest neighbor (KNN), Gaussian Naive Bayes (GNB) classifier. Also, compared the performance of different classification models."
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": "Keywords?Figurative Language, Deep learning, Machine\nLearning,ConvolutionalNeuralNetwork,Glove,Neuralnetwork."
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "I. INTRODUCTION",
+                    "p": [
+                        "A figurative language often uses words with a meaning\ndifferent from its actual meaning. Figurative language provide\nmore importance to the feelings of a writer than its literal\ninterpretation. In literal interpretation, the writers express\nthings as such it is. Detection of figurative languages helps in\ncomputational linguistics and social media sentiment analysis.\nThe majority of social media comments make use of figurative\nlanguages for better expression of user emotions. Most of\nthe figurative languages have an implicit meaning embedded\nin them. This provides difficulty in identifying actual sense\nmeant by the figurative language. Each figurative language\nhas specific features exclusively determined for them to better\ndistinguish them, which can be different for different\nlanguages. Recognition of these figurative languages at the same\ntime automatically by combining various features that better\ndistinguishthemactastrendinginsocialmedia.",
+                        "There include a wide range of figurative languages and this\nwork focuses on simile, sarcasm, irony and humor because\nmost of the micro-blogging platforms make use of these\nfigures of speech mostly. A simile is a figure of speech\nthat essentially compares two different things with the help\nof words such as like, as, than. They can have implicit or\nexplicit properties mentioned. For example, Our room feels\nlike Antarctica. Sarcasm, irony and humor haswidespread\nimpact over social media. There exist, chances of occurrence\nof these figurative languages in simile. Proper identification of\nthese occurrences helps in better\ninterpretation.Sarcasmusuallymakesuseofwordstoexpressmean\ningthat is opposite of its actual meaning. It is mainly used to\ncriticize someone?s feelings.Forexample, I love the way my\nsweet heart cheats on me. Irony includes words that are\nopposite of the actual situation. For example, The teacher fails\nto pass thetest. Humor is also a figure of speech which is used\nto produce an effect of laughter and to make things funny.\nHumor provides the direct implication of the situation. For\nexample, Life is like a bubble bath. All fun and games till you\nget some in your eye.",
+                        "Above mentioned examples are all belong to class simile,\nbut they have a finer classification of sarcastic simile, ironic\nsimile, humorous simile. This classification is also necessary\nin different applications like computational linguistics, social\nmultimedia, and psychology. Text summarization, machine\ntranslation systems, advertisements, news articles, sentiment\nanalysis and review processing system make use of figurative\nlanguages. The main objective of the figurative language\ndetection system is defined as: Given an input sentence, then\nthe system aims to identify the figurative language class in\nwhich it belongs.The class can be sarcastic simile, ironic\nsimile, humorous simile.",
+                        "The paper proposed method to automatically detect different\nfigurative languages occurrence in simile at once using deep\nlearning model CNN and various machine learning models.\nAlsoproposedcomparisonofperformanceofdifferentmodels.\nDatasetcreationisatedioustaskinthisarea.Thisworkmainly\nfocuses on tweets fromtwitter.",
+                        "Fig. 1 is the basic architecture of our model which contains\n3 stages: Dataset creation, Preprocessing, Tweet classification.\nAll these steps are explained detail in the system design\nsection.",
+                        "This paper is organized as follows: Section II discusses\nvarious previous works in the field of figurative languages\nclassification. Section III discusses the architecture of our\nmodel and next section discusses the experimental evaluation\nof the proposed method. Section V gives a brief conclusion\nand describes future scope of this work.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref1",
+                                    "#text": "1"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref2",
+                                    "#text": "2"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "5"
+                                }
+                            ],
+                            "#text": "There exist different methods for\ndetectionoffigurativelanguagesatonce.Mainlysupervisedclassifi\ncationmethodswereproposedformulticlassfigurativelanguagecl\nassification.Deeplearningmethodswerenotoftenproposedforcla\nssificationofdifferentfigurativelanguagesatthesametime.There\nexist few papers discussing\naboutfigurativelanguageclassification. Similes often have\nimplicitpropertiesembeddedinthem.Qadiretal[\n        \n        ],proposedamet\nhodtoautomaticallyinferimplicitpropertiesinsimiles.Itmainlyin\ncludesthreestages like generating candidate properties from\ntheeventandvehicleofasimile,evaluatingthecandidateproperties\nwithrespect to multiple simile components\nandaggregatedrankingoftheproperties.Themethodusesvariouss\nyntacticpatternstoidentifysimiles.Qadiretal[\n        \n        ],appliedrulestore\ncognizesyntactic patterns of simile. Rules used\nincludeNPVERBlikeNP,ADJas[a,an]Noun,ADJlike[a,an]Noun\n.Thismethodfocusesonthepolarityofsentenceasafeatureforthede\ntectionofsimile.ThemethodusesSimilecomponentpolarity and\nsimile connotation polarity asfeatures.Thereexists a drawback\nthat certain simile\nmayincludenegativewords,butactualsentiment is positive and\nsystemfailedtodetectit.Inbothabovementionedapproachesdatas\netiscreated by streaming tweets with hashtag\nsimile,tweetshavingwordslike,as,thanandthenusingcertainsynta\ncticpatternsto finally process it.Khokhlova et al [\n        \n        ], proposed\nmethod for automatic de- tection of irony and sarcasm. The\nmethod considers eight basic emotions along with syntactic\nfeatures for the detection of irony and sarcasm. Eight basic\nemotions include anger, anticipation, disgust, fear, joy,\nsadness, trust and surprise. EmoLex (Emotion Lexicon) is\nused to assign emotion and polarity to words of tweets. A\ncomparison with NRC Emotion Lexicon was performed\nFrequency list of sarcasm and irony corpora were obtained\nprimarily and performed comparison with EmoLex list. This\nhelps to provide accurate emotion to corresponding words and\nthus better distinguishing sarcasm and irony. The method also\nassigns polarity to each word in\natweetandobtainedcombinedpolarityofthetweet.Various\nfeatures extracted for training classifier includes N-gram, part\nof speech, hashtags, presence of interjections and the eight\nbasic emotions from EmoLex. The method identifies a large\nnumber of constructions with negations are found in ironic\ntexts than sarcastic texts. Dataset includes Irony TwBarbieri\n2014 and Irony TwReyes 2013 are two datasets for irony\nand Sarcasm Ptacek 2014 and the Sarcasm TwRiloff 2013\nfor sarcasm. Irony TwBarbieri 2014 include 10,000 ironic\nand 40,000 non-ironic instances. Irony TwReyes 2013 include\n10,000 ironic and 30,000 non-ironic instances. Sarcasm Ptacek\n2014 include 25,000 sarcastic and 75,000\nnon-sarcasticinstances TwRiloff 2013 include 10,000 sarcastic and 40,000\nnon-sarcastic instances."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref4",
+                                    "#text": "4"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref4",
+                                    "#text": "4"
+                                }
+                            ],
+                            "#text": "Barbieri et al [\n        \n        ], proposed a method to automatically\nclassify irony and humor. The method helped to study aspects\nof frequency imbalance in tweet based on most frequent and\nrare words. Frequent and rare words are determined using\nANC (American National Corpus) frequency data corpora.\nPresence of frequent words and rare words in a sentence can\ncause unexpected. This unexpectedness and incongruity can\nbe used to distinguish irony and humor. The methodused\nSentiWordNet sentiment lexicon for obtaining sentiment of\neach word. Here obtained synsets of words in the sentence\nand then assigned a sentiment score of positive or negative to\nthe words. Presence of punctuations was considered as better\npragmaticfeaturebythemodel.Punctuationsincludeanumber of\ncommas, exclamation and quotation marks, full stops,\nsemicolons, ellipsis and hyphens. Synonyms and ambiguity, acts as\na semantic feature. Barbieri et al [\n        \n        ], also used emoticons as\na feature for detection of irony and humor. Emoticon feature\nis the number of :), :D, of :(, and ;) in a tweet also considered\nemoticons like smiling faces and frowning faces. Various\nfeatures extracted for training classifier includes the presence\nof frequent and rare words, emoticons, laughs, punctuation\nmarks and polarity of synsets of words, positive sum, negative\nsum, positive-negative gap, positive-negative mean, positive\nsingle gap and negative single gap. Dataset includesIrony\nTwBarbieri 2014 include 10,000 ironic and 40,000 non-ironic\ninstances. Irony TwReyes 2013 include 10,000 iron-ic and\n30,000 non-ironicinstances."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref6",
+                                "#text": "6"
+                            },
+                            "#text": "Joshi et al [\n        \n        ], proposed method for detection of sarcasm\nmainly focusing on sentimental features. The method used\nVader tool in NLTK and obtained sentiment polarity of\nsubparts of the sarcastic sentence. Thus observed sarcastic\nsentences are more negative than non-sarcastic sentences.\nExplicit incongruity and implicit incongruity can be used for\nbetter detection of sarcasm. Explicit incongruity makes use of\nsentiment words of both polarities and thwarted expectations.\nImplicit incongruity expressed through phrases of implied\nsentiment rather than using polar words. The main advantage\nof this method is that it addresses the problem of assigning\npolarity to a sarcastic sentence. Also used capital letters as a\nfeature for detection of sarcastic texts and made an inference\nthat sarcasm includes a large number of capital letters than\nnon-sarcastic texts."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref3",
+                                "#text": "3"
+                            },
+                            "#text": "Thu et al [\n        \n        ], proposed method for impact analysis of\nemotion in various figurative languages. It added onemo- tion\nbased features that helped in better classification. It is used for\ndetection of figurative languages like sarcasm, irony, simile,\nhumor, at the same time using multi-class supervised\nclassification. Most of previous work based on either\ndetecting figurative language separately or combination of two.\nEnsemble Bagging Classifier and standard SVM were usedfor\nclassification. Features used in the approach include word\nbased, Emotion, Sentiment, Bag of Sorted Emotion (BOSE),\nBOSE-TFIDF. Sentiment feature includes positive, negative\nand neutral polarity for each word in the sentence. Bag of\nSorted Emotion is created from eight basic emotional features\nand three sentimental features. First individually sorted the\nemotional features and sentiment features according to the\nvalue they obtained from each tweet. As a result, a bag-of\nsorted emotion is obtained that include a bag ofemotions and\nsentiment together. BOSE-TFIDF incorporates document\nfrequency and inverse document frequency along with Bag of\nSorted Emotions. Here dataset includes both class balanced\nand imbalanced datasets. Both are collected by streaming\ntwitter based on the hashtag based approach. Balanced dataset\nincludes tweets having hashtags simile, sarcasm, irony and\nhumor, collected with no restriction on time or person. Class\nimbalanced dataset was created by streaming tweets for a\nparticularday."
+                        },
+                        "To sum up, this section discussed some research works done\nin the field of figurative languages. There is less works have\nbeen done in the field of figurative languages. For\nbettermulticlass classifier finer features are needed to be incorporated.\nDifferent learning techniques are needed to be used for this\nmulti-class figurative language detection as there exists slight\ndifference between different figurative languages. So such\naclassification will be more tedious and need efficient feature\nextraction."
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "III. SYSTEM DESIGN",
+                    "p": "The proposed system aims to classify a given tweet into\nvarious classes, namely sarcastic simile, ironic simile, humorous\nsimile. Here proposed a method that uses deep learning model\nCNN to perform classification. Also built certain machine\nlearning models, namely support vector machine (SVM),\ndecision tree, K-nearest neighbor (KNN), Gaussian Naive Bayes\nclassifier and compared performance with each other.",
+                    "sec": [
+                        {
+                            "@id": "sec-3-1",
+                            "title": "A. Dataset",
+                            "p": "There are no available datasets for sarcastic, ironic or\nhumorous similes. Thus collected tweets from twitter using\nhashtags sarcasm, irony and humor. Collected tweets for a\ncertain period from twitter. Also collected tweets from Irony\nTwBarbieri 2014, Irony TwReyes 2013, Sarcasm Ptacek 2014,\nSarcasm TwRiloff 2013. Then extracted similes from the\ncollected datasets using various methods like selecting tweets\ncontaining the words ?like?, ?as?, ?than?. Also applied rules\nto recognize syntactic patterns like NP VERB like NP, ADJ as\n[a,an] Noun, ADJ like [a,an] Noun. The final dataset contains\n2200tweetsthatbelongtoeachclass."
+                        },
+                        {
+                            "@id": "sec-3-2",
+                            "title": "B. Architecture",
+                            "p": [
+                                "The above mentioned dataset is trained on two wide\ncategory models. A deep learning model and machine learning\nbased models. In case of deep learning, Convolutional Neural\nNetwork is used. The model uses labeled dataset of sarcastic\nsimile, ironic simile and humorous simile. It classifies data\ninto sarcastic simile, ironic simile or humorous simile. For\ntraining CNN, word embedding is performed by a pre-trained\nmodel ofGlove.",
+                                "In case of machine learning models, support vector machine\n(SVM), decision tree, K-nearest neighbor (KNN), Gaussian\nNaive Bayes classifier are used. It includes different stages\nlike:",
+                                "Preprocessing: Data preprocessing is important for the\nproposed model as tweets may contain unwanted and sparse\ndata. So there is a need to remove them. Preprocessing tasks\ninclude removing hashtags, unwanted spaces using regular\nexpressions. Replace emoticons and acronyms using\ndictionaries. Also include identification of common person first names\nand profanity words. The other major preprocessing task is\ntokenization and stop words removal.",
+                                "Feature Extraction: This task mainly includes two wide\nset of features. Inferring implicit properties in tweets and\nOther lexical, syntactic, semantic, pragmatic, emotional and\nsentimentfeatures.",
+                                "Training Classifier: The extracted features are then used for\ntraining different classifiers. Multi-class classification methods\nare used for building classifier.",
+                                "Different models are created based on features extractedand\ncompared with each other. The proposed model takes a tweet\nas an input and perform above mentioned tasks and predict\nwhether it belong to sarcastic simile, ironic simile orhumorous\nsimile."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "IV. EXPERIMENTAL SETUP AND RESULTS",
+                    "p": "This section provides detailed description of two categories\nofmodelsbuiltforclassificationofsarcasticsimile,ironicsim- ile\nand humorous simile. Also discusses about the comparison of\nresultsobtained.",
+                    "sec": [
+                        {
+                            "@id": "sec-4-1",
+                            "title": "A. Deep learningModel",
+                            "p": [
+                                "A Deep learning model that makes use of CNN is proposed.\nThe dataset is labeled as sarcastic, ironic and humorous simile.\nThen the dataset is shuffled and 70% is used for training\nand rest for testing. CNN model contains 16 layers with\nan input layer, an embedding layer, five convolution layers,\nfive max-pooling layers, a merge layer, one flattening layer\nand two dense layers. The first layer is the embedding layer,\nwhich embeds the words using the pre-trained\nGlove100dimensional word vectors. The output of this layer is given\nto the first three convolution layers with window sizes 3,4,5\nrespectively, and the number of filters is 128 for each layer.\nThe features getting from each convolution layer is passed to\nthe corresponding max-pooling layers which have thewindow",
+                                "TABLE I",
+                                "RESULT OF CNN BASED CLASSIFICATION MODEL",
+                                "Class Precision\nSarcastic 0.79\nIronic 0.82\nHumorous 0.81\nsize 5. We select Adam optimizer and sparse categorical\ncrossentropy as parameters. 0.5 dropout ratio is chosen for the CNN\nmodel.",
+                                "All feature getting from three max-pool layers are passed to\na merge layer that will concatenate these features and forward\nto the next convolution layer, which also has 128 convolutions\nwith window size 5. Next we have a max-pooling layer of size\n5 with one dimension. The output of this layer is given to the\nlast convolution with max-pooling of size 30. The features\nfrom the last max-pooling layer is given to a flattening layer\nto get the single structure of feature vectors. Then this final\nfeature vectors are passed to the fully connected dense layer\nwhichhavethesize128,andtheoutputofthislayerisgivento the\nfinal dense layer with size three as we have three classes. Relu\nand softmax activation function is used in last two dense\nlayersrespectively.Fig.2showstheCNNmodelgraph.",
+                                "We consider precision, recall, and f-measure as the\nevaluation metrics to check the performance of our system. Table I\nshows the precision, recall, and f-score obtained for each class\nlabel. We take total 2200 tweets in each class for evaluation,\nin which 70% for training and 30% for testing, and we got\n80.34% accuracy for themodel."
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-2",
+                            "title": "B. Machine learningModels",
+                            "p": [
+                                "Here compared four models for performing classification of\nsimiles. The proposed system includes different stages like\ndataset creation, data preprocessing, feature extraction and\ntraining classifier. Then this trained classifier is used to\npredict new input. Feature extraction includes inferring implicit\nproperties from similes and extraction of lexical, syntactic,\nsemantic, pragmatic, emotional and sentiment features from\ntweets.",
+                                "Automatically inferring implicit properties include\ngenerating candidate properties from verb and the object of asimile,\nevaluating the candidate properties with respect to multiple\nsimile components and aggregated ranking of the properties.\nCandidate Property generation includes various steps like\ngenerating properties from verb and object of a simile, using\nsyntactic patterns and dictionary definitions.Also extract\npremodifying adjectives from vehicle, adjective in predicate\nadjective construction with the object of simile, adverb that\nprecedes or follow verb. Then harvest adjectives, the adverbs\nand verbs from the dictionary definitions of the vehicle\nand event terms. These extracted words, act as\ncandidateproperties.",
+                                "Next we need to rank these properties using different\nmethods like performing Point-wise Mutual Information between\na candidate property and the second component of a simile\nand cosine similarity between a candidate property and the\nsecond component of the simile. If candidate property is\ngenerated from object of comparison then verb will be second\ncomponent and vice-versa. Extracted Implicit properties can\nbe represented asfeatures.",
+                                "Various lexical, syntactic, semantic, pragmatic, sentimental\nand emotion based features include:",
+                                "Lexical:This feature category include unigrams and\nbigrams. Highly frequent and rare words identified using\nANC1corpus is also used as a feature.",
+                                "Syntactic and Semantic: Synonyms act as a distinguishing\nfeature. Part of speech of each word in the tweet is identified\nand used as a feature. Presence of proper names and\nadjectiveadverbratiocomesunderthiscategory.Lengthofthesentence,whet\nheritislongorshortisusedasafeature.",
+                                "Pragmatic: Features under this category are punctuations\nwhich include a number of commas, exclamation and\nquotation marks, full stops, semicolons, ellipsis and hyphens,\nconstructions with negations, presence of proper names and\nelongations. Another feature is whether the tweet is egocentric\nor not, that is it made use of pronoun I mostly. Presence of\ncapital letters is also a feature. The presence of emoticons,\ninterjections, laughs and whether tweet is a reply to another\ntweet acts as a feature."
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-3",
+                            "title": "Sentiment and emotion-based:Polarity of sentence is ob",
+                            "p": [
+                                "tained using Vader sentiment lexicon. Sentiment of the whole\nsentence is obtained. Also identified inversion of sentiment\nduring half and one-third of the sentence. Also identified\nsimile component polarity, simile connotation polarity and\npolarity of synsets. Eight basic emotions from EmoLex(Emotion\nLexicon) is also identified as a feature.",
+                                "After feature extraction, these features are used to train\nclassifier models. Firstly SVM is built with rbf kernel. Then\ntrained decision tree with splitting criteria as entropy. Next\n1The American National Corpus (http://www.anc.org/), an electronic\ncollection of American English words",
+                                "TABLE II\nFEATURES USED FOR TRAINING MACHINE",
+                                "LEARNING MODELS",
+                                "Features\n1 Ngram(Unigram and bigram)\n2 Length of sentence\n3 Presence of emoticons\n4 Presence of constructions with negations\n5 Count of synonyms\n6 Count of punctuations\n7 Presence of proper names\n8 Presence of elongations\n9 Part of speech and Egocentric\n10 Presence of interjections\n11 Presence of ToUser\n12 Presence of laughs\n13 Count of capital letters\n14 Adjective-Adverb ratio\n15 Sentiment\n16 Presence of 8 basic emotions\nKNN is trained to value of nearest neighbors as 3.\nFinallyGaussian Naive Bayes (GNB) classifier is also built. In\nallthese cases, 70% dataset is used for training and the rest\nfortesting. Also, compared performance of each model\nseparately.Table II shows the features extracted for training\nmachinelearning models. Table III show the performance\ncomparison\nof different classification models."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "V. CONCLUSION AND FUTURE RESEARCH"
+                },
+                {
+                    "@id": "sec-6",
+                    "title": "DIRECTIONS",
+                    "p": [
+                        "Figurativelanguagesprovidebetteranalysisandunderstand-ing of\ntext than its literal interpretation. Simile essentially compares\ntwo different things and most of the tweets have\na behavior\nof simile. So better detection of simile helps in proper\nunderstanding of the text. Adding on, detection of various\nfigurative languages occurrences improves efficiency of the\ndetection system. In case of social media sarcasm, irony and\nhumor have an impact. Supervised classification methods are\nalready\navailable for automatic\ndetection\nof figurative\nlanguages. Identification of features that better distinguish\nfigurative languages helps in improving efficiency of the\nsystem. Deep learning model like CNN provide better accuracy\nand prediction than other machine learning models in the case\nof the classification of sarcastic simile, ironic simile and\nhumoroussimile.",
+                        "As a future work, we can expand the dataset and improve the\nperformance of the proposed system. The method can be also\nused for larger texts like poems, novels etc. rather than tweets."
+                    ]
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Ashequl",
+                                "surname": "Qadir"
+                            },
+                            "article-title": "Ellen Riloff and Marilyn A.Walker,?AutomaticallyInferring Implicit Properties in Similes?, In Proceedings of NorthAmer-ican Chapter of the Association for Computational Linguistics(NAACL- HLT",
+                            "year": "2016",
+                            "fpage": "1223",
+                            "lpage": "1232",
+                            "#text": "[1]\n          \n          ,\n          \n          ),\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "article-title": "Learningtorecognize affective polarity in similes?",
+                            "source": "In Proceedings of the Conference onEmpiricalMethodsinNaturalLanguageProcessing",
+                            "year": "2015",
+                            "fpage": "pp190",
+                            "lpage": "200",
+                            "#text": "[2] AshequlQadir,EllenRiloff,andMarilyn Walker,?\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Pyae",
+                                "surname": "Phyo"
+                            },
+                            "article-title": "Impact Analysis of Emotion in Figurative Language?",
+                            "source": "In Proceedings of the IEEE International Conference",
+                            "year": "2017",
+                            "#text": "[3]\n          \n          Thu and Nwe Nwe, ?\n          \n          ,\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Francesco",
+                                "surname": "Barbieri"
+                            },
+                            "article-title": "Automatic Detection of Irony and Humour in Twitter?",
+                            "source": "In Proceedings of the International Conference on Computational Creativity",
+                            "year": "2014",
+                            "#text": "[4]\n          \n          and Horacio Saggion, ?\n          \n          ,\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Maria",
+                                "surname": "Khokhlova"
+                            },
+                            "article-title": "Distinguishing between Irony and Sarcasm in Social Media Texts: Linguistic Observations?",
+                            "source": "In Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                            "year": "2011",
+                            "fpage": "50",
+                            "lpage": "58",
+                            "#text": "[5]\n          \n          , Viviana Patti and Paolo Rosso, ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Aditya",
+                                "surname": "Joshi"
+                            },
+                            "article-title": "Harnessing context incongruity for sarcasm detection?",
+                            "source": "In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+                            "year": "2015",
+                            "volume": "2",
+                            "fpage": "757762",
+                            "#text": "[6]\n          \n          , Vinita Sharma, and Pushpak Bhattacharyya, ?\n          \n          ,\n          \n          ,\n          \n          , Vol.\n          \n          . pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Tony",
+                                "surname": "Veale"
+                            },
+                            "source": "InECAI",
+                            "year": "2010",
+                            "volume": "215",
+                            "fpage": "765",
+                            "lpage": "770",
+                            "#text": "[7]\n          \n          and Yanfen Hao, ?Detecting Ironic Intent in Creative Comparisons?,\n          \n          ,\n          \n          ,Vol.\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Elisabetta",
+                                "surname": "Fersini"
+                            },
+                            "article-title": "Detecting irony and sarcasm in microblogs: The role of expressive signals and ensemble classifiers?",
+                            "source": "In Data Science and Advanced Analytics(DSAA)",
+                            "year": "2015",
+                            "fpage": "1",
+                            "lpage": "8",
+                            "#text": "[8]\n          \n          , Federico Alberto Pozzi, Enza Messina, ?\n          \n          ,\n          \n          ,\n          \n          .IEEEInternationalConferenceon2015Oct19,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Roberto",
+                                    "surname": "Gonzalez-Ibanez"
+                                },
+                                {
+                                    "given-names": "Smaranda",
+                                    "surname": "Muresan"
+                                }
+                            ],
+                            "article-title": "Identifying sarcasm in Twitter: a closer look?",
+                            "source": "In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume",
+                            "volume": "2",
+                            "year": "2011",
+                            "fpage": "581586",
+                            "#text": "[9]\n          \n          ,\n          \n          , and NinaWacholder, ?\n          \n          ,\n          \n          \n          ,\n          \n          , pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Byron",
+                                "given-names": "C Wallace"
+                            },
+                            "article-title": "Humans require context to infer ironic intent (so computers probably do, too)?",
+                            "source": "In Proceedings of the 52nd Annual Meeting of theAssociation forComputationalLinguistics(ShortPapers)",
+                            "year": "2014",
+                            "fpage": "512516",
+                            "#text": "[10]\n          \n          , Laura Kertz, Do Kook Choe, and Eugene Charniak, ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "A.",
+                                    "surname": "Reyes"
+                                },
+                                {
+                                    "given-names": "P.",
+                                    "surname": "Rosso"
+                                },
+                                {
+                                    "given-names": "D.",
+                                    "surname": "Buscaldi"
+                                }
+                            ],
+                            "article-title": "From humor recognition to irony detection: The figurative language of social media?",
+                            "source": "Data & Knowledge Engineering",
+                            "year": "2012",
+                            "volume": "74",
+                            "fpage": "1",
+                            "lpage": "12",
+                            "#text": "[11]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,vol.\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Oren",
+                                    "surname": "Tsur"
+                                },
+                                {
+                                    "given-names": "Dmitry",
+                                    "surname": "Davidov"
+                                },
+                                {
+                                    "surname": "ICWSM-A Great Catchy"
+                                }
+                            ],
+                            "article-title": "Name: Semi-Supervised Recognition of Sarcastic Sentences in OnlineProductReviews?",
+                            "source": "InICWSM2010",
+                            "fpage": "162",
+                            "lpage": "169",
+                            "#text": "[12]\n          \n          ,\n          \n          , and Ari Rappoport, ?\n          \n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "D.",
+                                    "surname": "Bamman"
+                                },
+                                {
+                                    "given-names": "N. A.",
+                                    "surname": "Smith"
+                                }
+                            ],
+                            "article-title": "Contextualized sarcasm detection on twitter?",
+                            "source": "InICWSM",
+                            "year": "2015",
+                            "fpage": "574",
+                            "lpage": "577",
+                            "#text": "[13]\n          \n          and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Barbieri"
+                                },
+                                {
+                                    "given-names": "H.",
+                                    "surname": "Saggion"
+                                },
+                                {
+                                    "given-names": "F.",
+                                    "surname": "Ronzano"
+                                }
+                            ],
+                            "article-title": "Modelling sarcasm in twitter, anovelapproach?",
+                            "source": "InWASSA@ACL",
+                            "year": "2014",
+                            "fpage": "50",
+                            "lpage": "58",
+                            "#text": "[14]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Anupam",
+                                "given-names": "Khattri"
+                            },
+                            "article-title": [
+                                "Your Sentiment Precedes You: Using an authors historical tweets to predict sarcasm?",
+                                "Sentiment and Social Media Analysis (WASSA"
+                            ],
+                            "source": "Proceedings of the 6th Workshop on Computational Approaches",
+                            "year": "2015",
+                            "fpage": "2530",
+                            "#text": "[15]\n          \n          , Aditya Joshi, Pushpak Bhattacharyya, and Mark James Carman, ?\n          \n          ,\n          \n          to Subjectivity,\n          \n          \n          ), pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "S. A.",
+                                    "surname": "Crossley"
+                                },
+                                {
+                                    "given-names": "K.",
+                                    "surname": "Kyle"
+                                },
+                                {
+                                    "surname": "D. S. McNamara"
+                                }
+                            ],
+                            "article-title": "Sentiment analysis and social cognition engine (seance): An automatic tool for sentiment, social cognition, and social-order analysis?",
+                            "source": "Behavior research methods",
+                            "year": "2017",
+                            "volume": "49",
+                            "issue": "3",
+                            "fpage": "803",
+                            "lpage": "821",
+                            "#text": "[16]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          , vol.\n          \n          ,no.\n          \n          ,pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Antonio",
+                                "given-names": "Reyes"
+                            },
+                            "article-title": "Amultidimensional approach for detecting irony in twitter?, Language Resources and Evaluation (",
+                            "year": "2013",
+                            "fpage": "239268",
+                            "#text": "[17]\n          \n          , Paolo Rosso, and Tony Veale, ?\n          \n          \n          ) 47: pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Cynthia",
+                                "given-names": "Van Hee"
+                            },
+                            "article-title": "Els Lefever and Veronique hoste, ?LT3: Sentiment Analysis of Figurative Tweets: piece of cake NotReally?",
+                            "source": "InProceedings of the 9th International Workshop on Semantic Evaluation (SemEval",
+                            "year": "2015",
+                            "fpage": "684",
+                            "lpage": "688",
+                            "#text": "[18]\n          \n          ,\n          \n          ,\n          \n          \n          ), pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Roger J Kreuz and Gina M Caucci"
+                            },
+                            "article-title": "Lexical influences on the perception of sarcasm?",
+                            "source": "In Proceedings of the Workshop on computational approaches to Figurative Language. Association for Computational Linguistics",
+                            "year": "2007",
+                            "fpage": "14",
+                            "#text": "[19]\n          \n          , ?\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Konstantin",
+                                "given-names": "Buschmeier"
+                            },
+                            "article-title": "An impact analysis of features in a classification approach to irony detectionin productreviews?,InProceedingsofthe5thWorkshoponComputational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                            "year": "2014",
+                            "fpage": "42",
+                            "lpage": "49",
+                            "#text": "[20]\n          \n          , Philipp Cimiano, and Roman Klinger, ?\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

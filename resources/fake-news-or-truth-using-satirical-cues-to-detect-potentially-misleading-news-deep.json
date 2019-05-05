@@ -1,0 +1,1448 @@
+{
+    "abstract": {
+        "p": null
+    },
+    "affiliation": {
+        "#text": ",\n          \n          ,",
+        "@id": "aff0",
+        "addr-line": "London, Ontario",
+        "country": {
+            "#text": "CANADA",
+            "@country": "CA"
+        },
+        "institution": "Victoria L. Rubin, Niall J. Conroy, Yimin Chen, and Sarah Cornwell Language and Information Technology Research Lab (LIT.RL) Faculty of Information and Media Studies University of Western Ontario",
+        "label": "0"
+    },
+    "authors": null,
+    "clean-authors": [
+        null
+    ],
+    "clean-refs": [
+        {
+            "authors": "Attardo, Hempelmann, Mano, , ",
+            "source": "Humor",
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Buller, Burgoon, , ",
+            "source": "Communication Theory",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Burfoot, Baldwin, , ",
+            "source": null,
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          , Suntec, Singapore."
+        },
+        {
+            "authors": "Chen, Conroy, Rubin, , ",
+            "source": null,
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          ."
+        },
+        {
+            "authors": "Condren, , ",
+            "source": [
+                "Humor",
+                "-0019"
+            ],
+            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 375. doi:\n          \n          .1515/humor-2012"
+        },
+        {
+            "authors": "Condren, , ",
+            "source": "Encyclopedia of Humor Studies. Thousand Oaks: Sage Publications",
+            "title": "(\n          \n          ).\n          \n          . In S. Attardo (Ed.),\n          \n          , Inc."
+        },
+        {
+            "authors": "Davidov, Tsur, Rappoport, , ",
+            "source": "Paper presented at the Fourteenth Conference on Computational Natural Language Learning",
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Uppsala, Sweden."
+        },
+        {
+            "authors": "DePaulo, Charlton, Cooper, Lindsay, Muhlenbruck, , ",
+            "source": "Personality and Social Psychology Review",
+            "title": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Ermida, , ",
+            "source": [
+                "In J. Chovanec & I. Ermida (Eds.)",
+                "Newcastle upon Tyne"
+            ],
+            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          .\n          \n          , UK: Cambridge Scholars Pub."
+        },
+        {
+            "authors": "Frye, , ",
+            "source": "The Nature of Satire",
+            "title": "(\n          \n          ).\n          \n          . University of Toronto Quarterly,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Hango, , ",
+            "source": null,
+            "title": "(\n          \n          ).\n          \n          . Statistics Canada Retrieved from http://www.statcan. gc.ca/pub/75-006-x/2014001 /article/14094-eng.htm."
+        },
+        {
+            "authors": "Hempelmann, Raskin, Triezenberg, , ",
+            "source": null,
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ). Computer, Tell Me a Joke... but Please Make it Funny:\n          \n          . Paper presented at the FLAIRS Conference, Melbourne Beach, Florida, USA."
+        },
+        {
+            "authors": "Highet, , ",
+            "source": "The Anatomy of Satire",
+            "title": "(\n          \n          ).\n          \n          . Princeton, N.J: Princeton University Press."
+        },
+        {
+            "authors": "Hongo, , ",
+            "source": null,
+            "title": "(\n          \n          ).\n          \n          . Retrieved from http://literallyunbelievable.org/"
+        },
+        {
+            "authors": "Hopper, Bell, , ",
+            "source": "Quarterly Journal of Speech",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Howell, , ",
+            "source": "Global Risks",
+            "title": "(\n          \n          ).\n          \n          \n          . Retrieved from Cologny/Geneva, Switzerland: http://www3. weforum.org/docs/WEF_GlobalRisks_Report_\n          \n          .pdf"
+        },
+        {
+            "authors": "LaMarre, Landreville, Beam, , ",
+            "source": null,
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . The International Journal of Press/Politics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/ 1940161208330904"
+        },
+        {
+            "authors": "Mihalcea, Liu, , ",
+            "source": "Paper presented at the AAAI Symposium on Computational Approaches",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          to Analyzing Weblogs."
+        },
+        {
+            "authors": "Mihalcea, Pulman, , ",
+            "source": "Computational Linguistics and Intelligent Text Processing",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          . In A. Gelbukh (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Berlin Heidelberg: Springer."
+        },
+        {
+            "authors": "Mihalcea, Strapparava, Pulman, , ",
+            "source": null,
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          , Iasi, Romania."
+        },
+        {
+            "authors": "Mocanu, Rossi, Zhang, Karsai, Quattrociocchi, , ",
+            "source": null,
+            "title": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . Computers in Human Behavior,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.chb.\n          \n          .\n          \n          .024"
+        },
+        {
+            "authors": "Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Dubourg, , ",
+            "source": "The Journal of Machine Learning Research",
+            "title": ",\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , . . .\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Pennebaker, Boyd, Jordan, Blackburn, , ",
+            "source": "net/ 2152/31333",
+            "title": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . from University of Texas at Austin http://hdl.handle."
+        },
+        {
+            "authors": "Pennycook, Cheyne, Barr, Koehler, Fugelsang, , ",
+            "source": "Judgment and Decision Making",
+            "title": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Pfaff, Gibbs, , ",
+            "source": null,
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          . Poetics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1016/s0304-422x(\n          \n          )\n          \n          -"
+        },
+        {
+            "authors": "Phiddian, , ",
+            "source": "Critical Quarterly",
+            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Pisarevskaya, , ",
+            "source": "Paper presented at the Artificial Intelligence and Natural Language & Information Extraction",
+            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          , SaintPetersburg, Russia."
+        },
+        {
+            "authors": "Polanyi, Zaenen, Qu, Wiebe, , ",
+            "source": null,
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          . In J. G. Shanahan,\n          \n          , & J.\n          \n          (Eds.),\n          \n          ., pp.\n          \n          -\n          \n          ): Springer Netherlands."
+        },
+        {
+            "authors": "Reilly, Nye, , ",
+            "source": null,
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          . Retrieved from http://www.theopenroad.com/wp-content/uploads/2012/09/Powerprinciples-and\n          \n          .pdf"
+        },
+        {
+            "authors": "Reyes, Rosso, , ",
+            "source": "Knowledge and Information Systems",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10115-013-0652-8"
+        },
+        {
+            "authors": "Reyes, Rosso, Buscaldi, , ",
+            "source": "Data & Knowledge Engineering",
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.datak.\n          \n          .\n          \n          .005"
+        },
+        {
+            "authors": "Reyes, Rosso, Veale, , ",
+            "source": "Language Resources and Evaluation",
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10579-012-9196-x"
+        },
+        {
+            "authors": "Riffkin, , ",
+            "source": null,
+            "title": "(\n          \n          ,\n          \n          /09/28/). Americans' Trust in Media Remains at Historical Low. Gallup. Retrieved from http://www.gallup.com/poll/185927/americanstrust-media\n          \n          .aspx"
+        },
+        {
+            "authors": "Rubin, Chen, Conroy, , ",
+            "source": null,
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          ."
+        },
+        {
+            "authors": "Rubin, Conroy, , ",
+            "source": "First Monday",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ). Retrieved from http://firstmonday.org/ojs/index.php/fm/article/view/ 3933/3170"
+        },
+        {
+            "authors": "Rubin, Lukoianova, , ",
+            "source": "Journal of the Association for Information Science and Technology",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 12. doi:\n          \n          .1002/asi.23216"
+        },
+        {
+            "authors": "Simpson, , ",
+            "source": "On the Discourse of Satire: John Benjamins Publishing Company.",
+            "title": "(\n          \n          )."
+        },
+        {
+            "authors": "Sj\u00f6bergh, Araki, , ",
+            "source": "Paper presented at the International Workshop on Fuzzy Logic and Applications",
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Camogli, Italy."
+        },
+        {
+            "authors": "Media Insight Project., , ",
+            "source": null,
+            "title": "(\n          \n          ).\n          \n          . Retrieved from https://www.americanpressinstitute.org/publications/ reports/survey-research/rational-attentive-newsconsumer/"
+        },
+        {
+            "authors": "Tsfati, , ",
+            "source": null,
+            "title": "(\n          \n          ).\n          \n          . American Behavioral Scientist,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/0002764210376309"
+        },
+        {
+            "authors": "Tsur, Davidov, Rappoport, , ",
+            "source": "Paper presented at the Fourth International AAAI Conference on Web and Social Media",
+            "title": ",\n          \n          , &\n          \n          (\n          \n          , May 23- 26\n          \n          ).\n          \n          .\n          \n          , George Washington University, Washington, D.C. USA."
+        },
+        {
+            "authors": "Utsumi, , ",
+            "source": "Journal of Pragmatics",
+            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+        },
+        {
+            "authors": "Van Swol, , ",
+            "source": "Encyclopedia of Deception",
+            "title": "(\n          \n          ).\n          \n          . In T. Levine (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Thousand Oaks, California: SAGE Publications."
+        },
+        {
+            "authors": "Vrij, Mann, Leal, , ",
+            "source": "Journal of Police and Criminal Psychology",
+            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Wu, Palmer, , ",
+            "source": null,
+            "title": ", &\n          \n          (\n          \n          ).\n          \n          , Las Cruces, New Mexico."
+        },
+        {
+            "authors": "Zhou, Burgoon, Nunamaker, Twitchell, , ",
+            "source": "Group Decision and Negotiation",
+            "title": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Ziv, , ",
+            "source": "The Journal of Experimental Education",
+            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1080/00220973.\n          \n          .10806492"
+        }
+    ],
+    "journal": "San Diego, California, June",
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/fake-news-or-truth-using-satirical-cues-to-detect-potentially-misleading-news.json",
+    "pub_date": {
+        "year": "2016"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Script oppositions and logical mechanisms: Modeling incongruities and their resolutions",
+                "fpage": "3",
+                "issue": "1",
+                "lpage": "46",
+                "source": "Humor",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Attardo"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C. F.",
+                        "surname": "Hempelmann"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S. D.",
+                        "surname": "Mano"
+                    }
+                ],
+                "volume": "15",
+                "year": "2002"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Interpersonal Deception Theory",
+                "fpage": "203",
+                "issue": "3",
+                "lpage": "242",
+                "source": "Communication Theory",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D. B.",
+                        "surname": "Buller"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J. K.",
+                        "surname": "Burgoon"
+                    }
+                ],
+                "volume": "6",
+                "year": "1996"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          , Suntec, Singapore.",
+                "article-title": "Automatic satire detection: are you having a laugh? Paper presented at the Proceedings of the ACL-IJCNLP 2009 Conference Short Papers",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Burfoot"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Baldwin"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .",
+                "article-title": "News in an online world: the need for an automatic crap detector. Paper presented at the Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N. J.",
+                        "surname": "Conroy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V. L.",
+                        "surname": "Rubin"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 375. doi:\n          \n          .1515/humor-2012",
+                "article-title": "Satire and definition",
+                "issue": "4",
+                "source": [
+                    "Humor",
+                    "-0019"
+                ],
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "C.",
+                    "surname": "Condren"
+                },
+                "volume": [
+                    "25",
+                    "10"
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . In S. Attardo (Ed.),\n          \n          , Inc.",
+                "article-title": "Satire",
+                "source": "Encyclopedia of Humor Studies. Thousand Oaks: Sage Publications",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "C.",
+                    "surname": "Condren"
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Uppsala, Sweden.",
+                "article-title": "Semisupervised recognition of sarcastic sentences in twitter and amazon",
+                "source": "Paper presented at the Fourteenth Conference on Computational Natural Language Learning",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "The AccuracyConfidence Correlation in the Detection of Deception",
+                "fpage": "346",
+                "issue": "4",
+                "lpage": "357",
+                "source": "Personality and Social Psychology Review",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "B. M.",
+                        "surname": "DePaulo"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Charlton"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "H.",
+                        "surname": "Cooper"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J. J.",
+                        "surname": "Lindsay"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Muhlenbruck"
+                    }
+                ],
+                "volume": "1",
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          .\n          \n          , UK: Cambridge Scholars Pub.",
+                "article-title": [
+                    "News Satire in the Press: Linguistic Construction of Humour in Spoof News Articles",
+                    "Language and humour in the media"
+                ],
+                "source": [
+                    "In J. Chovanec & I. Ermida (Eds.)",
+                    "Newcastle upon Tyne"
+                ],
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "I.",
+                    "surname": "Ermida"
+                },
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . University of Toronto Quarterly,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "fpage": "75",
+                "issue": "1",
+                "lpage": "89",
+                "source": "The Nature of Satire",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "N.",
+                    "surname": "Frye"
+                },
+                "volume": "14",
+                "year": "1944"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . Statistics Canada Retrieved from http://www.statcan. gc.ca/pub/75-006-x/2014001 /article/14094-eng.htm.",
+                "article-title": "University graduates with lower levels of literacy and numeracy skills",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "D.",
+                    "surname": "Hango"
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ). Computer, Tell Me a Joke... but Please Make it Funny:\n          \n          . Paper presented at the FLAIRS Conference, Melbourne Beach, Florida, USA.",
+                "article-title": "Computational Humor with Ontological Semantics",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Hempelmann"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Raskin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K. E.",
+                        "surname": "Triezenberg"
+                    }
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . Princeton, N.J: Princeton University Press.",
+                "source": "The Anatomy of Satire",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "G.",
+                    "surname": "Highet"
+                },
+                "year": "1972"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . Retrieved from http://literallyunbelievable.org/",
+                "article-title": "Literally Unbelievable: Stories from The Onion as interpreted by Facebook",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "H.",
+                    "surname": "Hongo"
+                },
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Broadening the Deception Construct",
+                "fpage": "288",
+                "issue": "3",
+                "lpage": "302",
+                "source": "Quarterly Journal of Speech",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Hopper"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R. A.",
+                        "surname": "Bell"
+                    }
+                ],
+                "volume": "70",
+                "year": "1984"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          \n          . Retrieved from Cologny/Geneva, Switzerland: http://www3. weforum.org/docs/WEF_GlobalRisks_Report_\n          \n          .pdf",
+                "source": "Global Risks",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "L.",
+                    "surname": "Howell"
+                },
+                "year": [
+                    "2013",
+                    "2013",
+                    "2013"
+                ]
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . The International Journal of Press/Politics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/ 1940161208330904",
+                "article-title": "The Irony of Satire: Political Ideology and the Motivation to See What You Want to See in The Colbert Report",
+                "fpage": "212",
+                "issue": "2",
+                "lpage": "231",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "H. L.",
+                        "surname": "LaMarre"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K. D.",
+                        "surname": "Landreville"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M. A.",
+                        "surname": "Beam"
+                    }
+                ],
+                "volume": [
+                    "14",
+                    "10"
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          to Analyzing Weblogs.",
+                "article-title": "A corpus-based approach to finding happiness",
+                "source": "Paper presented at the AAAI Symposium on Computational Approaches",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Mihalcea"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "H.",
+                        "surname": "Liu"
+                    }
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          . In A. Gelbukh (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Berlin Heidelberg: Springer.",
+                "article-title": "Characterizing humour: An exploration of features in humorous texts",
+                "fpage": "337",
+                "lpage": "347",
+                "source": "Computational Linguistics and Intelligent Text Processing",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Mihalcea"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Pulman"
+                    }
+                ],
+                "volume": "4394",
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          , Iasi, Romania.",
+                "article-title": "Computational models for incongruity detection in humour. Paper presented at the Computational linguistics and intelligent text processing",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Mihalcea"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Strapparava"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Pulman"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . Computers in Human Behavior,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.chb.\n          \n          .\n          \n          .024",
+                "article-title": "Collective attention in the age of (mis)information",
+                "fpage": "1198",
+                "lpage": "1204",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Mocanu"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Rossi"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Q.",
+                        "surname": "Zhang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M.",
+                        "surname": "Karsai"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "W.",
+                        "surname": "Quattrociocchi"
+                    }
+                ],
+                "volume": [
+                    "51",
+                    "10",
+                    "01"
+                ],
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , . . .\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Scikit-learn: Machine learning in Python",
+                "fpage": "2825",
+                "lpage": "2830",
+                "source": "The Journal of Machine Learning Research",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "F.",
+                        "surname": "Pedregosa"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "G.",
+                        "surname": "Varoquaux"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Gramfort"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Michel"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "B.",
+                        "surname": "Thirion"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "O.",
+                        "surname": "Grisel"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Dubourg"
+                    }
+                ],
+                "volume": "12",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . from University of Texas at Austin http://hdl.handle.",
+                "article-title": "The Development and Psychometric Properties of LIWC2015",
+                "source": "net/ 2152/31333",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "J. W.",
+                        "surname": "Pennebaker"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R. L.",
+                        "surname": "Boyd"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Jordan"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Blackburn"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "On the reception and detection of pseudo-profound bullshit",
+                "fpage": "549",
+                "issue": "6",
+                "lpage": "563",
+                "source": "Judgment and Decision Making",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "G.",
+                        "surname": "Pennycook"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J. A.",
+                        "surname": "Cheyne"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.",
+                        "surname": "Barr"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D. J.",
+                        "surname": "Koehler"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J. A.",
+                        "surname": "Fugelsang"
+                    }
+                ],
+                "volume": "10",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          . Poetics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1016/s0304-422x(\n          \n          )\n          \n          -",
+                "article-title": "Authorial intentions in understanding satirical texts",
+                "fpage": [
+                    "45",
+                    "00006"
+                ],
+                "issue": [
+                    "1",
+                    "97"
+                ],
+                "lpage": [
+                    "70",
+                    "5"
+                ],
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "K. L.",
+                        "surname": "Pfaff"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R. W.",
+                        "surname": "Gibbs"
+                    }
+                ],
+                "volume": [
+                    "25",
+                    "10"
+                ],
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Satire and the limits of literary theories",
+                "fpage": "44",
+                "issue": "3",
+                "lpage": "58",
+                "source": "Critical Quarterly",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "R.",
+                    "surname": "Phiddian"
+                },
+                "volume": "55",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          , SaintPetersburg, Russia.",
+                "article-title": [
+                    "Rhetorical Structure Theory as a Feature for Deception Detection in News Reports in the Russian Language",
+                    "Social Media and Web Search (AINL-ISMW) FRUCT Conference"
+                ],
+                "source": "Paper presented at the Artificial Intelligence and Natural Language & Information Extraction",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "D.",
+                    "surname": "Pisarevskaya"
+                },
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          . In J. G. Shanahan,\n          \n          , & J.\n          \n          (Eds.),\n          \n          ., pp.\n          \n          -\n          \n          ): Springer Netherlands.",
+                "article-title": [
+                    "Contextual valence shifters",
+                    "Computing attitude and affect in text: Theory and applications (1 ed"
+                ],
+                "fpage": "1",
+                "lpage": "10",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Polanyi"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Zaenen"
+                    },
+                    {
+                        "given-names": "Y.",
+                        "surname": "Qu"
+                    },
+                    {
+                        "surname": "Wiebe"
+                    }
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          . Retrieved from http://www.theopenroad.com/wp-content/uploads/2012/09/Powerprinciples-and\n          \n          .pdf",
+                "article-title": [
+                    "Power, principles and the press",
+                    "-the-press-Open-Road-andPopulus1"
+                ],
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Reilly"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Nye"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10115-013-0652-8",
+                "article-title": "On the difficulty of automatically detecting irony: beyond a simple case of negation",
+                "fpage": "595",
+                "issue": "3",
+                "lpage": "614",
+                "source": "Knowledge and Information Systems",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    }
+                ],
+                "volume": [
+                    "40",
+                    "10"
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.datak.\n          \n          .\n          \n          .005",
+                "article-title": "From humor recognition to irony detection: The figurative language of social media",
+                "fpage": "1",
+                "lpage": "12",
+                "source": "Data & Knowledge Engineering",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Buscaldi"
+                    }
+                ],
+                "volume": [
+                    "74",
+                    "10",
+                    "02"
+                ],
+                "year": [
+                    "2012",
+                    "2012"
+                ]
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10579-012-9196-x",
+                "article-title": "A multidimensional approach for detecting irony in Twitter",
+                "fpage": "239",
+                "issue": "1",
+                "lpage": "268",
+                "source": "Language Resources and Evaluation",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Veale"
+                    }
+                ],
+                "volume": [
+                    "47",
+                    "10"
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": "(\n          \n          ,\n          \n          /09/28/). Americans' Trust in Media Remains at Historical Low. Gallup. Retrieved from http://www.gallup.com/poll/185927/americanstrust-media\n          \n          .aspx",
+                "article-title": "-remains-historical-low",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "R.",
+                    "surname": "Riffkin"
+                },
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .",
+                "article-title": "Deception detection for news: three types of fakes. Paper presented at the Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V. L.",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N. J.",
+                        "surname": "Conroy"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ). Retrieved from http://firstmonday.org/ojs/index.php/fm/article/view/ 3933/3170",
+                "article-title": "Discerning truth from deception: Human judgments and automation efforts",
+                "issue": "3",
+                "source": "First Monday",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V. L.",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.",
+                        "surname": "Conroy"
+                    }
+                ],
+                "volume": "17",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 12. doi:\n          \n          .1002/asi.23216",
+                "article-title": "Truth and Deception at the Rhetorical Structure Level",
+                "issue": "5",
+                "source": "Journal of the Association for Information Science and Technology",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V. L.",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Lukoianova"
+                    }
+                ],
+                "volume": [
+                    "66",
+                    "10"
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref37",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).",
+                "source": "On the Discourse of Satire: John Benjamins Publishing Company.",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "P.",
+                    "surname": "Simpson"
+                },
+                "year": "2003"
+            }
+        },
+        {
+            "@id": "ref38",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Camogli, Italy.",
+                "article-title": "Recognizing humor without recognizing meaning",
+                "source": "Paper presented at the International Workshop on Fuzzy Logic and Applications",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Sj\u00f6bergh"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "K.",
+                        "surname": "Araki"
+                    }
+                ],
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref39",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . Retrieved from https://www.americanpressinstitute.org/publications/ reports/survey-research/rational-attentive-newsconsumer/",
+                "article-title": "The rational and attentive news consumer",
+                "string-name": {
+                    "given-names": "The",
+                    "surname": "Media Insight Project."
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref40",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . American Behavioral Scientist,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/0002764210376309",
+                "article-title": "Online News Exposure and Trust in the Mainstream Media: Exploring Possible Associations",
+                "fpage": "22",
+                "issue": "1",
+                "lpage": "42",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "Y.",
+                    "surname": "Tsfati"
+                },
+                "volume": [
+                    "54",
+                    "10"
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref41",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          , May 23- 26\n          \n          ).\n          \n          .\n          \n          , George Washington University, Washington, D.C. USA.",
+                "article-title": "ICWSM - A Great Catchy Name: SemiSupervised Recognition of Sarcastic Sentences in Online Product Reviews",
+                "source": "Paper presented at the Fourth International AAAI Conference on Web and Social Media",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    }
+                ],
+                "year": [
+                    "2010",
+                    "2010"
+                ]
+            }
+        },
+        {
+            "@id": "ref42",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -",
+                "article-title": "Verbal irony as implicit display of ironic environment: Distinguishing ironic utterances from nonirony",
+                "fpage": [
+                    "1777",
+                    "00116"
+                ],
+                "issue": [
+                    "12",
+                    "99"
+                ],
+                "lpage": [
+                    "1806",
+                    "2"
+                ],
+                "source": "Journal of Pragmatics",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "A.",
+                    "surname": "Utsumi"
+                },
+                "volume": [
+                    "32",
+                    "2166"
+                ],
+                "year": "2000"
+            }
+        },
+        {
+            "@id": "ref43",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          . In T. Levine (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Thousand Oaks, California: SAGE Publications.",
+                "article-title": "Truth Bias",
+                "fpage": "904",
+                "lpage": "906",
+                "source": "Encyclopedia of Deception",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "L.",
+                    "surname": "Van Swol"
+                },
+                "volume": "1",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref44",
+            "mixed-citation": {
+                "#text": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Deception Traits in Psychological Interviewing",
+                "fpage": "115",
+                "issue": "2",
+                "lpage": "126",
+                "source": "Journal of Police and Criminal Psychology",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Vrij"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Mann"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Leal"
+                    }
+                ],
+                "volume": "28",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref45",
+            "mixed-citation": {
+                "#text": ", &\n          \n          (\n          \n          ).\n          \n          , Las Cruces, New Mexico.",
+                "article-title": "Verbs semantics and lexical selection. Paper presented at the 32nd Annual Meeting of the Association for Computational Linguistics",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "Z.",
+                        "surname": "Wu"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M.",
+                        "surname": "Palmer"
+                    }
+                ],
+                "year": "1994"
+            }
+        },
+        {
+            "@id": "ref46",
+            "mixed-citation": {
+                "#text": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Automating Linguistics-Based Cues for Detecting Deception in Text-Based Asynchronous Computer-Mediated Communications",
+                "fpage": "81",
+                "issue": "1",
+                "lpage": "106",
+                "source": "Group Decision and Negotiation",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Zhou"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J. K.",
+                        "surname": "Burgoon"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J. F.",
+                        "surname": "Nunamaker"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Twitchell"
+                    }
+                ],
+                "volume": "13",
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref47",
+            "mixed-citation": {
+                "#text": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1080/00220973.\n          \n          .10806492",
+                "article-title": "Teaching and Learning with Humor",
+                "fpage": "4",
+                "issue": "1",
+                "lpage": "15",
+                "source": "The Journal of Experimental Education",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "A.",
+                    "surname": "Ziv"
+                },
+                "volume": [
+                    "57",
+                    "10"
+                ],
+                "year": [
+                    "1988",
+                    "1988"
+                ]
+            }
+        }
+    ],
+    "title": "Fake News or Truth? Using Satirical Cues to Detect Potentially Misleading News."
+}

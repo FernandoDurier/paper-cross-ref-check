@@ -1,0 +1,777 @@
+{
+    "abstract": {
+        "p": "Fake news are a problem of our time. They may in uence a large number of people on a wide range of subjects, from politics to health. Although they have always existed, the volume of fake news has recently increased due to the soaring number of users of social networks and instant messengers. These news may cause direct losses to people and corporations, as fake news may include defamation of people, products and companies. Moreover, the scarcity of labeled datasets, mainly in Portuguese, prevents training classi ers to automatically lter such documents. In this paper, we investigate the issue for the Portuguese language. Inspired by previous initiatives for other languages, we introduce the rst reference corpus in this area for Portuguese, composed of aligned true and fake news, which we analyze to uncover some of their linguistic characteristics. Then, using machine learning techniques, we run some automatic detection methods in this corpus, showing that good results may be achieved."
+    },
+    "affiliation": [
+        {
+            "#text": ",",
+            "@id": "aff0",
+            "country": {
+                "#text": "Brazil",
+                "@country": "BR"
+            },
+            "institution": "Federal University of Sa~o Carlos - Sorocaba",
+            "label": "0"
+        },
+        {
+            "#text": ",",
+            "@id": "aff1",
+            "country": {
+                "#text": "Brazil",
+                "@country": "BR"
+            },
+            "institution": "Interinstitutional Center for Computational Linguistics (NILC) Federal University of Sa~o Carlos - Sa~o Carlos",
+            "label": "1"
+        },
+        {
+            "#text": ",",
+            "@id": "aff2",
+            "country": {
+                "#text": "Brazil",
+                "@country": "BR"
+            },
+            "institution": "Interinstitutional Center for Computational Linguistics (NILC) University of Sa~o Paulo - Sa~o Carlos",
+            "label": "2"
+        },
+        {
+            "#text": ",",
+            "@id": "aff3",
+            "country": {
+                "#text": "Brazil",
+                "@country": "BR"
+            },
+            "institution": "University of Sa~o Paulo - Ribeira~o Preto",
+            "label": "3"
+        }
+    ],
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Rafael A. Monteiro",
+            "xref": {
+                "#text": "2",
+                "@ref-type": "aff",
+                "@rid": "aff2"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "roneysantosg@usp.br",
+            "string-name": "Roney L. S. Santos",
+            "xref": {
+                "#text": "2",
+                "@ref-type": "aff",
+                "@rid": "aff2"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "taspardo@icmc.usp.br",
+            "string-name": "Thiago A. S. Pardo",
+            "xref": {
+                "#text": "2",
+                "@ref-type": "aff",
+                "@rid": "aff2"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "talmeida@ufscar.br",
+            "string-name": "Tiago A. de Almeida",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "evandro@usp.br",
+            "string-name": "Evandro E. S. Ruiz",
+            "xref": {
+                "#text": "3",
+                "@ref-type": "aff",
+                "@rid": "aff3"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "otovale@ufscar.br",
+            "string-name": "Oto A. Vale",
+            "xref": {
+                "#text": "1",
+                "@ref-type": "aff",
+                "@rid": "aff1"
+            }
+        }
+    ],
+    "journal": null,
+    "keywords": [
+        "Fake news",
+        "Reference corpus",
+        "Linguistic features",
+        "Machine learning"
+    ],
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/contributions-to-the-study-of-fake-news-in-portuguese-new-corpus-and-automatic-detection-results.json",
+    "pub_date": null,
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "1.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Discriminative models for predicting deception strategies",
+                "issue": "952",
+                "source": "In: Proceedings of the 24th International Conference on World Wide Web",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "D.S.",
+                        "surname": "Appling"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "E.J.",
+                        "surname": "Briscoe"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.J.:",
+                        "surname": "Hutto"
+                    }
+                ],
+                "volume": "947",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "2.\n          \n          ,\n          \n          ,\n          \n          , Alu sio,\n          \n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "An evaluation of the brazilian portuguese liwc dictionary for sentiment analysis",
+                "issue": "219",
+                "source": "In: Proceedings of the 9th Brazilian Symposium in Information and Human Language Technology",
+                "string-name": [
+                    {
+                        "given-names": "Balage",
+                        "surname": "Filho"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.P.",
+                        "surname": "Pardo"
+                    },
+                    {
+                        "surname": "T.A."
+                    },
+                    {
+                        "surname": "S.M.:"
+                    }
+                ],
+                "volume": "215",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "3.\n          \n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Accuracy of deception judgments",
+                "fpage": "234",
+                "issue": "3",
+                "source": "Personality and Social Psychology Review",
+                "string-name": [
+                    {
+                        "given-names": "F.",
+                        "surname": "Charles"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Bond"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "B.M.:",
+                        "surname": "DePaulo"
+                    }
+                ],
+                "volume": [
+                    "10",
+                    "214"
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "4.\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Post-truth and vices opposed to truth",
+                "fpage": "116",
+                "issue": "2",
+                "source": "Journal of the Society of Christian Ethics",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "S.",
+                    "surname": "Clem"
+                },
+                "volume": [
+                    "37",
+                    "97"
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "5.\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          Meeting:\n          \n          . pp.\n          \n          :\n          \n          {\n          \n          :\n          \n          (\n          \n          )",
+                "article-title": [
+                    "Automatic deception detection: Methods for nding fake news",
+                    "Information Science with Impact: Research in and for the Community"
+                ],
+                "issue": [
+                    "1",
+                    "82",
+                    "4"
+                ],
+                "source": "In: Proceedings of the 78th ASIS&T Annual",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "N.J.",
+                        "surname": "Conroy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.L.",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Chen"
+                    }
+                ],
+                "volume": "82",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "6.\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Support-vector networks",
+                "fpage": "297",
+                "issue": "3",
+                "source": "Machine Learning",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Cortes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Vapnik"
+                    }
+                ],
+                "volume": [
+                    "20",
+                    "273"
+                ],
+                "year": "1995"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "7.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "The linguistic correlates of conversational deceprion: comparing natural language processing technologies",
+                "fpage": "462",
+                "issue": "3",
+                "source": "Applied Psycholinguistics",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "N.D.",
+                        "surname": "Duran"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "C.",
+                        "surname": "Hall"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "P.M.",
+                        "surname": "McCarthy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.S.:",
+                        "surname": "McNamara"
+                    }
+                ],
+                "volume": [
+                    "31",
+                    "439"
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "8.\n          \n          ,\n          \n          :\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          .\n          \n          \n          )",
+                "article-title": [
+                    "Emergent: a novel data-set for stance classi cation",
+                    "Association for Computational Linguistics ("
+                ],
+                "fpage": "1168",
+                "source": "In: Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "W.",
+                        "surname": "Ferreira"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Vlachos"
+                    }
+                ],
+                "volume": "1163",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "9.\n          \n          , Alu sio, S.M.\n          \n          .\n          \n          (\n          \n          )",
+                "article-title": ": A deep architecture for non-projective dependency parsing",
+                "source": "In: Proceedings of the NAACL-HLT Workshop on Vector Space Modeling for NLP",
+                "string-name": {
+                    "#text": ",",
+                    "given-names": "E.R.",
+                    "surname": "Fonseca"
+                },
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "10.\n          \n          ,\n          \n          :\n          \n          .\n          \n          (\n          \n          )",
+                "article-title": "Deception detection by third party observers",
+                "source": "In: Paper presented at the deception detection symposium, 39th Annual Hawaii International Conference on System Sciences",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "J.F.",
+                        "surname": "George"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "B.T.",
+                        "surname": "Keane"
+                    }
+                ],
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "11.\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          ,\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Orfel: E cient detection of defamation or illegitimate promotion in online recommendation",
+                "fpage": "287",
+                "source": "Information Sciences",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "G.",
+                        "surname": "Gimenes"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.L.",
+                        "surname": "Cordeiro"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.F.",
+                        "surname": "Rodrigues-Jr"
+                    }
+                ],
+                "volume": [
+                    "379",
+                    "274"
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "12.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Are computers e ective lie detectors? a meta-analysis of linguistic cues to deception",
+                "fpage": "342",
+                "issue": "4",
+                "source": "Personality and Social Psychology Review",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Hauch"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "I.",
+                        "surname": "Blandn-Gitlin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Masip"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.L.",
+                        "surname": "Sporer"
+                    }
+                ],
+                "volume": [
+                    "19",
+                    "307"
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "13.\n          \n          , I.:\n          \n          . https://medium.com/datascience-brigade/\n          \n          \n          (\n          \n          )",
+                "article-title": [
+                    "A ci^encia da detecc~ao de fake news",
+                    "a-ci%C3%AAncia-da-detec%C3%A7%C3%A3o-de-fake-"
+                ],
+                "string-name": [
+                    {
+                        "surname": "Musskopf"
+                    },
+                    {
+                        "surname": "newsd4faef2281aa"
+                    }
+                ],
+                "year": "September 2017"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "14.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          .07104 (\n          \n          )",
+                "article-title": "Automatic detection of fake news",
+                "source": "CoRR abs/1708",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Perez-Rosas"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "B.",
+                        "surname": "Kleinberg"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "A.",
+                        "surname": "Lefevre"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "R.",
+                        "surname": "Mihalcea"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "15.\n          \n          ,\n          \n          , R.:\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Cross-cultural deception detection",
+                "issue": "445",
+                "source": "In: Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Perez-Rosas"
+                    },
+                    {
+                        "surname": "Mihalcea"
+                    }
+                ],
+                "volume": "440",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "16.\n          \n          ,\n          \n          , R.:\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Experiments in open domain deception detection",
+                "issue": "1125",
+                "source": "In: Proceedings of the Conference on Empirical Methods in Natural Language Processing",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V.",
+                        "surname": "Perez-Rosas"
+                    },
+                    {
+                        "surname": "Mihalcea"
+                    }
+                ],
+                "volume": "1120",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "17.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ), 1{\n          \n          (\n          \n          )",
+                "article-title": "Deception detection for news: Three types of fakes",
+                "issue": [
+                    "1",
+                    "4"
+                ],
+                "source": "Proceedings of the Association for Information Science and Technology",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V.L.",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.J.:",
+                        "surname": "Conroy"
+                    }
+                ],
+                "volume": "52",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "18.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Fake news or truth? using satirical cues to detect potentially misleading news",
+                "issue": "17",
+                "source": "In: Proceedings of 15th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "V.L.",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "N.J.",
+                        "surname": "Conroy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Y.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Cornwell"
+                    }
+                ],
+                "volume": "7",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "19.\n          \n          ,\n          \n          :\n          \n          ., New York, NY, USA (\n          \n          )",
+                "article-title": "Introduction to Modern Information Retrieval. McGrawHill, Inc",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "G.",
+                        "surname": "Salton"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "M.J.",
+                        "surname": "McGill"
+                    }
+                ],
+                "year": "1986"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "20.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "The spread of true and false news online",
+                "fpage": "1151",
+                "issue": "6380",
+                "source": "Science",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Vosoughi"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Roy"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.:",
+                        "surname": "Aral"
+                    }
+                ],
+                "volume": [
+                    "359",
+                    "1146"
+                ],
+                "year": "2018"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "21.\n          \n          , W.Y.:\n          \n          .\n          \n          . Vancouver, BC, Canada (\n          \n          )",
+                "article-title": "\\liar, liar pants on re\": A new benchmark dataset for fake news detection",
+                "source": "In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics",
+                "string-name": {
+                    "surname": "Wang"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": "22.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "A comparison of classi cation methods for predicting deception in computer-mediated communication",
+                "fpage": "165",
+                "issue": "4",
+                "source": "Journal of Management Information Systems",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Zhou"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.",
+                        "surname": "Burgoon"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Twitchell"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Qin"
+                    },
+                    {
+                        "#text": "Jr.,",
+                        "given-names": "J.:",
+                        "surname": "Nunamaker"
+                    }
+                ],
+                "volume": [
+                    "20",
+                    "139"
+                ],
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": "23.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          ,\n          \n          (\n          \n          )",
+                "article-title": "An exploratory study into deception detection in text-based computer-mediated communication",
+                "source": "In: Proceedings of the 36th Annual Hawaii International Conference on System Sciences",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Zhou"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.P.",
+                        "surname": "Twitchell"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Qin"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.K.",
+                        "surname": "Burgoon"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "J.F.",
+                        "surname": "Nunamaker"
+                    }
+                ],
+                "year": [
+                    "2003",
+                    "2003"
+                ]
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": "24.\n          \n          ,\n          \n          , D.:\n          \n          .\n          \n          ,\n          \n          {\n          \n          (\n          \n          )",
+                "article-title": "Following linguistic footprints: Automatic deception detection in online communication",
+                "fpage": "122",
+                "source": "Communications of the ACM - Enterprise Information Integration: and other tools for merging data 51(9)",
+                "string-name": [
+                    {
+                        "#text": ",",
+                        "given-names": "L.",
+                        "surname": "Zhou"
+                    },
+                    {
+                        "surname": "Zhang"
+                    }
+                ],
+                "volume": "119",
+                "year": "2008"
+            }
+        }
+    ],
+    "title": "Contributions to the Study of Fake News in Portuguese: New Corpus and Automatic Detection Results"
+}

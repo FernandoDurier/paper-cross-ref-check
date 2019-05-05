@@ -1,0 +1,1820 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": {
+                "journal-title-group": {
+                    "journal-title": "Journal of Pragmatics"
+                }
+            },
+            "article-meta": {
+                "article-id": {
+                    "@pub-id-type": "doi",
+                    "#text": "10.1016/j.pragma.2015.11.001"
+                },
+                "title-group": {
+                    "article-title": "The ironic operation: Revisiting the components of ironic meaning"
+                },
+                "contrib-group": {
+                    "contrib": {
+                        "@contrib-type": "author",
+                        "string-name": "Eleni Kapogianni",
+                        "email": "e.kapogianni@kent.ac.uk",
+                        "xref": {
+                            "@ref-type": "aff",
+                            "@rid": "aff0",
+                            "#text": "0"
+                        }
+                    },
+                    "aff": {
+                        "@id": "aff0",
+                        "label": "0",
+                        "institution": "University of Kent, Department of English Language and Linguistics",
+                        "country": {
+                            "@country": "UK",
+                            "#text": "United Kingdom"
+                        },
+                        "#text": ","
+                    }
+                },
+                "pub-date": {
+                    "year": "2015"
+                },
+                "volume": "91",
+                "issue": "2016",
+                "fpage": "16",
+                "lpage": "28",
+                "history": {
+                    "date": [
+                        {
+                            "@date-type": "accepted",
+                            "day": "2",
+                            "month": "11",
+                            "year": "2015"
+                        },
+                        {
+                            "@date-type": "received",
+                            "day": "7",
+                            "month": "4",
+                            "year": "2015"
+                        },
+                        {
+                            "@date-type": "revised",
+                            "day": "28",
+                            "month": "10",
+                            "year": "2015"
+                        }
+                    ]
+                },
+                "abstract": {
+                    "p": "This paper sheds more light on the way in which irony functions at the semantics/pragmatics interface by teasing apart three components of the ironic operation: the vehicle, the input, and the output. Focusing on the logical relationship between the expressed and the intended meaning of the ironic utterance, several real instantiations of the phenomenon are discussed and it is demonstrated that the vehicle (i.e. the unit of meaning that is used in an ironic way, thus carrying the ironic intent) does not always coincide with the input (i.e. the unit of meaning on which irony operates). The input to the ironic operation is thus shown to be of three kinds: (a) part of the vehicle, (b) triggered by the vehicle, or (c) discourse-dependent. The final discussion highlights the advantages of viewing irony as an operation rather than an act of mention or dissociation from the content of the utterance. \u00a9 2015 Elsevier B.V. All rights reserved."
+                },
+                "kwd-group": {
+                    "kwd": [
+                        "Irony",
+                        "Ironic operation",
+                        "Ironic vehicle",
+                        "(Direct) ironic output"
+                    ]
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": "www.elsevier.com/locate/pragma"
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "1. Introduction",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref21 ref24 ref3 ref47 ref49 ref5",
+                                    "#text": "(Giora,\n1995, 2011, as well as proponents of a ??semanticist?? view, as Camp, 2012 defines it, e.g. Bach and Harnish, 1979; Potts,\n2005)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref18 ref19 ref20 ref53 ref58 ref59 ref6 ref60",
+                                    "#text": "(Sperber\nand Wilson, 1981; Clark and Gerrig, 1984; Gibbs, 1986, 2002; Gibbs and O?Brien, 1991; Wilson and Sperber, 1992,\n2012; Wilson, 2006)"
+                                }
+                            ],
+                            "#text": "When reviewing the most widely discussed (semantic-)pragmatic approaches to irony, one can discern two\ncontrasting tendencies, both in terms of theoretical analysis and in terms of predictions about processing effects: one\nthat stays closer to the Gricean tradition and takes into account the role of the literal interpretation of the utterance\n        \n        , and one that places emphasis on the speaker?s dissociative attitude towards the content of the utterance\n        \n        . The present account of the phenomenon is more in line with the former approaches, investigating\nthe links and pathways between the literal and nonliteral aspects of ironic meaning. At the same time, however, the\nphenomenon is not viewed as a literal--nonliteral duality, but as a dynamic process that involves different levels and\nsources of meaning."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref29",
+                                    "#text": "(Grice, 1975)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref6",
+                                    "#text": "Clark and\nGerrig?s (1984)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref10 ref11 ref37 ref38 ref42",
+                                    "#text": "(Kapogianni, 2011, 2013; Dynel,\n2013a,b)"
+                                }
+                            ],
+                            "#text": "The motivation for this analysis comes from a recent emergence of accounts that move away from single-strategy\nviews like the classical ??opposite of what is said??\n        \n        , the Relevance Theoretic echoic mention, and\n        \n        pretence, and emphasise the variability and diversity of irony strategies\n        \n        . The realisation that irony possesses a more complicated profile than previously thought poses a new set of\nquestions that need further examination:\n(a) What classifications can be made among irony strategies?\n(b) What are the unifying characteristics of such a diverse phenomenon?\nThe manner in which (a) is dealt with can vary depending on the nature of the research question; for example, Kapogianni\n(2011, 2013) presents a classification based on the criterion of the relationship between what is said and what is\nimplicated, while the present discussion aims at a classification based on the source of the input of the ironic operation. On\nthe other hand, (b) presents a definitional problem that needs to be addressed before any further discussion and data\nanalysis."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref38",
+                                "#text": "Kapogianni (2013)"
+                            },
+                            "#text": "Approaching the phenomenon of irony with a definition that is wide enough to encompass all possible strategies and\nnarrow enough to exclude any cases of non-irony that are often mistaken for such1 is a methodologically difficult task, that\ncan only be achieved through a careful balance and constant interaction between theory and real data. Following a\ntwostage process of feedback between theory-independent (based on native speakers? intuitions) and theory-internal data\ncollection,\n        \n        proposes a set of three necessary and jointly sufficient conditions for the presence of the\nphenomenon,2 which is adopted in the present analysis (Table 1).\nThere needs to be some sort of clash in the background of the ironic utterance. This can be a contrast\nbetween ideas, beliefs, or expectations (speaker versus hearer, ideal conditions versus reality, etc.)\nThis condition broadens the usual observation that ironic statements are counterfactual. An ironically\nintended utterance can express something which is not necessarily counterfactual but is in some\nstrong contrast with the contextual expectations."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref30",
+                                    "#text": "(cf. Grice, 1978)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref15 ref16 ref53",
+                                    "#text": "(cf. Sperber and Wilson, 1981:312; contra Garmendia, 2010,\n2011)"
+                                }
+                            ],
+                            "#text": "In all cases of irony, the speaker intends to make some sort of evaluation\n        \n        . This is\nnormally, but not necessarily, negative\n        \n        ."
+                        },
+                        "The working hypothesis of this paper is that meaning reversal is another common denominator of all ironic strategies,\nbut the meaning that becomes reversed (input of the ironic process) can come from a variety of sources and is often the\nproduct of inference. The first step for this analysis is to describe the ironic operation and its components (section 2),\nhighlighting the important distinction between vehicle (the carrier of ironic intent) and input. Illustrated through a variety of\nexamples, this examination leads to a classification of irony strategies depending on the source of input (section 3). The\nfinal discussion (section 4) justifies the pragmatic approach of irony as an operation, supporting the view that the literal\nmeaning of the utterance, along with a variety of meanings stemming from it, takes part in the process of derivation of the\nironist?s intended meaning."
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "2. Breaking down the ironic operation: vehicle, input, and output",
+                    "p": "In this section, it is argued that, aside from the distinction between different levels of meaning (??what is said?? -- ??what is\nimplicated?? in Gricean terms or ??explicature?? and ??implicature?? in Relevance Theoretic terms), some more refined\ndistinctions are needed, specific to irony as a trope, if a better understanding of the semantic-pragmatic characteristics of\nthe phenomenon is to be achieved.",
+                    "sec": [
+                        {
+                            "@id": "sec-3-1",
+                            "title": "2.1. Why is irony an operation?",
+                            "p": [
+                                "Ironic meaning, being the product of a rhetorical trope, is not like any other particularised conversational implicature.\nIronic implicatures have limited indeterminacy, are highly systematic, and they are the result of a logical process that could\nbe described in terms of an algorithm.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref31",
+                                            "#text": "(Grice, 1989:39--40)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref12",
+                                            "#text": "Dynel (2014"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref4",
+                                            "#text": "Burgers et al. (2011)"
+                                        }
+                                    ],
+                                    "#text": "Grice recognises indeterminacy as one of the main characteristics of implicatures\n          \n          . He argues that\nthe derivation of conversational implicatures relies on an open list of possible explanations, allowing for some uncertainty\n(or even unpredictability) in the process, which is highly dependent on the hearer?s set of assumptions. In the case of irony,\n1 Such would be the case of non-ironic sarcasm, which is often confounded with irony in the literature -- cf.\n          \n          :634--635).\n2\n          \n          follow a similar methodology for the creation of their verbal irony recognition algorithm (Verbal Irony Procedure), the\ndifference being in that they focus on indicators for the detection of the phenomenon rather than the elements that constitute its essence.\nhowever, the characteristic of indeterminacy seems rather limited. As shown in (1), irony often relies on specific implicated\npremises that lead to implicated conclusions.\n(1) Context: This is a discussion among several members of an online community about arranging a meeting\na few hours later. Speaker B lives in a different country."
+                                },
+                                "A: So are you all coming?\nB: Sure, let me just use my teleportation device. [source: Blogs/forums (English)]\ni. If your question is valid (i.e. in this case, if it has considered all the relevant information) then my answer\nis also valid.\nii. My answer states an impossibility (i.e. that I own a working teleportation device).",
+                                "iii. Your question is invalid (your question ignores an important piece of information).",
+                                "There is a rather straightforward logical sequence here, which can be followed from (1-i) to the conclusion in (1-iii).\nSpeaker B?s impossible statement is juxtaposed to speaker A?s question in order to give rise to an implicated criticism\n(1-iii). This is what Sperber and Wilson (1986:199) would call a ??strong?? implicature, i.e. one which includes (fully)\ndeterminate premises and conclusions. The example of ironic oxymoron in (2), where the literal lexical meaning (??disgust/\nnonsense??) is juxtaposed to an ironically used word (??wonderful??), makes an even stronger case for the lack of\nindeterminacy, since an ironic reading is necessary for the assignment of truth-evaluable content to the utterance that\ncontains it (oxymoron will be further discussed in section 3.1).\n(2) Meriki onirevonde mia Elada pu tha bi se hronokapsula ke den tha alaksi pote. . .mia iperohi aidia diladi.\n[source: Blogs/forums (Greek)]\n?Some people dream of Greece being placed in a time-capsule and never changing. . .a wonderful\ndisgust/nonsense that is?.",
+                                "This is not to say, of course, that ironic implicatures consistently lack indeterminacy altogether. Limited indeterminacy can,\nhowever, be considered the result of systematicity, which is an important feature of irony.",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref38 ref42",
+                                        "#text": "(Kapogianni, 2013)"
+                                    },
+                                    "#text": "??Systematicity?? is meant in the sense that there is a determinate link between the meaning of the utterance and the\nintended meaning. This link may be a semantic relationship of antonymy, as in example (2) and in most typical cases of\nirony, or it may be a more complex relationship that is based on a syllogism like the one presented in example (1). In fact, it\nhas been shown with the support of corpus data\n          \n          that these two possibilities (antonymy and a Modus\nTollens syllogism) constitute the two main types of irony, for a typological distinction that concerns the relationship\nbetween what is said and what is ironically implicated."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref2",
+                                        "#text": "(even when identifying it\nwith a different term such as negation, contrast or inappropriateness -- cf. Attardo, 2000)"
+                                    },
+                                    "#text": "Accepting the logical connection between what is said and what is implicated, in the case of irony, means recognising\nthat the use and retrieval of ironic meaning entails a specific operation. Although the exact nature of this operation remains\nto be discussed in the following sections, through the examination of further examples, it is worth putting forward the idea\nthat this operation has to involve some kind of meaning reversal. There are two non-theory-specific arguments that can\nsupport this claim. First, native speakers? intuitions about irony, which have also led to formal analyses of the phenomenon\nfrom the times of Aristotle to modern pragmatic theory, all seem to point to the element of reversal\n          \n          as a constant characteristic of\nirony. Second, maintaining the notion of reversal as a unifying characteristic of verbal irony is consistent with the character\nof irony as a general phenomenon (umbrella term) that also applies to events (situational/cosmic irony), dramatic devices\n(dramatic/tragic irony), and even the rhetorical device of ??Socratic irony??."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "sec-3-2",
+                            "title": "2.2. What is the direct output of the ironic operation?",
+                            "p": [
+                                "First of all, it needs to be made clear that ironic meaning does not consist of a single proposition but of a bundle of\npropositions, as illustrated in example (3):\n(3) Context: Veronica is about to join some classmates of hers in a game of poker. It is part of the common ground\nthat she is in bad terms with these people and that she has a low opinion of them.",
+                                "Logan: Do you even know how to play poker?\nVeronica: (i) No, but it must be really hard if all you guys play. [Source: ??Veronica Mars?? -- TV series]\n(ii) 1. The difficulty of the game must correspond to your intelligence. 2. +> You are all very intelligent.\n(iii) The speaker is being ironic.\n(iv) 1. You are not intelligent. 2. The game can?t be hard.",
+                                "(v) 1. I can easily join you in your game. 2. Your question is pointless.",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref34",
+                                        "#text": "(or ??primary\nintended meaning?? -- see Jaszczolt, 2009)"
+                                    },
+                                    "#text": "In this example, common ground knowledge predisposes both the external observer3 and the hearers towards an ironic\ninterpretation, which makes (iii) an easy assumption. However, (iv) is reached only if the interpreters draw the necessary\ninferences from the explicit meaning of the utterance as in (ii). Furthermore, the existence of additional implicatures,\nderived on the basis of the ironic interpretation, such as in (v), cannot be disregarded. Of course, the propositions that\nconstitute the ironic meaning are not presented in a random order here but in a way that reflects two kinds of priority: (a)\nlogical priority: some implicated propositions are necessary premises, without the presence of which the reasoning\nwould not proceed further (e.g. ii-1 is necessary for the derivation of ii-2 and iv-1 has a logical priority over iv-2) and (b)\ncommunicative priority: normally, only one of these propositions is the speaker?s main intended meaning\n          \n          , some of the implicatures having secondary communicative importance\n(e.g. v-1 can be considered the main intended meaning here, having a communicative priority over the evaluative\nproposition in v-2)."
+                                },
+                                "Despite the fact that a closer look to ironic meaning presents a rather complex picture, what is of primary interest,\nhere, is the proposition that can be analysed as the direct (or immediate) output of the ironic operation. This can only be\ndetermined relatively to the utterance: the implicated proposition which has the closest logical relation with some part of\nthe meaning expressed by the utterance must be the immediate output of the ironic operation4. Conversely, the unit of\nmeaning expressed by the utterance which can be logically linked to some part of the ironic meaning is the input of the\nironic operation. In example (3), then, (3i) ??it [the game] must be really hard?? and (3iv-2) ??the game can?t be hard?? are\nlinked through antonymy and so are (3ii-2) ??you are all very intelligent?? and (3iv-1) ??you are not intelligent??. Both (3i)\nand (3ii-2) can be considered inputs to the ironic operation here, with the respective immediate outputs being (3iv-2)\nand (3iv-1). In other words, input and direct output can only be defined and detected as a pair of logically linked\npropositions."
+                            ]
+                        },
+                        {
+                            "@id": "sec-3-3",
+                            "title": "2.3. What is the ironic vehicle?",
+                            "p": {
+                                "xref": {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref50",
+                                    "#text": "(e.g. ??shark?? to convey ??ruthless??, the latter being the tenor -- see Richards, 1936)"
+                                },
+                                "#text": "So far, the input and the direct output have been defined as a pair of logically linked meanings that pertain to the ironic\noperation. There is a third notion, however, that the following sections will show to be equally crucial for the understanding\nof the phenomenon, and this is the ironic vehicle. The term vehicle does not pertain to the conceptualisation of the ironic\noperation but it is rather a term related to the rhetorical nature of irony. Similarly to the vehicle of the metaphor being the\nphrase that conveys the metaphor\n          \n          , the\nvehicle of the irony is the word or string of words that is uttered with an ironic intent. As will be amply illustrated in the\nfollowing sections, the ironic vehicle is usually a single utterance, but its size can be either minimised, functioning as an\nironic interjection in an otherwise literal utterance, or extended, even taking the size of a whole text (e.g. Johnathan Swift?s\n??A Modest Proposal??)."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "3. The relationship between vehicle and input",
+                    "p": [
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref36 ref38 ref42 ref5",
+                                    "#text": "(Kapogianni, 2010, 2013; Camp, 2012)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "Camp (2012)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "(Camp, 2012:590)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref5",
+                                    "#text": "(Camp, 2012:587, 590)"
+                                }
+                            ],
+                            "#text": "The fact that irony is able to operate on meaning that is not part of the literal content of the utterance is an important\nobservation\n        \n        which has been attributed to the variability of scope of verbal irony. In\nthe present analysis, where the terms input and vehicle are central to the discussion, the use of the term ??scope?? would be\nredundant.\n        \n        elaborates on the range of ??scopes?? that sarcasm5 can take, in a semantic account that even\nproposes a SARC operator\n        \n        . A potential problem of classifying ironic strategies on the basis of scope is\nthe danger of confounding the input of the ironic operation and the vehicle of the irony. Camp, for example, mentions\n??target of inversion?? and ??input??\n        \n        without making the distinction from scope, leaving the ambiguity\nof the latter untreated. This section discusses a wide range of real instantiations of irony (coming from a variety of Modern\nGreek and English sources), with the aim of classifying them according to the provenance of the input. It is shown that the\ninput can coincide with the vehicle, be part of it (section 3.1), it can be triggered by the vehicle (section 3.2), or it can arise\nthrough discourse (section 3.3)."
+                        },
+                        "3 The example comes from a TV show (??Veronica Mars??), so the main interpreters of the conveyed meaning, here, are considered to be the\nviewers, instead of the scripted hearers.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref5",
+                                "#text": "Camp (2012)"
+                            },
+                            "#text": "4 Note that for all subsequent examples (4--18), the discussion will focus on the direct output of the ironic operation.\n5\n        \n        focuses on ??sarcasm?? as a wider phenomenon than irony and she therefore discusses examples that would be considered as\nnonironic sarcasm (e.g. sarcastic ??like??), although she does not explicitly categorise them as such."
+                        }
+                    ],
+                    "sec": [
+                        {
+                            "@id": "sec-4-1",
+                            "title": "3.1. Input as (part of) the vehicle",
+                            "p": [
+                                "For the most frequently discussed ironic examples (of the ??you are a fine friend?? kind6) the vehicle and the input of the\noperation are almost indistinguishable. This is because the ironic intent is carried by the whole proposition, which is also\nthe unit of meaning that gets reversed. However, as the following examples demonstrate, even in the most typical cases of\nirony, it is not always the case that the vehicle fully coincides with the input of the ironic operation.\n(4) Penny: Why would I want to see it [this film] again on Friday?",
+                                "Leonard: Because the print they?re showing on Friday has an additional 21 seconds of previously unseen footage.",
+                                "Penny: 21 seconds? That?ll be like seeing a whole new movie! [source: ??The Big Bang Theory?? -- TV series]\n(5) Context: Discussing an inconvenient job offer that involves moving abroad as well as receiving a very low salary\nA: Esi tha pigenes?",
+                                "?Would you go [= accept the job offer]??\nB: Mu aresi o ilios kserete.",
+                                "?I like the sun, you know?\nA: A, ohi oti plironese 10 fores parapano stin Athina",
+                                "?Oh, [it?s] not that you get paid 10 times more in Athens? [source: Blogs/forums (Greek)]\n(6) Context: A ??have you ever?? online questionnaire answered by members of a forum.",
+                                "A: [Have you ever] thought about running away?",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref21",
+                                            "#text": "Giora (1995)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref44 ref5 ref7",
+                                            "#text": "(Cutler, 1974;\nCamp, 2012; Palinkas, 2013)"
+                                        }
+                                    ],
+                                    "#text": "B: From what? All the lovely disappointment or the nice racist bastards I hate? [source: Blogs/forums (English)]\nIn example (4), the direct output of the ironic operation is ??that [21 seconds] makes absolutely no difference in the\nmovie7??. This can be viewed as the reversal of the proposition expressed by B?s utterance. As was suggested in section\n2.1, the term ??meaning reversal?? is the appropriate term for this kind of ironic operation. This is unlike some older\napproaches to irony (namely, the Gricean approach) that use the term ??meaning negation?? instead. ??Negation??, as was\nalso argued by\n          \n          , would yield a different output (in this case ??that won?t be like seeing a whole new movie??)\nwhich falls short in capturing the speaker?s intended proposition. There is, however, one instance where irony can be\nseen as direct negation and this is the case of an ironic negative utterance as in (5), where ??it [the reason you wouldn?t\naccept this offer] is not that you get paid. . .?? becomes ??it [the reason you wouldn?t accept this offer] is that you get paid. . .??.\nIt is exactly this kind of example that also brings forth a problem of ambiguity regarding the unit of meaning on which irony\noperates: does irony operate on the whole proposition, as in the previous example, or does it just cancel the negation?\nThe ability of irony to operate locally is indeed something that has been well documented in the literature\n          \n          ."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref16 ref46",
+                                            "#text": "(cf. Partington?s analysis of evaluative\noxymoron, Partington, 2011:1789)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref33 ref5",
+                                            "#text": "(cf. Haverkate, 1990; Camp, 2012)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref33",
+                                            "#text": "(Haverkate, 1990:80)"
+                                        }
+                                    ],
+                                    "#text": "Perhaps the most convincing kind of example for this characteristic of irony is the case of ironic oxymoron. Example (6)\npresents a case of oxymoron used by speaker B on two occasions: ??lovely disappointment?? and ??nice racist bastards??. In\nthe case of oxymoron, irony has to operate at a local (predicate) level turning ??lovely?? and ??nice?? into their opposites, while\nleaving the meaning of ??disappointment?? and ??racist bastards?? unaffected\n          \n          . At the same time, certain structural restrictions can also lead to a localised ironic\noperation. A good example is the case of conditionals\n          \n          , such as ??if George has said\nthat, he is a genius??\n          \n          , where irony only operates on the conclusion, leaving the antecedent\nunaffected."
+                                },
+                                "Going back to the distinction between vehicle and input, it would be difficult to imagine the ironists in examples (5)\nand (6) as limiting their ironic intent to the words that are ironically reversed. In other words, it is the whole utterance\nthat is used to carry the ironic intent (vehicle) despite the fact that irony may only operate on the negation in (5) and\nonly on the positive evaluations (lovely, nice) in (6). This is a first instance of a mismatch between vehicle and input,\nwhich will become apparent in the following sections. While observing cases of such mismatch, it is also worth\nconsidering that the relationship between vehicle and input can depend on different factors: (a) the relationship can be\nconstrained by structural elements, like explicit negation and conditionals, (b) it can be dictated by the semantics, e.g.\nwhen oxymoron is used, it is the incongruity between modifier and noun that leads to the ironic interpretation of the\nmodifier, and (c) the distinction between vehicle and input can be purely the result of context (as will be demonstrated\nin example 12).",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref29",
+                                            "#text": "Grice (1975)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref18 ref19",
+                                            "#text": "(Gibbs, 1986, 2002)"
+                                        }
+                                    ],
+                                    "#text": "6 This was the typical example discussed by\n          \n          and subsequently used in most pragmatic papers on irony and early experiments\n          \n          . It is a standard simple example of meaning the reverse of what is said, and it is so frequently used that it can almost be\nconsidered conventionalized."
+                                },
+                                "7 A reviewer highlighted some additional intended meanings in this example, such as ??you guys are nerds?? and ??I won?t come with you to the\nmovie??. In the particular context, these would be secondary intended meanings, according to the discussion in section 2.2."
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-2",
+                            "title": "3.2. Input that is triggered by the vehicle",
+                            "p": [
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref38 ref42",
+                                        "#text": "(Kapogianni,\n2013:53)"
+                                    },
+                                    "#text": "In this section I discuss examples of irony where the input of the ironic operation is not part of the vehicle but it is\ntriggered by it instead. In example (7), the speaker is about to take part in a football game, before which the two head\nplayers are choosing teams. Since no one has chosen her, the speaker utters (7) ironically, expressing her\ndisappointment about the fact that no one is interested in her.\n(7) Pedia, stamatiste na skotoneste pios tha me pari!\ni. ?Guys, stop fighting over who will have me!? [source: ??S?agapo m?agapas?? -- TV series (Greek)]\nii. You are fighting over me [presupposition]\niii. No one is interested in me [direct output of the ironic operation-intended meaning]\nThe intended meaning here is not the reversal of the expressed meaning (7i), (??start fighting over who will have me??) but,\ninstead, the intended meaning ??no one is interested in me?? is derived on the basis of a presupposition arising from the\nutterance: ??stop fighting over me?? presupposes ??you are fighting over me??. The logical link between the input (7ii) and the\noutput (7iii) is still that of reversal, here, despite the fact that this is not a case of antonymy but rather a case of reversal of\nan ad-hoc scale such as ??not being interested < wanting < demanding < (being willing to) fight over??\n          \n          ."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref20 ref32 ref55",
+                                        "#text": "(also discussed by Gibbs and O?Brien, 1991;\nHamamoto, 1998; Sperber and Wilson, 1998, inter alios)"
+                                    },
+                                    "#text": "Under this light, it is worth discussing (8), a frequently debated example\n          \n          in the context of which, a mother enters her son?s room and\nnotices that it is extremely untidy.\n(8) i. I like children who keep their rooms clean!\nii. Your room is clean [pragmatic inference from (i)]\niii. Your room is dirty/untidy [direct output of the ironic operation]\nOf course, it cannot be claimed that the mother intends to mean ??I hate children who keep their rooms clean??. It can\ntherefore be argued, that the reversed meaning here is that of an inference triggered by the utterance, namely the\ninference that the mother likes the fact that this particular room is clean: this arises through a conventional assumption that\na speaker exclaiming ??I like x!??, in a context where x is a salient event/situation, considers x to be true in that context."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref57",
+                                        "#text": "Stalnaker\n(1974)"
+                                    },
+                                    "#text": "Given the logical link between the expressed meaning (8i) and the meaning that is used as the input to the ironic\noperation (8ii), one could consider the latter to be a case of ??pragmatic presupposition?? as described by\n          \n          . Similarly to regular presuppositions, literally (non-ironically) negating the expressed proposition (??I don?t like\nchildren who keep their rooms clean??) would retain the inference ??your room is clean??, even though this would be easily\ncancellable (??I don?t like children who keep their rooms clean, so it doesn?t matter that your room is messy??), hence its\npragmatic nature."
+                                },
+                                "What is also worth discussing is the ironic use of speech acts, as in examples (9) and (10) below, which are both taken\nfrom twitter:\n(9) Context: Referring to a co-worker with whom the speaker has had a row.",
+                                "i. Thank you so much for making work awkward again #NotReally #sarcasm [source: Twitter]\nii. I blame you for making work awkward [speech act of blame -- direct output of the ironic operation]\n(10) Context: Discussing the fan club of a singer that the speaker dislikes.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref52",
+                                            "#text": "(an expressive speech act, according to Searle?s 1975 distinctions)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref17",
+                                            "#text": "(cf. Garmendia, 2015:61)"
+                                        }
+                                    ],
+                                    "#text": "i. Sign me up ASAP! #sarcasm [source: Twitter]\nii. I want to be signed up [presupposed felicity condition of the speech act]\niii. I don?t care about being signed up [direct output of the ironic operation]\nThe expression of gratitude\n          \n          in (9) is turned into an act\nof accusing/blaming, that is, another expressive speech act of negative evaluative character, as opposed to the positive\nevaluative character of its literal meaning. In this case, irony does not operate on the content of the locution, but on the\npresupposition that arises from the felicity conditions of the speech act: ??the speaker is grateful??\n          \n          .\nSimilarly, in example (10), assuming that the intention of the ironist is to express her contempt and disinterest towards\nsome fan club, the input of the ironic operation should be the presupposition ??I am interested/I want this??, as it stems from\nthe felicity conditions of a speech act of order/request."
+                                },
+                                "Another interesting case of mismatch between vehicle and input is presented in example (11), which contains a\nnontruth conditional constituent, in this case an ethical dative clitic pronoun (??mas?? -- ??on us??).\n(11) Context: Dora is the leader of a political party that the speaker does not support.",
+                                "Mas8 tis ehase tis ekloges i Dora!\nOn-us them lost the elections the Dora.\ni. ?Dora lost the elections, on us?9.\nii. We are disappointed about Dora?s fate [ancillary proposition/generalised implicature]\niii. We are indifferent to Dora?s fate [direct output of ironic operation]\nThis clitic pronoun does not contribute to the truth conditional content, but instead, it triggers an ancillary proposition\n(arguably a generalised implicature) of evaluative character (??to our disappointment??), which is the element that becomes\nreversed by the ironic operation to mean ??we are indifferent??. It can be claimed that this example is essentially different\nfrom examples (9) and (10), since the vehicle is not the whole statement in this case: the speaker literally asserts some\nnew information, limiting her ironic comment to the use of the ethical dative. Therefore, we have a localised vehicle, which\ntriggers the input in the form of a generalised implicature.",
+                                "Let us now consider how the following ironic utterance would work in two different contexts, (12-i) and (12-ii).\n(12) Slow down, Schumacher, you are going to kill us!\ni. Addressed to someone driving too slowly\nii. Addressed to someone driving very fast but clumsily\nIn the case of (12-i) the vehicle of the irony is the utterance as a whole. It triggers the implication of a very fast and risky\ndriver, enhanced by the metaphorical vocative ??Schumacher?? (i.e. someone driving as fast as a F1 driver). In the second\ncontext ??Schumacher?? works as an ironic interjection in an otherwise literal utterance (i.e. the speaker sincerely thinks that\nthere is a danger and the hearer should slow down, while ironically pointing out the hearer?s clumsiness and dissimilarity\nfrom a skilled F1 driver).",
+                                "Summing up, in this section we have analysed examples in which the vehicle and the input did not coincide, due to the\nfact that the input of the ironic operation was triggered by the vehicle rather than being part of it. The way in which the input\ncan be triggered by (elements of) the vehicle is through (pragmatic) presupposition (7 & 8), through the nature of the\nspeech act and its presupposed felicity conditions (9 & 10), or through (generalised) implicature (11 & 12-i)."
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-3",
+                            "title": "3.3. Discourse-dependent input",
+                            "p": [
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref10 ref11 ref37 ref38 ref39 ref42",
+                                        "#text": "(Kapogianni, 2011,\n2013, 2014; Dynel, 2013a,b)"
+                                    },
+                                    "#text": "Let us now move on to a different set of examples, one that has been rather overlooked in the literature\n          \n          . In these examples, which are similar to the very first example (example 1 in section 2.1), the\nironist?s main intended meaning is a refutation or ridicule of a targeted utterance, through the strategy of juxtaposition.\n(13) Context: A grandmother informs her grandson that the local priest will bring the icon of Saint Catherine to the\nhouse as part of religious tradition\nSofia: Methavrio tha erthi i Agia Ekaterini"
+                                },
+                                "?Saint Catherine is coming the day after tomorrow?\nSpyros: Tha katsete edo i tha tin pate kapu ekso?",
+                                "?Are you staying here or taking her out (anywhere)?? [source: ??Sto para pente?? -- TV series (Greek)]\n(14) Context: In the classroom, speaker A is a student who has been asked a history question and B is her teacher,\nwho is visibly irritated by the student?s hesitancy and poor attempt at guessing the answer.",
+                                "A: Meta to telos tu polemu, i Polonia perilamvane tin (.) ano Silesia (.) tin kato Silesia (.) tin pera Silesia. . .",
+                                "?After the end of the war, Poland included (.) upper Silesia (.) lower Silesia (.) yonder Silesia. . .?\nB: . . .ke ti dothe Silesia.",
+                                "?. . .and hither Silesia.? [source: ??Savvatogenimenes?? -- TV series (Greek)]\n(15) Context (as cited on the source text of this example): ??Your friends meet you at the cafeteria and ask you. . .??\nA: Edo iste?",
+                                "HERE10be2PL\n?Here is where you are?"
+                            ],
+                            "sec": [
+                                {
+                                    "@id": "sec-4-3-1",
+                                    "title": "8 Dative clitic, first person plural.",
+                                    "p": {
+                                        "xref": {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref38",
+                                            "#text": "Kapogianni (2013)"
+                                        },
+                                        "#text": "9 This is taken from Michelioudakis and\n            \n            , which contains a full discussion of the case of ironic uses of the ethical dative, a\nconstruction employed in Greek and other languages in order to express the emotional involvement of the speaker.\n10 The word ??edo?? (here) is in a focalised position in the sentence."
+                                    }
+                                },
+                                {
+                                    "@id": "sec-4-3-2",
+                                    "title": "B: Ohi, den imaste emis, ta ologramata mas ine! ?No, it?s not us, it?s our holograms!? [Source: Blogs/forums (Greek)] (16) Context: A humorous discussion about the dangers of swimming. A: I used to be a lifeguard.",
+                                    "p": [
+                                        "B: Can you swim?\nA: No\nC: [He] just showed them encouragement. . .",
+                                        "D: ??Best of luck!??",
+                                        "C: ??Don?t drown!?? [source: ??Do the right thing?? -- Podcast]\nIn example (13) the grandson?s response ignores the only plausible interpretation of what his grandmother says and,\ntargeting the ambiguity of her utterance, asks an ironic question about how they intend to entertain their ??guest?? (referring\nto the saint as a real person), ultimately conveying the message ??your statement is implausible/unreasonable??. As with\nexample (1), the juxtaposition of the question to the targeted statement creates the schema (syllogism) ??if your statement\nis reasonable/plausible, so is my question; my question is implausible and, therefore, so is your statement??. It is on the\nbasis of this discourse-dependent schema that irony operates, turning the assumption that the initial statement is\nreasonable/plausible into the evaluative judgment ??your statement is unreasonable/implausible??.",
+                                        "The dependence of the input on paired utterances (often, but not exclusively, adjacency pairs) becomes obvious when\nexamining more examples of this kind, such as (14), where collaborative completion serves the purpose of irony. In this\ncase, the teacher ironically demonstrates that the student?s improvisation strategy is flawed. Similarly to example (13), the\ninput of the ironic operation comes from the syllogism ??if your strategy of making up place names is valid, then my proposal\nis also valid; my proposal is invalid and therefore so is yours??.",
+                                        {
+                                            "xref": {
+                                                "@ref-type": "bibr",
+                                                "@rid": "ref37",
+                                                "#text": "(and\nhumorously surreal, cf. Kapogianni, 2011)"
+                                            },
+                                            "#text": "Example (15) contains a question-answer adjacency pair, in which the answer is obviously counterfactual\n            \n            , again creating the schema ??if your question is valid/reasonable, my answer is\nalso valid/reasonable; my answer is unreasonable and, therefore, so is your question??). Similarly, in example (16), the\nparticipants of a podcast contribute to an ironic mockery of speaker B?s question, with speaker C and speaker D\ncollaboratively forming the ironic vehicle, which once again creates the schema ??if B?s question is valid, then the answer is\nalso valid; the answer presents an entirely improbable scenario and, therefore, B?s question is invalid??."
+                                        },
+                                        "In these examples, the ironic operation involves the whole schema, as it is triggered by the discourse pairing of the\ntarget of the irony and the ironic response. It is worth noting, however, that the essential elements of an assertion and its\nreversal are still present in the schema, this time having the form of an evaluative proposition, expressed as the\nantecedent of a conditional, and its refutation (??utterance x is valid/plausible/reasonable?? -- ??utterance x is invalid/\nimplausible/unreasonable??).",
+                                        "Summing up, the discussion of ironic examples presented in this section (4--16) revealed a variety of combinations\nbetween vehicle and input: input that is part of the vehicle (local) or coincides with the vehicle (global), input that is\ntriggered by the vehicle (as an implicature or as a presupposition), and input that is triggered by the discourse pairing of the\nvehicle and the target utterance (Fig. 1).",
+                                        "In order fully capture the essence of the ironic operation it is important to answer the following remaining questions: (a)\nis the operation always some kind of meaning reversal? and (b) does it only work with a specific form of input (e.g.\ndeclarative statements)? The following section will shed more light on these issues."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "4. The ironic operation and the role of literal meaning",
+                    "p": {
+                        "xref": {
+                            "@ref-type": "bibr",
+                            "@rid": "ref5",
+                            "#text": "(Camp, 2012)"
+                        },
+                        "#text": "In this section, I will defend the theoretical validity of analysing irony as an operation that involves both semantic and\npragmatic aspects of the literal meaning of the utterance. This analysis is compatible with a dynamic model of meaning\ncreation that considers the speaker?s multiple goals and the ever-changing context. I will also argue that this model can\nwork as an alternative to the ??semanticism versus expressivism?? debate\n        \n        , which is rather limiting, since the\ntwo views come from different perspectives on the semantics-pragmatics divide."
+                    },
+                    "sec": [
+                        {
+                            "@id": "sec-5-1",
+                            "title": "4.1. The unifying characteristics of the ironic operation",
+                            "p": [
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref4 ref45 ref5",
+                                        "#text": "(as Partington, 2007; Burgers et al., 2011; Camp, 2012 have done)"
+                                    },
+                                    "#text": "Having analysed a great variety of examples, the question arises of whether reversal can be seen as a unifying\ncharacteristic of the ironic operation, despite the differences in the logical steps from the input to the output. One could\nargue\n          \n          that given the variable strategies of the\nphenomenon, the only kind of reversal that is common across the board is reversal of evaluation. Since irony always\nexpresses some sort of (normally negative) evaluation, this can be considered to be the result of the reversal of a\npretended evaluation of the opposite sort (i.e. normally positive). The evaluative proposition, however, which is indeed\nalways present within the ironic meaning, may be an indirect inference, i.e. a further implicature drawn on the basis of the\nresult of the ironic reversal and not the direct output of the ironic operation. The result of ironic reversal is a statement that\nmay or may not be evaluative, like in examples (7) and (15), repeated here as (17) and (18).\n(17) ?Guys, stop fighting over who will have me!?"
+                                },
+                                "You are fighting over me [presupposition] ! Everyone wants me in their team +> No one wants me in their\nteam [direct output]\n+> I am sad/annoyed that no one wants me in their team\n(18) ?No, it?s not us, it?s our holograms!?",
+                                "Your question must be valid [discourse assumption] +> Your question is invalid [direct output]\nIn the first example, ??no one wants me in their team?? is not an evaluation in itself, but it triggers one under the assumption\nthat this is a bad thing for the speaker, who must be sad or annoyed about this fact. In the latter example (18), however,\nwhich contains the syllogism that was introduced in section 2.1 and further illustrated in section 3.3 (??if your question is\nvalid, then my answer is also valid -- my answer is obviously invalid, therefore your question is invalid??) it is indeed the case\nthat the direct output of the ironic operation is a purely evaluative proposition.",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref33",
+                                        "#text": "Haverkate (1990)"
+                                    },
+                                    "#text": "Having established that irony reverses different kinds of expressed meaning and not just evaluations, it is now worth\ndetermining the form of meaning that becomes reversed by irony.\n          \n          sees irony as preserving the modality\nof the sentence (e.g. [ironic imperative ( p)] = [imperative :( p)]; Haverkate, 1990:95). It has been shown, however, that the\ninteraction between irony and modality is more complex and can reasonably be seen as reversing the presuppositions of\nspeech acts (section 3.2, examples 9 & 10). In the case of questions, imperatives, and elliptic phrases, irony reverses a\ndeclarative sentence that is linked (by presupposition, entailment or pragmatic enrichment) to the utterance, and not the\nsentence itself."
+                                },
+                                "A further indication that the meaning that becomes reversed is in a declarative form comes from the observation that\nironic implicatures, both evaluative and non-evaluative, can be intuitively understood in the form of statements. As\ndemonstrated by the discussed examples (especially the analysis in section 2.1), ironic meaning consists of a bundle of\npropositions, which correspond to a bundle of statements. These are mostly connected to each other within a syllogism\n(premises -- conclusions), while the direct output of the ironic operation has a logical priority over the rest. It would\ntherefore be problematic to consider any other form/modality for the direct output of the ironic operation, since this would\ndisturb the logical continuity of the constituents of the ironic meaning. Consequently, if the direct output is a declarative\nstatement, then the input also has to be a declarative statement.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref21 ref5 ref54 ref60",
+                                            "#text": "(Camp, 2012, also following Sperber and Wilson, 1986/1995)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref21",
+                                            "#text": "(Giora, 1995)"
+                                        }
+                                    ],
+                                    "#text": "There is, of course, the case of localised operation of the phenomenon as it was shown in the examples of oxymoron\n(2&6), ironic interjection (12-ii), and (possibly) negation (5), where there is no whole declarative sentence to be reversed\nbut a subsentential element. In the case of localised operation, one can view the process of reversal as a more concrete\nlink between two antonyms. This link can either be between two lexicalised antonyms, usually opposite points of a given\nsemantic scale (e.g. hot--cold, fast--slow, perfect--terrible, slight--extreme), or between the extremes of an ad-hoc scale (e.\ng. speed-of-light -- terribly slow, Einstein -- terribly stupid). This is compatible with Camp?s observation about the ability of\nirony to evoke a normative scale\n          \n          and Giora?s suggestion\nthat irony is indirect negation\n          \n          ."
+                                },
+                                "Overall, this analysis supports the view of irony as an operation of reversal that takes as its input various elements of\nthe expressed meaning. When reversal is global, then it operates on declarative sentences, when it is local it operates on\nsubsentential elements that are reversed to mean their (scalar) antonyms. According to this view of irony, the literal\ninterpretation is essential for the derivation of ironic meaning, since it either directly or indirectly provides the input to the\nironic operation."
+                            ]
+                        },
+                        {
+                            "@id": "sec-5-2",
+                            "title": "4.2. A discourse-oriented view of ironic meaning",
+                            "p": [
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref5",
+                                            "#text": "(defined by Camp, 2012 as the view that there is only one meaning in irony and no\nmeaning substitution takes place)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref5",
+                                            "#text": "(Camp, 2012)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref5",
+                                            "#text": "(Camp, 2012)"
+                                        }
+                                    ],
+                                    "#text": "The expressivist view of irony\n          \n          , most notably represented by Relevance Theory and the interpretation of irony as echo\nor pretense, would not accept the inclusion of literal meaning in a model of ironic meaning derivation\n          \n          . This\npoint of view has three central arguments against literal meaning (a) psychological reality: a two-stage process of irony\nunderstanding should make irony processing more effortful, which is not what is expected to happen according to the\nrequirement for the least cognitive effort (b) the precondition for irony interpretation is recognizing the speaker?s\ndissociative attitude (as opposed to recognizing the incongruity between the literal meaning and reality/context), and (c)\nirony can also apply to overall pragmatic effects, as opposed to just the literal meaning\n          \n          ."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref18 ref19 ref35",
+                                            "#text": "(Jorgensen et al.,\n1984; Gibbs, 1986, 2002)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref1 ref13 ref22 ref23 ref24 ref25 ref26 ref47 ref51 ref9",
+                                            "#text": "(Dews and Winner, 1999; Giora and Fein, 1999; Schwoebel et al., 2000; Giora, 2002, 2003; Giora et al., 2007; Filik and\nMoxey, 2010; Peleg and Giora, 2011; Akimoto et al., 2012)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref56",
+                                            "#text": "Spotorno and Noveck (2014)"
+                                        }
+                                    ],
+                                    "#text": "As it concerns the first argument of expressivism, it would appear that evidence from processing studies should provide\na straightforward answer to whether irony is more effortful than literal meaning. However, results from different studies on\nthe topic are inconclusive.11 Despite some experimental findings that support the direct-access view\n          \n          , a number of (recent) studies find evidence of slower reading times/processing of ironic meaning\n          \n          . The studies by Giora and colleagues, in particular, attribute\nthe slower processing of irony to the initial activation of salient meanings (i.e. not necessarily literal, but frequent and\nfamiliar). In an attempt to explain these divergent findings,\n          \n          take into consideration individual\ndifferences in theory of mind skills and social inclination."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref9",
+                                        "#text": "(Dews and Winner, 1999:1582)"
+                                    },
+                                    "#text": "Of course, the debate between a direct-access and a two-stage view assumes a linear model of processing (the\nsalience-based interpretation is accessed first, the intended meaning is accessed second), an alternative to which would\nbe the ??parallel race?? model\n          \n          , or ??multiple meaning?? model that does not predict a strict\nlinear order of access to different sources of meaning during processing. It is therefore debatable whether evidence from\nprocessing can provide direct support for one model or the other, given the multiplicity of factors involved in irony\nprocessing and the difficulty to control for them."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref40 ref41 ref48 ref6",
+                                        "#text": "(not incompatible with similar views such as ??reminder??,\n??pretense??, ??allusional pretense??, see Clark and Gerrig, 1984; Kreuz and Glucksberg, 1989; Kumon-Nakamura et al., 1995;\nPopa-Wyatt, 2014)"
+                                    },
+                                    "#text": "The second argument of expressivism is not unrelated to the first: a goal for expressivism is finding ??shortcuts?? in meaning\ninterpretation, which is what the echoic view of irony tries to explain\n          \n          . Recognising the speaker?s dissociative attitude is, according to this view, a shortcut to the speaker?s\nintended meaning, which bypasses the literal interpretation. What some of these approaches seem to be taking for granted is\nthat the identification of the speaker?s dissociative attitude (or higher level explicature) leads directly to the speaker?s intended\nmeaning. As shown earlier (section 2.2), the speaker?s intended meaning is a bundle of interrelated propositions: there are\npropositions that have to do with asserting something other than what is said and propositions that are purely evaluative -- the\nformer do not always coincide with the latter. So how does recognising the speaker?s dissociative attitude facilitate the\nretrieval of these implicatures? Although some of them may be straightforward (dissociative attitude -- act of evaluation),\nothers may require further stages (the speaker doesn?t mean p -- the speaker means the reverse of p). Taking everything into\nconsideration, a dissociative attitude model does not necessarily lead to direct-access processing and is not necessarily less\ncomplex than the process that involves the literal interpretation."
+                                },
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref5",
+                                        "#text": "(as Camp, 2012 also notes)"
+                                    },
+                                    "#text": "The third argument is the trickiest one for expressivism, since it can be turned against it\n          \n          .\nThe observation that irony also operates on the overall pragmatic effects of the utterance can be problematic for an echoic\nmodel. Even if we assume the more relaxed definition of echo/echoic attribution (i.e. what is echoed is not necessarily a\nprevious utterance, but it can be a thought, a situation, or something that a different speaker would have said under\ndifferent circumstances) the irony needs to coincide with the echo, in other words, if an utterance is echoed, then it is the\nutterance as a whole that carries the irony, nothing more or nothing less. This assumption would not be compatible with\nthe observation that irony also uses indirect ridicule, where the irony applies to an implicature or a presupposition of the\nutterance and not to the utterance itself. At the same time, the assumption that the irony is carried by the utterance as a\nwhole would also be incompatible with the cases where irony applies to subsentential elements (which can be the vehicle\nand/or the input of the ironic operation). If the speaker is dissociating herself from the content of the utterance, how can she\nstill literally assert parts of the utterance in the case of local irony?"
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref14",
+                                            "#text": "(Filik et al., 2014)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref27 ref28",
+                                            "#text": "(Giora et al., 2014, 2015)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref5",
+                                            "#text": "(cf. the view of irony as an operator that works similarly to negation\n-Camp, 2012:624)"
+                                        }
+                                    ],
+                                    "#text": "It may be expected that recognising the flaws of the expressivist view would lead the present analysis to support the\nother side of the debate, i.e. semanticism. This is not the case. Semanticism prioritises a structural/syntactic model that\n11 There are, of course, various factors that can influence the speed of access to the ironic meaning, which are still being investigated. For\nexample, it has been shown that the familiarity and degree of conventionalisation of an ironic utterance affects ironic interpretation, and the effects\nof novel ironies on eye-movement and brain activity can also be attested\n          \n          . Additionally, some default sarcastic phrases (notably,\nnegative understatements such as ??punctuality is not his forte??) do not involve a phase of literal interpretation, even when these are nonsalient\n          \n          .\naims at a unification of rules of meaning composition\n          \n          . This means that, in terms of research goals, it is not the polar opposite of expressivism, which prioritises\na cognitive approach."
+                                },
+                                "Even if it were the alternative option to expressivism, however, such a position would still be problematic. Semanticism\nplaces irony right on the semantics-pragmatics boundary, with its operation being tied to the level of semantics, at least in\nterms of function. This position is at odds with the observation that irony can operate on fully-fledged propositions, which\nare often the result of pragmatic processes (implicatures, for instance). Such a function indicates that irony is a\nhigherlevel phenomenon, despite the fact that it can also operate at a lower level (local operation) and independently of the fact\nthat its input is rooted/dependent on the literal meaning.",
+                                "Moving away from the semanticism-expressivism debate, an analysis of the ironic process needs to take into\nconsideration the multiplicity of meanings involved. Viewing irony as a complex pragmatic phenomenon, rather than a\nhigher-level explicature or an operator, offers the opportunity of an analysis that takes into consideration the dynamic\ncharacter of the context and the process of meaning negotiation between interlocutors.",
+                                "Although in a static description of examples we refer to the speaker and the hearer as having steady roles, what\nhappens in reality is that both interlocutors retain both roles at the same time. This is an important observation for the\nexamination of meaning construction: a speaker is constantly aware of the hearer?s state of mind and is prepared to\nmodulate her strategy (e.g. reinforce or cancel an implicature that seems possible to arise, given the current hearer?s\nassumptions) in order to accommodate new information about the current hearer?s set of assumptions.",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref43 ref8",
+                                        "#text": "(Dascal, 1987; Nerlich and Clarke, 2001)"
+                                    },
+                                    "#text": "Moreover, communicative goals are rarely ever singular; this means that speakers and hearers have a hierarchy of\ngoals, the order of which is affected by many different factors. The reason why one opts for an ironic rather than literal\nutterance, i.e. a ??marked?? and less straightforward one, would have to lie beyond the goal of simply transmitting a\nmessage. The ironist chooses this device, despite its more complex nature and the risk of misinterpretation. Therefore, the\nuse of irony reveals an important principle of communication, which occasionally grants priority on the rhetorical effects\nover the economy and efficiency of the communicated utterance. Unlike what an efficiency-oriented approach might\nsuppose, there is evidence for the preference towards nonliteral communication\n          \n          and, more specifically, towards the duality of meanings, i.e. rhetorical strategies that invite the hearer to retain both the\nliteral (or salient) and the nonliteral meaning at the same time, and capture the rhetorical effect through the observation of\nthe discrepancy between the two meanings."
+                                },
+                                "The inclusion of the above considerations into the analysis of irony leads us to a discourse-oriented approach. In this\napproach, every aspect of the ironic meaning construction is important, it can be exploited to a greater or lesser degree by\nthe interlocutors, and it cannot be bypassed."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-6",
+                    "title": "5. Conclusions",
+                    "p": [
+                        "This paper has highlighted some important distinctions that are often overlooked in the irony literature, causing\nconfusions and pseudo-dilemmas. Through the examination of real (spontaneous and scripted) instantiations of the\nphenomenon, the terms ??ironic operation??, ??input??, ??vehicle??, and ??(direct) output?? were defined and distinguished from\neach other. The output was analysed as a bundle of propositions, which include -- but are not limited to -- the direct result of\nthe ironic operation (direct output). Even more crucially, a distinction between ironic vehicle and ironic input was drawn,\nshowing that ironic strategies vary depending on the relationship between the two (input as part of the vehicle, triggered by\nthe vehicle, or dependent on the discourse functions of the vehicle). The subsequent analysis supported the view of irony\nas an operation of reversal: regardless of whether the input is a proposition or a subsentential element, irony exhibits\nsystematicity as it concerns the relationship between input and direct output.",
+                        "The discussion also highlighted the fact that the input is always linked to the literal meaning of the utterance, which\nmakes a strong argument for a model that recognises the role of the literal meaning, contrary to what has been proposed\nby the so-called expressivist approach. Further arguments against the expressivist approach, complemented by\narguments that criticise the expressivist-semanticist dichotomy for being restrictive and not based on a true opposition,\nlead to the proposal of a model that recognises the dynamic nature and discourse-dependence of ironic meaning. It is\nhoped that this approach will contribute to future theoretical as well as empirical studies on irony, since the proposed\ndistinctions not only offer a clearer view of the phenomenon but can also be a source of valuable methodological\ndistinctions (e.g. perceptual studies could use ??source of input?? as an additional predictor)."
+                    ]
+                },
+                {
+                    "@id": "sec-7",
+                    "title": "Acknowledgements",
+                    "p": "I am grateful to Dr. Marta Dynel for her valuable feedback. I would also like to thank two anonymous reviewers for their\ninsightful comments and suggestions."
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Akimoto"
+                            },
+                            "year": [
+                                "2012",
+                                "2012"
+                            ],
+                            "article-title": "Comprehension processes of verbal irony: the effects of salience, egocentric context, and allocentric theory of mind",
+                            "source": "Metaphor Symb",
+                            "volume": "27",
+                            "fpage": "217",
+                            "lpage": "242",
+                            "#text": ", Yoritaka, Shiho, Miyazawa, Toshiaki, Muramoto,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926488.\n          \n          .691750"
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Attardo"
+                            },
+                            "year": "2000",
+                            "article-title": "Irony as relevant inappropriateness",
+                            "source": "J. Pragmat",
+                            "volume": [
+                                "32",
+                                "2166"
+                            ],
+                            "fpage": [
+                                "793",
+                                "00070"
+                            ],
+                            "lpage": [
+                                "826",
+                                "3"
+                            ],
+                            "issue": "99",
+                            "#text": ", Salvatore,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Bach"
+                            },
+                            "year": "1979",
+                            "article-title": "Linguistic Communication and Speech Acts",
+                            "#text": ", Kent, Harnish, Robert,\n          \n          .\n          \n          . MIT Press, Cambridge, MA."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Burgers"
+                                },
+                                {
+                                    "surname": "Margot",
+                                    "given-names": "Peter",
+                                    "#text": ", Schellens,"
+                                },
+                                {
+                                    "surname": "Jan"
+                                }
+                            ],
+                            "year": [
+                                "2011",
+                                "2011"
+                            ],
+                            "article-title": "Finding irony: an introduction of the Verbal Irony Procedure (VIP)",
+                            "source": "Metaphor Symb",
+                            "volume": "26",
+                            "fpage": "186",
+                            "lpage": "205",
+                            "#text": ", Christian, van Mulken,\n          \n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926488.\n          \n          .583194"
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Camp"
+                            },
+                            "year": [
+                                "2012",
+                                "2010"
+                            ],
+                            "article-title": "the semantics/pragmatics distinction",
+                            "issue": [
+                                "46",
+                                "4"
+                            ],
+                            "fpage": [
+                                "587",
+                                "0068"
+                            ],
+                            "lpage": "634",
+                            "volume": "00822",
+                            "#text": ", Elisabeth,\n          \n          . Sarcasm, pretense, and\n          \n          . NO U?S\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1111/j.1468-\n          \n          .\n          \n          .\n          \n          .x"
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Clark",
+                                "given-names": "Herbert H.",
+                                "#text": ","
+                            },
+                            "year": "1984",
+                            "article-title": "On the pretense theory of irony",
+                            "source": "J. Exp. Psychol. Gen",
+                            "volume": "113",
+                            "issue": "1",
+                            "fpage": "121",
+                            "lpage": "126",
+                            "#text": ", Gerrig, Richard J.,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Cutler"
+                                },
+                                {
+                                    "given-names": "M.W.",
+                                    "surname": "Fox",
+                                    "#text": ","
+                                },
+                                {
+                                    "given-names": "R.A.",
+                                    "surname": "Bruck",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "A"
+                                }
+                            ],
+                            "year": "1974",
+                            "article-title": "On saying what you mean without meaning what you say",
+                            "source": "Papers from the 10th Regional Meeting of the Chicago Linguistic Society",
+                            "fpage": "117",
+                            "lpage": "127",
+                            "#text": ", Anne,\n          \n          .\n          \n          . In: LaGaly,\n          \n          ,\n          \n          ,\n          \n          . (Eds.),\n          \n          , pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Dascal"
+                            },
+                            "year": "1987",
+                            "article-title": "Defending literal meaning",
+                            "source": "Cognit. Sci",
+                            "volume": [
+                                "11",
+                                "0213"
+                            ],
+                            "fpage": [
+                                "259",
+                                "80007"
+                            ],
+                            "lpage": [
+                                "281",
+                                "1"
+                            ],
+                            "issue": "87",
+                            "#text": ", Marcelo,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/S0364-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Dews"
+                            },
+                            "year": "1999",
+                            "article-title": "Obligatory processing of literal and nonliteral meanings in verbal irony",
+                            "source": "J. Pragmat",
+                            "volume": [
+                                "31",
+                                "2166"
+                            ],
+                            "fpage": [
+                                "1579",
+                                "00005"
+                            ],
+                            "lpage": [
+                                "1599",
+                                "3"
+                            ],
+                            "issue": "99",
+                            "#text": ", Shelly, Winner, Ellen,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx. doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Dynel"
+                            },
+                            "article-title": "Irony from a neo-Gricean perspective: on untruthfulness and evaluative implicature",
+                            "source": [
+                                "Intercult. Pragmat",
+                                "-0018"
+                            ],
+                            "volume": "10",
+                            "fpage": "403",
+                            "lpage": "431",
+                            "#text": ", Marta, 2013a.\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http:// dx.doi.org/10.1515/ip-2013"
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Dynel"
+                                },
+                                {
+                                    "surname": "M."
+                                }
+                            ],
+                            "article-title": "When does irony tickle the hearer? Towards capturing the characteristics of humorous irony",
+                            "source": "Developments in Linguistic Humour Theory. John Benjamins",
+                            "fpage": "289",
+                            "lpage": "320",
+                            "#text": ", Marta, 2013b.\n          \n          . In: Dynel,\n          \n          (Ed.),\n          \n          , Amsterdam, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Dynel"
+                            },
+                            "year": "2014",
+                            "article-title": "Isn't it ironic? Defining the scope of humorous irony",
+                            "source": [
+                                "HUMOR: Int. J. Humor Res",
+                                "-0096"
+                            ],
+                            "volume": "27",
+                            "fpage": "619",
+                            "lpage": "639",
+                            "#text": ", Marta,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1515/ humor-2014"
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Filik",
+                                "given-names": "Linda M.",
+                                "#text": ", Ruth, Moxey,"
+                            },
+                            "year": [
+                                "2010",
+                                "2010"
+                            ],
+                            "article-title": "The on-line processing of written irony",
+                            "source": "Cognition",
+                            "volume": [
+                                "116",
+                                "06"
+                            ],
+                            "issue": "3",
+                            "fpage": "421",
+                            "lpage": "436",
+                            "#text": ",\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j.cognition.\n          \n          .\n          \n          .005"
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Filik"
+                            },
+                            "year": "2014",
+                            "article-title": "Testing theories of irony processing using eye-tracking and ERPs",
+                            "source": "J. Exp. Psychol. Learn. Mem. Cognit",
+                            "volume": "40",
+                            "issue": "3",
+                            "fpage": "811",
+                            "lpage": "828",
+                            "#text": ", Ruth, Hartmut, Leuthold, Katie, Wallington, Jemma, Page,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1037/a0035658"
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Garmendia"
+                            },
+                            "year": "2010",
+                            "article-title": "Irony is critical",
+                            "source": "Pragmat. Cognit",
+                            "volume": "18",
+                            "issue": "2",
+                            "fpage": "397",
+                            "lpage": "421",
+                            "#text": ", Joana,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1075/pc.18.2.07gar"
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Garmendia"
+                            },
+                            "year": [
+                                "2011",
+                                "2011"
+                            ],
+                            "article-title": "She's (not) a fine friend: ''Saying'' and criticism in irony",
+                            "source": "Intercult. Pragmat",
+                            "volume": "8",
+                            "issue": "1",
+                            "fpage": "41",
+                            "lpage": "65",
+                            "#text": ", Joana,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1515/IPRG.\n          \n          .002"
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Garmendia"
+                            },
+                            "year": "2015",
+                            "article-title": "A (Neo)Gricean account of irony: an answer to Relevance Theory",
+                            "source": "Int. Rev. Pragmat",
+                            "volume": "7",
+                            "fpage": [
+                                "40",
+                                "18773109"
+                            ],
+                            "lpage": [
+                                "79",
+                                "00701003"
+                            ],
+                            "#text": ", Joana,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1163/\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Gibbs"
+                            },
+                            "year": "1986",
+                            "article-title": "On the psycholinguistics of sarcasm",
+                            "source": "J. Exp. Linguist. Gen",
+                            "volume": "115",
+                            "issue": "1",
+                            "fpage": "3",
+                            "lpage": "15",
+                            "#text": ", Raymond,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Gibbs"
+                            },
+                            "year": "2002",
+                            "article-title": "A new look at literal meaning in understanding what is said and implicated",
+                            "source": "J. Pragmat",
+                            "volume": [
+                                "34",
+                                "2166"
+                            ],
+                            "fpage": [
+                                "457",
+                                "00046"
+                            ],
+                            "lpage": [
+                                "486",
+                                "7"
+                            ],
+                            "issue": "01",
+                            "#text": ", Raymond,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Gibbs"
+                                },
+                                {
+                                    "surname": "Raymond",
+                                    "given-names": "O",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1991",
+                            "article-title": "Psychological aspects of irony understanding",
+                            "source": "J. Pragmat",
+                            "volume": "16",
+                            "fpage": "523",
+                            "lpage": "530",
+                            "#text": ",\n          \n          'Brien, Jennifer,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref21",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Giora"
+                            },
+                            "year": "1995",
+                            "article-title": "On irony and negation",
+                            "source": "Discourse Processes",
+                            "volume": "19",
+                            "fpage": "239",
+                            "lpage": "264",
+                            "#text": ", Rachel,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref22",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Giora"
+                            },
+                            "year": "2002",
+                            "article-title": "Literal vs. figurative language: different or equal? J",
+                            "volume": [
+                                "34",
+                                "2166"
+                            ],
+                            "fpage": [
+                                "487",
+                                "00045"
+                            ],
+                            "lpage": [
+                                "506",
+                                "5"
+                            ],
+                            "issue": "01",
+                            "#text": ", Rachel,\n          \n          .\n          \n          . Pragmat.\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref23",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Giora"
+                                },
+                                {
+                                    "given-names": "Figurative",
+                                    "surname": "Language"
+                                }
+                            ],
+                            "year": "2003",
+                            "#text": ", Rachel,\n          \n          . On Our Mind: Salience, Context and\n          \n          . Oxford University Press, Oxford."
+                        }
+                    },
+                    {
+                        "@id": "ref24",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Giora"
+                                },
+                                {
+                                    "surname": "M."
+                                }
+                            ],
+                            "year": "2011",
+                            "article-title": "Will anticipating irony facilitate it immediately",
+                            "source": "The Pragmatics of Humour Across Discourse Domains. John Benjamins",
+                            "fpage": "19",
+                            "lpage": "32",
+                            "#text": ", Rachel,\n          \n          .\n          \n          ? In: Dynel,\n          \n          (Ed.),\n          \n          , Amsterdam, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref25",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Giora"
+                            },
+                            "year": "1999",
+                            "article-title": "Irony: context and salience",
+                            "source": "Metaphor Symb",
+                            "volume": "14",
+                            "fpage": "241",
+                            "lpage": "257",
+                            "#text": ", Rachel, Fein, Ofer,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref26",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Giora"
+                            },
+                            "year": "2007",
+                            "article-title": "Expecting irony: context versus salience-based effects",
+                            "source": "Metaphor Symb",
+                            "volume": "22",
+                            "issue": "2",
+                            "fpage": "119",
+                            "lpage": "146",
+                            "#text": ", Rachel, Ofer, Fein, Dafna, Laadan, Joe, Wolfson, Michal, Zeituny, Ran, Kidron, Ronie, Kaufman, Ronit, Shaham,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926480701235346"
+                        }
+                    },
+                    {
+                        "@id": "ref27",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Giora"
+                            },
+                            "year": "2014",
+                            "article-title": "Resonating with default nonsalient interpretations: a corpus-based study of negative sarcasm",
+                            "source": "Belg. J. Linguist",
+                            "volume": "28",
+                            "fpage": "3",
+                            "lpage": "18",
+                            "#text": ", Rachel, Ari, Drucker, Fein, Ofer,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1075/bjl.28.01gio"
+                        }
+                    },
+                    {
+                        "@id": "ref28",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Giora"
+                            },
+                            "year": [
+                                "2015",
+                                "2014"
+                            ],
+                            "article-title": "Default sarcastic interpretations: on the priority of nonsalient interpretations",
+                            "source": "Discourse Processes",
+                            "volume": "52",
+                            "issue": "3",
+                            "fpage": "173",
+                            "lpage": "200",
+                            "#text": ", Rachel, Ari, Drucker, Ofer, Fein, Itamar, Mendelson,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1080/0163853X.\n          \n          .954951"
+                        }
+                    },
+                    {
+                        "@id": "ref29",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Grice",
+                                    "given-names": "Paul H.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "P."
+                                },
+                                {
+                                    "surname": "J.L"
+                                },
+                                {
+                                    "given-names": "Speech",
+                                    "surname": "Acts"
+                                }
+                            ],
+                            "year": "1975",
+                            "article-title": "Logic and conversation",
+                            "source": "Syntax and Semantics",
+                            "volume": "3",
+                            "fpage": "41",
+                            "lpage": "58",
+                            "#text": ",\n          \n          .\n          \n          . In: Cole,\n          \n          , Morgan,\n          \n          . (Eds.),\n          \n          \n          :\n          \n          . Academic Press, New York, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref30",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Grice",
+                                    "given-names": "Paul H.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "P."
+                                }
+                            ],
+                            "year": "1978",
+                            "article-title": "Further notes on logic and conversation",
+                            "source": "Syntax and Semantics",
+                            "volume": "9",
+                            "fpage": "113",
+                            "lpage": "127",
+                            "#text": ",\n          \n          .\n          \n          . In: Cole,\n          \n          (Ed.),\n          \n          \n          : Pragmatics. Academic Press, New York, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref31",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Grice",
+                                "given-names": "Paul H.",
+                                "#text": ","
+                            },
+                            "year": "1989",
+                            "article-title": "Studies in the Way of Words",
+                            "#text": ",\n          \n          .\n          \n          . Harvard University Press, Cambridge, MA."
+                        }
+                    },
+                    {
+                        "@id": "ref32",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Hamamoto"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Uchida",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1998",
+                            "article-title": "Irony from a cognitive perspective",
+                            "source": "Relevance Theory: Applications and Implications",
+                            "fpage": "257",
+                            "lpage": "270",
+                            "#text": ", Hideki,\n          \n          .\n          \n          . In: Carston,\n          \n          , S. (Eds.),\n          \n          . John Benjamins, Amsterdam, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref33",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Haverkate"
+                            },
+                            "year": "1990",
+                            "article-title": "A speech act analysis of irony",
+                            "source": "J. Pragmat",
+                            "volume": "14",
+                            "fpage": "77",
+                            "lpage": "109",
+                            "#text": ", Henk,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref34",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Jaszczolt"
+                                },
+                                {
+                                    "surname": "Kasia",
+                                    "given-names": "M."
+                                }
+                            ],
+                            "year": [
+                                "2009",
+                                "2009"
+                            ],
+                            "article-title": "Cancellability and the primary/secondary meaning distinction",
+                            "source": "Intercult. Pragmat",
+                            "volume": "6",
+                            "fpage": "259",
+                            "lpage": "289",
+                            "#text": ",\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1515/IPRG.\n          \n          .015"
+                        }
+                    },
+                    {
+                        "@id": "ref35",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Jorgensen"
+                            },
+                            "year": [
+                                "1984",
+                                "113"
+                            ],
+                            "article-title": "Test of the mention theory of irony",
+                            "source": "J. Exp. Psychol. Gen",
+                            "volume": "113",
+                            "fpage": [
+                                "112",
+                                "0096",
+                                "112"
+                            ],
+                            "lpage": [
+                                "120",
+                                "3445"
+                            ],
+                            "#text": ", Julia, Miller, George, Sperber, Dan,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1037/\n          \n          -\n          \n          .\n          \n          .1."
+                        }
+                    },
+                    {
+                        "@id": "ref36",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Kapogianni"
+                            },
+                            "year": "2010",
+                            "article-title": "Unmasking the weaknesses of the implicature/explicature distinction: evidence from verbal irony",
+                            "source": "Paper presented at the Department of Linguistics PhD Seminar",
+                            "#text": ", Eleni,\n          \n          .\n          \n          .\n          \n          , University of Cambridge."
+                        }
+                    },
+                    {
+                        "@id": "ref37",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Kapogianni"
+                                },
+                                {
+                                    "surname": "M."
+                                }
+                            ],
+                            "year": "2011",
+                            "source": "The Pragmatics of Humor Across Discourse Domains. John Benjamins",
+                            "fpage": "51",
+                            "lpage": "68",
+                            "#text": ", Eleni,\n          \n          . Irony via ''surrealism''. In: Dynel,\n          \n          (Ed.),\n          \n          , Amsterdam, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref38",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Kapogianni"
+                            },
+                            "year": "2013",
+                            "article-title": "Irony and the Literal Versus Nonliteral Distinction: A Typological Approach with Focus on Ironic Implicature Strength (",
+                            "source": "Ph. D. thesis)",
+                            "#text": ", Eleni,\n          \n          .\n          \n          \n          . University of Cambridge."
+                        }
+                    },
+                    {
+                        "@id": "ref39",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Kapogianni"
+                            },
+                            "year": "2014",
+                            "article-title": "Differences in use and function of verbal irony between real and fictional discourse: (mis)interpretation and irony blindness",
+                            "source": [
+                                "HUMOR: Int. J. Humor Res",
+                                "-0093"
+                            ],
+                            "volume": "27",
+                            "issue": "4",
+                            "fpage": "597",
+                            "lpage": "618",
+                            "#text": ", Eleni,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1515/humor-2014"
+                        }
+                    },
+                    {
+                        "@id": "ref40",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Kreuz"
+                            },
+                            "year": [
+                                "1989",
+                                "118"
+                            ],
+                            "article-title": "How to be sarcastic: the echoic reminder theory of verbal irony",
+                            "source": "J. Exp. Psychol. Gen",
+                            "volume": "118",
+                            "issue": "4",
+                            "fpage": [
+                                "374",
+                                "0096",
+                                "374"
+                            ],
+                            "lpage": [
+                                "386",
+                                "3445"
+                            ],
+                            "#text": ", Roger, Glucksberg, Sam,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1037/\n          \n          -\n          \n          .\n          \n          .4."
+                        }
+                    },
+                    {
+                        "@id": "ref41",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Kumon-Nakamura"
+                            },
+                            "year": [
+                                "1995",
+                                "124"
+                            ],
+                            "article-title": "How about another piece of pie: the allusional pretense theory of discourse irony",
+                            "source": "J. Exp. Psychol. Gen",
+                            "volume": "124",
+                            "fpage": [
+                                "3",
+                                "0096",
+                                "3"
+                            ],
+                            "lpage": [
+                                "21",
+                                "3445"
+                            ],
+                            "issue": "1",
+                            "#text": ", Sachi, Sam, Glucksberg, Brown, Mary,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1037/\n          \n          -\n          \n          .\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref42",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Michelioudakis"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Sevdali",
+                                    "#text": ","
+                                },
+                                {
+                                    "given-names": "C.",
+                                    "surname": "Truswell",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "R"
+                                }
+                            ],
+                            "year": "2013",
+                            "article-title": "Ethical datives: a puzzle for syntax, semantics, pragmatics and their interfaces",
+                            "source": [
+                                "In: Folli",
+                                "Syntax and its Limits"
+                            ],
+                            "fpage": "345",
+                            "lpage": "369",
+                            "#text": ", Dimitris, Kapogianni, Eleni,\n          \n          .\n          \n          .\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          . (Eds.),\n          \n          . Oxford University Press, Oxford, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref43",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Nerlich"
+                            },
+                            "year": "2001",
+                            "article-title": "Ambiguities we live by; towards a pragmatics of polysemy",
+                            "source": "J. Pragmat",
+                            "volume": [
+                                "33",
+                                "2166"
+                            ],
+                            "fpage": [
+                                "1",
+                                "00132"
+                            ],
+                            "lpage": [
+                                "20",
+                                "0"
+                            ],
+                            "issue": "99",
+                            "#text": ", Brigitte, Clarke, David,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/ S0378-\n          \n          (\n          \n          )\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref44",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Palinkas"
+                            },
+                            "year": "2013",
+                            "article-title": "Irony and the standard pragmatic model",
+                            "source": "Int. J. Engl. Linguist",
+                            "volume": "3",
+                            "issue": "5",
+                            "fpage": "14",
+                            "lpage": "19",
+                            "#text": ", Istvan,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.5539/ijel.v3n5p14"
+                        }
+                    },
+                    {
+                        "@id": "ref45",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Partington"
+                            },
+                            "year": [
+                                "2007",
+                                "2007"
+                            ],
+                            "article-title": "Irony and reversal of evaluation",
+                            "source": "J. Pragmat",
+                            "volume": [
+                                "39",
+                                "04"
+                            ],
+                            "fpage": "1547",
+                            "lpage": "1569",
+                            "#text": ", Alan,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j.pragma.\n          \n          .\n          \n          .009"
+                        }
+                    },
+                    {
+                        "@id": "ref46",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Partington"
+                            },
+                            "year": [
+                                "2011",
+                                "2010"
+                            ],
+                            "article-title": "Phrasal irony: its form, function and exploitation",
+                            "source": "J. Pragmat",
+                            "volume": [
+                                "43",
+                                "11"
+                            ],
+                            "issue": "6",
+                            "fpage": "1786",
+                            "lpage": "1800",
+                            "#text": ", Alan,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j. pragma.\n          \n          .\n          \n          .001"
+                        }
+                    },
+                    {
+                        "@id": "ref47",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Peleg"
+                                },
+                                {
+                                    "given-names": "K.M.",
+                                    "surname": "Allan",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "K"
+                                }
+                            ],
+                            "year": "2011",
+                            "article-title": "Salient meanings: the whens and wheres",
+                            "source": "Salience and Defaults in Utterance Processing",
+                            "fpage": "151",
+                            "lpage": "167",
+                            "#text": ", Orna, Giora, Rachel,\n          \n          .\n          \n          . In: Jaszczolt,\n          \n          ,\n          \n          . (Eds.),\n          \n          . Mouton de Gruyter, Berlin, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref48",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Popa-Wyatt"
+                            },
+                            "year": "2014",
+                            "article-title": "Pretence and echo: towards an integrated account of verbal irony",
+                            "source": "Int. Rev. Pragmat",
+                            "volume": "6",
+                            "fpage": [
+                                "127",
+                                "18773109"
+                            ],
+                            "lpage": [
+                                "168",
+                                "00601007"
+                            ],
+                            "#text": ", Michaela,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1163/\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref49",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Potts"
+                            },
+                            "year": "2005",
+                            "article-title": "The Logic of Conventional Implicatures",
+                            "#text": ", Christopher,\n          \n          .\n          \n          . Oxford University Press, Oxford."
+                        }
+                    },
+                    {
+                        "@id": "ref50",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Richards",
+                                    "given-names": "Ivor",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Armstrong"
+                                }
+                            ],
+                            "year": "1936",
+                            "source": "The Philosophy of Rhetoric",
+                            "#text": ",\n          \n          .\n          \n          . Oxford University Press, Oxford."
+                        }
+                    },
+                    {
+                        "@id": "ref51",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Schwoebel"
+                            },
+                            "year": [
+                                "2000",
+                                "2000"
+                            ],
+                            "article-title": "Obligatory processing of the literal meaning of ironic utterances: further evidence",
+                            "source": "Metaphor Symb",
+                            "volume": "15",
+                            "fpage": "47",
+                            "lpage": "61",
+                            "#text": ", John, Shelly, Dews, Ellen, Winner, Kavitha, Srinivas,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926488.\n          \n          .9678864"
+                        }
+                    },
+                    {
+                        "@id": "ref52",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Searle"
+                                },
+                                {
+                                    "surname": "P."
+                                },
+                                {
+                                    "surname": "J.L"
+                                },
+                                {
+                                    "given-names": "Speech",
+                                    "surname": "Acts"
+                                }
+                            ],
+                            "year": "1975",
+                            "article-title": "Indirect speech acts",
+                            "source": "Syntax and Semantics",
+                            "volume": "3",
+                            "fpage": "59",
+                            "lpage": "82",
+                            "#text": ", John,\n          \n          .\n          \n          . In: Cole,\n          \n          , Morgan,\n          \n          . (Eds.),\n          \n          \n          :\n          \n          . Academic Press, New York, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref53",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Sperber"
+                                },
+                                {
+                                    "surname": "P."
+                                }
+                            ],
+                            "year": "1981",
+                            "article-title": "Irony and the use-mention distinction",
+                            "fpage": "295",
+                            "lpage": "318",
+                            "#text": ", Dan, Wilson, Deirdre,\n          \n          .\n          \n          . In: Cole,\n          \n          (Ed.), Radical Pragmatics. Academic Press, New York, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref54",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Sperber"
+                            },
+                            "year": "1986",
+                            "#text": ", Dan, Wilson, Deirdre,\n          \n          /1995 Relevance. Blackwell, Oxford."
+                        }
+                    },
+                    {
+                        "@id": "ref55",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Sperber"
+                                },
+                                {
+                                    "given-names": "R.",
+                                    "surname": "Uchida",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1998",
+                            "article-title": "Irony and relevance: a reply to Drs. Seto, Hamamoto and Yamanashi",
+                            "source": "Relevance Theory: Applications and Implications",
+                            "fpage": "283",
+                            "lpage": "293",
+                            "#text": ", Dan, Wilson, Deirdre,\n          \n          .\n          \n          . In: Carston,\n          \n          , S. (Eds.),\n          \n          . John Benjamins, Amsterdam, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref56",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Spotorno"
+                            },
+                            "year": "2014",
+                            "source": "J. Exp. Psychol. Gen",
+                            "volume": "143",
+                            "issue": "4",
+                            "fpage": "1649",
+                            "lpage": "1665",
+                            "#text": ", Nicola, Noveck, Ira A.,\n          \n          . When is irony effortful?\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1037/a0036630"
+                        }
+                    },
+                    {
+                        "@id": "ref57",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Stalnaker"
+                                },
+                                {
+                                    "given-names": "M.",
+                                    "surname": "Unger",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "1974",
+                            "article-title": "Pragmatic presuppositions",
+                            "source": "Semantics and Philosophy",
+                            "fpage": "197",
+                            "lpage": "213",
+                            "#text": ", Robert,\n          \n          .\n          \n          . In: Munitz,\n          \n          , P. (Eds.),\n          \n          . New York University Press, New York, pp.\n          \n          --\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref58",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Wilson"
+                            },
+                            "year": [
+                                "2006",
+                                "2006"
+                            ],
+                            "article-title": "The pragmatics of verbal irony: echo or pretence?",
+                            "source": "Lingua",
+                            "volume": [
+                                "116",
+                                "05"
+                            ],
+                            "fpage": "1722",
+                            "lpage": "1743",
+                            "#text": ", Deirdre,\n          \n          .\n          \n          \n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j.lingua.\n          \n          .\n          \n          .001"
+                        }
+                    },
+                    {
+                        "@id": "ref59",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Wilson"
+                            },
+                            "year": "1992",
+                            "article-title": "On verbal irony",
+                            "source": "Lingua",
+                            "volume": "87",
+                            "fpage": [
+                                "53",
+                                "0024",
+                                "90025"
+                            ],
+                            "lpage": [
+                                "76",
+                                "3841"
+                            ],
+                            "issue": "92",
+                            "#text": ", Deirdre, Sperber, Dan,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/\n          \n          -\n          \n          (\n          \n          )\n          \n          -E"
+                        }
+                    },
+                    {
+                        "@id": "ref60",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Wilson"
+                            },
+                            "year": "2012",
+                            "#text": ", Deirdre, Sperber, Dan,\n          \n          . Meaning and Relevance. Cambridge University Press, Cambridge."
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

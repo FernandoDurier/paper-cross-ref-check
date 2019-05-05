@@ -1,0 +1,306 @@
+{
+    "abstract": {
+        "p": "English. This paper describes the Unitor system that participated to the SENTIment POLarity Classification task proposed in Evalita 2016. The system implements a classification workflow made of several Convolutional Neural Network classifiers, that generalize the linguistic information observed in the training tweets by considering also their context. Moreover, sentiment specific information is injected in the training process by using Polarity Lexicons automatically acquired through the automatic analysis of unlabeled collection of tweets. Unitor achieved the best results in the Subjectivity Classification sub-task, and it scored 2nd in the Polarity Classification sub-task, among about 25 different submissions."
+    },
+    "affiliation": {
+        "#text": ",\n          \n          ,",
+        "@id": "aff0",
+        "addr-line": "Tor Vergata Via del Politecnico 1, 00133 Roma",
+        "country": {
+            "#text": "Italy",
+            "@country": "IT"
+        },
+        "institution": "Department of Enterprise Engineering University of Roma",
+        "label": "0"
+    },
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "email": "castellucci@ing.uniroma2.it",
+            "string-name": "Giuseppe Castellucci",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Danilo Croce",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "basilig@info.uniroma2.it",
+            "string-name": "Roberto Basili",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        }
+    ],
+    "journal": null,
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/context-augmented-convolutional-neural-networks-for-twitter-sarcasm-detection.json",
+    "pub_date": null,
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "2016.\n          \n          . In Pierpaolo Basile, Anna Corazza, Franco Cutugno, Simonetta Montemagni, Malvina Nissim, Viviana Patti, Giovanni Semeraro, and Rachele Sprugnoli, editors,\n          \n          (CLiC-it\n          \n          ) &\n          \n          .\n          \n          \n          ).",
+                "article-title": [
+                    "Overview of the EVALITA 2016 SENTiment POLarity Classification Task",
+                    "Fifth Evaluation Campaign of Natural Language Processing and Speech Tools for Italian",
+                    "Associazione Italiana di Linguistica Computazionale (AILC)."
+                ],
+                "source": [
+                    "Proceedings of Third Italian Conference on Computational Linguistics",
+                    "Final Workshop (EVALITA"
+                ],
+                "year": [
+                    "2016",
+                    "2016"
+                ]
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": ", Danilo Croce, Diego De Cao, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          .",
+                "article-title": "A multiple kernel approach for twitter sentiment analysis in italian",
+                "source": "In Fourth International Workshop EVALITA",
+                "string-name": [
+                    {
+                        "given-names": "Giuseppe",
+                        "surname": "Castellucci"
+                    },
+                    {
+                        "given-names": "Roberto",
+                        "surname": "Basili"
+                    }
+                ],
+                "year": [
+                    "2014",
+                    "2014"
+                ]
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": ", Danilo Croce, and\n          \n          . 2015a.\n          \n          .\n          \n          , volume\n          \n          . Springer.",
+                "article-title": "Acquiring a large scale polarity lexicon through unsupervised distributional methods",
+                "source": "In Proc. of 20th NLDB",
+                "string-name": [
+                    {
+                        "given-names": "Giuseppe",
+                        "surname": "Castellucci"
+                    },
+                    {
+                        "given-names": "Roberto",
+                        "surname": "Basili"
+                    }
+                ],
+                "volume": "9103"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": ", Andrea Vanzo, Danilo Croce, and\n          \n          . 2015b.\n          \n          .\n          \n          vol.\n          \n          , n. 1\n          \n          ., page\n          \n          .",
+                "article-title": [
+                    "Context-aware models for twitter sentiment analysis",
+                    ": Emerging Topics at the 1st CLiC-It Conf"
+                ],
+                "source": "IJCoL",
+                "string-name": [
+                    {
+                        "given-names": "Giuseppe",
+                        "surname": "Castellucci"
+                    },
+                    {
+                        "given-names": "Roberto",
+                        "surname": "Basili"
+                    }
+                ],
+                "volume": [
+                    "1",
+                    "69"
+                ]
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": ", Giuseppe Castellucci, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Injecting sentiment information in context-aware convolutional neural networks",
+                "source": "Proceedings of SocialNLP@ IJCAI",
+                "string-name": [
+                    {
+                        "given-names": "Danilo",
+                        "surname": "Croce"
+                    },
+                    {
+                        "given-names": "Roberto",
+                        "surname": "Basili"
+                    }
+                ],
+                "year": [
+                    "2016",
+                    "2016"
+                ]
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": ", Richa Bhayani, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , Stanford.",
+                "article-title": "Twitter sentiment classification using distant supervision",
+                "source": "CS224N Project Report",
+                "string-name": [
+                    {
+                        "given-names": "Alec",
+                        "surname": "Go"
+                    },
+                    {
+                        "given-names": "Lei",
+                        "surname": "Huang"
+                    }
+                ],
+                "year": "2009"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": ", Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .0580.",
+                "article-title": "Improving neural networks by preventing co-adaptation of feature detectors",
+                "source": "CoRR, abs/1207",
+                "string-name": [
+                    {
+                        "given-names": "Geoffrey",
+                        "surname": "Hinton"
+                    },
+                    {
+                        "given-names": "Ruslan",
+                        "surname": "Salakhutdinov"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          , Doha, Qatar, October. Association for Computational Linguistics.",
+                "article-title": "Convolutional neural networks for sentence classification",
+                "fpage": "1746",
+                "lpage": "1751",
+                "source": "In Proceedings EMNLP",
+                "string-name": {
+                    "given-names": "Yoon",
+                    "surname": "Kim"
+                },
+                "year": [
+                    "2014",
+                    "2014"
+                ]
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "A solution to plato's problem: The latent semantic analysis theory of acquisition, induction and representation of knowledge",
+                "source": "Psychological Review",
+                "string-name": [
+                    {
+                        "given-names": "Tom",
+                        "surname": "Landauer"
+                    },
+                    {
+                        "given-names": "Sue",
+                        "surname": "Dumais"
+                    }
+                ],
+                "volume": "104",
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), Nov.",
+                "article-title": "Gradient-based learning applied to document recognition",
+                "issue": "11",
+                "source": "Proc. of the IEEE",
+                "string-name": [
+                    {
+                        "#text": ", L. Bottou,",
+                        "given-names": "Y.",
+                        "surname": "Y. LeCun"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "P.",
+                        "surname": "Bengio"
+                    },
+                    {
+                        "surname": "Haffner"
+                    }
+                ],
+                "volume": "86",
+                "year": "1998"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": ", Ilya Sutskever, Kai Chen, Greg Corrado, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .4546.",
+                "article-title": "Distributed representations of words and phrases and their compositionality",
+                "source": "CoRR, abs/1310",
+                "string-name": [
+                    {
+                        "given-names": "Tomas",
+                        "surname": "Mikolov"
+                    },
+                    {
+                        "given-names": "Jeffrey",
+                        "surname": "Dean"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          , New York, NY, USA. ACM.",
+                "article-title": "Twitter sentiment analysis with deep convolutional neural networks",
+                "fpage": "959",
+                "lpage": "962",
+                "source": "In Proc. of the SIGIR",
+                "string-name": [
+                    {
+                        "given-names": "Aliaksei",
+                        "surname": "Severyn"
+                    },
+                    {
+                        "given-names": "Alessandro",
+                        "surname": "Moschitti"
+                    }
+                ],
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        }
+    ],
+    "title": "Context-aware Convolutional Neural Networks for Twitter Sentiment Analysis in Italian"
+}

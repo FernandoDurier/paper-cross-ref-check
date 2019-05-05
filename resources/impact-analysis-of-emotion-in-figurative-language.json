@@ -1,0 +1,577 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": null,
+            "article-meta": {
+                "contrib-group": {
+                    "contrib": {
+                        "@contrib-type": "author",
+                        "string-name": "Nwe Nwe",
+                        "email": "nwenwemdy08@gmail.com",
+                        "xref": {
+                            "@ref-type": "aff",
+                            "@rid": "aff0",
+                            "#text": "0"
+                        }
+                    },
+                    "aff": {
+                        "@id": "aff0",
+                        "label": "0",
+                        "institution": "University of Computer Studies",
+                        "addr-line": "Mandalay Mandalay",
+                        "country": {
+                            "@country": "MM",
+                            "#text": "Myanmar"
+                        },
+                        "#text": ",\n          \n          ,"
+                    }
+                },
+                "pub-date": {
+                    "year": "2017"
+                },
+                "fpage": "24",
+                "lpage": "26",
+                "abstract": {
+                    "p": "- Due to the implicit traits embedded in tweets, handling figurative languages appear as the most trending topics in computational linguistics. While recognition of a single language is hard to capture, differentiating several languages at once is the most challenging task. To achieve this purpose, we employ a set of emotion-based features in order to individuate between humor, irony, sarcasm, satire and true. We use eight basic emotions excerpted from EmoLex supplement with tweets polarity. We apply these features in two datasets: balanced dataset (collected using hashtag-based approach) and class-imbalanced dataset (collected from streaming tweets). As a result, the model not only outperform a word-based baseline but also handle both balanced and class-imbalanced datasets in multi-figurative language detection."
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": "Keywords?Figurative Language; Humor; Irony; Sarcasm;\nSatire; Emotion Detection; Class-imbalanced problem"
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "I. INTRODUCTION",
+                    "p": [
+                        "Apart from literal language, figurative language is a peculiar\nform of communication which use words deviate from its actual\nmeanings. It takes multiple forms, such as similes, metaphor,\nirony, sarcasm, satire etc. This kind of languages can be\nextensively found in various outlets: literature, television, the\ninternet, social media, comics and cartoons. Due to its\nwidespread usage, handling figurative language is currently one\nof the most challenging tasks in computational linguistics, natural\nlanguage processing and social multimedia sentiment analysis.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref10",
+                                    "#text": "1, 2, 9, 12"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref11 ref9",
+                                    "#text": "11, 13"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref19",
+                                    "#text": "21"
+                                }
+                            ],
+                            "#text": "Some researchers tried to recognize the sentiments embedded\nin figurative languages [7] while some emphasized on the\nrecognition of one or more figurative languages [\n        \n        ].\nWhereas, some contributed new trending topics in figurative\nlanguage analysis: satire recognition [\n        \n        ], and fake news\ndetection [\n        \n        ]. Most of the existing works used intrinsic features\nsuch as lexical signatures, temporal and contextual signatures etc.\nHowever, due to the implicit nature of the language, there is no\nwork that try to tackle several figurative languages at once from\nemotional point of view."
+                        },
+                        "Moreover, most of the existing efforts worked upon the\nbalanced datasets which have nearly equal number of instances in\neach class [2, 11-13, and 16]. But, thanks to the nature of web,\nnot all tweets are figurative. Even though they are widely used\ncommunication forms, their involvement in each day stream is\nless than the majority literal language. As shown in Table 1, we\ncollected the 2-day stream tweets about Hillary Clinton\n(?#hillary?) after U.S. presidential election date. We can see that\nthe majority of the stream is true tweets and the minority is\nfigurative languages (e.g. 8376:3 and 8376:2).\n1\n3",
+                        "Sarcasm",
+                        "Satire",
+                        "Humor\n1\n2\n0\n0\n0\n0",
+                        "True\n6544\n8376",
+                        "Total\n6546\n8381",
+                        "Implementing a classifier on such imbalanced data provides\nmisleading classification accuracy called ?Accuracy Paradox?. It\nmeans that we may have the excellent accuracy (such as 90%\naccuracy), but it?s the reflecting of underlying majority class\ndistribution. So, handling class-imbalanced problem is also one\nof the greatest issues in data mining. Based on these issues, we\ncontributed as follows:\n?\n?\n?",
+                        "The evaluation of our satire detection model (Pyae Phyo\nThu and Nwe Nwe, 2017) to multi-figurative language\nrecognition\nA set of experiments to demonstrate that our\nmultifigurative language recognition framework can achieve\non both balanced and class-imbalanced datasets\nA set of Twitter datasets for multi-figurative language\nrecognition in both balanced and class-imbalanced\nconfigurations\nThe rest of the paper is constructed as follows. We first discuss\nrelated works in Section II. Then, the data preprocessing and\ntools are presented in Section III. Features used in the model is\nexplained in Section IV. The results of the experiments are\ndiscussed in Section V. And then, we conclude the paper and\npoint to its future directions in Section VI."
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "II. RELATED WORK",
+                    "p": "Due to the advent used in internet and social multimedia,\nhandling figurative languages is well-studied phenomena in\ncomputational linguistics, psychology, cognitive science and\nsocial multimedia analysis. In summary, the techniques used in\nlanguage analysis can be categorized as follows:",
+                    "sec": [
+                        {
+                            "@id": "sec-3-1",
+                            "title": "A. Signature Analysis",
+                            "p": "This feature is focused on exploring specific textual markers\nor signatures embedded in the language. Kreuz and Caucci\n(2007) investigated the influences of lexical features such as\npresence of adjectives, verbs, interjection and punctuation on\nsarcasm detection. Veale and Hao (2010) looked at framing\ndevice: ?as GROUND as a VEHICLE? to separate ironic from\nnonironic similes. In 2011, Gonzalez-Ibanez et al. investigated the\nimpact of lexical and pragmatic factors such as unigram features,\ndictionary-based features, positive emoticons, negative emoticons\nand ToUser for identifying the sarcastic utterances. In 2013,\nReyes et al. constructed a new model of irony detection that can\nassess along with four types of conceptual features: signatures,\nunexpectedness, style and emotional scenarios. Even though the\nsignature analysis is a form of foundational studies, it give the\npromising results to differentiate between figurative languages."
+                        },
+                        {
+                            "@id": "sec-3-2",
+                            "title": "B. Frequency Analysis",
+                            "p": {
+                                "xref": [
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref8",
+                                        "#text": "10"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref12",
+                                        "#text": "14"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref10",
+                                        "#text": "12"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref11 ref9",
+                                        "#text": "11, 13"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref11",
+                                        "#text": "13"
+                                    }
+                                ],
+                                "#text": "In order to independent from the lexical and semantic factors,\nFrancesco Barbieri et al. proposed a language-independent\nintrinsic features for multi-lingual recognition of Irony [\n          \n          ],\nSarcasm [\n          \n          ], Humor [\n          \n          ] and Satire [\n          \n          ]. A group of\nfrequency based features that measures the frequency of rare\nwords, ambiguity, POS tag, synonyms, sentiments and characters\nhas proposed. The performance of the model is demonstrated by\nexecuting experiments on both monolingual and cross-language\nclassifications: English, Spanish, and Italian. Nevertheless,\nBarbieri also pointed to the difficulty of figurative language\nrecognition from emotional outlook due to ironic dimension [\n          \n          ]."
+                            }
+                        },
+                        {
+                            "@id": "sec-3-3",
+                            "title": "C. Contextual Analysis",
+                            "p": "The most recent form of analysis used in computational\nlinguistics is the contextual analysis. The term contextualization\nmeans any features of linguistic that contributes to the signaling\nof contextual presuppositions. Wallace et al. (2014) provided the\nfirst empirical evidence about the important of context to make\njudgments on ironic intent. In 2015, Wallace et al. further\nexploited a set of contextual features for irony detection by\ncombining noun phrases and sentiment extracted from reddit\ncomments. Joshi et al. (2015) also exploited two kinds of context\nincongruity features: explicit incongruity such as ?I love being\nignored? and implicit incongruity such as ?I love this paper so\nmuch that I made a doggy bag out of it?. These two features are\nimplemented on the two text forms ? tweets and discussion\nforum posts. The system outperformed two past works in sarcasm\ndetection with F-score improvement of 10-20%. Khattri et al\n(2015) presented the first quantitative evidence to show that\nhistorical tweets by an author can provide additional context for\nsarcasm detection by using (1) a contrast-based predictor - to\nidentify whether there is a sentiment contrast within a target\ntweet and (2) a historical tweet-based predictor - to identify if the\nsentiment expressed towards an entity agrees with author past\nsentiment expressed towards that entity. Bamman and Smith\n(2015) also showed that the extra-linguistic information such as\nproperties of author, the audience and the immediate\ncommunicate environment can lead to the improvements in\nsarcasm prediction accuracy."
+                        },
+                        {
+                            "@id": "sec-3-4",
+                            "title": "D. Supervised/Semi supervised Techniques",
+                            "p": [
+                                "Another form of techniques used in figurative language\nanalysis is the use of classification algorithm in language\ndetection. Tsur et al. (2010) presented a novel semi-supervised\nrecognition of sarcastic sentences in product reviews. In order to\nrecognize the sarcastic sentences, the model first extracted\npatterns in semi-supervised form and then classified the sarcastic\nutterances using that features. The model achieved precision of\n77% and recall of 83%. Buschmeier et al. (2014) analyzed the\nimpact of a number of features such as imbalance, hyperbole,\nquotes, punctuation, interjections using several different\nclassification approaches: Linear SVM, Logistic Regression,\nDecision Tree, Random Forest and Na\u00efve Bayes. Fersini et al.\n(2015) introduced the Bayesian Model Averaging (BMA)\napproach employed on pragmatic particles and POS tags in order\nto distinguish between the irony and sarcasm in microblogs. The\nresults showed that BMA outperformed the traditional state of art\nmodel and also able to ensure notable generalization capabilities\non ironic and sarcastic text.",
+                                "In this paper, we use the emotion-based signatures such as\nbasic emotions, Bag-of Sorted Emotion (BOSE) and its unigram,\nbigram, trigram TFIDF scores. In order to achieve the better\nperformance, these features are implemented on balanced and\nclass-imbalanced datasets bundled with Ensemble Bagging\nclassifier."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "III. TEXT PROCESSING AND TOOLS",
+                    "sec": [
+                        {
+                            "@id": "sec-4-1",
+                            "title": "A. Tools Usage",
+                            "p": [
+                                "We used two different kinds of tools: one for tweets\nacquisition (Tweepy) and one for score computing (S\u00c9ANCE).",
+                                "1) Tweepy: To be able to accumulate twitter data, an easy\nto use python library, Tweepy (http://www.tweepy.org), is used\nto access Twitter API.",
+                                "2) Sentiment analysis and social cognition engine\n(S\u00c9ANCE): It is a freely available tool for sentiment, emotion,\nand social cognition analysis [6]. It allows the batch processing\nof text files with built in sentimental and emotional databases:\nGALC, EmoLex, ANEW, SENTIC, VADER, Hu-Liu, GI and\nLasswell. Apart from the original databases, it offer the wide\nrange of components scores with or without negation. In this\nstudy, S\u00c9ANCE is used to compute the score of eight basic\nemotions (EmoLex) and score of sentiment polarity (VADER)."
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-2",
+                            "title": "B. Datasets",
+                            "p": [
+                                "One of the purpose of this study is to examine whether the\nmulti-figurative model can implement on both balanced and\nclass-imbalanced datasets. So, we collected two different kinds of\ntwitter datasets: (1) traditional balanced dataset and (2) streaming\ndatasets. Although there are two approaches for class annotation:\ninter-annotators agreement and the author self-defined hashtag\napproach, we used the hashtag-based annotation to label whether\nthe tweet is ironic/sarcasm/ satire/humor or true.",
+                                "1) Balanced Dataset: In order to form the balanced\ndatasets, we collected about 5000 tweets with hashtags ?#irony?,\n?#sarcasm?, ?#satire?, ?#humor? with no date or person\nlimitations. We also collected about 5000 tweets which have no\nfigurative language hashtag. After cleaning and removing\ninconvenient tweets, about 4000 tweets for each language\n(around 20000 tweets in total) are collected as shown in Table II.",
+                                "2) Class-imbalanced Dataset: For class-imbalanced\ndataset, we utilized the streaming tweets. However, instead of\ncollecting a whole day stream, we collected the streaming tweets\nwith hashtag ?#hillary?. Because of being debatable period\nbetween two politicians and their supporters, ?Hillary? and\n?Trump? tweets composed of several figurative languages with\nuser-defined hashtag label #satire, #irony, #sarcasm, #humor.\nHowever, not all a-day stream tweets contain all figurative\nlanguages. So, we randomly picked a-day stream tweets for\nHillary that composed of all figurative languages. As shown in\nTable II, we used November 29th streaming tweets for Hillary\nwhich contained all figurative languages.",
+                                "Corpus\nBalanced\nDataset\nClassImbalanced\nDataset",
+                                "The task of figurative language detection is modelled as a\nmulti-class supervised classification problem to differentiate the\nincoming tweets as humor/ironic/sarcastic/satirical or true tweets.\nWe implement Ensemble Bagging classifier compared with\nstandard Linear SVM classifier and focus on the impact analysis\nof different features by investigating their effects on the system\nperformance. Features and classifier that will use in model are as\nfollows:"
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-3",
+                            "title": "A. Features",
+                            "p": [
+                                "We analyze the tweets based on five major indices:\n1) Word-based: This simple representation of bag-of word is\nused as the text classification benchmark. The highest 1000 most\nfrequent occurrences of word n-gram model (unigram/bigram/\ntrigram) are selected as features and filter out the rest.",
+                                "2) Emotion: Eight basic EmoLex emotions: anger,\nanticipation, disgust, fear, joy, sadness, surprise, trust and their\npolarity valence computed by S\u00c9ANCE are used as the basic\nemotional features.",
+                                "3) Sentiment: VADER sentiment polarity: positive, negative,\nneutral and compound sentiment scores excerpted from text\nanalysis tool S\u00c9ANCE are used. VADER is a sentiment analysis\ncorpus that surpassed the prior corpus: LIWC, ANEW, GI,\nSentiWordNet and Hu-Liu04 in social media sentiment analysis\n[6]. Hence, supplementing the basic emotional features with\nsentiment polarity is an essential to achieve better performance.\n4) Bag-of Sorted Emotion (BOSE): We supplement the\nbasic emotional and sentimental features with Bag-of Sorted\nEmotion (BOSE). It?s assembled from eight basic emotional\nfeatures and three sentimental features. As shown in Fig. 1, we\nfirst sort the emotional features and sentiment features\nindividually. Our hypothesis is that figurative language will differ\neach other in intended emotions. So, we determine the most\nintended emotion and sentiment of the tweets. As a result, we\nobtain a bag-of sorted emotion which contain a bag of intended\nemotion, sorted emotions, intended sentiment and sorted\nsentiments.\n5) BOSE-TFIDF: Term frequency-inverse document\nfrequency (TFIDF) is an important weighting scheme extensively\nused in information retrieval and text processing. We implement\nTF-IDF weighting scheme on unigram, bigram, trigram BOSE\nwith class and sentiment consideration. For instance, based on the\nresult from Fig. 1, we obtain emoUnigram (Anticipation),\nemoBigram (Anticipation-Fear), and emoTrigram\n(AnticipationFear-Surprise). And then, TF-IDF score for each emoUnigram,\nemoBigram and emoTrigram is computed. As a result, we\nobtained BOSE-TFIDF score for each tweet."
+                            ]
+                        },
+                        {
+                            "@id": "sec-4-4",
+                            "title": "B. Classifiers",
+                            "p": [
+                                "We analyze the tweets with two classifiers:\n1) SVM: We use Linear Support Vector Machine (SVM),\na discriminative classifier formally defined by a separating hyper\nplane, as a benchmark classifier. We compare the results of SVM\nclassifier with the Ensemble Bagging classifier.",
+                                "2) Ensemble Bagging Classifier: To achieve the high\nperformance and more resilience to noise, the model use\nEnsemble Bagging classifier. Bootstrap Aggregation (Bagging) is\nan ensemble generation method that uses variations of samples to\ntrain base classifiers. It selects N samples from the training set\nwith size N and train a base classifier. This is repeated until the\ndesired size of the ensemble is reached. We employ bagging\nclassifier on our datasets: balanced datasets and class-imbalanced\ndatasets."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "V. EXPERIMENTAL RESULTS AND DISCUSSION In order to test the performance of the model, we run 2-fold and 5-fold cross validation on both balanced and class",
+                    "p": "imbalanced datasets. The model run upon Windows 10 (64-bit)\nPC with Intel Core i3 processor, 8GB RAM and 1GB graphic\ncard.",
+                    "sec": [
+                        {
+                            "@id": "sec-5-1",
+                            "title": "A. Experiments on Balanced Dataset",
+                            "p": [
+                                "Table III report the F1-score of each features employed on\nbalanced dataset. Table III (a) demonstrated the outcomes of\nSVM and Table III (b) demonstrated the outcomes of Ensemble\nBagging classifier.",
+                                "In SVM classification, whether 2-Fold or 5-Fold, it showed\nthat the model left behind the baseline: BoW (about 0.43 versus\n0.77/ 0.78). It is obvious that ?Sentiment? is the best among the\nfeatures with 0.34/0.33 score. The others: Emotion (0.27/0.30),\nBOSE (0.33/0.32), and BOSE-TFIDF (0.15) did not perform as\nwell as Sentiment. In BoW, Sentiment and BOSE, ?Irony? is the\nbest categorized class with 0.88, 0.37/0.36 and 0.44/0.43 score\nrespectively. But, ?Sarcasm? is the best recognized in Emotion\nand ?Satire? is the best recognized in BOSE_TFIDF. While we\ncombine all features, we observe that it can classify well in\n?Sarcasm? (0.65) followed by ?Irony? (0.48).",
+                                "In Ensemble classification, feature combination offer the best\nscore 1.00 whereas baseline BoW only offer the score 0.78/0.79.\nLike SVM, BoW, Sentiment and BOSE features best classified in\nthe class ?Irony? and the others: Emotion best classified the class\n?Sarcasm?. It?s obvious that the majority of the highest score\ncome from BOSE_TFIDF. In conclusion, it?s obvious that the\nmodel bundled with Ensemble Bagging classifier outperforms the\nbenchmark classifier: SVM on balanced dataset whether it?s in\n2Fold or 5-Fold configurations.",
+                                "Table IV reported the F1-score of each features employed\non class-imbalanced dataset. Like balanced dataset, Table IV\n(a) represented the results of benchmark: SVM and Table IV\n(b) represented the results of Ensemble Bagging classifier.\nHowever, unlike the balanced dataset, the testing set does not\ncover all classes because almost all samples are already\ninvolved in training and there is no samples left for testing. As\nshown in Table IV (a) and (b), ?-? represented the class that do\nnot involve in testing. Even using 5-fold cross validation left so\nmany uncovered classes. So, we didn?t employ standard\n10fold configuration in the experiments. Instead, 5-fold and\n2fold configurations are used.",
+                                "In all cases: 2-fold/5-fold or SVM/Ensemble, it can be seen\nthat all give the highest score 1.00. However, it?s due to the\ndistribution of majority class: ?True?. It provides misleading\nclassification accuracy called ?Accuracy Paradox?. Moreover,\nthere are other classes that uniformly give the 0.00 score. In\nSVM, almost all features except BOSE-TFIDF and ?all\nfeatures combination? did not classify their related classes\n(give 0.00 score). However, BOSE-TFIDF can clearly classify\n?Satire? with 0.57 score in 2-Fold cross validation and feature\ncombination can recognize ?Humor? and ?Satire? with 0.67\nand 0.80 score respectively. At the same time, the benchmark:\nBoW can?t classify any language except the majority ?True?\nclass. So, we can assume that the model outperform the\nbaseline: BoW in class-imbalanced SVM classification.",
+                                "In Table IV (b), benchmark: BoW can?t classify any classes\nexcept ?Humor? (1.0) and ?Satire? (0.29). Other features:\nEmotion, Sentiment and BOSE can?t capture any classes. It\nonly give worst score 0.00 in all cases. However,\nBOSETFIDF offer better classification than others (?Irony-1? and\n?Satire-0.80?). The combination of all features: Emotion,\nSentiment, BOSE and BOSE-TFIDF give the reliable\nclassification in both configurations compared with other\nfeatures (Humor-0.67, Satire-0.80, True-1.00, and Mean-1.00).",
+                                "In conclusion, it?s clear that the model bundled with\nEnsemble classifier offer the best performance. In balanced\ndata, model give the 100% full performance score: 1.00. In\nclass-imbalanced data whether it?s 2-fold or 5-fold, our model\nnot only fix the class-imbalanced problem but also give the\nbest and reliable performance score: 1.00."
+                            ]
+                        },
+                        {
+                            "@id": "sec-5-2",
+                            "title": "C. Reliability Measurement using Cohen?s Kappa",
+                            "p": [
+                                "Determining the performance of the model using F-score is\nnot enough and it?s ambiguous. To clarify the performance of\nthe model, we measure the reliability of the model using\nCohen?s Kappa. It?s a statistic which measure the inter-rater\nagreement for qualitative terms. It offers the classification\naccuracy normalized by the imbalance of the classes in the\ndata. As shown in Table V and Fig. 2 and Fig. 3, in balanced\ndataset, baseline: BoW offer the higher reliability (0.715) with\nSVM classifier, the model offer the higher reliability (0.999)\nwith Ensemble Bagging classifier. In class-imbalanced\ndataset, the model give the higher reliability than the BoW in\nall cases: 2-Fold/5-Fold, SVM/Ensemble. However, the model\nonly offer the reliable measurement (0.799) in 2-Fold. In\n5Fold configuration, it only give the score (0.499).\nTrue\n1.00\n1.00\n1.00\n1.00\n1.00\n1.00\nTrue\n1.00\n1.00\n1.00\n1.00\n1.00\n1.00\n(b)\n5-Fold\nTABLE V.",
+                                "RELIABILITY MEASUREMENT STATISTICS USING COHEN?S KAPPA\nBalanced Dataset",
+                                "Ensemble",
+                                "SVM",
+                                "Class-Imbalanced Dataset",
+                                "Ensemble\n2-Fold\n0.00\n0.00\n0.00\n0.00\nFig. 2."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-6",
+                    "title": "RELIABILITY MEASUREMENT OF EACH FEATURES (2-FOLD CONFIGURATION) Fig. 3."
+                },
+                {
+                    "@id": "sec-7",
+                    "title": "RELIABILITY MEASUREMENT OF EACH FEATURES (5-FOLD CONFIGURATION)"
+                },
+                {
+                    "@id": "sec-8",
+                    "title": "VI. CONCLUSION AND FUTURE WORK",
+                    "p": [
+                        "In this paper, we proposed the model to detect several\nfigurative languages: Humor, Irony, Satire, Sarcasm and\nTrue. Even though ironic dimension of language lead\ndifficulty in differentiating each language, the model\nsuccessfully differentiate multi-figurative languages at once\nfrom emotional point of view. Our model can employ on\nboth balanced and class-imbalanced datasets. Moreover, the\nmodel significantly outperforms the baseline: BoW and\nbenchmark classifier: SVM. In future, we will implement the\nmodel to recognize the fake news in social media.",
+                        "Byron C Wallace, Do Kook Choe, and Eugene Charniak, ?Sparse,\nContextually Informed Models for Irony Detection: Exploiting User\nCommunities, Entities and Sentiment?, Proceedings of the 53rd\nAnnual Meeting of the Association for Computational Linguistics and\nthe 7th International Joint Conference on Natural Language\nProcessing, pp. 1035?1044"
+                    ]
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Aditya",
+                                "surname": "Joshi"
+                            },
+                            "article-title": "Harnessing context incongruity for sarcasm detection?",
+                            "source": "In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+                            "year": "2015",
+                            "volume": "2",
+                            "fpage": "757",
+                            "lpage": "762",
+                            "#text": ", Vinita Sharma, and Pushpak Bhattacharyya, ?\n          \n          ,\n          \n          ,\n          \n          , Vol.\n          \n          . pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Antonio",
+                                "surname": "Reyes"
+                            },
+                            "article-title": "A multidimensional approach for detecting irony in twitter?, Language Resources and Evaluation (",
+                            "year": "2013",
+                            "fpage": "239",
+                            "lpage": "268",
+                            "#text": ", Paolo Rosso, and Tony Veale, ?\n          \n          \n          ) 47: pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Anupam",
+                                "surname": "Khattri"
+                            },
+                            "article-title": [
+                                "Your Sentiment Precedes You: Using an authors historical tweets to predict sarcasm?",
+                                "Sentiment and Social Media Analysis (WASSA"
+                            ],
+                            "source": "Proceedings of the 6th Workshop on Computational Approaches",
+                            "year": "2015",
+                            "fpage": "25",
+                            "lpage": "30",
+                            "#text": ", Aditya Joshi, Pushpak Bhattacharyya, and Mark James Carman, ?\n          \n          ,\n          \n          to Subjectivity,\n          \n          \n          ), pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Byron C Wallace"
+                            },
+                            "article-title": "Humans require context to infer ironic intent (so computers probably do, too)?",
+                            "source": "In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Short Papers)",
+                            "year": "2014",
+                            "#text": ", Laura Kertz, Do Kook Choe, and Eugene Charniak, ?\n          \n          ,\n          \n          ,\n          \n          , pp."
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Crossley",
+                                    "given-names": "S. A.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Kyle",
+                                    "given-names": "K.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "McNamara",
+                                    "given-names": "D. S",
+                                    "#text": ","
+                                },
+                                {
+                                    "given-names": "D.S.",
+                                    "surname": "Behav Res"
+                                }
+                            ],
+                            "article-title": [
+                                "Sentiment analysis and social cognition engine (SEANCE): An automatic tool for sentiment, social cognition, and social order analysis?",
+                                "Els Lefever and Veronique hoste, ?LT3: Sentiment Analysis of Figurative Tweets: piece of cake #NotReally?"
+                            ],
+                            "year": [
+                                "2016",
+                                "2015"
+                            ],
+                            "source": "Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval",
+                            "fpage": "684",
+                            "lpage": "688",
+                            "#text": ",\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          (\n          \n          ), doi:10.3758/s13428-016-0743-z Cynthia Van Hee,\n          \n          ,\n          \n          \n          ), pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "David",
+                                    "surname": "Bamman"
+                                },
+                                {
+                                    "surname": "In",
+                                    "given-names": "ICWSM"
+                                }
+                            ],
+                            "article-title": "Noah A Smith, ?Contextualized Sarcasm Detection on Twitter?",
+                            "year": "2015",
+                            "fpage": "574",
+                            "lpage": "577",
+                            "#text": "and\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Elisabetta",
+                                "surname": "Fersini"
+                            },
+                            "article-title": "Detecting irony and sarcasm in microblogs: The role of expressive signals and ensemble classifiers?",
+                            "source": "In Data Science and Advanced Analytics (DSAA)",
+                            "year": "2015",
+                            "fpage": "1",
+                            "lpage": "8",
+                            "#text": ", Federico Alberto Pozzi, Enza Messina, ?\n          \n          ,\n          \n          ,\n          \n          . IEEE International Conference on 2015 Oct 19, pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Francesco",
+                                "given-names": "Barbieri"
+                            },
+                            "article-title": "Italian irony detection in twitter: a first approach?",
+                            "source": "In The First Italian Conference on Computational Linguistics CLiC-it 2014 & the Fourth International Workshop EVALITA",
+                            "year": "2014",
+                            "fpage": "28",
+                            "lpage": "32",
+                            "#text": "[10]\n          \n          , Francesco Ronzano, and Horacio Saggion, ?\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Francesco",
+                                "given-names": "Barbieri"
+                            },
+                            "article-title": "Is This Tweet Satirical? A computational Approach for Satire Detection in Spanish?",
+                            "source": "Procesamiento del Lenguaje Natural",
+                            "year": "2015",
+                            "volume": "55",
+                            "fpage": "135",
+                            "lpage": "142",
+                            "#text": "[11]\n          \n          , Horacio Saggion, and Francesco Ronzano, ?\n          \n          ,\n          \n          ,\n          \n          , Volume\n          \n          , pp.\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Francesco",
+                                "surname": "Barbieri"
+                            },
+                            "article-title": "Automatic Detection of Irony and Humour in Twitter?",
+                            "source": "In Proceedings of the International Conference on Computational Creativity",
+                            "year": "2014",
+                            "#text": "[12]\n          \n          and Horacio Saggion, ?\n          \n          ,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Francesco",
+                                "given-names": "Barbieri"
+                            },
+                            "article-title": "Do We Criticise (and Laugh) in the same Way? Automatic Detection of Multi-Lingual Satirical News in Twitter?",
+                            "source": "Proceedings of the TwentyFourth International Joint Conference on Artifical Intelligence (IJCAI",
+                            "year": "2015",
+                            "fpage": "1215",
+                            "lpage": "1221",
+                            "#text": "[13]\n          \n          , Horacio Saggion, and Francesco Ronzano, ?\n          \n          ,\n          \n          \n          ), pp.\n          \n          -"
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Francesco",
+                                "given-names": "Barbieri"
+                            },
+                            "article-title": "Modelling Sarcasm in Twitter, a Novel Approach?",
+                            "source": "Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                            "year": "2014",
+                            "fpage": "50",
+                            "lpage": "58",
+                            "#text": "[14]\n          \n          , Horacio Saggion, and Francesco Ronzano, ?\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Konstantin",
+                                "given-names": "Buschmeier"
+                            },
+                            "article-title": "An impact analysis of features in a classification approach to irony detection in product reviews?",
+                            "source": "In Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                            "year": "2014",
+                            "fpage": "42",
+                            "lpage": "49",
+                            "#text": "[15]\n          \n          , Philipp Cimiano, and Roman Klinger, ?\n          \n          ,\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Oren",
+                                    "surname": "Tsur"
+                                },
+                                {
+                                    "given-names": "Dmitry",
+                                    "surname": "Davidov"
+                                },
+                                {
+                                    "surname": "ICWSM-A Great Catchy"
+                                }
+                            ],
+                            "article-title": "Name: Semi-Supervised Recognition of Sarcastic Sentences in Online Product Reviews?",
+                            "source": "In ICWSM",
+                            "year": "2010",
+                            "fpage": "162",
+                            "lpage": "169",
+                            "#text": "[16]\n          \n          ,\n          \n          , and Ari Rappoport, ?\n          \n          \n          ,\n          \n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Pyae",
+                                "surname": "Phyo"
+                            },
+                            "year": "2017",
+                            "#text": "[17]\n          \n          Thu and Nwe Nwe, ?Understanding Social Media Satirical Emotion?,\n          \n          , in press"
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Roger J Kreuz and Gina M Caucci"
+                            },
+                            "article-title": "Lexical influences on the perception of sarcasm?",
+                            "source": "In Proceedings of the Workshop on computational approaches to Figurative Language. Association for Computational Linguistics",
+                            "year": "2007",
+                            "fpage": "1",
+                            "lpage": "4",
+                            "#text": "[18]\n          \n          , ?\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Roberto",
+                                "surname": "Gonz"
+                            },
+                            "article-title": [
+                                "\u00b4alez-Ib\u00b4anez, Smaranda Muresan",
+                                "Identifying sarcasm in Twitter: a closer look?"
+                            ],
+                            "source": "In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume",
+                            "volume": "2",
+                            "year": "2011",
+                            "fpage": "581",
+                            "lpage": "586",
+                            "#text": "[19]\n          \n          \n          , and NinaWacholder, ?\n          \n          ,\n          \n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Tony",
+                                    "surname": "Veale"
+                                },
+                                {
+                                    "surname": "In",
+                                    "given-names": "ECAI"
+                                }
+                            ],
+                            "article-title": "Detecting Ironic Intent in Creative Comparisons?",
+                            "year": "2010",
+                            "volume": "215",
+                            "fpage": "765",
+                            "lpage": "770",
+                            "#text": "[20]\n          \n          and Yanfen Hao, ?\n          \n          ,\n          \n          ,\n          \n          , Vol.\n          \n          . pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Victoria",
+                                    "given-names": "L."
+                                },
+                                {
+                                    "surname": "Rubin",
+                                    "given-names": "Niall J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Conroy"
+                                }
+                            ],
+                            "article-title": "Fake News or Truth? Using Satirical Cues to Detect Potentially Misleading News?",
+                            "source": "Proceedings of NAACL-HLT",
+                            "year": "2016",
+                            "fpage": "7",
+                            "lpage": "17",
+                            "#text": "[21]\n          \n          \n          \n          , Yimin Chen, and Sarah Cornwell, ?\n          \n          ,\n          \n          \n          , pp.\n          \n          -"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

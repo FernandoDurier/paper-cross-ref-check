@@ -1,0 +1,2492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Digital Communications and Networks</journal-title>
+      </journal-title-group>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.1016/j.dcan.2016.06.002</article-id>
+      <title-group>
+        <article-title>Sarcastic sentiment detection in tweets streamed in real time: a big data approach</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>S.K. Bharti n</string-name>
+          <email>sbharti1984@gmail.com</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>B. Vachha</string-name>
+          <email>bakhtyarvachha@gmail.com</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>R.K. Pradhan</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>K.S. Babu</string-name>
+          <email>ksathyababu@nitrkl.ac.in</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>S.K. Jena</string-name>
+          <email>skjena@nitrkl.ac.in</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Department of Computer Science &amp; Engineering, National Institute of Technology</institution>
+          ,
+          <addr-line>Rourkela 769008</addr-line>
+          ,
+          <country country="IN">India</country>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2016</year>
+      </pub-date>
+      <volume>2</volume>
+      <issue>2016</issue>
+      <fpage>108</fpage>
+      <lpage>121</lpage>
+      <history>
+        <date date-type="accepted">
+          <day>15</day>
+          <month>6</month>
+          <year>2016</year>
+        </date>
+        <date date-type="received">
+          <day>20</day>
+          <month>2</month>
+          <year>2016</year>
+        </date>
+        <date date-type="revised">
+          <day>16</day>
+          <month>5</month>
+          <year>2016</year>
+        </date>
+      </history>
+      <abstract>
+        <p>journal homepage: www.elsevier.com/locate/dcan</p>
+      </abstract>
+      <kwd-group>
+        <kwd>Big data</kwd>
+        <kwd>Flume</kwd>
+        <kwd>Hadoop</kwd>
+        <kwd>Hive</kwd>
+        <kwd>MapReduce</kwd>
+        <kwd>Sarcasm</kwd>
+        <kwd>Sentiment</kwd>
+        <kwd>Tweets</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>-</title>
+      <p>a r t i c l e i n f o</p>
+    </sec>
+    <sec id="sec-2">
+      <title>1. Introduction</title>
+      <p>a b s t r a c t
+Sarcasm is a type of sentiment where people express their negative feelings using positive or intensified
+positive words in the text. While speaking, people often use heavy tonal stress and certain gestural clues
+like rolling of the eyes, hand movement, etc. to reveal sarcastic. In the textual data, these tonal and
+gestural clues are missing, making sarcasm detection very difficult for an average human. Due to these
+challenges, researchers show interest in sarcasm detection of social media text, especially in tweets.
+Rapid growth of tweets in volume and its analysis pose major challenges. In this paper, we proposed a
+Hadoop based framework that captures real time tweets and processes it with a set of algorithms which
+identifies sarcastic sentiment effectively. We observe that the elapse time for analyzing and processing
+under Hadoop based framework significantly outperforms the conventional methods and is more suited
+for real time streaming tweets.
+&amp; 2016 Chongqing University of Posts and Telecommunications. Production and Hosting by Elsevier B.V.</p>
+      <p>This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).</p>
+      <p>
+        With the advent of smart mobile devices and the high-speed
+Internet, users are able to engage with social media services like
+Facebook, Twitter, Instagram, etc. The volume of social data being
+generated is growing rapidly. Statistics from Global WebIndex
+shows a 17% yearly increase in mobile users with the total number
+of unique mobile users reaching 3.7 billion people [
+        <xref ref-type="bibr" rid="ref1">1</xref>
+        ]. Social
+networking websites have become a well-established platform for
+users to express their feelings and opinions on various topics, such
+as events, individuals or products. Social media channels have
+become a popular platform to discuss ideas and to interact with
+people worldwide. For instance, Facebook claims to have
+1.59 billion monthly active users, each one being a friend with 130
+people on average [
+        <xref ref-type="bibr" rid="ref2">2</xref>
+        ]. Similarly, Twitter claims to have more than
+500 million users, out of which more than 332 million are active
+[
+        <xref ref-type="bibr" rid="ref1">1</xref>
+        ]. Users post more than 340 million tweets and 1.6 billion search
+queries every day [
+        <xref ref-type="bibr" rid="ref1">1</xref>
+        ].
+      </p>
+      <p>
+        With such large volumes of data being generated, a number of
+challenges are posed. Some of them are accessing, storing,
+processing, verification of data sources, dealing with misinformation
+and fusing various types of data [
+        <xref ref-type="bibr" rid="ref3">3</xref>
+        ]. However, almost 80% of
+generated data is unstructured [
+        <xref ref-type="bibr" rid="ref4">4</xref>
+        ]. As the technology developed,
+people were given more and more ways to interact, from simple
+text messaging and message boards to other more engaging and
+engrossing channels such as images and videos. These days, social
+media channels are usually the first to get the feedback about
+current event and trends from their user base, allowing them to
+provide companies with invaluable data that can be used to
+position their products in the market as well as gather rapid feedback
+from customers.
+      </p>
+      <p>When an event commences or a product is launched, people
+start tweeting, writing reviews, posting comments, etc. on social
+media. People turn to social media platforms to read reviews from
+other users about a product before they decide whether to
+purchase it or not. Organizations also depend on these sites to know
+the response of users for their products and subsequently use the
+feedback to improve their products. However, finding and
+verifying the legitimacy of opinions or reviews is a formidable task. It is
+difficult to manually read through all the reviews and determine
+which of the opinions expressed are sarcastic. In addition, the
+common reader will have difficulty in recognizing sarcasm in
+tweets or product reviews, which may end up misleading them.</p>
+      <p>
+        A tweet or a review may not state the exact orientation of the
+user directly, i.e., it may be sarcastically expressed. Sarcasm is a
+kind of sentiment which acts as an interfering factor in any text
+that can flip the polarity [
+        <xref ref-type="bibr" rid="ref5">5</xref>
+        ]. For example, ?I love being ignored
+#sarcasm?. Here, "love" expresses a positive sentiment in a
+negative context. Therefore, the tweet is classified as sarcastic. Unlike a
+simple negation, sarcastic tweets contain positive words or even
+intensified positive words to convey a negative opinion or vice
+versa. This creates a need for the large volumes of reviews, tweets
+or feedback messages to be analyzed rapidly to predict their exact
+orientation. Moreover, each tweet may have to pass through a set
+of algorithms to be accurately classified.
+      </p>
+      <p>
+        In this paper, we propose a Hadoop-based framework [
+        <xref ref-type="bibr" rid="ref6">6</xref>
+        ] that
+allows the user to acquire and store tweets in a distributed
+environment [
+        <xref ref-type="bibr" rid="ref7">7</xref>
+        ] and process them for detecting sarcastic content in
+real time using the MapReduce [
+        <xref ref-type="bibr" rid="ref8">8</xref>
+        ] programming model. The
+mapper class works as a partitioner and divides large volume of
+tweets into small chunks and distributes them among the nodes in
+the Hadoop cluster. The reducer class works as a combiner and is
+responsible for collecting processed tweets from each node in the
+cluster and assembles them to produce the final output. Apache
+Flume [
+        <xref ref-type="bibr" rid="ref10 ref9">9,10</xref>
+        ] is used for capturing tweets in real time as it is highly
+reliable, distributed and configurable. Flume uses an elegant
+design to make data loading easy and efficient from several sources
+into the Hadoop Distributed File System (HDFS) [
+        <xref ref-type="bibr" rid="ref11">11</xref>
+        ]. For
+processing these tweets stored in the HDFS, we use Apache Hive [
+        <xref ref-type="bibr" rid="ref12">12</xref>
+        ]. It
+provides us with an SQL-like language called HiveQL to convert
+queries into mapper and reducer classes [
+        <xref ref-type="bibr" rid="ref12">12</xref>
+        ]. Further, we use
+natural language processing (NLP) techniques like POS tagging
+[
+        <xref ref-type="bibr" rid="ref13">13</xref>
+        ], parsing [
+        <xref ref-type="bibr" rid="ref14">14</xref>
+        ], text mining [
+        <xref ref-type="bibr" rid="ref15 ref16">15,16</xref>
+        ] and sentiment analysis [
+        <xref ref-type="bibr" rid="ref17">17</xref>
+        ]
+to identify sarcasm in these processed tweets.
+      </p>
+      <p>My paper compares and contrasts the time requirements for
+our approach when run on a standard non-Hadoop
+implementation as well as on a Hadoop deployment to find the improvement
+in performance when we use Hadoop. For real time applications
+where millions of tweets need to be processed as fast as possible,
+we observe that the time taken by the single node approach
+increases much higher than the Hadoop implementation. This
+suggests that for higher volumes of data it is more advantageous to
+use the proposed deployment for sarcasm analysis.</p>
+      <p>The contributions of this paper are as follows:
+1. Capturing and processing real time tweets using Apache Flume</p>
+      <p>and Hive under the Hadoop framework.
+2. We propose a set of algorithms to detect sarcasm in tweets</p>
+      <p>under the Hadoop framework.
+3. We propose another set of algorithms to detect sarcasm in
+tweets.</p>
+      <p>The rest of this paper is organized as follows. Section 2 presents
+related work for capturing and processing data acquired through
+the Twitter streaming API followed by sarcasm analysis of the
+captured data. Section 3 explains preliminaries of this research
+paper. The proposed scheme is described in Section 4. Section 5
+presents the performance analysis of the proposed schemes.</p>
+      <p>Finally, the conclusion and recommendations for future work are
+drawn in Section 6.</p>
+    </sec>
+    <sec id="sec-3">
+      <title>2. Related work</title>
+      <p>In this section the literature survey is done on two folds. At
+first, capturing and preprocessing of the real time tweets are
+surveyed and then literature on sarcasm detection follows.</p>
+      <sec id="sec-3-1">
+        <title>2.1. Capturing and preprocessing of tweets in large volume</title>
+        <p>
+          Rapid adaption and growth of social networking platforms
+enable users to generate data at an alarming rate. Storing and
+processing of such large data sets become a complex problem.
+Twitter is one such social networking platform that generates data
+continuously. In the existing literature, most of the researchers
+used Tweepy (An easy-to-use Python library for accessing the
+Twitter API) and Twitter4J (a java library for accessing the Twitter
+API) for aggregation of tweets from Twitter [
+          <xref ref-type="bibr" rid="ref18 ref19 ref20 ref21 ref22 ref5">5,18?22</xref>
+          ]. The Twitter
+Application Programming Interface (API) [
+          <xref ref-type="bibr" rid="ref23">23</xref>
+          ] provides a streaming
+API [
+          <xref ref-type="bibr" rid="ref24">24</xref>
+          ] to allow developers to obtain real time access to tweets.
+Befit and Frank [
+          <xref ref-type="bibr" rid="ref25">25</xref>
+          ] discuss the challenges of capturing Twitter
+data streams. Tufekci and Zeynep [
+          <xref ref-type="bibr" rid="ref26">26</xref>
+          ] examined the
+methodological and conceptual challenges for social media based big data
+operations with special attention to the validity and
+representativeness of big data analysis of social media. Due to some
+restrictions placed by Twitter on the use of their retrieval APIs, one can
+only download a limited amount of tweets in a specified time
+frame using these APIs and libraries. Getting a larger amount of
+tweets in real time is a challenging task. There is a need for
+efficient techniques to acquire a large amount of tweets from Twitter.
+Researchers are evaluating the feasibility of using the Hadoop
+ecosystem [
+          <xref ref-type="bibr" rid="ref6">6</xref>
+          ] for the storage and processing [
+          <xref ref-type="bibr" rid="ref22 ref27 ref28 ref29">22,27?29</xref>
+          ] of large
+amounts of tweets from Twitter. Shirahatti et al. [
+          <xref ref-type="bibr" rid="ref27">27</xref>
+          ] used Apache
+Flume [
+          <xref ref-type="bibr" rid="ref10">10</xref>
+          ] with the Hadoop ecosystem to collect tweets from
+Twitter. Ha et al. [
+          <xref ref-type="bibr" rid="ref22">22</xref>
+          ] used Topsy with the Hadoop ecosystem for
+gathering tweets from Twitter. Furthermore, they analyzed the
+sentiment and emotion information for the collected tweets in
+their research. Taylor et al. [
+          <xref ref-type="bibr" rid="ref28">28</xref>
+          ] used the Hadoop framework in
+applications in the bioinformatics domain.
+        </p>
+      </sec>
+      <sec id="sec-3-2">
+        <title>2.2. Sarcasm sentiment analysis</title>
+        <p>
+          Sarcasm sentiment analysis is a rapidly growing area of NLP
+with research ranging from word, phrase and sentence level
+classification [
+          <xref ref-type="bibr" rid="ref18 ref19 ref30 ref5">5,18,19,30</xref>
+          ] to document [
+          <xref ref-type="bibr" rid="ref31">31</xref>
+          ] and concept level
+classification [
+          <xref ref-type="bibr" rid="ref21">21</xref>
+          ]. Research is progressing in finding ways for
+efficient analysis of sentiments with better accuracy in written text
+as well as analyzing irony, humor and sarcasm within social media
+data. Sarcastic sentiment detection is classified into three
+categories based on text features used for classification, which are
+lexical, pragmatic and hyperbolic as shown in Fig. 1.
+        </p>
+      </sec>
+      <sec id="sec-3-3">
+        <title>2.2.1. Lexical feature based classification</title>
+        <p>
+          Text properties such as unigram, bigram, n-grams, etc. are
+classified as lexical features of a text. Authors used these features
+to identify sarcasm, Kreuz et al. [
+          <xref ref-type="bibr" rid="ref32">32</xref>
+          ] introduced this concept for
+the first time and they observed that lexical features play a vital
+role in detecting irony and sarcasm in text. Kreuz et al. [
+          <xref ref-type="bibr" rid="ref33">33</xref>
+          ], in
+their subsequent work, used these lexical features along with
+syntactic features to detect sarcastic tweets. Davidov et al. [
+          <xref ref-type="bibr" rid="ref30">30</xref>
+          ]
+used pattern-based (high-frequency words and content words)
+and punctuation-based methods to build a weighted k-nearest
+Fig. 1. Classification of sarcasm detection based on text features used.
+neighbor (kNN) classification model to perform sarcasm detection.
+Tsur et al. [
+          <xref ref-type="bibr" rid="ref34">34</xref>
+          ] observed that bigram based features produce better
+results in detecting sarcasm in tweets and Amazon product
+reviews. González-Ibánez et al. [
+          <xref ref-type="bibr" rid="ref18">18</xref>
+          ] explored numerous lexical
+features (derived from LWIC [
+          <xref ref-type="bibr" rid="ref35">35</xref>
+          ] and WordNet affect [
+          <xref ref-type="bibr" rid="ref36">36</xref>
+          ]) to identify
+sarcasm. Riloff et al. [
+          <xref ref-type="bibr" rid="ref5">5</xref>
+          ] used a well-constructed lexicon based
+approach to detect sarcasm and for lexicon generation they used
+unigram, bigram and trigram features. Bharti et al. [
+          <xref ref-type="bibr" rid="ref19">19</xref>
+          ] considered
+bigram and trigram to generate bags of lexicons for sentiment and
+situation in tweets. Barbieri et al. [
+          <xref ref-type="bibr" rid="ref37">37</xref>
+          ] considered seven lexical
+features to detect sarcasm through its inner structure such as
+unexpectedness, the intensity of the terms or imbalance between
+registers.
+        </p>
+      </sec>
+      <sec id="sec-3-4">
+        <title>2.2.2. Pragmatic feature based classification</title>
+        <p>
+          The use of symbolic and figurative text in tweets is frequent
+due to the limitations in message length of a tweet. These
+symbolic and figurative texts are called pragmatic features (such as
+smilies, emoticons, replies, @user, etc.). It is one of the powerful
+features to identify sarcasm in tweets as several authors have used
+this feature in their work to detect sarcasm. Pragmatic features are
+one of the key features used by Kreuz et al. [
+          <xref ref-type="bibr" rid="ref33">33</xref>
+          ] to detect sarcasm
+in text. Carvalho et al. [
+          <xref ref-type="bibr" rid="ref38">38</xref>
+          ] used pragmatic features like emoticons
+and special punctuations to detect irony from newspaper text data.
+González-Ibánez et al. [
+          <xref ref-type="bibr" rid="ref18">18</xref>
+          ] further explored this feature with some
+more parameters like smilies and replies and developed a sarcasm
+detection system using the pragmatic features of Twitter data.
+Tayal et al. [
+          <xref ref-type="bibr" rid="ref39">39</xref>
+          ] also used the pragmatic feature in political tweets
+to predict which party will win in the election. Similarly,
+Rajadesingan et al. [
+          <xref ref-type="bibr" rid="ref40">40</xref>
+          ] used psychological and behavioral features on
+users' present and past tweets to detect sarcasm.
+        </p>
+      </sec>
+      <sec id="sec-3-5">
+        <title>2.2.3. Hyperbole feature based classification</title>
+        <p>
+          Hyperbole is another key feature often used in sarcasm
+detection from textual data. A hyperbolic text contains one of the
+text properties, such as intensifier, interjection, quotes,
+punctuation, etc. Previous authors used these hyperbole features and
+achieved good accuracy in their research to detect sarcasm in
+tweets. Utsumi and Akira [
+          <xref ref-type="bibr" rid="ref41">41</xref>
+          ] discussed extreme adjectives and
+adverbs and how the presence of these two intensifies the text.
+Most often, it provides an implicit way to display negative
+attitudes, i.e., sarcasm. Kreuz et al. [
+          <xref ref-type="bibr" rid="ref33">33</xref>
+          ] discussed the other hyperbolic
+terms such as interjection and punctuation. They have shown how
+hyperbole is useful in sarcasm detection. Filatova and Elena [
+          <xref ref-type="bibr" rid="ref31">31</xref>
+          ]
+used the hyperbole features in document level text. According to
+them, phrase or sentence level is not sufficient for good accuracy
+and considered the text context in that document to improve the
+accuracy. Liebrecht et al. [
+          <xref ref-type="bibr" rid="ref42">42</xref>
+          ] explained hyperbole features with
+examples of utterances: ?Fantastic weather? when it rains is
+identified as sarcastic with more ease than the utterance without a
+hyperbole (?the weather is good? when it rains). Lunando et al. [
+          <xref ref-type="bibr" rid="ref20">20</xref>
+          ]
+declared that the tweet containing interjection words such as
+wow, aha, yay, etc. has a higher chance of being sarcastic. They
+developed a system for sarcasm detection for Indonesian social
+media. Tungthamthiti et al. [
+          <xref ref-type="bibr" rid="ref21">21</xref>
+          ] explored concept level knowledge
+using the hyperbolic words in sentences and gave an indirect
+contradiction between sentiment and situation, such as raining,
+bad weather, which are conceptually the same. Therefore, if
+?raining? is present in any sentence, then one can assume ?bad
+weather?. Bharti et al. [
+          <xref ref-type="bibr" rid="ref19">19</xref>
+          ] considered interjection as a hyperbole
+feature to detect sarcasm in tweets that starts with an interjection.
+        </p>
+        <p>Based on the classification, a consolidated summary of previous
+studies related to sarcasm identification is shown in Table 1. It
+provides types of approaches used by previous authors (denoted
+as A1 and A2), various types of sarcasm occurring in tweets
+(denoted as T1, T2, T3, T4, T5, T6, and T7), text features (denoted as F1,
+F2, and F3) and datasets from different domains (denoted as D1,
+D2, D3, D4, and D5), mostly from Twitter data. The details are
+shown in Table 2.</p>
+        <p>
+          From Table 1, it is observed that only Bharti et al. [
+          <xref ref-type="bibr" rid="ref19">19</xref>
+          ] have
+worked for sarcasm type T2 and T3. Lunando et al. [
+          <xref ref-type="bibr" rid="ref20">20</xref>
+          ] discussed
+that tweets with interjections are classified as sarcastic. Further,
+Rajadesingan et al. [
+          <xref ref-type="bibr" rid="ref40">40</xref>
+          ] are the only authors who worked for
+sarcasm type T4. Most of the researchers identified sarcasm in
+tweets in type T1. None of the authors worked on sarcasm types
+T5, T6 and T7 until now. In this work, we consider these research
+gaps as challenges and propose a set of algorithms to tackle them.
+        </p>
+      </sec>
+    </sec>
+    <sec id="sec-4">
+      <title>3. Preliminaries</title>
+      <p>This section describes the overall framework for capturing and
+analyzing tweets streamed in real time. In addition, the
+architecture of Hadoop HDFS followed by POS tagging, parsing and
+sentiment analysis of the given phrase or sentence are elaborated.</p>
+      <sec id="sec-4-1">
+        <title>3.1. Framework for sarcasm analysis in real time tweets</title>
+        <p>The proposed system uses the Hadoop framework to process
+and store the tweets streamed in real time. These tweets are
+retrieved from Twitter using the Twitter streaming API (Twitter4j) as
+shown in Fig. 2. The Flume module is responsible for
+communicating with the Twitter streaming API and retrieving tweets
+Fig. 2. System model for capturing and analyzing sarcasm sentiment in tweets.
+matching certain criteria, trends or keywords. The tweets retrieved
+from Flume are in JavaScript Object Notation (JSON) format which
+is passed on to the HDFS. Oozie is a module in Hadoop that
+provides the output from one stage as the input to the next. Oozie is
+used to partition the incoming tweets into blocks of tweets,
+partitioned on an hourly basis. These partitions are passed onto the
+Hive module, which then parses the incoming JSON tweets into a
+format suitable for consumption by the sarcasm detection engine
+(SDE). These parsed tweets are stored again in the HDFS and later
+retrieved by SDE for further processing and attainment of final
+sentiment summarization.</p>
+      </sec>
+      <sec id="sec-4-2">
+        <title>3.2. Parallel HDFS</title>
+        <p>To increase the throughput of a system and handle the massive
+volume of tweets, the parallel architecture of HDFS that is used is
+shown in Fig. 3. The overall file system consists of a metadata file,
+master node and multiple slave nodes that are managed by the
+master node.</p>
+        <p>A metadata file contains two subfiles, namely, fsimage and
+edits file. The fsimage contains the complete state of the file
+system at a given instance of time and the edits file contains the log of
+changes to the file system after the most recent fsimage was made.
+The master node contains three entities, namely, name node,
+secondary name node and data node. All three entities in the
+name node can communicate with each other. The name node is
+responsible for the overall functioning of the file system. A
+secondary name node is responsible for updating and maintaining of
+the name node as well as managing the updates to the metadata.
+The Job tracker is a service in Hadoop that interfaces between the
+name node and the task trackers and matches the jobs with the
+closest available task tracker.</p>
+        <p>The Slave node contains two entities, namely data node and
+task tracker. Both entities can communicate with each other
+within the slave node. The data node is responsible for handling
+the data blocks and providing the services for storage, and
+retrieval of the data as requested by the name node. The task tracker
+is responsible for processing the input according to user
+requirements and returning the output.</p>
+        <p>In the parallel HDFS architecture, the name node
+communicates with the various data nodes in the slave nodes while
+simultaneously the job tracker in the name node coordinates with
+the task trackers on the slaves in parallel, resulting in a high rate of
+output which is fed into the SDE.</p>
+      </sec>
+      <sec id="sec-4-3">
+        <title>3.3. Sarcasm detection engine</title>
+        <p>To identify the sentiment of a given tweet, it passes through the
+MapReduce functions for sentiment classification. The tweet is
+classified into either a negative, positive or neutral, based on the
+detection engine. Fig. 4 depicts an automated SDE which takes
+tweets as an input and produces the actual sentiment of the tweet
+as an output. Once the tweet is classified as either positive or
+negative, further checks are required to confirm if it has an actual
+positive/negative sentiment or a sarcastic sentiment.</p>
+      </sec>
+      <sec id="sec-4-4">
+        <title>3.4. Parts-of-speech tagging</title>
+        <p>
+          Parts-of-speech (POS) tagging divides sentences or paragraphs
+into words and assigning corresponding parts-of-speech
+information to each word based on their relationship with adjacent
+and related words in a phrase, sentence, or paragraph. In this
+paper, a Hidden Markov Model (HMM) based POS tagger [
+          <xref ref-type="bibr" rid="ref13">13</xref>
+          ] is
+used to identify the correct POS tag information of given words.
+For example: POS tag information for the sentence ?Love has no
+finite coverage? is love-NN, has-VBZ, no-DT, finite-JJ, and
+coverageNN. Where NN, JJ, VBZ and DT denote the notations for noun,
+adjective, verb and determiner, respectively. The Penn Treebank
+tag [
+          <xref ref-type="bibr" rid="ref43">43</xref>
+          ] set notations are used to assign a tag to the particular
+word. It is a brown corpus style of tagging having 44 tags.
+        </p>
+      </sec>
+      <sec id="sec-4-5">
+        <title>3.5. Parsing</title>
+        <p>Parsing is a process of analyzing grammatical structure,
+identifying its parts of speech and syntactic relations of words in
+sentences. When a sentence is passed through a parser, the parser
+divides the sentence into words and identifies the POS tag
+(1)
+(2)
+(3)
+information. With the help of the POS information and syntactic
+relation, it forms units like subject, verb, and object, then
+determines the relations between these units and generates a parse
+tree. In this paper, a python based package called TEXTBLOB has
+been used for parsing. An example of parsing for text ?I love
+waiting forever for my doctor? is I/PRP/B-NP/O, love/NN/I-NP/O,
+waiting/VBG/B-VP/O, forever/RB/B-ADVP/O, for/IN/B-PP/B-PNP,
+my/PRP$/BNP/ I-PNP, doctor/NN/I-NP/I-PNP. With the help of the
+parse data, two examples of parse trees are shown in Figs. 5 and 6.</p>
+      </sec>
+      <sec id="sec-4-6">
+        <title>3.6. Sentiment analysis</title>
+        <p>
+          Sentiment analysis is a mechanism to recognize one's opinion,
+polarity, attitude and orientation of any target like movies,
+individuals, events, sports, products, organizations, locations,
+services, etc. To identify sentiment in given phrase, we use
+pre-defined lists of positive and negative words such as Sentiwordnet
+[
+          <xref ref-type="bibr" rid="ref44">44</xref>
+          ]. It is a standard list for positive and negative English words.
+Using the Sentiwordnet lists along with Eqs. (1)?(3), we find the
+sentiment score for a given phrase or sentence:
+        </p>
+        <p>PWP
+PR =</p>
+        <p>TWP</p>
+        <p>NWP
+NR =</p>
+        <p>TWP
+Sentiment Score = PR ? NR
+where PR is the positive ratio, NR the negative ratio, PWP the
+number of positive words in a given phrase, NWP the number of
+negative words in a given phrase, and TWP the total words in given
+phrase.</p>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>4. Proposed scheme</title>
+      <p>There is an increasing need for automatic techniques to capture
+and process real time tweets and analyze their sarcastic sentiment.
+It provides useful information for market analysis and risk
+management applications. Therefore, we propose the following
+Fig. 6. Parse tree for a tweet: I hate Australia in cricket because they always win.
+approaches to sarcasm detection in tweets:</p>
+      <sec id="sec-5-1">
+        <title>4.2. HMM-based POS tagging</title>
+        <p>Capturing and processing real time tweets using Flume and
+Hive.</p>
+        <p>An HMM-based algorithm for POS tagging.</p>
+        <p>MapReduce functions for three approaches to detect sarcasm in
+tweets:</p>
+      </sec>
+      <sec id="sec-5-2">
+        <title>1. Parsing_based_lexicon_generation_algorithm.</title>
+      </sec>
+      <sec id="sec-5-3">
+        <title>2. Interjection_word_start.</title>
+      </sec>
+      <sec id="sec-5-4">
+        <title>3. Positive_sentiment_with_antonym_pair.</title>
+        <p>Other approaches to detect sarcasm in tweets:</p>
+      </sec>
+      <sec id="sec-5-5">
+        <title>1. Tweet_contradicting_universal_facts.</title>
+      </sec>
+      <sec id="sec-5-6">
+        <title>2. Tweet_contradicting_time_dependent_facts.</title>
+      </sec>
+      <sec id="sec-5-7">
+        <title>3. Likes_dislikes_contradiction.</title>
+      </sec>
+      <sec id="sec-5-8">
+        <title>4.1. Capturing and processing real time streaming tweets using</title>
+        <p>flume and hive</p>
+        <p>
+          The Twitter Streaming API returns a constant stream of tweets
+in JSON format which is then stored in the HDFS as shown in Fig. 2.
+To avoid issues related to security and writing code that requires
+complicated integration with secure clusters, we prefer to use the
+existing components within Cloudera Hadoop [
+          <xref ref-type="bibr" rid="ref29">29</xref>
+          ]. This allows us
+to directly store the data retrieved by the API into the HDFS. We
+use Apache Flume to store the data in the HDFS. Flume is a data
+ingestion system that is defined by setting up channels in which
+data flows between sources and sinks. Each piece of data is an
+event and each such event goes through a channel. The Twitter API
+does the work of the source here and the sink is a system that
+writes out the data to the HDFS. Along with the data capture, the
+Flume module allows us to set up custom filters and
+keywordbased searches that allow us to further narrow down the tweets to
+just the ones relevant to our requirements.
+        </p>
+        <p>
+          Once the data from the Twitter API is fed into the HDFS, the
+data must be pre-processed to convert the tweets stored in JSON
+format into usable text for the SDE. We make use of the Oozie
+module for handling the work flow, which is scheduled to run at
+periodic intervals. We configure Oozie to partition the data in the
+HDFS on the basis of hourly retrievals and load the last hour's data
+into the hive as shown in Fig. 2. The hive is another module in
+Hadoop that allows one to translate and load data with the help of
+the Serializer?Deserializer. This allows us to convert the JSON
+tweets into a query-able format an we then add these entries back
+into the HDFS for processing by the SDE.
+In this paper, an HMM-based POS tagger is deployed to
+evaluate accurate POS tag information for the Twitter dataset as shown
+in Algorithms 1 and 2. Algorithm 1 trains the system using
+500,000 pre-tagged (according to the Penn Tree Bank style)
+American English words from the American National Corpus (ANC)
+[
+          <xref ref-type="bibr" rid="ref45 ref46">45,46</xref>
+          ]. Algorithm 2 evaluates the POS tag information of words in
+the given dataset.
+        </p>
+        <sec id="sec-5-8-1">
+          <title>Algorithm 1. POS_training.</title>
+          <p>
+            According to Algorithm 1, HMM uses pre-tagged American
+English words [
+            <xref ref-type="bibr" rid="ref45 ref46">45,46</xref>
+            ] as an input and creates three dictionary
+objects, namely WT, TT and T. WT stores the number of occurrence
+of each word with its associated tag in the training corpus.
+Similarly, TT stores the number of occurrence of the bi-gram tags in the
+corpus and T stores the number of occurrence of uni-gram tag. For
+each word in the sentence, it checks if the word is the starting
+word of the sentence or not. If a word is the starting word then it
+assumes the previous tag to be ? $?. Otherwise, the previous tag is
+the tag of the previous word in the respective sentence. It
+increases the occurrence of various tags through the dictionary
+objects WT, TT and T. Finally, it creates a probability table using the
+dictionary objects WT, TT and T.
+          </p>
+          <p>
+            Algorithm 2 finds all the possible tags of a given word (for tag
+evaluation) using the pre-tagged corpus [
+            <xref ref-type="bibr" rid="ref45 ref46">45,46</xref>
+            ] and applies Eq. (4)
+[
+            <xref ref-type="bibr" rid="ref47">47</xref>
+            ], if the word is the starting word of a respective sentence
+otherwise it applies Eq. (5) [
+            <xref ref-type="bibr" rid="ref47">47</xref>
+            ]. Next, it selects the tag whose
+probability value is maximum. For example: once you encounter a
+POS tag determiner (DT), such as ?the?, maybe the probability that
+the next word is a noun is 40% and it being a verb is 20%. Once the
+model finishes its training, it is used to determine whether ?can? in
+?the can? is a noun (as it should be) or a verb:
+argmax[TT($, t)/T($)]?[WT(word, t)/T(t)]
+          </p>
+          <p>t?APT
+argmax[TT(P, t)/T(P)]?[WT(word, t)/T(t)]</p>
+          <p>t?APT
+where APT is all possible tags
+(4)
+(5)</p>
+        </sec>
+      </sec>
+      <sec id="sec-5-9">
+        <title>4.3. MapReduce functions for sarcasm analysis</title>
+        <p>Here, the Map function comprises three approaches to detect
+sarcasm. Each of the approaches is detailed below.</p>
+      </sec>
+      <sec id="sec-5-10">
+        <title>4.3.1. Parsing based lexicon generation algorithm</title>
+        <p>
+          The MapReduce function, parsing based lexicon generation
+algorithm (PBLGA), is based on our previous study [
+          <xref ref-type="bibr" rid="ref19">19</xref>
+          ]. It takes
+tweets as an input from HDFS and parses them into the form of
+phrases such as noun phrase (NP), verb phrase (VP), adjective
+phrase (ADJP), etc. These phrases are stored in the phrase file for
+further processing. The phrase file is then subsequently passed
+onto the rule-based classifier to classify sentiment phrases and
+situation phrases as shown in the mapper part of Fig. 7 and stores
+it in the sentiment phrase file and situation phrase file. Then, the
+output of the mapper class (sentiment phrase file and situation
+phrase file) passes to the reducer class as an input. The reducer
+class calculates the sentiment score (as explained in Section 3.6) of
+each phrase in both the sentiment and the situation phrase file.
+Then, it gives output an aggregated positive or negative score for
+each phrase in terms of the sentiment and situation of the tweet.
+Based on whether the score is positive or negative, the phrases are
+stored in the corresponding phrase file as shown in the reducer
+class of Fig. 7. PBLGA generates four files, namely positive
+sentiment, negative sentiment, positive situation and negative situation
+files as an output. Furthermore, we use these four files to detect
+sarcasm in tweets with tweet structure contradiction between
+positive sentiment and negative situation and vice versa as shown
+in Algorithm 3.
+        </p>
+        <sec id="sec-5-10-1">
+          <title>Algorithm 3. PBLGA_testing.</title>
+          <p>Fig. 8. Procedure to detect sarcasm in tweets that starts with interjection word.</p>
+          <p>According to Algorithm 3, it takes testing tweets and four bags
+of lexicons generated using PBLGA. If the testing tweet matches
+with any positive sentiment from the positive sentiment file, it
+subsequently checks for any matches with negative situation
+against the negative situation file. If both checks match, the testing
+tweet is sarcastic and similarly, and it checks for sarcasm with a
+negative sentiment in a positive situation. Otherwise, the given
+tweet is not sarcastic. Both the algorithms are executed under the
+Hadoop framework as well as without the Hadoop framework to
+compare the running time.</p>
+        </sec>
+      </sec>
+      <sec id="sec-5-11">
+        <title>4.3.2. Interjection word start</title>
+        <p>
+          The MapReduce function for interjection word start (IWS) is also
+based on [
+          <xref ref-type="bibr" rid="ref19">19</xref>
+          ] as shown in Fig. 8. This approach is applicable for the
+tweets that start with an interjection word such as aha, wow, nah,
+uh, etc. In this approach, the tweet that is sent to the mapper is first
+parsed into its constituent tags using Algorithms 1 and 2. Then, the
+tags are separated as first tag, second tag and remaining tags of each
+tweet. The output of this stage gives us three lists: the list of the first
+tag, which stores the first tag of the tweet, the list of the second tag,
+which stores the second tag of the tweet and the list of remaining
+tags, which stores the remaining tags in the tweet. The lists are then
+passed to a rule based pattern as given in the mapper class of Fig. 8
+that checks that if the first tag is an interjection, i.e., UH (interjection
+tag notation) and second tag is either adjective or adverb, the tweet
+is classified as sarcastic. Otherwise, it checks that if the first tag is an
+interjection and the remaining tags are either adverbs followed by
+adjectives, adjectives followed by nouns, or adverbs followed by
+verbs, the tweet is sarcastic else it is not sarcastic. If the pattern does
+not find any match in a given tweet, tweet is not sarcastic. The
+algorithm IWS also executes under the Hadoop framework as well as
+without the Hadoop framework to compare the running time.
+        </p>
+      </sec>
+      <sec id="sec-5-12">
+        <title>4.3.3. Positive sentiment with antonym pair</title>
+        <p>
+          The MapReduce function for positive sentiment with antonym
+pair (PSWAP) is a novel approach as shown in Fig. 9 to determine if
+the tweet is sarcastic or not. The tweet that is sent to the mapper is
+first parsed into its constituent tags using Algorithms 1 and 2. The
+output of this stage gives us a bag of tags which is then passed to a
+rule based classifier as given in the mapper class of Fig. 9 which
+looks for antonym pairs of certain tags such as noun, verb,
+adjective and adverb. If any antonym pair is found, it stores them in a
+separate file. The reducer class is responsible for generating a
+sentiment score using Eqs. (1)?(3) for the tweet contained in the
+file of antonym tweets and are sorted according to their sentiment
+score into positive and negative sentiment tweets. It then classifies
+all the positive sentiment tweets as sarcastic as shown in the
+reducer class of Fig. 9. In this approach, the antonym pairs of nouns,
+verbs, adjectives and adverbs are taken from NLTK wordnet [
+          <xref ref-type="bibr" rid="ref48">48</xref>
+          ].
+The algorithm PSWAP is executed under the Hadoop framework
+as well as without Hadoop framework to compare the running
+time.
+        </p>
+      </sec>
+      <sec id="sec-5-13">
+        <title>4.4. Other approaches for sarcasm detection in tweets</title>
+        <p>We propose three other novel approaches to identify sarcasm
+in three different tweet types, i.e., T4, T5 and T7 as shown in
+Table 2. Due to the unavailability of various aspects modeling these
+algorithms in the Hadoop framework is undone. However, the
+methods were implemented without the Hadoop framework. Each
+of the methods is described below.</p>
+      </sec>
+      <sec id="sec-5-14">
+        <title>4.4.1. Tweets contradicting with universal facts</title>
+        <p>
+          Tweets contradicting with universal facts (TCUF) is based on
+universal facts. In this approach, universal facts are used as a
+feature to identify sarcasm in tweets as shown in Algorithm 4. For
+an example ?the sun rises in the east? is a universal fact. The corpus
+of universal fact sentences, Algorithm 4 takes as an input and
+generates a list of ?key, value? pairs for every sentence in the
+corpus. To generate ?key, value? pair, it finds triplets of (subject, verb,
+and object) values according to the Rusu_Triplets [
+          <xref ref-type="bibr" rid="ref49">49</xref>
+          ] method for
+every sentence. Furthermore, it combines the subject and verb
+together as key and object as value. The ?key, value? pair for the
+sentence ?the sun rises in the east? is ?(sun, rises), east?.
+        </p>
+        <sec id="sec-5-14-1">
+          <title>Algorithm 4. Tweet_contradict_universal_facts.</title>
+          <p>
+            Identifying sarcasm in tweets using universal facts is shown in
+Algorithm 5. It takes the universal facts ?key, value? pair file and
+tests the tweets as input and extracts triplet values (subject,
+object, verb) from the test tweets using the Rusu_Triplets [
+            <xref ref-type="bibr" rid="ref49">49</xref>
+            ]
+method. Furthermore, we form ?key, value? pairs of the testing
+tweet using the subject, verb, and object. If the ?key, value? of the
+testing tweet is matched with any key in universal fact ?key, value?
+pair file, it checks the value of the testing tweet along with the
+corresponding value in the universal fact ?key, value? pair file. If
+both the ?key, value? pairs are matched, the current testing tweet is
+not sarcastic. Otherwise, the tweet is sarcastic.
+          </p>
+        </sec>
+        <sec id="sec-5-14-2">
+          <title>Algorithm 5. TCUF_testing_tweets.</title>
+          <p>OS
+Ubuntu_14.04 64
+Ubuntu_14.04 64
+Ubuntu_14.04 64
+Ubuntu_14.04 64
+Ubuntu_14.04 x64</p>
+          <p>CPU
+Memory
+24 GB
+8 GB
+4 GB
+4 GB
+4 GB</p>
+          <p>HDD
+1 TB
+1 TB
+20 GB
+20 GB
+20 GB
+world cup again in 2015? is ?(Australia, won), (cricketworldcup, 2015)?.</p>
+        </sec>
+        <sec id="sec-5-14-3">
+          <title>Algorithm 6. Tweet_contradict_time_dependent_facts.</title>
+        </sec>
+      </sec>
+      <sec id="sec-5-15">
+        <title>4.4.2. Tweets contradicting with time-dependent facts</title>
+        <p>
+          Tweets contradicting with time-dependent facts (TCTDF) are based
+on temporal facts. In this approach, time-dependent facts (ones that
+may change over a certain time period) are used as a feature to identify
+sarcasm in tweets as shown in Algorithm 6. For instance, ?@MirzaSania
+becomes world number one. Great day for Indian tennis? is a
+timedependent fact sentence. After some time, someone else will be the
+number one tennis player. The newspaper headlines are used as a
+corpus for time-dependent facts. Algorithm 6 uses newspaper
+headlines as an input corpus and generates a list of ?key, value? pairs for
+every headlines in the corpus. To generate a ?key, value? pair, it finds
+the triplet of (subject, verb, and object) values according to the
+Rusu_Triplets [
+          <xref ref-type="bibr" rid="ref49">49</xref>
+          ] method for every sentence. Furthermore, it combines
+the subject and verb together as key and combines the object and
+time-stamp as value. The time-stamp is the news headline date. The
+?key, value? pair for the sentence ?Wow, Australia won the cricket
+Fig. 11. Processing time to analyze sarcasm in tweets using PBLGA under the
+Hadoop framework vs without the Hadoop framework.
+        </p>
+        <p>Identifying sarcasm in tweets using time-dependent facts is
+similar to TCUF as shown in Algorithm 7. The only difference is in
+the value of the ?key, value? pair. While matching the ?key, value?
+pair of the testing tweets with the ?key, value? pair in the file to
+identify sarcasm using the TCTDF approach, one needs to match
+the object as well as the time-stamp together as the value. If both
+match, the current testing tweet is not sarcastic else it is sarcastic.</p>
+        <sec id="sec-5-15-1">
+          <title>Algorithm 7. TCTDF_testing_tweets.</title>
+        </sec>
+        <sec id="sec-5-15-2">
+          <title>Algorithm 8. Likes_and_Dislikes_Contradiction.</title>
+        </sec>
+      </sec>
+      <sec id="sec-5-16">
+        <title>4.4.3. Likes dislikes contradiction</title>
+        <p>
+          Likes dislikes contradiction (LDC) is based on the behavioral
+features of the Twitter user. It is given in Algorithm 8. Here, the
+algorithm observes a user's behavior using their past tweets. It
+analyzes the user's tweet history in the profile and generates a list
+behaviors for his likes and dislikes. To generate the likes and
+dislikes list of a particular user, one needs to crawl through all the
+past tweets from the user's Twitter account as an input for
+Algorithm 8. Next, the algorithm calculates the sentiment score of all
+the tweets in the corpus using Eqs. (1)?(3). Later it classifies the
+tweets as positive sentiment or negative sentiment using the
+sentiment score (if the sentiment score is &gt;0.0, the tweet is
+positive). Otherwise the tweet is negative. Then both the positive and
+negative tweets are stored in separate files. From the positive
+sentiment tweet file, one needs to extract triplet value (subject,
+object, verb) for every tweet in the file using the Rusu_Triplets [
+          <xref ref-type="bibr" rid="ref49">49</xref>
+          ]
+method. If the subject value is a pronoun such as ?I? or ?We?, ?object?
+value of that tweet is appended in the likes list. Otherwise, the
+?subject? value of that tweet is appended in the likes list. Similarly,
+in the negative sentiment tweet file, one needs to extract triplet
+value (subject, object, verb) for every tweet in the file using the
+Rusu_Triplets [
+          <xref ref-type="bibr" rid="ref49">49</xref>
+          ] method. If the subject value is a pronoun such
+as ?I? or ?We?, the ?object? value of that tweet is appended to the
+dislikes list. Otherwise, the ?subject? value of that tweet is
+appended in the dislikes list. For example: ?@Modi is doing good job
+for India?. Given the tweet is positive as the word ?good? is present,
+the subject of this particular tweet is ?Modi?. Therefore, "Modi" is
+appended to the likes list of that particular user.
+        </p>
+        <p>The method to identify sarcasm in tweets using behavioral
+features (likes, dislikes) is shown in Algorithm 9. The algorithm
+considers the testing tweets and the list of likes and dislikes as an
+input parameter for the particular user. While testing sarcasm in</p>
+        <sec id="sec-5-16-1">
+          <title>Algorithm 9. LDC_testing_tweets.</title>
+          <p>tweets, one needs to calculate the sentiment score of the tweet.
+Then, extract the triplet (subject, verb and object) of that tweet. If
+the tweet is positive and the subject is not a pronoun check the
+subject value in the likes list. If the subject value is found in the
+likes list, the tweet is not sarcastic. If it is found in the dislikes list,
+the tweet is sarcastic. Similarly, if the subject value is a pronoun
+and the tweet is positive the object value checks the likes list. If it
+is found the tweet is not sarcastic. If it is found in the dislikes list
+the tweet is sarcastic. In a similar fashion, one identifies sarcasm
+for negative tweets as well.</p>
+          <p>This section describes the experimental results of the proposed
+scheme. We started with an experimental setup where a five node
+cluster is deployed under the Hadoop framework. Five datasets are
+crawled using Apache Flume and the Twitter streaming API. We
+also discuss the time consumption of the proposed approach
+under the Hadoop framework as well as without the Hadoop
+framework and made a comparison. We also discuss all the
+approaches with precision, recall and F-score measure.</p>
+        </sec>
+      </sec>
+      <sec id="sec-5-17">
+        <title>5.1. Experimental environment</title>
+        <p>Our experimental setup consists of a five node cluster with the
+specifications as shown in Table 3. The master node consists of an
+Intel Xeon E5-2620 (6 core, v3 @ 2.4 GHz) processor with 6 cores
+running the Ubuntu 14.04 operating system with 24 GB of main
+memory. The remaining four nodes were virtual machines. All the
+VMs ran on a single machine. The secondary name node server is
+another Ubuntu 14.04 machine running on an Intel Xeon E5-2620
+with 8 GB of main memory. The remaining three slave nodes
+responsible for processing the data consist of three Ubuntu 14.04
+machines running Intel Xeon E5-2620 with 4 GB of main memory.</p>
+      </sec>
+      <sec id="sec-5-18">
+        <title>5.2. Datasets collection for experiment and analysis</title>
+        <p>The datasets for the experimental analysis are shown in
+Table 4. There are five sets of tweets crawled from the Twitter using
+the Twitter Streaming API and processed through Flume before
+being stored in the HDFS. In total, 1.45 million tweets were
+collected using keywords #sarcasm, #sarcastic, sarcasm, sarcastic,
+happy, enjoy, sad, good, bad, love, joyful, hate, etc. After
+preprocessing, approximately 156,000 tweets were found as sarcastic
+(tweets ending with #sarcasm or #sarcastic). The remaining
+tweets approximately 1.294 million were not sarcastic. Every set
+contained a different number of tweets. Depending on the number
+of tweets in each set, the crawling time (in hours) is given in
+Table 4.</p>
+      </sec>
+      <sec id="sec-5-19">
+        <title>5.3. Execution time for POS tagging</title>
+        <p>In this paper, POS tagging is an essential phase for all the
+proposed approaches. Therefore, we used Algorithms 1 and 2 to
+find POS information for all the datasets (approximately
+1.45 million tweets). We deployed algorithms on both Hadoop as
+well as without the Hadoop framework and estimated the elapsed
+time as shown in Fig. 10. The solid line shows time taken (approx.
+674 s) for POS tagging (approx. 10.5 million tweets) without the
+Hadoop framework, while the dotted line shows time (approx.
+225 s) for POS tagging (approx. 10.5 million tweets) under the
+Hadoop framework. Tweets were in different sets and we ran the
+POS tag algorithm separately for each set. Therefore the graph in
+Fig. 10 shows the maximum time (674 s) for 10.5 million tweets.</p>
+      </sec>
+      <sec id="sec-5-20">
+        <title>5.4. Execution time for sarcasm detection algorithm</title>
+        <p>There are three proposed approaches, namely PBLGA, IWS and
+PSWAP, which are deployed under Hadoop framework to analyze
+the estimated time for sarcasm detection in tweets. We pass
+tagged tweets as an input to all three approaches. Therefore, the
+tagging time is not considered in the proposed approaches for
+sarcasm analysis. Then, we compared the elapsed time under the
+Hadoop framework vs without the Hadoop framework for all three
+approaches as shown in Figs. 11?13. PBLGA approach takes approx.
+3386 s to analyze sarcasm in 1.4 million tweets without the
+Hadoop framework and takes approx. 1,400 s to analyze sarcasm in
+1.4 million tweets under the Hadoop framework. The IWS
+approach takes approx. 25 s to analyze sarcasm in 1.4 million tweets
+without the Hadoop framework and takes approx. 9 s to analyze
+sarcasm in 1.4 million tweets under the Hadoop framework. The
+PSWAP approach takes approx. 7,786 s to analyze sarcasm in
+1.4 million tweets without the Hadoop framework and takes
+approx. 2,663 s to analyze sarcasm in 1.4 million tweets under the
+Hadoop framework. Finally, we combined all three approaches and
+ran with 1.4 million tweets. Then, we compared the elapsed time
+under the Hadoop framework vs without the Hadoop framework
+for all three combined approaches as shown in Fig. 14 and it takes
+approx. 11,609 s to analyze sarcasm in 1.4 million tweets without
+the Hadoop framework (indicated with the solid line) and takes
+approx. 4,147 s to analyze sarcasm in 1.4 million tweets under the
+Hadoop framework (indicated with the dotted line).</p>
+      </sec>
+      <sec id="sec-5-21">
+        <title>5.5. Statistical evaluation metrics</title>
+        <p>There are three statistical parameters, namely precision, recall
+and F-score, which are used to evaluate our proposed approaches.
+Precision shows how much relevant information is identified
+correctly and recall shows how much extracted information is
+relevant. F-score is the harmonic mean of precision and recall. Eqs. 6,
+7, and 8 shows the formula to calculate precision, recall and F-score,
+respectively:
+Precision =</p>
+        <p>Tp</p>
+        <p>Tp + Fp
+Recall =</p>
+        <p>Tp</p>
+        <p>Tp + Fn
+F ? Score = 2?Precision?Recall</p>
+        <p>Precision + Recall
+where Tp is true positive, Fp is false positive, and Fn is false negative.</p>
+        <p>Experimental datasets consist of a mixture of sarcastic and
+non-sarcastic tweets. In this paper, we assume the tweets with the
+hashtag sarcasm or sarcastic (#sarcasm or #sarcastic) as sarcastic
+tweets. The datasets consist of a total of 1.4 million tweets. Among
+these tweets, 156,000 were sarcastic and the rest was
+non-sarcastic. Experimental results in terms of precision, recall and
+F ? score was the same under both the Hadoop and the
+nonHadoop framework. The only difference was algorithm processing
+time due to the parallel architecture of HDFS. Experimental results
+are shown in Table 5.
+(6)
+(7)
+(8)</p>
+      </sec>
+      <sec id="sec-5-22">
+        <title>5.6. Discussion on experimental results</title>
+        <p>
+          Among the six proposed approaches, PBLGA and IWS were
+earlier implemented and discussed in [
+          <xref ref-type="bibr" rid="ref19">19</xref>
+          ] with a small set of test
+data (approx. 3,000 tweets for each experiment) and deployed in a
+non-Hadoop framework. In this work, we deployed PSWAP (novel
+approach) along with PBLGA and IWS in both a Hadoop and
+nonHadoop framework to check the efficiency in terms of time. PBLGA
+generates four lexicon files, namely positive sentiment, negative
+situation, positive situation, and negative sentiment, using
+156,000 sarcastic tweets. The PBLGA algorithm used 1.45 million
+tweets as test data. While testing, PBLGA checks each tweet's
+structure for the contradiction between positive sentiment and
+negative situation and vice versa to classify them as sarcastic or
+non-sarcastic. For 1.45 million tweets, PBLGA takes approx. 3386 s
+in the non-Hadoop framework and it takes approx. 1,400 s in the
+Hadoop framework. PBLGA consumes most of the time to access
+the four lexicon files for every tweet to meet the condition of
+tweet structure. IWS does not require any training set to identify
+tweets as sarcastic. Therefore, it takes the minimal processing time
+in both frameworks (25 s for the without Hadoop and 9 s for the
+Hadoop framework). PSWAP requires a list of antonym pairs for
+noun, adjective, adverb, and verb to identify sarcasm in tweets.
+Therefore, it takes approx. 7,786 s for 1.45 million tweets in the
+non-hadoop framework and approx. 2,663 s for 1.45 million
+tweets in the Hadoop framework. PSWAP consumes most of the
+time in searching antonym pairs for all four tags (noun, adjective,
+adverb, and verb) for every tweet. Finally, we combined all three
+approaches together and tested. In the combined approach, the
+Fscore value attained is 97%, but execution time is more as it checks
+all three approaches sequentially for every tweet until each one is
+satisfied to detect sarcasm.
+        </p>
+        <p>Three more novel algorithms were proposed, namely TCUF,
+TCTDF and LDC. These three algorithms are implemented using
+conventional methods with small datasets. Presently, there are no
+sufficient datasets available with us to deploy these algorithms
+under the Hadoop framework. TCUF requires a corpus of universal
+facts. The accuracy of this approach is dependent on the universal
+facts set. We crawled approximately 5,000 universal facts from
+Google and Wikipedia for experimentation. TCTDF requires a
+corpus of time-dependent facts. Accuracy of this approach is
+dependent on the time-dependent facts. Presently, we trained TCTDF
+with 10,000 news article headlines as time-dependent facts. LDC
+requires Twitter users? profile information and their past tweet
+history. In this work, we tested LDC using ten Twitter users profile
+and their past tweet history.</p>
+      </sec>
+    </sec>
+    <sec id="sec-6">
+      <title>6. Conclusion and future work</title>
+      <p>Sarcasm detection and analysis in social media provides
+invaluable insight into the current public opinion on trends and
+events in real time. In this paper six algorithms, namely PBLGA,
+IWS, PSWAP, TCUF, TCTDF, and LDC, were proposed to detect
+sarcasm in tweets collected from Twitter. Three algorithms were run
+with and without the Hadoop framework. The running time of
+each algorithm was shown. The processing time under the Hadoop
+framework with data nodes reduced up to 66% on 1.45 million
+tweets.</p>
+      <p>In the future, sufficient datasets suitable for the other three
+algorithms namely LDC, TCUF and TCTDF need to be attained and
+deployed under the Hadoop framework.</p>
+      <p>Bakhtyar Vachha is currently pursuing his M.Tech in Computer Science &amp;
+Engineering from National Institute of Technology Rourkela, India. His research
+interest includes network security and big data.</p>
+      <p>Ramkrushna Pradhan is currently pursuing his M.Tech duel degree in Computer
+Science &amp; Engineering from National Institute of Technology Rourkela, India. His
+research interest includes speech translation, social media analysis and big data.
+Sanjay Kumar Jena is working as Professor in the Department of Computer Science
+&amp; Engineering, National Institute of Technology Rourkela, India.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          [1]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Chaffey</surname>
+          </string-name>
+          ,
+          <source>Global Social Media Research Summary</source>
+          <year>2016</year>
+          . URL ?http://www. smartinsights.
+          <article-title>com/social-media-marketing/social-media-strategy/new-glo bal-social-media-research/?.</article-title>
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          [2]
+          <string-name>
+            <given-names>W.</given-names>
+            <surname>Tan</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.B.</given-names>
+            <surname>Blake</surname>
+          </string-name>
+          , I. Saleh,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Dustdar</surname>
+          </string-name>
+          ,
+          <article-title>Social-network-sourced big data analytics</article-title>
+          ,
+          <source>Internet Comput</source>
+          .
+          <volume>17</volume>
+          (
+          <issue>5</issue>
+          ) (
+          <year>2013</year>
+          )
+          <fpage>62</fpage>
+          -
+          <lpage>69</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          [3]
+          <string-name>
+            <given-names>Z.N.</given-names>
+            <surname>Gastelum</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>K.M. Whattam</surname>
+          </string-name>
+          ,
+          <article-title>State-of-the-Art of Social Media Analytics Research</article-title>
+          , Pacific Northwest National Laboratory,
+          <year>2013</year>
+          , pp.
+          <fpage>1</fpage>
+          -
+          <lpage>9</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          [4]
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Zikopoulos</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Eaton</surname>
+          </string-name>
+          ,
+          <article-title>Understanding Big Data: Analytics for Enterprise Class Hadoop and Streaming Data</article-title>
+          ,
+          <string-name>
+            <surname>McGraw-Hill Osborne</surname>
+            <given-names>Media</given-names>
+          </string-name>
+          ,
+          <year>2011</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          [5]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Riloff</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Qadir</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Surve</surname>
+          </string-name>
+          , L. De Silva,
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Gilbert</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Huang</surname>
+          </string-name>
+          ,
+          <article-title>Sarcasm as contrast between a positive sentiment and negative situation</article-title>
+          ,
+          <source>in: Proceedings of the Conference on Empirical Methods in Natural Language Processing</source>
+          ,
+          <year>2013</year>
+          , pp.
+          <fpage>704</fpage>
+          -
+          <lpage>714</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          [6]
+          <string-name>
+            <surname>Hadoop</surname>
+          </string-name>
+          . URL ?http://hadoop.apache.org/?.
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          [7]
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Fitzgerald</surname>
+          </string-name>
+          , I. Foster,
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Kesselman</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>G.</given-names>
+            <surname>Von Laszewski</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>W.</given-names>
+            <surname>Smith</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Tuecke</surname>
+          </string-name>
+          ,
+          <article-title>A directory service for configuring high-performance distributed computations</article-title>
+          ,
+          <source>in: Proceedings on High Performance Distributed Computing</source>
+          , IEEE,
+          <year>1997</year>
+          , pp.
+          <fpage>365</fpage>
+          -
+          <lpage>375</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          [8]
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Dean</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Ghemawat</surname>
+          </string-name>
+          ,
+          <source>Mapreduce: simplified data processing on large clusters, Commun. ACM</source>
+          <volume>51</volume>
+          (
+          <issue>1</issue>
+          ) (
+          <year>2008</year>
+          )
+          <fpage>107</fpage>
+          -
+          <lpage>113</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Hoffman</surname>
+          </string-name>
+          , Apache Flume:
+          <article-title>Distributed Log Collection for Hadoop</article-title>
+          ,
+          <source>Packt Publishing Ltd</source>
+          ,
+          <year>2013</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          [10]
+          <string-name>
+            <surname>Flume</surname>
+          </string-name>
+          . URL ?http://flume.apache.org/?.
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          [11]
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Shvachko</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Kuang</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Radia</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Chansler</surname>
+          </string-name>
+          ,
+          <article-title>The Hadoop distributed file system</article-title>
+          ,
+          <source>in: Proceedings of 26th Symposium on Mass Storage Systems and Technologies (MSST)</source>
+          , IEEE,
+          <year>2010</year>
+          , pp.
+          <fpage>1</fpage>
+          -
+          <lpage>10</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          [12]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Thusoo</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.S.</given-names>
+            <surname>Sarma</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Jain</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>Z.</given-names>
+            <surname>Shao</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Chakka</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Anthony</surname>
+          </string-name>
+          , H. Liu,
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Wyckoff</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Murthy</surname>
+          </string-name>
+          ,
+          <article-title>Hive: a warehousing solution over a map-reduce framework</article-title>
+          ,
+          <source>Proc. VLDB Endow</source>
+          .
+          <volume>2</volume>
+          (
+          <issue>2</issue>
+          ) (
+          <year>2009</year>
+          )
+          <fpage>1626</fpage>
+          -
+          <lpage>1629</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>
+          [13]
+          <string-name>
+            <given-names>S.M.</given-names>
+            <surname>Thede</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.P.</given-names>
+            <surname>Harper</surname>
+          </string-name>
+          ,
+          <article-title>A second-order hidden Markov model for part-ofspeech tagging</article-title>
+          ,
+          <source>in: Proceedings of the 37th Annual Meeting on Computational Linguistics</source>
+          ,
+          <string-name>
+            <surname>ACL</surname>
+          </string-name>
+          ,
+          <year>1999</year>
+          , pp.
+          <fpage>175</fpage>
+          -
+          <lpage>182</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>
+          [14]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Klein</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>C.D.</given-names>
+            <surname>Manning</surname>
+          </string-name>
+          ,
+          <article-title>Accurate unlexicalized parsing</article-title>
+          ,
+          <source>in: Proceedings of the 41st Annual Meeting on Association for Computational Linguistics</source>
+          ,
+          <string-name>
+            <surname>ACL</surname>
+          </string-name>
+          ,
+          <year>2003</year>
+          , pp.
+          <fpage>423</fpage>
+          -
+          <lpage>430</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>
+          [15]
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Park</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Hwang</surname>
+          </string-name>
+          ,
+          <article-title>A bio-text mining system based on natural language processing</article-title>
+          ,
+          <source>J. KISS: Comput. Pract</source>
+          .
+          <volume>17</volume>
+          (
+          <issue>4</issue>
+          ) (
+          <year>2011</year>
+          )
+          <fpage>205</fpage>
+          -
+          <lpage>213</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>
+          [16]
+          <string-name>
+            <given-names>Q.</given-names>
+            <surname>Mei</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Zhai</surname>
+          </string-name>
+          ,
+          <article-title>Discovering evolutionary theme patterns from text: an exploration of temporal text mining</article-title>
+          ,
+          <source>in: Proceedings of the Eleventh ACM SIGKDD International Conference on Knowledge Discovery in Data Mining, ACM</source>
+          ,
+          <year>2005</year>
+          , pp.
+          <fpage>198</fpage>
+          -
+          <lpage>207</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>
+          [17]
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Liu</surname>
+          </string-name>
+          ,
+          <article-title>Sentiment analysis and opinion mining</article-title>
+          ,
+          <source>Synth. Lect. Hum. Lang. Technol</source>
+          .
+          <volume>5</volume>
+          (
+          <issue>1</issue>
+          ) (
+          <year>2012</year>
+          )
+          <fpage>1</fpage>
+          -
+          <lpage>167</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>
+          [18]
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>González-Ibánez</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Muresan</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Wacholder</surname>
+          </string-name>
+          ,
+          <article-title>Identifying sarcasm in twitter: a closer look</article-title>
+          ,
+          <source>in: Proceedings of the 49th Annual Meeting on Human Language Technologies</source>
+          ,
+          <string-name>
+            <surname>ACL</surname>
+          </string-name>
+          ,
+          <year>2011</year>
+          , pp.
+          <fpage>581</fpage>
+          -
+          <lpage>586</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>
+          [19]
+          <string-name>
+            <given-names>S.K.</given-names>
+            <surname>Bharti</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.S.</given-names>
+            <surname>Babu</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.K.</given-names>
+            <surname>Jena</surname>
+          </string-name>
+          ,
+          <article-title>Parsing-based sarcasm sentiment recognition in twitter data</article-title>
+          ,
+          <source>in: Proceedings of the 2015 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</source>
+          , ACM,
+          <year>2015</year>
+          , pp.
+          <fpage>1373</fpage>
+          -
+          <lpage>1380</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>
+          [20]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Lunando</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Purwarianti</surname>
+          </string-name>
+          ,
+          <article-title>Indonesian social media sentiment analysis with sarcasm detection</article-title>
+          ,
+          <source>in: International Conference on Advanced Computer Science and Information Systems (ICACSIS)</source>
+          , IEEE,
+          <year>2013</year>
+          , pp.
+          <fpage>195</fpage>
+          -
+          <lpage>198</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>
+          [21]
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Tungthamthiti</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Kiyoaki</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>M.</surname>
+          </string-name>
+          <article-title>Mohd, Recognition of sarcasm in tweets based on concept level sentiment analysis and supervised learning approaches</article-title>
+          ,
+          <source>in: 28th Pacific Asia Conference on Language, Information and Computation</source>
+          ,
+          <year>2014</year>
+          , pp.
+          <fpage>404</fpage>
+          -
+          <lpage>413</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref22">
+        <mixed-citation>
+          [22]
+          <string-name>
+            <given-names>I.</given-names>
+            <surname>Ha</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Back</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Ahn</surname>
+          </string-name>
+          ,
+          <article-title>Mapreduce functions to analyze sentiment information from social big data</article-title>
+          ,
+          <source>Int. J. Distrib. Sens. Netw</source>
+          .
+          <year>2015</year>
+          (
+          <article-title>1) (</article-title>
+          <year>2015</year>
+          )
+          <fpage>1</fpage>
+          -
+          <lpage>11</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref23">
+        <mixed-citation>
+          [23]
+          <article-title>Twitter streaming api</article-title>
+          . URL ?http://apiwiki.twitter.com/?,
+          <year>2010</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref24">
+        <mixed-citation>
+          [24]
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Kalucki</surname>
+          </string-name>
+          ,
+          <article-title>Twitter streaming api</article-title>
+          . URL ?http://apiwiki.twitter.com/StreamingAPI-Documentation/?,
+          <year>2010</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref25">
+        <mixed-citation>
+          [25]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Bifet</surname>
+          </string-name>
+          , E. Frank,
+          <article-title>Sentiment knowledge discovery in twitter streaming data</article-title>
+          ,
+          <source>in: 13th International Conference on Discovery Science</source>
+          , Springer,
+          <year>2010</year>
+          , pp.
+          <fpage>1</fpage>
+          -
+          <lpage>15</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref26">
+        <mixed-citation>
+          [26]
+          <string-name>
+            <given-names>Z.</given-names>
+            <surname>Tufekci</surname>
+          </string-name>
+          ,
+          <article-title>Big questions for social media big data: representativeness, validity and other methodological pitfalls</article-title>
+          ,
+          <source>arXiv preprint arXiv:1403</source>
+          .
+          <fpage>7400</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref27">
+        <mixed-citation>
+          [27]
+          <string-name>
+            <given-names>A.P.</given-names>
+            <surname>Shirahatti</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Patil</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Kubasad</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Mujawar</surname>
+          </string-name>
+          ,
+          <source>Sentiment Analysis on Twitter Data Using Hadoop.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref28">
+        <mixed-citation>
+          [28]
+          <string-name>
+            <given-names>R.C.</given-names>
+            <surname>Taylor</surname>
+          </string-name>
+          ,
+          <article-title>An overview of the Hadoop/mapreduce/hbase framework and its current applications in bioinformatics</article-title>
+          , BMC Bioinform.
+          <volume>11</volume>
+          (
+          <issue>Suppl 12</issue>
+          ) (
+          <year>2010</year>
+          )
+          <fpage>1</fpage>
+          -
+          <lpage>6</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref29">
+        <mixed-citation>
+          [29]
+          <string-name>
+            <given-names>M.</given-names>
+            <surname>Kornacker</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Erickson</surname>
+          </string-name>
+          , Cloudera Impala:
+          <article-title>Real Time Queries in Apache Hadoop, for Real</article-title>
+          . URL ?http://blog?. cloudera. com/blog/2012/10/cloudera
+          <article-title>-impala-real-time-queries-in-apache-hadoop-for-real.</article-title>
+        </mixed-citation>
+      </ref>
+      <ref id="ref30">
+        <mixed-citation>
+          [30]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Davidov</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>O.</given-names>
+            <surname>Tsur</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Rappoport</surname>
+          </string-name>
+          ,
+          <article-title>Semi-supervised recognition of sarcastic sentences in twitter and amazon</article-title>
+          ,
+          <source>in: Proceedings of the Fourteenth Conference on Computational Natural Language Learning</source>
+          , ACL,
+          <year>2010</year>
+          , pp.
+          <fpage>107</fpage>
+          -
+          <lpage>116</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref31">
+        <mixed-citation>
+          [31]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Filatova</surname>
+          </string-name>
+          ,
+          <article-title>Irony and sarcasm: Corpus generation and analysis using crowdsourcing</article-title>
+          ,
+          <source>in: Proceedings of Language Resources and Evaluation Conference</source>
+          ,
+          <year>2012</year>
+          , pp.
+          <fpage>392</fpage>
+          -
+          <lpage>398</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref32">
+        <mixed-citation>
+          [32]
+          <string-name>
+            <given-names>R.J.</given-names>
+            <surname>Kreuz</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.M.</given-names>
+            <surname>Roberts</surname>
+          </string-name>
+          ,
+          <article-title>Two cues for verbal irony: hyperbole and the ironic tone of voice</article-title>
+          ,
+          <source>Metaphor Symb</source>
+          .
+          <volume>10</volume>
+          (
+          <issue>1</issue>
+          ) (
+          <year>1995</year>
+          )
+          <fpage>21</fpage>
+          -
+          <lpage>31</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref33">
+        <mixed-citation>
+          [33]
+          <string-name>
+            <given-names>R.J.</given-names>
+            <surname>Kreuz</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>G.M.</given-names>
+            <surname>Caucci</surname>
+          </string-name>
+          ,
+          <article-title>Lexical influences on the perception of sarcasm</article-title>
+          ,
+          <source>in: Proceedings of the Workshop on Computational Approaches</source>
+          to Figurative Language,
+          <string-name>
+            <surname>ACL</surname>
+          </string-name>
+          ,
+          <year>2007</year>
+          , pp.
+          <fpage>1</fpage>
+          -
+          <lpage>4</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref34">
+        <mixed-citation>
+          [34]
+          <string-name>
+            <given-names>O.</given-names>
+            <surname>Tsur</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Davidov</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Rappoport</surname>
+          </string-name>
+          ,
+          <article-title>Icwsm-a great catchy name: Semi-supervised recognition of sarcastic sentences in online product reviews</article-title>
+          ,
+          <source>in: Proceedings of International Conference on Weblogs and Social Media</source>
+          ,
+          <year>2010</year>
+          , pp.
+          <fpage>162</fpage>
+          -
+          <lpage>169</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref35">
+        <mixed-citation>
+          [35]
+          <string-name>
+            <given-names>J.W.</given-names>
+            <surname>Pennebaker</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.E.</given-names>
+            <surname>Francis</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.J.</given-names>
+            <surname>Booth</surname>
+          </string-name>
+          ,
+          <source>Linguistic Inquiry and Word Count: Liwc</source>
+          <year>2001</year>
+          , vol.
+          <volume>71</volume>
+          , no.
+          <issue>1</issue>
+          , Lawrence Erlbaum Associates, Mahway,
+          <year>2001</year>
+          , pp.
+          <fpage>1</fpage>
+          -
+          <lpage>11</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref36">
+        <mixed-citation>
+          [36]
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Strapparava</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Valitutti</surname>
+          </string-name>
+          , et al.,
+          <article-title>Wordnet affect: an affective extension of wordnet</article-title>
+          ,
+          <source>in: Proceedings of Language Resources and Evaluation Conference</source>
+          , vol.
+          <volume>4</volume>
+          ,
+          <issue>2004</issue>
+          , pp.
+          <fpage>1083</fpage>
+          -
+          <lpage>1086</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref37">
+        <mixed-citation>
+          [37]
+          <string-name>
+            <given-names>F.</given-names>
+            <surname>Barbieri</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>H.</given-names>
+            <surname>Saggion</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>F.</given-names>
+            <surname>Ronzano</surname>
+          </string-name>
+          ,
+          <article-title>Modelling sarcasm in twitter a novel approach</article-title>
+          ,
+          <source>in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis</source>
+          ,
+          <year>2014</year>
+          , pp.
+          <fpage>50</fpage>
+          -
+          <lpage>58</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref38">
+        <mixed-citation>
+          [38]
+          <string-name>
+            <given-names>P.</given-names>
+            <surname>Carvalho</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>L.</given-names>
+            <surname>Sarmento</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.J.</given-names>
+            <surname>Silva</surname>
+          </string-name>
+          , E. De Oliveira,
+          <article-title>Clues for detecting irony in user-generated contents: oh</article-title>
+          ...!! it's so easy;-),
+          <source>in: Proceedings of the 1st International CIKM Workshop on Topic-Sentiment Analysis for Mass Opinion</source>
+          , ACM,
+          <year>2009</year>
+          , pp.
+          <fpage>53</fpage>
+          -
+          <lpage>56</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref39">
+        <mixed-citation>
+          [39]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Tayal</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>S.</given-names>
+            <surname>Yadav</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Gupta</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Rajput</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Kumari</surname>
+          </string-name>
+          ,
+          <article-title>Polarity detection of sarcastic political tweets</article-title>
+          ,
+          <source>in: Proceedings of International Conference on Computing for Sustainable Global Development (INDIACom)</source>
+          , IEEE,
+          <year>2014</year>
+          , pp.
+          <fpage>625</fpage>
+          -
+          <lpage>628</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref40">
+        <mixed-citation>
+          [40]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Rajadesingan</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>R.</given-names>
+            <surname>Zafarani</surname>
+          </string-name>
+          , H. Liu,
+          <article-title>Sarcasm detection on twitter: a behavioral modeling approach</article-title>
+          ,
+          <source>in: Proceedings of the Eighth ACM International Conference on Web Search and Data Mining, ACM</source>
+          ,
+          <year>2015</year>
+          , pp.
+          <fpage>97</fpage>
+          -
+          <lpage>106</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref41">
+        <mixed-citation>
+          [41]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Utsumi</surname>
+          </string-name>
+          ,
+          <article-title>Verbal irony as implicit display of ironic environment: distinguishing ironic utterances from nonirony</article-title>
+          ,
+          <source>J. Pragmat</source>
+          .
+          <volume>32</volume>
+          (
+          <issue>12</issue>
+          ) (
+          <year>2000</year>
+          )
+          <fpage>1777</fpage>
+          -
+          <lpage>1806</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref42">
+        <mixed-citation>
+          [42]
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Liebrecht</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>F.</given-names>
+            <surname>Kunneman</surname>
+          </string-name>
+          , A. van den Bosch,
+          <article-title>The perfect solution for detecting sarcasm in tweets# not</article-title>
+          ,
+          <source>in: Proceedings of the 4th Workshop on Computational Approaches</source>
+          to Subjectivity,
+          <article-title>Sentiment and Social Media Analysis</article-title>
+          ,
+          <string-name>
+            <surname>ACL</surname>
+          </string-name>
+          , New Brunswick, NJ,
+          <year>2013</year>
+          , pp.
+          <fpage>29</fpage>
+          -
+          <lpage>37</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref43">
+        <mixed-citation>
+          [43]
+          <string-name>
+            <given-names>M.P.</given-names>
+            <surname>Marcus</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.A.</given-names>
+            <surname>Marcinkiewicz</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Santorini</surname>
+          </string-name>
+          ,
+          <article-title>Building a large annotated corpus of English: the Penn treebank</article-title>
+          ,
+          <source>Comput. Linguist</source>
+          .
+          <volume>19</volume>
+          (
+          <issue>2</issue>
+          ) (
+          <year>1993</year>
+          )
+          <fpage>313</fpage>
+          -
+          <lpage>330</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref44">
+        <mixed-citation>
+          [44]
+          <string-name>
+            <given-names>A.</given-names>
+            <surname>Esuli</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>F.</given-names>
+            <surname>Sebastiani</surname>
+          </string-name>
+          ,
+          <article-title>Sentiwordnet: A publicly available lexical resource for opinion mining</article-title>
+          ,
+          <source>in: Proceedings of Language Resources and Evaluation Conference</source>
+          ,
+          <year>2006</year>
+          , pp.
+          <fpage>417</fpage>
+          -
+          <lpage>422</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref45">
+        <mixed-citation>
+          [45]
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Ide</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>K.</given-names>
+            <surname>Suderman</surname>
+          </string-name>
+          ,
+          <article-title>The american national corpus first release</article-title>
+          ,
+          <source>in: Proceedings of Language Resources and Evaluation Conference</source>
+          , Citeseer,
+          <year>2004</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref46">
+        <mixed-citation>
+          [46]
+          <string-name>
+            <given-names>N.</given-names>
+            <surname>Ide</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>C.</given-names>
+            <surname>Macleod</surname>
+          </string-name>
+          ,
+          <article-title>The american national corpus: a standardized resource of American English</article-title>
+          , in
+          <source>: Proceedings of Corpus Linguistics</source>
+          ,
+          <year>2001</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref47">
+        <mixed-citation>
+          [47]
+          <string-name>
+            <given-names>E.</given-names>
+            <surname>Charniak</surname>
+          </string-name>
+          ,
+          <article-title>Statistical techniques for natural language parsing</article-title>
+          ,
+          <source>AI Mag</source>
+          .
+          <volume>18</volume>
+          (
+          <issue>4</issue>
+          ) (
+          <year>1997</year>
+          )
+          <fpage>33</fpage>
+          -
+          <lpage>43</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref48">
+        <mixed-citation>
+          [48]
+          <string-name>
+            <given-names>J.</given-names>
+            <surname>Perkins</surname>
+          </string-name>
+          ,
+          <source>Python Text Processing with NLTK 2.0 Cookbook</source>
+          , Packt Publishing Ltd,
+          <year>2010</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref49">
+        <mixed-citation>
+          [49]
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Rusu</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>L.</given-names>
+            <surname>Dali</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>B.</given-names>
+            <surname>Fortuna</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>M.</given-names>
+            <surname>Grobelnik</surname>
+          </string-name>
+          ,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Mladenic</surname>
+          </string-name>
+          ,
+          <article-title>Triplet extraction from sentences</article-title>
+          ,
+          <source>in: Proceedings of the 10th International Multiconference on Information Society-IS</source>
+          ,
+          <year>2007</year>
+          , pp.
+          <fpage>8</fpage>
+          -
+          <lpage>12</lpage>
+          .
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+

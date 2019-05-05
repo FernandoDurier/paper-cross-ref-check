@@ -1,0 +1,1420 @@
+{
+    "abstract": {
+        "p": "Sarcasm is a peculiar form of sentiment expression, where the surface sentiment di ers from the implied sentiment. The detection of sarcasm in social media platforms has been applied in the past mainly to textual utterances where lexical indicators (such as interjections and intensi ers), linguistic markers, and contextual information (such as user pro les, or past conversations) were used to detect the sarcastic tone. However, modern social media platforms allow to create multimodal messages where audiovisual content is integrated with the text, making the analysis of a mode in isolation partial. In our work, we rst study the relationship between the textual and visual aspects in multimodal posts from three major social media platforms, i.e., Instagram, Tumblr and Twitter, and we run a crowdsourcing task to quantify the extent to which images are perceived as necessary by human annotators. Moreover, we propose two di erent computational frameworks to detect sarcasm that integrate the textual and visual modalities. The rst approach exploits visual semantics trained on an external dataset, and concatenates the semantics features with stateof-the-art textual features. The second method adapts a visual neural network initialized with parameters trained on ImageNet to multimodal sarcastic posts. Results show the positive e ect of combining modalities for the detection of sarcasm across platforms and methods."
+    },
+    "affiliation": [
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff0",
+            "addr-line": "Corso Svizzera 185, 10149, Turin",
+            "country": {
+                "#text": "Italy",
+                "@country": "IT"
+            },
+            "institution": "University of Turin",
+            "label": "0"
+        },
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff1",
+            "addr-line": "229 West 43rd Street, New York, NY 10036",
+            "country": {
+                "#text": "USA",
+                "@country": "US"
+            },
+            "institution": "Yahoo",
+            "label": "1"
+        }
+    ],
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "email": "schifane@di.unito.it",
+            "string-name": "Rossano Schifanella",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "pdjuan@yahoo-inc.com",
+            "string-name": "Paloma de Juan",
+            "xref": {
+                "#text": "1",
+                "@ref-type": "aff",
+                "@rid": "aff1"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": [
+                "liangliang@yahoo-",
+                "liangliang@yahooinc.com"
+            ],
+            "string-name": "Liangliang Cao",
+            "xref": {
+                "#text": "1",
+                "@ref-type": "aff",
+                "@rid": "aff1"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "tetreaul@gmail.com",
+            "string-name": "Joel Tetreault",
+            "xref": {
+                "#text": "1",
+                "@ref-type": "aff",
+                "@rid": "aff1"
+            }
+        },
+        {
+            "@contrib-type": "editor",
+            "string-name": "Sarcasm; Social Media; Multimodal; Deep Learning; NLP"
+        }
+    ],
+    "clean-authors": [
+        "Rossano Schifanella",
+        "Paloma de Juan",
+        "Liangliang Cao",
+        "Joel Tetreault",
+        "Sarcasm; Social Media; Multimodal; Deep Learning; NLP"
+    ],
+    "clean-refs": [
+        {
+            "authors": "Attardo, Eisterhold, Hay, and I. Poggi., , ",
+            "source": "Journal of Humor Research",
+            "title": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          . Humor-international\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Bamman, Smith., Mascolo, , ",
+            "source": "Proc. of the Ninth Int. Conference on Web and Social Media, ICWSM",
+            "title": "[2]\n          \n          and\n          \n          \n          . In M. Cha,\n          \n          , and C. Sandvig, editors,\n          \n          , pages\n          \n          {\n          \n          . AAAI Press,\n          \n          ."
+        },
+        {
+            "authors": "Barbieri, Saggion, Ronzano, Baltimore, , ",
+            "source": "In Proc. of the Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+            "title": "[3]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , Maryland,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Borth, Chen, Ji, Chang, , ",
+            "source": "In Proc. of the ACM Int. Conference on Multimedia, MM '13",
+            "title": "[4]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          . Sentibank:\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , New York, NY, USA,\n          \n          . ACM."
+        },
+        {
+            "authors": "Chat eld, Simonyan, Vedaldi, Zisserman, , ",
+            "source": "In BMVC",
+            "title": "[5]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Davidov, Tsur, Rappoport, Stroudsburg, , ",
+            "source": [
+                "In Proc. of the Conference on Computational Natural Language Learning",
+                "CoNLL '10"
+            ],
+            "title": "[6]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , PA, USA,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Faruqui, Dyer, , ",
+            "source": "In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+            "title": "[7]\n          \n          and\n          \n          .\n          \n          .\n          \n          , volume\n          \n          , pages\n          \n          {\n          \n          , Beijing, China,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Frome, Shlens, Bengio, Dean, Ranzato, Mikolov, , ",
+            "source": "In Advances In Neural Information Processing Systems",
+            "title": "[8]\n          \n          , G. Corrado,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , NIPS,\n          \n          ."
+        },
+        {
+            "authors": "Ghosh, Guo, Muresan, Callison-Burch, Su, Pighin, , ",
+            "source": "EMNLP",
+            "title": "[9]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . In L. Marquez,\n          \n          ,\n          \n          ,\n          \n          , and Y. Marton, editors,\n          \n          , pages\n          \n          {\n          \n          . The Association for Computational Linguistics,\n          \n          ."
+        },
+        {
+            "authors": "Ghosh, Guo, Muresan, , ",
+            "source": "In Proc. of the Conference on Empirical Methods in Natural Language Processing",
+            "title": "[10]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , Lisbon, Portugal,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Gibbs, , ",
+            "source": "The Cambridge Handbook of Metaphor and Thought",
+            "title": "[11]\n          \n          .\n          \n          . Cambridge Handbooks in Psychology. Cambridge University Press,\n          \n          ."
+        },
+        {
+            "authors": "Gibbs, Colston, , ",
+            "source": null,
+            "title": "[12]\n          \n          and\n          \n          .\n          \n          . Lawrence Erlbaum Associates,\n          \n          ."
+        },
+        {
+            "authors": "Gonzalez-Iban, Wacholder, Stroudsburg, , ",
+            "source": [
+                "In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+                "of HLT '11"
+            ],
+            "title": "[13]\n          \n          ~ez, S. Muresan, and\n          \n          .\n          \n          .\n          \n          , volume\n          \n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , PA, USA,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Jia, Shelhamer, Donahue, Karayev, Long, Girshick, Guadarrama, , ",
+            "source": "arXiv preprint arXiv:1408.5093",
+            "title": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and T. Darrell. Ca e:\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Joachims, , ",
+            "source": [
+                "In Proceedings of the 10th European Conference on Machine Learning",
+                "ECML '98"
+            ],
+            "title": "[15]\n          \n          .\n          \n          .\n          \n          ,\n          \n          , pages\n          \n          {\n          \n          , London, UK, UK,\n          \n          . Springer-Verlag."
+        },
+        {
+            "authors": "Joshi, Bhattacharyya, Carman, , ",
+            "source": "CoRR, abs/1602.03426",
+            "title": "[16]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Joshi, Sharma, Bhattacharyya, , ",
+            "source": "In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+            "title": "[17]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , volume\n          \n          , pages\n          \n          {\n          \n          . The Association for Computer Linguistics,\n          \n          ."
+        },
+        {
+            "authors": "Karayev, Hertzmann, Winnemoeller, Agarwala, Darrell, , ",
+            "source": "BMVC",
+            "title": "[18]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Khattri, Joshi, Bhattacharyya, Carman, Lisboa, , ",
+            "source": "In Proc. of the Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+            "title": "[19]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , Portugal,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Kincaid, Fishburne, Jr., Rogers, Chissom, , ",
+            "source": "Technical report, DTIC Document",
+            "title": "[20]\n          \n          ,\n          \n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Kiros, Salakhutdinov, Zemel, , ",
+            "source": "CoRR, abs/1411.2539",
+            "title": "[21]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Landis, G. G. Koch., , ",
+            "source": "Biometrics",
+            "title": "[22]\n          \n          and\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          ."
+        },
+        {
+            "authors": "Ma, Lu, Shang, Li, , ",
+            "source": "CoRR, abs/1504.06063",
+            "title": "[23]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Mao, Xu, Yang, Wang, Yuille, , ",
+            "source": "CoRR, abs/1412.6632",
+            "title": "[24]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Mikolov, Chen, Corrado, Dean, , ",
+            "source": "In Advances in neural information processing systems",
+            "title": "[25]\n          \n          , I. Sutskever,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Pavlick, Nenkova, , ",
+            "source": "In Proc. of the Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+            "title": "[26]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , Denver, Colorado, May{June 2015.\n          \n          ."
+        },
+        {
+            "authors": "Rajadesingan, Zafarani, Liu, , ",
+            "source": "In Proc. of the ACM Int. Conference on Web Search and Data Mining, WSDM '15",
+            "title": "[27]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , New York, NY, USA,\n          \n          . ACM."
+        },
+        {
+            "authors": "Razavian, Azizpour, Sullivan, S. Carlsson., , ",
+            "source": "CVPR DeepVision workshop",
+            "title": "[28]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Reyes, Rosso, Veale, Mar, , ",
+            "source": null,
+            "title": "[29]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . Lang. Resour. Eval.,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .\n          \n          ."
+        },
+        {
+            "authors": "Rilo, Qadir, Surve, Silva, Gilbert, Huang, ACL, , ",
+            "source": "In EMNLP",
+            "title": "[30]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          .\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Shutova, Kiela, Maillard, , ",
+            "source": "In Proc. of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+            "title": "[31]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , San Diego, California, June 2016.\n          \n          ."
+        },
+        {
+            "authors": "Tepperman, Traum, Narayanan, , ",
+            "source": "In Proc. of InterSpeech",
+            "title": "[32]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , Pittsburgh, PA, Sept.\n          \n          ."
+        },
+        {
+            "authors": "Thomee, Elizalde, Shamma, Ni, Friedland, Poland, Borth, Li, , ",
+            "source": "Communications of the ACM",
+            "title": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Tsur, Davidov, Rappoport, Cohen, , ",
+            "source": "Proc. of the Int. Conference on Weblogs and Social Media (ICWSM-2010)",
+            "title": "[34]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          . In M. Hearst,\n          \n          , and S. Gosling, editors,\n          \n          . The AAAI Press, Menlo Park, California,\n          \n          ."
+        },
+        {
+            "authors": "Veale, Feyaerts, Forceville, , ",
+            "source": "De Gruyter",
+            "title": "[35]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . Applications of Cognitive Linguistics [ACL].\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Verstraten, , ",
+            "source": null,
+            "title": "[36]\n          \n          .\n          \n          . University of Toronto Press,\n          \n          ."
+        },
+        {
+            "authors": "Wang, Wu, Wang, Ren, Wang, Cellary, Wang, Wang, Chen, Li, Part, I, , ",
+            "source": "Web Information Systems Engineering - WISE 2015 - 16th Int. Conference",
+            "title": "[37]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . In J.\n          \n          \n          \n          \n          \n          \n          . Zhang, editors,\n          \n          , Miami, FL, USA, November 1-\n          \n          ,\n          \n          ,\n          \n          \n          , volume\n          \n          of Lecture Notes in Computer Science, pages\n          \n          {\n          \n          . Springer,\n          \n          ."
+        },
+        {
+            "authors": "You, Luo, Jin, Yang, , ",
+            "source": "In AAAI Conference on Arti cial Intelligence (AAAI)",
+            "title": "[38]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+        }
+    ],
+    "journal": null,
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/detecting-sarcasm-in-multimodal-social-platforms.json",
+    "pub_date": null,
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          . Humor-international\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Multimodal markers of irony and sarcasm",
+                "fpage": [
+                    "243",
+                    "260"
+                ],
+                "source": "Journal of Humor Research",
+                "string-name": [
+                    {
+                        "given-names": "S.",
+                        "surname": "Attardo"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Eisterhold"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Hay"
+                    },
+                    {
+                        "surname": "and I. Poggi."
+                    }
+                ],
+                "volume": "16",
+                "year": "2003"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2]\n          \n          and\n          \n          \n          . In M. Cha,\n          \n          , and C. Sandvig, editors,\n          \n          , pages\n          \n          {\n          \n          . AAAI Press,\n          \n          .",
+                "article-title": "Contextualized sarcasm detection on twitter",
+                "fpage": "577",
+                "source": "Proc. of the Ninth Int. Conference on Web and Social Media, ICWSM",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Bamman"
+                    },
+                    {
+                        "given-names": "N. A.",
+                        "surname": "Smith."
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Mascolo"
+                    }
+                ],
+                "volume": "574",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , Maryland,\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Modelling sarcasm in twitter, a novel approach",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": "58",
+                "source": "In Proc. of the Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                "string-name": [
+                    {
+                        "given-names": "F.",
+                        "surname": "Barbieri"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Saggion"
+                    },
+                    {
+                        "given-names": "F.",
+                        "surname": "Ronzano"
+                    },
+                    {
+                        "surname": "Baltimore"
+                    }
+                ],
+                "volume": "50",
+                "year": "June 2014"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          . Sentibank:\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , New York, NY, USA,\n          \n          . ACM.",
+                "article-title": "Large-scale ontology and classi ers for detecting sentiment and emotions in visual content",
+                "fpage": [
+                    "459",
+                    "460"
+                ],
+                "source": "In Proc. of the ACM Int. Conference on Multimedia, MM '13",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Borth"
+                    },
+                    {
+                        "given-names": "T.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Ji"
+                    },
+                    {
+                        "given-names": "S.-F.",
+                        "surname": "Chang"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": [
+                    "and",
+                    "Return of the devil in the details: delving deep into convolutional nets"
+                ],
+                "source": "In BMVC",
+                "string-name": [
+                    {
+                        "given-names": "K.",
+                        "surname": "Chat eld"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Simonyan"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Vedaldi"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Zisserman"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , PA, USA,\n          \n          .\n          \n          .",
+                "article-title": [
+                    "and",
+                    "Semi-supervised recognition of sarcastic sentences in twitter and amazon",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": [
+                    "107",
+                    "116"
+                ],
+                "source": [
+                    "In Proc. of the Conference on Computational Natural Language Learning",
+                    "CoNLL '10"
+                ],
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    },
+                    {
+                        "surname": "Stroudsburg"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          and\n          \n          .\n          \n          .\n          \n          , volume\n          \n          , pages\n          \n          {\n          \n          , Beijing, China,\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Non-distributional word vector representations",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": [
+                    "464",
+                    "469"
+                ],
+                "source": "In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+                "string-name": [
+                    {
+                        "given-names": "M.",
+                        "surname": "Faruqui"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Dyer"
+                    }
+                ],
+                "volume": "2",
+                "year": "July 2015"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          , G. Corrado,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , NIPS,\n          \n          .",
+                "article-title": "Devise: A deep visual-semantic embedding model",
+                "source": "In Advances In Neural Information Processing Systems",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Frome"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Shlens"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Bengio"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Dean"
+                    },
+                    {
+                        "given-names": "M.",
+                        "surname": "Ranzato"
+                    },
+                    {
+                        "given-names": "T.",
+                        "surname": "Mikolov"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . In L. Marquez,\n          \n          ,\n          \n          ,\n          \n          , and Y. Marton, editors,\n          \n          , pages\n          \n          {\n          \n          . The Association for Computational Linguistics,\n          \n          .",
+                "article-title": "Sarcastic or not: Word embeddings to predict the literal or sarcastic meaning of words",
+                "fpage": "1012",
+                "source": "EMNLP",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Ghosh"
+                    },
+                    {
+                        "given-names": "W.",
+                        "surname": "Guo"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Muresan"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Callison-Burch"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Su"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Pighin"
+                    }
+                ],
+                "volume": "1003",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , Lisbon, Portugal,\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Sarcastic or not: Word embeddings to predict the literal or sarcastic meaning of words",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": "1012",
+                "source": "In Proc. of the Conference on Empirical Methods in Natural Language Processing",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Ghosh"
+                    },
+                    {
+                        "given-names": "W.",
+                        "surname": "Guo"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Muresan"
+                    }
+                ],
+                "volume": "1003",
+                "year": "September 2015"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          .\n          \n          . Cambridge Handbooks in Psychology. Cambridge University Press,\n          \n          .",
+                "source": "The Cambridge Handbook of Metaphor and Thought",
+                "string-name": {
+                    "given-names": "R.",
+                    "surname": "Gibbs"
+                },
+                "year": "2008"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "[12]\n          \n          and\n          \n          .\n          \n          . Lawrence Erlbaum Associates,\n          \n          .",
+                "article-title": "Irony in Language and Thought: A Cognitive Science Reader",
+                "string-name": [
+                    {
+                        "given-names": "R.",
+                        "surname": "Gibbs"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Colston"
+                    }
+                ],
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "[13]\n          \n          ~ez, S. Muresan, and\n          \n          .\n          \n          .\n          \n          , volume\n          \n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , PA, USA,\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Identifying sarcasm in twitter: A closer look",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": [
+                    "581",
+                    "586"
+                ],
+                "source": [
+                    "In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+                    "of HLT '11"
+                ],
+                "string-name": [
+                    {
+                        "given-names": "R.",
+                        "surname": "Gonzalez-Iban"
+                    },
+                    {
+                        "given-names": "N.",
+                        "surname": "Wacholder"
+                    },
+                    {
+                        "surname": "Stroudsburg"
+                    }
+                ],
+                "volume": "2",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and T. Darrell. Ca e:\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Convolutional architecture for fast feature embedding",
+                "source": "arXiv preprint arXiv:1408.5093",
+                "string-name": [
+                    {
+                        "given-names": "Y.",
+                        "surname": "Jia"
+                    },
+                    {
+                        "given-names": "E.",
+                        "surname": "Shelhamer"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Donahue"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Karayev"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Long"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Girshick"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Guadarrama"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "[15]\n          \n          .\n          \n          .\n          \n          ,\n          \n          , pages\n          \n          {\n          \n          , London, UK, UK,\n          \n          . Springer-Verlag.",
+                "article-title": "Text categorization with suport vector machines: Learning with many relevant features",
+                "fpage": [
+                    "137",
+                    "142"
+                ],
+                "source": [
+                    "In Proceedings of the 10th European Conference on Machine Learning",
+                    "ECML '98"
+                ],
+                "string-name": {
+                    "given-names": "T.",
+                    "surname": "Joachims"
+                },
+                "year": "1998"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "[16]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Automatic sarcasm detection: A survey",
+                "source": "CoRR, abs/1602.03426",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Joshi"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Bhattacharyya"
+                    },
+                    {
+                        "given-names": "M. J.",
+                        "surname": "Carman"
+                    }
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "[17]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , volume\n          \n          , pages\n          \n          {\n          \n          . The Association for Computer Linguistics,\n          \n          .",
+                "article-title": "Harnessing context incongruity for sarcasm detection",
+                "fpage": [
+                    "757",
+                    "762"
+                ],
+                "source": "In Proc. of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Joshi"
+                    },
+                    {
+                        "given-names": "V.",
+                        "surname": "Sharma"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Bhattacharyya"
+                    }
+                ],
+                "volume": "2",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "[18]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Recognizing image style",
+                "source": "BMVC",
+                "string-name": [
+                    {
+                        "given-names": "S.",
+                        "surname": "Karayev"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Hertzmann"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Winnemoeller"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Agarwala"
+                    },
+                    {
+                        "given-names": "T.",
+                        "surname": "Darrell"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "[19]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          , Portugal,\n          \n          .\n          \n          .",
+                "article-title": [
+                    "Your sentiment precedes you: Using an author's historical tweets to predict sarcasm",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": "30",
+                "source": "In Proc. of the Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Khattri"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Joshi"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Bhattacharyya"
+                    },
+                    {
+                        "given-names": "M.",
+                        "surname": "Carman"
+                    },
+                    {
+                        "surname": "Lisboa"
+                    }
+                ],
+                "volume": "25",
+                "year": "September 2015"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "[20]\n          \n          ,\n          \n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Derivation of new readability formulas (automated readability index, fog count and Flesch reading ease formula) for navy enlisted personnel",
+                "source": "Technical report, DTIC Document",
+                "string-name": [
+                    {
+                        "given-names": "J. P.",
+                        "surname": "Kincaid"
+                    },
+                    {
+                        "given-names": "R. P.",
+                        "surname": "Fishburne"
+                    },
+                    {
+                        "surname": "Jr."
+                    },
+                    {
+                        "given-names": "R. L.",
+                        "surname": "Rogers"
+                    },
+                    {
+                        "given-names": "B. S.",
+                        "surname": "Chissom"
+                    }
+                ],
+                "year": "1975"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "[21]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Unifying visual-semantic embeddings with multimodal neural language models",
+                "source": "CoRR, abs/1411.2539",
+                "string-name": [
+                    {
+                        "given-names": "R.",
+                        "surname": "Kiros"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Salakhutdinov"
+                    },
+                    {
+                        "given-names": "R. S.",
+                        "surname": "Zemel"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": "[22]\n          \n          and\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          .",
+                "article-title": "The measurement of observer agreement for categorical data",
+                "issue": "1",
+                "source": "Biometrics",
+                "string-name": [
+                    {
+                        "given-names": "J. R.",
+                        "surname": "Landis"
+                    },
+                    {
+                        "surname": "G. G. Koch."
+                    }
+                ],
+                "volume": "33",
+                "year": "1977"
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": "[23]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Multimodal convolutional neural networks for matching image and sentence",
+                "source": "CoRR, abs/1504.06063",
+                "string-name": [
+                    {
+                        "given-names": "L.",
+                        "surname": "Ma"
+                    },
+                    {
+                        "given-names": "Z.",
+                        "surname": "Lu"
+                    },
+                    {
+                        "given-names": "L.",
+                        "surname": "Shang"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Li"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": "[24]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Deep captioning with multimodal recurrent neural networks (m-rnn)",
+                "source": "CoRR, abs/1412.6632",
+                "string-name": [
+                    {
+                        "given-names": "J.",
+                        "surname": "Mao"
+                    },
+                    {
+                        "given-names": "W.",
+                        "surname": "Xu"
+                    },
+                    {
+                        "given-names": "Y.",
+                        "surname": "Yang"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "given-names": "A. L.",
+                        "surname": "Yuille"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": "[25]\n          \n          , I. Sutskever,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Distributed representations of words and phrases and their compositionality",
+                "fpage": "3119",
+                "source": "In Advances in neural information processing systems",
+                "string-name": [
+                    {
+                        "given-names": "T.",
+                        "surname": "Mikolov"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "given-names": "G. S.",
+                        "surname": "Corrado"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Dean"
+                    }
+                ],
+                "volume": "3111",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": "[26]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , Denver, Colorado, May{June 2015.\n          \n          .",
+                "article-title": [
+                    "Inducing lexical style properties for paraphrase and genre di erentiation",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": "224",
+                "source": "In Proc. of the Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+                "string-name": [
+                    {
+                        "given-names": "E.",
+                        "surname": "Pavlick"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Nenkova"
+                    }
+                ],
+                "volume": "218"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": "[27]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , New York, NY, USA,\n          \n          . ACM.",
+                "article-title": "Sarcasm detection on twitter: A behavioral modeling approach",
+                "fpage": [
+                    "97",
+                    "106"
+                ],
+                "source": "In Proc. of the ACM Int. Conference on Web Search and Data Mining, WSDM '15",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Rajadesingan"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Zafarani"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Liu"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": "[28]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "CNN features o -the-shelf: an astounding baseline for recognition",
+                "source": "CVPR DeepVision workshop",
+                "string-name": [
+                    {
+                        "given-names": "A. S.",
+                        "surname": "Razavian"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Azizpour"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Sullivan"
+                    },
+                    {
+                        "surname": "S. Carlsson."
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": "[29]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . Lang. Resour. Eval.,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .\n          \n          .",
+                "article-title": "A multidimensional approach for detecting irony in twitter",
+                "fpage": "268",
+                "issue": "1",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "given-names": "T.",
+                        "surname": "Veale"
+                    },
+                    {
+                        "surname": "Mar"
+                    }
+                ],
+                "volume": [
+                    "47",
+                    "239"
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": "[30]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Sarcasm as contrast between a positive sentiment and negative situation",
+                "fpage": "714",
+                "source": "In EMNLP",
+                "string-name": [
+                    {
+                        "given-names": "E.",
+                        "surname": "Rilo"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Qadir"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Surve"
+                    },
+                    {
+                        "given-names": "L. D.",
+                        "surname": "Silva"
+                    },
+                    {
+                        "given-names": "N.",
+                        "surname": "Gilbert"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Huang"
+                    },
+                    {
+                        "surname": "ACL"
+                    }
+                ],
+                "volume": "704",
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": "[31]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , San Diego, California, June 2016.\n          \n          .",
+                "article-title": [
+                    "Black holes and white rabbits: Metaphor identi cation with visual features",
+                    "Association for Computational Linguistics"
+                ],
+                "fpage": "170",
+                "source": "In Proc. of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+                "string-name": [
+                    {
+                        "given-names": "E.",
+                        "surname": "Shutova"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Kiela"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Maillard"
+                    }
+                ],
+                "volume": "160"
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": "[32]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          , Pittsburgh, PA, Sept.\n          \n          .",
+                "article-title": "\"yeah right\": Sarcasm recognition for spoken dialogue systems",
+                "source": "In Proc. of InterSpeech",
+                "string-name": [
+                    {
+                        "given-names": "J.",
+                        "surname": "Tepperman"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Traum"
+                    },
+                    {
+                        "given-names": "S. S.",
+                        "surname": "Narayanan"
+                    }
+                ],
+                "year": [
+                    "1838",
+                    "1841",
+                    "2006"
+                ]
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          .",
+                "article-title": "Yfcc100m: The new data in multimedia research",
+                "fpage": "73",
+                "issue": "2",
+                "source": "Communications of the ACM",
+                "string-name": [
+                    {
+                        "given-names": "B.",
+                        "surname": "Thomee"
+                    },
+                    {
+                        "given-names": "B.",
+                        "surname": "Elizalde"
+                    },
+                    {
+                        "given-names": "D. A.",
+                        "surname": "Shamma"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Ni"
+                    },
+                    {
+                        "given-names": "G.",
+                        "surname": "Friedland"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Poland"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Borth"
+                    },
+                    {
+                        "given-names": "L.-J.",
+                        "surname": "Li"
+                    }
+                ],
+                "volume": [
+                    "59",
+                    "64"
+                ],
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": "[34]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          . In M. Hearst,\n          \n          , and S. Gosling, editors,\n          \n          . The AAAI Press, Menlo Park, California,\n          \n          .",
+                "article-title": [
+                    "and",
+                    "Semi-Supervised Recognition of Sarcastic Sentences in Online Product Reviews"
+                ],
+                "source": "Proc. of the Int. Conference on Weblogs and Social Media (ICWSM-2010)",
+                "string-name": [
+                    {
+                        "given-names": "O.",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Rappoport"
+                    },
+                    {
+                        "given-names": "W.",
+                        "surname": "Cohen"
+                    }
+                ],
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": "[35]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . Applications of Cognitive Linguistics [ACL].\n          \n          ,\n          \n          .",
+                "article-title": "Creativity and the Agile Mind: A Multi-Disciplinary Study of a Multi-Faceted Phenomenon",
+                "source": "De Gruyter",
+                "string-name": [
+                    {
+                        "given-names": "T.",
+                        "surname": "Veale"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Feyaerts"
+                    },
+                    {
+                        "given-names": "C.",
+                        "surname": "Forceville"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": "[36]\n          \n          .\n          \n          . University of Toronto Press,\n          \n          .",
+                "article-title": "Film Narratology : lm narratives his primary focus, while noting",
+                "string-name": {
+                    "given-names": "P.",
+                    "surname": "Verstraten"
+                },
+                "year": "2006"
+            }
+        },
+        {
+            "@id": "ref37",
+            "mixed-citation": {
+                "#text": "[37]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          . In J.\n          \n          \n          \n          \n          \n          \n          . Zhang, editors,\n          \n          , Miami, FL, USA, November 1-\n          \n          ,\n          \n          ,\n          \n          \n          , volume\n          \n          of Lecture Notes in Computer Science, pages\n          \n          {\n          \n          . Springer,\n          \n          .",
+                "article-title": "Twitter sarcasm detection exploiting a context-based model",
+                "fpage": "91",
+                "issue": "3",
+                "source": "Web Information Systems Engineering - WISE 2015 - 16th Int. Conference",
+                "string-name": [
+                    {
+                        "given-names": "Z.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "given-names": "Z.",
+                        "surname": "Wu"
+                    },
+                    {
+                        "given-names": "R.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "given-names": "Y.",
+                        "surname": "Ren"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "W.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "D.",
+                        "surname": "Cellary"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "H.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "S.",
+                        "surname": "Wang"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "T.",
+                        "surname": "Chen"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Y",
+                        "surname": "Li"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Proc.",
+                        "surname": "Part"
+                    },
+                    {
+                        "surname": "I"
+                    }
+                ],
+                "volume": [
+                    "9418",
+                    "77"
+                ],
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref38",
+            "mixed-citation": {
+                "#text": "[38]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Robust Image Sentiment Analysis using Progressively Trained and Domain Transferred Deep Networks",
+                "source": "In AAAI Conference on Arti cial Intelligence (AAAI)",
+                "string-name": [
+                    {
+                        "given-names": "Q.",
+                        "surname": "You"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Luo"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Jin"
+                    },
+                    {
+                        "given-names": "J.",
+                        "surname": "Yang"
+                    }
+                ],
+                "year": "2015"
+            }
+        }
+    ],
+    "title": "Detecting Sarcasm in Multimodal Social Platforms"
+}

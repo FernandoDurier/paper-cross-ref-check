@@ -1,0 +1,2514 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": null,
+            "article-meta": {
+                "title-group": {
+                    "article-title": "Fake News Detection on Social Media: A Data Mining Perspective"
+                },
+                "contrib-group": {
+                    "contrib": [
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Kai Shuy"
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Amy Slivaz"
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Suhang Wangy"
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Jiliang Tang \\",
+                            "email": "tangjili@msu.edu"
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Huan Liuy",
+                            "email": "huan.liug@asu.edu"
+                        }
+                    ]
+                },
+                "abstract": {
+                    "p": null
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": [
+                        "Social media for news consumption is a double-edged sword.",
+                        "On the one hand, its low cost, easy access, and rapid\ndissem2 ination of information lead people to seek out and consume\np news from social media. On the other hand, it enables the\ne wide spread of \\fake news\", i.e., low quality news with\ninS tentionally false information. The extensive spread of fake\nnews has the potential for extremely negative impacts on\n3 individuals and society. Therefore, fake news detection on\n] social media has recently become an emerging research that\nI is attracting tremendous attention. Fake news detection\n.S on social media presents unique characteristics and\nchals lenges that make existing detection algorithms from\ntradic tional news media ine ective or not applicable. First, fake\n[ news is intentionally written to mislead readers to believe\nfalse information, which makes it di cult and nontrivial to\n3 detect based on news content; therefore, we need to include\nv\n7 auxiliary information, such as user social engagements on\n6 social media, to help make a determination. Second,\nex9 ploiting this auxiliary information is challenging in and of\n1 itself as users' social engagements with fake news produce\n0 data that is big, incomplete, unstructured, and noisy.\nBe. cause the issue of fake news detection on social media is both\n8 challenging and relevant, we conducted this survey to\nfur0 ther facilitate research on the problem. In this survey, we\n7 present a comprehensive review of detecting fake news on\n:1 social media, including fake news characterizations on\npsyv chology and social theories, existing algorithms from a data\ni mining perspective, evaluation metrics and representative\nX datasets. We also discuss related research areas, open\nprobra lems, and future research directions for fake news detection\non social media."
+                    ]
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "1. INTRODUCTION",
+                    "p": [
+                        "As an increasing amount of our lives is spent interacting\nonline through social media platforms, more and more\npeople tend to seek out and consume news from social media\nrather than traditional news organizations. The reasons for\nthis change in consumption behaviors are inherent in the\nnature of these social media platforms: (i) it is often more\ntimely and less expensive to consume news on social media\ncompared with traditional news media, such as newspapers\nor television; and (ii) it is easier to further share, comment\non, and discuss the news with friends or other readers on\nsocial media. For example, 62 percent of U.S. adults get\nnews on social media in 2016, while in 2012, only 49\npercent reported seeing news on social media1. It was also\nfound that social media now outperforms television as the\nmajor news source2. Despite the advantages provided by\nsocial media, the quality of news on social media is lower\nthan traditional news organizations. However, because it\nis cheap to provide news online and much faster and easier\nto disseminate through social media, large volumes of fake\nnews, i.e., those news articles with intentionally false\ninformation, are produced online for a variety of purposes, such\nas nancial and political gain. It was estimated that over 1\nmillion tweets are related to fake news \\Pizzagate\"3 by the\nend of the presidential election. Given the prevalence of this\nnew phenomenon, \\Fake news\" was even named the word of\nthe year by the Macquarie dictionary in 2016.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref22",
+                                "#text": "22"
+                            },
+                            "#text": "The extensive spread of fake news can have a serious\nnegative impact on individuals and society. First, fake news can\nbreak the authenticity balance of the news ecosystem. For\nexample, it is evident that the most popular fake news was\neven more widely spread on Facebook than the most\npopular authentic mainstream news during the U.S. 2016\npresident election4. Second, fake news intentionally persuades\nconsumers to accept biased or false beliefs. Fake news is\nusually manipulated by propagandists to convey political\nmessages or in uence. For example, some report shows that\nRussia has created fake accounts and social bots to spread\nfalse stories5. Third, fake news changes the way people\ninterpret and respond to real news. For example, some fake\nnews was just created to trigger people's distrust and make\nthem confused, impeding their abilities to di erentiate what\nis true from what is not6. To help mitigate the negative\neffects caused by fake news{both to bene t the public and\nthe news ecosystem{It's critical that we develop methods to\nautomatically detect fake news on social media.\n1http://www.journalism.org/2016/05/26/news-use-acrosssocial-media-platforms-2016/\n2http://www.bbc.com/news/uk-36528256\n3https://en.wikipedia.org/wiki/Pizzagate conspiracy theory\n4https://www.buzzfeed.com/craigsilverman/viralfake-election-news-outperformed-real-news-onfacebook?utm term=.nrg0WA1VP0#.gjJyKapW5y\n5http://time.com/4783932/inside-russia-social-media-waramerica/\n6https://www.nytimes.com/2016/11/28/opinion/fakenews-and-the-internet-shell-game.html? r=0\nDetecting fake news on social media poses several new and\nchallenging research problems. Though fake news itself is\nnot a new problem{nations or groups have been using the\nnews media to execute propaganda or in uence operations\nfor centuries{the rise of web-generated news on social\nmedia makes fake news a more powerful force that challenges\ntraditional journalistic norms. There are several\ncharacteristics of this problem that make it uniquely challenging for\nautomated detection. First, fake news is intentionally\nwritten to mislead readers, which makes it nontrivial to detect\nsimply based on news content. The content of fake news is\nrather diverse in terms of topics, styles and media platforms,\nand fake news attempts to distort truth with diverse\nlinguistic styles while simultaneously mocking true news. For\nexample, fake news may cite true evidence within the\nincorrect context to support a non-factual claim [\n        \n        ]. Thus,\nexisting hand-crafted and data-speci c textual features are\ngenerally not su cient for fake news detection. Other\nauxiliary information must also be applied to improve\ndetection, such as knowledge base and user social engagements.\nSecond, exploiting this auxiliary information actually leads\nto another critical challenge: the quality of the data itself.\nFake news is usually related to newly emerging, time-critical\nevents, which may not have been properly veri ed by\nexisting knowledge bases due to the lack of corroborating\nevidence or claims. In addition, users' social engagements\nwith fake news produce data that is big, incomplete,\nunstructured, and noisy [79]. E ective methods to di\nerentiate credible users, extract useful post features and exploit\nnetwork interactions are an open area of research and need\nfurther investigations."
+                        },
+                        "In this article, we present an overview of fake news detection\nand discuss promising research directions. The key\nmotivations of this survey are summarized as follows:",
+                        "Fake news on social media has been occurring for\nseveral years; however, there is no agreed upon de nition\nof the term \\fake news\". To better guide the future\ndirections of fake news detection research, appropriate\nclari cations are necessary.",
+                        "Social media has proved to be a powerful source for\nfake news dissemination. There are some emerging\npatterns that can be utilized for fake news detection\nin social media. A review on existing fake news\ndetection methods under various social media scenarios can\nprovide a basic understanding on the state-of-the-art\nfake news detection methods.",
+                        "Fake news detection on social media is still in the early\nage of development, and there are still many\nchallenging issues that need further investigations. It is\nnecessary to discuss potential research directions that can\nimprove fake news detection and mitigation\ncapabilities.",
+                        "To facilitate research in fake news detection on social\nmedia, in this survey we will review two aspects of the fake\nnews detection problem: characterization and detection. As\nshown in Figure 1, we will rst describe the background of\nthe fake news detection problem using theories and\nproperties from psychology and social studies; then we present\nthe detection approaches. Our major contributions of this\nsurvey are summarized as follows:\nWe discuss the narrow and broad de nitions of fake\nnews that cover most existing de nitions in the\nliterature and further present the unique characteristics of\nfake news on social media and its implications\ncompared with the traditional media;\nWe give an overview of existing fake news detection\nmethods with a principled way to group representative\nmethods into di erent categories; and\nWe discuss several open issues and provide future\ndirections of fake news detection in social media.",
+                        "The remainder of this survey is organized as follows. In\nSection 2, we present the de nition of fake news and\ncharacterize it by comparing di erent theories and properties in\nboth traditional and social media. In Section 3, we continue\nto formally de ne the fake news detection problem and\nsummarize the methods to detect fake news. In Section 4, we\ndiscuss the datasets and evaluation metrics used by existing\nmethods. We brie y introduce areas related to fake news\ndetection on social media in Section 5. Finally, we discuss the\nopen issues and future directions in Section 6 and conclude\nthis survey in Section 7.\n2."
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "FAKE NEWS CHARACTERIZATION",
+                    "p": "In this section, we introduce the basic social and\npsychological theories related to fake news and discuss more advanced\npatterns introduced by social media. Speci cally, we rst\ndiscuss various de nitions of fake news and di erentiate\nrelated concepts that are usually misunderstood as fake news.\nWe then describe di erent aspects of fake news on\ntraditional media and the new patterns found on social media.\n2.1"
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "Definitions of Fake News",
+                    "p": {
+                        "xref": [
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref2",
+                                "#text": "2"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref67",
+                                "#text": "66"
+                            }
+                        ],
+                        "#text": "Fake news has existed for a very long time, nearly the same\namount of time as news began to circulate widely after the\nprinting press was invented in 14397. However, there is no\nagreed de nition of the term \\fake news\". Therefore, we rst\ndiscuss and compare some widely used de nitions of fake\nnews in the existing literature, and provide our de nition of\nfake news that will be used for the remainder of this survey.\nA narrow de nition of fake news is news articles that are\nintentionally and veri ably false and could mislead readers [\n        \n        ].\nThere are two key features of this de nition: authenticity\nand intent. First, fake news includes false information that\ncan be veri ed as such. Second, fake news is created with\ndishonest intention to mislead consumers. This de nition\nhas been widely adopted in recent studies [57; 17; 62; 41].\nBroader de nitions of fake news focus on the either\nauthenticity or intent of the news content. Some papers regard\nsatire news as fake news since the contents are false even\nthough satire is often entertainment-oriented and reveals its\nown deceptiveness to the consumers [67; 4; 37; 9]. Other\nliterature directly treats deceptive news as fake news [\n        \n        ],\nwhich includes serious fabrications, hoaxes, and satires.\nIn this article, we use the narrow de nition of fake news.\nFormally, we state this de nition as follows,\nDefinition 1 (Fake News) Fake news is a news article\nthat is intentionally and veri ably false.\n7http://www.politico.com/magazine/story/2016/12/fakenews-history-long-violent-214535\nThe reasons for choosing this narrow de nition are\nthreefolds. First, the underlying intent of fake news provides both\ntheoretical and practical value that enables a deeper\nunderstanding and analysis of this topic. Second, any techniques\nfor truth veri cation that apply to the narrow conception\nof fake news can also be applied to under the broader de\nnition. Third, this de nition is able to eliminate the\nambiguities between fake news and related concepts that are not\nconsidered in this article. The following concepts are not\nfake news according to our de nition: (1) satire news with\nproper context, which has no intent to mislead or deceive\nconsumers and is unlikely to be mis-perceived as factual;\n(2) rumors that did not originate from news events; (3)\nconspiracy theories, which are di cult verify as true or false;\n(4) misinformation that is created unintentionally; and (5)\nhoaxes that are only motivated by fun or to scam targeted\nindividuals.\n2.2"
+                    }
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "Fake News on Traditional News Media",
+                    "p": "Fake news itself is not a new problem. The media ecology\nof fake news has been changing over time from newsprint to\nradio/television and, recently, online news and social media.\nWe denote \\traditional fake news\" as the fake news problem\nbefore social media had important e ects on its production\nand dissemination. Next, we will describe several\npsychological and social science foundations that describe the impact\nof fake news at both the individual and social information\necosystem levels.",
+                    "sec": [
+                        {
+                            "@id": "sec-5-1",
+                            "title": "Psychological Foundations of Fake News. Humans are",
+                            "p": {
+                                "xref": [
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref76",
+                                        "#text": "92"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref59",
+                                        "#text": "58"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref60",
+                                        "#text": "59"
+                                    }
+                                ],
+                                "#text": "naturally not very good at di erentiating between real and\nfake news. There are several psychological and cognitive\ntheories that can explain this phenomenon and the in\nuential power of fake news. Traditional fake news mainly\ntargets consumers by exploiting their individual vulnerabilities.\nThere are two major factors which make consumers\nnaturally vulnerable to fake news: (i) Na\u007fve Realism: consumers\ntend to believe that their perceptions of reality are the only\naccurate views, while others who disagree are regarded as\nuninformed, irrational, or biased [\n          \n          ]; and (ii) Con rmation\nBias: consumers prefer to receive information that con rms\ntheir existing views [\n          \n          ]. Due to these cognitive biases\ninherent in human nature, fake news can often be perceived as real\nby consumers. Moreover, once the misperception is formed,\nit is very hard to correct it. Psychology studies shows that\ncorrection of false information (e.g., fake news) by the\npresentation of true, factual information is not only unhelpful\nto reduce misperceptions, but sometimes may even increase\nthe misperceptions, especially among ideological groups [\n          \n          ]."
+                            }
+                        },
+                        {
+                            "@id": "sec-5-2",
+                            "title": "Social Foundations of the Fake News Ecosystem.",
+                            "p": [
+                                "Considering the entire news consumption ecosystem, we can\nalso describe some of the social dynamics that contribute to\nthe proliferation of fake news. Prospect theory describes\ndecision making as a process by which people make choices\nbased on the relative gains and losses as compared to their\ncurrent state [39; 81]. This desire for maximizing the reward\nof a decision applies to social gains as well, for instance,\ncontinued acceptance by others in a user's immediate social\nnetwork. As described by social identity theory [76; 77] and\nnormative in uence theory [3; 40], this preference for social\nacceptance and a rmation is essential to a person's identity\nand self-esteem, making users likely to choose \\socially safe\"\noptions when consuming and disseminating news\ninformation, following the norms established in the community even\nif the news being shared is fake news.",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref26",
+                                        "#text": "26"
+                                    },
+                                    "#text": "This rational theory of fake news interactions can be\nmodeled from an economic game theoretical perspective [\n          \n          ] by\nformulating the news generation and consumption cycle as a\ntwo-player strategy game. For explaining fake news, we\nassume there are two kinds of key players in the information\necosystem: publisher and consumer. The process of news\npublishing is modeled as a mapping from original signal s\nto resultant news report a with an e ect of distortion bias\nb, i.e., s !b a, where b = [ 1; 0; 1] indicates [lef t; no; right]\nbiases take e ects on news publishing process. Intuitively,\nthis is capturing the degree to which a news article may be\nbiased or distorted to produce fake news. The utility for\nthe publisher stems from two perspectives: (i) short-term\nutility: the incentive to maximize pro t, which is positively\ncorrelated with the number of consumers reached; (ii)\nlongterm utility: their reputation in terms of news authenticity.\nUtility of consumers consists of two parts: (i) information\nutility: obtaining true and unbiased information (usually\nextra investment cost needed); (ii) psychology utility : receiving\nnews that satis es their prior opinions and social needs, e.g.,\ncon rmation bias and prospect theory. Both publisher and\nconsumer try to maximize their overall utilities in this\nstrategy game of the news consumption process. We can capture\nthe fact that fake news happens when the short-term utility\ndominates a publisher's overall utility and psychology utility\ndominates the consumer's overall utility, and an equilibrium\nis maintained. This explains the social dynamics that lead\nto an information ecosystem where fake news can thrive.\n2.3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-6",
+                    "title": "Fake News on Social Media",
+                    "p": "In this subsection, we will discuss some unique\ncharacteristics of fake news on social media. Speci cally, we will\nhighlight the key features of fake news that are enabled by\nsocial media. Note that the aforementioned characteristics\nof traditional fake news are also applicable to social media.",
+                    "sec": {
+                        "@id": "sec-6-1",
+                        "title": "Malicious Accounts on Social Media for Propaganda.",
+                        "p": [
+                            {
+                                "xref": [
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref23",
+                                        "#text": "23"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref6",
+                                        "#text": "6"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref14",
+                                        "#text": "14"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref15",
+                                        "#text": "15"
+                                    }
+                                ],
+                                "#text": "While many users on social media are legitimate, social\nmedia users may also be malicious, and in some cases are not\neven real humans. The low cost of creating social media\naccounts also encourages malicious user accounts, such as\nsocial bots, cyborg users, and trolls. A social bot refers to\na social media account that is controlled by a computer\nalgorithm to automatically produce content and interact with\nhumans (or other bot users) on social media [\n          \n          ]. Social bots\ncan become malicious entities designed speci cally with the\npurpose to do harm, such as manipulating and spreading\nfake news on social media. Studies shows that social bots\ndistorted the 2016 U.S. presidential election online\ndiscussions on a large scale [\n          \n          ], and that around 19 million bot\naccounts tweeted in support of either Trump or Clinton in\nthe week leading up to election day8. Trolls, real human\nusers who aim to disrupt online communities and provoke\nconsumers into an emotional response, are also playing an\nimportant role in spreading fake news on social media. For\nexample, evidence suggests that there were 1,000 paid\nRussian trolls spreading fake news on Hillary Clinton9. Trolling\nbehaviors are highly a ected by people's mood and the\ncontext of online discussions, which enables the easy\ndissemination of fake news among otherwise \\normal\" online\ncommunities [\n          \n          ]. The e ect of trolling is to trigger people's\ninner negative emotions, such as anger and fear, resulting\nin doubt, distrust, and irrational behavior. Finally, cyborg\nusers can spread fake news in a way that blends automated\nactivities with human input. Usually cyborg accounts are\nregistered by human as a camou age and set automated\nprograms to perform activities in social media. The easy switch\nof functionalities between human and bot o ers cyborg users\nunique opportunities to spread fake news [\n          \n          ]. In a nutshell,\nthese highly active and partisan malicious accounts on\nsocial media become the powerful sources and proliferation of\nfake news."
+                            },
+                            {
+                                "xref": [
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref19",
+                                        "#text": "19"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref66",
+                                        "#text": "65"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref61",
+                                        "#text": "60"
+                                    },
+                                    {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref18",
+                                        "#text": "18"
+                                    }
+                                ],
+                                "#text": "Echo Chamber E ect. Social media provides a new paradigm\nof information creation and consumption for users. The\ninformation seeking and consumption process are\nchanging from a mediated form (e.g., by journalists) to a more\ndisinter-mediated way [\n          \n          ]. Consumers are selectively\nexposed to certain kinds of news because of the way news\nfeed appear on their homepage in social media, amplifying\nthe psychological challenges to dispelling fake news\nidentied above. For example, users on Facebook always follow\nlike-minded people and thus receive news that promote their\nfavored existing narratives [\n          \n          ]. Therefore, users on social\nmedia tend to form groups containing like-minded people\nwhere they then polarize their opinions, resulting in an echo\nchamber e ect. The echo chamber e ect facilitates the\npro8http://comprop.oii.ox.ac.uk/2016/11/18/resource-forunderstanding-political-bots/\n9http://www.hu\nngtonpost.com/entry/russian-trolls-fakenews us 58dde6bae4b08194e3b8d5c4\ncess by which people consume and believe fake news due to\nthe following psychological factors [\n          \n          ]: (1) social credibility,\nwhich means people are more likely to perceive a source as\ncredible if others perceive the source is credible, especially\nwhen there is not enough information available to access the\ntruthfulness of the source; and (2) frequency heuristic, which\nmeans that consumers may naturally favor information they\nhear frequently, even if it is fake news. Studies have shown\nthat increased exposure to an idea is enough to generate a\npositive opinion of it [100; 101], and in echo chambers, users\ncontinue to share and consume the same information. As a\nresult, this echo chamber e ect creates segmented,\nhomogeneous communities with a very limited information\necosystem. Research shows that the homogeneous communities\nbecome the primary driver of information di usion that\nfurther strengthens polarization [\n          \n          ].\n3."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "sec-7",
+                    "title": "FAKE NEWS DETECTION",
+                    "p": "In the previous section, we introduced the conceptual\ncharacterization of traditional fake news and fake news in\nsocial media. Based on this characterization, we further\nexplore the problem de nition and proposed approaches for\nfake news detection.\n3.1"
+                },
+                {
+                    "@id": "sec-8",
+                    "title": "Problem Definition",
+                    "p": [
+                        "In this subsection, we present the details of mathematical\nformulation of fake news detection on social media.\nSpecifically, we will introduce the de nition of key components\nof fake news and then present the formal de nition of fake\nnews detection. The basic notations are de ned below,\nLet a refer to a News Article. It consists of two\nmajor components: Publisher and Content. Publisher p~a\nincludes a set of pro le features to describe the\noriginal author, such as name, domain, age, among other\nattributes. Content c~a consists of a set of attributes\nthat represent the news article and includes headline,\ntext, image, etc.",
+                        "We also de ne Social News Engagements as a set of\ntuples E = feitg to represent the process of how news\nspread over time among n users U = fu1; u2; :::; ung\nand their corresponding posts P = fp1; p2; :::; png on\nsocial media regarding news article a. Each\nengagement eit = fui; pi; tg represents that a user ui spreads\nnews article a using pi at time t. Note that we set\nt = N ull if the article a does not have any\nengagement yet and thus ui represents the publisher.",
+                        "Definition 2 (Fake News Detection) Given the social\nnews engagements E among n users for news article a, the\ntask of fake news detection is to predict whether the news\narticle a is a fake news piece or not, i.e., F : E ! f0; 1g\nsuch that,",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref26",
+                                "#text": "26"
+                            },
+                            "#text": "F (a) =\n(1; if a is a piece of fake news,\n0; otherwise.\n(1)\nwhere F is the prediction function we want to learn.\nNote that we de ne fake news detection as a binary classi\ncation problem for the following reason: fake news is\nessentially a distortion bias on information manipulated by the\npublisher. According to previous research about media bias\ntheory [\n        \n        ], distortion bias is usually modeled as a binary\nclassi cation problem."
+                        },
+                        "Next, we propose a general data mining framework for fake\nnews detection which includes two phases: (i) feature\nextraction and (ii) model construction. The feature extraction\nphase aims to represent news content and related auxiliary\ninformation in a formal mathematical structure, and model\nconstruction phase further builds machine learning models\nto better di erentiate fake news and real news based on the\nfeature representations.\n3.2"
+                    ]
+                },
+                {
+                    "@id": "sec-9",
+                    "title": "Feature Extraction",
+                    "p": "Fake news detection on traditional news media mainly relies\non news content, while in social media, extra social context\nauxiliary information can be used to as additional\ninformation to help detect fake news. Thus, we will present the\ndetails of how to extract and represent useful features from\nnews content and social context.\n3.2.1",
+                    "sec": [
+                        {
+                            "@id": "sec-9-1",
+                            "title": "News Content Features",
+                            "p": [
+                                "News content features c~a describe the meta information\nrelated to a piece of news. A list of representative news content\nattributes are listed below:",
+                                "Source: Author or publisher of the news article\nHeadline: Short title text that aims to catch the\nattention of readers and describes the main topic of the\narticle\nBody Text: Main text that elaborates the details of\nthe news story; there is usually a major claim that is\nspeci cally highlighted and that shapes the angle of\nthe publisher\nImage/Video: Part of the body content of a news\narticle that provides visual cues to frame the story\nBased on these raw content attributes, di erent kinds of\nfeature representations can be built to extract discriminative\ncharacteristics of fake news. Typically, the news content we\nare looking at will mostly be linguistic-based and\nvisualbased, described in more detail below.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref13",
+                                            "#text": "13"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref24",
+                                            "#text": "24"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref63",
+                                            "#text": "62"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref1",
+                                            "#text": "1"
+                                        }
+                                    ],
+                                    "#text": "Linguistic-based: Since fake news pieces are\nintentionally created for nancial or political gain rather than to\nreport objective claims, they often contain opinionated and\nin ammatory language, crafted as \\clickbait\" (i.e., to\nentice users to click on the link to read the full article) or\nto incite confusion [\n          \n          ]. Thus, it is reasonable to exploit\nlinguistic features that capture the di erent writing styles\nand sensational headlines to detect fake news.\nLinguisticbased features are extracted from the text content in terms\nof document organizations from di erent levels, such as\ncharacters, words, sentences, and documents. In order to\ncapture the di erent aspects of fake news and real news,\nexisting work utilized both common linguistic features and\ndomain-speci c linguistic features. Common linguistic\nfeatures are often used to represent documents for various tasks\nin natural language processing. Typical common\nlinguistic features are: (i) lexical features, including\ncharacterlevel and word-level features, such as total words,\ncharacters per word, frequency of large words, and unique words;\n(ii) syntactic features, including sentence-level features, such\nas frequency of function words and phrases (i.e., \\n-grams\"\nand bag-of-words approaches [\n          \n          ]) or punctuation and\npartsof-speech (POS) tagging. Domain-speci c linguistic\nfeatures, which are speci cally aligned to news domain, such\nas quoted words, external links, number of graphs, and the\naverage length of graphs, etc [\n          \n          ]. Moreover, other features\ncan be speci cally designed to capture the deceptive cues\nin writing styles to di erentiate fake news, such as\nlyingdetection features [\n          \n          ]."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref28",
+                                            "#text": "28"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref38",
+                                            "#text": "38"
+                                        }
+                                    ],
+                                    "#text": "Visual-based: Visual cues have been shown to be an\nimportant manipulator for fake news propaganda10. As we\nhave characterized, fake news exploits the individual\nvulnerabilities of people and thus often relies on sensational or even\nfake images to provoke anger or other emotional response of\nconsumers. Visual-based features are extracted from visual\nelements (e.g. images and videos) to capture the di erent\ncharacteristics for fake news. Faking images were identi ed\nbased on various user-level and tweet-level hand-crafted\nfeatures using classi cation framework [\n          \n          ]. Recently, various\nvisual and statistical features has been extracted for news\nveri cation [\n          \n          ]. Visual features include clarity score,\ncoherence score, similarity distribution histogram, diversity score,\nand clustering score. Statistical features include count,\nimage ratio, multi-image ratio, hot image ratio, long image\nratio, etc.\n3.2.2"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "sec-9-2",
+                            "title": "Social Context Features",
+                            "p": [
+                                "In addition to features related directly to the content of\nthe news articles, additional social context features can also\nbe derived from the user-driven social engagements of news\nconsumption on social media platform. Social engagements\nrepresent the news proliferation process over time, which\nprovides useful auxiliary information to infer the veracity of\nnews articles. Note that few papers exist in the literature\nthat detect fake news using social context features.\nHowever, because we believe this is a critical aspect of successful\nfake news detection, we introduce a set of common features\nutilized in similar research areas, such as rumor veracity\nclassi cation on social media. Generally, there are three\nmajor aspects of the social media context that we want to\nrepresent: users, generated posts, and networks. Below, we\ninvestigate how we can extract and represent social context\nfeatures from these three aspects to support fake news\ndetection.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref11",
+                                            "#text": "11"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref83",
+                                            "#text": "99"
+                                        }
+                                    ],
+                                    "#text": "User-based: As we mentioned in Section 2.3, fake news\npieces are likely to be created and spread by non-human\naccounts, such as social bots or cyborgs. Thus, capturing\nusers' pro les and characteristics by user-based features can\nprovide useful information for fake news detection.\nUserbased features represent the characteristics of those users\nwho have interactions with the news on social media. These\nfeatures can be categorized across di erent levels: individual\nlevel and group level. Individual level features are extracted\nto infer the credibility and reliability for each user using\nvarious aspects of user demographics, such as registration\nage, number of followers/followees, number of tweets the\nuser has authored, etc [\n          \n          ]. Group level user features\ncapture overall characteristics of groups of users related to the\nnews [\n          \n          ]. The assumption is that the spreaders of fake news\n10https://www.wired.com/2016/12/photos-fuel-spread-fakenews/\nand real news may form di erent communities with unique\ncharacteristics that can be depicted by group level features.\nCommonly used group level features come from\naggregating (e.g., averaging and weighting) individual level features,\nsuch as `percentage of veri ed users' and `average number\nof followers' [49; 42]."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref70",
+                                            "#text": "69"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref49",
+                                            "#text": "49"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref11",
+                                            "#text": "11"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref11",
+                                            "#text": "11"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref49",
+                                            "#text": "49"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref42",
+                                            "#text": "42"
+                                        }
+                                    ],
+                                    "#text": "Post-based: People express their emotions or opinions\ntowards fake news through social media posts, such as\nskeptical opinions, sensational reactions, etc. Thus, it is\nreasonable to extract post-based features to help nd potential\nfake news via reactions from the general public as expressed\nin posts. Post-based features focus on identifying useful\ninformation to infer the veracity of news from various aspects\nof relevant social media posts. These features can be\ncategorized as post level, group level, and temporal level. Post\nlevel features generate feature values for each post. The\naforementioned linguistic-based features and some\nembedding approaches [\n          \n          ] for news content can also be applied\nfor each post. Speci cally, there are unique features for\nposts that represent the social response from general\npublic, such as stance, topic, and credibility. Stance features (or\nviewpoints) indicate the users' opinions towards the news,\nsuch as supporting, denying, etc [\n          \n          ]. Topic features can be\nextracted using topic models, such as latent Dirichlet\nallocation (LDA) [\n          \n          ]. Credibility features for posts assess the\ndegree of reliability [\n          \n          ]. Group level features aim to\naggregate the feature values for all relevant posts for speci c\nnews articles by using \\wisdom of crowds\". For example,\nthe average credibility scores are used to evaluate the\ncredibility of news [\n          \n          ]. A more comprehensive list of group-level\npost features can also be found in [\n          \n          ]. Temporal level\nfeatures consider the temporal variations of post level feature\nvalues [\n          \n          ]. Unsupervised embedding methods, such as\nrecurrent neural network (RNN), are utilized to capture the\nchanges in posts over time [69; 48]. Based on the shape of\nthis time series for various metrics of relevant posts (e.g,\nnumber of posts), mathematical features can be computed,\nsuch as SpikeM parameters [\n          \n          ]."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref70",
+                                            "#text": "69"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref42",
+                                            "#text": "42"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref42",
+                                            "#text": "42"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref42",
+                                            "#text": "42"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref42",
+                                            "#text": "42"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref70",
+                                            "#text": "69"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        }
+                                    ],
+                                    "#text": "Network-based: Users form di erent networks on social\nmedia in terms of interests, topics, and relations. As\nmentioned before, fake news dissemination processes tend to\nform an echo chamber cycle, highlighting the value of\nextracting network-based features to represent these types of\nnetwork patterns for fake news detection. Network-based\nfeatures are extracted via constructing speci c networks among\nthe users who published related social media posts. Di erent\ntypes of networks can be constructed. The stance network\ncan be built with nodes indicating all the tweets relevant\nto the news and the edge indicating the weights of\nsimilarity of stances [37; 75]. Another type of network is the\ncooccurrence network, which is built based on the user\nengagements by counting whether those users write posts relevant\nto the same news articles [\n          \n          ]. In addition, the friendship\nnetwork indicates the following/followee structure of users\nwho post related tweets [\n          \n          ]. An extension of this friendship\nnetwork is the di usion network, which tracks the trajectory\nof the spread of news [\n          \n          ], where nodes represent the users\nand edges represent the information di usion paths among\nthem. That is, a di usion path between two users ui and uj\nexists if and only if (1) uj follows ui, and (2) uj posts about\na given news only after ui does so. After these networks\nare properly built, existing network metrics can be applied\nas feature representations. For example, degree and\nclustering coe cient have been used to characterize the di usion\nnetwork [\n          \n          ] and friendship network [\n          \n          ]. Other approaches\nlearn the latent node embedding features by using SVD [\n          \n          ]\nor network propagation algorithms [\n          \n          ].\n3.3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-10",
+                    "title": "Model Construction",
+                    "p": "In the previous section, we introduced features extracted\nfrom di erent sources, i.e., news content and social\ncontext, for fake news detection. In this section, we discuss the\ndetails of the model construction process for several\nexisting approaches. Speci cally we categorize existing methods\nbased on their main input sources as: News Content Models\nand Social Context Models.\n3.3.1",
+                    "sec": [
+                        {
+                            "@id": "sec-10-1",
+                            "title": "News Content Models",
+                            "p": [
+                                "In this subsection, we focus on news content models, which\nmainly rely on news content features and existing factual\nsources to classify fake news. Speci cally, existing approaches\ncan be categorized as Knowledge-based and Style-based.\nKnowledge-based: Since fake news attempts to spread\nfalse claims in news content, the most straightforward means\nof detecting it is to check the truthfulness of major claims\nin a news article to decide the news veracity.\nKnowledgebased approaches aim to use external sources to fact-check\nproposed claims in news content. The goal of fact-checking is\nto assign a truth value to a claim in a particular context [83].\nFact-checking has attracted increasing attention, and many\ne orts have been made to develop a feasible automated\nfactchecking system. Existing fact-checking approaches can be\ncategorized as expert-oriented, crowdsourcing-oriented, and\ncomputational-oriented.",
+                                "Expert-oriented fact-checking heavily relies on human\ndomain experts to investigate relevant data and\ndocuments to construct the verdicts of claim veracity, for\nexample PolitiFact11, Snopes12, etc. However,\nexpertoriented fact-checking is an intellectually demanding\nand time-consuming process, which limits the\npotential for high e ciency and scalability.",
+                                "Crowdsourcing-oriented fact-checking exploits the\n\\wisdom of crowd\" to enable normal people to annotate\nnews content; these annotations are then aggregated\nto produce an overall assessment of the news\nveracity. For example, Fiskkit13 allows users to discuss and\nannotate the accuracy of speci c parts of a news\narticle. As another example, an anti-fake news bot named\n\\For real\" is a public account in the instant\ncommunication mobile application LINE14, which allows people\nto report suspicious news content which is then further\nchecked by editors.",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref31",
+                                        "#text": "31"
+                                    },
+                                    "#text": "Computational-oriented fact-checking aims to provide\nan automatic scalable system to classify true and false\nclaims. Previous computational-oriented fact checking\nmethods try to solve two majors issues: (i) identifying\n11http://www.politifact.com/\n12http://www.snopes.com/\n13http:// skkit.com\n14https://grants.g0v.tw/projects/588fa7b382223f001e022944\ncheck-worthy claims and (ii) discriminating the\nveracity of fact claims. To identify check-worthy claims,\nfactual claims in news content are extracted that convey\nkey statements and viewpoints, facilitating the\nsubsequent fact-checking process [\n          \n          ]. Fact-checking for\nspeci c claims largely relies on external resources to\ndetermine the truthfulness of a particular claim. Two\ntypical external sources include the open web and\nstructured knowledge graph. Open web sources are utilized\nas references that can be compared with given claims\nin terms of both the consistency and frequency [5; 50].\nKnowledge graphs are integrated from the linked open\ndata as a structured network topology, such as\nDBpedia and Google Relation Extraction Corpus.\nFactchecking using a knowledge graph aims to check whether\nthe claims in news content can be inferred from\nexisting facts in the knowledge graph [98; 16; 72]."
+                                },
+                                "Style-based: Fake news publishers often have malicious\nintent to spread distorted and misleading information and\nin uence large communities of consumers, requiring\nparticular writing styles necessary to appeal to and persuade a\nwide scope of consumers that is not seen in true news\narticles. Style-based approaches try to detect fake news by\ncapturing the manipulators in the writing style of news\ncontent. There are mainly two typical categories of style-based\nmethods: Deception-oriented and Objectivity-oriented.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref45",
+                                            "#text": "45"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref22",
+                                            "#text": "22"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref69",
+                                            "#text": "68"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref74",
+                                            "#text": "90"
+                                        }
+                                    ],
+                                    "#text": "Deception-oriented stylometric methods capture the\ndeceptive statements or claims from news content. The\nmotivation of deception detection originates from\nforensic psychology (i.e., Undeutsch Hypothesis) [82] and\nvarious forensic tools including Criteria-based Content\nAnalysis [84] and Scienti c-based Content Analysis [\n          \n          ]\nhave been developed. More recently, advanced\nnatural language processing models are applied to spot\ndeception phases from the following perspectives: Deep\nsyntax and Rhetorical structure. Deep syntax models\nhave been implemented using probabilistic context\nfrree grammers (PCFG), with which sentences can be\ntransformed into rules that describe the syntax\nstructure. Based on the PCFG, di erent rules can be\ndeveloped for deception detection, such as unlexicalized/\nlexicalized production rules and grandparent rules [\n          \n          ].\nRhetorical structure theory can be utilized to capture\nthe di erences between deceptive and truthful\nsentences [\n          \n          ]. Deep network models, such as\nconvolutional neural networks (CNN), have also been applied\nto classify fake news veracity [\n          \n          ]."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref63",
+                                            "#text": "62"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref13",
+                                            "#text": "13"
+                                        }
+                                    ],
+                                    "#text": "Objectivity-oriented approaches capture style signals\nthat can indicate a decreased objectivity of news\ncontent and thus the potential to mislead consumers, such\nas hyperpartisan styles and yellow-journalism.\nHyperpartisan styles represent extreme behavior in favor of a\nparticular political party, which often correlates with\na strong motivation to create fake news.\nLinguisticbased features can be applied to detect hyperpartisan\narticles [\n          \n          ]. Yellow-journalism represents those\narticles that do not contain well-researched news, but\ninstead rely on eye-catching headlines (i.e., clickbait)\nwith a propensity for exaggeration, sensationalization,\nscare-mongering, etc. Often, news titles will\nsummarize the major viewpoints of the article that the author\nwants to convey, and thus misleading and deceptive\nclickbait titles can serve as a good indicator for\nrecognizing fake news articles [\n          \n          ].\n3.3.2"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "sec-10-2",
+                            "title": "Social Context Models",
+                            "p": [
+                                "The nature of social media provides researchers with\nadditional resources to supplement and enhance News\nContent Models. Social context models include relevant user\nsocial engagements in the analysis, capturing this auxiliary\ninformation from a variety of perspectives. We can\nclassify existing approaches for social context modeling into two\ncategories: Stance-based and Propagation-based. Note that\nvery few existing fake news detection approaches have\nutilized social context models. Thus, we also introduce similar\nmethods for rumor detection using social media, which have\npotential application for fake news detection.",
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref53",
+                                            "#text": "53"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        }
+                                    ],
+                                    "#text": "Stance-based: Stance-based approaches utilize users'\nviewpoints from relevant post contents to infer the veracity of\noriginal news articles. The stance of users' posts can be\nrepresented either explicitly or implicitly. Explicit stances\nare direct expressions of emotion or opinion, such as the\n\\thumbs up\" and \\thumbs down\" reactions expressed in\nFacebook. Implicit stances can be automatically extracted\nfrom social media posts. Stance detection is the task of\nautomatically determining from a post whether the user is\nin favor of, neutral toward, or against some target entity,\nevent, or idea [\n          \n          ]. Previous stance classi cation methods\nmainly rely on hand-crafted linguistic or embedding features\non individual posts to predict stances [53; 64]. Topic model\nmethods, such as latent dirichlet allocation (LDA) can be\napplied to learn latent stance from topics [\n          \n          ]. Using these\nmethods, we can infer the news veracity based on the stance\nvalues of relevant posts. Tacchini et al. proposed to\nconstruct a bipartite network of user and Facebook posts using\nthe \\like\" stance information [75]; based on this network,\na semi-supervised probabilistic model was used to predict\nthe likelihood of Facebook posts being hoaxes. Jin et al.\nexplored topic models to learn latent viewpoint values and\nfurther exploited these viewpoints to learn the credibility of\nrelevant posts and news content [\n          \n          ]."
+                                },
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref37",
+                                            "#text": "37"
+                                        }
+                                    ],
+                                    "#text": "Propagation-based: Propagation-based approaches for fake\nnews detection reason about the interrelations of relevant\nsocial media posts to predict news credibility. The basic\nassumption is that the credibility of a news event is highly\nrelated to the credibilities of relevant social media posts.\nBoth homogeneous and heterogeneous credibility networks\ncan be built for propagation process. Homogeneous\ncredibility networks consist of a single type of entities, such as\npost or event [\n          \n          ]. Heterogeneous credibility networks\ninvolve di erent types of entities, such as posts, sub-events,\nand events [36; 29]. Gupta et al. proposed a PageRank-like\ncredibility propagation algorithm by encoding users'\ncredibilities and tweets' implications on a three layer\nuser-tweetevent heterogeneous information network. Jin et al.\nproposed to include news aspects (i.e., latent sub-events), build\na three-layer hierarchical network, and utilize a graph\noptimization framework to infer event credibilities. Recently,\nthe con icting viewpoint relationships are included to build\na homogeneous credibility network among tweets and guide\nthe process to evaluate their credibilities [\n          \n          ]."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-11",
+                    "title": "ASSESSING DETECTION EFFICACY",
+                    "p": "In this section, we discuss how to assess the performance of\nalgorithms for fake news detection. We focus on the\navailable datasets and evaluation metrics for this task.\n4.1"
+                },
+                {
+                    "@id": "sec-12",
+                    "title": "Datasets",
+                    "p": [
+                        "Online news can be collected from di erent sources, such\nas news agency homepages, search engines, and social\nmedia websites. However, manually determining the\nveracity of news is a challenging task, usually requiring\nannotators with domain expertise who performs careful analysis of\nclaims and additional evidence, context, and reports from\nauthoritative sources. Generally, news data with\nannotations can be gathered in the following ways: Expert\njournalists, Fact-checking websites, Industry detectors, and\nCrowdsourced workers. However, there are no agreed upon\nbenchmark datasets for the fake news detection problem. Some\npublicly available datasets are listed below:",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref63",
+                                "#text": "62"
+                            },
+                            "#text": "BuzzFeedNews15: This dataset comprises a complete\nsample of news published in Facebook from 9 news\nagencies over a week close to the 2016 U.S. election\nfrom September 19 to 23 and September 26 and 27.\nEvery post and the linked article were fact-checked\nclaim-by-claim by 5 BuzzFeed journalists. This dataset\nis further enriched in [\n        \n        ] by adding the linked articles,\nattached media, and relevant metadata. It contains\n1,627 articles{826 mainstream, 356 left-wing, and 545\nright-wing articles."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref74",
+                                "#text": "90"
+                            },
+                            "#text": "LIAR16: This dataset is collected from fact-checking\nwebsite PolitiFact through its API [\n        \n        ]. It includes\n12,836 human-labeled short statements, which are\nsampled from various contexts, such as news releases, TV\nor radio interviews, campaign speeches, etc. The labels\nfor news truthfulness are ne-grained multiple classes:\npants- re, false, barely-true, half-true, mostly true,\nand true."
+                        },
+                        "BS Detector 17: This dataset is collected from a browser\nextension called BS detector developed for checking\nnews veracity18. It searches all links on a given\nwebpage for references to unreliable sources by checking\nagainst a manually complied list of domains. The\nlabels are the outputs of BS detector, rather than human\nannotators.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref52",
+                                "#text": "52"
+                            },
+                            "#text": "CREDBANK 19: This is a large scale crowdsourced\ndataset of approximately 60 million tweets that cover\n96 days starting from October 2015. All the tweets are\nbroken down to be related to over 1,000 news events,\nwith each event assessed for credibilities by 30\nannotators from Amazon Mechanical Turk [\n        \n        ]."
+                        },
+                        "In Table 1, we compare these public fake news detection\ndatasets, highlighting the features that can be extracted\nfrom each dataset. We can see that no existing public dataset\ncan provide all possible features of interest. In addition,\n15https://github.com/BuzzFeedNews/2016-10-facebookfact-check/tree/master/data\n16https://www.cs.ucsb.edu/ william/data/liar dataset.zip\n17https://www.kaggle.com/mrisdal/fake-news\n18https://github.com/bs-detector/bs-detector\n19http://compsocial.github.io/CREDBANK-data/\nthese datasets also have speci c limitation that make them\nchallenging to use for fake news detection. BuzzFeedNews\nonly contains headlines and text for each news piece and\ncovers news articles from very few news agencies. LIAR\nincludes mostly short statements, rather than the entire news\ncontent. Further, these statements are collected from\nvarious speakers, rather than news publishers, and may include\nsome claims that are not fake news. BS Detector data is\ncollected and annotated by using a developed news veracity\nchecking tool. As the labels have not been properly\nvalidated by human experts, any model trained on this data is\nreally learning the parameters of BS Detector, rather than\nexpert-annotated ground truth fake news. Finally,\nCREDBANK was originally collected for tweet credibility\nassessment, so the tweets in this dataset are not really the social\nengagements for speci c news articles.",
+                        "To address the disadvantages of existing fake news\ndetection datasets, we have an ongoing project to develop a\nusable dataset for fake news detection on social media. This\ndataset, called F akeN ewsN et20, includes all mentioned news\ncontent and social context features with reliable ground truth\nfake news labels.\n4.2"
+                    ]
+                },
+                {
+                    "@id": "sec-13",
+                    "title": "Evaluation Metrics",
+                    "p": [
+                        "To evaluate the performance of algorithms for fake news\ndetection problem, various evaluation metrics have been used.\nIn this subsection, we review the most widely used metrics\nfor fake news detection. Most existing approaches consider\nthe fake news problem as a classi cation problem that\npredicts whether a news article is fake or not:",
+                        "True Positive (TP): when predicted fake news pieces\nare actually annotated as fake news;\nTrue Negative (TN): when predicted true news pieces\nare actually annotated as true news;\nFalse Negative (FN): when predicted true news pieces\nare actually annotated as fake news;\nFalse Positive (FP): when predicted fake news pieces\nare actually annotated as true news.",
+                        "By formulating this as a classi cation problem, we can de ne\nfollowing metrics,",
+                        "P recision",
+                        "=",
+                        "Recall =\nAccuracy",
+                        "=\nF 1 = 2",
+                        "jT P j\njT P j + jF P j",
+                        "jT P j\njT P j + jF N j",
+                        "P recision Recall\nP recision + Recall",
+                        "jT P j + jT N j\njT P j + jT N j + jF P j + jF N j\n(2)\n(3)\n(4)\n(5)\nThese metrics are commonly used in the machine learning\ncommunity and enable us to evaluate the performance of a\nclassi er from di erent perspectives. Speci cally, accuracy\nmeasures the similarity between predicted fake news and real\nfake news. Precision measures the fraction of all detected\nfake news that are annotated as fake news, addressing the\nimportant problem of identifying which news is fake.\nHowever, because fake news datasets are often skewed, a high\nprecision can be easily achieved by making fewer positive\n20https://github.com/KaiDMML/FakeNewsNet\nDataset"
+                    ],
+                    "sec": [
+                        {
+                            "@id": "sec-13-1",
+                            "title": "BuzzFeedNews"
+                        },
+                        {
+                            "@id": "sec-13-2",
+                            "title": "LIAR"
+                        },
+                        {
+                            "@id": "sec-13-3",
+                            "title": "BS Detector"
+                        },
+                        {
+                            "@id": "sec-13-4",
+                            "title": "CREDBANK",
+                            "p": [
+                                "predictions. Thus, recall is used to measure the sensitivity,\nor the fraction of annotated fake news articles that are\npredicted to be fake news. F1 is used to combine precision and\nrecall, which can provide an overall prediction performance\nfor fake news detection. Note that for P recision; Recall,\nF1, and Accuracy, the higher the value, the better the\nperformance.",
+                                "The Receiver Operating Characteristics (ROC) curve\nprovides a way of comparing the performance of classi ers by\nlooking at the trade-o in the False Positive Rate (FPR) and\nthe True Positive Rate (TPR). To draw the ROC curve, we\nplot the FPR on the x axis and and TPR along the y axis.\nThe ROC curve compares the performance of di erent\nclassi ers by changing class distributions via a threshold. TPR\nand FPR are de ned as follows (note that TPR is the same\nas recall de ned above):",
+                                "T P R\nF P R\n=\n=",
+                                "jT P j\njT P j + jF N j",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref30",
+                                        "#text": "30"
+                                    },
+                                    "#text": "jF P j\njF P j + jT N j\nBased on the ROC curve, we can compute the Area Under\nthe Curve (AUC) value, which measures the overall\nperformance of how likely the classi er is to rank the fake news\nhigher than any true news. Based on [\n          \n          ], AUC is de ned\nas below."
+                                },
+                                "AU C =",
+                                "P(n0 + n1 + 1",
+                                {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref47",
+                                        "#text": "47"
+                                    },
+                                    "#text": "ri)\nn0n1\nn0(n0 + 1)=2\nwhere ri is the rank of ith fake news piece and n0 (n1) is\nthe number of fake (true) news pieces. It is worth\nmentioning that AUC is more statistically consistent and more\ndiscriminating than accuracy [\n          \n          ], and it is usually applied\nin an imbalanced classi cation problem, such as fake news\nclassi cation, where the number of ground truth fake news\narticles and and true news articles have a very imbalanced\ndistribution."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-14",
+                    "title": "RELATED AREAS",
+                    "p": "In this section, we further discuss areas that are related to\nthe problem of fake news detection. We aim to point out\nthe di erences between these areas and fake news detection\nby brie y explaining the task goals and highlighting some\npopular methods.\n5.1"
+                },
+                {
+                    "@id": "sec-15",
+                    "title": "Rumor Classification",
+                    "p": {
+                        "xref": [
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref86",
+                                "#text": "102"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref86",
+                                "#text": "102"
+                            }
+                        ],
+                        "#text": "A rumor can usually be de ned as \\a piece of circulating\ninformation whose veracity status is yet to be veri ed at\nthe time of spreading\" [\n        \n        ]. The function of a rumor is\nto make sense of an ambiguous situation, and the\ntruthfulness value could be true, false or unveri ed. Previous\napproaches for rumor analysis focus on four subtasks: rumor\nX\nX\nX\nX\n(6)\n(7)\n(8)\ndetection, rumor tracking, stance classi cation, and\nveracity classi cation [\n        \n        ]. Speci cally, rumor detection aims to\nclassify a piece of information as rumor or non-rumor [96;\n70]; rumor tracking aims to collect and lter posts discussing\nspeci c rumors; rumor stance classi cation determines how\neach relevant post is oriented with respect to the rumor's\nveracity; veracity classi cation attempts to predict the\nactual truth value of the rumor. The most related task to fake\nnews detection is the rumor veracity classi cation. Rumor\nveracity classi cation relies heavily on the other subtasks,\nrequiring the stances or opinions can be extracted from\nrelevant posts. These posts are considered as important\nsensors for determining the veracity of the rumor. Di erent\nfrom rumors, which may include long-term rumors, such as\nconspiracy theories, as well as short-term emerging rumors,\nfake news refers to information related speci cally to public\nnews events that can be veri ed as false.\n5.2"
+                    }
+                },
+                {
+                    "@id": "sec-16",
+                    "title": "Truth Discovery",
+                    "p": {
+                        "xref": {
+                            "@ref-type": "bibr",
+                            "@rid": "ref46",
+                            "#text": "46"
+                        },
+                        "#text": "Truth discovery is the problem of detecting true facts from\nmultiple con icting sources [\n        \n        ]. Truth discovery methods\ndo not explore the fact claims directly, but rely on a\ncollection of contradicting sources that record the properties of\nobjects to determine the truth value. Truth discovery aims\nto determine the source credibility and object truthfulness\nat the same time. The fake news detection problem can\nbene t from various aspects of truth discovery approaches\nunder di erent scenarios. First, the credibility of di erent\nnews outlets can be modeled to infer the truthfulness of\nreported news. Second, relevant social media posts can also\nbe modeled as social response sources to better determine\nthe truthfulness of claims [56; 93]. However, there are some\nother issues that must be considered to apply truth discovery\nto fake news detection in social media scenarios. First, most\nexisting truth discovery methods focus on handling\nstructured input in the form of Subject-Predicate-Object (SPO)\ntuples, while social media data is highly unstructured and\nnoisy. Second, truth discovery methods can not be well\napplied when a fake news article is newly launched and\npublished by only a few news outlets because at that point there\nis not enough social media posts relevant to it to serve as\nadditional sources.\n5.3"
+                    }
+                },
+                {
+                    "@id": "sec-17",
+                    "title": "Clickbait Detection",
+                    "p": {
+                        "xref": {
+                            "@ref-type": "bibr",
+                            "@rid": "ref7",
+                            "#text": "7"
+                        },
+                        "#text": "Clickbait is a term commonly used to describe eye-catching\nand teaser headlines in online media. Clickbait headlines\ncreate a so-called \\curiosity gap\", increasing the likelihood\nthat reader will click the target link to satisfy their\ncuriosity. Existing clickbait detection approaches utilize various\nlinguistic features extracted from teaser messages, linked\nwebpages, and tweet meta information [12; 8; 63]. Di\nerent types of clickbait are categorized, and some of them are\nhighly correlated with non-factual claims [\n        \n        ]. The\nunderlying motivation of clickbait is usually for click-through rates\nand the resultant advertising revenue. Thus, the body text\nof clickbait articles are often informally organized and poorly\nreasoned. This discrepancy has been used by researchers to\nidentify the inconsistency between headlines and news\ncontents in an attempt to detect fake news articles21. Even\nthough not all fake news may include clickbait headlines,\nspeci c clickbait headlines could serve as an important\nindicator, and various features can be utilized to help detect\nfake news.\n5.4"
+                    }
+                },
+                {
+                    "@id": "sec-18",
+                    "title": "Spammer and Bot Detection",
+                    "p": {
+                        "xref": [
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref44",
+                                "#text": "44"
+                            },
+                            {
+                                "@ref-type": "bibr",
+                                "@rid": "ref23",
+                                "#text": "23"
+                            }
+                        ],
+                        "#text": "Spammer detection on social media, which aims to\ncapture malicious users that coordinate among themselves to\nlaunch various attacks, such as spreading ads,\ndisseminating pornography, delivering viruses, and phishing [\n        \n        ], has\nrecently attracted wide attention. Existing approaches for\nsocial spammer detection mainly rely on extracting features\nfrom user activities and social network information [35; 95;\n33; 34]. In addition, the rise of social bots has also increased\nthe circulation of false information as they automatically\nretweet posts without verifying the facts [\n        \n        ]. The major\nchallenge brought by social bots is that they can give a false\nimpression that information is highly popular and endorsed\nby many people, which enables the echo chamber e ect for\nthe propagation of fake news. Previous approaches for bot\ndetection are based on social network information,\ncrowdsourcing, and discriminative features [23; 55; 54]. Thus,\nboth spammer and social bots could provide insights about\ntarget speci c malicious social media accounts that can be\nused for fake news detection."
+                    }
+                },
+                {
+                    "@id": "sec-19",
+                    "title": "OPEN ISSUES AND FUTURE RESEARCH",
+                    "p": [
+                        "In this section, we present some open issues in fake news\ndetection and future research directions. Fake news\ndetection on social media is a newly emerging research area, so\nwe aim to point out promising research directions from a\ndata mining perspective. Speci cally, as shown in Figure 2,\nwe outline the research directions in four categories:\nDataoriented, Feature-oriented, Model-oriented and\nApplicationoriented.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref37",
+                                "#text": "37"
+                            },
+                            "#text": "Data-oriented: Data-oriented fake news research is\nfocusing on di erent kinds of data characteristics, such as :\ndataset, temporal and psychological. From a dataset\nperspective, we demonstrated that there is no existing\nbenchmark dataset that includes resources to extract all relevant\nfeatures. A promising direction is to create a comprehensive\nand large-scale fake news benchmark dataset, which can be\nused by researchers to facilitate further research in this area.\nFrom a temporal perspective, fake news dissemination on\nsocial media demonstrates unique temporal patterns di erent\nfrom true news. Along this line, one interesting problem\nis to perform early fake news detection, which aims to give\nearly alerts of fake news during the dissemination process.\nFor example, this approach could look at only social media\nposts within some time delay of the original post as sources\nfor news veri cation [\n        \n        ]. Detecting fake news early can help\nprevent further propagation on social media. From a\npsychological perspective, di erent aspects of fake news have been\nqualitatively explored in the social psychology literature [92;\n21http://www.fakenewschallenge.org/\n58; 59], but quantitative studies to verify these psychological\nfactors are rather limited. For example, the echo chamber\ne ect plays an important role for fake news spreading in\nsocial media. Then how to capture echo chamber e ects and\nhow to utilize the pattern for fake news detection in social\nmedia could be an interesting investigation. Moreover,\nintention detection from news data is promising but limited\nas most existing fake news research focus on detecting the\nauthenticity but ignore the intent aspect of fake news.\nIntention detection is very challenging as the intention is often\nexplicitly unavailable. Thus. it's worth to explore how to\nuse data mining methods to validate and capture\npsychology intentions."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref32",
+                                    "#text": "32"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref22",
+                                    "#text": "22"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref38",
+                                    "#text": "38"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref62",
+                                    "#text": "61"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref70",
+                                    "#text": "69"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref75",
+                                    "#text": "91"
+                                }
+                            ],
+                            "#text": "Feature-oriented: Feature-oriented fake news research aims\nto determine e ective features for detecting fake news from\nmultiple data sources. We have demonstrated that there are\ntwo major data sources: news content and social context.\nFrom a news content perspective, we introduced\nlinguisticbased and visual-based techniques to extract features from\ntext information. Note that linguistic-based features have\nbeen widely studied for general NLP tasks, such as text\nclassi cation and clustering, and speci c applications such as\nauthor identi cation [\n        \n        ] and deception detection [\n        \n        ], but\nthe underlying characteristics of fake news have not been\nfully understood. Moreover, embedding techniques, such as\nword embedding and deep neural networks, are attracting\nmuch attention for textual feature extraction, and has the\npotential to learn better representations [90; 87; 88]. In\naddition, visual features extracted from images are also shown\nto be important indicators for fake news [\n        \n        ]. However, very\nlimited research has been done to exploit e ective visual\nfeatures, including traditional local and global features [\n        \n        ] and\nnewly emerging deep network-based features [43; 89; 85],\nfor the fake news detection problem. Recently, it has been\nshown that advanced tools can manipulate video footage of\npublic gures [80], synthesize high quality videos [74], etc.\nThus, it becomes much more challenging and important to\ndi erentiate real and fake visual content, and more advanced\nvisual-based features are needed for this research. From a\nsocial context perspective, we introduced user-based,\npostbased, and network-based features. Existing user-based\nfeatures mainly focus on general user pro les, rather than\ndifferentiating account types separately and extracting\nuserspeci c features. Post-based features can be represented\nusing other techniques, such as convolutional neural networks\n(CNN) [\n        \n        ], to better capture people's opinions and\nreactions toward fake news. Images in social media posts can\nalso be utilized to better understand users' sentiments [\n        \n        ]\ntoward news events. Network-based features are extracted\nto represent how di erent types of networks are constructed.\nIt is important to extend this preliminary work to explore\n(i) how other networks can be constructed in terms of di\nerent aspects of relationships among relevant users and posts;\nand (ii) other advanced methods of network representations,\nsuch as network embedding [78; 86]."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref25",
+                                    "#text": "25"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref20",
+                                    "#text": "20"
+                                }
+                            ],
+                            "#text": "Model-oriented: Model-oriented fake news research opens\nthe door to building more e ective and practical models for\nfake news detection. Most previously mentioned approaches\nfocus on extracting various features, incorporating theses\nfeatures into supervised classi cation models, such as na\u007fve\nBayes, decision tree, logistic regression, k nearest neighbor\n(KNN), and support vector machines (SVM), and then\nselecting the classi er that performs the best [62; 75; 1]. More\nresearch can be done to build more complex and e ective\nmodels and to better utilize extracted features, such as\naggregation methods, probabilistic methods, ensemble methods,\nor projection methods [73]. Speci cally, we think there is\nsome promising research in the following directions. First,\naggregation methods combine di erent feature\nrepresentations into a weighted form and optimize the feature weights.\nSecond, since fake news may commonly mix true statements\nwith false claims, it may make more sense to predict the\nlikelihood of fake news instead of producing a binary value;\nprobabilistic models predict a probabilistic distribution of\nclass labels (i.e., fake news versus true news) by assuming\na generative model that pulls from the same distribution as\nthe original feature space [\n        \n        ]. Third, one of the major\nchallenges for fake news detection is the fact that each feature,\nsuch as source credibility, news content style, or social\nresponse, has some limitations to directly predict fake news on\nits own. Ensemble methods build a conjunction of several\nweak classi ers to learn a strong classi er that is more\nsuccessful than any individual classi er alone; ensembles have\nbeen widely applied to various applications in the machine\nlearning literature [\n        \n        ]. It may be bene cial to build\nensemble models as news content and social context features each\nhave supplementary information that has the potential to\nboost fake news detection performance. Finally, fake news\ncontent or social context information may be noisy in the\nraw feature space; projection methods refer to approaches\nthat lean projection functions to map between original\nfeature spaces (e.g., news content features and social context\nfeatures) and the latent feature spaces that may be more\nuseful for classi cation."
+                        },
+                        "Moreover, most existing approaches are supervised, which\nrequires a pre-annotated fake news ground truth dataset\nto train a model. However, obtaining a reliable fake news\ndataset is very time and labor intensive, as the process\noften requires expert annotators to perform careful analysis of\nclaims and additional evidence, context, and reports from\nauthoritative sources. Thus, it is also important to\nconsider scenarios where limited or no labeled fake news pieces\nare available in which semi-supervised or unsupervised\nmodels can be applied. While the models created by\nsupervised classi cation methods may be more accurate given a\nwell-curated ground truth dataset for training, unsupervised\nmodels can be more practical because unlabeled datasets are\neasier to obtain.",
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref10",
+                                    "#text": "10"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref27",
+                                    "#text": "27"
+                                }
+                            ],
+                            "#text": "Application-oriented: Application-oriented fake news\nresearch encompass research that goes into other areas beyond\nfake news detection. We propose two major directions along\nthese lines: fake news di usion and fake news intervention.\nFake news di usion characterizes the di usion paths and\npatterns of fake news on social media sites. Some early\nresearch has shown that true information and misinformation\nfollow di erent patterns when propagating in online social\nnetworks [18; 51]. Similarly, the di usion of fake news in\nsocial media demonstrates its own characteristics that need\nfurther investigation, such as social dimensions, life cycle,\nspreader identi cation, etc. Social dimensions refer to the\nheterogeneity and weak dependency of social connections\nwithin di erent social communities. Users' perceptions of\nfake news pieces are highly a ected by their like-minded\nfriends in social media (i.e., echo chambers), while the\ndegree di ers along di erent social dimensions. Thus, it is\nworth exploring why and how di erent social dimensions\nplay a role in spreading fake news in terms of di erent\ntopics, such as political, education, sports, etc. The fake news\ndi usion process also has di erent stages in terms of\npeople's attentions and reactions as time goes by, resulting in\na unique life cycle. Research has shown that breaking news\nand in-depth news demonstrate di erent life cycles in social\nmedia [\n        \n        ]. Studying the life cycle of fake news will provide\ndeeper understanding of how particular stories \\go viral\"\nfrom normal public discourse. Tracking the life cycle of fake\nnews on social media requires recording essential trajectories\nof fake news di usion in general [71], as well as further\ninvestigations of the process for speci c fake news pieces, such\nas graph-based models and evolution-based models [\n        \n        ]. In\naddition, identifying key spreaders of fake news is crucial to\nmitigate the di usion scope in social media. Note that key\nspreaders can be categorized in two ways, i.e., stance and\nauthenticity. Along the stance dimensions, spreaders can\neither be (i) clari ers, who propose skeptical and opposing\nviewpoints towards fake news and try to clarify them; or (ii)\npersuaders, who spread fake news with supporting opinions\nto persuade others to believe it. In this sense, it is\nimportant to explore how to detect clari ers and persuaders and\nbetter use them to control the dissemination of fake news.\nFrom an authenticity perspective, spreaders could be either\nhuman, bot, or cyborg. Social bots have been used to\nintentionally spread fake news in social media, which motivates\nfurther research to better characterize and detect malicious\naccounts designed for propaganda."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref21",
+                                "#text": "21"
+                            },
+                            "#text": "Finally, we also propose further research into fake news\nintervention, which aims to reduce the e ects of fake news\nby proactive intervention methods that minimize the spread\nscope or reactive intervention methods after fake news goes\nviral. Proactive fake news intervention methods try to (i)\nremove malicious accounts that spread fake news or fake\nnews itself to isolate it from future consumers; (ii)\nimmunize users with true news to change the belief of users that\nmay already have been a ected by fake news. There is recent\nresearch that attempts to use content-based immunization\nand network-based immunization methods in\nmisinformation intervention [94; 97]. One approach uses a multivariate\nHawkes process to model both true news and fake news and\nmitigate the spreading of fake news in real-time [\n        \n        ]. The\naforementioned spreader detection techniques can also be\napplied to target certain users (e.g., persuaders) in social\nmedia to stop spreading fake news, or other users (e.g.\nclari ers) to maximize the spread of corresponding true news."
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-20",
+                    "title": "CONCLUSION",
+                    "p": "With the increasing popularity of social media, more and\nmore people consume news from social media instead of\ntraditional news media. However, social media has also been\nused to spread fake news, which has strong negative impacts\non individual users and broader society. In this article, we\nexplored the fake news problem by reviewing existing\nliterature in two phases: characterization and detection. In\nthe characterization phase, we introduced the basic concepts\nand principles of fake news in both traditional media and\nsocial media. In the detection phase, we reviewed existing fake\nnews detection approaches from a data mining perspective,\nincluding feature extraction and model construction. We\nalso further discussed the datasets, evaluation metrics, and\npromising future directions in fake news detection research\nand expand the eld to other applications."
+                },
+                {
+                    "@id": "sec-21",
+                    "title": "ACKNOWLEDGMENTS",
+                    "p": [
+                        "This material is based upon work supported by, or in part\nby, the ONR grant N00014-16-1-2257.\nHuan Liu. Leveraging the implicit structure within\nsocial media for emergent rumor detection. In CIKM'15.\n[71] Chengcheng Shao, Giovanni Luca Ciampaglia,\nAlessandro Flammini, and Filippo Menczer. Hoaxy:\nA platform for tracking online misinformation. In\nWWW'16.\n[72] Baoxu Shi and Tim Weninger. Fact checking in\nheterogeneous information networks. In WWW'16.\n[73] Kai Shu, Suhang Wang, Jiliang Tang, Reza Zafarani,\nand Huan Liu. User identity linkage across online\nsocial networks: A review. ACM SIGKDD Explorations\nNewsletter, 18(2):5{17, 2017.\n[74] Supasorn Suwajanakorn, Steven M Seitz, and Ira\nKemelmacher-Shlizerman. Synthesizing obama:\nlearning lip sync from audio. ACM Transactions on\nGraphics (TOG), 36(4):95, 2017.\n[75] Eugenio Tacchini, Gabriele Ballarin, Marco L\nDella Vedova, Stefano Moret, and Luca de Alfaro.\nSome like it hoax: Automated fake news detection\nin social networks. arXiv preprint arXiv:1704.07506,\n2017.\n[76] Henri Tajfel and John C Turner. An integrative theory\nof intergroup con ict. The social psychology of\nintergroup relations, 33(47):74, 1979.\n[77] Henri Tajfel and John C Turner. The social identity\ntheory of intergroup behavior. 2004.\n[78] Jian Tang, Meng Qu, Mingzhe Wang, Ming Zhang,\nJun Yan, and Qiaozhu Mei. Line: Large-scale\ninformation network embedding. In WWW'15.\n[79] Jiliang Tang, Yi Chang, and Huan Liu. Mining social\nmedia with social theories: a survey. ACM SIGKDD\nExplorations Newsletter, 15(2):20{29, 2014.\n[80] Justus Thies, Michael Zollhofer, Marc Stamminger,\nChristian Theobalt, and Matthias Nie ner. Face2face:\nReal-time face capture and reenactment of rgb videos.",
+                        "In CVPR'16.\n[81] Amos Tversky and Daniel Kahneman. Advances in\nprospect theory: Cumulative representation of\nuncertainty. Journal of Risk and uncertainty, 5(4):297{323,\n1992.\n[82] Udo Undeutsch. Beurteilung der glaubhaftigkeit von\naussagen. Handbuch der psychologie, 11:26{181, 1967.\n[83] Andreas Vlachos and Sebastian Riedel. Fact checking:",
+                        "Task de nition and dataset construction. ACL'14.\n[84] Aldert Vrij. Criteria-based content analysis: A\nqualitative review of the rst 37 studies. Psychology, Public\nPolicy, and Law, 11(1):3, 2005.\n[85] Suhang Wang, Charu Aggarwal, Jiliang Tang, and\nHuan Liu. Attributed signed network embedding. In\nCIKM'17.\n[86] Suhang Wang, Jiliang Tang, Charu Aggarwal,\nYi Chang, and Huan Liu. Signed network embedding\nin social media. In SDM'17.\n[87] Suhang Wang, Jiliang Tang, Charu Aggarwal, and\nHuan Liu. Linked document embedding for classi\ncation. In CIKM'16."
+                    ]
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Sadia",
+                                    "surname": "Afroz"
+                                },
+                                {
+                                    "given-names": "Michael",
+                                    "surname": "Brennan"
+                                },
+                                {
+                                    "given-names": "Rachel",
+                                    "surname": "Greenstadt"
+                                }
+                            ],
+                            "article-title": "Detecting hoaxes, frauds, and deception in writing style online",
+                            "source": "In ISSP'12.",
+                            "#text": "[1]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Hunt",
+                                    "surname": "Allcott"
+                                },
+                                {
+                                    "given-names": "Matthew",
+                                    "surname": "Gentzkow"
+                                }
+                            ],
+                            "article-title": "Social media and fake news in the 2016 election",
+                            "source": "Technical report, National Bureau of Economic Research",
+                            "year": "2017",
+                            "#text": "[2]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Solomon",
+                                    "given-names": "E"
+                                },
+                                {
+                                    "surname": "Asch",
+                                    "given-names": "H",
+                                    "#text": "and"
+                                },
+                                {
+                                    "surname": "Guetzkow"
+                                }
+                            ],
+                            "article-title": "E ects of group pressure upon the modi cation and distortion of judgments. Groups, leadership, and men",
+                            "volume": "222",
+                            "fpage": "236",
+                            "year": "1951",
+                            "#text": "[3]\n          \n          \n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Meital",
+                                "surname": "Balmas"
+                            },
+                            "article-title": "When fake news becomes real: Combined exposure to multiple news sources and political attitudes of ine cacy, alienation, and cynicism",
+                            "source": "Communication Research",
+                            "volume": [
+                                "41",
+                                "430"
+                            ],
+                            "issue": "3",
+                            "fpage": "454",
+                            "year": "2014",
+                            "#text": "[4]\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Michele",
+                                    "surname": "Banko"
+                                },
+                                {
+                                    "given-names": "Oren",
+                                    "surname": "Etzioni"
+                                }
+                            ],
+                            "article-title": "Open information extraction from the web",
+                            "source": "In IJCAI'07.",
+                            "#text": "[5]\n          \n          , Michael J Cafarella, Stephen Soderland, Matthew Broadhead, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Alessandro",
+                                    "surname": "Bessi"
+                                },
+                                {
+                                    "given-names": "Emilio",
+                                    "surname": "Ferrara"
+                                }
+                            ],
+                            "article-title": "Social bots distort the 2016 us presidential election online discussion",
+                            "source": "First Monday",
+                            "volume": "21",
+                            "issue": "11",
+                            "year": "2016",
+                            "#text": "[6]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Prakhar",
+                                    "surname": "Biyani"
+                                },
+                                {
+                                    "given-names": "and John",
+                                    "surname": "Blackmer"
+                                }
+                            ],
+                            "article-title": "\" 8 amazing secrets for getting more clicks\": Detecting clickbaits in news streams using article informality",
+                            "source": "In AAAI'16.",
+                            "#text": "[7]\n          \n          , Kostas Tsioutsiouliklis,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Jonas",
+                                "surname": "Nygaard"
+                            },
+                            "article-title": [
+                                "Blom and Kenneth Reinecke Hansen",
+                                "Click bait: Forward-reference as lure in online news headlines"
+                            ],
+                            "source": "Journal of Pragmatics",
+                            "volume": "76",
+                            "fpage": [
+                                "87",
+                                "100"
+                            ],
+                            "year": "2015",
+                            "#text": "[8]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Paul",
+                                    "given-names": "R Brewer"
+                                },
+                                {
+                                    "given-names": "Michelle",
+                                    "surname": "Morreale"
+                                }
+                            ],
+                            "article-title": "The impact of real news about fake news: Intertextual processes and political satire",
+                            "source": "International Journal of Public Opinion Research",
+                            "volume": [
+                                "25",
+                                "323"
+                            ],
+                            "issue": "3",
+                            "fpage": "343",
+                            "year": "2013",
+                            "#text": "[9]\n          \n          , Dannagal Goldthwaite Young, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Carlos",
+                                "given-names": "Castillo"
+                            },
+                            "article-title": "Ju\u007frgen Pfeffer, and Matt Stempeck. Characterizing the life cycle of online news stories using social media reactions",
+                            "source": "In CSCW'14.",
+                            "#text": "[10]\n          \n          , Mohammed El-Haddad,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Carlos",
+                                    "given-names": "Castillo"
+                                },
+                                {
+                                    "given-names": "Barbara",
+                                    "surname": "Poblete"
+                                }
+                            ],
+                            "article-title": "Information credibility on twitter",
+                            "source": "In WWW'11.",
+                            "#text": "[11]\n          \n          , Marcelo Mendoza, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Abhijnan",
+                                    "given-names": "Chakraborty"
+                                },
+                                {
+                                    "given-names": "Niloy",
+                                    "surname": "Ganguly"
+                                }
+                            ],
+                            "article-title": "Stop clickbait: Detecting and preventing clickbaits in online news media",
+                            "source": "In ASONAM'16.",
+                            "#text": "[12]\n          \n          , Bhargavi Paranjape, Sourya Kakarla, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Yimin",
+                                    "given-names": "Chen"
+                                },
+                                {
+                                    "surname": "Niall J Conroy"
+                                }
+                            ],
+                            "article-title": "Misleading online content: Recognizing clickbait as false news",
+                            "source": "In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection",
+                            "volume": "15",
+                            "fpage": "19",
+                            "year": "2015",
+                            "#text": "[13]\n          \n          ,\n          \n          , and Victoria L Rubin.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . ACM,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Justin",
+                                    "given-names": "Cheng"
+                                },
+                                {
+                                    "surname": "Cristian DanescuNiculescu-Mizil",
+                                    "given-names": "Jure",
+                                    "#text": ", and"
+                                },
+                                {
+                                    "surname": "Leskovec"
+                                }
+                            ],
+                            "article-title": "Anyone can become a troll: Causes of trolling behavior in online discussions",
+                            "source": "In CSCW '17.",
+                            "#text": "[14]\n          \n          , Michael Bernstein,\n          \n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zi",
+                                    "given-names": "Chu"
+                                },
+                                {
+                                    "given-names": "Haining",
+                                    "surname": "Wang"
+                                },
+                                {
+                                    "given-names": "Sushil",
+                                    "surname": "Jajodia"
+                                }
+                            ],
+                            "article-title": "Detecting automation of twitter accounts: Are you a human, bot, or cyborg",
+                            "source": "IEEE Transactions on Dependable and Secure Computing",
+                            "volume": [
+                                "9",
+                                "811"
+                            ],
+                            "issue": "6",
+                            "fpage": "824",
+                            "year": "2012",
+                            "#text": "[15]\n          \n          , Steven Gianvecchio,\n          \n          , and\n          \n          .\n          \n          ?\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Giovanni",
+                                    "surname": "Luca"
+                                },
+                                {
+                                    "surname": "Ciampaglia"
+                                },
+                                {
+                                    "given-names": "Johan",
+                                    "surname": "Bollen"
+                                },
+                                {
+                                    "given-names": "Alessandro",
+                                    "surname": "Flammini"
+                                }
+                            ],
+                            "article-title": "Computational fact checking from knowledge networks",
+                            "source": "PloS one",
+                            "volume": "10",
+                            "issue": "6",
+                            "year": "2015",
+                            "#text": "[16]\n          \n          \n          , Prashant Shiralkar, Luis M Rocha,\n          \n          , Filippo Menczer, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):e0128193,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Niall J Conroy",
+                                    "given-names": "Yimin",
+                                    "#text": ", Victoria L Rubin, and"
+                                },
+                                {
+                                    "surname": "Chen"
+                                }
+                            ],
+                            "article-title": "Automatic deception detection: Methods for nding fake news",
+                            "source": "Proceedings of the Association for Information Science and Technology",
+                            "volume": "52",
+                            "issue": [
+                                "1",
+                                "4"
+                            ],
+                            "year": "2015",
+                            "#text": "[17]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Michela",
+                                    "surname": "Del Vicario"
+                                },
+                                {
+                                    "given-names": "Alessandro",
+                                    "surname": "Bessi"
+                                },
+                                {
+                                    "given-names": "H Eugene",
+                                    "surname": "Stanley"
+                                },
+                                {
+                                    "given-names": "Walter",
+                                    "surname": "Quattrociocchi"
+                                }
+                            ],
+                            "article-title": "The spreading of misinformation online",
+                            "source": "Proceedings of the National Academy of Sciences",
+                            "volume": [
+                                "113",
+                                "554"
+                            ],
+                            "issue": "3",
+                            "fpage": "559",
+                            "year": "2016",
+                            "#text": "[18]\n          \n          ,\n          \n          , Fabiana Zollo, Fabio Petroni, Antonio Scala, Guido Caldarelli,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Michela",
+                                    "surname": "Del Vicario"
+                                },
+                                {
+                                    "given-names": "Gianna",
+                                    "surname": "Vivaldo"
+                                },
+                                {
+                                    "given-names": "Walter",
+                                    "surname": "Quattrociocchi"
+                                }
+                            ],
+                            "article-title": "Echo chambers: Emotional contagion and group polarization on facebook",
+                            "source": "Scienti c Reports",
+                            "volume": "6",
+                            "year": "2016",
+                            "#text": "[19]\n          \n          ,\n          \n          , Alessandro Bessi, Fabiana Zollo, Antonio Scala, Guido Caldarelli, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Thomas",
+                                "given-names": "G Dietterich"
+                            },
+                            "article-title": "Ensemble methods in machine learning",
+                            "source": "Multiple classi er systems",
+                            "year": [
+                                "1857",
+                                "2000"
+                            ],
+                            "volume": "1",
+                            "fpage": "15",
+                            "#text": "[20]\n          \n          et al.\n          \n          .\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref21",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Mehrdad",
+                                    "given-names": "Farajtabar"
+                                },
+                                {
+                                    "given-names": "Shuang",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Le",
+                                    "surname": "Song"
+                                },
+                                {
+                                    "given-names": "Hongyuan",
+                                    "surname": "Zha"
+                                }
+                            ],
+                            "article-title": "Fake news mitigation via point process based intervention",
+                            "source": "arXiv preprint arXiv:1703.07823",
+                            "year": "2017",
+                            "#text": "[21]\n          \n          , Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref22",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Song",
+                                    "given-names": "Feng"
+                                },
+                                {
+                                    "given-names": "Yejin",
+                                    "surname": "Choi"
+                                }
+                            ],
+                            "article-title": "Syntactic stylometry for deception detection",
+                            "source": "In ACL'12.",
+                            "#text": "[22]\n          \n          , Ritwik Banerjee, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref23",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Emilio",
+                                    "given-names": "Ferrara"
+                                },
+                                {
+                                    "given-names": "Filippo",
+                                    "surname": "Menczer"
+                                },
+                                {
+                                    "given-names": "Alessandro",
+                                    "surname": "Flammini"
+                                }
+                            ],
+                            "article-title": "The rise of social bots",
+                            "source": "Communications of the ACM",
+                            "volume": [
+                                "59",
+                                "96"
+                            ],
+                            "issue": "7",
+                            "fpage": "104",
+                            "year": "2016",
+                            "#text": "[23]\n          \n          , Onur Varol, Clayton Davis,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref24",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Johannes",
+                                "surname": "Fu"
+                            },
+                            "article-title": "\u007frnkranz. A study using n-gram features for text categorization",
+                            "source": "Austrian Research Institute for Arti cal Intelligence",
+                            "volume": [
+                                "3",
+                                "1"
+                            ],
+                            "year": [
+                                "1998",
+                                "1998"
+                            ],
+                            "fpage": "10",
+                            "#text": "[24]\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref25",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Ashutosh",
+                                    "surname": "Garg"
+                                },
+                                {
+                                    "given-names": "Dan",
+                                    "surname": "Roth"
+                                }
+                            ],
+                            "article-title": "Understanding probabilistic classi ers",
+                            "source": "ECML'01.",
+                            "#text": "[25]\n          \n          and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref26",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Matthew",
+                                    "given-names": "Gentzkow"
+                                },
+                                {
+                                    "surname": "Jesse M Shapiro"
+                                }
+                            ],
+                            "article-title": "Media bias in the marketplace:",
+                            "source": "Theory. Technical report, National Bureau of Economic Research",
+                            "year": "2014",
+                            "#text": "[26]\n          \n          ,\n          \n          , and Daniel F Stone.\n          \n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref27",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Adrien",
+                                "given-names": "Guille"
+                            },
+                            "article-title": "Djamel A Zighed. Information di usion in online social networks: A survey",
+                            "source": "ACM Sigmod Record",
+                            "volume": [
+                                "42",
+                                "17"
+                            ],
+                            "issue": "2",
+                            "fpage": "28",
+                            "year": "2013",
+                            "#text": "[27]\n          \n          , Hakim Hacid, Cecile Favre, and\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref28",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Aditi",
+                                    "given-names": "Gupta"
+                                },
+                                {
+                                    "given-names": "Anupam",
+                                    "surname": "Joshi"
+                                }
+                            ],
+                            "article-title": "Faking sandy: characterizing and identifying fake images on twitter during hurricane sandy",
+                            "source": "In WWW'13.",
+                            "#text": "[28]\n          \n          , Hemank Lamba, Ponnurangam Kumaraguru, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref29",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Manish",
+                                    "given-names": "Gupta"
+                                },
+                                {
+                                    "given-names": "Peixiang",
+                                    "surname": "Zhao"
+                                }
+                            ],
+                            "article-title": "Evaluating event credibility on twitter",
+                            "source": "In PSDM'12.",
+                            "#text": "[29]\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref30",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "David J Hand and Robert J Till"
+                            },
+                            "article-title": "A simple generalisation of the area under the roc curve for multiple class classi cation problems",
+                            "source": "Machine learning",
+                            "year": "2001",
+                            "#text": "[30]\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref31",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Naeemul",
+                                    "given-names": "Hassan"
+                                },
+                                {
+                                    "given-names": "Chengkai",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Mark",
+                                    "surname": "Tremayne"
+                                }
+                            ],
+                            "article-title": "Detecting check-worthy factual claims in presidential debates",
+                            "source": "In CIKM'15.",
+                            "#text": "[31]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref32",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "John",
+                                    "surname": "Houvardas"
+                                },
+                                {
+                                    "given-names": "Efstathios",
+                                    "surname": "Stamatatos"
+                                }
+                            ],
+                            "article-title": "N-gram feature selection for authorship identi cation",
+                            "source": "Arti - cial Intelligence: Methodology, Systems, and Applications",
+                            "volume": "77",
+                            "fpage": "86",
+                            "year": "2006",
+                            "#text": "[32]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref33",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Xia",
+                                    "given-names": "Hu"
+                                },
+                                {
+                                    "given-names": "Huiji",
+                                    "surname": "Gao"
+                                }
+                            ],
+                            "article-title": "Social spammer detection with sentiment information",
+                            "source": "In ICDM'14.",
+                            "#text": "[33]\n          \n          , Jiliang Tang,\n          \n          , and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref34",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Xia",
+                                    "given-names": "Hu"
+                                },
+                                {
+                                    "given-names": "Jiliang",
+                                    "surname": "Tang"
+                                }
+                            ],
+                            "article-title": "Online social spammer detection",
+                            "source": "In AAAI'14",
+                            "fpage": [
+                                "59",
+                                "65"
+                            ],
+                            "year": "2014",
+                            "#text": "[34]\n          \n          ,\n          \n          , and Huan Liu.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref35",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Xia",
+                                "given-names": "Hu"
+                            },
+                            "article-title": "Social spammer detection in microblogging",
+                            "source": "In IJCAI'13.",
+                            "#text": "[35]\n          \n          , Jiliang Tang, Yanchao Zhang, and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref36",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhiwei",
+                                    "given-names": "Jin"
+                                },
+                                {
+                                    "surname": "Yu-Gang Jiang"
+                                }
+                            ],
+                            "article-title": "News credibility evaluation on microblog with a hierarchical propagation model",
+                            "source": "In ICDM'14.",
+                            "#text": "[36]\n          \n          , Juan Cao,\n          \n          , and Yongdong Zhang.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref37",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhiwei",
+                                    "given-names": "Jin"
+                                },
+                                {
+                                    "given-names": "Jiebo",
+                                    "surname": "Luo"
+                                }
+                            ],
+                            "article-title": "News veri cation by exploiting con icting social viewpoints in microblogs",
+                            "source": "In AAAI'16.",
+                            "#text": "[37]\n          \n          , Juan Cao, Yongdong Zhang, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref38",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Zhiwei",
+                                    "given-names": "Jin"
+                                },
+                                {
+                                    "given-names": "Qi",
+                                    "surname": "Tian"
+                                }
+                            ],
+                            "article-title": "Novel visual and statistical image features for microblogs news veri cation",
+                            "source": "IEEE Transactions on Multimedia",
+                            "volume": [
+                                "19",
+                                "598"
+                            ],
+                            "issue": "3",
+                            "fpage": "608",
+                            "year": "2017",
+                            "#text": "[38]\n          \n          , Juan Cao, Yongdong Zhang, Jianshe Zhou, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref39",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Daniel",
+                                    "surname": "Kahneman"
+                                },
+                                {
+                                    "given-names": "Amos",
+                                    "surname": "Tversky"
+                                }
+                            ],
+                            "article-title": "Prospect theory: An analysis of decision under risk",
+                            "source": "Econometrica: Journal of the econometric society",
+                            "volume": "263",
+                            "fpage": "291",
+                            "year": "1979",
+                            "#text": "[39]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref40",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Jean-Noel Kapferer"
+                            },
+                            "source": "Rumors: Uses, Interpretation and Necessity. Routledge",
+                            "year": "2017",
+                            "#text": "[40]\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref41",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "David",
+                                    "given-names": "O"
+                                },
+                                {
+                                    "surname": "Klein and Joshua R Wueller."
+                                }
+                            ],
+                            "article-title": "Fake news: A legal perspective",
+                            "year": "2017",
+                            "#text": "[41]\n          \n          \n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref42",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Sejeong",
+                                    "given-names": "Kwon"
+                                },
+                                {
+                                    "given-names": "Yajun",
+                                    "surname": "Wang"
+                                }
+                            ],
+                            "article-title": "Prominent features of rumor propagation in online social media",
+                            "source": "In ICDM'13",
+                            "fpage": [
+                                "1103",
+                                "1108"
+                            ],
+                            "year": "2013",
+                            "#text": "[42]\n          \n          , Meeyoung Cha, Kyomin Jung, Wei Chen, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . IEEE,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref43",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Yann",
+                                "given-names": "LeCun"
+                            },
+                            "article-title": "Deep learning",
+                            "source": "Nature",
+                            "volume": [
+                                "521",
+                                "436"
+                            ],
+                            "issue": "7553",
+                            "fpage": "444",
+                            "year": "2015",
+                            "#text": "[43]\n          \n          , Yoshua Bengio, and Geo rey Hinton.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref44",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Kyumin",
+                                    "surname": "Lee"
+                                },
+                                {
+                                    "given-names": "James",
+                                    "surname": "Caverlee"
+                                },
+                                {
+                                    "given-names": "Steve",
+                                    "surname": "Webb"
+                                }
+                            ],
+                            "article-title": "Uncovering social spammers: social honeypots+ machine learning",
+                            "source": "In SIGIR'10.",
+                            "#text": "[44]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref45",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Tony",
+                                "surname": "Lesce"
+                            },
+                            "article-title": "Deception detection by scienti c content analysis",
+                            "source": "Law and Order",
+                            "volume": "38",
+                            "issue": [
+                                "8",
+                                "6"
+                            ],
+                            "year": "1990",
+                            "#text": "[45]\n          \n          . Scan:\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):3{\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref46",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Yaliang",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Jing",
+                                    "surname": "Gao"
+                                },
+                                {
+                                    "given-names": "Qi",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Lu",
+                                    "surname": "Su"
+                                },
+                                {
+                                    "given-names": "Bo",
+                                    "surname": "Zhao"
+                                },
+                                {
+                                    "given-names": "Wei",
+                                    "surname": "Fan"
+                                }
+                            ],
+                            "article-title": "A survey on truth discovery",
+                            "source": "ACM Sigkdd Explorations Newsletter",
+                            "volume": "17",
+                            "issue": "2",
+                            "fpage": "16",
+                            "year": "2016",
+                            "#text": "[46]\n          \n          ,\n          \n          , Chuishi Meng,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref47",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Charles",
+                                    "given-names": "X Ling"
+                                },
+                                {
+                                    "given-names": "Jin",
+                                    "surname": "Huang"
+                                },
+                                {
+                                    "given-names": "and Harry",
+                                    "surname": "Zhang"
+                                }
+                            ],
+                            "article-title": "Auc: a statistically consistent and more discriminating measure than accuracy",
+                            "#text": "[47]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref48",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Jing",
+                                    "given-names": "Ma"
+                                },
+                                {
+                                    "surname": "Kam-Fai Wong",
+                                    "given-names": "Meeyoung",
+                                    "#text": ", and"
+                                },
+                                {
+                                    "surname": "Cha"
+                                }
+                            ],
+                            "article-title": "Detecting rumors from microblogs with recurrent neural networks",
+                            "#text": "[48]\n          \n          , Wei Gao, Prasenjit Mitra, Sejeong Kwon, Bernard J Jansen,\n          \n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref49",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Jing",
+                                    "given-names": "Ma"
+                                },
+                                {
+                                    "surname": "Kam-Fai Wong"
+                                }
+                            ],
+                            "article-title": "Detect rumors using time series of social context information on microblogging websites",
+                            "source": "In CIKM'15.",
+                            "#text": "[49]\n          \n          , Wei Gao, Zhongyu Wei, Yueming Lu, and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref50",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Amr",
+                                    "surname": "Magdy"
+                                },
+                                {
+                                    "given-names": "Nayer",
+                                    "surname": "Wanas"
+                                }
+                            ],
+                            "article-title": "Web-based statistical fact checking of textual documents",
+                            "source": "In Proceedings of the 2nd international workshop on Search and mining user-generated contents",
+                            "volume": "103",
+                            "fpage": "110",
+                            "year": "2010",
+                            "#text": "[50]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . ACM,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref51",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Filippo",
+                                "surname": "Menczer"
+                            },
+                            "article-title": "The spread of misinformation in social media",
+                            "source": "In WWW'16.",
+                            "#text": "[51]\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref52",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Tanushree",
+                                    "surname": "Mitra"
+                                },
+                                {
+                                    "given-names": "Eric",
+                                    "surname": "Gilbert"
+                                }
+                            ],
+                            "article-title": "Credbank: A largescale social media corpus with associated credibility annotations",
+                            "source": "In ICWSM'15.",
+                            "#text": "[52]\n          \n          and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref53",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Saif",
+                                    "given-names": "M Mohammad"
+                                },
+                                {
+                                    "given-names": "Parinaz",
+                                    "surname": "Sobhani"
+                                },
+                                {
+                                    "given-names": "Svetlana",
+                                    "surname": "Kiritchenko"
+                                }
+                            ],
+                            "article-title": "Stance and sentiment in tweets.",
+                            "#text": "[53]\n          \n          ,\n          \n          , and\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref54",
+                        "mixed-citation": {
+                            "source": "ACM Transactions on Internet Technology (TOIT)",
+                            "volume": "17",
+                            "issue": "3",
+                            "fpage": "26",
+                            "year": "2017",
+                            "#text": ",\n          \n          (\n          \n          ):\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref55",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Fred",
+                                "given-names": "Morstatter"
+                            },
+                            "article-title": "Can one tamper with the sample api?: Toward neutralizing bias from spam and bot content",
+                            "source": "In WWW'16.",
+                            "#text": "[54]\n          \n          , Harsh Dani, Justin Sampson, and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref56",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Fred",
+                                    "given-names": "Morstatter"
+                                },
+                                {
+                                    "surname": "Tahora H Nazer"
+                                },
+                                {
+                                    "given-names": "Huan",
+                                    "surname": "Liu"
+                                }
+                            ],
+                            "article-title": [
+                                "Kathleen M Carley,",
+                                "A new approach to bot detection: Striking the balance between precision and recall"
+                            ],
+                            "source": "In ASONAM'16.",
+                            "#text": "[55]\n          \n          , Liang Wu,\n          \n          ,\n          \n          and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref57",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Subhabrata",
+                                    "surname": "Mukherjee"
+                                },
+                                {
+                                    "given-names": "Gerhard",
+                                    "surname": "Weikum"
+                                }
+                            ],
+                            "article-title": "Leveraging joint interactions for credibility analysis in news communities",
+                            "source": "In CIKM'15.",
+                            "#text": "[56]\n          \n          and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref58",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Eni",
+                                "surname": "Mustafaraj"
+                            },
+                            "article-title": "Panagiotis Takis Metaxas. The fake news spreading plague: Was it preventable",
+                            "source": "arXiv preprint arXiv:1703.06988",
+                            "year": "2017",
+                            "#text": "[57]\n          \n          and\n          \n          ?\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref59",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Raymond",
+                                "given-names": "S Nickerson."
+                            },
+                            "article-title": "Con rmation bias: A ubiquitous phenomenon in many guises",
+                            "source": "Review of general psychology",
+                            "volume": "2",
+                            "issue": "2",
+                            "fpage": "175",
+                            "year": "1998",
+                            "#text": "[58]\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref60",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Brendan",
+                                "surname": "Nyhan"
+                            },
+                            "article-title": [
+                                "Jason Rei er",
+                                "When corrections fail: The persistence of political misperceptions"
+                            ],
+                            "source": "Political Behavior",
+                            "volume": [
+                                "32",
+                                "303"
+                            ],
+                            "issue": "2",
+                            "fpage": "330",
+                            "year": "2010",
+                            "#text": "[59]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref61",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Christopher",
+                                    "surname": "Paul"
+                                },
+                                {
+                                    "given-names": "Miriam",
+                                    "surname": "Matthews"
+                                }
+                            ],
+                            "article-title": "The russian rehose of falsehood propaganda model",
+                            "#text": "[60]\n          \n          and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref62",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Dong ping Tian"
+                            },
+                            "article-title": "A review on image feature extraction and representation techniques",
+                            "source": "International Journal of Multimedia and Ubiquitous Engineering",
+                            "volume": [
+                                "8",
+                                "385"
+                            ],
+                            "issue": "4",
+                            "fpage": "396",
+                            "year": "2013",
+                            "#text": "[61]\n          \n          et al.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref63",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Martin",
+                                    "given-names": "Potthast"
+                                },
+                                {
+                                    "given-names": "Benno",
+                                    "surname": "Stein"
+                                }
+                            ],
+                            "article-title": "A stylometric inquiry into hyperpartisan and fake news",
+                            "source": "arXiv preprint arXiv:1702.05638",
+                            "year": "2017",
+                            "#text": "[62]\n          \n          , Johannes Kiesel, Kevin Reinartz, Janek Bevendor , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref64",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Martin",
+                                    "given-names": "Potthast"
+                                },
+                                {
+                                    "given-names": "Matthias",
+                                    "surname": "Hagen"
+                                }
+                            ],
+                            "article-title": "Clickbait detection",
+                            "source": "In European Conference on Information Retrieval",
+                            "volume": "810",
+                            "fpage": "817",
+                            "year": "2016",
+                            "#text": "[63]\n          \n          , Sebastian Ko\u007fpsel, Benno Stein, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . Springer,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref65",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Vahed",
+                                    "given-names": "Qazvinian"
+                                },
+                                {
+                                    "surname": "Dragomir R Radev",
+                                    "given-names": "Qiaozhu",
+                                    "#text": ", and"
+                                },
+                                {
+                                    "surname": "Mei"
+                                }
+                            ],
+                            "article-title": "Rumor has it: Identifying misinformation in microblogs",
+                            "source": "In EMNLP'11.",
+                            "#text": "[64]\n          \n          , Emily Rosengren,\n          \n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref66",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Walter",
+                                "given-names": "Quattrociocchi"
+                            },
+                            "source": "Echo chambers on facebook",
+                            "year": "2016",
+                            "#text": "[65]\n          \n          , Antonio Scala, and Cass R Sunstein.\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref67",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Victoria",
+                                    "given-names": "L Rubin"
+                                },
+                                {
+                                    "surname": "Yimin Chen"
+                                },
+                                {
+                                    "surname": "Niall"
+                                }
+                            ],
+                            "article-title": "Deception detection for news: three types of fakes",
+                            "source": "Proceedings of the Association for Information Science and Technology",
+                            "volume": "52",
+                            "issue": [
+                                "1",
+                                "4"
+                            ],
+                            "year": "2015",
+                            "#text": "[66]\n          \n          ,\n          \n          , and\n          \n          J Conroy.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref68",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Victoria",
+                                    "given-names": "L Rubin"
+                                },
+                                {
+                                    "surname": "Niall J Conroy",
+                                    "given-names": "Sarah",
+                                    "#text": ", Yimin Chen, and"
+                                },
+                                {
+                                    "surname": "Cornwell"
+                                }
+                            ],
+                            "article-title": "Fake news or truth? using satirical cues to detect potentially misleading news",
+                            "source": "In Proceedings of NAACL-HLT",
+                            "volume": "7",
+                            "fpage": "17",
+                            "year": "2016",
+                            "#text": "[67]\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref69",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Victoria",
+                                    "given-names": "L Rubin"
+                                },
+                                {
+                                    "given-names": "Tatiana",
+                                    "surname": "Lukoianova"
+                                }
+                            ],
+                            "article-title": "Truth and deception at the rhetorical structure level",
+                            "source": "Journal of the Association for Information Science and Technology",
+                            "volume": [
+                                "66",
+                                "905"
+                            ],
+                            "issue": "5",
+                            "fpage": "917",
+                            "year": "2015",
+                            "#text": "[68]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref70",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Natali",
+                                "given-names": "Ruchansky"
+                            },
+                            "article-title": "Csi: A hybrid deep model for fake news",
+                            "source": "arXiv preprint arXiv:1703.06959",
+                            "year": "2017",
+                            "#text": "[69]\n          \n          , Sungyong Seo, and Yan Liu.\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref71",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Justin",
+                                    "given-names": "Sampson"
+                                },
+                                {
+                                    "surname": "Liang Wu"
+                                }
+                            ],
+                            "#text": "[70]\n          \n          , Fred Morstatter,\n          \n          , and"
+                        }
+                    },
+                    {
+                        "@id": "ref72",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Suhang",
+                                    "given-names": "Wang"
+                                },
+                                {
+                                    "given-names": "Jiliang",
+                                    "surname": "Tang"
+                                }
+                            ],
+                            "article-title": "Paired restricted boltzmann machine for linked data",
+                            "source": "In CIKM'16.",
+                            "#text": "[88]\n          \n          ,\n          \n          , Fred Morstatter, and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref73",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Suhang",
+                                    "given-names": "Wang"
+                                },
+                                {
+                                    "surname": "Yilin",
+                                    "given-names": "Wang"
+                                },
+                                {
+                                    "given-names": "Jiliang",
+                                    "surname": "Tang"
+                                }
+                            ],
+                            "article-title": "What your images reveal: Exploiting visual contents for point-of-interest recommendation",
+                            "source": "In WWW'17.",
+                            "#text": "[89]\n          \n          ,\n          \n          ,\n          \n          , Kai Shu, Suhas Ranganath, and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref74",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "William",
+                                "surname": "Yang Wang"
+                            },
+                            "article-title": "\" liar, liar pants on re\": A new benchmark dataset for fake news detection",
+                            "source": "arXiv preprint arXiv:1705.00648",
+                            "year": "2017",
+                            "#text": "[90]\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref75",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Yilin",
+                                    "given-names": "Wang"
+                                },
+                                {
+                                    "surname": "Suhang",
+                                    "given-names": "Wang"
+                                },
+                                {
+                                    "given-names": "Jiliang",
+                                    "surname": "Tang"
+                                },
+                                {
+                                    "given-names": "Baoxin",
+                                    "surname": "Li"
+                                }
+                            ],
+                            "article-title": "Unsupervised sentiment analysis for social media images",
+                            "source": "In IJCAI",
+                            "volume": "2378",
+                            "fpage": "2379",
+                            "year": "2015",
+                            "#text": "[91]\n          \n          ,\n          \n          ,\n          \n          , Huan Liu, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref76",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "Andrew",
+                                    "surname": "Ward"
+                                },
+                                {
+                                    "given-names": "L",
+                                    "surname": "Ross"
+                                },
+                                {
+                                    "given-names": "E",
+                                    "surname": "Reed"
+                                },
+                                {
+                                    "given-names": "E",
+                                    "surname": "Turiel"
+                                },
+                                {
+                                    "given-names": "T",
+                                    "surname": "Brown"
+                                }
+                            ],
+                            "article-title": "Naive realism in everyday life: Implications for social con ict and misunderstanding",
+                            "source": "Values and knowledge",
+                            "volume": "103",
+                            "fpage": "135",
+                            "year": "1997",
+                            "#text": "[92]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref77",
+                        "mixed-citation": {
+                            "string-name": {
+                                "given-names": "Gerhard",
+                                "surname": "Weikum"
+                            },
+                            "article-title": "What computers should know, shouldn't know, and shouldn't believe",
+                            "source": "In WWW'17.",
+                            "#text": "[93]\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref78",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "given-names": "L",
+                                    "surname": "Wu"
+                                },
+                                {
+                                    "given-names": "F",
+                                    "surname": "Morstatter"
+                                },
+                                {
+                                    "given-names": "X",
+                                    "surname": "Hu"
+                                },
+                                {
+                                    "given-names": "H",
+                                    "surname": "Liu"
+                                }
+                            ],
+                            "article-title": "Chapter 5: Mining misinformation in social media",
+                            "year": "2016",
+                            "#text": "[94]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref79",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Liang",
+                                "given-names": "Wu"
+                            },
+                            "article-title": "Adaptive spammer detection with sparse group modeling",
+                            "source": "In ICWSM'17.",
+                            "#text": "[95]\n          \n          , Xia Hu, Fred Morstatter, and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref80",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Liang",
+                                    "given-names": "Wu"
+                                },
+                                {
+                                    "given-names": "Jundong",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Xia",
+                                    "surname": "Hu"
+                                }
+                            ],
+                            "article-title": "Gleaning wisdom from the past: Early detection of emerging rumors in social media",
+                            "source": "In SDM'17.",
+                            "#text": "[96]\n          \n          ,\n          \n          ,\n          \n          , and Huan Liu.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref81",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Liang",
+                                "given-names": "Wu"
+                            },
+                            "article-title": "Mining misinformation in social media",
+                            "source": "Big Data in Complex and Social Networks",
+                            "volume": "123",
+                            "fpage": "152",
+                            "year": "2016",
+                            "#text": "[97]\n          \n          , Fred Morstatter, Xia Hu, and Huan Liu.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref82",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "You",
+                                    "given-names": "Wu"
+                                },
+                                {
+                                    "given-names": "Chengkai",
+                                    "surname": "Li"
+                                },
+                                {
+                                    "given-names": "Jun",
+                                    "surname": "Yang"
+                                },
+                                {
+                                    "given-names": "Cong",
+                                    "surname": "Yu"
+                                }
+                            ],
+                            "article-title": "Toward computational fact-checking",
+                            "source": "Proceedings of the VLDB Endowment",
+                            "volume": [
+                                "7",
+                                "589"
+                            ],
+                            "issue": "7",
+                            "fpage": "600",
+                            "year": "2014",
+                            "#text": "[98]\n          \n          , Pankaj K Agarwal,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref83",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Fan",
+                                    "given-names": "Yang"
+                                },
+                                {
+                                    "surname": "Yang",
+                                    "given-names": "Liu"
+                                },
+                                {
+                                    "surname": "Xiaohui Yu",
+                                    "given-names": "Min",
+                                    "#text": ", and"
+                                },
+                                {
+                                    "surname": "Yang"
+                                }
+                            ],
+                            "article-title": "Automatic detection of rumor on sina weibo",
+                            "source": "In Proceedings of the ACM SIGKDD Workshop on Mining Data Semantics, page 13. ACM",
+                            "year": "2012",
+                            "#text": "[99]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref84",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Robert",
+                                    "given-names": "B"
+                                },
+                                {
+                                    "surname": "Zajonc"
+                                }
+                            ],
+                            "article-title": "Attitudinal e ects of mere exposure",
+                            "source": "Journal of personality and social psychology",
+                            "volume": "9",
+                            "issue": "2p2",
+                            "fpage": "1",
+                            "year": "1968",
+                            "#text": "[100]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref85",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Robert",
+                                    "given-names": "B"
+                                },
+                                {
+                                    "surname": "Zajonc"
+                                }
+                            ],
+                            "article-title": "Mere exposure: A gateway to the subliminal",
+                            "source": "Current directions in psychological science",
+                            "volume": [
+                                "10",
+                                "224"
+                            ],
+                            "issue": "6",
+                            "fpage": "228",
+                            "year": "2001",
+                            "#text": "[101]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref86",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Arkaitz",
+                                    "given-names": "Zubiaga"
+                                },
+                                {
+                                    "given-names": "Rob",
+                                    "surname": "Procter"
+                                }
+                            ],
+                            "article-title": "Detection and resolution of rumours in social media: A survey",
+                            "source": "arXiv preprint arXiv:1704.00656",
+                            "year": "2017",
+                            "#text": "[102]\n          \n          , Ahmet Aker, Kalina Bontcheva, Maria Liakata, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

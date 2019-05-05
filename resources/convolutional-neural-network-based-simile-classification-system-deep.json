@@ -1,0 +1,500 @@
+{
+    "abstract": {
+        "p": "-Figurative Language is a kind of language that express ideas with a meaning different from its actual literal interpretation. Social media makes use of a wide range of figurative languages. Among them Simile, Sarcasm, Irony and humor are mostly used. Simile essentially compares two different things and often occur in tweets. People make use of indirect interpretations to express their views. Thus arises the need of detecting other figurative languages occurrence in similes. For proper understanding of text, occurrences of sarcasm, irony and humor in similes is necessary. Current approaches mainly focus on detection of one or two figurative languages at once. This paper proposes classification of different figurative languages at once using deep learning concept such as Convolutional Neural Network (CNN) and machine learning concepts like Support Vector Machine (SVM), Decision Tree, K-nearest neighbor (KNN), Gaussian Naive Bayes (GNB) classifier. Also, compared the performance of different classification models."
+    },
+    "affiliation": {
+        "#text": ",\n          \n          ,",
+        "@id": "aff0",
+        "addr-line": "Palakkad",
+        "country": {
+            "#text": "India",
+            "@country": "IN"
+        },
+        "institution": "Raseek C Assistant Professor, Dept. of CSE Govt.Engineering College",
+        "label": "0"
+    },
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Manjusha P D",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "M. Tech Student",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "QL manjushapda@gmail.com",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        }
+    ],
+    "clean-authors": [
+        "Manjusha P D",
+        "M. Tech Student",
+        "QL manjushapda@gmail.com"
+    ],
+    "clean-refs": [
+        {
+            "authors": "Qadir, , ",
+            "source": null,
+            "title": "[1]\n          \n          ,\n          \n          ),\n          \n          , pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "",
+            "source": "In Proceedings of the Conference onEmpiricalMethodsinNaturalLanguageProcessing",
+            "title": "[2] AshequlQadir,EllenRiloff,andMarilyn Walker,?\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Phyo, , ",
+            "source": "In Proceedings of the IEEE International Conference",
+            "title": "[3]\n          \n          Thu and Nwe Nwe, ?\n          \n          ,\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Barbieri, , ",
+            "source": "In Proceedings of the International Conference on Computational Creativity",
+            "title": "[4]\n          \n          and Horacio Saggion, ?\n          \n          ,\n          \n          ,\n          \n          ."
+        },
+        {
+            "authors": "Khokhlova, , ",
+            "source": "In Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+            "title": "[5]\n          \n          , Viviana Patti and Paolo Rosso, ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Joshi, , ",
+            "source": "In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+            "title": "[6]\n          \n          , Vinita Sharma, and Pushpak Bhattacharyya, ?\n          \n          ,\n          \n          ,\n          \n          , Vol.\n          \n          . pp.\n          \n          ."
+        },
+        {
+            "authors": "Veale, , ",
+            "source": "InECAI",
+            "title": "[7]\n          \n          and Yanfen Hao, ?Detecting Ironic Intent in Creative Comparisons?,\n          \n          ,\n          \n          ,Vol.\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Fersini, , ",
+            "source": "In Data Science and Advanced Analytics(DSAA)",
+            "title": "[8]\n          \n          , Federico Alberto Pozzi, Enza Messina, ?\n          \n          ,\n          \n          ,\n          \n          .IEEEInternationalConferenceon2015Oct19,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Gonzalez-Ibanez, Muresan, , ",
+            "source": "In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume",
+            "title": "[9]\n          \n          ,\n          \n          , and NinaWacholder, ?\n          \n          ,\n          \n          \n          ,\n          \n          , pp.\n          \n          ."
+        },
+        {
+            "authors": "Byron, , ",
+            "source": "In Proceedings of the 52nd Annual Meeting of theAssociation forComputationalLinguistics(ShortPapers)",
+            "title": "[10]\n          \n          , Laura Kertz, Do Kook Choe, and Eugene Charniak, ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          ."
+        },
+        {
+            "authors": "Reyes, Rosso, Buscaldi, , ",
+            "source": "Data & Knowledge Engineering",
+            "title": "[11]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,vol.\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Tsur, Davidov, ICWSM-A Great Catchy, , ",
+            "source": "InICWSM2010",
+            "title": "[12]\n          \n          ,\n          \n          , and Ari Rappoport, ?\n          \n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Bamman, Smith, , ",
+            "source": "InICWSM",
+            "title": "[13]\n          \n          and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Barbieri, Saggion, Ronzano, , ",
+            "source": "InWASSA@ACL",
+            "title": "[14]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Anupam, , ",
+            "source": "Proceedings of the 6th Workshop on Computational Approaches",
+            "title": "[15]\n          \n          , Aditya Joshi, Pushpak Bhattacharyya, and Mark James Carman, ?\n          \n          ,\n          \n          to Subjectivity,\n          \n          \n          ), pp.\n          \n          ."
+        },
+        {
+            "authors": "Crossley, Kyle, D. S. McNamara, , ",
+            "source": "Behavior research methods",
+            "title": "[16]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          , vol.\n          \n          ,no.\n          \n          ,pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Antonio, , ",
+            "source": null,
+            "title": "[17]\n          \n          , Paolo Rosso, and Tony Veale, ?\n          \n          \n          ) 47: pp.\n          \n          ."
+        },
+        {
+            "authors": "Cynthia, , ",
+            "source": "InProceedings of the 9th International Workshop on Semantic Evaluation (SemEval",
+            "title": "[18]\n          \n          ,\n          \n          ,\n          \n          \n          ), pp.\n          \n          -\n          \n          ."
+        },
+        {
+            "authors": "Roger J Kreuz and Gina M Caucci, , ",
+            "source": "In Proceedings of the Workshop on computational approaches to Figurative Language. Association for Computational Linguistics",
+            "title": "[19]\n          \n          , ?\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          ."
+        },
+        {
+            "authors": "Konstantin, , ",
+            "source": null,
+            "title": "[20]\n          \n          , Philipp Cimiano, and Roman Klinger, ?\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+        }
+    ],
+    "journal": null,
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/convolutional-neural-network-based-simile-classification-system.json",
+    "pub_date": {
+        "year": "2018"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          ,\n          \n          ),\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "Ellen Riloff and Marilyn A.Walker,?AutomaticallyInferring Implicit Properties in Similes?, In Proceedings of NorthAmer-ican Chapter of the Association for Computational Linguistics(NAACL- HLT",
+                "fpage": "1223",
+                "lpage": "1232",
+                "string-name": {
+                    "given-names": "Ashequl",
+                    "surname": "Qadir"
+                },
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2] AshequlQadir,EllenRiloff,andMarilyn Walker,?\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          -\n          \n          .",
+                "article-title": "Learningtorecognize affective polarity in similes?",
+                "fpage": "pp190",
+                "lpage": "200",
+                "source": "In Proceedings of the Conference onEmpiricalMethodsinNaturalLanguageProcessing",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          Thu and Nwe Nwe, ?\n          \n          ,\n          \n          ,\n          \n          .",
+                "article-title": "Impact Analysis of Emotion in Figurative Language?",
+                "source": "In Proceedings of the IEEE International Conference",
+                "string-name": {
+                    "given-names": "Pyae",
+                    "surname": "Phyo"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          and Horacio Saggion, ?\n          \n          ,\n          \n          ,\n          \n          .",
+                "article-title": "Automatic Detection of Irony and Humour in Twitter?",
+                "source": "In Proceedings of the International Conference on Computational Creativity",
+                "string-name": {
+                    "given-names": "Francesco",
+                    "surname": "Barbieri"
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          , Viviana Patti and Paolo Rosso, ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "article-title": "Distinguishing between Irony and Sarcasm in Social Media Texts: Linguistic Observations?",
+                "fpage": "50",
+                "lpage": "58",
+                "source": "In Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                "string-name": {
+                    "given-names": "Maria",
+                    "surname": "Khokhlova"
+                },
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          , Vinita Sharma, and Pushpak Bhattacharyya, ?\n          \n          ,\n          \n          ,\n          \n          , Vol.\n          \n          . pp.\n          \n          .",
+                "article-title": "Harnessing context incongruity for sarcasm detection?",
+                "fpage": "757762",
+                "source": "In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+                "string-name": {
+                    "given-names": "Aditya",
+                    "surname": "Joshi"
+                },
+                "volume": "2",
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          and Yanfen Hao, ?Detecting Ironic Intent in Creative Comparisons?,\n          \n          ,\n          \n          ,Vol.\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "fpage": "765",
+                "lpage": "770",
+                "source": "InECAI",
+                "string-name": {
+                    "given-names": "Tony",
+                    "surname": "Veale"
+                },
+                "volume": "215",
+                "year": "2010"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          , Federico Alberto Pozzi, Enza Messina, ?\n          \n          ,\n          \n          ,\n          \n          .IEEEInternationalConferenceon2015Oct19,pp.\n          \n          -\n          \n          .",
+                "article-title": "Detecting irony and sarcasm in microblogs: The role of expressive signals and ensemble classifiers?",
+                "fpage": "1",
+                "lpage": "8",
+                "source": "In Data Science and Advanced Analytics(DSAA)",
+                "string-name": {
+                    "given-names": "Elisabetta",
+                    "surname": "Fersini"
+                },
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          ,\n          \n          , and NinaWacholder, ?\n          \n          ,\n          \n          \n          ,\n          \n          , pp.\n          \n          .",
+                "article-title": "Identifying sarcasm in Twitter: a closer look?",
+                "fpage": "581586",
+                "source": "In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume",
+                "string-name": [
+                    {
+                        "given-names": "Roberto",
+                        "surname": "Gonzalez-Ibanez"
+                    },
+                    {
+                        "given-names": "Smaranda",
+                        "surname": "Muresan"
+                    }
+                ],
+                "volume": "2",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          , Laura Kertz, Do Kook Choe, and Eugene Charniak, ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          .",
+                "article-title": "Humans require context to infer ironic intent (so computers probably do, too)?",
+                "fpage": "512516",
+                "source": "In Proceedings of the 52nd Annual Meeting of theAssociation forComputationalLinguistics(ShortPapers)",
+                "string-name": {
+                    "given-names": "C Wallace",
+                    "surname": "Byron"
+                },
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,vol.\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "article-title": "From humor recognition to irony detection: The figurative language of social media?",
+                "fpage": "1",
+                "lpage": "12",
+                "source": "Data & Knowledge Engineering",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Reyes"
+                    },
+                    {
+                        "given-names": "P.",
+                        "surname": "Rosso"
+                    },
+                    {
+                        "given-names": "D.",
+                        "surname": "Buscaldi"
+                    }
+                ],
+                "volume": "74",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": "[12]\n          \n          ,\n          \n          , and Ari Rappoport, ?\n          \n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "article-title": "Name: Semi-Supervised Recognition of Sarcastic Sentences in OnlineProductReviews?",
+                "fpage": "162",
+                "lpage": "169",
+                "source": "InICWSM2010",
+                "string-name": [
+                    {
+                        "given-names": "Oren",
+                        "surname": "Tsur"
+                    },
+                    {
+                        "given-names": "Dmitry",
+                        "surname": "Davidov"
+                    },
+                    {
+                        "surname": "ICWSM-A Great Catchy"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": {
+                "#text": "[13]\n          \n          and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "article-title": "Contextualized sarcasm detection on twitter?",
+                "fpage": "574",
+                "lpage": "577",
+                "source": "InICWSM",
+                "string-name": [
+                    {
+                        "given-names": "D.",
+                        "surname": "Bamman"
+                    },
+                    {
+                        "given-names": "N. A.",
+                        "surname": "Smith"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": "[14]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "article-title": "Modelling sarcasm in twitter, anovelapproach?",
+                "fpage": "50",
+                "lpage": "58",
+                "source": "InWASSA@ACL",
+                "string-name": [
+                    {
+                        "given-names": "F.",
+                        "surname": "Barbieri"
+                    },
+                    {
+                        "given-names": "H.",
+                        "surname": "Saggion"
+                    },
+                    {
+                        "given-names": "F.",
+                        "surname": "Ronzano"
+                    }
+                ],
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "[15]\n          \n          , Aditya Joshi, Pushpak Bhattacharyya, and Mark James Carman, ?\n          \n          ,\n          \n          to Subjectivity,\n          \n          \n          ), pp.\n          \n          .",
+                "article-title": [
+                    "Your Sentiment Precedes You: Using an authors historical tweets to predict sarcasm?",
+                    "Sentiment and Social Media Analysis (WASSA"
+                ],
+                "fpage": "2530",
+                "source": "Proceedings of the 6th Workshop on Computational Approaches",
+                "string-name": {
+                    "given-names": "Khattri",
+                    "surname": "Anupam"
+                },
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "[16]\n          \n          ,\n          \n          , and\n          \n          , ?\n          \n          ,\n          \n          ,\n          \n          , vol.\n          \n          ,no.\n          \n          ,pp.\n          \n          -\n          \n          .",
+                "article-title": "Sentiment analysis and social cognition engine (seance): An automatic tool for sentiment, social cognition, and social-order analysis?",
+                "fpage": "803",
+                "issue": "3",
+                "lpage": "821",
+                "source": "Behavior research methods",
+                "string-name": [
+                    {
+                        "given-names": "S. A.",
+                        "surname": "Crossley"
+                    },
+                    {
+                        "given-names": "K.",
+                        "surname": "Kyle"
+                    },
+                    {
+                        "surname": "D. S. McNamara"
+                    }
+                ],
+                "volume": "49",
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": {
+                "#text": "[17]\n          \n          , Paolo Rosso, and Tony Veale, ?\n          \n          \n          ) 47: pp.\n          \n          .",
+                "article-title": "Amultidimensional approach for detecting irony in twitter?, Language Resources and Evaluation (",
+                "fpage": "239268",
+                "string-name": {
+                    "given-names": "Reyes",
+                    "surname": "Antonio"
+                },
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "[18]\n          \n          ,\n          \n          ,\n          \n          \n          ), pp.\n          \n          -\n          \n          .",
+                "article-title": "Els Lefever and Veronique hoste, ?LT3: Sentiment Analysis of Figurative Tweets: piece of cake NotReally?",
+                "fpage": "684",
+                "lpage": "688",
+                "source": "InProceedings of the 9th International Workshop on Semantic Evaluation (SemEval",
+                "string-name": {
+                    "given-names": "Van Hee",
+                    "surname": "Cynthia"
+                },
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "[19]\n          \n          , ?\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          .",
+                "article-title": "Lexical influences on the perception of sarcasm?",
+                "fpage": "14",
+                "source": "In Proceedings of the Workshop on computational approaches to Figurative Language. Association for Computational Linguistics",
+                "string-name": {
+                    "surname": "Roger J Kreuz and Gina M Caucci"
+                },
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "[20]\n          \n          , Philipp Cimiano, and Roman Klinger, ?\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          .",
+                "article-title": "An impact analysis of features in a classification approach to irony detectionin productreviews?,InProceedingsofthe5thWorkshoponComputational Approaches to Subjectivity, Sentiment and Social Media Analysis",
+                "fpage": "42",
+                "lpage": "49",
+                "string-name": {
+                    "given-names": "Buschmeier",
+                    "surname": "Konstantin"
+                },
+                "year": "2014"
+            }
+        }
+    ],
+    "title": "Convolutional Neural Network based Simile Classification System"
+}

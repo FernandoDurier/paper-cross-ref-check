@@ -1,0 +1,764 @@
+{
+    "abstract": {
+        "p": "In the so called 'post-truth' era, characterized by a loss of public trust in various institutions, and the rise of 'fake news' disseminated via the internet and social media, individuals may face uncertainty about the veracity of information available, whether it be satire or malicious hoax. We investigate attitudes to news delivered by social media, and subsequent verification strategies applied, or not applied, by individuals. A survey reveals that two thirds of respondents regularly consumed news via Facebook, and that one third had at some point come across fake news that they initially believed to be true. An analysis task involving news presented via Facebook reveals a diverse range of judgement forming strategies, with participants relying on personal judgements as to plausibility and scepticism around sources and journalistic style. This reflects a shift away from traditional methods of accessing the news, and highlights the difficulties in combating the spread of fake news."
+    },
+    "affiliation": [
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff0",
+            "addr-line": "Nottingham",
+            "country": {
+                "#text": "UK",
+                "@country": "UK"
+            },
+            "institution": "The University of Nottingham",
+            "label": "0"
+        },
+        {
+            "#text": ",\n          \n          ,",
+            "@id": "aff1",
+            "addr-line": "Lincoln",
+            "country": {
+                "#text": "UK",
+                "@country": "UK"
+            },
+            "institution": "University of Lincoln",
+            "label": "1"
+        }
+    ],
+    "authors": [
+        {
+            "@contrib-type": "author",
+            "string-name": "Martin Flintham",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Christian Karner",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "email": "kbachour@lincoln.ac.uk",
+            "string-name": "Khaled Bachour",
+            "xref": {
+                "#text": "1",
+                "@ref-type": "aff",
+                "@rid": "aff1"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Helen Creswick",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Neha Gupta",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        },
+        {
+            "@contrib-type": "author",
+            "string-name": "Stuart Moran",
+            "xref": {
+                "#text": "0",
+                "@ref-type": "aff",
+                "@rid": "aff0"
+            }
+        }
+    ],
+    "journal": null,
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/falling-for-fake-news-investigating-the-consumption-of-news-via-social-media.json",
+    "pub_date": {
+        "year": "2018"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "1. @realDonaldTrump.\n          \n          .\n          \n          .\n          \n          ,\n          \n          from https://twitter.com/realdonaldtrump/status/8994112540 61694979",
+                "article-title": "@realDonaldTrump. Heading back to Washington after working hard and watching some of the worst and most dishonest Fake News reporting I have ever seen! Twitter",
+                "source": "Retrieved September 11",
+                "year": [
+                    "2017",
+                    "2017"
+                ]
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          .",
+                "article-title": "When Fake News Becomes Real: Combined Exposure to Multiple News Sources and Political Attitudes of Inefficacy, Alienation, and Cynicism",
+                "fpage": "430",
+                "issue": "3",
+                "lpage": "454",
+                "source": "Communication Research",
+                "string-name": {
+                    "given-names": "Meital",
+                    "surname": "Balmas"
+                },
+                "volume": "41",
+                "year": "2014"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": "https://doi.org/10.1177/0093650212453600"
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          . News Parody in Global Perspective: Politics, Power, and\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          :\n          \n          -\n          \n          .",
+                "fpage": [
+                    "1",
+                    "2"
+                ],
+                "lpage": [
+                    "2",
+                    "13"
+                ],
+                "source": "Popular Communication",
+                "string-name": [
+                    {
+                        "given-names": "Geoffrey",
+                        "surname": "Baym"
+                    },
+                    {
+                        "given-names": "Jeffrey P.",
+                        "surname": "Jones"
+                    },
+                    {
+                        "surname": "Resistance"
+                    }
+                ],
+                "volume": "10",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "https://doi.org/10.1080/15405702.\n          \n          .638566",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          .",
+                "fpage": "420",
+                "issue": "4",
+                "source": "Contemporary Sociology",
+                "string-name": [
+                    {
+                        "given-names": "Peter",
+                        "surname": "Beilharz"
+                    },
+                    {
+                        "given-names": "Zygmunt",
+                        "surname": "Bauman"
+                    },
+                    {
+                        "given-names": "Liquid",
+                        "surname": "Modernity"
+                    }
+                ],
+                "volume": "30",
+                "year": "2001"
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": "https://doi.org/10.2307/3089803"
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          .",
+                "article-title": "Social bots distort the 2016 U.S. Presidential election online discussion",
+                "fpage": "11",
+                "source": "First Monday",
+                "string-name": [
+                    {
+                        "given-names": "Alessandro",
+                        "surname": "Bessi"
+                    },
+                    {
+                        "given-names": "Emilio",
+                        "surname": "Ferrara"
+                    }
+                ],
+                "volume": "21",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "https://doi.org/10.5210/fm.v21i11.",
+                "fpage": "7090"
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": ", Davide Frey, Rachid Guerraoui, Arnaud J\u00e9gou, and Anne Marie Kermarrec.\n          \n          .",
+                "string-name": {
+                    "given-names": "Antoine",
+                    "surname": "Boutet"
+                },
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": ",\n          \n          \n          ,\n          \n          -\n          \n          . https://doi.org/10.1109/IPDPS.\n          \n          .47",
+                "fpage": "752",
+                "source": "In Proceedings - IEEE 27th International Parallel and Distributed Processing Symposium",
+                "string-name": {
+                    "surname": "IPDPS"
+                },
+                "volume": "741",
+                "year": [
+                    "2013",
+                    "2013"
+                ]
+            }
+        },
+        {
+            "@id": "ref12",
+            "mixed-citation": {
+                "#text": ".\n          \n          .\n          \n          .",
+                "article-title": "Automating judgment? Algorithmic judgment, news knowledge, and journalistic professionalism",
+                "source": "New Media & Society: 146144481770668.",
+                "string-name": {
+                    "given-names": "Matt",
+                    "surname": "Carlson"
+                },
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref13",
+            "mixed-citation": "https://doi.org/10.1177/1461444817706684"
+        },
+        {
+            "@id": "ref14",
+            "mixed-citation": {
+                "#text": ", Marcelo Mendoza, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          .",
+                "article-title": "Information credibility on twitter",
+                "fpage": "675",
+                "source": "In Proceedings of the 20th international conference on World wide web - WWW '11",
+                "string-name": [
+                    {
+                        "given-names": "Carlos",
+                        "surname": "Castillo"
+                    },
+                    {
+                        "given-names": "Barbara",
+                        "surname": "Poblete"
+                    }
+                ],
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref15",
+            "mixed-citation": {
+                "#text": "https://doi.org/10.1145/1963405.1963500\n          \n          ,\n          \n          , and Victoria L. Rubin.",
+                "string-name": [
+                    {
+                        "given-names": "Yimin",
+                        "surname": "Chen"
+                    },
+                    {
+                        "given-names": "Niall J.",
+                        "surname": "Conroy"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref16",
+            "mixed-citation": {
+                "#text": "2015.\n          \n          .?\n          \n          . ACM., NOVEMBER:\n          \n          -\n          \n          .",
+                "article-title": "Misleading Online Content: Recognizing Clickbait as ?False News",
+                "fpage": "15",
+                "lpage": "19",
+                "source": "In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection"
+            }
+        },
+        {
+            "@id": "ref17",
+            "mixed-citation": "https://doi.org/10.1145/2823465.2823467"
+        },
+        {
+            "@id": "ref18",
+            "mixed-citation": {
+                "#text": "10. John Cokley.\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1080/21670811.\n          \n          .744561",
+                "fpage": "286",
+                "issue": "2",
+                "lpage": "287",
+                "source": "The Reuters Institute's Digital News Report 2012. Digital Journalism",
+                "volume": "1",
+                "year": [
+                    "2013",
+                    "2012"
+                ]
+            }
+        },
+        {
+            "@id": "ref19",
+            "mixed-citation": {
+                "#text": "11.\n          \n          , Victoria L.\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          -\n          \n          .",
+                "article-title": "Automatic deception detection: Methods for finding fake news",
+                "fpage": "1",
+                "issue": "1",
+                "lpage": "4",
+                "source": "Proceedings of the Association for Information Science and Technology 52",
+                "string-name": [
+                    {
+                        "surname": "Niall J. Conroy"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Yimin",
+                        "surname": "Rubin"
+                    },
+                    {
+                        "surname": "Chen"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref20",
+            "mixed-citation": {
+                "#text": "12.\n          \n          .\n          \n          . ?\n          \n          . Retrieved from https://www.theguardian.com/books/2016/nov/15/posttruth-named",
+                "article-title": [
+                    "Post-truth? named word of the year by Oxford Dictionaries. The Guardian",
+                    "-word-of-the-year-by-oxford-dictionaries"
+                ],
+                "string-name": {
+                    "given-names": "Alison",
+                    "surname": "Flood"
+                },
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref21",
+            "mixed-citation": {
+                "#text": "13.\n          \n          .\n          \n          .\n          \n          , volume I. Boston: Beacon.",
+                "article-title": "The theory of communicative action",
+                "string-name": {
+                    "given-names": "J",
+                    "surname": "Habermas"
+                },
+                "year": "1984"
+            }
+        },
+        {
+            "@id": "ref22",
+            "mixed-citation": {
+                "#text": "14.\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1080/15405702.\n          \n          .638571",
+                "article-title": "From the ?Little Aussie Bleeder? to Newstopia: (Really) Fake News in Australia",
+                "fpage": [
+                    "1",
+                    "27"
+                ],
+                "lpage": [
+                    "2",
+                    "39"
+                ],
+                "source": "Popular Communication",
+                "string-name": {
+                    "given-names": "Stephen",
+                    "surname": "Harrington"
+                },
+                "volume": "10",
+                "year": [
+                    "2012",
+                    "2012"
+                ]
+            }
+        },
+        {
+            "@id": "ref23",
+            "mixed-citation": {
+                "#text": "15. R. Lance Holbert, Jennifer L. Lambe,\n          \n          , and\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1080/08838150701308002",
+                "article-title": "Primacy Effects of The Daily Show and National TV News Viewing: Young Viewers, Political Gratifications, and Internal Political Self-Efficacy",
+                "fpage": "20",
+                "issue": "1",
+                "lpage": "38",
+                "source": "Journal of Broadcasting & Electronic Media",
+                "string-name": [
+                    {
+                        "given-names": "Anthony D.",
+                        "surname": "Dudo"
+                    },
+                    {
+                        "given-names": "A.",
+                        "surname": "Kristin"
+                    },
+                    {
+                        "surname": "Carlton"
+                    }
+                ],
+                "volume": "51",
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref24",
+            "mixed-citation": {
+                "#text": "16.\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1080/15405702.\n          \n          .638567",
+                "article-title": "The Witty Seven: Late SocialistCapitalist Satire in Hungary",
+                "fpage": [
+                    "1",
+                    "131"
+                ],
+                "lpage": [
+                    "2",
+                    "144"
+                ],
+                "source": "Popular Communication",
+                "string-name": {
+                    "given-names": "Anik\u00f3",
+                    "surname": "Imre"
+                },
+                "volume": "10",
+                "year": [
+                    "2012",
+                    "2012"
+                ]
+            }
+        },
+        {
+            "@id": "ref25",
+            "mixed-citation": {
+                "#text": "17.\n          \n          .\n          \n          .\n          \n          .\n          \n          . Contemporary Debates.",
+                "article-title": "The Postmoden Condition",
+                "source": "Culture and Society",
+                "string-name": {
+                    "surname": "J.-F. Lyotard"
+                },
+                "year": "1990"
+            }
+        },
+        {
+            "@id": "ref26",
+            "mixed-citation": {
+                "#text": "18.\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1177/0196859912458700",
+                "article-title": "With Facebook, blogs, and fake news, teens reject journalistic ?objectivity",
+                "fpage": "246",
+                "issue": "3",
+                "lpage": "262",
+                "source": "? Journal of Communication Inquiry",
+                "string-name": {
+                    "given-names": "Regina",
+                    "surname": "Marchi"
+                },
+                "volume": "36",
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref27",
+            "mixed-citation": {
+                "#text": "19.\n          \n          .\n          \n          .\n          \n          ...: EBSCOhost.\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          .",
+                "article-title": "Journalism, the Pressures of Verification and Notions of Post-Truth in Civi",
+                "fpage": "41",
+                "issue": "2",
+                "lpage": "56",
+                "source": "Cosmopolitan Civil Societies: An Interdisciplinary Journal",
+                "string-name": {
+                    "given-names": "Nora",
+                    "surname": "Martin"
+                },
+                "volume": "9",
+                "year": "2007"
+            }
+        },
+        {
+            "@id": "ref28",
+            "mixed-citation": {
+                "#text": "20.\n          \n          ,\n          \n          , Dana Haugh, and\n          \n          \n          & Information Literacy:\n          \n          .",
+                "article-title": "Designing information literacy to empower students",
+                "source": "Interdisciplinary Perspectives on Equality and Diversity 3-1.",
+                "string-name": [
+                    {
+                        "given-names": "McGivney",
+                        "surname": "Claudia"
+                    },
+                    {
+                        "given-names": "Kathleen",
+                        "surname": "Kasten"
+                    },
+                    {
+                        "given-names": "A. DeVito. 2017. Fake",
+                        "surname": "Jennifer"
+                    },
+                    {
+                        "surname": "News"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ref29",
+            "mixed-citation": {
+                "#text": "21. Amy Mitchell and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          -\n          \n          .",
+                "article-title": "The role of news on facebook",
+                "fpage": "1",
+                "lpage": "24",
+                "source": "Pew Research Journalism Project:",
+                "string-name": {
+                    "given-names": "Dana",
+                    "surname": "Page"
+                },
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref30",
+            "mixed-citation": {
+                "#text": "22.\n          \n          , Mohamed Hashim Salih, Jose Angel Lopez, Angel Ortega,\n          \n          \n          \n          .\n          \n          .\n          \n          . arXiv preprint arXiv: https://doi.org/10.1145/3027063.3053227",
+                "article-title": "Automated Assistants to Identify and Prompt Action on Visual News Bias",
+                "string-name": [
+                    {
+                        "given-names": "Narwal",
+                        "surname": "Vishwajeet"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Tobias",
+                        "surname": "John O'Donovan"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Saiph",
+                        "surname": "H\u00f6llerer"
+                    },
+                    {
+                        "surname": "Savage"
+                    }
+                ],
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref31",
+            "mixed-citation": {
+                "#text": "23.\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1177/1555412010377319",
+                "article-title": "The Nintendo entertainment system and the 10NES chip: Carving the video game industry in silicon",
+                "fpage": "83",
+                "issue": "1",
+                "lpage": "100",
+                "source": "Games and Culture",
+                "string-name": {
+                    "surname": "Casey O'Donnell"
+                },
+                "volume": "6",
+                "year": "2011"
+            }
+        },
+        {
+            "@id": "ref32",
+            "mixed-citation": {
+                "#text": "24. Office for National Statistics.\n          \n          .\n          \n          . Statistical Bulletin:\n          \n          -\n          \n          .",
+                "article-title": "Internet users in the UK?: 2016",
+                "fpage": "1",
+                "lpage": "9",
+                "year": "2016"
+            }
+        },
+        {
+            "@id": "ref33",
+            "mixed-citation": {
+                "#text": "25.\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          , Information, Communication and BioInformatics, AEEICB 2017:\n          \n          -\n          \n          . https://doi.org/10.1109/AEEICB.\n          \n          .7972411",
+                "article-title": "Designing prototype for accessing Veracity using social sensors - Big data perspective",
+                "fpage": "198",
+                "lpage": "201",
+                "source": "Proceedings of the 3rd IEEE International Conference on Advances in Electrical and Electronics",
+                "string-name": [
+                    {
+                        "given-names": "A. V.",
+                        "surname": "Parvathi"
+                    },
+                    {
+                        "given-names": "S.",
+                        "surname": "Karthika"
+                    }
+                ],
+                "year": [
+                    "2017",
+                    "2017"
+                ]
+            }
+        },
+        {
+            "@id": "ref34",
+            "mixed-citation": {
+                "#text": "26.\n          \n          .\n          \n          .\n          \n          . In\n          \n          .\n          \n          -\n          \n          .",
+                "article-title": "Deception Detection and Rumor Debunking for Social Media DECEPTION DETECTION AND RUMOR DEBUNKING",
+                "fpage": "363",
+                "source": "The SAGE Handbook of Social Media Research Methods",
+                "string-name": {
+                    "surname": "Victoria L Rubin"
+                },
+                "volume": "342",
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref35",
+            "mixed-citation": {
+                "#text": "27.\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1002/pra2.\n          \n          .145052010083",
+                "article-title": "Deception detection for news: Three types of fakes",
+                "fpage": "1",
+                "issue": "1",
+                "lpage": "4",
+                "source": "Proceedings of the Association for Information Science and Technology 52",
+                "string-name": [
+                    {
+                        "#text": ", Yimin Chen, and",
+                        "given-names": "Niall J.",
+                        "surname": "Victoria L. Rubin"
+                    },
+                    {
+                        "surname": "Conroy"
+                    }
+                ],
+                "year": [
+                    "2015",
+                    "2015"
+                ]
+            }
+        },
+        {
+            "@id": "ref36",
+            "mixed-citation": {
+                "#text": "28.\n          \n          ,\n          \n          , Victoria L Rubin,\n          \n          \n          .\n          \n          .\n          \n          . https://doi.org/10.13140/2.1.4822.8166",
+                "article-title": "Towards News Verification?: Deception Detection Methods for News Discourse Towards News Verification?: Deception Detection Methods for News Discourse",
+                "string-name": [
+                    {
+                        "surname": "Victoria L Rubin"
+                    },
+                    {
+                        "surname": "Niall J Conroy"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Yimin",
+                        "surname": "Niall J Conroy"
+                    },
+                    {
+                        "surname": "Chen"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref37",
+            "mixed-citation": {
+                "#text": "29.\n          \n          \n          \n          .\n          \n          .\n          \n          . https://doi.org/10.2307/1252090",
+                "article-title": "The Information Age: Economy, Society and Culture Volume I: The Rise of the Network Society",
+                "string-name": [
+                    {
+                        "given-names": "A.",
+                        "surname": "Peter"
+                    },
+                    {
+                        "#text": "and",
+                        "given-names": "Manuel",
+                        "surname": "Schneider"
+                    },
+                    {
+                        "surname": "Castells"
+                    }
+                ],
+                "year": "1997"
+            }
+        },
+        {
+            "@id": "ref38",
+            "mixed-citation": {
+                "#text": "30.\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          :\n          \n          -\n          \n          . https://doi.org/10.1057/palgrave.cpt.9300058",
+                "article-title": "The Individualized Society",
+                "fpage": "245",
+                "issue": "2",
+                "lpage": "246",
+                "source": "Contemporary Political Theory",
+                "string-name": {
+                    "given-names": "Jeremy",
+                    "surname": "Valentine"
+                },
+                "volume": "2",
+                "year": "2003"
+            }
+        },
+        {
+            "@id": "ref39",
+            "mixed-citation": {
+                "#text": "31.\n          \n          , Kyle Shaffer, Jin Yea Jang, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          : Short Papers):\n          \n          -\n          \n          .",
+                "article-title": "Separating Facts from Fiction: Linguistic Models to Classify Suspicious and Trusted News Posts on Twitter",
+                "fpage": "647",
+                "lpage": "653",
+                "source": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume",
+                "string-name": [
+                    {
+                        "given-names": "Volkova",
+                        "surname": "Svitlana"
+                    },
+                    {
+                        "given-names": "Nathan",
+                        "surname": "Hodas"
+                    }
+                ],
+                "volume": "2",
+                "year": "2017"
+            }
+        },
+        {
+            "@id": "ref40",
+            "mixed-citation": {
+                "#text": "32.\n          \n          , Ahmet Aker, Kalina Bontcheva, Maria Liakata, and\n          \n          .\n          \n          .\n          \n          .org/abs/1704.00656",
+                "article-title": "Detection and Resolution of Rumours in Social Media: A Survey. arXiv preprint arXiv: Retrieved from http://arxiv",
+                "string-name": [
+                    {
+                        "given-names": "Zubiaga",
+                        "surname": "Arkaitz"
+                    },
+                    {
+                        "given-names": "Rob",
+                        "surname": "Procter"
+                    }
+                ],
+                "year": "2017"
+            }
+        }
+    ],
+    "title": "Falling for Fake News: Investigating the Consumption of News via Social Media"
+}

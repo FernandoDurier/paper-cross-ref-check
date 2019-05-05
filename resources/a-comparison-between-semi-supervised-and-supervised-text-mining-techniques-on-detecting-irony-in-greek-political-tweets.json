@@ -1,0 +1,873 @@
+{
+    "article": {
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "front": {
+            "journal-meta": {
+                "journal-title-group": {
+                    "journal-title": "Engineering Applications of Artificial Intelligence"
+                }
+            },
+            "article-meta": {
+                "article-id": {
+                    "@pub-id-type": "doi",
+                    "#text": "10.1016/j.engappai.2016.01.007"
+                },
+                "title-group": {
+                    "article-title": "A comparison between semi-supervised and supervised text mining techniques on detecting irony in greek political tweets"
+                },
+                "contrib-group": {
+                    "contrib": [
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Basilis Charalampakis",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Dimitris Spathis n",
+                            "email": "sdimitris@csd.auth.gr",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Elias Kouslis",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        },
+                        {
+                            "@contrib-type": "author",
+                            "string-name": "Katia Kermanidis",
+                            "email": "kerman@ionio.gr",
+                            "xref": {
+                                "@ref-type": "aff",
+                                "@rid": "aff0",
+                                "#text": "0"
+                            }
+                        }
+                    ],
+                    "aff": {
+                        "@id": "aff0",
+                        "label": "0",
+                        "institution": "Department of Informatics, Ionian University",
+                        "addr-line": "Corfu",
+                        "country": {
+                            "@country": "GR",
+                            "#text": "Greece"
+                        },
+                        "#text": ",\n          \n          ,"
+                    }
+                },
+                "pub-date": {
+                    "year": "2016"
+                },
+                "volume": "51",
+                "issue": "2016",
+                "fpage": "50",
+                "lpage": "57",
+                "abstract": {
+                    "p": "a b s t r a c t The present work describes a classification schema for irony detection in Greek political tweets. Our hypothesis states that humorous political tweets could predict actual election results. The irony detection concept is based on subjective perceptions, so only relying on human-annotator driven labor might not be the best route. The proposed approach relies on limited labeled training data, thus a semi-supervised approach is followed, where collective-learning algorithms take both labeled and unlabeled data into consideration. We compare the semi-supervised results with the supervised ones from a previous research of ours. The hypothesis is evaluated via a correlation study between the irony that a party receives on Twitter, its respective actual election results during the Greek parliamentary elections of May 2012, and the difference between these results and the ones of the preceding elections of 2009. & 2016 Elsevier Ltd. All rights reserved."
+                },
+                "kwd-group": {
+                    "kwd": [
+                        "Irony detection",
+                        "Text mining",
+                        "Twitter",
+                        "Politics"
+                    ]
+                }
+            }
+        },
+        "body": {
+            "sec": [
+                {
+                    "@id": "sec-1",
+                    "title": "-",
+                    "p": "a r t i c l e i n f o\nAvailable online 2 March 2016"
+                },
+                {
+                    "@id": "sec-2",
+                    "title": "1. Introduction",
+                    "p": [
+                        "Irony as a para-linguistic element is used to figuratively express\na concept with a semantic meaning that is very different from its\nactual initial purpose. It is a challenging field for computational\nlinguistics and natural language processing due to the high\nambiguity and the difficulty to detect it, objectively. Language use\nis vigorous and creative; there is no pre-defined consensual\nagreement on how to recognize an ironic expression, due to the\nhigh subjectivity involved.",
+                        "In the last decade, irony expression has been thriving on social\nnetworks and particularly Twitter, because of the 140 characters\nrestraint on the status updates, being a perfect fit for good old\noneliners. As a public social medium, users realize that their writings\nmay be read and reproduced by potentially everyone, gaining\npopularity and followers. But this publicity, contrary to Facebook's\nreal name policy, often has no direct consequences to their\neveryday lives, since the majority participate anonymously, using\nan avatar and a nickname.",
+                        "This no-censorship state contributes to the freedom of\nexpressing personal thoughts on tough, taboo, unpopular or\ncontroversial issues, part of which contains the political satire.",
+                        "Political satire is a significant part of comedy which specializes in\ndrawing entertainment from politics. Most of the times, it aims\njust to please. By nature, it does not offer a constructive view by\nitself; when it is used as part of criticism, it tends to simply\npinpoint the unexpected or different.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref7",
+                                "#text": "(Colleoni et al., 2014)"
+                            },
+                            "#text": "The high topicality of Twitter, combined with the ephemerality\nof political news, forms a state which is described as'echo\nchamber', a group-thinking effect on virtually enclosed spaces,\namplified by repetition\n        \n        . As a result, the occasional\nuser might write something political just to 'jump on the\nbandwagon', without an initial conscious aim to criticize. Adding to\nthat, politics is a topic that almost everybody is familiar with and\nmakes more sense from the engagement and attention side to\nwrite about Obama instead of an obscure book you just read."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref15",
+                                "#text": "(Kalsnes et al., 2014)"
+                            },
+                            "#text": "Studies focus on the simultaneous usage of Twitter and the TV\non circumstances like a political debate, where meta-talk tweets\nreveal critical scrutiny of the agenda or 'the debate about the\ndebate'\n        \n        ."
+                        },
+                        "In the rapidly changing web, there is a plethora of available text,\nespecially from social networks, which is unlabeled, raw or\nunprocessed. Adding to the traditional supervised methods, there are quite\na few techniques that enable us to take these huge unstructured\ndata into account. An insight from our previous work was the\nsubjectivity involved during the tagging of a text as ironic. Three of our\nauthors who took up the tedious task of annotation could not agree\non what should be considered as ironic or not. As a result, there\ncannot be a gold standard corpus of ironic tweets. This was our main\nmotivation to explore semi-supervised techniques, since they take\ninto account both train and test data. To be specific, the technique\nwe chose is collective classification: a type of semi-supervised\nlearning that presents an interesting method for optimizing the\nclassification of partially-labeled data.",
+                        "Considering the above, our empirical study tries to detect irony\non a corpus of Greek political tweets by training a classifier, using\nappropriate linguistic features, some of which are proposed for the\nfirst time herein for irony detection. Our goal is to find a relation\nbetween the ironic tweets that refer to the political parties and\nleaders in Greece in the pre-election period of May 2012, and their\nactual election results. We compare the semi-supervised results\nwith the supervised ones from a previous research of ours.\nRegarding the novelty of our study, this is a first exploration on the\nfield of irony detection with semi-supervised learning and an\napplication in politics.",
+                        "The remainder of this paper is organized as follows: In Section 2,\nwe present the related literature on the topics of irony\ndetection, Twitter sentiment analysis and political expression. The next\nSections 3 and 4 are dedicated to data preprocessing and its\nrepresentation schema through the set of linguistic features that affect\nirony detection. The Section 5 describes the training procedure, the\nevaluation of the algorithms? performance and their test procedure\non a large unlabeled dataset. An overview of the study limitations,\nfuture research prospects and a summary of the empirical study are\ndescribed in Section 6."
+                    ]
+                },
+                {
+                    "@id": "sec-3",
+                    "title": "2. Related work",
+                    "p": [
+                        "The greater part of the literature on irony detection in\ncomputational linguistics is focused on English, but this is a first\nattempt to explore this area in the Greek language, to the authors'\nknowledge.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref23",
+                                "#text": "Reyes et al. (2013)"
+                            },
+                            "#text": "attempt to detect irony by examining the\ncorpus on the following features: signatures (concerning\npointedness, counter-factuality, and temporal compression),\nunexpectedness (concerning temporal imbalance and contextual\nimbalance), style (as captured by character-grams (c-grams), skip-grams\n(s-grams), and polarity skip-grams (ps-grams)) and emotional\nscenarios (concerning activation, imagery, and pleasantness).\nThese features work better when they are used as part of a\ncoherent framework rather than used individually. They used\nmultiple datasets in order to evaluate their hypothesis and\nachieved a precision of 0.79 at best. Classification is performed by\nNa\u00efve Bayes and Decision Trees. Also a crisis management case\nstudy of the hashtag #Toyota is described."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref22",
+                                "#text": "Rajadesingan and Liu (2014)"
+                            },
+                            "#text": "A study by\n        \n        discovered an\ninteresting aspect of Twitter usage, an 'orientation phase' in which the\nuser is gradually introduced to irony as one gains followers. The\nthreshold of this phase is one's 30 initial tweets. The top features\nin decreasing order of importance for sarcasm detection are the\nfollowing: Percentage of emoticons in the tweet, percentage of\nadjectives in the tweet, percentage of past words with sentiment\nscore, number of polysyllables per word in the tweet, lexical\ndensity of the tweet. They evaluate using a J48 decision tree,\nlogistic regression, and SVM to obtain an accuracy of 78.06%,\n83.46%, and 83.05%, respectively."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref13",
+                                    "#text": "Gonz\u00e1lezIb\u00e1nez et al., 2011"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref17",
+                                    "#text": "Liebrecht et al., 2013"
+                                }
+                            ],
+                            "#text": "The usual approach on similar irony detection studies on\nTwitter is to identify the two classes by hashtag analysis. However,\nthis method creates noisy results with low accuracy\n(\n        \n        ;\n        \n        ). Features used by\nGonzalez were Lexical (unigrams, affective language, interjections and\npunctuation) and Pragmatic (positive smileys, negative smileys,\nand ?@toUser? signs if a twitter is directed to another user).\nAlgorithms used were SVM with SMO and Logistic Regression.\nOverall SMO outperformed LogR, with the best accuracy of 57%\nbeing an indication of the difficulty of the task. On the other hand,\nLiebrecht approached the same problem with the Balanced\nWinnow algorithm for classification. The strongest linguistic markers\nof sarcastic utterances were markers that can be seen as synonyms\nfor #sarcasm hashtag. Testing the classifier on the top 250 of the\ntweets it ranked as most likely to be sarcastic, it attains a 30%\naverage precision."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref16",
+                                "#text": "Kermanidis and Maragoudakis (2013)"
+                            },
+                            "#text": "Twitter lexical analysis on Greek tweets has been the main\nsubject of the research by\n        \n        ,\nexamining the sentimental tagging in a supervised environment.\nTheir hypothesis is focused on the positive / negative distinction,\nusing statistical metrics such as count and frequency distributions.\nThe alignment between actual political results and web sentiment\nin both directions was investigated and confirmed that there is a\nrelation between political results and web sentiment. We use the\nsame corpus of tweets in our study."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref8",
+                                    "#text": "Davidov et al. (2010)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref26",
+                                    "#text": "Tsur et al. (2010)"
+                                }
+                            ],
+                            "#text": "Apart from Twitter, similar techniques have been applied on\nAmazon reviews as well, making use of structured information of\nreviews versus the unstructured nature of Twitter. The\naccuracy results are encouraging due to the semi-supervised technique\nand the huge dataset, requiring human-annotator labor though,\n        \n        ;\n        \n        . Features used were\nhighfrequency words, content words, sentence length and punctuation.\nResults on the Twitter dataset are better than those obtained on\nthe Amazon dataset, with accuracy of 0.947 with a k-nearest\nneighbors implementation."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref10",
+                                "#text": "Fangzhong and Markert (2009)"
+                            },
+                            "#text": "Semi-supervised techniques on text mining were applied by\n        \n        . Their approach involves Wordnet,\nlike us, and they propose a subjectivity measure of each Wordnet\nentry. They suggest a semi-supervised minimum-cut framework\nthat makes use of both WordNet definitions and its relation\nstructure. Minimum-cut is a technique used at graph theory,\nwhich uses pairwise relationships between the data points in\norder to learn from both labeled and unlabeled data. The\nsemisupervised approach achieves the same results as the supervised\nframework with less than 20% of the training data."
+                        },
+                        {
+                            "xref": [
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref12",
+                                    "#text": "Gokhan et al. (2005)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref25",
+                                    "#text": "Santos et al. (2011)"
+                                },
+                                {
+                                    "@ref-type": "bibr",
+                                    "@rid": "ref20",
+                                    "#text": "(Neville and Jensen, 2003)"
+                                }
+                            ],
+                            "#text": "In the emerging area of active learning, where the learning\nalgorithm is able to interactively query the researcher to obtain\nthe desired outputs at new data points, there is some ongoing\nresearch.\n        \n        wanted to reduce the labeling effort\nfor spoken language understanding from data gathered at AT&T\ncall centers. The examples that are classified with higher\nconfidence scores (not selected by active learning) are exploited using\ntwo semi-supervised learning methods. This enables them to\nexploit all collected data and alleviates the data imbalance\nproblem caused by employing only active or semi-supervised\nlearning. Their results indicate that it is possible to reduce human\nlabeling effort significantly. Similar technique, namely collective\nlearning, was followed by\n        \n        , where they propose\na new method that adopts a collective learning approach to detect\nunknown malware. Their empirical research demonstrates that\nthe labeling efforts are lower than when supervised learning is\nused, while maintaining high accuracy rates. Collective\nclassification is an approach that uses the relational structure of the\ncombined labeled and unlabeled dataset to enhance classification\naccuracy\n        \n        ."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref9",
+                                "#text": "de-la-Pe\u00f1a-Sordo et al. (2013"
+                            },
+                            "#text": "Research by\n        \n        ) studied the\ncomparison between collective learning and supervised techniques,\npretty similar with our methodology. Apart from that, quite similar\nwas their topic of detecting trolling comments on a Spanish\nplatform like Digg or Reddit and their lexical features selection,\nsince irony and trolling may seem indistinguishable in some cases.\nTheir approach obtains nearly the same accuracy than the best\nsupervised learning approaches."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref24",
+                                "#text": "Reyes and Rosso (2011)"
+                            },
+                            "#text": "Another study dealing with online opinion and reviews, again\nby\n        \n        , examined Amazon and Slashdot.com\ncustomer reviews trained on Naive Bayes, Decision Trees and\nSupport Vector Machines. Accuracy results were satisfying and\nfeature selection ranked as top the features of POS 3-gram\n(frequent sequence of trigrams) and Pleasantness (dictionary approach\nto pleasant and unpleasant words)."
+                        },
+                        "Considering the above attempts in the field of\ncomputational linguistics, the novelty of our study lies on the leverage\nof these above techniques in Greek, based on the hypothesis\nthat sarcasm and irony in Twitter messages may be linked to\nactual elections results. We conduct a comparison between\ntraditional supervised and semi-supervised learning.\nRegarding the tools we developed, we used NLTK, Weka and\nWordnet, but the feature extraction / text mining was done in\nPython code developed by us, and the methodology is\ndescribed in the following sections (Fig. 1)."
+                    ]
+                },
+                {
+                    "@id": "sec-4",
+                    "title": "3. Data preprocessing",
+                    "p": [
+                        "The dataset contains 61.427 Greek tweets collected on the week\nbefore and the week after the May 2012 parliamentary elections in\nGreece (Figs. 1 and 2). The dataset is divided in 2 sub-datasets:\nparties and leaders. For each one, there are two sub-sections:\nbefore and after the elections. The dataset structure before the\nclean-up is presented below:",
+                        "The dataset is available for research purposes1 (Table 1 and 2).",
+                        "The first step was to eliminate the duplicate tweets in order to\navoid frequency bias. Duplicate tweets are identical tweets and\n?retweets? (RTs) that do not contribute to our linguistic goals.",
+                        "The second step was to delete the useless, unstructured\nartifacts (unformatted tweets) that were fetched by the Twitter API. In\norder to form a unibody test set, we merged the above\nsubdatasets. We decided to keep the tweets that contain links,\nbecause our hypothesis supports that tweets with links, for\ninstance newspaper article tweets, are neutral, not ironic. After the\ncleanup, the size of tweets was 44.438.",
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref27",
+                                "#text": "(Tufis et al.,\n2004)"
+                            },
+                            "#text": "The semantic analysis was assigned to Balkanet\n        \n        , a Greek edition of the WordNet (OMW: Open\nMultilingual Wordnet), a popular lexical database that groups\nwords into sets of cognitive synonyms (synsets), each\nexpressing a distinct concept."
+                        },
+                        {
+                            "xref": {
+                                "@ref-type": "bibr",
+                                "@rid": "ref19 ref2",
+                                "#text": "(Bird et al.,\n2009)"
+                            },
+                            "#text": "Also, the Python natural language package, NLTK\n        \n        , was used in order to support Wordnet. The machine\nlearning and training process was performed using the Weka\nsoftware (Fig. 2).2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-5",
+                    "title": "4. Features",
+                    "p": {
+                        "xref": {
+                            "@ref-type": "bibr",
+                            "@rid": "ref1",
+                            "#text": "(Barbieri\nand Saggion, 2014)"
+                        },
+                        "#text": "We approached irony detection as a text classification problem.\nThe decision if a tweet is ironic-or-not is a binary decision. We tag\neach tweet with five features, taking into consideration structural\nsentence formations and unexpectedness occurrences. Some of the\nfeatures are designed to detect imbalance and unexpectedness,\nothers to detect common patterns in the structure of the ironic\ntweets (like type of punctuation, length, and emoticons).\n        \n        Our features are grouped into the following\nmodel:"
+                    },
+                    "sec": {
+                        "@id": "sec-5-1",
+                        "title": "Spoken (spoken style applied in writings) Rarity (the frequency occurrences of the most rare words) Meanings (the number of Wordnet synsets as a measure of ambiguity)",
+                        "p": [
+                            "Lexical (punctuation, prosodic repeated letters, metaphors)\nEmoticons (smiley faces etc)",
+                            "We analyzed the features with the pearson correlation and\nfound low correlation between the variables. To be precise, the\nhighest correlations were between the dependent and the\nindependent variables: rarityScore and isIronic (0.398), lexicalScore\nand isIronic (0.350). These relations are confirmed by the Feature\nSelection process as well (see 5.3). The only correlation between\nindependent variables (features) was between rarityScore and\nemoticonScore (0.329) which is considered relatively low, on\nstatistical terms."
+                        ],
+                        "sec": [
+                            {
+                                "@id": "sec-5-1-1",
+                                "title": "4.1. Spoken",
+                                "p": [
+                                    "The verbal irony in Twitter is often expressed as everyday-life chats\nbetween potentially real characters, using heavily dashes (-) and\nasterisks (*). Their occurrences in tweets count positively in our\nclassifier. The use of spoken language is often related to unexpectedness. In\npolitical context, dashes may be used to quote an actual quote, but the\n1 http://di.ionio.gr/hilab/doku.php?id\u00bcstart:websent.\n2 http://www.cs.waikato.ac.nz/ml/weka.\nreason is usually to add a sarcastic comment. The asterisk character\nshowcases movements or non-verbal actions in tweets, such as *sigh*\nor *faints*, adding an emotional level. If there is at least one of the\nabove characters in the tweet, the value of the feature is 'true',\notherwise it is'false'. Thus, the spoken feature is binary. We grouped the\nattributes as one variable because the continuous score does not check\nthe existence or not of spoken speech.",
+                                    "KKE"
+                                ]
+                            },
+                            {
+                                "@id": "sec-5-1-2",
+                                "title": "4.2. Rarity",
+                                "p": [
+                                    "ND",
+                                    "A frequency dictionary for all the words of the original dataset\nwas created. The tweets are split into tokens, and token\noccurrences (excluding URL links) are counted. Thus, we isolated the\nrarest words and limited the upper bound to three occurrences.\nThe resulted frequency dictionary consists of 25.898 words. The\nrarest cases had 1 occurrence. If a word had 3 occurrences, it was\nless rare. In order to invert this scale, proper weights were\nattached to each token: weights 10, 5 and 2 were assigned to\nfrequencies 1, 2 and 3 respectively. The distance of the first weight\n(10) and the second (5) shows the significance of the most rare\nwords. The final score is the following equation:\nThe formula that estimates the rarity score of each word of the\nexamined tweet, where: m\u00bcnumber of words (tokens) of each\ntweet and n\u00bccurrent word (token) under examination.",
+                                    "This formula looks up every word of the given tweet in our\nfrequency dictionary. If the word is found there, it attaches a weight\naccording to the scale we described above. For normalization\npurposes, we divide the weight scores with the number of words of\neach tweet. The three occurrences threshold is over the whole\ndataset. We qualitatively examined the dataset with 4\u00fe occurrences\nand there were many frequent words inside that do not provide\nlinguistic value, so we set the limit to three. The descriptive statistics\nof this variable distribution show high concentration around the\n0.4 score with a maximum value of 10. Almost half of the dataset\ntweets have a score of zero."
+                                ]
+                            },
+                            {
+                                "@id": "sec-5-1-3",
+                                "title": "4.3. Meanings",
+                                "p": {
+                                    "xref": {
+                                        "@ref-type": "bibr",
+                                        "@rid": "ref18",
+                                        "#text": "(Mihalcea and Strapparava,\n2006)"
+                                    },
+                                    "#text": "We used the Balkanet packet of Wordnet to extract the\nmeanings of each word, because the use of a word with multiple\nmeanings implies ambiguity and eventually irony. For instance,\nthe one-liner 'Change is inevitable, except from a vending\nmachine' exploits the ambiguity, and consequently wrong\nexpectations, induced by the word change\n            \n            . Our algorithm looks up in Balkanet every word of each\ntweet. If a word has multiple synsets (meanings), we count their\nnumber and add them to the score. This process is repeated for\nevery tweet. The descriptive statistics of this variable distribution\nshow high concentration between scores 0.2 and 3 with a\nmaximum value of 85. Almost a third of the dataset tweets have a score\nof zero."
+                                }
+                            },
+                            {
+                                "@id": "sec-5-1-4",
+                                "title": "4.4. Lexical",
+                                "p": [
+                                    "The lexical attributes of each tweet were: repeated letters,\nmetaphor words and punctuation.",
+                                    {
+                                        "xref": {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref5",
+                                            "#text": "(Cheang and Pell, 2008)"
+                                        },
+                                        "#text": "Twitter's users use repeated letters to express a spoken-verbal\nemotion. This phenomenon is called prosody, altering the\nintonation of speech like singing\n            \n            . Also, we\ntrack the occurrences of words that showcase figurative language.\nFor the example, the word ?like? in Greek is written as ???, ??\n& ???."
+                                    },
+                                    "The punctuation feature is the aggregation of exclamation\nmarks, question marks, dots and semicolons. The semicolon is\nused in Greek instead of the '?' symbol. The descriptive statistics of\nthis variable distribution show high concentration of scores 1 and\n2 with a maximum value of 5. Two thirds of the dataset tweets\nhave a score of zero.",
+                                    "The Emoticon feature detects all the possible variations of\nsmiley, sad and mocking faces such as :), :-(, :P etc. Irony can be\ndetected by the existence of emoticons, due to emotional charge.\nThe value of the Emoticon feature is binary: 'true' if at least one\nemoticon appears in the tweet, 'false' otherwise.",
+                                    "The above example (Fig. 3) displays a random political Greek\ntweet about a party leader and translates roughly to ?Kammenos\nlooks like sunburnt?. This tweet exploits a wordplay with the\nname of the party leader, which in Greek sounds like the word\n?sunburnt?. As a result, the lexical score is above zero, since it uses\nfigurative speech (?like?), as well as the rarity score, expressing a\ncolloquial term of the word sunburnt in Greek."
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "sec-6",
+                    "title": "5. Test and results",
+                    "sec": [
+                        {
+                            "@id": "sec-6-1",
+                            "title": "5.1. Supervised technique"
+                        },
+                        {
+                            "@id": "sec-6-2",
+                            "title": "5.1.1. Training",
+                            "p": [
+                                {
+                                    "xref": [
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref21",
+                                            "#text": "(Quinlan, 1993)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref4",
+                                            "#text": "(Chang and Lin, 2011)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref14 ref6",
+                                            "#text": "(John and Langley, 1995)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref6",
+                                            "#text": "(Cleary and Trigg, 1995)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref3",
+                                            "#text": "(Breiman, 2001)"
+                                        },
+                                        {
+                                            "@ref-type": "bibr",
+                                            "@rid": "ref11",
+                                            "#text": "(Gama, 2004)"
+                                        }
+                                    ],
+                                    "#text": "After the data preprocessing and the automatic feature scoring,\nwe have a complete dataset, ready for labeling. We labeled a small\namount of tweets manually (n \u00bc 126) in order to train the classifier.\nThe distribution of the dependent variable is: 74 ironic and 52\nnon-ironic tweets, gathered by randomly sampling the big dataset.\nThe resulting set was loaded on Weka and was trained on multiple\nalgorithms according to the 10-fold-cross validation technique.\nApart from probabilistic algorithms, we involved decision trees as\nwell, in order to be able to rank the significance of the features.\nThe training algorithms with the best performance were: J48-the\nWeka version of C4.5\n          \n          , SVM\n          \n          ,\nNeural Networks, Naive Bayes\n          \n          ,\nFunctional Trees, KStar\n          \n          and Random Forests\n          \n          . The best performing algorithm on average was\nthe Functional Trees (Precision \u00bc 82.4). Functional Trees combine a\nunivariate decision tree with a linear function by means of\nconstructive induction. Decision trees created from the model are able\nto use decision nodes with multivariate tests, and leaf nodes that\nmake predictions using linear functions\n          \n          .\n5.1.2. Testing"
+                                },
+                                "The classification model created from the Functional Trees\nalgorithm was applied to the unlabeled datasets of each party in\norder to get the irony predictions. Due to the fact that our test\ndataset is unlabeled, we can?t evaluate the model's validity\ndirectly. An indirect, qualitative evaluation is attempted in the\nfollowing sections, comparing the volume of irony in tweets with\nthe actual election results."
+                            ]
+                        },
+                        {
+                            "@id": "sec-6-3",
+                            "title": "5.2. Semi-supervised technique"
+                        },
+                        {
+                            "@id": "sec-6-4",
+                            "title": "5.2.1. Training-collective classification",
+                            "p": [
+                                "Collective classification is a combinatorial optimization\nproblem, in which we are given a set of documents, or nodes, D \u00bc {d1,\n?,dn} and a neighborhood function N, where Ni D D/{Di}, which\ndescribes the underlying network structure. Being D a random\ncollection of documents, it is divided into two sets X and Y where X\ncorresponds to the documents for which we know the correct\nvalues and Y are the documents whose values need to be found\n(Santos et al., 2011; Namata et al. 2009)",
+                                "We applied the collective-tree algorithm, which is similar to the\nRandom Tree classifier, but takes into account both labeled and\nunlabeled data. This algorithm combines the training and\nprediction phase, so it receives as training the manual small dataset and\nthe big unlabeled one as testing. According to the documentation3,\nthe collective-tree algorithm splits the attribute at that position\nthat divides the current subset of instances (of training and test\ninstances) into (roughly) two halves. The tree is stopped from\ngrowing, if one of the following conditions is met:\na. only training instances would be covered (the labels for these\ninstances are already known!)\nb. only test instances in the leaf taking the distribution from the\nparent node\nc. only training instances of one class all test instances are\nconsidered to have this class\n5.2.2. Testing",
+                                "The resulting predicted dataset is used as gold corpus training\ndataset against each unlabeled party dataset."
+                            ]
+                        },
+                        {
+                            "@id": "sec-6-5",
+                            "title": "5.2.3. Validation",
+                            "p": "In order to evaluate the semi-supervised predictions, we used\nthe resulting predicted dataset as train-set against the manual\nsmall dataset, enabling us to compare the performance of\nsupervised vs semi-supervised techniques. The same algorithms as\nabove were used (see Fig. 4). The best performing algorithm is\nRandom Forest (precision \u00bc 83.1), while Naive Bayes once again\nbehaves the worst."
+                        },
+                        {
+                            "@id": "sec-6-6",
+                            "title": "5.3. Hypothesis evaluation",
+                            "p": [
+                                "In this section, we count the ironic and non-ironic tweets that\nwere picked by our supervised and semi-supervised classifiers.\nInterestingly, the actual election results are not directly correlated\nbut there is a trend between the parties that receive irony and\ntheir election votes' percentage fluctuation retrospectively. Table 3\nshows that precision in both cases is quite similar so that the\npositive predicted outcome matches the manual positive tagging.\nOn the other hand, recall is quite lower on the semi-supervised,\nmeaning that the false negative rate is higher. Namely,\nsemisupervised classifies more frequently as non-ironic what human\ntagged as ironic. Probabilistic and instance-based methods\nperform worse with more data, while decision trees in some cases\noutperform the traditional models.",
+                                "We cannot claim that one algorithm is better than another, but that\nit performs better on the given data. As we mention in Section 5.1, we\ninclude Decision Trees (J48, FT, Random Forest), Probabilistic (Naive\nBayes), Instance-based (K-Star), Kernel-based (SVM) and Neural\nNetworks. From theory, we know the considerations when choosing a ML\nalgorithm are: accuracy, training time, linearity, number of parameters\nand number of features. Accuracy is covered thoroughly in our results\ntables and figures. In training time, our metrics show that naive bayes is\nthe fastest while NNs expectedly require more training time. Linearity is\na characteristic available only in SVMs and Neural Networks in our case.\nQualitatively, our feature scatterplots do not present linearity, that is\nwhy those algorithms do not perform the best. Also, each algorithm\nFig. 4. Performance of the training algorithms, supervised against semi-supervised\ntechniques. The semi-supervised precision is evaluated indirectly by using the\npredicted dataset as train-set against the human-annotated manual small dataset.\nneeds different fine-tuning regarding its parameters, with NNs being\nthe most complex ones (many parameters) and probabilistic ones being\nmore simple. Finally, the number of features remains the same (five\nScores) in each experiment.",
+                                "Another observation, the semi-supervised ironic tweets are\nsignificantly fewer, but their relative distance to the supervised\nones is pretty much the same. We guess that the unlabeled dataset\ncontributed to that, so that the smaller percent of ironic tweets of\nthe semi-technique might be more representative and closer to\nthe reality. Reasonably, the supervised ironic results seem a little\ntoo high; for instance, 70% of one party's tweets cannot be\nhumorous.",
+                                "Table 4 consists of the sub-dataset of 'parties before elections'.\nOne should note that the irony percent shows a trend that may be\ninterpreted as the hype for every party. The 'Election results'\ncolumn refers to the actual results of the May 2012 elections. The\nfluctuation (last column) describes the difference between the\nMay 2012 election results and the previous of 2009. The\nfluctuation percent shows a trend on the edges, so that the 'loser' parties\nof ND and PASOK are getting the most ironic tweets as well as\nthe'winner' parties SYRIZA and XA. Both machine-learning\ntechniques predict roughly the same result."
+                            ]
+                        },
+                        {
+                            "@id": "sec-6-7",
+                            "title": "5.4. Feature selection",
+                            "p": "The features significance rank, ordered by decreasing\nsignificance, based on Information Gain, is the following: 1) Rarity\n(0.1732), 2) Lexical (0.0841), Emoticon (0.0451), Meanings (0) and\nSpoken (0). As mentioned in Section 4, we do not have adequate\nscores for meanings and spoken, so Information Gain does not\nconsider them to be significant in feature selection."
+                        }
+                    ]
+                },
+                {
+                    "@id": "sec-7",
+                    "title": "6. Discussion",
+                    "p": "Twitter in Greece is not as popular and established compared to\nother countries. Greek Twitter users are just 3.7% of the total\npopulation4. The average user is usually young, well-educated and\nliberal, something important for our political context. As a result,\nour findings are filtered through this demographic.",
+                    "sec": {
+                        "@id": "sec-7-1",
+                        "title": "3 https://github.com/fracpete/collective-classification-weka-package.",
+                        "p": [
+                            "4 statistic from social media analysis site trending.gr.",
+                            "On the technical side, we did not use a stemmer or a\nlemmatizer, because our hypothesis is depending on rare words or\nwordplays which would be eliminated. Furthermore, the informal\nnature of the text would render the performance of such tools\nrather useless for a morphologically fluent language such as Greek.\nAnother restraint for our study was the shortage of tested NLP\ntools for the Greek language. Some available tools are not well\ndocumented or not accessible. As a result, our study is focused\nmainly on self-developed tools for mining the features from the\ntext, which we are going to open source in the near future. On the\nsemantic analysis, the meanings score was not effective due to the\nfact that the Balkanet framework does not support grammatical\nconjugation, resulting to fewer results. It accepted only the\nnominative case. Comparing the two machine learning techniques,\nsemi- and supervised learning, we note that their performance is\nin some cases quite similar. Even semi-supervised techniques are\nbased on a small seed train-set, which is why they are called that\nway after all. There is some literature on unsupervised text\nclassification but it is more useful when the main interest is clustering,\nnot explicit classification on pre-defined classes (irony or not). We\ndiscussed earlier the value of semi-supervised learning in irony\nannotation, due to the fact that manual labeling is very subjective\nand not easily available. Humor per se is one the most disputed\nand personal virtues. As future work we could attempt an\napproach with word vectors or deep learning.",
+                            "We researched on the theoretical ground of the Twitter\nusecases, especially on what influences and motivates the individual\nto criticize and joke about politics. The empirical study, attempts\nto detect irony on Greek political tweets, to automatically label a\nbig unlabeled dataset of them and to seek underlying relations\nbetween the irony that the parties receive and their actual election\nresults. The performance of the two machine learning techniques\nis reasonably acceptable (supervised 82%, semi-supervised\n83%) and produces similar results on predicting the fluctuation\nfrom previous election results, establishing our initial hypothesis.\nThe collective learning approach detected fewer ironic tweets, that\nin our opinion is closer to the reality. The big unlabeled dataset\nassisted and contributed to this result.",
+                            "The real-world application of irony detection could be useful to\npolling companies to get the pulse of social media in election\nperiods as well as to the parties to get feedback. Another\nbusinessoriented aspect could be its use by brands in crisis management\nsituations to leverage the opinion of the web. Zooming out, humor\ndetection was always one of the desired targets of computational\nintelligence, where the machines will be able to empathize with\nhumans in all aspects of speech, figurative or literal."
+                        ]
+                    }
+                }
+            ]
+        },
+        "back": {
+            "ref-list": {
+                "ref": [
+                    {
+                        "@id": "ref1",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Barbieri"
+                            },
+                            "year": "2014",
+                            "article-title": "Modelling Irony in Twitter",
+                            "source": "In: Proceedings of the Student Research Workshop at the 14th Conference of the European Chapter of the Association for Computational Linguistics.",
+                            "#text": ", Francesco, Saggion, Horacio,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref2",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Bird"
+                                },
+                                {
+                                    "given-names": "Natural",
+                                    "surname": "Language Processing with Python. O'Reilly Media Inc"
+                                }
+                            ],
+                            "year": "2009",
+                            "#text": ", Steven, Loper, Edward, Klein, Ewan,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref3",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Breiman"
+                            },
+                            "year": "2001",
+                            "article-title": "Random forests",
+                            "source": "Mach. Learn",
+                            "volume": "45",
+                            "issue": "1",
+                            "fpage": "5",
+                            "lpage": "32",
+                            "#text": ", Leo,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref4",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Chang",
+                                    "given-names": "C.C.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Lin",
+                                    "given-names": "C.J.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2011",
+                            "article-title": "A library for support vector machines",
+                            "source": "ACM Trans. Intell. Syst. Technol",
+                            "volume": "2",
+                            "issue": "3",
+                            "fpage": "27",
+                            "#text": ",\n          \n          ,\n          \n          . LIBSVM:\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref5",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Cheang"
+                                },
+                                {
+                                    "surname": "Pell",
+                                    "given-names": "Marc D.",
+                                    "#text": ","
+                                }
+                            ],
+                            "year": "2008",
+                            "article-title": "The sound of sarcasm",
+                            "source": "Speech Commun",
+                            "volume": "50",
+                            "issue": "5",
+                            "fpage": "366",
+                            "lpage": "381",
+                            "#text": ", Henry S.,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref6",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Cleary"
+                                },
+                                {
+                                    "surname": "Leonard"
+                                }
+                            ],
+                            "year": "1995",
+                            "article-title": "an instance-based learner using an entropic distance measure",
+                            "source": "In: Proceedings of the 12th International Conference on Machine learning",
+                            "volume": "5",
+                            "#text": ", John G.,\n          \n          , E. Trigg,\n          \n          . K*:\n          \n          .\n          \n          . Vol.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref7",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Colleoni"
+                            },
+                            "year": "2014",
+                            "article-title": "Echo chamber or public sphere? Predicting political orientation and measuring political homophily in Twitter using big data",
+                            "source": "J. Commun",
+                            "volume": "64",
+                            "issue": "2",
+                            "fpage": "317",
+                            "lpage": "332",
+                            "#text": ", Elanor, Rozza, Alessandro, Arvidsson, Adam,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref8",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Davidov"
+                            },
+                            "year": "2010",
+                            "article-title": "Semi-supervised recognition of sarcastic sentences in twitter and amazon",
+                            "source": "In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning. Association for Computational Linguistics.",
+                            "#text": ", Dmitry, Tsur, Oren, Rappoport, Ari,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref9",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "de-la-"
+                            },
+                            "year": "2013",
+                            "article-title": "Filtering Trolling Comments through Collective Classification\"",
+                            "source": "Network and System Security",
+                            "fpage": "707",
+                            "lpage": "713",
+                            "#text": "Pe\u00f1a-Sordo, Jorge, et al.,\n          \n          . ?\n          \n          .\n          \n          . Springer, Berlin, Heidelberg, pp.\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref10",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Fangzhong"
+                            },
+                            "year": "2009",
+                            "article-title": [
+                                "Subjectivity recognition on word senses via semi-supervised mincuts",
+                                "The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+                                "Association for Computational Linguistics"
+                            ],
+                            "source": "In: Proceedings of Human Language Technologies",
+                            "#text": ", Su, Markert, Katja,\n          \n          .\n          \n          .\n          \n          :\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref11",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Gama"
+                            },
+                            "year": "2004",
+                            "article-title": "Functional trees",
+                            "source": "Mach. Learn",
+                            "volume": "55",
+                            "issue": "3",
+                            "fpage": "219",
+                            "lpage": "250",
+                            "#text": ", Jo\u00e3o,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref12",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Gokhan",
+                                "given-names": "Robert E.",
+                                "#text": ", Tur, Hakkani-T\u00fcr, Dilek, Schapire,"
+                            },
+                            "year": "2005",
+                            "article-title": "Combining active and semi-supervised learning for spoken language understanding",
+                            "source": "Speech Commun",
+                            "volume": "45",
+                            "issue": "2",
+                            "fpage": "171",
+                            "lpage": "186",
+                            "#text": ",\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref13",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Gonz\u00e1lez-Ib\u00e1nez"
+                            },
+                            "year": "2011",
+                            "article-title": [
+                                "Identifying sarcasm in Twitter: a closer look",
+                                "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: Short Papers-Volume 2"
+                            ],
+                            "#text": ", Roberto, Muresan, Smaranda, Wacholder, Nina,\n          \n          .\n          \n          . In:\n          \n          . Association for Computational Linguistics."
+                        }
+                    },
+                    {
+                        "@id": "ref14",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "John"
+                                },
+                                {
+                                    "surname": "Langley"
+                                }
+                            ],
+                            "year": "1995",
+                            "article-title": "Estimating continuous distributions in Bayesian classifiers",
+                            "source": "In: Proceedings of the Eleventh conference on Uncertainty in artificial intelligence",
+                            "#text": ", George H.,\n          \n          , Pat,\n          \n          .\n          \n          .\n          \n          . Morgan Kaufmann Publishers Inc."
+                        }
+                    },
+                    {
+                        "@id": "ref15",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Kalsnes"
+                                },
+                                {
+                                    "surname": "Storsul"
+                                }
+                            ],
+                            "year": "2014",
+                            "article-title": "Social media as a political backchannel: Twitter use during televised election debates in Norway",
+                            "source": "Aslib J. Inf. Manag",
+                            "volume": "66",
+                            "issue": "3",
+                            "fpage": "313",
+                            "lpage": "328",
+                            "#text": ", Bente, Krumsvik, Arne H.,\n          \n          , Tanja,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref16",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Kermanidis"
+                            },
+                            "year": "2013",
+                            "article-title": "Political sentiment analysis of tweets before and after the Greek elections of May 2012",
+                            "source": "Int. J. Soc. Netw. Min",
+                            "volume": "1",
+                            "issue": "3",
+                            "fpage": "298",
+                            "lpage": "317",
+                            "#text": ", Katia Lida, Maragoudakis, Manolis,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref17",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Liebrecht"
+                            },
+                            "year": [
+                                "2013",
+                                "2013"
+                            ],
+                            "article-title": "The perfect solution for detecting sarcasm in tweets# not",
+                            "source": "WASSA",
+                            "fpage": "29",
+                            "#text": ", Christine, Kunneman, Florian, van den Bosch, Antal,\n          \n          .\n          \n          .\n          \n          , vol.\n          \n          , p.\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref18",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Mihalcea"
+                            },
+                            "year": "2006",
+                            "article-title": "Learning to laugh (automatically): computational models for humor recognition",
+                            "source": "Comput. Intell",
+                            "volume": "22",
+                            "issue": "2",
+                            "fpage": "126",
+                            "lpage": "142",
+                            "#text": ", Rada, Strapparava, Carlo,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref19",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Namata"
+                                },
+                                {
+                                    "surname": "Galileo"
+                                }
+                            ],
+                            "year": "2009",
+                            "article-title": "Collective classification for text classification",
+                            "source": "Text Min",
+                            "fpage": "51",
+                            "lpage": "69",
+                            "#text": ",\n          \n          , et al.,\n          \n          .\n          \n          .\n          \n          .,\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref20",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Neville"
+                            },
+                            "year": "2003",
+                            "article-title": "Collective classification with relational dependency networks",
+                            "source": "In: Proceedings of the Second International Workshop on Multi-Relational Data Mining.",
+                            "#text": ", Jennifer, Jensen, David,\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref21",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Quinlan",
+                                    "given-names": "J.",
+                                    "#text": ","
+                                },
+                                {
+                                    "surname": "Ross"
+                                }
+                            ],
+                            "year": "1993",
+                            "article-title": "5: Programming for Machine Learning",
+                            "#text": ",\n          \n          . C4.\n          \n          . Morgan Kauffmann, San Mateo."
+                        }
+                    },
+                    {
+                        "@id": "ref22",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Rajadesingan"
+                            },
+                            "year": "2014",
+                            "article-title": "Sarcasm detection on twitter: a behavioral modeling approach (Dissertation)",
+                            "#text": ", Ashwin, Zafarani, Reza, Liu, Huan,\n          \n          .\n          \n          . Arizona State University, Arizona."
+                        }
+                    },
+                    {
+                        "@id": "ref23",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Reyes"
+                            },
+                            "year": "2013",
+                            "article-title": "A multidimensional approach for detecting irony in twitter",
+                            "source": "Lang. Resour. Eval",
+                            "volume": "47",
+                            "issue": "1",
+                            "fpage": "239",
+                            "lpage": "268",
+                            "#text": ", Antonio, Rosso, Paolo, Veale, Tony,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref24",
+                        "mixed-citation": {
+                            "string-name": [
+                                {
+                                    "surname": "Reyes"
+                                },
+                                {
+                                    "given-names": "Sentiment",
+                                    "surname": "Analysis"
+                                }
+                            ],
+                            "year": "2011",
+                            "article-title": [
+                                "Mining subjective knowledge from customer reviews: a specific case of irony detection",
+                                "Association for Computational Linguistics"
+                            ],
+                            "source": "In: Proceedings of the 2nd Workshop on Computational Approaches",
+                            "#text": ", Antonio, Rosso, Paolo,\n          \n          .\n          \n          .\n          \n          to Subjectivity and\n          \n          .\n          \n          ."
+                        }
+                    },
+                    {
+                        "@id": "ref25",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Santos"
+                            },
+                            "year": "2011",
+                            "article-title": "Collective Classification for Unknown Malware Detection",
+                            "#text": ", Igor, Laorden, Carlos, Bringas, Pablo Garcia,\n          \n          .\n          \n          . SECRYPT."
+                        }
+                    },
+                    {
+                        "@id": "ref26",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Tsur"
+                            },
+                            "year": "2010",
+                            "article-title": "ICWSM-A Great Catchy Name: Semi-Supervised Recognition of Sarcastic Sentences in Online Product Reviews",
+                            "#text": ", Oren, Davidov, Dmitry, Rappoport, Ari,\n          \n          .\n          \n          . ICWSM."
+                        }
+                    },
+                    {
+                        "@id": "ref27",
+                        "mixed-citation": {
+                            "string-name": {
+                                "surname": "Tufis"
+                            },
+                            "year": "2004",
+                            "article-title": "BalkaNet: ams, methods, results and perspectives. a general overview",
+                            "source": "Rom. J. Inf. Sci. Technol",
+                            "volume": "7",
+                            "issue": "1-2",
+                            "fpage": "9",
+                            "lpage": "43",
+                            "#text": ", Dan, Cristea, Dan, Stamou, Sofia,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

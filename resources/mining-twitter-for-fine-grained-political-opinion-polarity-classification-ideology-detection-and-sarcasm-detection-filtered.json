@@ -1,0 +1,291 @@
+{
+    "abstract": {
+        "p": "In this paper, we propose three models for socio-political opinion polarity classification of microblog posts. Firstly, a novel probabilistic model, Joint-Entity-Sentiment-Topic (JEST) model, which captures opinions as a combination of the target entity, sentiment and topic, will be proposed. Secondly, a model for ideology detection called JEST-Ideology will be proposed to identify an individual's orientation towards topics/issues and target entities by extending the proposed opinion polarity classification framework. Finally, we propose a novel method to accurately detect sarcastic opinions by utilizing detected fine-grained opinion and ideology."
+    },
+    "affiliation": {
+        "#text": ",",
+        "@id": "aff0",
+        "country": {
+            "#text": "Australia",
+            "@country": "AU"
+        },
+        "institution": "School of Computer Science and Engineering University of New South Wales Sydney NSW 2052",
+        "label": "0"
+    },
+    "authors": {
+        "@contrib-type": "author",
+        "email": "s.kannangara@unsw.edu.au",
+        "string-name": "Sandeepa Kannangara",
+        "xref": {
+            "#text": "0",
+            "@ref-type": "aff",
+            "@rid": "aff0"
+        }
+    },
+    "journal": "Mining Twitter for Fine-Grained Political Opin-\nion Polarity Classification, Ideology Detection and Sarcasm Detection. In\nWSDM",
+    "keywords": null,
+    "path": "C:/Users/ferna/Documents/development/paper-cross-ref-check/resources/mining-twitter-for-fine-grained-political-opinion-polarity-classification-ideology-detection-and-sarcasm-detection.json",
+    "pub_date": {
+        "year": "2018"
+    },
+    "references": [
+        {
+            "@id": "ref1",
+            "mixed-citation": {
+                "#text": "[1]\n          \n          , Jennifer Foster, Jennifer van der Puil,\n          \n          \n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          .",
+                "article-title": "Sentiment Analysis of Political Tweets: Towards an Accurate Classifier",
+                "fpage": "49",
+                "lpage": "58",
+                "source": "In Proceedings of the Workshop on Language in Social Media (LASM '13)",
+                "string-name": [
+                    {
+                        "given-names": "Akshat",
+                        "surname": "Bakliwal"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Lamia",
+                        "surname": "Ron O'Brien"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Mark",
+                        "surname": "Tounsi"
+                    },
+                    {
+                        "surname": "Hughes"
+                    }
+                ],
+                "year": "2013"
+            }
+        },
+        {
+            "@id": "ref2",
+            "mixed-citation": {
+                "#text": "[2]\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          .",
+                "article-title": "Contextualized Sarcasm Detection on Twitter",
+                "fpage": "574",
+                "lpage": "577",
+                "source": "In Proceedings of the Ninth International AAAI Conference on Web and Social Media (ICWSM '15)",
+                "string-name": [
+                    {
+                        "given-names": "David",
+                        "surname": "Bamman"
+                    },
+                    {
+                        "given-names": "Noah A.",
+                        "surname": "Smith"
+                    }
+                ],
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref3",
+            "mixed-citation": {
+                "#text": "[3]\n          \n          \n          \n          \n          .\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Latent Dirichlet Allocation",
+                "fpage": "993",
+                "lpage": "1022",
+                "source": "Journal of Machine Learning Research",
+                "string-name": [
+                    {
+                        "given-names": "M.",
+                        "surname": "David"
+                    },
+                    {
+                        "#text": ",",
+                        "given-names": "Andrew Y.",
+                        "surname": "Blei"
+                    },
+                    {
+                        "#text": ", and",
+                        "given-names": "Michael I.",
+                        "surname": "Ng"
+                    },
+                    {
+                        "surname": "Jordan"
+                    }
+                ],
+                "volume": "3",
+                "year": [
+                    "2003",
+                    "2003"
+                ]
+            }
+        },
+        {
+            "@id": "ref4",
+            "mixed-citation": {
+                "#text": "[4]\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "AI and Opinion Mining",
+                "fpage": "74",
+                "issue": "3",
+                "lpage": "80",
+                "source": "IEEE Intelligent Systems",
+                "string-name": [
+                    {
+                        "given-names": "Hsinchun",
+                        "surname": "Chen"
+                    },
+                    {
+                        "given-names": "David",
+                        "surname": "Zimbra"
+                    }
+                ],
+                "volume": "25",
+                "year": [
+                    "2010",
+                    "2010"
+                ]
+            }
+        },
+        {
+            "@id": "ref5",
+            "mixed-citation": {
+                "#text": "[5]\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          .",
+                "article-title": "Mining and Summarizing Customer Reviews",
+                "fpage": "168",
+                "lpage": "177",
+                "source": "In Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '04)",
+                "string-name": [
+                    {
+                        "given-names": "Minqing",
+                        "surname": "Hu"
+                    },
+                    {
+                        "given-names": "Bing",
+                        "surname": "Liu"
+                    }
+                ],
+                "year": "2004"
+            }
+        },
+        {
+            "@id": "ref6",
+            "mixed-citation": {
+                "#text": "[6]\n          \n          \n          , Saba Bashir, and\n          \n          .\n          \n          . TOM:\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Twitter Opinion Mining Framework Using Hybrid Classification Scheme",
+                "fpage": "245",
+                "lpage": "257",
+                "source": "Decision Support Systems",
+                "string-name": [
+                    {
+                        "given-names": "Farhan",
+                        "surname": "Hassan"
+                    },
+                    {
+                        "surname": "Khan"
+                    },
+                    {
+                        "given-names": "Usman",
+                        "surname": "Qamar"
+                    }
+                ],
+                "volume": "57",
+                "year": [
+                    "2014",
+                    "2014"
+                ]
+            }
+        },
+        {
+            "@id": "ref7",
+            "mixed-citation": {
+                "#text": "[7]\n          \n          .\n          \n          .\n          \n          . Morgan & Claypool.",
+                "article-title": "Sentiment Analysis and Opinion Mining",
+                "string-name": {
+                    "given-names": "Bing",
+                    "surname": "Liu"
+                },
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref8",
+            "mixed-citation": {
+                "#text": "[8]\n          \n          and\n          \n          .\n          \n          .\n          \n          . In The Semantic Web:\n          \n          , and Grigoris Antoniou (Eds.). Springer-Verlag, Berlin,\n          \n          -\n          \n          .",
+                "article-title": [
+                    "Automatic Detection of Political Opinions in Tweets",
+                    "ESWC 2011 Workshops, Ra\u00fal Garc\u00eda-Castro, Dieter Fensel"
+                ],
+                "fpage": "88",
+                "lpage": "99",
+                "string-name": [
+                    {
+                        "given-names": "Diana",
+                        "surname": "Maynard"
+                    },
+                    {
+                        "given-names": "Adam",
+                        "surname": "Funk"
+                    }
+                ],
+                "year": "2012"
+            }
+        },
+        {
+            "@id": "ref9",
+            "mixed-citation": {
+                "#text": "[9]\n          \n          , Bing Liu, Jiajun Bu, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          .",
+                "article-title": "Opinion Word Expansion and Target Extraction through Double Propagation",
+                "fpage": "9",
+                "issue": "1",
+                "lpage": "27",
+                "source": "Computational Linguistics",
+                "string-name": [
+                    {
+                        "given-names": "Guang",
+                        "surname": "Qiu"
+                    },
+                    {
+                        "given-names": "Chun",
+                        "surname": "Chen"
+                    }
+                ],
+                "volume": "37",
+                "year": [
+                    "2011",
+                    "2011"
+                ]
+            }
+        },
+        {
+            "@id": "ref10",
+            "mixed-citation": {
+                "#text": "[10]\n          \n          , Reza Zafarani, and Huan Liu.\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          .",
+                "article-title": "Sarcasm Detection on Twitter: A Behavioral Modeling Approach",
+                "fpage": "97",
+                "lpage": "106",
+                "source": "In Proceedings of the Eighth ACM International Conference on Web Search and Data Mining (WSDM '15)",
+                "string-name": {
+                    "given-names": "Rajadesingan",
+                    "surname": "Ashwin"
+                },
+                "year": "2015"
+            }
+        },
+        {
+            "@id": "ref11",
+            "mixed-citation": {
+                "#text": "[11]\n          \n          , Soroush Vosoughi, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          .",
+                "article-title": "Automatic Detection and Categorization of Election-Related Tweets",
+                "fpage": "703",
+                "lpage": "706",
+                "source": "In Proceedings of the Tenth International Conference on Web and Social Media (ICWSM '16)",
+                "string-name": [
+                    {
+                        "given-names": "Vijayaraghavan",
+                        "surname": "Prashanth"
+                    },
+                    {
+                        "given-names": "Deb",
+                        "surname": "Roy"
+                    }
+                ],
+                "year": "2016"
+            }
+        }
+    ],
+    "title": "Mining Twiter for Fine-Grained Political Opinion Polarity Classification, Ideology Detection and Sarcasm Detection"
+}
