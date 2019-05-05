@@ -190,112 +190,88 @@
     ],
     "clean-refs": [
         {
-            "authors": "Amrani, Lazaar, El Kadiri, K.E., , ",
-            "source": "Procedia Computer Science",
-            "title": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref1",
+            "title": "AmraniAl, Lazaar,Y., El Kadiri,M., K.E., [1] , , , , , - .2018, Random forest and support vector machine based hybrid approach to sentiment analysis, Procedia Computer Science 127 , 511-520"
         },
         {
-            "authors": "Bharti, Vachha, Pradhan, Babu, Jena, , ",
-            "source": "Digital Communications and Networks",
-            "title": "[2]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref2",
+            "title": "Bharti,S., Vachha,B., Pradhan,R., Babu,K., Jena,S., [2] , , , , , , - .2016, Sarcastic sentiment detection in tweets streamed in real time: a big data approach, Digital Communications and Networks 2 , 108-121"
         },
         {
-            "authors": "Buschmeier, Cimiano, Klinger, , ",
-            "source": "in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis",
-            "title": "[3]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+            "refid": "ref3",
+            "title": "Buschmeier,K., Cimiano,P., Klinger,R., [3] , , , , , pp. - .2014, An impact analysis of features in a classification approach to irony detection in product reviews, in: Proceedings of the 5th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis , 42-49"
         },
         {
-            "authors": "Chakraborty, Bhattacharyya, Bag, Hassanien, , ",
-            "source": "in: International Conference on Advanced Machine Learning Technologies and Applications",
-            "title": "[4]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , Springer. pp.\n          \n          -\n          \n          ."
+            "refid": "ref4",
+            "title": "Chakraborty,K., Bhattacharyya,S., Bag,R., Hassanien,A.E., [4] , , , , , , Springer. pp. - .2018, Comparative sentiment analysis on a set of movie reviews using deep learning approach, in: International Conference on Advanced Machine Learning Technologies and Applications , 311-318"
         },
         {
-            "authors": "Chormunge, Jena, , ",
-            "source": "Journal of Electrical Systems and Information Technology",
-            "title": "[5]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          , doi:https://doi.org/10.1016/j.jesit.\n          \n          .\n          \n          .004."
+            "refid": "ref5",
+            "title": "Chormunge,S., Jena,S., [5] , , , doi:https://doi.org/10.1016/j.jesit. .004.2018, Correlation based feature selection with clustering for high dimensional data, Journal of Electrical Systems and Information Technology 06"
         },
         {
-            "authors": "Dave, Desai, , ",
-            "source": null,
-            "title": "[6]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ), International Conference on, IEEE. pp.\n          \n          -\n          \n          ."
+            "refid": "ref6",
+            "title": "Dave,A.D., Desai,N.P., [6] , , ), International Conference on, IEEE. pp. - .2016, A comprehensive study of classification techniques for sarcasm detection on textual data, in: Electrical, Electronics, and Optimization Techniques (ICEEOT, 1985-1991"
         },
         {
-            "authors": "Fersini, Messina, Pozzi, , ",
-            "source": "Decision support systems 68",
-            "title": "[7]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref7",
+            "title": "Fersini,E., Messina,E., Pozzi,F.A., [7] , , , , - .2014, Sentiment analysis: Bayesian ensemble learning, Decision support systems 68 , 26-38"
         },
         {
-            "authors": "Filatova, , ",
-            "source": null,
-            "title": "[8]\n          \n          ,\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref8",
+            "title": "Filatova,E., [8] , pp. - .2012, Irony and sarcasm: Corpus generation and analysis using crowdsourcing, in: LREC, Citeseer, 392-398"
         },
         {
-            "authors": "Filatova, , ",
-            "source": "in: FLAIRS-30, Association for the Advancement of Artificial Intelligence",
-            "title": "[9]\n          \n          ,\n          \n          .\n          \n          ,\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref9",
+            "title": "Filatova,E., [9] , , pp. - .2017, Sarcasm detection using sentiment flow shifts, in: FLAIRS-30, Association for the Advancement of Artificial Intelligence , 264-269"
         },
         {
-            "authors": "Harish, Revanasiddappa, , ",
-            "source": "International Journal of Computer Applications",
-            "title": "[10]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .5120/ijca2017913711."
+            "refid": "ref10",
+            "title": "Harish,B., Revanasiddappa,M., [10] , , , - doi: .5120/ijca2017913711.2017, A comprehensive survey on various feature selection methods to categorize text documents, International Journal of Computer Applications 164, 10, 1-7"
         },
         {
-            "authors": "Lee, Lee, , ",
-            "source": "Information processing & management 42",
-            "title": "[11]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref11",
+            "title": "Lee,C., Lee,G.G., [11] , , , - .2006, Information gain and divergence-based feature selection for machine learning-based text categorization, Information processing & management 42 , 155-165"
         },
         {
-            "authors": "Mukherjee, P.K., , ",
-            "source": "Technology in Society 48",
-            "title": "[12]\n          \n          , Bala,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref12",
+            "title": "Mukherjee,S., P.K., [12] , Bala, , , - .2017, Sarcasm detection in microblogs using na\u00a8?ve bayes and fuzzy clustering, Technology in Society 48 , 19-27"
         },
         {
-            "authors": "J., Pudil, P., , ",
-            "source": null,
-            "title": "[13] Novovic?ova\u00b4,\n          \n          , Mal\u00b4?k,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ), Springer. pp.\n          \n          -\n          \n          ."
+            "refid": "ref13",
+            "title": "J., Pudil,A., P., [13] Novovic?ova\u00b4, , Mal\u00b4?k, , , ), Springer. pp. - .2004, Feature selection using improved mutual information for text classification, in: Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition (SPR) and Structural and Syntactic Pattern Recognition (SSPR, 1010-1017"
         },
         {
-            "authors": "Reganti, Maheshwari, Kumar, Das, Bajpai, , ",
-            "source": [
-                "in: Data Mining Workshops (ICDMW)",
-                "2016 IEEE 16th International Conference on, IEEE"
-            ],
-            "title": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          ,\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref14",
+            "title": "Reganti,A.N., Maheshwari,T., Kumar,U., Das,A., Bajpai,R., [14] , , , , , , , pp. - .2016, Modeling satire in english text for automatic detection, in: Data Mining Workshops (ICDMW), 2016 IEEE 16th International Conference on, IEEE, 970-977"
         },
         {
-            "authors": "Riloff, Qadir, Surve, De Silva, Gilbert, Huang, , ",
-            "source": "in: Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
-            "title": "[15]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ,\n          \n          , pp.\n          \n          -\n          \n          ."
+            "refid": "ref15",
+            "title": "Riloff,E., Qadir,A., Surve,P., De Silva,L., Gilbert,N., Huang,R., [15] , , , , , , , , pp. - .2013, Sarcasm as contrast between a positive sentiment and negative situation, in: Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing , 704-714"
         },
         {
-            "authors": "Sarkar, Goswami, Agarwal, Aktar, , ",
-            "source": "International scholarly research notices",
-            "title": "[16]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1155/\n          \n          /717092."
+            "refid": "ref16",
+            "title": "Sarkar,S.D., Goswami,S., Agarwal,A., Aktar,J., [16] , , , , , - doi:http://dx.doi.org/10.1155/ /717092.2014, A novel feature selection technique for text classification using naive bayes, International scholarly research notices , 1-10"
         },
         {
-            "authors": "Song, Liu, Yang, , ",
-            "source": "Pattern analysis and applications 8",
-            "title": "[17]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref17",
+            "title": "Song,F., Liu,S., Yang,J., [17] , , , , - .2005, A comparative study on text representation schemes in text categorization, Pattern analysis and applications 8 , 199-209"
         },
         {
-            "authors": "Tripathy, Agrawal, Rath, , ",
-            "source": "Expert Systems with Applications",
-            "title": "[18]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref18",
+            "title": "Tripathy,A., Agrawal,A., Rath,S.K., [18] , , , , - .2016, Classification of sentiment reviews using n-gram machine learning approach, Expert Systems with Applications 57 , 117-126"
         },
         {
-            "authors": "Wallace, , ",
-            "source": "Artificial Intelligence Review",
-            "title": "[19]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref19",
+            "title": "Wallace,B.C., [19] , , - .2015, Computational irony: A survey and new perspectives, Artificial Intelligence Review 43 , 467-483"
         },
         {
-            "authors": "Wang, Sun, Xu, Gu, , ",
-            "source": "Decision support systems 57",
-            "title": "[20]\n          \n          ,\n          \n          , Ma, J.,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref20",
+            "title": "Wang,G., Sun,J., Xu,K., Gu,J., [20] , , Ma, J., , , , - .2014, Sentiment classification: The contribution of ensemble learning, Decision support systems 57 , 77-93"
         },
         {
-            "authors": "Witten, Frank, Hall, Pal, , ",
-            "source": null,
-            "title": "[21]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          . Morgan Kaufmann."
+            "refid": "ref21",
+            "title": "Witten,I.H., Frank,E., Hall,M.A., Pal,C.J., [21] , , , , Morgan Kaufmann.2016, Data Mining: Practical machine learning tools and techniques,"
         }
     ],
     "journal": "Procedia Computer Science",

@@ -36,59 +36,48 @@
     ],
     "clean-refs": [
         {
-            "authors": "Bakliwal, Ron O'Brien, Tounsi, Hughes, , ",
-            "source": "In Proceedings of the Workshop on Language in Social Media (LASM '13)",
-            "title": "[1]\n          \n          , Jennifer Foster, Jennifer van der Puil,\n          \n          \n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          ."
+            "refid": "ref1",
+            "title": "BakliwalAkshat, Ron O'Brien,Lamia, Tounsi, andMark, Hughes, [1] , Jennifer Foster, Jennifer van der Puil, - .2013, Sentiment Analysis of Political Tweets: Towards an Accurate Classifier, In Proceedings of the Workshop on Language in Social Media (LASM '13) , 49-58"
         },
         {
-            "authors": "Bamman, Smith, , ",
-            "source": "In Proceedings of the Ninth International AAAI Conference on Web and Social Media (ICWSM '15)",
-            "title": "[2]\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          ."
+            "refid": "ref2",
+            "title": "BammanDavid, SmithNoah A., [2] and - .2015, Contextualized Sarcasm Detection on Twitter, In Proceedings of the Ninth International AAAI Conference on Web and Social Media (ICWSM '15) , 574-577"
         },
         {
-            "authors": "David, Blei, Ng, Jordan, , ",
-            "source": "Journal of Machine Learning Research",
-            "title": "[3]\n          \n          \n          \n          \n          .\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref3",
+            "title": "DavidM., Blei,Andrew Y., Ng, andMichael I., Jordan, [3] ( ), - .2003, Latent Dirichlet Allocation, Journal of Machine Learning Research 3 , 993-1022"
         },
         {
-            "authors": "Chen, Zimbra, , ",
-            "source": "IEEE Intelligent Systems",
-            "title": "[4]\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref4",
+            "title": "ChenHsinchun, ZimbraDavid, [4] and , ( ), - .2010, AI and Opinion Mining, IEEE Intelligent Systems 25 (3) , 74-80"
         },
         {
-            "authors": "Hu, Liu, , ",
-            "source": "In Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '04)",
-            "title": "[5]\n          \n          and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          ."
+            "refid": "ref5",
+            "title": "HuMinqing, LiuBing, [5] and - .2004, Mining and Summarizing Customer Reviews, In Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '04) , 168-177"
         },
         {
-            "authors": "Hassan, Khan, Qamar, , ",
-            "source": "Decision Support Systems",
-            "title": "[6]\n          \n          \n          , Saba Bashir, and\n          \n          .\n          \n          . TOM:\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref6",
+            "title": "HassanFarhan, Khan, QamarUsman, [6] , Saba Bashir, and TOM: ( ), - .2014, Twitter Opinion Mining Framework Using Hybrid Classification Scheme, Decision Support Systems 57 , 245-257"
         },
         {
-            "authors": "Liu, , ",
-            "source": null,
-            "title": "[7]\n          \n          .\n          \n          .\n          \n          . Morgan & Claypool."
+            "refid": "ref7",
+            "title": "LiuBing, [7] Morgan & Claypool.2012, Sentiment Analysis and Opinion Mining,"
         },
         {
-            "authors": "Maynard, Funk, , ",
-            "source": null,
-            "title": "[8]\n          \n          and\n          \n          .\n          \n          .\n          \n          . In The Semantic Web:\n          \n          , and Grigoris Antoniou (Eds.). Springer-Verlag, Berlin,\n          \n          -\n          \n          ."
+            "refid": "ref8",
+            "title": "MaynardDiana, FunkAdam, [8] and In The Semantic Web: , and Grigoris Antoniou (Eds.). Springer-Verlag, Berlin, - .2012, Automatic Detection of Political Opinions in Tweets ESWC 2011 Workshops, Ra\u00fal Garc\u00eda-Castro, Dieter Fensel, 88-99"
         },
         {
-            "authors": "Qiu, Chen, , ",
-            "source": "Computational Linguistics",
-            "title": "[9]\n          \n          , Bing Liu, Jiajun Bu, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref9",
+            "title": "QiuGuang, ChenChun, [9] , Bing Liu, Jiajun Bu, and , ( ), - .2011, Opinion Word Expansion and Target Extraction through Double Propagation, Computational Linguistics 37 (1) , 9-27"
         },
         {
-            "authors": "Ashwin, , ",
-            "source": "In Proceedings of the Eighth ACM International Conference on Web Search and Data Mining (WSDM '15)",
-            "title": "[10]\n          \n          , Reza Zafarani, and Huan Liu.\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          ."
+            "refid": "ref10",
+            "title": "AshwinRajadesingan, [10] , Reza Zafarani, and Huan Liu. - .2015, Sarcasm Detection on Twitter: A Behavioral Modeling Approach, In Proceedings of the Eighth ACM International Conference on Web Search and Data Mining (WSDM '15) , 97-106"
         },
         {
-            "authors": "Prashanth, Roy, , ",
-            "source": "In Proceedings of the Tenth International Conference on Web and Social Media (ICWSM '16)",
-            "title": "[11]\n          \n          , Soroush Vosoughi, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          -\n          \n          ."
+            "refid": "ref11",
+            "title": "PrashanthVijayaraghavan, RoyDeb, [11] , Soroush Vosoughi, and - .2016, Automatic Detection and Categorization of Election-Related Tweets, In Proceedings of the Tenth International Conference on Web and Social Media (ICWSM '16) , 703-706"
         }
     ],
     "journal": "Mining Twitter for Fine-Grained Political Opin-\nion Polarity Classification, Ideology Detection and Sarcasm Detection. In\nWSDM",

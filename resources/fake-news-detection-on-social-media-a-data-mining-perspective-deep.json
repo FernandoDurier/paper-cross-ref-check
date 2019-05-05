@@ -36,434 +36,348 @@
     ],
     "clean-refs": [
         {
-            "authors": "Afroz, Brennan, Greenstadt, , ",
-            "source": "In ISSP'12.",
-            "title": "[1]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ."
+            "refid": "ref1",
+            "title": "AfrozSadia, BrennanMichael, GreenstadtRachel, [1] , , and .Detecting hoaxes, frauds, and deception in writing style online, In ISSP'12."
         },
         {
-            "authors": "Allcott, Gentzkow, , ",
-            "source": "Technical report, National Bureau of Economic Research",
-            "title": "[2]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref2",
+            "title": "AllcottHunt, GentzkowMatthew, [2] and , .2017, Social media and fake news in the 2016 election, Technical report, National Bureau of Economic Research"
         },
         {
-            "authors": "Solomon, Asch, Guetzkow, , ",
-            "source": null,
-            "title": "[3]\n          \n          \n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref3",
+            "title": "SolomonE, AschandH, Guetzkow, [3] , pages { , .1951, E ects of group pressure upon the modi cation and distortion of judgments. Groups, leadership, and men, 222 , 236"
         },
         {
-            "authors": "Balmas, , ",
-            "source": "Communication Research",
-            "title": "[4]\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref4",
+            "title": "BalmasMeital, [4] , ( ): { , .2014, When fake news becomes real: Combined exposure to multiple news sources and political attitudes of ine cacy, alienation, and cynicism, Communication Research 41, 430, (3) , 454"
         },
         {
-            "authors": "Banko, Etzioni, , ",
-            "source": "In IJCAI'07.",
-            "title": "[5]\n          \n          , Michael J Cafarella, Stephen Soderland, Matthew Broadhead, and\n          \n          .\n          \n          ."
+            "refid": "ref5",
+            "title": "BankoMichele, EtzioniOren, [5] , Michael J Cafarella, Stephen Soderland, Matthew Broadhead, and .Open information extraction from the web, In IJCAI'07."
         },
         {
-            "authors": "Bessi, Ferrara, , ",
-            "source": "First Monday",
-            "title": "[6]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          ."
+            "refid": "ref6",
+            "title": "BessiAlessandro, FerraraEmilio, [6] and , ( ), .2016, Social bots distort the 2016 us presidential election online discussion, First Monday 21 (11)"
         },
         {
-            "authors": "Biyani, Blackmer, , ",
-            "source": "In AAAI'16.",
-            "title": "[7]\n          \n          , Kostas Tsioutsiouliklis,\n          \n          .\n          \n          ."
+            "refid": "ref7",
+            "title": "BiyaniPrakhar, Blackmerand John, [7] , Kostas Tsioutsiouliklis, .\" 8 amazing secrets for getting more clicks\": Detecting clickbaits in news streams using article informality, In AAAI'16."
         },
         {
-            "authors": "Nygaard, , ",
-            "source": "Journal of Pragmatics",
-            "title": "[8]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref8",
+            "title": "NygaardJonas, [8] , : { , .2015, Blom and Kenneth Reinecke Hansen Click bait: Forward-reference as lure in online news headlines, Journal of Pragmatics 76 , 87, 100"
         },
         {
-            "authors": "Paul, Morreale, , ",
-            "source": "International Journal of Public Opinion Research",
-            "title": "[9]\n          \n          , Dannagal Goldthwaite Young, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref9",
+            "title": "PaulR Brewer, MorrealeMichelle, [9] , Dannagal Goldthwaite Young, and , ( ): { , .2013, The impact of real news about fake news: Intertextual processes and political satire, International Journal of Public Opinion Research 25, 323, (3) , 343"
         },
         {
-            "authors": "Carlos, , ",
-            "source": "In CSCW'14.",
-            "title": "[10]\n          \n          , Mohammed El-Haddad,\n          \n          ."
+            "refid": "ref10",
+            "title": "CarlosCastillo, [10] , Mohammed El-Haddad, .Ju\u007frgen Pfeffer, and Matt Stempeck. Characterizing the life cycle of online news stories using social media reactions, In CSCW'14."
         },
         {
-            "authors": "Carlos, Poblete, , ",
-            "source": "In WWW'11.",
-            "title": "[11]\n          \n          , Marcelo Mendoza, and\n          \n          .\n          \n          ."
+            "refid": "ref11",
+            "title": "CarlosCastillo, PobleteBarbara, [11] , Marcelo Mendoza, and .Information credibility on twitter, In WWW'11."
         },
         {
-            "authors": "Abhijnan, Ganguly, , ",
-            "source": "In ASONAM'16.",
-            "title": "[12]\n          \n          , Bhargavi Paranjape, Sourya Kakarla, and\n          \n          .\n          \n          ."
+            "refid": "ref12",
+            "title": "AbhijnanChakraborty, GangulyNiloy, [12] , Bhargavi Paranjape, Sourya Kakarla, and .Stop clickbait: Detecting and preventing clickbaits in online news media, In ASONAM'16."
         },
         {
-            "authors": "Yimin, Niall J Conroy, , ",
-            "source": "In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection",
-            "title": "[13]\n          \n          ,\n          \n          , and Victoria L Rubin.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . ACM,\n          \n          ."
+            "refid": "ref13",
+            "title": "YiminChen, Niall J Conroy, [13] , , and Victoria L Rubin. , pages { ACM, .2015, Misleading online content: Recognizing clickbait as false news, In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection 15 , 19"
         },
         {
-            "authors": "Justin, Cristian DanescuNiculescu-Mizil, Leskovec, , ",
-            "source": "In CSCW '17.",
-            "title": "[14]\n          \n          , Michael Bernstein,\n          \n          \n          .\n          \n          ."
+            "refid": "ref14",
+            "title": "JustinCheng, Cristian DanescuNiculescu-Mizil, andJure, Leskovec, [14] , Michael Bernstein, .Anyone can become a troll: Causes of trolling behavior in online discussions, In CSCW '17."
         },
         {
-            "authors": "Zi, Wang, Jajodia, , ",
-            "source": "IEEE Transactions on Dependable and Secure Computing",
-            "title": "[15]\n          \n          , Steven Gianvecchio,\n          \n          , and\n          \n          .\n          \n          ?\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref15",
+            "title": "ZiChu, WangHaining, JajodiaSushil, [15] , Steven Gianvecchio, , and ? , ( ): { , .2012, Detecting automation of twitter accounts: Are you a human, bot, or cyborg, IEEE Transactions on Dependable and Secure Computing 9, 811, (6) , 824"
         },
         {
-            "authors": "Luca, Ciampaglia, Bollen, Flammini, , ",
-            "source": "PloS one",
-            "title": "[16]\n          \n          \n          , Prashant Shiralkar, Luis M Rocha,\n          \n          , Filippo Menczer, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):e0128193,\n          \n          ."
+            "refid": "ref16",
+            "title": "LucaGiovanni, Ciampaglia, BollenJohan, FlamminiAlessandro, [16] , Prashant Shiralkar, Luis M Rocha, , Filippo Menczer, and , ( ):e0128193, .2015, Computational fact checking from knowledge networks, PloS one 10 (6)"
         },
         {
-            "authors": "Niall J Conroy, Chen, , ",
-            "source": "Proceedings of the Association for Information Science and Technology",
-            "title": "[17]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          ."
+            "refid": "ref17",
+            "title": "Niall J Conroy, Victoria L Rubin, andYimin, Chen, [17] , ( ):1{ , .2015, Automatic deception detection: Methods for nding fake news, Proceedings of the Association for Information Science and Technology 52 (1, 4, )"
         },
         {
-            "authors": "Del Vicario, Bessi, Stanley, Quattrociocchi, , ",
-            "source": "Proceedings of the National Academy of Sciences",
-            "title": "[18]\n          \n          ,\n          \n          , Fabiana Zollo, Fabio Petroni, Antonio Scala, Guido Caldarelli,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref18",
+            "title": "Del VicarioMichela, BessiAlessandro, StanleyH Eugene, QuattrociocchiWalter, [18] , , Fabiana Zollo, Fabio Petroni, Antonio Scala, Guido Caldarelli, , and , ( ): { , .2016, The spreading of misinformation online, Proceedings of the National Academy of Sciences 113, 554, (3) , 559"
         },
         {
-            "authors": "Del Vicario, Vivaldo, Quattrociocchi, , ",
-            "source": "Scienti c Reports",
-            "title": "[19]\n          \n          ,\n          \n          , Alessandro Bessi, Fabiana Zollo, Antonio Scala, Guido Caldarelli, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ,\n          \n          ."
+            "refid": "ref19",
+            "title": "Del VicarioMichela, VivaldoGianna, QuattrociocchiWalter, [19] , , Alessandro Bessi, Fabiana Zollo, Antonio Scala, Guido Caldarelli, and , , .2016, Echo chambers: Emotional contagion and group polarization on facebook, Scienti c Reports 6"
         },
         {
-            "authors": "Thomas, , ",
-            "source": "Multiple classi er systems",
-            "title": "[20]\n          \n          et al.\n          \n          .\n          \n          ,\n          \n          :\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref20",
+            "title": "ThomasG Dietterich, [20] et al. , : { , .1857, Ensemble methods in machine learning, Multiple classi er systems 1 , 15"
         },
         {
-            "authors": "Mehrdad, Li, Song, Zha, , ",
-            "source": "arXiv preprint arXiv:1703.07823",
-            "title": "[21]\n          \n          , Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref21",
+            "title": "MehrdadFarajtabar, LiShuang, SongLe, ZhaHongyuan, [21] , Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil, , , and , .2017, Fake news mitigation via point process based intervention, arXiv preprint arXiv:1703.07823"
         },
         {
-            "authors": "Song, Choi, , ",
-            "source": "In ACL'12.",
-            "title": "[22]\n          \n          , Ritwik Banerjee, and\n          \n          .\n          \n          ."
+            "refid": "ref22",
+            "title": "SongFeng, ChoiYejin, [22] , Ritwik Banerjee, and .Syntactic stylometry for deception detection, In ACL'12."
         },
         {
-            "authors": "Emilio, Menczer, Flammini, , ",
-            "source": "Communications of the ACM",
-            "title": "[23]\n          \n          , Onur Varol, Clayton Davis,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref23",
+            "title": "EmilioFerrara, MenczerFilippo, FlamminiAlessandro, [23] , Onur Varol, Clayton Davis, , and , ( ): { , .2016, The rise of social bots, Communications of the ACM 59, 96, (7) , 104"
         },
         {
-            "authors": "Fu, , ",
-            "source": "Austrian Research Institute for Arti cal Intelligence",
-            "title": "[24]\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref24",
+            "title": "FuJohannes, [24] , ( ): { , .1998, \u007frnkranz. A study using n-gram features for text categorization, Austrian Research Institute for Arti cal Intelligence 3, 1, 10"
         },
         {
-            "authors": "Garg, Roth, , ",
-            "source": "ECML'01.",
-            "title": "[25]\n          \n          and\n          \n          .\n          \n          ."
+            "refid": "ref25",
+            "title": "GargAshutosh, RothDan, [25] and .Understanding probabilistic classi ers, ECML'01."
         },
         {
-            "authors": "Matthew, Jesse M Shapiro, , ",
-            "source": "Theory. Technical report, National Bureau of Economic Research",
-            "title": "[26]\n          \n          ,\n          \n          , and Daniel F Stone.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref26",
+            "title": "MatthewGentzkow, Jesse M Shapiro, [26] , , and Daniel F Stone. , .2014, Media bias in the marketplace:, Theory. Technical report, National Bureau of Economic Research"
         },
         {
-            "authors": "Adrien, , ",
-            "source": "ACM Sigmod Record",
-            "title": "[27]\n          \n          , Hakim Hacid, Cecile Favre, and\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref27",
+            "title": "AdrienGuille, [27] , Hakim Hacid, Cecile Favre, and , ( ): { , .2013, Djamel A Zighed. Information di usion in online social networks: A survey, ACM Sigmod Record 42, 17, (2) , 28"
         },
         {
-            "authors": "Aditi, Joshi, , ",
-            "source": "In WWW'13.",
-            "title": "[28]\n          \n          , Hemank Lamba, Ponnurangam Kumaraguru, and\n          \n          .\n          \n          ."
+            "refid": "ref28",
+            "title": "AditiGupta, JoshiAnupam, [28] , Hemank Lamba, Ponnurangam Kumaraguru, and .Faking sandy: characterizing and identifying fake images on twitter during hurricane sandy, In WWW'13."
         },
         {
-            "authors": "Manish, Zhao, , ",
-            "source": "In PSDM'12.",
-            "title": "[29]\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          ."
+            "refid": "ref29",
+            "title": "ManishGupta, ZhaoPeixiang, [29] , , and Jiawei Han. .Evaluating event credibility on twitter, In PSDM'12."
         },
         {
-            "authors": "David J Hand and Robert J Till, , ",
-            "source": "Machine learning",
-            "title": "[30]\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref30",
+            "title": "David J Hand and Robert J Till, [30] , .2001, A simple generalisation of the area under the roc curve for multiple class classi cation problems, Machine learning"
         },
         {
-            "authors": "Naeemul, Li, Tremayne, , ",
-            "source": "In CIKM'15.",
-            "title": "[31]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ."
+            "refid": "ref31",
+            "title": "NaeemulHassan, LiChengkai, TremayneMark, [31] , , and .Detecting check-worthy factual claims in presidential debates, In CIKM'15."
         },
         {
-            "authors": "Houvardas, Stamatatos, , ",
-            "source": "Arti - cial Intelligence: Methodology, Systems, and Applications",
-            "title": "[32]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref32",
+            "title": "HouvardasJohn, StamatatosEfstathios, [32] and , pages { , .2006, N-gram feature selection for authorship identi cation, Arti - cial Intelligence: Methodology, Systems, and Applications 77 , 86"
         },
         {
-            "authors": "Xia, Gao, , ",
-            "source": "In ICDM'14.",
-            "title": "[33]\n          \n          , Jiliang Tang,\n          \n          , and Huan Liu.\n          \n          ."
+            "refid": "ref33",
+            "title": "XiaHu, GaoHuiji, [33] , Jiliang Tang, , and Huan Liu. .Social spammer detection with sentiment information, In ICDM'14."
         },
         {
-            "authors": "Xia, Tang, , ",
-            "source": "In AAAI'14",
-            "title": "[34]\n          \n          ,\n          \n          , and Huan Liu.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref34",
+            "title": "XiaHu, TangJiliang, [34] , , and Huan Liu. , pages { , .2014, Online social spammer detection, In AAAI'14 , 59, 65"
         },
         {
-            "authors": "Xia, , ",
-            "source": "In IJCAI'13.",
-            "title": "[35]\n          \n          , Jiliang Tang, Yanchao Zhang, and Huan Liu.\n          \n          ."
+            "refid": "ref35",
+            "title": "XiaHu, [35] , Jiliang Tang, Yanchao Zhang, and Huan Liu. .Social spammer detection in microblogging, In IJCAI'13."
         },
         {
-            "authors": "Zhiwei, Yu-Gang Jiang, , ",
-            "source": "In ICDM'14.",
-            "title": "[36]\n          \n          , Juan Cao,\n          \n          , and Yongdong Zhang.\n          \n          ."
+            "refid": "ref36",
+            "title": "ZhiweiJin, Yu-Gang Jiang, [36] , Juan Cao, , and Yongdong Zhang. .News credibility evaluation on microblog with a hierarchical propagation model, In ICDM'14."
         },
         {
-            "authors": "Zhiwei, Luo, , ",
-            "source": "In AAAI'16.",
-            "title": "[37]\n          \n          , Juan Cao, Yongdong Zhang, and\n          \n          .\n          \n          ."
+            "refid": "ref37",
+            "title": "ZhiweiJin, LuoJiebo, [37] , Juan Cao, Yongdong Zhang, and .News veri cation by exploiting con icting social viewpoints in microblogs, In AAAI'16."
         },
         {
-            "authors": "Zhiwei, Tian, , ",
-            "source": "IEEE Transactions on Multimedia",
-            "title": "[38]\n          \n          , Juan Cao, Yongdong Zhang, Jianshe Zhou, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref38",
+            "title": "ZhiweiJin, TianQi, [38] , Juan Cao, Yongdong Zhang, Jianshe Zhou, and , ( ): { , .2017, Novel visual and statistical image features for microblogs news veri cation, IEEE Transactions on Multimedia 19, 598, (3) , 608"
         },
         {
-            "authors": "Kahneman, Tversky, , ",
-            "source": "Econometrica: Journal of the econometric society",
-            "title": "[39]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref39",
+            "title": "KahnemanDaniel, TverskyAmos, [39] and , pages { , .1979, Prospect theory: An analysis of decision under risk, Econometrica: Journal of the econometric society 263 , 291"
         },
         {
-            "authors": "Jean-Noel Kapferer, , ",
-            "source": "Rumors: Uses, Interpretation and Necessity. Routledge",
-            "title": "[40]\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref40",
+            "title": "Jean-Noel Kapferer, [40] , .2017, Rumors: Uses, Interpretation and Necessity. Routledge"
         },
         {
-            "authors": "David, Klein and Joshua R Wueller., , ",
-            "source": null,
-            "title": "[41]\n          \n          \n          \n          .\n          \n          ."
+            "refid": "ref41",
+            "title": "DavidO, Klein and Joshua R Wueller., [41] .2017, Fake news: A legal perspective,"
         },
         {
-            "authors": "Sejeong, Wang, , ",
-            "source": "In ICDM'13",
-            "title": "[42]\n          \n          , Meeyoung Cha, Kyomin Jung, Wei Chen, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . IEEE,\n          \n          ."
+            "refid": "ref42",
+            "title": "SejeongKwon, WangYajun, [42] , Meeyoung Cha, Kyomin Jung, Wei Chen, and , pages { IEEE, .2013, Prominent features of rumor propagation in online social media, In ICDM'13 , 1103, 1108"
         },
         {
-            "authors": "Yann, , ",
-            "source": "Nature",
-            "title": "[43]\n          \n          , Yoshua Bengio, and Geo rey Hinton.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref43",
+            "title": "YannLeCun, [43] , Yoshua Bengio, and Geo rey Hinton. , ( ): { , .2015, Deep learning, Nature 521, 436, (7553) , 444"
         },
         {
-            "authors": "Lee, Caverlee, Webb, , ",
-            "source": "In SIGIR'10.",
-            "title": "[44]\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ."
+            "refid": "ref44",
+            "title": "LeeKyumin, CaverleeJames, WebbSteve, [44] , , and .Uncovering social spammers: social honeypots+ machine learning, In SIGIR'10."
         },
         {
-            "authors": "Lesce, , ",
-            "source": "Law and Order",
-            "title": "[45]\n          \n          . Scan:\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):3{\n          \n          ,\n          \n          ."
+            "refid": "ref45",
+            "title": "LesceTony, [45] Scan: , ( ):3{ , .1990, Deception detection by scienti c content analysis, Law and Order 38 (8, 6, )"
         },
         {
-            "authors": "Li, Gao, Li, Su, Zhao, Fan, , ",
-            "source": "ACM Sigkdd Explorations Newsletter",
-            "title": "[46]\n          \n          ,\n          \n          , Chuishi Meng,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          ."
+            "refid": "ref46",
+            "title": "LiYaliang, GaoJing, LiQi, SuLu, ZhaoBo, FanWei, [46] , , Chuishi Meng, , , , , and Jiawei Han. , ( ):1{ , .2016, A survey on truth discovery, ACM Sigkdd Explorations Newsletter 17 (2) , 16"
         },
         {
-            "authors": "Charles, Huang, Zhang, , ",
-            "source": null,
-            "title": "[47]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ."
+            "refid": "ref47",
+            "title": "CharlesX Ling, HuangJin, Zhangand Harry, [47] , , .Auc: a statistically consistent and more discriminating measure than accuracy,"
         },
         {
-            "authors": "Jing, Kam-Fai Wong, Cha, , ",
-            "source": null,
-            "title": "[48]\n          \n          , Wei Gao, Prasenjit Mitra, Sejeong Kwon, Bernard J Jansen,\n          \n          \n          .\n          \n          ."
+            "refid": "ref48",
+            "title": "JingMa, Kam-Fai Wong, andMeeyoung, Cha, [48] , Wei Gao, Prasenjit Mitra, Sejeong Kwon, Bernard J Jansen, .Detecting rumors from microblogs with recurrent neural networks,"
         },
         {
-            "authors": "Jing, Kam-Fai Wong, , ",
-            "source": "In CIKM'15.",
-            "title": "[49]\n          \n          , Wei Gao, Zhongyu Wei, Yueming Lu, and\n          \n          .\n          \n          ."
+            "refid": "ref49",
+            "title": "JingMa, Kam-Fai Wong, [49] , Wei Gao, Zhongyu Wei, Yueming Lu, and .Detect rumors using time series of social context information on microblogging websites, In CIKM'15."
         },
         {
-            "authors": "Magdy, Wanas, , ",
-            "source": "In Proceedings of the 2nd international workshop on Search and mining user-generated contents",
-            "title": "[50]\n          \n          and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . ACM,\n          \n          ."
+            "refid": "ref50",
+            "title": "MagdyAmr, WanasNayer, [50] and , pages { ACM, .2010, Web-based statistical fact checking of textual documents, In Proceedings of the 2nd international workshop on Search and mining user-generated contents 103 , 110"
         },
         {
-            "authors": "Menczer, , ",
-            "source": "In WWW'16.",
-            "title": "[51]\n          \n          .\n          \n          ."
+            "refid": "ref51",
+            "title": "MenczerFilippo, [51] .The spread of misinformation in social media, In WWW'16."
         },
         {
-            "authors": "Mitra, Gilbert, , ",
-            "source": "In ICWSM'15.",
-            "title": "[52]\n          \n          and\n          \n          .\n          \n          ."
+            "refid": "ref52",
+            "title": "MitraTanushree, GilbertEric, [52] and .Credbank: A largescale social media corpus with associated credibility annotations, In ICWSM'15."
         },
         {
-            "authors": "Saif, Sobhani, Kiritchenko, , ",
-            "source": null,
-            "title": "[53]\n          \n          ,\n          \n          , and\n          \n          ."
+            "refid": "ref53",
+            "title": "SaifM Mohammad, SobhaniParinaz, KiritchenkoSvetlana, [53] , , and .Stance and sentiment in tweets.,"
         },
         {
-            "authors": "",
-            "source": "ACM Transactions on Internet Technology (TOIT)",
-            "title": ",\n          \n          (\n          \n          ):\n          \n          ,\n          \n          ."
+            "refid": "ref54",
+            "title": ", ( ): , .2017, ACM Transactions on Internet Technology (TOIT) 17 (3) , 26"
         },
         {
-            "authors": "Fred, , ",
-            "source": "In WWW'16.",
-            "title": "[54]\n          \n          , Harsh Dani, Justin Sampson, and Huan Liu.\n          \n          ."
+            "refid": "ref55",
+            "title": "FredMorstatter, [54] , Harsh Dani, Justin Sampson, and Huan Liu. .Can one tamper with the sample api?: Toward neutralizing bias from spam and bot content, In WWW'16."
         },
         {
-            "authors": "Fred, Tahora H Nazer, Liu, , ",
-            "source": "In ASONAM'16.",
-            "title": "[55]\n          \n          , Liang Wu,\n          \n          ,\n          \n          and\n          \n          .\n          \n          ."
+            "refid": "ref56",
+            "title": "FredMorstatter, Tahora H Nazer, LiuHuan, [55] , Liang Wu, , and Kathleen M Carley, A new approach to bot detection: Striking the balance between precision and recall, In ASONAM'16."
         },
         {
-            "authors": "Mukherjee, Weikum, , ",
-            "source": "In CIKM'15.",
-            "title": "[56]\n          \n          and\n          \n          .\n          \n          ."
+            "refid": "ref57",
+            "title": "MukherjeeSubhabrata, WeikumGerhard, [56] and .Leveraging joint interactions for credibility analysis in news communities, In CIKM'15."
         },
         {
-            "authors": "Mustafaraj, , ",
-            "source": "arXiv preprint arXiv:1703.06988",
-            "title": "[57]\n          \n          and\n          \n          ?\n          \n          ,\n          \n          ."
+            "refid": "ref58",
+            "title": "MustafarajEni, [57] and ? , .2017, Panagiotis Takis Metaxas. The fake news spreading plague: Was it preventable, arXiv preprint arXiv:1703.06988"
         },
         {
-            "authors": "Raymond, , ",
-            "source": "Review of general psychology",
-            "title": "[58]\n          \n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ,\n          \n          ."
+            "refid": "ref59",
+            "title": "RaymondS Nickerson., [58] , ( ): , .1998, Con rmation bias: A ubiquitous phenomenon in many guises, Review of general psychology 2 (2) , 175"
         },
         {
-            "authors": "Nyhan, , ",
-            "source": "Political Behavior",
-            "title": "[59]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref60",
+            "title": "NyhanBrendan, [59] and , ( ): { , .2010, Jason Rei er When corrections fail: The persistence of political misperceptions, Political Behavior 32, 303, (2) , 330"
         },
         {
-            "authors": "Paul, Matthews, , ",
-            "source": null,
-            "title": "[60]\n          \n          and\n          \n          .\n          \n          ."
+            "refid": "ref61",
+            "title": "PaulChristopher, MatthewsMiriam, [60] and .The russian rehose of falsehood propaganda model,"
         },
         {
-            "authors": "Dong ping Tian, , ",
-            "source": "International Journal of Multimedia and Ubiquitous Engineering",
-            "title": "[61]\n          \n          et al.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref62",
+            "title": "Dong ping Tian, [61] et al. , ( ): { , .2013, A review on image feature extraction and representation techniques, International Journal of Multimedia and Ubiquitous Engineering 8, 385, (4) , 396"
         },
         {
-            "authors": "Martin, Stein, , ",
-            "source": "arXiv preprint arXiv:1702.05638",
-            "title": "[62]\n          \n          , Johannes Kiesel, Kevin Reinartz, Janek Bevendor , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref63",
+            "title": "MartinPotthast, SteinBenno, [62] , Johannes Kiesel, Kevin Reinartz, Janek Bevendor , and , .2017, A stylometric inquiry into hyperpartisan and fake news, arXiv preprint arXiv:1702.05638"
         },
         {
-            "authors": "Martin, Hagen, , ",
-            "source": "In European Conference on Information Retrieval",
-            "title": "[63]\n          \n          , Sebastian Ko\u007fpsel, Benno Stein, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          . Springer,\n          \n          ."
+            "refid": "ref64",
+            "title": "MartinPotthast, HagenMatthias, [63] , Sebastian Ko\u007fpsel, Benno Stein, and , pages { Springer, .2016, Clickbait detection, In European Conference on Information Retrieval 810 , 817"
         },
         {
-            "authors": "Vahed, Dragomir R Radev, Mei, , ",
-            "source": "In EMNLP'11.",
-            "title": "[64]\n          \n          , Emily Rosengren,\n          \n          \n          .\n          \n          ."
+            "refid": "ref65",
+            "title": "VahedQazvinian, Dragomir R Radev, andQiaozhu, Mei, [64] , Emily Rosengren, .Rumor has it: Identifying misinformation in microblogs, In EMNLP'11."
         },
         {
-            "authors": "Walter, , ",
-            "source": "Echo chambers on facebook",
-            "title": "[65]\n          \n          , Antonio Scala, and Cass R Sunstein.\n          \n          .\n          \n          ."
+            "refid": "ref66",
+            "title": "WalterQuattrociocchi, [65] , Antonio Scala, and Cass R Sunstein. .2016, Echo chambers on facebook"
         },
         {
-            "authors": "Victoria, Yimin Chen, Niall, , ",
-            "source": "Proceedings of the Association for Information Science and Technology",
-            "title": "[66]\n          \n          ,\n          \n          , and\n          \n          J Conroy.\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):1{\n          \n          ,\n          \n          ."
+            "refid": "ref67",
+            "title": "VictoriaL Rubin, Yimin Chen, Niall, [66] , , and J Conroy. , ( ):1{ , .2015, Deception detection for news: three types of fakes, Proceedings of the Association for Information Science and Technology 52 (1, 4, )"
         },
         {
-            "authors": "Victoria, Niall J Conroy, Cornwell, , ",
-            "source": "In Proceedings of NAACL-HLT",
-            "title": "[67]\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref68",
+            "title": "VictoriaL Rubin, Niall J Conroy, Yimin Chen, andSarah, Cornwell, [67] , , pages { , .2016, Fake news or truth? using satirical cues to detect potentially misleading news, In Proceedings of NAACL-HLT 7 , 17"
         },
         {
-            "authors": "Victoria, Lukoianova, , ",
-            "source": "Journal of the Association for Information Science and Technology",
-            "title": "[68]\n          \n          and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref69",
+            "title": "VictoriaL Rubin, LukoianovaTatiana, [68] and , ( ): { , .2015, Truth and deception at the rhetorical structure level, Journal of the Association for Information Science and Technology 66, 905, (5) , 917"
         },
         {
-            "authors": "Natali, , ",
-            "source": "arXiv preprint arXiv:1703.06959",
-            "title": "[69]\n          \n          , Sungyong Seo, and Yan Liu.\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref70",
+            "title": "NataliRuchansky, [69] , Sungyong Seo, and Yan Liu. , .2017, Csi: A hybrid deep model for fake news, arXiv preprint arXiv:1703.06959"
         },
         {
-            "authors": "Justin, Liang Wu, , ",
-            "source": null,
-            "title": "[70]\n          \n          , Fred Morstatter,\n          \n          , and"
+            "refid": "ref71",
+            "title": "JustinSampson, Liang Wu, [70] , Fred Morstatter, , and,"
         },
         {
-            "authors": "Suhang, Tang, , ",
-            "source": "In CIKM'16.",
-            "title": "[88]\n          \n          ,\n          \n          , Fred Morstatter, and Huan Liu.\n          \n          ."
+            "refid": "ref72",
+            "title": "SuhangWang, TangJiliang, [88] , , Fred Morstatter, and Huan Liu. .Paired restricted boltzmann machine for linked data, In CIKM'16."
         },
         {
-            "authors": "Suhang, Yilin, Tang, , ",
-            "source": "In WWW'17.",
-            "title": "[89]\n          \n          ,\n          \n          ,\n          \n          , Kai Shu, Suhas Ranganath, and Huan Liu.\n          \n          ."
+            "refid": "ref73",
+            "title": "SuhangWang, YilinWang, TangJiliang, [89] , , , Kai Shu, Suhas Ranganath, and Huan Liu. .What your images reveal: Exploiting visual contents for point-of-interest recommendation, In WWW'17."
         },
         {
-            "authors": "Yang Wang, , ",
-            "source": "arXiv preprint arXiv:1705.00648",
-            "title": "[90]\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref74",
+            "title": "Yang WangWilliam, [90] , .2017, \" liar, liar pants on re\": A new benchmark dataset for fake news detection, arXiv preprint arXiv:1705.00648"
         },
         {
-            "authors": "Yilin, Suhang, Tang, Li, , ",
-            "source": "In IJCAI",
-            "title": "[91]\n          \n          ,\n          \n          ,\n          \n          , Huan Liu, and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref75",
+            "title": "YilinWang, SuhangWang, TangJiliang, LiBaoxin, [91] , , , Huan Liu, and , pages { , .2015, Unsupervised sentiment analysis for social media images, In IJCAI 2378 , 2379"
         },
         {
-            "authors": "Ward, Ross, Reed, Turiel, Brown, , ",
-            "source": "Values and knowledge",
-            "title": "[92]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref76",
+            "title": "WardAndrew, RossL, ReedE, TurielE, BrownT, [92] , , , , and , pages { , .1997, Naive realism in everyday life: Implications for social con ict and misunderstanding, Values and knowledge 103 , 135"
         },
         {
-            "authors": "Weikum, , ",
-            "source": "In WWW'17.",
-            "title": "[93]\n          \n          .\n          \n          ."
+            "refid": "ref77",
+            "title": "WeikumGerhard, [93] .What computers should know, shouldn't know, and shouldn't believe, In WWW'17."
         },
         {
-            "authors": "Wu, Morstatter, Hu, Liu, , ",
-            "source": null,
-            "title": "[94]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref78",
+            "title": "WuL, MorstatterF, HuX, LiuH, [94] , , , and , .2016, Chapter 5: Mining misinformation in social media,"
         },
         {
-            "authors": "Liang, , ",
-            "source": "In ICWSM'17.",
-            "title": "[95]\n          \n          , Xia Hu, Fred Morstatter, and Huan Liu.\n          \n          ."
+            "refid": "ref79",
+            "title": "LiangWu, [95] , Xia Hu, Fred Morstatter, and Huan Liu. .Adaptive spammer detection with sparse group modeling, In ICWSM'17."
         },
         {
-            "authors": "Liang, Li, Hu, , ",
-            "source": "In SDM'17.",
-            "title": "[96]\n          \n          ,\n          \n          ,\n          \n          , and Huan Liu.\n          \n          ."
+            "refid": "ref80",
+            "title": "LiangWu, LiJundong, HuXia, [96] , , , and Huan Liu. .Gleaning wisdom from the past: Early detection of emerging rumors in social media, In SDM'17."
         },
         {
-            "authors": "Liang, , ",
-            "source": "Big Data in Complex and Social Networks",
-            "title": "[97]\n          \n          , Fred Morstatter, Xia Hu, and Huan Liu.\n          \n          .\n          \n          , pages\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref81",
+            "title": "LiangWu, [97] , Fred Morstatter, Xia Hu, and Huan Liu. , pages { , .2016, Mining misinformation in social media, Big Data in Complex and Social Networks 123 , 152"
         },
         {
-            "authors": "You, Li, Yang, Yu, , ",
-            "source": "Proceedings of the VLDB Endowment",
-            "title": "[98]\n          \n          , Pankaj K Agarwal,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref82",
+            "title": "YouWu, LiChengkai, YangJun, YuCong, [98] , Pankaj K Agarwal, , , and , ( ): { , .2014, Toward computational fact-checking, Proceedings of the VLDB Endowment 7, 589, (7) , 600"
         },
         {
-            "authors": "Fan, Yang, Xiaohui Yu, Yang, , ",
-            "source": "In Proceedings of the ACM SIGKDD Workshop on Mining Data Semantics, page 13. ACM",
-            "title": "[99]\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref83",
+            "title": "FanYang, YangLiu, Xiaohui Yu, andMin, Yang, [99] , , , .2012, Automatic detection of rumor on sina weibo, In Proceedings of the ACM SIGKDD Workshop on Mining Data Semantics, page 13. ACM"
         },
         {
-            "authors": "Robert, Zajonc, , ",
-            "source": "Journal of personality and social psychology",
-            "title": "[100]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ,\n          \n          ."
+            "refid": "ref84",
+            "title": "RobertB, Zajonc, [100] , ( ): , .1968, Attitudinal e ects of mere exposure, Journal of personality and social psychology 9 (2p2) , 1"
         },
         {
-            "authors": "Robert, Zajonc, , ",
-            "source": "Current directions in psychological science",
-            "title": "[101]\n          \n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          {\n          \n          ,\n          \n          ."
+            "refid": "ref85",
+            "title": "RobertB, Zajonc, [101] , ( ): { , .2001, Mere exposure: A gateway to the subliminal, Current directions in psychological science 10, 224, (6) , 228"
         },
         {
-            "authors": "Arkaitz, Procter, , ",
-            "source": "arXiv preprint arXiv:1704.00656",
-            "title": "[102]\n          \n          , Ahmet Aker, Kalina Bontcheva, Maria Liakata, and\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref86",
+            "title": "ArkaitzZubiaga, ProcterRob, [102] , Ahmet Aker, Kalina Bontcheva, Maria Liakata, and , .2017, Detection and resolution of rumours in social media: A survey, arXiv preprint arXiv:1704.00656"
         }
     ],
     "journal": null,

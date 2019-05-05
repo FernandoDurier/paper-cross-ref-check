@@ -79,190 +79,148 @@
     ],
     "clean-refs": [
         {
-            "authors": "Attardo, , ",
-            "source": "Journal of pragmatics 32 (6)",
-            "title": "[1]\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref1",
+            "title": "Attardo,S., [1] , , - .2000, Irony as relevant inappropriateness, Journal of pragmatics 32 (6) , 793-826"
         },
         {
-            "authors": "Bamman, Smith, , ",
-            "source": "In: Proceedings of the International Conference on Web and Social Media. ICWSM",
-            "title": "[2]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref2",
+            "title": "Bamman,D., Smith,N. A., [2] , , pp. - .2015, Contextualized sarcasm detection on twitter, In: Proceedings of the International Conference on Web and Social Media. ICWSM , 574-577"
         },
         {
-            "authors": "Barbieri, Saggion, , ",
-            "source": "In: Proceedings of LREC",
-            "title": "[3]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref3",
+            "title": "Barbieri,F., Saggion,H., [3] , , pp. - .2014, Modelling irony in twitter: Feature analysis and evaluation, In: Proceedings of LREC , 4258-4264"
         },
         {
-            "authors": "Benajiba, Rosso, J. M., , ",
-            "source": "In: International Conference on Intelligent Text Processing and Computational Linguistics",
-            "title": "[4]\n          \n          ,\n          \n          , Bened\u00b4?ruiz,\n          \n          ,\n          \n          . Anersys:\n          \n          .\n          \n          . Springer, pp.\n          \n          -\n          \n          ."
+            "refid": "ref4",
+            "title": "Benajiba,Y., Rosso,P., J. M., [4] , , Bened\u00b4?ruiz, , Anersys: Springer, pp. - .2007, An arabic named entity recognition system based on maximum entropy, In: International Conference on Intelligent Text Processing and Computational Linguistics , 143-153"
         },
         {
-            "authors": "Burfoot, Baldwin, , ",
-            "source": null,
-            "title": "[5]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ."
+            "refid": "ref5",
+            "title": "Burfoot,C., Baldwin,C., [5] , , .2009, Automatic satire detection: Are you having a laugh? In: Proceedings of the ACL-IJCNLP conference,"
         },
         {
-            "authors": "Buschmeier, Cimiano, Klinger, , ",
-            "source": "ACL",
-            "title": "[6]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          ."
+            "refid": "ref6",
+            "title": "Buschmeier,K., Cimiano,P., Klinger,R., [6] , , , , .2014, An impact analysis of features in a classification approach to irony detection in product reviews, ACL 42"
         },
         {
-            "authors": "Carvalho, Sarmento, Silva, Oliveira, , ",
-            "source": "In: Proceedings of the 1st international CIKM workshop on Topic-sentiment analysis for mass opinion. ACM",
-            "title": "[7]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ...!\n          \n          .\n          \n          , pp.\n          \n          -\n          \n          ."
+            "refid": "ref7",
+            "title": "Carvalho,P., Sarmento,L., Silva,M. J., Oliveira,E. D., [7] , , , , ...! , pp. - .2009, Clues for detecting irony in user-generated contents: oh ! it's so easy;-), In: Proceedings of the 1st international CIKM workshop on Topic-sentiment analysis for mass opinion. ACM , 53-56"
         },
         {
-            "authors": "Chakhachiro, , ",
-            "source": "Babel",
-            "title": "[8]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref8",
+            "title": "Chakhachiro,R., [8] , ( ), - .2007, Translating irony in political commentary texts from english into arabic, Babel 53 (3) , 216-240"
         },
         {
-            "authors": "Clark, Gerrig, , ",
-            "source": "Journal of Experimental Psychology: General",
-            "title": "[9]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref9",
+            "title": "Clark,H. H., Gerrig,R. J., [9] , , ( ), - .1984, On the pretense theory of irony, Journal of Experimental Psychology: General 113 (1) , 121-126"
         },
         {
-            "authors": "Clift, , ",
-            "source": "Language in Society 28",
-            "title": "[10]\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref10",
+            "title": "Clift,R., [10] , , - .1999, Irony in conversation, Language in Society 28 , 523-553"
         },
         {
-            "authors": "Davidov, Tsur, Rappoport, , ",
-            "source": [
-                "In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning",
-                "CoNLL '10"
-            ],
-            "title": "[11]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref11",
+            "title": "Davidov,D., Tsur,O., Rappoport,A., [11] , , , pp. - .2010, Semi-supervised recognition of sarcastic sentences in twitter and amazon, In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning, CoNLL '10, 107-116"
         },
         {
-            "authors": "El-Beltagy, Ali, , ",
-            "source": "In: 2013 9th International Conference on Innovations in Information Technology (IIT)",
-            "title": "[12]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref12",
+            "title": "El-Beltagy,S. R., Ali,A., [12] , , pp. - .2013, Open issues in the sentiment analysis of arabic social media: A case study, In: 2013 9th International Conference on Innovations in Information Technology (IIT) , 215-220"
         },
         {
-            "authors": "Ghosh, Li, Veale, Rosso, Shutova, Barnden, Reyes, , ",
-            "source": [
-                "In: Proceedings of SemEval",
-                "ACL"
-            ],
-            "title": "[13]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          . Semeval-2015 task 11:\n          \n          .\n          \n          \n          ,\n          \n          .\n          \n          , p.\n          \n          ."
+            "refid": "ref13",
+            "title": "Ghosh,A., Li,G., Veale,T., Rosso,P., Shutova,E., Barnden,J., Reyes,A., [13] , , , , , , , Semeval-2015 task 11: , , p. .2015, Sentiment Analysis of Figurative Language in Twitter Co-located with NAACL, In: Proceedings of SemEval, ACL, 470478"
         },
         {
-            "authors": "Gianti, Bosco, Patti, Bolioli, Caro, , ",
-            "source": "In: Proceedings of the 4th Workshop on Corpora for Research on Emotion Sentiment and Social Signals",
-            "title": "[14]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          , Istanbul, Turkey. pp.\n          \n          -\n          \n          ."
+            "refid": "ref14",
+            "title": "Gianti,A., Bosco,C., Patti,V., Bolioli,A., Caro,L. D., [14] , , , , , , Istanbul, Turkey. pp. - .2012, Annotating irony in a novel italian corpus for sentiment analysis, In: Proceedings of the 4th Workshop on Corpora for Research on Emotion Sentiment and Social Signals , 1-7"
         },
         {
-            "authors": "Gibbs, , ",
-            "source": "Metaphor and symbol 15 (1-2)",
-            "title": "[15]\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref15",
+            "title": "Gibbs,R. W., [15] , , - .2000, Irony in talk among friends, Metaphor and symbol 15 (1-2) , 5-27"
         },
         {
-            "authors": "Gonzalez-Ibanez, Muresan, Wacholde, , ",
-            "source": null,
-            "title": "[16]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          . In:\n          \n          . ACL, pp.\n          \n          -\n          \n          ."
+            "refid": "ref16",
+            "title": "Gonzalez-Ibanez,R., Muresan,S., Wacholde,N., [16] , , , In: ACL, pp. - .2011, Identifying sarcasm in twitter: a closer look Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume 2, 581-586"
         },
         {
-            "authors": "Grice, Cole, J. L., , ",
-            "source": "Logic and conversation 3",
-            "title": "[17]\n          \n          ,\n          \n          , Morgan,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref17",
+            "title": "Grice,H. P., Cole,P., J. L., [17] , , Morgan, , , - .1975, Syntax and semantics, Logic and conversation 3 , 41-58"
         },
         {
-            "authors": "Haverkate, , ",
-            "source": "Journal of Pragmatics",
-            "title": "[18]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref18",
+            "title": "Haverkate,H., [18] , ( ), - .1990, A speech act analysis of irony, Journal of Pragmatics 14 (1) , 77-109"
         },
         {
-            "authors": "Hernandez, Rosso, Analysis, , ",
-            "source": "Elsevier Science and Technology, Ch. 7 In: Sentiment Analysis in Social Networks",
-            "title": "[19]\n          \n          ,\n          \n          ,\n          \n          . Irony, Sarcasm,\n          \n          .\n          \n          , pp.\n          \n          -\n          \n          ."
+            "refid": "ref19",
+            "title": "Hernandez,I., Rosso,P., Analysisand Sentiment, [19] , , Irony, Sarcasm, , pp. - .2016, Elsevier Science and Technology, Ch. 7 In: Sentiment Analysis in Social Networks , 113-128"
         },
         {
-            "authors": "Karoui, Benamara, Moriceau, Aussenac-Gilles, Belguith, , ",
-            "source": "In: Proceedings of ACL-IJCNLP",
-            "title": "[20]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          , Volume\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref20",
+            "title": "Karoui,J., Benamara,F., Moriceau,V., Aussenac-Gilles,N., Belguith,L. H., [20] , , , , , , Volume pp. - .2015, Towards a contextual pragmatic model to detect irony in tweets, In: Proceedings of ACL-IJCNLP 2 , 644-650"
         },
         {
-            "authors": "Keskes, Zitoune, Belguith, , ",
-            "source": "Journal of King Saud UniversityComputer and Information Sciences",
-            "title": "[21]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref21",
+            "title": "Keskes,I., Zitoune,F. B., Belguith,L. H., [21] , , , ( ), - .2014, Learning explicit and implicit arabic discourse relations, Journal of King Saud UniversityComputer and Information Sciences 26 (4) , 398-416"
         },
         {
-            "authors": "Lee, Katz, , ",
-            "source": "Metaphor and Symbol",
-            "title": "[22]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref22",
+            "title": "Lee,C. J., Katz,A. N., [22] , , ( ), - .1998, The differential role of ridicule in sarcasm and irony, Metaphor and Symbol 13 (1) , 1-15"
         },
         {
-            "authors": "Liebrecht, Kunneman, , ",
-            "source": "In: Proceedings of the 4th Workshop on Computational Approaches",
-            "title": "[23]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          to Subjectivity,\n          \n          . New Brunswick, NJ: ACL, pp.\n          \n          -\n          \n          ."
+            "refid": "ref23",
+            "title": "Liebrecht,C., Kunneman, F., van den,B. A., [23] , , to Subjectivity, New Brunswick, NJ: ACL, pp. - .2013, The perfect solution for detecting sarcasm in tweets# not Sentiment and Social Media Analysis, In: Proceedings of the 4th Workshop on Computational Approaches , 29-37"
         },
         {
-            "authors": "Maynard, Greenwood, , ",
-            "source": "In: LREC",
-            "title": "[24]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref24",
+            "title": "Maynard,D., Greenwood,M. A., [24] , , pp. - .2014, Who cares about sarcastic tweets? investigating the impact of sarcasm on sentiment analysis, In: LREC , 4238-4243"
         },
         {
-            "authors": "Refaee, Rieser, , ",
-            "source": "In: LREC",
-            "title": "[25]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref25",
+            "title": "Refaee,E., Rieser,V., [25] , , pp. - .2014, An arabic twitter corpus for subjectivity and sentiment analysis, In: LREC , 2268-2273"
         },
         {
-            "authors": "Reyes, Rosso, , ",
-            "source": "Decision Support Systems",
-            "title": "[26]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref26",
+            "title": "Reyes,A., Rosso,P., [26] , , ( ), - .2012, Making objective decisions from subjective data: Detecting irony in customer reviews, Decision Support Systems 53 (4) , 754-760"
         },
         {
-            "authors": "Reyes, Rosso, Veale, , ",
-            "source": "Language resources and evaluation 47 (1)",
-            "title": "[27]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref27",
+            "title": "Reyes,A., Rosso,P., Veale,T., [27] , , , , - .2013, A multidimensional approach for detecting irony in twitter, Language resources and evaluation 47 (1) , 239-268"
         },
         {
-            "authors": "Roze, Danlos, Muller, , ",
-            "source": "Discours, Multidisciplinary Perspectives on Signalling Text Organisation",
-            "title": "[28]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          , (on line)."
+            "refid": "ref28",
+            "title": "Roze,C., Danlos,L., Muller,P., [28] , , , , (on line).2012, Lexconn: A french lexicon of discourse connectives, Discours, Multidisciplinary Perspectives on Signalling Text Organisation 10"
         },
         {
-            "authors": "Saif, Mohammad, Svetlana, , ",
-            "source": "In: Proceedings of LREC.",
-            "title": "[29]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ."
+            "refid": "ref29",
+            "title": "Saif,M., Mohammad,S., Svetlana,K., [29] , , , .2016, Sentiment lexicons for arabic social media, In: Proceedings of LREC."
         },
         {
-            "authors": "Sigar, Taha, , ",
-            "source": "College of Basic Education Researchers Journal",
-            "title": "[30]\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref30",
+            "title": "Sigar,A., Taha,Z., [30] , , ( ), - .2012, A contrastive study of ironic expressions in english and arabic, College of Basic Education Researchers Journal 12 (2) , 795-817"
         },
         {
-            "authors": "Sperber, D., , ",
-            "source": "Radical pragmatics 49",
-            "title": "[31]\n          \n          , Wilson,\n          \n          ,\n          \n          .\n          \n          .\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref31",
+            "title": "Sperber,D., D., [31] , Wilson, , , - .1981, Irony and the use-mention distinction, Radical pragmatics 49 , 295-318"
         },
         {
-            "authors": "Sulis, Rosso, Patti, Ruffo, G., , ",
-            "source": null,
-            "title": "[32]\n          \n          , Herna\u00b4ndez Far\u00b4?as,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          , In press."
+            "refid": "ref32",
+            "title": "Sulis,E., Rosso,D. I., Patti,P., Ruffo,V., G., [32] , Herna\u00b4ndez Far\u00b4?as, , , , , , In press.2016, Figurative messages and affect in twitter: Differences between #irony, #sarcasm and #not. Knowledge-Based SystemsAvailable on line,"
         },
         {
-            "authors": "Tsur, Davidov, Rappoport, , ",
-            "source": "In: ICWSM.",
-            "title": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          .\n          \n          ."
+            "refid": "ref33",
+            "title": "Tsur,O., Davidov,D., Rappoport,A., [33] , , , .2010, Icwsm-a great catchy name: Semi-supervised recognition of sarcastic sentences in online product reviews, In: ICWSM."
         },
         {
-            "authors": "Utsumi, , ",
-            "source": "In: Proceedings of the 16th Conference on Computational linguistics. ACL",
-            "title": "[34]\n          \n          ,\n          \n          .\n          \n          .\n          \n          , pp.\n          \n          -\n          \n          ."
+            "refid": "ref34",
+            "title": "Utsumi,A., [34] , , pp. - .1996, A unified theory of irony and its computational formalization, In: Proceedings of the 16th Conference on Computational linguistics. ACL , 962-967"
         },
         {
-            "authors": "Utsumi, , ",
-            "source": "In: Proceedings of the 26th Annual Meeting of the Cognitive Science Society",
-            "title": "[35]\n          \n          ,\n          \n          .\n          \n          .\n          \n          . pp.\n          \n          -\n          \n          ."
+            "refid": "ref35",
+            "title": "Utsumi,A., [35] , pp. - .2004, Stylistic and contextual effects in irony processing, In: Proceedings of the 26th Annual Meeting of the Cognitive Science Society , 1369-1374"
         },
         {
-            "authors": "Wallace, , ",
-            "source": "Artificial Intelleligence Review",
-            "title": "[36]\n          \n          ,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref36",
+            "title": "Wallace,B. C., [36] , ( ), - .2015, Computational irony: A survey and new perspectives, Artificial Intelleligence Review 43 (4) , 467-483"
         }
     ],
     "journal": "ProPcerodciaedCiaomCpoumteprutSecriSenccieen",

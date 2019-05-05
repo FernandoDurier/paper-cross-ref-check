@@ -19,245 +19,192 @@
     ],
     "clean-refs": [
         {
-            "authors": "Attardo, Hempelmann, Mano, , ",
-            "source": "Humor",
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref1",
+            "title": "Attardo,S., Hempelmann,C. F., Mano,S. D., , , & ( ). , ( ), - .2002, Script oppositions and logical mechanisms: Modeling incongruities and their resolutions, Humor 15 (1) , 3-46"
         },
         {
-            "authors": "Buller, Burgoon, , ",
-            "source": "Communication Theory",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref2",
+            "title": "Buller,D. B., Burgoon,J. K., & ( ). , ( ), - .1996, Interpersonal Deception Theory, Communication Theory 6 (3) , 203-242"
         },
         {
-            "authors": "Burfoot, Baldwin, , ",
-            "source": null,
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          , Suntec, Singapore."
+            "refid": "ref3",
+            "title": "Burfoot,C., Baldwin,T., & ( ). , Suntec, Singapore.2009, Automatic satire detection: are you having a laugh? Paper presented at the Proceedings of the ACL-IJCNLP 2009 Conference Short Papers,"
         },
         {
-            "authors": "Chen, Conroy, Rubin, , ",
-            "source": null,
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          ."
+            "refid": "ref4",
+            "title": "Chen,Y., Conroy,N. J., Rubin,V. L., , , & ( ). .2015, News in an online world: the need for an automatic crap detector. Paper presented at the Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community,"
         },
         {
-            "authors": "Condren, , ",
-            "source": [
-                "Humor",
-                "-0019"
-            ],
-            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 375. doi:\n          \n          .1515/humor-2012"
+            "refid": "ref5",
+            "title": "Condren,C., ( ). , ( ), 375. doi: .1515/humor-20122012, Satire and definition, Humor, -0019, 25, 10, (4)"
         },
         {
-            "authors": "Condren, , ",
-            "source": "Encyclopedia of Humor Studies. Thousand Oaks: Sage Publications",
-            "title": "(\n          \n          ).\n          \n          . In S. Attardo (Ed.),\n          \n          , Inc."
+            "refid": "ref6",
+            "title": "Condren,C., ( ). In S. Attardo (Ed.), , Inc.2014, Satire, Encyclopedia of Humor Studies. Thousand Oaks: Sage Publications"
         },
         {
-            "authors": "Davidov, Tsur, Rappoport, , ",
-            "source": "Paper presented at the Fourteenth Conference on Computational Natural Language Learning",
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Uppsala, Sweden."
+            "refid": "ref7",
+            "title": "Davidov,D., Tsur,O., Rappoport,A., , , & ( ). , Uppsala, Sweden.2010, Semisupervised recognition of sarcastic sentences in twitter and amazon, Paper presented at the Fourteenth Conference on Computational Natural Language Learning"
         },
         {
-            "authors": "DePaulo, Charlton, Cooper, Lindsay, Muhlenbruck, , ",
-            "source": "Personality and Social Psychology Review",
-            "title": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref8",
+            "title": "DePaulo,B. M., Charlton,K., Cooper,H., Lindsay,J. J., Muhlenbruck,L., , , , , & ( ). , ( ), - .1997, The AccuracyConfidence Correlation in the Detection of Deception, Personality and Social Psychology Review 1 (4) , 346-357"
         },
         {
-            "authors": "Ermida, , ",
-            "source": [
-                "In J. Chovanec & I. Ermida (Eds.)",
-                "Newcastle upon Tyne"
-            ],
-            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          .\n          \n          , UK: Cambridge Scholars Pub."
+            "refid": "ref9",
+            "title": "Ermida,I., ( ). , , UK: Cambridge Scholars Pub.2012, News Satire in the Press: Linguistic Construction of Humour in Spoof News Articles Language and humour in the media, In J. Chovanec & I. Ermida (Eds.), Newcastle upon Tyne,"
         },
         {
-            "authors": "Frye, , ",
-            "source": "The Nature of Satire",
-            "title": "(\n          \n          ).\n          \n          . University of Toronto Quarterly,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref10",
+            "title": "Frye,N., ( ). University of Toronto Quarterly, ( ), - .1944, The Nature of Satire 14 (1) , 75-89"
         },
         {
-            "authors": "Hango, , ",
-            "source": null,
-            "title": "(\n          \n          ).\n          \n          . Statistics Canada Retrieved from http://www.statcan. gc.ca/pub/75-006-x/2014001 /article/14094-eng.htm."
+            "refid": "ref11",
+            "title": "Hango,D., ( ). Statistics Canada Retrieved from http://www.statcan. gc.ca/pub/75-006-x/2014001 /article/14094-eng.htm.2014, University graduates with lower levels of literacy and numeracy skills,"
         },
         {
-            "authors": "Hempelmann, Raskin, Triezenberg, , ",
-            "source": null,
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ). Computer, Tell Me a Joke... but Please Make it Funny:\n          \n          . Paper presented at the FLAIRS Conference, Melbourne Beach, Florida, USA."
+            "refid": "ref12",
+            "title": "Hempelmann,C., Raskin,V., Triezenberg,K. E., , , & ( ). Computer, Tell Me a Joke... but Please Make it Funny: Paper presented at the FLAIRS Conference, Melbourne Beach, Florida, USA.2006, Computational Humor with Ontological Semantics,"
         },
         {
-            "authors": "Highet, , ",
-            "source": "The Anatomy of Satire",
-            "title": "(\n          \n          ).\n          \n          . Princeton, N.J: Princeton University Press."
+            "refid": "ref13",
+            "title": "Highet,G., ( ). Princeton, N.J: Princeton University Press.1972, The Anatomy of Satire"
         },
         {
-            "authors": "Hongo, , ",
-            "source": null,
-            "title": "(\n          \n          ).\n          \n          . Retrieved from http://literallyunbelievable.org/"
+            "refid": "ref14",
+            "title": "Hongo,H., ( ). Retrieved from http://literallyunbelievable.org/2016, Literally Unbelievable: Stories from The Onion as interpreted by Facebook,"
         },
         {
-            "authors": "Hopper, Bell, , ",
-            "source": "Quarterly Journal of Speech",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref15",
+            "title": "Hopper,R., Bell,R. A., & ( ). , ( ), - .1984, Broadening the Deception Construct, Quarterly Journal of Speech 70 (3) , 288-302"
         },
         {
-            "authors": "Howell, , ",
-            "source": "Global Risks",
-            "title": "(\n          \n          ).\n          \n          \n          . Retrieved from Cologny/Geneva, Switzerland: http://www3. weforum.org/docs/WEF_GlobalRisks_Report_\n          \n          .pdf"
+            "refid": "ref16",
+            "title": "Howell,L., ( ). Retrieved from Cologny/Geneva, Switzerland: http://www3. weforum.org/docs/WEF_GlobalRisks_Report_ .pdf2013, Global Risks"
         },
         {
-            "authors": "LaMarre, Landreville, Beam, , ",
-            "source": null,
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . The International Journal of Press/Politics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/ 1940161208330904"
+            "refid": "ref17",
+            "title": "LaMarre,H. L., Landreville,K. D., Beam,M. A., , , & ( ). The International Journal of Press/Politics, ( ), - doi: .1177/ 19401612083309042009, The Irony of Satire: Political Ideology and the Motivation to See What You Want to See in The Colbert Report, 14, 10, (2) , 212-231"
         },
         {
-            "authors": "Mihalcea, Liu, , ",
-            "source": "Paper presented at the AAAI Symposium on Computational Approaches",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          to Analyzing Weblogs."
+            "refid": "ref18",
+            "title": "Mihalcea,R., Liu,H., & ( ). to Analyzing Weblogs.2006, A corpus-based approach to finding happiness, Paper presented at the AAAI Symposium on Computational Approaches"
         },
         {
-            "authors": "Mihalcea, Pulman, , ",
-            "source": "Computational Linguistics and Intelligent Text Processing",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          . In A. Gelbukh (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Berlin Heidelberg: Springer."
+            "refid": "ref19",
+            "title": "Mihalcea,R., Pulman,S., & ( ). In A. Gelbukh (Ed.), (Vol. , pp. - ). Berlin Heidelberg: Springer.2007, Characterizing humour: An exploration of features in humorous texts, Computational Linguistics and Intelligent Text Processing 4394 , 337-347"
         },
         {
-            "authors": "Mihalcea, Strapparava, Pulman, , ",
-            "source": null,
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          , Iasi, Romania."
+            "refid": "ref20",
+            "title": "Mihalcea,R., Strapparava,C., Pulman,S., , , & ( ). , Iasi, Romania.2010, Computational models for incongruity detection in humour. Paper presented at the Computational linguistics and intelligent text processing,"
         },
         {
-            "authors": "Mocanu, Rossi, Zhang, Karsai, Quattrociocchi, , ",
-            "source": null,
-            "title": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . Computers in Human Behavior,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.chb.\n          \n          .\n          \n          .024"
+            "refid": "ref21",
+            "title": "Mocanu,D., Rossi,L., Zhang,Q., Karsai,M., Quattrociocchi,W., , , , , & ( ). Computers in Human Behavior, , - doi: .1016/j.chb. .0242015, Collective attention in the age of (mis)information, 51, 10, 01, 1198-1204"
         },
         {
-            "authors": "Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Dubourg, , ",
-            "source": "The Journal of Machine Learning Research",
-            "title": ",\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , . . .\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          ."
+            "refid": "ref22",
+            "title": "Pedregosa,F., Varoquaux,G., Gramfort,A., Michel,V., Thirion,B., Grisel,O., Dubourg,V., , , , , , , . ( ). , , - .2011, Scikit-learn: Machine learning in Python, The Journal of Machine Learning Research 12 , 2825-2830"
         },
         {
-            "authors": "Pennebaker, Boyd, Jordan, Blackburn, , ",
-            "source": "net/ 2152/31333",
-            "title": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          . from University of Texas at Austin http://hdl.handle."
+            "refid": "ref23",
+            "title": "Pennebaker,J. W., Boyd,R. L., Jordan,K., Blackburn,K., , , , & ( ). from University of Texas at Austin http://hdl.handle.2015, The Development and Psychometric Properties of LIWC2015, net/ 2152/31333"
         },
         {
-            "authors": "Pennycook, Cheyne, Barr, Koehler, Fugelsang, , ",
-            "source": "Judgment and Decision Making",
-            "title": ",\n          \n          ,\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref24",
+            "title": "Pennycook,G., Cheyne,J. A., Barr,N., Koehler,D. J., Fugelsang,J. A., , , , , & ( ). , ( ), - .2015, On the reception and detection of pseudo-profound bullshit, Judgment and Decision Making 10 (6) , 549-563"
         },
         {
-            "authors": "Pfaff, Gibbs, , ",
-            "source": null,
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          . Poetics,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1016/s0304-422x(\n          \n          )\n          \n          -"
+            "refid": "ref25",
+            "title": "Pfaff,K. L., Gibbs,R. W., & ( ). Poetics, ( ), - doi: .1016/s0304-422x( ) -1997, Authorial intentions in understanding satirical texts, 25, 10, (1, 97, ), 45, 00006, 70, 5"
         },
         {
-            "authors": "Phiddian, , ",
-            "source": "Critical Quarterly",
-            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref26",
+            "title": "Phiddian,R., ( ). , ( ), - .2013, Satire and the limits of literary theories, Critical Quarterly 55 (3) , 44-58"
         },
         {
-            "authors": "Pisarevskaya, , ",
-            "source": "Paper presented at the Artificial Intelligence and Natural Language & Information Extraction",
-            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          , SaintPetersburg, Russia."
+            "refid": "ref27",
+            "title": "Pisarevskaya,D., ( ). , , SaintPetersburg, Russia.2015, Rhetorical Structure Theory as a Feature for Deception Detection in News Reports in the Russian Language Social Media and Web Search (AINL-ISMW) FRUCT Conference, Paper presented at the Artificial Intelligence and Natural Language & Information Extraction"
         },
         {
-            "authors": "Polanyi, Zaenen, Qu, Wiebe, , ",
-            "source": null,
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          . In J. G. Shanahan,\n          \n          , & J.\n          \n          (Eds.),\n          \n          ., pp.\n          \n          -\n          \n          ): Springer Netherlands."
+            "refid": "ref28",
+            "title": "Polanyi,L., Zaenen,A., QuY., Wiebe, & ( ). In J. G. Shanahan, , & J. (Eds.), ., pp. - ): Springer Netherlands.2006, Contextual valence shifters Computing attitude and affect in text: Theory and applications (1 ed, 1-10"
         },
         {
-            "authors": "Reilly, Nye, , ",
-            "source": null,
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          . Retrieved from http://www.theopenroad.com/wp-content/uploads/2012/09/Powerprinciples-and\n          \n          .pdf"
+            "refid": "ref29",
+            "title": "Reilly,R., Nye,R., & ( ). Retrieved from http://www.theopenroad.com/wp-content/uploads/2012/09/Powerprinciples-and .pdf2012, Power, principles and the press -the-press-Open-Road-andPopulus1,"
         },
         {
-            "authors": "Reyes, Rosso, , ",
-            "source": "Knowledge and Information Systems",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10115-013-0652-8"
+            "refid": "ref30",
+            "title": "Reyes,A., Rosso,P., & ( ). , ( ), - doi: .1007/s10115-013-0652-82014, On the difficulty of automatically detecting irony: beyond a simple case of negation, Knowledge and Information Systems 40, 10, (3) , 595-614"
         },
         {
-            "authors": "Reyes, Rosso, Buscaldi, , ",
-            "source": "Data & Knowledge Engineering",
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          ,\n          \n          -\n          \n          . doi:\n          \n          .1016/j.datak.\n          \n          .\n          \n          .005"
+            "refid": "ref31",
+            "title": "Reyes,A., Rosso,P., Buscaldi,D., , , & ( ). , , - doi: .1016/j.datak. .0052012, From humor recognition to irony detection: The figurative language of social media, Data & Knowledge Engineering 74, 10, 02, 1-12"
         },
         {
-            "authors": "Reyes, Rosso, Veale, , ",
-            "source": "Language Resources and Evaluation",
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1007/s10579-012-9196-x"
+            "refid": "ref32",
+            "title": "Reyes,A., Rosso,P., Veale,T., , , & ( ). , ( ), - doi: .1007/s10579-012-9196-x2013, A multidimensional approach for detecting irony in Twitter, Language Resources and Evaluation 47, 10, (1) , 239-268"
         },
         {
-            "authors": "Riffkin, , ",
-            "source": null,
-            "title": "(\n          \n          ,\n          \n          /09/28/). Americans' Trust in Media Remains at Historical Low. Gallup. Retrieved from http://www.gallup.com/poll/185927/americanstrust-media\n          \n          .aspx"
+            "refid": "ref33",
+            "title": "Riffkin,R., ( , /09/28/). Americans' Trust in Media Remains at Historical Low. Gallup. Retrieved from http://www.gallup.com/poll/185927/americanstrust-media .aspx2015, -remains-historical-low,"
         },
         {
-            "authors": "Rubin, Chen, Conroy, , ",
-            "source": null,
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          ."
+            "refid": "ref34",
+            "title": "Rubin,V. L., Chen,Y., Conroy,N. J., , , & ( ). .2015, Deception detection for news: three types of fakes. Paper presented at the Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community,"
         },
         {
-            "authors": "Rubin, Conroy, , ",
-            "source": "First Monday",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ). Retrieved from http://firstmonday.org/ojs/index.php/fm/article/view/ 3933/3170"
+            "refid": "ref35",
+            "title": "Rubin,V. L., Conroy,N., & ( ). , ( ). Retrieved from http://firstmonday.org/ojs/index.php/fm/article/view/ 3933/31702012, Discerning truth from deception: Human judgments and automation efforts, First Monday 17 (3)"
         },
         {
-            "authors": "Rubin, Lukoianova, , ",
-            "source": "Journal of the Association for Information Science and Technology",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), 12. doi:\n          \n          .1002/asi.23216"
+            "refid": "ref36",
+            "title": "Rubin,V. L., Lukoianova,T., & ( ). , ( ), 12. doi: .1002/asi.232162014, Truth and Deception at the Rhetorical Structure Level, Journal of the Association for Information Science and Technology 66, 10, (5)"
         },
         {
-            "authors": "Simpson, , ",
-            "source": "On the Discourse of Satire: John Benjamins Publishing Company.",
-            "title": "(\n          \n          )."
+            "refid": "ref37",
+            "title": "Simpson,P., ( ).2003, On the Discourse of Satire: John Benjamins Publishing Company."
         },
         {
-            "authors": "Sj\u00f6bergh, Araki, , ",
-            "source": "Paper presented at the International Workshop on Fuzzy Logic and Applications",
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          .\n          \n          , Camogli, Italy."
+            "refid": "ref38",
+            "title": "Sj\u00f6bergh,J., Araki,K., & ( ). , Camogli, Italy.2007, Recognizing humor without recognizing meaning, Paper presented at the International Workshop on Fuzzy Logic and Applications"
         },
         {
-            "authors": "Media Insight Project., , ",
-            "source": null,
-            "title": "(\n          \n          ).\n          \n          . Retrieved from https://www.americanpressinstitute.org/publications/ reports/survey-research/rational-attentive-newsconsumer/"
+            "refid": "ref39",
+            "title": "Media Insight Project.The, ( ). Retrieved from https://www.americanpressinstitute.org/publications/ reports/survey-research/rational-attentive-newsconsumer/2014, The rational and attentive news consumer,"
         },
         {
-            "authors": "Tsfati, , ",
-            "source": null,
-            "title": "(\n          \n          ).\n          \n          . American Behavioral Scientist,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1177/0002764210376309"
+            "refid": "ref40",
+            "title": "Tsfati,Y., ( ). American Behavioral Scientist, ( ), - doi: .1177/00027642103763092010, Online News Exposure and Trust in the Mainstream Media: Exploring Possible Associations, 54, 10, (1) , 22-42"
         },
         {
-            "authors": "Tsur, Davidov, Rappoport, , ",
-            "source": "Paper presented at the Fourth International AAAI Conference on Web and Social Media",
-            "title": ",\n          \n          , &\n          \n          (\n          \n          , May 23- 26\n          \n          ).\n          \n          .\n          \n          , George Washington University, Washington, D.C. USA."
+            "refid": "ref41",
+            "title": "Tsur,O., Davidov,D., Rappoport,A., , , & ( , May 23- 26 ). , George Washington University, Washington, D.C. USA.2010, ICWSM - A Great Catchy Name: SemiSupervised Recognition of Sarcastic Sentences in Online Product Reviews, Paper presented at the Fourth International AAAI Conference on Web and Social Media"
         },
         {
-            "authors": "Utsumi, , ",
-            "source": "Journal of Pragmatics",
-            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref42",
+            "title": "Utsumi,A., ( ). , ( ), - doi:http://dx.doi.org/10.1016/S0378- ( ) -2000, Verbal irony as implicit display of ironic environment: Distinguishing ironic utterances from nonirony, Journal of Pragmatics 32, 2166, (12, 99, ), 1777, 00116, 1806, 2"
         },
         {
-            "authors": "Van Swol, , ",
-            "source": "Encyclopedia of Deception",
-            "title": "(\n          \n          ).\n          \n          . In T. Levine (Ed.),\n          \n          (Vol.\n          \n          , pp.\n          \n          -\n          \n          ). Thousand Oaks, California: SAGE Publications."
+            "refid": "ref43",
+            "title": "Van Swol,L., ( ). In T. Levine (Ed.), (Vol. , pp. - ). Thousand Oaks, California: SAGE Publications.2014, Truth Bias, Encyclopedia of Deception 1 , 904-906"
         },
         {
-            "authors": "Vrij, Mann, Leal, , ",
-            "source": "Journal of Police and Criminal Psychology",
-            "title": ",\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref44",
+            "title": "Vrij,A., Mann,S., Leal,S., , , & ( ). , ( ), - .2012, Deception Traits in Psychological Interviewing, Journal of Police and Criminal Psychology 28 (2) , 115-126"
         },
         {
-            "authors": "Wu, Palmer, , ",
-            "source": null,
-            "title": ", &\n          \n          (\n          \n          ).\n          \n          , Las Cruces, New Mexico."
+            "refid": "ref45",
+            "title": "Wu,Z., Palmer,M., & ( ). , Las Cruces, New Mexico.1994, Verbs semantics and lexical selection. Paper presented at the 32nd Annual Meeting of the Association for Computational Linguistics,"
         },
         {
-            "authors": "Zhou, Burgoon, Nunamaker, Twitchell, , ",
-            "source": "Group Decision and Negotiation",
-            "title": ",\n          \n          ,\n          \n          , &\n          \n          (\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref46",
+            "title": "Zhou,L., Burgoon,J. K., Nunamaker,J. F., Twitchell,D., , , , & ( ). , ( ), - .2004, Automating Linguistics-Based Cues for Detecting Deception in Text-Based Asynchronous Computer-Mediated Communications, Group Decision and Negotiation 13 (1) , 81-106"
         },
         {
-            "authors": "Ziv, , ",
-            "source": "The Journal of Experimental Education",
-            "title": "(\n          \n          ).\n          \n          .\n          \n          ,\n          \n          (\n          \n          ),\n          \n          -\n          \n          . doi:\n          \n          .1080/00220973.\n          \n          .10806492"
+            "refid": "ref47",
+            "title": "Ziv,A., ( ). , ( ), - doi: .1080/00220973. .108064921988, Teaching and Learning with Humor, The Journal of Experimental Education 57, 10, (1) , 4-15"
         }
     ],
     "journal": "San Diego, California, June",

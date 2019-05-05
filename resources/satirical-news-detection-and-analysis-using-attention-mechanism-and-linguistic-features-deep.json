@@ -45,269 +45,208 @@
     ],
     "clean-refs": [
         {
-            "authors": "Afroz, Brennan, Greenstadt, , ",
-            "source": "In 2012 IEEE Symposium on Security and Privacy",
-            "title": ",\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . IEEE."
+            "refid": "ref1",
+            "title": "AfrozSadia, BrennanMichael, GreenstadtRachel, , , and , pages - IEEE.2012, Detecting hoaxes, frauds, and deception in writing style online, In 2012 IEEE Symposium on Security and Privacy , 461-475"
         },
         {
-            "authors": "Bahdanau, Bengio, , ",
-            "source": "arXiv preprint arXiv:1409",
-            "title": ", Kyunghyun Cho, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref2",
+            "title": "BahdanauDzmitry, BengioYoshua, Kyunghyun Cho, and .2014, Neural machine translation by jointly learning to align and translate, arXiv preprint arXiv:1409 , 0473"
         },
         {
-            "authors": "Barbieri, Saggion, , ",
-            "source": "In IJCAI",
-            "title": ", Francesco Ronzano, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          ."
+            "refid": "ref3",
+            "title": "BarbieriFrancesco, SaggionHoracio, Francesco Ronzano, and , pages - .2015, Do we criticise (and laugh) in the same way? automatic detection of multi-lingual satirical news in twitter, In IJCAI , 1215-1221"
         },
         {
-            "authors": "Bengio, , ",
-            "source": "arXiv preprint arXiv:1211",
-            "title": "Fre\u00b4de\u00b4ric Bastien, Pascal Lamblin, Razvan Pascanu, James Bergstra, Ian Goodfellow, Arnaud Bergeron, Nicolas Bouchard, David Warde-Farley, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref4",
+            "title": "BengioYoshua, Fre\u00b4de\u00b4ric Bastien, Pascal Lamblin, Razvan Pascanu, James Bergstra, Ian Goodfellow, Arnaud Bergeron, Nicolas Bouchard, David Warde-Farley, and .2012, Theano: new features and speed improvements, arXiv preprint arXiv:1211 , 5590"
         },
         {
-            "authors": "Burfoot, Baldwin, , ",
-            "source": null,
-            "title": "and\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics."
+            "refid": "ref5",
+            "title": "BurfootClint, BaldwinTimothy, and , pages - Association for Computational Linguistics.2009, Automatic satire detection: Are you having a laugh? In Proceedings of the ACL-IJCNLP 2009 conference short papers, 161-164"
         },
         {
-            "authors": "Castillo, Poblete, , ",
-            "source": "In Proceedings of the 20th international conference on World wide web",
-            "title": ", Marcelo Mendoza, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref6",
+            "title": "CastilloCarlos, PobleteBarbara, Marcelo Mendoza, and , pages - ACM.2011, Information credibility on twitter, In Proceedings of the 20th international conference on World wide web , 675-684"
         },
         {
-            "authors": "Chen, Manning, , ",
-            "source": "arXiv preprint arXiv:1606",
-            "title": ", Jason Bolton, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref7",
+            "title": "ChenDanqi, ManningChristopher D, Jason Bolton, and .2016a, A thorough examination of the cnn/daily mail reading comprehension task, arXiv preprint arXiv:1606 , 02858"
         },
         {
-            "authors": "Chen, Lin, , ",
-            "source": "In Proceedings of EMNLP.",
-            "title": ", Maosong Sun, Cunchao Tu,\n          \n          , and Zhiyuan Liu. 2016b.\n          \n          ."
+            "refid": "ref8",
+            "title": "ChenHuimin, LinYankai, Maosong Sun, Cunchao Tu, , and Zhiyuan Liu. 2016b. .Neural sentiment classification with user and product attention, In Proceedings of EMNLP."
         },
         {
-            "authors": "Chen, Niall J Conroy, , ",
-            "source": "In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection",
-            "title": ",\n          \n          , and Victoria L Rubin.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref9",
+            "title": "ChenYimin, Niall J Conroy, , , and Victoria L Rubin. , pages - ACM.2015, Misleading online content: Recognizing clickbait as false news, In Proceedings of the 2015 ACM on Workshop on Multimodal Deception Detection , 15-19"
         },
         {
-            "authors": "Cho, Bengio, , ",
-            "source": "arXiv preprint arXiv:1406",
-            "title": ", Bart Van Merrie\u00a8nboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref10",
+            "title": "ChoKyunghyun, BengioYoshua, Bart Van Merrie\u00a8nboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, and .2014, Learning phrase representations using rnn encoder-decoder for statistical machine translation, arXiv preprint arXiv:1406 , 1078"
         },
         {
-            "authors": "Coleman and Ta Lin Liau, , ",
-            "source": "Journal of Applied Psychology",
-            "title": ".\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          ."
+            "refid": "ref11",
+            "title": "Coleman and Ta Lin LiauMeri, , ( ): .1975, A computer readability formula designed for machine scoring, Journal of Applied Psychology 60 (2) , 283"
         },
         {
-            "authors": "Luna, Wilko Horn, Zhang, , ",
-            "source": "Proceedings of the VLDB Endowment",
-            "title": ", Camillo Lugaresi, Shaohua Sun,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          ."
+            "refid": "ref12",
+            "title": "LunaXin, Wilko Horn, Evgeniy Gabrilovich, Kevin Murphy, Van Dang,Dong, Zhangand Wei, Camillo Lugaresi, Shaohua Sun, , ( ): - .2015, Knowledge-based trust: Estimating the trustworthiness of web sources, Proceedings of the VLDB Endowment 8 (9) , 938-949"
         },
         {
-            "authors": "Ermida, , ",
-            "source": null,
-            "title": ".\n          \n          .\n          \n          , page\n          \n          ."
+            "refid": "ref13",
+            "title": "ErmidaIsabel, , page .2012, News satire in the press: Linguistic construction of humour inspoof news articles. Language and humour in the media, 185"
         },
         {
-            "authors": "Farajtabar, Li, Song, Zha, , ",
-            "source": "arXiv preprint arXiv:1703",
-            "title": ", Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil,\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref14",
+            "title": "FarajtabarMehrdad, LiShuang, SongLe, ZhaHongyuan, Jiachen Yang, Xiaojing Ye, Huan Xu, Rakshit Trivedi, Elias Khalil, , , and .2017, Fake news mitigation via point process based intervention, arXiv preprint arXiv:1703 , 07823"
         },
         {
-            "authors": "Feng, Choi, , ",
-            "source": "In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Short Papers-Volume",
-            "title": ", Ritwik Banerjee, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics."
+            "refid": "ref15",
+            "title": "FengSong, ChoiYejin, Ritwik Banerjee, and , pages - Association for Computational Linguistics.2012, Syntactic stylometry for deception detection, In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Short Papers-Volume 2 , 171-175"
         },
         {
-            "authors": "Mark G Frank, Maureen O'Sullivan, , ",
-            "source": "Wiley Handbook of Science and Technology for Homeland Security.",
-            "title": ",\n          \n          and\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref16",
+            "title": "Mark G Frank, Maureen O'Sullivan, , and .2008, Melissa A Menasco, Human behavior and deception detection, Wiley Handbook of Science and Technology for Homeland Security."
         },
         {
-            "authors": "Ge, Gao, Li, Zhang, , ",
-            "source": "In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining",
-            "title": ",\n          \n          ,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref17",
+            "title": "GeLiang, GaoJing, LiXiaoyi, Zhangand Aidong, , , , , pages - ACM.2013, Multi-source deep learning for information trustworthiness estimation, In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining , 766-774"
         },
         {
-            "authors": "Gunning, , ",
-            "source": null,
-            "title": ".\n          \n          .\n          \n          ."
+            "refid": "ref18",
+            "title": "GunningRobert, .1952, The technique of clear writing,"
         },
         {
-            "authors": "Gupta, Zhao, , ",
-            "source": "In SDM",
-            "title": ",\n          \n          , and Jiawei Han.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . SIAM."
+            "refid": "ref19",
+            "title": "GuptaManish, ZhaoPeixiang, , , and Jiawei Han. , pages - SIAM.2012, Evaluating event credibility on twitter, In SDM , 153-164"
         },
         {
-            "authors": "Hochreiter, , ",
-            "source": "Neural computation",
-            "title": "and Ju\u00a8rgen Schmidhuber.\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          ."
+            "refid": "ref20",
+            "title": "HochreiterSepp, and Ju\u00a8rgen Schmidhuber. , ( ): - .1997, Long short-term memory, Neural computation 9 (8) , 1735-1780"
         },
         {
-            "authors": "Benjamin D Horne, Adali, , ",
-            "source": "arXiv preprint arXiv:1703",
-            "title": ".\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref21",
+            "title": "Benjamin D HorneandSibel, Adali, .2017, This just in: Fake news packs a lot in title, uses simpler, repetitive content in text body, more similar to satire than real news, arXiv preprint arXiv:1703 , 09398"
         },
         {
-            "authors": "Joshi, , ",
-            "source": "arXiv preprint arXiv:1602",
-            "title": ", Pushpak Bhattacharyya, and Mark James Carman.\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref22",
+            "title": "JoshiAditya, Pushpak Bhattacharyya, and Mark James Carman. .2016, Automatic sarcasm detection: A survey, arXiv preprint arXiv:1602 , 03426"
         },
         {
-            "authors": "J Peter Kincaid, , ",
-            "source": "Technical report, DTIC Document.",
-            "title": ", Robert P Fishburne Jr, Richard L Rogers, and Brad S Chissom.\n          \n          .\n          \n          ."
+            "refid": "ref23",
+            "title": "J Peter Kincaid, Robert P Fishburne Jr, Richard L Rogers, and Brad S Chissom. .1975, Derivation of new readability formulas (automated readability index, fog count and flesch reading ease formula) for navy enlisted personnel, Technical report, DTIC Document."
         },
         {
-            "authors": "Quoc, Le, Mikolov, , ",
-            "source": null,
-            "title": ".\n          \n          .\n          \n          . In ICML, volume\n          \n          , pages\n          \n          -\n          \n          ."
+            "refid": "ref24",
+            "title": "QuocV, LeandTomas, Mikolov, In ICML, volume , pages - .2014, Distributed representations of sentences and documents, 14 , 1188-1196"
         },
         {
-            "authors": "Li, Ott, Cardie, Eduard H Hovy, , ",
-            "source": "In ACL (1)",
-            "title": ",\n          \n          ,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Citeseer."
+            "refid": "ref25",
+            "title": "LiJiwei, OttMyle, CardieClaire, Eduard H Hovy, , , , and , pages - Citeseer.2014a, Towards a general rule for identifying deceptive opinion spam, In ACL (1) , 1566-1576"
         },
         {
-            "authors": "Li, Li, Gao, Zhao, Fan, , ",
-            "source": "In Proceedings of the 2014 ACM SIGMOD international conference on Management of data",
-            "title": ",\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref26",
+            "title": "LiQi, LiYaliang, GaoJing, ZhaoBo, FanWei, , , , , , and Jiawei Han. , pages - ACM.2014b, Resolving conflicts in heterogeneous data by truth discovery and source reliability estimation, In Proceedings of the 2014 ACM SIGMOD international conference on Management of data , 1187-1198"
         },
         {
-            "authors": "Li, Meng, Clement, , ",
-            "source": "In 12th International Conference on Web Information Systems and Technologies.",
-            "title": ",\n          \n          , and\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref27",
+            "title": "LiXian, MengWeiyi, ClementYu, , , and .2016, Verification of fact statements with multiple truthful alternatives, In 12th International Conference on Web Information Systems and Technologies."
         },
         {
-            "authors": "Li, Li, Gao, Zhao, Fan, , ",
-            "source": "In Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
-            "title": ",\n          \n          ,\n          \n          , Lu Su,\n          \n          ,\n          \n          , and Jiawei Han.\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref28",
+            "title": "LiYaliang, LiQi, GaoJing, ZhaoBo, FanWei, , , , Lu Su, , , and Jiawei Han. , pages - ACM.2015, On the discovery of evolving truth, In Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , 675-684"
         },
         {
-            "authors": "Liu, Arjun Mukherjee, Meng, , ",
-            "source": "Proceedings of the VLDB Endowment",
-            "title": ", Eduard C Dragut,\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          ."
+            "refid": "ref29",
+            "title": "LiuQingyuan, Arjun Mukherjee, andWeiyi, Meng, Eduard C Dragut, , ( ): - .2015, Florin: a system to support (near) real-time applications on user generated content on daily news, Proceedings of the VLDB Endowment 8 (12) , 1944-1947"
         },
         {
-            "authors": "Ma, Hovy, , ",
-            "source": "In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-            "title": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          , Berlin, Germany. Association for Computational Linguistics."
+            "refid": "ref30",
+            "title": "MaXuezhe, HovyEduard, and , pages - , Berlin, Germany. Association for Computational Linguistics.2016, End-to-end sequence labeling via bi-directional lstm-cnns-crf, In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , 1064-1074"
         },
         {
-            "authors": "Mihalcea, Strapparava, , ",
-            "source": "In Proceedings of the ACLIJCNLP 2009 Conference Short Papers",
-            "title": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics."
+            "refid": "ref31",
+            "title": "MihalceaRada, StrapparavaCarlo, and , pages - Association for Computational Linguistics.2009, The lie detector: Explorations in the automatic recognition of deceptive language, In Proceedings of the ACLIJCNLP 2009 Conference Short Papers , 309-312"
         },
         {
-            "authors": "Mukherjee, Ghosh, , ",
-            "source": "In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining",
-            "title": ", Abhinav Kumar, Bing Liu, Junhui Wang, Meichun Hsu, Malu Castellanos, and\n          \n          . 2013a.\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref32",
+            "title": "MukherjeeArjun, GhoshRiddhiman, Abhinav Kumar, Bing Liu, Junhui Wang, Meichun Hsu, Malu Castellanos, and 2013a. , pages - ACM.Spotting opinion spammers using behavioral footprints, In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining , 632-640"
         },
         {
-            "authors": "Mukherjee, Natalie, , ",
-            "source": null,
-            "title": ", Vivek Venkataraman, Bing Liu, and\n          \n          2013b.\n          \n          ."
+            "refid": "ref33",
+            "title": "MukherjeeArjun, NatalieS Glance., Vivek Venkataraman, Bing Liu, and 2013b. .What yelp fake review filter might be doing? In ICWSM,"
         },
         {
-            "authors": "Mukherjee, Weikum, , ",
-            "source": "In Proceedings of the 24th ACM International on Conference on Information and Knowledge Management",
-            "title": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref34",
+            "title": "MukherjeeSubhabrata, WeikumGerhard, and , pages - ACM.2015, Leveraging joint interactions for credibility analysis in news communities, In Proceedings of the 24th ACM International on Conference on Information and Knowledge Management , 353-362"
         },
         {
-            "authors": "Ott, Cardie, Jeffrey T Hancock, , ",
-            "source": "In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies-Volume",
-            "title": ", Yejin Choi,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics."
+            "refid": "ref35",
+            "title": "OttMyle, CardieClaire, Jeffrey T Hancock, Yejin Choi, , and , pages - Association for Computational Linguistics.2011, Finding deceptive opinion spam by any stretch of the imagination, In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies-Volume 1 , 309-319"
         },
         {
-            "authors": "James W Pennebaker, Roger, , ",
-            "source": null,
-            "title": ",\n          \n          K Chung, Molly Ireland, Amy Gonzales, and\n          \n          J Booth.\n          \n          .\n          \n          . austin, tx, liwc. net."
+            "refid": "ref36",
+            "title": "James W Pennebaker, Roger, , K Chung, Molly Ireland, Amy Gonzales, and J Booth. austin, tx, liwc. net.2007, Cindy The development and psychometric properties of liwc2007,"
         },
         {
-            "authors": "Jeffrey, Manning, , ",
-            "source": "In EMNLP",
-            "title": ", Richard Socher, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , volume\n          \n          , pages\n          \n          -\n          \n          ."
+            "refid": "ref37",
+            "title": "JeffreyPennington, ManningChristopher D, Richard Socher, and , volume , pages - .2014, Glove: Global vectors for word representation, In EMNLP 14 , 1532-1543"
         },
         {
-            "authors": "Rosas, Mihalcea, , ",
-            "source": "In ACL (2)",
-            "title": ".\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          ."
+            "refid": "ref38",
+            "title": "RosasandRada, Mihalcea, , pages - .2014, Vero\u00b4nica Pe\u00b4rez- Cross-cultural deception detection, In ACL (2) , 440-445"
         },
         {
-            "authors": "Potthast, Stein, , ",
-            "source": "arXiv preprint arXiv:1702",
-            "title": ", Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref39",
+            "title": "PotthastMartin, SteinBenno, Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and .2017, A stylometric inquiry into hyperpartisan and fake news, arXiv preprint arXiv:1702 , 05638"
         },
         {
-            "authors": "Rayson, Leech, , ",
-            "source": "Language and Computers",
-            "title": ", Andrew Wilson, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          ."
+            "refid": "ref40",
+            "title": "RaysonPaul, LeechGeoffrey, Andrew Wilson, and , ( ): - .2001, Grammatical word class variation within the british national corpus sampler, Language and Computers 36 (1) , 295-306"
         },
         {
-            "authors": "Sojka, , ",
-            "source": "In Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks",
-            "title": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          , Valletta, Malta. ELRA. http://is.muni.cz/ publication/884893/en."
+            "refid": "ref41",
+            "title": "SojkaPetr, and , pages - , Valletta, Malta. ELRA. http://is.muni.cz/ publication/884893/en.2010, Radim R? ehu?r?ek Software Framework for Topic Modelling with Large Corpora, In Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks , 45-50"
         },
         {
-            "authors": "Reyes, Buscaldi, , ",
-            "source": "Data & Knowledge Engineering",
-            "title": ", Paolo Rosso, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          :\n          \n          -\n          \n          ."
+            "refid": "ref42",
+            "title": "ReyesAntonio, BuscaldiDavide, Paolo Rosso, and , : - .2012, From humor recognition to irony detection: The figurative language of social media, Data & Knowledge Engineering 74 , 1-12"
         },
         {
-            "authors": "Rockta, Blunsom, , ",
-            "source": "arXiv preprint arXiv:1509",
-            "title": "\u00a8schel, Edward Grefenstette, Karl Moritz Hermann, Toma\u00b4s? Koc?isky`, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref43",
+            "title": "RocktaTim, BlunsomPhil, \u00a8schel, Edward Grefenstette, Karl Moritz Hermann, Toma\u00b4s? Koc?isky`, and .2015, Reasoning about entailment with neural attention, arXiv preprint arXiv:1509 , 06664"
         },
         {
-            "authors": "Rubin, Cornwell, , ",
-            "source": "In Proceedings of the Second Workshop on Computational Approaches",
-            "title": ", Niall Conroy, Yimin Chen, and\n          \n          .\n          \n          .\n          \n          .\n          \n          to Deception Detection, pages\n          \n          -\n          \n          , San Diego, California. Association for Computational Linguistics."
+            "refid": "ref44",
+            "title": "RubinVictoria, CornwellSarah, Niall Conroy, Yimin Chen, and to Deception Detection, pages - , San Diego, California. Association for Computational Linguistics.2016, Fake news or truth? using satirical cues to detect potentially misleading news, In Proceedings of the Second Workshop on Computational Approaches , 7-17"
         },
         {
-            "authors": "",
-            "source": [
-                "RJ Senter and Edgar A Smith",
-                "Technical report, DTIC Document."
-            ],
-            "title": ".\n          \n          .\n          \n          ."
+            "refid": "ref45",
+            "title": ". .1967, Automated readability index, RJ Senter and Edgar A Smith, Technical report, DTIC Document.,"
         },
         {
-            "authors": "Toutanova, Christopher D Manning, Singer, , ",
-            "source": "In Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language TechnologyVolume 1",
-            "title": ", Dan Klein,\n          \n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . Association for Computational Linguistics."
+            "refid": "ref46",
+            "title": "ToutanovaKristina, Christopher D Manning, andYoram, Singer, Dan Klein, , pages - Association for Computational Linguistics.2003, Feature-rich part-ofspeech tagging with a cyclic dependency network, In Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language TechnologyVolume 1 , 173-180"
         },
         {
-            "authors": "Wan, Gao, Zhao, , ",
-            "source": "In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
-            "title": ", Xiangyu Chen, Lance Kaplan, Jiawei Han,\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref47",
+            "title": "WanMengting, GaoJing, ZhaoBo, Xiangyu Chen, Lance Kaplan, Jiawei Han, , and , pages - ACM.2016, From truth discovery to trustworthy opinion discovery: An uncertainty-aware quantitative modeling approach, In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , 1885-1894"
         },
         {
-            "authors": "Xiao, Gao, Li, Zhang, , ",
-            "source": "In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
-            "title": ",\n          \n          ,\n          \n          , Fenglong Ma, Lu Su, Yunlong Feng,\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref48",
+            "title": "XiaoHouping, GaoJing, LiQi, Zhangand Aidong, , , , Fenglong Ma, Lu Su, Yunlong Feng, , pages - ACM.2016, Towards confidence in the truth: A bootstrapping based truth discovery approach, In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , 1935-1944"
         },
         {
-            "authors": "Yang, Mukherjee, , ",
-            "source": [
-                "In Proceedings of COLING",
-                "the 26th International Conference on Computational Linguistics: Technical Papers",
-                "The COLING 2016 Organizing Committee."
-            ],
-            "title": ",\n          \n          , and Yifan Zhang. 2016a.\n          \n          .\n          \n          \n          ,\n          \n          , pages\n          \n          -\n          \n          , Osaka, Japan."
+            "refid": "ref49",
+            "title": "YangFan, MukherjeeArjun, , , and Yifan Zhang. 2016a. , , pages - , Osaka, Japan.2016, Leveraging multiple domains for sentiment classification, In Proceedings of COLING, the 26th International Conference on Computational Linguistics: Technical Papers, The COLING 2016 Organizing Committee., 2978-2988"
         },
         {
-            "authors": "Yang, Yang, Alex Smola, Hovy, Philip, , ",
-            "source": [
-                "In Proceedings of the 2016 Conference of the North Xiaoxin Yin",
-                "IEEE Transactions on Knowledge and Data Engineering"
-            ],
-            "title": ",\n          \n          , Chris Dyer, Xiaodong He,\n          \n          \n          . 2016b.\n          \n          .\n          \n          , Jiawei Han, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ):\n          \n          -\n          \n          ."
+            "refid": "ref50",
+            "title": "YangZichao, YangDiyi, Alex Smola, andEduard, Hovy, PhilipS Yu, , , Chris Dyer, Xiaodong He, 2016b. , Jiawei Han, and , ( ): - .2008, Hierarchical attention networks for document classification Truth discovery with multiple conflicting information providers on the web, In Proceedings of the 2016 Conference of the North Xiaoxin Yin, IEEE Transactions on Knowledge and Data Engineering, 20 (6) , 796-808"
         },
         {
-            "authors": "Zhao, Resnick, Mei, , ",
-            "source": "In Proceedings of the 24th International Conference on World Wide Web",
-            "title": ",\n          \n          , and\n          \n          .\n          \n          .\n          \n          .\n          \n          , pages\n          \n          -\n          \n          . ACM."
+            "refid": "ref51",
+            "title": "ZhaoZhe, ResnickPaul, MeiQiaozhu, , , and , pages - ACM.2015, Enquiring minds: Early detection of rumors in social media from enquiry posts, In Proceedings of the 24th International Conference on World Wide Web , 1395-1405"
         }
     ],
     "journal": null,

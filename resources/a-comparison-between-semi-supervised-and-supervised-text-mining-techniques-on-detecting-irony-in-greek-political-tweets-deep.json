@@ -61,139 +61,112 @@
     ],
     "clean-refs": [
         {
-            "authors": "Barbieri, , ",
-            "source": "In: Proceedings of the Student Research Workshop at the 14th Conference of the European Chapter of the Association for Computational Linguistics.",
-            "title": ", Francesco, Saggion, Horacio,\n          \n          .\n          \n          ."
+            "refid": "ref1",
+            "title": "Barbieri, Francesco, Saggion, Horacio, .2014, Modelling Irony in Twitter, In: Proceedings of the Student Research Workshop at the 14th Conference of the European Chapter of the Association for Computational Linguistics."
         },
         {
-            "authors": "Bird, Language Processing with Python. O'Reilly Media Inc, , ",
-            "source": null,
-            "title": ", Steven, Loper, Edward, Klein, Ewan,\n          \n          .\n          \n          ."
+            "refid": "ref2",
+            "title": "Bird, Language Processing with Python. O'Reilly Media IncNatural, Steven, Loper, Edward, Klein, Ewan, .2009,"
         },
         {
-            "authors": "Breiman, , ",
-            "source": "Mach. Learn",
-            "title": ", Leo,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref3",
+            "title": "Breiman, Leo, ( ), - .2001, Random forests, Mach. Learn 45 (1) , 5-32"
         },
         {
-            "authors": "Chang, Lin, , ",
-            "source": "ACM Trans. Intell. Syst. Technol",
-            "title": ",\n          \n          ,\n          \n          . LIBSVM:\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          ."
+            "refid": "ref4",
+            "title": "Chang,C.C., Lin,C.J., , , LIBSVM: ( ), .2011, A library for support vector machines, ACM Trans. Intell. Syst. Technol 2 (3) , 27"
         },
         {
-            "authors": "Cheang, Pell, , ",
-            "source": "Speech Commun",
-            "title": ", Henry S.,\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref5",
+            "title": "Cheang, Pell,Marc D., Henry S., , ( ), - .2008, The sound of sarcasm, Speech Commun 50 (5) , 366-381"
         },
         {
-            "authors": "Cleary, Leonard, , ",
-            "source": "In: Proceedings of the 12th International Conference on Machine learning",
-            "title": ", John G.,\n          \n          , E. Trigg,\n          \n          . K*:\n          \n          .\n          \n          . Vol.\n          \n          ."
+            "refid": "ref6",
+            "title": "Cleary, Leonard, John G., , E. Trigg, K*: Vol. .1995, an instance-based learner using an entropic distance measure, In: Proceedings of the 12th International Conference on Machine learning 5"
         },
         {
-            "authors": "Colleoni, , ",
-            "source": "J. Commun",
-            "title": ", Elanor, Rozza, Alessandro, Arvidsson, Adam,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref7",
+            "title": "Colleoni, Elanor, Rozza, Alessandro, Arvidsson, Adam, ( ), - .2014, Echo chamber or public sphere? Predicting political orientation and measuring political homophily in Twitter using big data, J. Commun 64 (2) , 317-332"
         },
         {
-            "authors": "Davidov, , ",
-            "source": "In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning. Association for Computational Linguistics.",
-            "title": ", Dmitry, Tsur, Oren, Rappoport, Ari,\n          \n          .\n          \n          ."
+            "refid": "ref8",
+            "title": "Davidov, Dmitry, Tsur, Oren, Rappoport, Ari, .2010, Semi-supervised recognition of sarcastic sentences in twitter and amazon, In: Proceedings of the Fourteenth Conference on Computational Natural Language Learning. Association for Computational Linguistics."
         },
         {
-            "authors": "de-la-, , ",
-            "source": "Network and System Security",
-            "title": "Pe\u00f1a-Sordo, Jorge, et al.,\n          \n          . ?\n          \n          .\n          \n          . Springer, Berlin, Heidelberg, pp.\n          \n          -\n          \n          ."
+            "refid": "ref9",
+            "title": "de-la-, Pe\u00f1a-Sordo, Jorge, et al., ? Springer, Berlin, Heidelberg, pp. - .2013, Filtering Trolling Comments through Collective Classification\", Network and System Security , 707-713"
         },
         {
-            "authors": "Fangzhong, , ",
-            "source": "In: Proceedings of Human Language Technologies",
-            "title": ", Su, Markert, Katja,\n          \n          .\n          \n          .\n          \n          :\n          \n          .\n          \n          ."
+            "refid": "ref10",
+            "title": "Fangzhong, Su, Markert, Katja, : .2009, Subjectivity recognition on word senses via semi-supervised mincuts The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics Association for Computational Linguistics, In: Proceedings of Human Language Technologies"
         },
         {
-            "authors": "Gama, , ",
-            "source": "Mach. Learn",
-            "title": ", Jo\u00e3o,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref11",
+            "title": "Gama, Jo\u00e3o, ( ), - .2004, Functional trees, Mach. Learn 55 (3) , 219-250"
         },
         {
-            "authors": "Gokhan, , ",
-            "source": "Speech Commun",
-            "title": ",\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref12",
+            "title": "Gokhan, Tur, Hakkani-T\u00fcr, Dilek, Schapire,Robert E., , ( ), - .2005, Combining active and semi-supervised learning for spoken language understanding, Speech Commun 45 (2) , 171-186"
         },
         {
-            "authors": "Gonz\u00e1lez-Ib\u00e1nez, , ",
-            "source": null,
-            "title": ", Roberto, Muresan, Smaranda, Wacholder, Nina,\n          \n          .\n          \n          . In:\n          \n          . Association for Computational Linguistics."
+            "refid": "ref13",
+            "title": "Gonz\u00e1lez-Ib\u00e1nez, Roberto, Muresan, Smaranda, Wacholder, Nina, In: Association for Computational Linguistics.2011, Identifying sarcasm in Twitter: a closer look Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: Short Papers-Volume 2,"
         },
         {
-            "authors": "John, Langley, , ",
-            "source": "In: Proceedings of the Eleventh conference on Uncertainty in artificial intelligence",
-            "title": ", George H.,\n          \n          , Pat,\n          \n          .\n          \n          .\n          \n          . Morgan Kaufmann Publishers Inc."
+            "refid": "ref14",
+            "title": "John, Langley, George H., , Pat, Morgan Kaufmann Publishers Inc.1995, Estimating continuous distributions in Bayesian classifiers, In: Proceedings of the Eleventh conference on Uncertainty in artificial intelligence"
         },
         {
-            "authors": "Kalsnes, Storsul, , ",
-            "source": "Aslib J. Inf. Manag",
-            "title": ", Bente, Krumsvik, Arne H.,\n          \n          , Tanja,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref15",
+            "title": "Kalsnes, Storsul, Bente, Krumsvik, Arne H., , Tanja, ( ), - .2014, Social media as a political backchannel: Twitter use during televised election debates in Norway, Aslib J. Inf. Manag 66 (3) , 313-328"
         },
         {
-            "authors": "Kermanidis, , ",
-            "source": "Int. J. Soc. Netw. Min",
-            "title": ", Katia Lida, Maragoudakis, Manolis,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref16",
+            "title": "Kermanidis, Katia Lida, Maragoudakis, Manolis, ( ), - .2013, Political sentiment analysis of tweets before and after the Greek elections of May 2012, Int. J. Soc. Netw. Min 1 (3) , 298-317"
         },
         {
-            "authors": "Liebrecht, , ",
-            "source": "WASSA",
-            "title": ", Christine, Kunneman, Florian, van den Bosch, Antal,\n          \n          .\n          \n          .\n          \n          , vol.\n          \n          , p.\n          \n          ."
+            "refid": "ref17",
+            "title": "Liebrecht, Christine, Kunneman, Florian, van den Bosch, Antal, , vol. , p. .2013, The perfect solution for detecting sarcasm in tweets# not, WASSA , 29"
         },
         {
-            "authors": "Mihalcea, , ",
-            "source": "Comput. Intell",
-            "title": ", Rada, Strapparava, Carlo,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref18",
+            "title": "Mihalcea, Rada, Strapparava, Carlo, ( ), - .2006, Learning to laugh (automatically): computational models for humor recognition, Comput. Intell 22 (2) , 126-142"
         },
         {
-            "authors": "Namata, Galileo, , ",
-            "source": "Text Min",
-            "title": ",\n          \n          , et al.,\n          \n          .\n          \n          .\n          \n          .,\n          \n          -\n          \n          ."
+            "refid": "ref19",
+            "title": "Namata, Galileo, , , et al., ., - .2009, Collective classification for text classification, Text Min , 51-69"
         },
         {
-            "authors": "Neville, , ",
-            "source": "In: Proceedings of the Second International Workshop on Multi-Relational Data Mining.",
-            "title": ", Jennifer, Jensen, David,\n          \n          .\n          \n          ."
+            "refid": "ref20",
+            "title": "Neville, Jennifer, Jensen, David, .2003, Collective classification with relational dependency networks, In: Proceedings of the Second International Workshop on Multi-Relational Data Mining."
         },
         {
-            "authors": "Quinlan, Ross, , ",
-            "source": null,
-            "title": ",\n          \n          . C4.\n          \n          . Morgan Kauffmann, San Mateo."
+            "refid": "ref21",
+            "title": "Quinlan,J., Ross, , C4. Morgan Kauffmann, San Mateo.1993, 5: Programming for Machine Learning,"
         },
         {
-            "authors": "Rajadesingan, , ",
-            "source": null,
-            "title": ", Ashwin, Zafarani, Reza, Liu, Huan,\n          \n          .\n          \n          . Arizona State University, Arizona."
+            "refid": "ref22",
+            "title": "Rajadesingan, Ashwin, Zafarani, Reza, Liu, Huan, Arizona State University, Arizona.2014, Sarcasm detection on twitter: a behavioral modeling approach (Dissertation),"
         },
         {
-            "authors": "Reyes, , ",
-            "source": "Lang. Resour. Eval",
-            "title": ", Antonio, Rosso, Paolo, Veale, Tony,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref23",
+            "title": "Reyes, Antonio, Rosso, Paolo, Veale, Tony, ( ), - .2013, A multidimensional approach for detecting irony in twitter, Lang. Resour. Eval 47 (1) , 239-268"
         },
         {
-            "authors": "Reyes, Analysis, , ",
-            "source": "In: Proceedings of the 2nd Workshop on Computational Approaches",
-            "title": ", Antonio, Rosso, Paolo,\n          \n          .\n          \n          .\n          \n          to Subjectivity and\n          \n          .\n          \n          ."
+            "refid": "ref24",
+            "title": "Reyes, AnalysisSentiment, Antonio, Rosso, Paolo, to Subjectivity and .2011, Mining subjective knowledge from customer reviews: a specific case of irony detection Association for Computational Linguistics, In: Proceedings of the 2nd Workshop on Computational Approaches"
         },
         {
-            "authors": "Santos, , ",
-            "source": null,
-            "title": ", Igor, Laorden, Carlos, Bringas, Pablo Garcia,\n          \n          .\n          \n          . SECRYPT."
+            "refid": "ref25",
+            "title": "Santos, Igor, Laorden, Carlos, Bringas, Pablo Garcia, SECRYPT.2011, Collective Classification for Unknown Malware Detection,"
         },
         {
-            "authors": "Tsur, , ",
-            "source": null,
-            "title": ", Oren, Davidov, Dmitry, Rappoport, Ari,\n          \n          .\n          \n          . ICWSM."
+            "refid": "ref26",
+            "title": "Tsur, Oren, Davidov, Dmitry, Rappoport, Ari, ICWSM.2010, ICWSM-A Great Catchy Name: Semi-Supervised Recognition of Sarcastic Sentences in Online Product Reviews,"
         },
         {
-            "authors": "Tufis, , ",
-            "source": "Rom. J. Inf. Sci. Technol",
-            "title": ", Dan, Cristea, Dan, Stamou, Sofia,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          -\n          \n          ."
+            "refid": "ref27",
+            "title": "Tufis, Dan, Cristea, Dan, Stamou, Sofia, ( ), - .2004, BalkaNet: ams, methods, results and perspectives. a general overview, Rom. J. Inf. Sci. Technol 7 (1-2) , 9-43"
         }
     ],
     "journal": "Engineering Applications of Artificial Intelligence",

@@ -133,407 +133,324 @@
     ],
     "clean-refs": [
         {
-            "authors": "Bharti, Vachha, Pradhan, Babu, Jena, , ",
-            "source": null,
-            "title": "[1]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Digit. Commun. Netw., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref1",
+            "title": "BhartiS. K., VachhaB., PradhanR. K., BabuK. S., JenaS. K., [1] , , , , and , ` ,'' Digit. Commun. Netw., vol. , no. , pp. , .2016, `Sarcastic sentiment detection in tweets streamed in real time: A big data approach, 2 (3) , 108-121"
         },
         {
-            "authors": "Sivanandam, Deepa, , ",
-            "source": null,
-            "title": "[2]\n          \n          and\n          \n          ,\n          \n          . Hoboken, NJ, USA: Wiley,\n          \n          ."
+            "refid": "ref2",
+            "title": "SivanandamS. N., DeepaS. N., [2] and , Hoboken, NJ, USA: Wiley, .2007, Principles of Soft Computing (With CD),"
         },
         {
-            "authors": "Pennington, Socher, Manning, , ",
-            "source": "in Proc. Conf. Empirical Methods Natural Lang. Process. (EMNLP)",
-            "title": "[3]\n          \n          ,\n          \n          , and\n          \n          , ``Glove:\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref3",
+            "title": "PenningtonJ., SocherR., ManningC., [3] , , and , ``Glove: ,'' , , pp. .2014, Global vectors for word representation, in Proc. Conf. Empirical Methods Natural Lang. Process. (EMNLP) , 1532-1543"
         },
         {
-            "authors": "Kumar, Jaiswal, , ",
-            "source": "in Proc. World Congr. Eng. Comput. Sci.",
-            "title": "[4]\n          \n          and\n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref4",
+            "title": "KumarA., JaiswalA., [4] and , ` ,'' , , pp. .2017, `Empirical study of Twitter and Tumblr for sentiment analysis using soft computing techniques, in Proc. World Congr. Eng. Comput. Sci. , 1-5"
         },
         {
-            "authors": "Dave, Lawrence, Pennock, , ",
-            "source": "in Proc. 12th Int. Conf. World Wide Web",
-            "title": "[5]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref5",
+            "title": "DaveK., LawrenceS., PennockD. M., [5] , , and , ` ,'' , , pp. .2003, `Mining the peanut gallery: Opinion extraction and semantic classi cation of product reviews, in Proc. 12th Int. Conf. World Wide Web , 519-528"
         },
         {
-            "authors": "Bouazizi, Ohtsuki, , ",
-            "source": null,
-            "title": "[6]\n          \n          and\n          \n          , `\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref6",
+            "title": "BouaziziM., OhtsukiT., [6] and , ` , vol. , pp. , .2017, `A pattern-based approach for multi-class sentiment analysis in Twitter,'' IEEE Access, 5 , 20617-20639"
         },
         {
-            "authors": "Shayaa, , ",
-            "source": null,
-            "title": "[7]\n          \n          et al.,\n          \n          , and open challenges,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref7",
+            "title": "ShayaaS., [7] et al., , and open challenges,'' IEEE Access, vol. , pp. , .2018, ``Sentiment analysis of big data: Methods, applications, 6 , 37807-37827"
         },
         {
-            "authors": "Kumar, Sebastian, , ",
-            "source": "'' Int. J. Intell. Syst. Appl.",
-            "title": "[8]\n          \n          and\n          \n          , `\n          \n          and future,\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref8",
+            "title": "KumarA., SebastianT. M., [8] and , ` and future, , vol. , no. , pp. , .2012, `Sentiment analysis: A perspective on its past, present, '' Int. J. Intell. Syst. Appl. 4 (10) , 1-14"
         },
         {
-            "authors": "Kumar, Sebastian, , ",
-            "source": "Sentiment analysis on Twitter,'' Int. J. Comput. Sci. Issues",
-            "title": "[9]\n          \n          and\n          \n          , ``\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref9",
+            "title": "KumarA., SebastianT. M., [9] and , `` , vol. , no. , pp. , .2012, Sentiment analysis on Twitter,'' Int. J. Comput. Sci. Issues 9 (3) , 372-378"
         },
         {
-            "authors": "Al-Moslmi, Omar, Abdullah, Albared, , ",
-            "source": "'' IEEE Access",
-            "title": "[10]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref10",
+            "title": "Al-MoslmiT., OmarN., AbdullahS., AlbaredM., [10] , , , and , ` , , vol. , pp. , .2017, `Approaches to cross-domain sentiment analysis: A systematic literature review, '' IEEE Access 5 , 16173-16192"
         },
         {
-            "authors": "Kumar, Jaiswal, Pract, , ",
-            "source": null,
-            "title": "[11]\n          \n          and\n          \n          , `\n          \n          .,\n          \n          . Exper., p.\n          \n          ,\n          \n          . doi:\n          \n          .1002/cpe.5107."
+            "refid": "ref11",
+            "title": "KumarA., JaiswalA., Pract, [11] and , ` ., Exper., p. , doi: .1002/cpe.5107.2019, `Systematic literature review of sentiment analysis on Twitter using soft computing techniques,'' Concurrency Comput, 10 , e5107"
         },
         {
-            "authors": "Alou, El, Saddik, , ",
-            "source": null,
-            "title": "[12]\n          \n          and\n          \n          \n          , `\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref12",
+            "title": "AlouS., ElA., Saddik, [12] and , ` , vol. , pp. , .2018, `Sentiment identi cation in football-speci c tweets,'' IEEE Access, 6 , 78609-78621"
         },
         {
-            "authors": "Pai, Liu, , ",
-            "source": null,
-            "title": "[13]\n          \n          and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref13",
+            "title": "PaiP. F., LiuC. H., [13] and , ` ,'' IEEE Access, vol. , pp. , .2018, `Predicting vehicle sales by sentiment analysis of Twitter data and stock market values, 6 , 57655-57662"
         },
         {
-            "authors": "Tseng, Chou, Tsai, , ",
-            "source": null,
-            "title": "[14]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref14",
+            "title": "TsengC. W., ChouJ. J., TsaiY. C., [14] , , and , ` ,'' IEEE Access, vol. , pp. , .2018, `Text mining analysis of teaching evaluation questionnaires for the selection of outstanding teaching faculty members, 6 , 72870-72879"
         },
         {
-            "authors": "Wu, Chi, , ",
-            "source": null,
-            "title": "[15]\n          \n          and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref15",
+            "title": "WuD., ChiM., [15] and , ` ,'' IEEE Access, vol. , pp. , .2017, `Long short-term memory with quadratic connections in recursive neural networks for representing compositional semantics, 5 , 16077-16083"
         },
         {
-            "authors": "Bouazizi, Ohtsuki, , ",
-            "source": null,
-            "title": "[16]\n          \n          and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref16",
+            "title": "BouaziziM., OhtsukiT., [16] and , ` ,'' IEEE Access, vol. , pp. , .2018, `Multi-class sentiment analysis in Twitter: What if classi cation is not the answer, 6 , 64486-64502"
         },
         {
-            "authors": "Zhang, Hong, Y, Chen, , ",
-            "source": null,
-            "title": "[17]\n          \n          , L. Tian,\n          \n          , F. Han,\n          \n          . Ren, and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref17",
+            "title": "ZhangD., HongM., Y, ChenY., [17] , L. Tian, , F. Han, Ren, and , ` ,'' IEEE Access, vol. , pp. , .2018, `Combining convolution neural network and bidirectional gated recurrent unit for sentence semantic classi cation, 6 , 73750-73759"
         },
         {
-            "authors": "Han, J, , ",
-            "source": null,
-            "title": "[18]\n          \n          ,\n          \n          . Liu, and G. Liu, `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref18",
+            "title": "HanH., J, [18] , Liu, and G. Liu, ` ,'' IEEE Access, vol. , pp. , .2018, `Attention-based memory network for text sentiment classi cation, 6 , 68302-68310"
         },
         {
-            "authors": "Fu, Yang, Li, Fang, Wang, , ",
-            "source": "'' IEEE Access",
-            "title": "[19]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref19",
+            "title": "FuX., YangJ., LiJ., FangM., WangH., [19] , , , , and , ` , , vol. , pp. , .2018, `Lexicon-enhanced LSTM with attention for general sentiment analysis, '' IEEE Access 6 , 71884-71891"
         },
         {
-            "authors": "Wang, Ning, Xiao, Li, , ",
-            "source": "'' IEEE Access",
-            "title": "[20]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref20",
+            "title": "WangM., NingZ. H., XiaoC., LiT., [20] , , , and , ` , , vol. , pp. , .2018, `Sentiment classi cation based on information geometry and deep belief networks, '' IEEE Access 6 , 35206-35213"
         },
         {
-            "authors": "Camp, , ",
-            "source": "'' No\u00fbs",
-            "title": "[21]\n          \n          , ``Sarcasm, pretense, and the semantics/pragmatics distinction,\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          , Dec.\n          \n          ."
+            "refid": "ref21",
+            "title": "CampE., [21] , ``Sarcasm, pretense, and the semantics/pragmatics distinction, , vol. , no. , pp. , Dec. .2012, '' No\u00fbs 46 (4) , 587-634"
         },
         {
-            "authors": "Riloff, Qadir, Surve, Silva, Gilbert, Huang, , ",
-            "source": "in Proc. EMNLP",
-            "title": "[22]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,''\n          \n          , vol.\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref22",
+            "title": "RiloffE., QadirA., SurveP., SilvaL. D., GilbertN., HuangR., [22] , , , , , and , ` ,'' , vol. , , pp. .2013, `Sarcasm as contrast between a positive sentiment and negative situation, in Proc. EMNLP 13 , 704-714"
         },
         {
-            "authors": "Cambria, Poria, Bisio, Bajpai, and I. Chaturvedi, , ",
-            "source": "'' in Proc. Int. Conf. Intell. Text Process. Comput. Linguistics",
-            "title": "[23]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , `\n          \n          ,\n          \n          . London, U.K.: Springer,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref23",
+            "title": "CambriaE., PoriaS., BisioF., BajpaiR., and I. Chaturvedi, [23] , , , , , ` , London, U.K.: Springer, , pp. .2015, `The CLSA model: A novel framework for concept-level sentiment analysis, '' in Proc. Int. Conf. Intell. Text Process. Comput. Linguistics , 3-22"
         },
         {
-            "authors": "Bouazizi, Ohtsuki, , ",
-            "source": null,
-            "title": "[24]\n          \n          and\n          \n          , `\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref24",
+            "title": "BouaziziM., OhtsukiT. O., [24] and , ` , vol. , pp. , .2016, `A pattern-based approach for sarcasm detection on Twitter,'' IEEE Access, 4 , 5477-5488"
         },
         {
-            "authors": "Junyi, Yan, , ",
-            "source": "'' Neural Comput. Appl.",
-            "title": "[25]\n          \n          ,\n          \n          ,\n          \n          K.-C. Wong, `\n          \n          ,\n          \n          , pp.\n          \n          \n          , Mar.\n          \n          . doi:\n          \n          .1007/s00521-018-3442-0."
+            "refid": "ref25",
+            "title": "JunyiC., YanS., [25] , , K.-C. Wong, ` , , pp. , Mar. doi: .1007/s00521-018-3442-0.2018, and `Verbal aggression detection on Twitter comments: Convolutional neural network for short-text sentiment analysis, '' Neural Comput. Appl. 10 , 1-10"
         },
         {
-            "authors": "Felbo, Mislove, S\u00f8gaard, I. Rahwan, S. Lehmann., , ",
-            "source": null,
-            "title": "[26]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1708.00524."
+            "refid": "ref26",
+            "title": "FelboB., MisloveA., S\u00f8gaardA., I. Rahwan, S. Lehmann., [26] , , , , and ( ). .'' [Online]. Available: https://arxiv.org/abs/1708.00524.2017, ``Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm,"
         },
         {
-            "authors": "Amir, Wallace, Lyu, P. C. M. J. Silva., , ",
-            "source": null,
-            "title": "[27]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1607.00976"
+            "refid": "ref27",
+            "title": "AmirS., WallaceB. C., LyuH., P. C. M. J. Silva., [27] , , , and ( ). .'' [Online]. Available: https://arxiv.org/abs/1607.009762016, ``Modelling context with user embeddings for sarcasm detection in social media,"
         },
         {
-            "authors": "Joshi, Bhattacharyya, Carman, Saraswati, Shukla, Hum, , ",
-            "source": "in Proc. 10th SIGHUM Workshop Lang",
-            "title": "[28]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,''\n          \n          . Technol. Cultural Heritage, Social Sci.,\n          \n          .,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref28",
+            "title": "JoshiA., BhattacharyyaP., CarmanM., SaraswatiJ., ShuklaR., Hum, [28] , , , , and , ` ,'' Technol. Cultural Heritage, Social Sci., ., , pp. .2016, `How do cultural differences impact the quality of sarcasm annotation?: A case study of indian annotators and american text, in Proc. 10th SIGHUM Workshop Lang , 95-99"
         },
         {
-            "authors": "Ghosh, Veale, , ",
-            "source": "in Proc. 7th Workshop Comput. Approaches Subjectivity",
-            "title": "[29]\n          \n          and\n          \n          , `\n          \n          \n          , Sentiment Social Media Anal.,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref29",
+            "title": "GhoshA., VealeT., [29] and , ` , Sentiment Social Media Anal., , pp. .2016, `Fracking sarcasm using neural network,'', in Proc. 7th Workshop Comput. Approaches Subjectivity , 161-169"
         },
         {
-            "authors": "Gers, Schmidhuber, Cummins, , ",
-            "source": "in Proc. 9th Int. Conf. Artif. Neural Netw. (ICANN)",
-            "title": "[30]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          '\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref30",
+            "title": "GersF. A., SchmidhuberJ., CumminsF., [30] , , and , ` ' , , pp. .1999, `Learning to forget: Continual prediction with LSTM,', in Proc. 9th Int. Conf. Artif. Neural Netw. (ICANN) , 1-20"
         },
         {
-            "authors": "Zhang, Zhang, , ",
-            "source": "in Proc. 26th Int. Conf. Comput. Linguistics, Tech. Papers (COLING)",
-            "title": "[31]\n          \n          ,\n          \n          , and G. Fu, `\n          \n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref31",
+            "title": "ZhangM., ZhangY., [31] , , and G. Fu, ` , , pp. .2016, `Tweet sarcasm detection using deep neural network,'', in Proc. 26th Int. Conf. Comput. Linguistics, Tech. Papers (COLING) , 2449-2460"
         },
         {
-            "authors": "Seo, Kembhavi, Farhadi, H. Hajishirzi., , ",
-            "source": null,
-            "title": "[32]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1611.01603"
+            "refid": "ref32",
+            "title": "SeoM., KembhaviA., FarhadiA., H. Hajishirzi., [32] , , , and ( ). .'' [Online]. Available: https://arxiv.org/abs/1611.016032016, ``Bidirectional attention ow for machine comprehension,"
         },
         {
-            "authors": "Wang, Yang, Wei, Chang, Zhou, Res, , ",
-            "source": "Tech. Rep. 05",
-            "title": "[33]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , ``R-NET:\n          \n          . Comput. Group,\n          \n          . Asia, Beijing, China,\n          \n          ,\n          \n          ."
+            "refid": "ref33",
+            "title": "WangW., YangN., WeiF., ChangB., ZhouM., ResMicrosoft, [33] , , , , and , ``R-NET: Comput. Group, Asia, Beijing, China, , .2017, Machine reading comprehension with self-matching networks,'' Natural Lang, Tech. Rep. 05"
         },
         {
-            "authors": "Ghosh, , ",
-            "source": "in Proc. 9th Int. Workshop Semantic Eval. (SemEval)",
-            "title": "[34]\n          \n          et al., ``Semeval-2015 task 11:\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref34",
+            "title": "GhoshA., [34] et al., ``Semeval-2015 task 11: ,'' , , pp. .2015, Sentiment analysis of gurative language in twitte, in Proc. 9th Int. Workshop Semantic Eval. (SemEval) , 470-478"
         },
         {
-            "authors": "Hltcoe, GA, , ",
-            "source": [
-                "task 2: Sentiment analysis in Twitter,'' Assoc. Comput. Linguistics",
-                "Tech. Rep. 2"
-            ],
-            "title": "[35]\n          \n          , ``Semeval-2013\n          \n          , Atlanta,\n          \n          , USA,\n          \n          ,\n          \n          , p.\n          \n          ."
+            "refid": "ref35",
+            "title": "HltcoeJ., GA, [35] , ``Semeval-2013 , Atlanta, , USA, , , p. ., task 2: Sentiment analysis in Twitter,'' Assoc. Comput. Linguistics, Tech. Rep. 2, (2013) , 312"
         },
         {
-            "authors": "Guyon, Elisseeff, , ",
-            "source": null,
-            "title": "[36]\n          \n          and\n          \n          , `\n          \n          . Berlin, Germany: Springer,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref36",
+            "title": "GuyonI., ElisseeffA., [36] and , ` Berlin, Germany: Springer, , pp. .2006, `An introduction to feature extraction,'' in Feature Extraction, 1-25"
         },
         {
-            "authors": "Loper, Bird, , ",
-            "source": "in Proc. ACL Workshop Effective Tools Methodol. Teach. Natural Lang. Process. Comput. Linguistics, Assoc. Comput. Linguistics",
-            "title": "[37]\n          \n          and\n          \n          , ``NLTK:\n          \n          ,''\n          \n          , vol.\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref37",
+            "title": "LoperE., BirdS., [37] and , ``NLTK: ,'' , vol. , , pp. .The natural language toolkit, in Proc. ACL Workshop Effective Tools Methodol. Teach. Natural Lang. Process. Comput. Linguistics, Assoc. Comput. Linguistics 1 (2002) , 63-70"
         },
         {
-            "authors": "Porter, , ",
-            "source": "'' Program",
-            "title": "[38]\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          . [Online]. Available: https://tartarus.org/martin/ PorterStemmer/"
+            "refid": "ref38",
+            "title": "PorterM. F., [38] , ` , , vol. , no. , pp. , [Online]. Available: https://tartarus.org/martin/ PorterStemmer/1980, `An algorithm for suf x stripping, '' Program 14 (3) , 130-137"
         },
         {
-            "authors": "Salehinejad, Baarbe, Sankar, Barfett, S. Valaee., , ",
-            "source": null,
-            "title": "[39]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , E. Colak, and\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/\n          \n          .01078"
+            "refid": "ref39",
+            "title": "SalehinejadH., BaarbeJ., SankarS., BarfettJ., S. Valaee., [39] , , , , E. Colak, and ( ). .'' [Online]. Available: https://arxiv.org/abs/ .010782017, ``Recent advances in recurrent neural networks,"
         },
         {
-            "authors": "Graves, Jaitly, -R. Mohamed, , ",
-            "source": "in Proc. IEEE Workshop Autom. Speech Recognit. Understand. (ASRU)",
-            "title": "[40]\n          \n          ,\n          \n          , and A.\n          \n          , `\n          \n          '\n          \n          ,\n          \n          .\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref40",
+            "title": "GravesA., JaitlyN., -R. Mohamed, [40] , , and A. , ` ' , , pp. .Dec, `Hybrid speech recognition with deep bidirectional LSTM,', in Proc. IEEE Workshop Autom. Speech Recognit. Understand. (ASRU) , 273-278"
         },
         {
-            "authors": "Luong, Pham, Manning, , ",
-            "source": null,
-            "title": "[41]\n          \n          ,\n          \n          , and\n          \n          . (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1508.04025"
+            "refid": "ref41",
+            "title": "LuongM. T., PhamH., ManningC. D., [41] , , and ( ). .'' [Online]. Available: https://arxiv.org/abs/1508.040252015, ``Effective approaches to attention-based neural machine translation,"
         },
         {
-            "authors": "Xu, Jun, , ",
-            "source": "in Proc. Int. Conf. Mach",
-            "title": "[42]\n          \n          et al.,\n          \n          \n          . Learn.,\n          \n          .\n          \n          , pp.\n          \n          ."
+            "refid": "ref42",
+            "title": "XuK., Jun, [42] et al., Learn., , pp. .2015, ``Show, attend and tell: Neural image caption generation with visual attention,'', in Proc. Int. Conf. Mach"
         },
         {
-            "authors": "Davidov, Tsur, Rappoport, , ",
-            "source": "in Proc. 23rd Int. Conf. Comput. Linguistics, Posters, Assoc. Comput. Linguistics",
-            "title": "[43]\n          \n          ,\n          \n          ,\n          \n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref43",
+            "title": "DavidovD., TsurO., RappoportA., [43] , , , ` ,'' , , pp. .2010, and `Enhanced sentiment learning using Twitter hashtags and smileys, in Proc. 23rd Int. Conf. Comput. Linguistics, Posters, Assoc. Comput. Linguistics , 241-249"
         },
         {
-            "authors": "Thelwall, Buckley, , ",
-            "source": "'' J. Amer. Soc. Inf. Sci. Technol",
-            "title": "[44]\n          \n          and\n          \n          , `\n          \n          ,\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref44",
+            "title": "ThelwallM., BuckleyK., [44] and , ` , ., vol. , no. , pp. , .2013, `Topic-based sentiment analysis for the social Web: The role of mood and issue-related words, '' J. Amer. Soc. Inf. Sci. Technol 64 (8) , 1608-1617"
         },
         {
-            "authors": "Gilbert, Vader, , ",
-            "source": "in Proc. 8th Int. Conf. Weblogs Social Media (ICWSM)",
-            "title": "[45]\n          \n          and\n          \n          , ``VADER:\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref45",
+            "title": "GilbertC. H. E., VaderA., [45] and , ``VADER: ,'' , , pp. .2014, A parsimonious rule-based model for sentiment analysis of social media text, in Proc. 8th Int. Conf. Weblogs Social Media (ICWSM) , 1-10"
         },
         {
-            "authors": "Li, Yuan, , ",
-            "source": "in Proc. Adv. Neural Inf. Process. Syst.",
-            "title": "[46]\n          \n          and\n          \n          , `\n          \n          ,''\n          \n          ,\n          \n          , pp.\n          \n          \n          ."
+            "refid": "ref46",
+            "title": "LiY., YuanY., [46] and , ` ,'' , , pp. .2017, `Convergence analysis of two-layer neural networks with relu activation, in Proc. Adv. Neural Inf. Process. Syst. , 597-607"
         },
         {
-            "authors": "Kim., , ",
-            "source": null,
-            "title": "[47]\n          \n          (\n          \n          ).\n          \n          .'' [Online]. Available: https://arxiv.org/abs/1408.5882."
+            "refid": "ref47",
+            "title": "Kim.Y., [47] ( ). .'' [Online]. Available: https://arxiv.org/abs/1408.5882.2014, ``Convolutional neural networks for sentence classi cation,"
         },
         {
-            "authors": "Jianqiang, Xuejun, , ",
-            "source": "'' IEEE Access",
-            "title": "[48]\n          \n          , G. Xiaolin, and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref48",
+            "title": "JianqiangZ., XuejunZ., [48] , G. Xiaolin, and , ` , , vol. , pp. , .2018, `Deep convolution neural networks for Twitter sentiment analysis, '' IEEE Access 6 , 23253-23260"
         },
         {
-            "authors": "D. M. Powers, Mach, , ",
-            "source": "net/2328/27165",
-            "title": "[49]\n          \n          , `\n          \n          \n          . Learn. Technol., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          . [Online]. Available: http://hdl.handle."
+            "refid": "ref49",
+            "title": "D. M. Powers, MachJ., [49] , ` Learn. Technol., vol. , no. , pp. , [Online]. Available: http://hdl.handle.2011, `Evaluation: From precision, recall and F-measure to ROC, informedness, markedness and correlation,'', net/2328/27165 2 (1) , 37-63"
         },
         {
-            "authors": "Bhatia, Kumar, Theor, , ",
-            "source": null,
-            "title": "[50]\n          \n          and\n          \n          , `\n          \n          \n          . Appl. Inf. Technol., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref50",
+            "title": "BhatiaM. P. S., KumarA., TheorJ., [50] and , ` Appl. Inf. Technol., vol. , no. , pp. , .2008, `A primer on the Web information retrieval paradigm,'', 4 (7) , 657-662"
         },
         {
-            "authors": "Hemanth, Anitha, Naaji, Geman, Popescu, Son, , ",
-            "source": null,
-            "title": "[51]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' IEEE Access, vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref51",
+            "title": "HemanthD. J., AnithaJ., NaajiA., GemanO., PopescuD. E., SonL. H., [51] , , , , , and , ` ,'' IEEE Access, vol. , pp. , .2018, `A modi ed deep convolutional neural network for abnormal brain image classi cation, 7 , 4275-4283"
         },
         {
-            "authors": "Son, Fujita, , ",
-            "source": null,
-            "title": "[52]\n          \n          and\n          \n          , `\n          \n          ,'' Appl. Intell., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref52",
+            "title": "SonL. H., FujitaH., [52] and , ` ,'' Appl. Intell., vol. , no. , pp. , .2019, `Neural-fuzzy with representative sets for prediction of student performance, 49 (1) , 172-187"
         },
         {
-            "authors": "Hemanth, Anitha, Son, Mittal, Med, , ",
-            "source": null,
-            "title": "[53]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          \n          . Syst., vol.\n          \n          , no.\n          \n          , p.\n          \n          ,\n          \n          ."
+            "refid": "ref53",
+            "title": "HemanthD. J., AnithaJ., SonL. H., MittalM., MedJ., [53] , , , and , ` Syst., vol. , no. , p. , .2018, `Diabetic retinopathy diagnosis from retinal images using modi ed hop eld neural network,'', 42 (12) , 247"
         },
         {
-            "authors": "Hemanth, Anitha, Son, , ",
-            "source": "'' Comput. Elect. Eng.",
-            "title": "[54]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , May\n          \n          ."
+            "refid": "ref54",
+            "title": "HemanthD. J., AnithaJ., SonL. H., [54] , , and , ` , , vol. , pp. , May .2018, `Brain signal based human emotion analysis by circular back propagation and deep Kohonen neural networks, '' Comput. Elect. Eng. 68 , 170-180"
         },
         {
-            "authors": "Giap, Son, Chiclana, Intell, , ",
-            "source": null,
-            "title": "[55]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          \n          . Fuzzy Syst., vol.\n          \n          , pp.\n          \n          \n          , Jan.\n          \n          ."
+            "refid": "ref55",
+            "title": "GiapC. N., SonL. H., ChiclanaF., IntellJ., [55] , , and , ` Fuzzy Syst., vol. , pp. , Jan. .2018, `Dynamic structural neural network,'', 34 , 2479-2490"
         },
         {
-            "authors": "Doss, , ",
-            "source": null,
-            "title": "[56]\n          \n          et al.,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref56",
+            "title": "DossS., [56] et al., , vol. , pp. , .2018, ``APD-JFAD: Accurate prevention and detection of Jelly Fish attack in MANET,'' IEEE Access, 6 , 56954-56965"
         },
         {
-            "authors": "Hai, Son, Le, Vinh, , ",
-            "source": "'' Appl. Soft Comput.",
-            "title": "[57]\n          \n          ,\n          \n          , and\n          \n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , May\n          \n          ."
+            "refid": "ref57",
+            "title": "HaiD. T., SonL. H., LeT., Vinh, [57] , , and , ` , , vol. , pp. , May .2017, `Novel fuzzy clustering scheme for 3D wireless sensor networks, '' Appl. Soft Comput. 54 , 141-149"
         },
         {
-            "authors": "Kapoor, Gupta, Kumar, Son, Jha, , ",
-            "source": null,
-            "title": "[58]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Wireless Netw., pp.\n          \n          \n          , May\n          \n          . doi:\n          \n          .1007/s11276-018-1750-z."
+            "refid": "ref58",
+            "title": "KapoorR., GuptaR., KumarR., SonL. H., JhaS., [58] , , , , and , ` ,'' Wireless Netw., pp. , May doi: .1007/s11276-018-1750-z.2018, `New scheme for underwater acoustically wireless transmission using direct sequence code division multiple access in MIMO systems, 10 , 1-13"
         },
         {
-            "authors": "Kapoor, Gupta, Son, Jha, Kumar, , ",
-            "source": "'' Measurement",
-            "title": "[59]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , May\n          \n          ."
+            "refid": "ref59",
+            "title": "KapoorR., GuptaR., SonL. H., JhaS., KumarR., [59] , , , , and , ` , , vol. , pp. , May .2018, `Detection of power quality event using histogram of oriented gradients and support vector machine, '' Measurement 120 , 52-75"
         },
         {
-            "authors": "Kapoor, Gupta, Son, Jha, Kumar, , ",
-            "source": "'' Measurement",
-            "title": "[60]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , Oct.\n          \n          ."
+            "refid": "ref60",
+            "title": "KapoorR., GuptaR., SonL. H., JhaS., KumarR., [60] , , , , and , ` , , vol. , pp. , Oct. .2018, `Boosting performance of power quality event identi cation with KL divergence measure and standard deviation, '' Measurement 126 , 134-142"
         },
         {
-            "authors": "Long, Ali, Son, Khan, Tu, , ",
-            "source": "doi: 10",
-            "title": "[61]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Comput. Ind. Eng., to be published.\n          \n          .1016/j.cie.\n          \n          .\n          \n          .007."
+            "refid": "ref61",
+            "title": "LongH. V., AliM., SonL. H., KhanM., TuD. N., [61] , , , , and , ` ,'' Comput. Ind. Eng., to be published. .1016/j.cie. .007.2018, `A novel approach for fuzzy clustering based on neutrosophic association matrix, doi: 10 11"
         },
         {
-            "authors": "P. T. M. Phuong, Thong, Son, , ",
-            "source": "J. Comput. Sci. Cybern",
-            "title": "[62]\n          \n          \n          \n          , `\n          \n          ,''\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref62",
+            "title": "P. T. M. Phuong,P. H., Thong, andL. H., Son, [62] , ` ,'' ., vol. , no. , pp. , .2018, `Theoretical analysis of picture fuzzy clustering: Convergence and property, J. Comput. Sci. Cybern 34 (1) , 17-32"
         },
         {
-            "authors": "Robinson, Julie, Saravanan, Kumar, Son, , ",
-            "source": "'' J. Ambient Intell. Hum. Comput.",
-            "title": "[63]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , ``FDAOMDV:\n          \n          ,\n          \n          , pp.\n          \n          \n          , Nov.\n          \n          . doi:\n          \n          .1007/s12652-018-1126-3."
+            "refid": "ref63",
+            "title": "RobinsonY. H., JulieE. G., SaravananK., KumarR., SonL. H., [63] , , , , and , ``FDAOMDV: , , pp. , Nov. doi: .1007/s12652-018-1126-3.2019, Fault-tolerant disjoint ad-hoc on-demand multipath distance vector routing algorithm in mobile ad-hoc networks, '' J. Ambient Intell. Hum. Comput. 10 , 1-18"
         },
         {
-            "authors": "Saravanan, Kumar, Son, , ",
-            "source": null,
-            "title": "[64]\n          \n          , E. Anusuya,\n          \n          , and\n          \n          , `\n          \n          . Monitor. Assessment, vol.\n          \n          , no.\n          \n          , p.\n          \n          ,\n          \n          ."
+            "refid": "ref64",
+            "title": "SaravananK., KumarR., SonL. H., [64] , E. Anusuya, , and , ` Monitor. Assessment, vol. , no. , p. , .2018, `Real-time water quality monitoring using Internet of Things in SCADA,'' Environ, 190 (9) , 556"
         },
         {
-            "authors": "Saravanan, Aswini, Kumar, Son, , ",
-            "source": "'' Earth Sci. Inform",
-            "title": "[65]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,\n          \n          ., pp.\n          \n          \n          , Nov.\n          \n          . doi:\n          \n          .1007/s12145-018-0371-5."
+            "refid": "ref65",
+            "title": "SaravananK., AswiniS., KumarR., SonL. H., [65] , , , and , ` , ., pp. , Nov. doi: .1007/s12145-018-0371-5.2019, `How to prevent maritime border collision for Fisheries? A design of real-time automatic identi cation system, '' Earth Sci. Inform 10 , 1-12"
         },
         {
-            "authors": "Singh, Singh, Son, Aziz, , ",
-            "source": null,
-            "title": "[66]\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          , `\n          \n          ,'' Comput. Netw., vol.\n          \n          , pp.\n          \n          \n          , Jun.\n          \n          ."
+            "refid": "ref66",
+            "title": "SinghK., SinghK., SonL. H., AzizA., [66] , , , , ` ,'' Comput. Netw., vol. , pp. , Jun. .2018, and `Congestion control in wireless sensor networks by hybrid multi-objective optimization algorithm, 138 , 90-107"
         },
         {
-            "authors": "Singh, Son, Chiclana, Magnot, , ",
-            "source": null,
-            "title": "[67]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Eng. Comput., pp.\n          \n          \n          , Jan.\n          \n          . doi:\n          \n          .1007/s00366-018-00696-8."
+            "refid": "ref67",
+            "title": "SinghN., SonL. H., ChiclanaF., MagnotJ.-P., [67] , , , and , ` ,'' Eng. Comput., pp. , Jan. doi: .1007/s00366-018-00696-8.2019, `A new fusion of salp swarm with sine cosine for optimization of non-linear functions, 10 , 1-28"
         },
         {
-            "authors": "Son, Intell, Int, , ",
-            "source": "'' Inf. Sci.-Inform. Comput. Sci",
-            "title": "[68]\n          \n          , `\n          \n          ,\n          \n          .,\n          \n          . Syst., Appl.,\n          \n          . J., vol.\n          \n          , pp.\n          \n          \n          , Oct.\n          \n          ."
+            "refid": "ref68",
+            "title": "SonL. H., Intell, Int, [68] , ` , ., Syst., Appl., J., vol. , pp. , Oct. .2015, `A novel kernel fuzzy clustering algorithm for geo-demographic analysis, '' Inf. Sci.-Inform. Comput. Sci 317 , 202-223"
         },
         {
-            "authors": "Son, , ",
-            "source": "'' Appl. Soft Comput.",
-            "title": "[69]\n          \n          , `\n          \n          ,\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , Sep.\n          \n          ."
+            "refid": "ref69",
+            "title": "SonL. H., [69] , ` , , vol. , pp. , Sep. .2016, `Generalized picture distance measure and applications to picture fuzzy clustering, '' Appl. Soft Comput. 46 , 284-295"
         },
         {
-            "authors": "Son, Hai, Syst, , ",
-            "source": null,
-            "title": "[70]\n          \n          and\n          \n          , `\n          \n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref70",
+            "title": "SonL. H., HaiP. V., SystInt. J. Fuzzy, [70] and , ` ., vol. , no. , pp. , .2016, `A novel multiple fuzzy clustering method based on internal clustering validation measures with gradient descent,'', 18 (5) , 894-903"
         },
         {
-            "authors": "Jha, Kumar, Chatterjee, Khari, , ",
-            "source": null,
-            "title": "[71]\n          \n          ,\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          \n          ,'' Telecommun. Syst., pp.\n          \n          \n          , Jun.\n          \n          . doi:\n          \n          .1007/s11235-018-0481-x."
+            "refid": "ref71",
+            "title": "JhaS., KumarR., ChatterjeeJ. M., KhariM., [71] , , , and , ` ,'' Telecommun. Syst., pp. , Jun. doi: .1007/s11235-018-0481-x.2017, `Collaborative handshaking approaches between Internet of computing and Internet of Things towards a smart world: A review from 2009, 10 , 1-18"
         },
         {
-            "authors": "Son, Tien, Syst, , ",
-            "source": null,
-            "title": "[72]\n          \n          and\n          \n          , `\n          \n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref72",
+            "title": "SonL. H., TienN. D., SystInt. J. Fuzzy, [72] and , ` ., vol. , no. , pp. , .2017, `Tune up fuzzy C-means for big data: Some novel hybrid clustering algorithms based on initial selection and incremental clustering,'', 19 (5) , 1585-1602"
         },
         {
-            "authors": "Son, Tuan, , ",
-            "source": "Appl.",
-            "title": "[73]\n          \n          and\n          \n          , `\n          \n          .\n          \n          , vol.\n          \n          , pp.\n          \n          \n          , Mar.\n          \n          ."
+            "refid": "ref73",
+            "title": "SonL. H., TuanT. M., [73] and , ` , vol. , pp. , Mar. .2016, `A cooperative semi-supervised fuzzy clustering framework for dental X-ray image segmentation,'' Expert Syst, Appl. 46 , 380-393"
         },
         {
-            "authors": "Son, Thong, , ",
-            "source": null,
-            "title": "[74]\n          \n          and\n          \n          , `\n          \n          ,'' Appl. Intell., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref74",
+            "title": "SonL. H., ThongP. H., [74] and , ` ,'' Appl. Intell., vol. , no. , pp. , .2017, `Some novel hybrid forecast methods based on picture fuzzy clustering for weather nowcasting from satellite image sequences, 46 (1) , 1-15"
         },
         {
-            "authors": "Son, Tuan, , ",
-            "source": null,
-            "title": "[75]\n          \n          and\n          \n          , `\n          \n          ,'' Eng. Appl. Artif. Intell., vol.\n          \n          , pp.\n          \n          \n          , Mar.\n          \n          ."
+            "refid": "ref75",
+            "title": "SonL. H., TuanT. M., [75] and , ` ,'' Eng. Appl. Artif. Intell., vol. , pp. , Mar. .2017, `Dental segmentation from X-ray images using semi-supervised fuzzy clustering with spatial constraints, 59 , 186-195"
         },
         {
-            "authors": "Tam, Hai, Son, , ",
-            "source": null,
-            "title": "[76]\n          \n          ,\n          \n          ,\n          \n          , and L. T. Vinh, `\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref76",
+            "title": "TamN. T., HaiD. T., SonL. H., [76] , , , and L. T. Vinh, ` ., vol. , no. , pp. , .2018, `Improving lifetime and network connections of 3D wireless sensor networks based on fuzzy clustering and particle swarm optimization,'' Wireless Netw, 24 (5) , 1477-1490"
         },
         {
-            "authors": "Thanh, Ali, Son, , ",
-            "source": null,
-            "title": "[77]\n          \n          ,\n          \n          , and\n          \n          , `\n          \n          ,'' Cogn. Comput., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref77",
+            "title": "ThanhN. D., AliM., SonL. H., [77] , , and , ` ,'' Cogn. Comput., vol. , no. , pp. , .2017, `A novel clustering algorithm in a neutrosophic recommender system for medical diagnosis, 9 (4) , 526-544"
         },
         {
-            "authors": "Thong, Son, , ",
-            "source": null,
-            "title": "[78]\n          \n          and\n          \n          , `\n          \n          ., vol.\n          \n          , no.\n          \n          , pp.\n          \n          \n          ,\n          \n          ."
+            "refid": "ref78",
+            "title": "ThongP. H., SonL. H., [78] and , ` ., vol. , no. , pp. , .2016, `Picture fuzzy clustering: A new computational intelligence method,'' Soft Comput, 20 (9) , 3549-3562"
         },
         {
-            "authors": "Thong, Son, Syst, , ",
-            "source": null,
-            "title": "[79]\n          \n          and\n          \n          , `\n          \n          ,'' Knowl.-Based\n          \n          ., vol.\n          \n          , pp.\n          \n          \n          , Oct.\n          \n          ."
+            "refid": "ref79",
+            "title": "ThongP. H., SonL. H., Syst, [79] and , ` ,'' Knowl.-Based ., vol. , pp. , Oct. .2016, `A novel automatic picture fuzzy clustering method based on particle swarm optimization and picture composite cardinality, 109 , 48-60"
         },
         {
-            "authors": "Thong, Son, , ",
-            "source": null,
-            "title": "[80]\n          \n          and\n          \n          , `\n          \n          ,'' Eng. Appl. Artif. Intell., vol.\n          \n          , pp.\n          \n          \n          , Nov.\n          \n          ."
+            "refid": "ref80",
+            "title": "ThongP. H., SonL. H., [80] and , ` ,'' Eng. Appl. Artif. Intell., vol. , pp. , Nov. .2016, `Picture fuzzy clustering for complex data, 56 , 121-130"
         }
     ],
     "journal": "VOLUME",

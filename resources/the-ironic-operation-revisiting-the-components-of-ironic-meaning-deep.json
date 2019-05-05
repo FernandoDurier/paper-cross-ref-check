@@ -36,316 +36,244 @@
     ],
     "clean-refs": [
         {
-            "authors": "Akimoto, , ",
-            "source": "Metaphor Symb",
-            "title": ", Yoritaka, Shiho, Miyazawa, Toshiaki, Muramoto,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926488.\n          \n          .691750"
+            "refid": "ref1",
+            "title": "Akimoto, Yoritaka, Shiho, Miyazawa, Toshiaki, Muramoto, , -- http://dx.doi.org/10.1080/10926488. .6917502012, Comprehension processes of verbal irony: the effects of salience, egocentric context, and allocentric theory of mind, Metaphor Symb 27 , 217-242"
         },
         {
-            "authors": "Attardo, , ",
-            "source": "J. Pragmat",
-            "title": ", Salvatore,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref2",
+            "title": "Attardo, Salvatore, , -- http://dx.doi.org/10.1016/S0378- ( ) -2000, Irony as relevant inappropriateness, J. Pragmat 32, 2166, (99) , 793, 00070, 826, 3"
         },
         {
-            "authors": "Bach, , ",
-            "source": null,
-            "title": ", Kent, Harnish, Robert,\n          \n          .\n          \n          . MIT Press, Cambridge, MA."
+            "refid": "ref3",
+            "title": "Bach, Kent, Harnish, Robert, MIT Press, Cambridge, MA.1979, Linguistic Communication and Speech Acts,"
         },
         {
-            "authors": "Burgers, Margot, Jan, , ",
-            "source": "Metaphor Symb",
-            "title": ", Christian, van Mulken,\n          \n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926488.\n          \n          .583194"
+            "refid": "ref4",
+            "title": "Burgers, Margot, Schellens,Peter, Jan, Christian, van Mulken, , , -- http://dx.doi.org/10.1080/10926488. .5831942011, Finding irony: an introduction of the Verbal Irony Procedure (VIP), Metaphor Symb 26 , 186-205"
         },
         {
-            "authors": "Camp, , ",
-            "source": null,
-            "title": ", Elisabeth,\n          \n          . Sarcasm, pretense, and\n          \n          . NO U?S\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1111/j.1468-\n          \n          .\n          \n          .\n          \n          .x"
+            "refid": "ref5",
+            "title": "Camp, Elisabeth, Sarcasm, pretense, and NO U?S ( ), -- http://dx.doi.org/10.1111/j.1468- .x2012, the semantics/pragmatics distinction, 00822 (46, 4, ), 587, 0068-634"
         },
         {
-            "authors": "Clark, , ",
-            "source": "J. Exp. Psychol. Gen",
-            "title": ", Gerrig, Richard J.,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          ."
+            "refid": "ref6",
+            "title": "Clark,Herbert H., Gerrig, Richard J., ( ), -- .1984, On the pretense theory of irony, J. Exp. Psychol. Gen 113 (1) , 121-126"
         },
         {
-            "authors": "Cutler, Fox, Bruck, A, , ",
-            "source": "Papers from the 10th Regional Meeting of the Chicago Linguistic Society",
-            "title": ", Anne,\n          \n          .\n          \n          . In: LaGaly,\n          \n          ,\n          \n          ,\n          \n          . (Eds.),\n          \n          , pp.\n          \n          --\n          \n          ."
+            "refid": "ref7",
+            "title": "Cutler, Fox,M.W., Bruck,R.A., A, Anne, In: LaGaly, , , (Eds.), , pp. -- .1974, On saying what you mean without meaning what you say, Papers from the 10th Regional Meeting of the Chicago Linguistic Society , 117-127"
         },
         {
-            "authors": "Dascal, , ",
-            "source": "Cognit. Sci",
-            "title": ", Marcelo,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/S0364-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref8",
+            "title": "Dascal, Marcelo, , -- http://dx.doi.org/10.1016/S0364- ( ) -1987, Defending literal meaning, Cognit. Sci 11, 0213, (87) , 259, 80007, 281, 1"
         },
         {
-            "authors": "Dews, , ",
-            "source": "J. Pragmat",
-            "title": ", Shelly, Winner, Ellen,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx. doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref9",
+            "title": "Dews, Shelly, Winner, Ellen, , -- http://dx. doi.org/10.1016/S0378- ( ) -1999, Obligatory processing of literal and nonliteral meanings in verbal irony, J. Pragmat 31, 2166, (99) , 1579, 00005, 1599, 3"
         },
         {
-            "authors": "Dynel, , ",
-            "source": [
-                "Intercult. Pragmat",
-                "-0018"
-            ],
-            "title": ", Marta, 2013a.\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http:// dx.doi.org/10.1515/ip-2013"
+            "refid": "ref10",
+            "title": "Dynel, Marta, 2013a. , -- http:// dx.doi.org/10.1515/ip-2013Irony from a neo-Gricean perspective: on untruthfulness and evaluative implicature, Intercult. Pragmat, -0018, 10 , 403-431"
         },
         {
-            "authors": "Dynel, M., , ",
-            "source": "Developments in Linguistic Humour Theory. John Benjamins",
-            "title": ", Marta, 2013b.\n          \n          . In: Dynel,\n          \n          (Ed.),\n          \n          , Amsterdam, pp.\n          \n          --\n          \n          ."
+            "refid": "ref11",
+            "title": "Dynel, M., Marta, 2013b. In: Dynel, (Ed.), , Amsterdam, pp. -- .When does irony tickle the hearer? Towards capturing the characteristics of humorous irony, Developments in Linguistic Humour Theory. John Benjamins , 289-320"
         },
         {
-            "authors": "Dynel, , ",
-            "source": [
-                "HUMOR: Int. J. Humor Res",
-                "-0096"
-            ],
-            "title": ", Marta,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1515/ humor-2014"
+            "refid": "ref12",
+            "title": "Dynel, Marta, , -- http://dx.doi.org/10.1515/ humor-20142014, Isn't it ironic? Defining the scope of humorous irony, HUMOR: Int. J. Humor Res, -0096, 27 , 619-639"
         },
         {
-            "authors": "Filik, , ",
-            "source": "Cognition",
-            "title": ",\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j.cognition.\n          \n          .\n          \n          .005"
+            "refid": "ref13",
+            "title": "Filik, Ruth, Moxey,Linda M., , ( ), -- http://dx.doi.org/10.1016/j.cognition. .0052010, The on-line processing of written irony, Cognition 116, 06, (3) , 421-436"
         },
         {
-            "authors": "Filik, , ",
-            "source": "J. Exp. Psychol. Learn. Mem. Cognit",
-            "title": ", Ruth, Hartmut, Leuthold, Katie, Wallington, Jemma, Page,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1037/a0035658"
+            "refid": "ref14",
+            "title": "Filik, Ruth, Hartmut, Leuthold, Katie, Wallington, Jemma, Page, ( ), -- http://dx.doi.org/10.1037/a00356582014, Testing theories of irony processing using eye-tracking and ERPs, J. Exp. Psychol. Learn. Mem. Cognit 40 (3) , 811-828"
         },
         {
-            "authors": "Garmendia, , ",
-            "source": "Pragmat. Cognit",
-            "title": ", Joana,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1075/pc.18.2.07gar"
+            "refid": "ref15",
+            "title": "Garmendia, Joana, ( ), -- http://dx.doi.org/10.1075/pc.18.2.07gar2010, Irony is critical, Pragmat. Cognit 18 (2) , 397-421"
         },
         {
-            "authors": "Garmendia, , ",
-            "source": "Intercult. Pragmat",
-            "title": ", Joana,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1515/IPRG.\n          \n          .002"
+            "refid": "ref16",
+            "title": "Garmendia, Joana, ( ), -- http://dx.doi.org/10.1515/IPRG. .0022011, She's (not) a fine friend: ''Saying'' and criticism in irony, Intercult. Pragmat 8 (1) , 41-65"
         },
         {
-            "authors": "Garmendia, , ",
-            "source": "Int. Rev. Pragmat",
-            "title": ", Joana,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1163/\n          \n          -"
+            "refid": "ref17",
+            "title": "Garmendia, Joana, , -- http://dx.doi.org/ 10.1163/ -2015, A (Neo)Gricean account of irony: an answer to Relevance Theory, Int. Rev. Pragmat 7 , 40, 18773109, 79, 00701003"
         },
         {
-            "authors": "Gibbs, , ",
-            "source": "J. Exp. Linguist. Gen",
-            "title": ", Raymond,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          ."
+            "refid": "ref18",
+            "title": "Gibbs, Raymond, ( ), -- .1986, On the psycholinguistics of sarcasm, J. Exp. Linguist. Gen 115 (1) , 3-15"
         },
         {
-            "authors": "Gibbs, , ",
-            "source": "J. Pragmat",
-            "title": ", Raymond,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref19",
+            "title": "Gibbs, Raymond, , -- http://dx.doi.org/ 10.1016/S0378- ( ) -2002, A new look at literal meaning in understanding what is said and implicated, J. Pragmat 34, 2166, (01) , 457, 00046, 486, 7"
         },
         {
-            "authors": "Gibbs, Raymond, , ",
-            "source": "J. Pragmat",
-            "title": ",\n          \n          'Brien, Jennifer,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          ."
+            "refid": "ref20",
+            "title": "Gibbs, Raymond,O, , 'Brien, Jennifer, , -- .1991, Psychological aspects of irony understanding, J. Pragmat 16 , 523-530"
         },
         {
-            "authors": "Giora, , ",
-            "source": "Discourse Processes",
-            "title": ", Rachel,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          --\n          \n          ."
+            "refid": "ref21",
+            "title": "Giora, Rachel, , -- .1995, On irony and negation, Discourse Processes 19 , 239-264"
         },
         {
-            "authors": "Giora, , ",
-            "source": null,
-            "title": ", Rachel,\n          \n          .\n          \n          . Pragmat.\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/S0378-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref22",
+            "title": "Giora, Rachel, Pragmat. , -- http://dx.doi.org/10.1016/S0378- ( ) -2002, Literal vs. figurative language: different or equal? J, 34, 2166, (01) , 487, 00045, 506, 5"
         },
         {
-            "authors": "Giora, Language, , ",
-            "source": null,
-            "title": ", Rachel,\n          \n          . On Our Mind: Salience, Context and\n          \n          . Oxford University Press, Oxford."
+            "refid": "ref23",
+            "title": "Giora, LanguageFigurative, Rachel, On Our Mind: Salience, Context and Oxford University Press, Oxford.2003,"
         },
         {
-            "authors": "Giora, M., , ",
-            "source": "The Pragmatics of Humour Across Discourse Domains. John Benjamins",
-            "title": ", Rachel,\n          \n          .\n          \n          ? In: Dynel,\n          \n          (Ed.),\n          \n          , Amsterdam, pp.\n          \n          --\n          \n          ."
+            "refid": "ref24",
+            "title": "Giora, M., Rachel, ? In: Dynel, (Ed.), , Amsterdam, pp. -- .2011, Will anticipating irony facilitate it immediately, The Pragmatics of Humour Across Discourse Domains. John Benjamins , 19-32"
         },
         {
-            "authors": "Giora, , ",
-            "source": "Metaphor Symb",
-            "title": ", Rachel, Fein, Ofer,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          ."
+            "refid": "ref25",
+            "title": "Giora, Rachel, Fein, Ofer, , -- .1999, Irony: context and salience, Metaphor Symb 14 , 241-257"
         },
         {
-            "authors": "Giora, , ",
-            "source": "Metaphor Symb",
-            "title": ", Rachel, Ofer, Fein, Dafna, Laadan, Joe, Wolfson, Michal, Zeituny, Ran, Kidron, Ronie, Kaufman, Ronit, Shaham,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926480701235346"
+            "refid": "ref26",
+            "title": "Giora, Rachel, Ofer, Fein, Dafna, Laadan, Joe, Wolfson, Michal, Zeituny, Ran, Kidron, Ronie, Kaufman, Ronit, Shaham, ( ), -- http://dx.doi.org/10.1080/109264807012353462007, Expecting irony: context versus salience-based effects, Metaphor Symb 22 (2) , 119-146"
         },
         {
-            "authors": "Giora, , ",
-            "source": "Belg. J. Linguist",
-            "title": ", Rachel, Ari, Drucker, Fein, Ofer,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1075/bjl.28.01gio"
+            "refid": "ref27",
+            "title": "Giora, Rachel, Ari, Drucker, Fein, Ofer, , -- http://dx.doi.org/10.1075/bjl.28.01gio2014, Resonating with default nonsalient interpretations: a corpus-based study of negative sarcasm, Belg. J. Linguist 28 , 3-18"
         },
         {
-            "authors": "Giora, , ",
-            "source": "Discourse Processes",
-            "title": ", Rachel, Ari, Drucker, Ofer, Fein, Itamar, Mendelson,\n          \n          .\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1080/0163853X.\n          \n          .954951"
+            "refid": "ref28",
+            "title": "Giora, Rachel, Ari, Drucker, Ofer, Fein, Itamar, Mendelson, ( ), -- http://dx.doi.org/10.1080/0163853X. .9549512015, Default sarcastic interpretations: on the priority of nonsalient interpretations, Discourse Processes 52 (3) , 173-200"
         },
         {
-            "authors": "Grice, P., J.L, Acts, , ",
-            "source": "Syntax and Semantics",
-            "title": ",\n          \n          .\n          \n          . In: Cole,\n          \n          , Morgan,\n          \n          . (Eds.),\n          \n          \n          :\n          \n          . Academic Press, New York, pp.\n          \n          --\n          \n          ."
+            "refid": "ref29",
+            "title": "Grice,Paul H., P., J.L, ActsSpeech, , In: Cole, , Morgan, (Eds.), : Academic Press, New York, pp. -- .1975, Logic and conversation, Syntax and Semantics 3 , 41-58"
         },
         {
-            "authors": "Grice, P., , ",
-            "source": "Syntax and Semantics",
-            "title": ",\n          \n          .\n          \n          . In: Cole,\n          \n          (Ed.),\n          \n          \n          : Pragmatics. Academic Press, New York, pp.\n          \n          --\n          \n          ."
+            "refid": "ref30",
+            "title": "Grice,Paul H., P., , In: Cole, (Ed.), : Pragmatics. Academic Press, New York, pp. -- .1978, Further notes on logic and conversation, Syntax and Semantics 9 , 113-127"
         },
         {
-            "authors": "Grice, , ",
-            "source": null,
-            "title": ",\n          \n          .\n          \n          . Harvard University Press, Cambridge, MA."
+            "refid": "ref31",
+            "title": "Grice,Paul H., , Harvard University Press, Cambridge, MA.1989, Studies in the Way of Words,"
         },
         {
-            "authors": "Hamamoto, Uchida, , ",
-            "source": "Relevance Theory: Applications and Implications",
-            "title": ", Hideki,\n          \n          .\n          \n          . In: Carston,\n          \n          , S. (Eds.),\n          \n          . John Benjamins, Amsterdam, pp.\n          \n          --\n          \n          ."
+            "refid": "ref32",
+            "title": "Hamamoto, Uchida,R., Hideki, In: Carston, , S. (Eds.), John Benjamins, Amsterdam, pp. -- .1998, Irony from a cognitive perspective, Relevance Theory: Applications and Implications , 257-270"
         },
         {
-            "authors": "Haverkate, , ",
-            "source": "J. Pragmat",
-            "title": ", Henk,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          ."
+            "refid": "ref33",
+            "title": "Haverkate, Henk, , -- .1990, A speech act analysis of irony, J. Pragmat 14 , 77-109"
         },
         {
-            "authors": "Jaszczolt, Kasia, , ",
-            "source": "Intercult. Pragmat",
-            "title": ",\n          \n          ,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1515/IPRG.\n          \n          .015"
+            "refid": "ref34",
+            "title": "Jaszczolt, KasiaM., , , , -- http://dx.doi.org/ 10.1515/IPRG. .0152009, Cancellability and the primary/secondary meaning distinction, Intercult. Pragmat 6 , 259-289"
         },
         {
-            "authors": "Jorgensen, , ",
-            "source": "J. Exp. Psychol. Gen",
-            "title": ", Julia, Miller, George, Sperber, Dan,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1037/\n          \n          -\n          \n          .\n          \n          .1."
+            "refid": "ref35",
+            "title": "Jorgensen, Julia, Miller, George, Sperber, Dan, , -- http://dx.doi.org/ 10.1037/ - .1.1984, Test of the mention theory of irony, J. Exp. Psychol. Gen 113 , 112, 0096, 112, 120, 3445"
         },
         {
-            "authors": "Kapogianni, , ",
-            "source": "Paper presented at the Department of Linguistics PhD Seminar",
-            "title": ", Eleni,\n          \n          .\n          \n          .\n          \n          , University of Cambridge."
+            "refid": "ref36",
+            "title": "Kapogianni, Eleni, , University of Cambridge.2010, Unmasking the weaknesses of the implicature/explicature distinction: evidence from verbal irony, Paper presented at the Department of Linguistics PhD Seminar"
         },
         {
-            "authors": "Kapogianni, M., , ",
-            "source": "The Pragmatics of Humor Across Discourse Domains. John Benjamins",
-            "title": ", Eleni,\n          \n          . Irony via ''surrealism''. In: Dynel,\n          \n          (Ed.),\n          \n          , Amsterdam, pp.\n          \n          --\n          \n          ."
+            "refid": "ref37",
+            "title": "Kapogianni, M., Eleni, Irony via ''surrealism''. In: Dynel, (Ed.), , Amsterdam, pp. -- .2011, The Pragmatics of Humor Across Discourse Domains. John Benjamins , 51-68"
         },
         {
-            "authors": "Kapogianni, , ",
-            "source": "Ph. D. thesis)",
-            "title": ", Eleni,\n          \n          .\n          \n          \n          . University of Cambridge."
+            "refid": "ref38",
+            "title": "Kapogianni, Eleni, University of Cambridge.2013, Irony and the Literal Versus Nonliteral Distinction: A Typological Approach with Focus on Ironic Implicature Strength (, Ph. D. thesis)"
         },
         {
-            "authors": "Kapogianni, , ",
-            "source": [
-                "HUMOR: Int. J. Humor Res",
-                "-0093"
-            ],
-            "title": ", Eleni,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1515/humor-2014"
+            "refid": "ref39",
+            "title": "Kapogianni, Eleni, ( ), -- http://dx.doi.org/10.1515/humor-20142014, Differences in use and function of verbal irony between real and fictional discourse: (mis)interpretation and irony blindness, HUMOR: Int. J. Humor Res, -0093, 27 (4) , 597-618"
         },
         {
-            "authors": "Kreuz, , ",
-            "source": "J. Exp. Psychol. Gen",
-            "title": ", Roger, Glucksberg, Sam,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1037/\n          \n          -\n          \n          .\n          \n          .4."
+            "refid": "ref40",
+            "title": "Kreuz, Roger, Glucksberg, Sam, ( ), -- http://dx.doi.org/10.1037/ - .4.1989, How to be sarcastic: the echoic reminder theory of verbal irony, J. Exp. Psychol. Gen 118 (4) , 374, 0096, 374, 386, 3445"
         },
         {
-            "authors": "Kumon-Nakamura, , ",
-            "source": "J. Exp. Psychol. Gen",
-            "title": ", Sachi, Sam, Glucksberg, Brown, Mary,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1037/\n          \n          -\n          \n          .\n          \n          .\n          \n          ."
+            "refid": "ref41",
+            "title": "Kumon-Nakamura, Sachi, Sam, Glucksberg, Brown, Mary, , -- http://dx.doi.org/10.1037/ - .1995, How about another piece of pie: the allusional pretense theory of discourse irony, J. Exp. Psychol. Gen 124 (1) , 3, 0096, 3, 21, 3445"
         },
         {
-            "authors": "Michelioudakis, Sevdali, Truswell, R, , ",
-            "source": [
-                "In: Folli",
-                "Syntax and its Limits"
-            ],
-            "title": ", Dimitris, Kapogianni, Eleni,\n          \n          .\n          \n          .\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          . (Eds.),\n          \n          . Oxford University Press, Oxford, pp.\n          \n          --\n          \n          ."
+            "refid": "ref42",
+            "title": "Michelioudakis, Sevdali,R., Truswell,C., R, Dimitris, Kapogianni, Eleni, , , , (Eds.), Oxford University Press, Oxford, pp. -- .2013, Ethical datives: a puzzle for syntax, semantics, pragmatics and their interfaces, In: Folli, Syntax and its Limits, 345-369"
         },
         {
-            "authors": "Nerlich, , ",
-            "source": "J. Pragmat",
-            "title": ", Brigitte, Clarke, David,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/ S0378-\n          \n          (\n          \n          )\n          \n          -"
+            "refid": "ref43",
+            "title": "Nerlich, Brigitte, Clarke, David, , -- http://dx.doi.org/10.1016/ S0378- ( ) -2001, Ambiguities we live by; towards a pragmatics of polysemy, J. Pragmat 33, 2166, (99) , 1, 00132, 20, 0"
         },
         {
-            "authors": "Palinkas, , ",
-            "source": "Int. J. Engl. Linguist",
-            "title": ", Istvan,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.5539/ijel.v3n5p14"
+            "refid": "ref44",
+            "title": "Palinkas, Istvan, ( ), -- http://dx.doi.org/10.5539/ijel.v3n5p142013, Irony and the standard pragmatic model, Int. J. Engl. Linguist 3 (5) , 14-19"
         },
         {
-            "authors": "Partington, , ",
-            "source": "J. Pragmat",
-            "title": ", Alan,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j.pragma.\n          \n          .\n          \n          .009"
+            "refid": "ref45",
+            "title": "Partington, Alan, , -- http://dx.doi.org/10.1016/j.pragma. .0092007, Irony and reversal of evaluation, J. Pragmat 39, 04, 1547-1569"
         },
         {
-            "authors": "Partington, , ",
-            "source": "J. Pragmat",
-            "title": ", Alan,\n          \n          .\n          \n          .\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j. pragma.\n          \n          .\n          \n          .001"
+            "refid": "ref46",
+            "title": "Partington, Alan, ( ), -- http://dx.doi.org/10.1016/j. pragma. .0012011, Phrasal irony: its form, function and exploitation, J. Pragmat 43, 11, (6) , 1786-1800"
         },
         {
-            "authors": "Peleg, Allan, K, , ",
-            "source": "Salience and Defaults in Utterance Processing",
-            "title": ", Orna, Giora, Rachel,\n          \n          .\n          \n          . In: Jaszczolt,\n          \n          ,\n          \n          . (Eds.),\n          \n          . Mouton de Gruyter, Berlin, pp.\n          \n          --\n          \n          ."
+            "refid": "ref47",
+            "title": "Peleg, Allan,K.M., K, Orna, Giora, Rachel, In: Jaszczolt, , (Eds.), Mouton de Gruyter, Berlin, pp. -- .2011, Salient meanings: the whens and wheres, Salience and Defaults in Utterance Processing , 151-167"
         },
         {
-            "authors": "Popa-Wyatt, , ",
-            "source": "Int. Rev. Pragmat",
-            "title": ", Michaela,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/ 10.1163/\n          \n          -"
+            "refid": "ref48",
+            "title": "Popa-Wyatt, Michaela, , -- http://dx.doi.org/ 10.1163/ -2014, Pretence and echo: towards an integrated account of verbal irony, Int. Rev. Pragmat 6 , 127, 18773109, 168, 00601007"
         },
         {
-            "authors": "Potts, , ",
-            "source": null,
-            "title": ", Christopher,\n          \n          .\n          \n          . Oxford University Press, Oxford."
+            "refid": "ref49",
+            "title": "Potts, Christopher, Oxford University Press, Oxford.2005, The Logic of Conventional Implicatures,"
         },
         {
-            "authors": "Richards, Armstrong, , ",
-            "source": "The Philosophy of Rhetoric",
-            "title": ",\n          \n          .\n          \n          . Oxford University Press, Oxford."
+            "refid": "ref50",
+            "title": "Richards,Ivor, Armstrong, , Oxford University Press, Oxford.1936, The Philosophy of Rhetoric"
         },
         {
-            "authors": "Schwoebel, , ",
-            "source": "Metaphor Symb",
-            "title": ", John, Shelly, Dews, Ellen, Winner, Kavitha, Srinivas,\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1080/10926488.\n          \n          .9678864"
+            "refid": "ref51",
+            "title": "Schwoebel, John, Shelly, Dews, Ellen, Winner, Kavitha, Srinivas, , -- http://dx.doi.org/10.1080/10926488. .96788642000, Obligatory processing of the literal meaning of ironic utterances: further evidence, Metaphor Symb 15 , 47-61"
         },
         {
-            "authors": "Searle, P., J.L, Acts, , ",
-            "source": "Syntax and Semantics",
-            "title": ", John,\n          \n          .\n          \n          . In: Cole,\n          \n          , Morgan,\n          \n          . (Eds.),\n          \n          \n          :\n          \n          . Academic Press, New York, pp.\n          \n          --\n          \n          ."
+            "refid": "ref52",
+            "title": "Searle, P., J.L, ActsSpeech, John, In: Cole, , Morgan, (Eds.), : Academic Press, New York, pp. -- .1975, Indirect speech acts, Syntax and Semantics 3 , 59-82"
         },
         {
-            "authors": "Sperber, P., , ",
-            "source": null,
-            "title": ", Dan, Wilson, Deirdre,\n          \n          .\n          \n          . In: Cole,\n          \n          (Ed.), Radical Pragmatics. Academic Press, New York, pp.\n          \n          --\n          \n          ."
+            "refid": "ref53",
+            "title": "Sperber, P., Dan, Wilson, Deirdre, In: Cole, (Ed.), Radical Pragmatics. Academic Press, New York, pp. -- .1981, Irony and the use-mention distinction, 295-318"
         },
         {
-            "authors": "Sperber, , ",
-            "source": null,
-            "title": ", Dan, Wilson, Deirdre,\n          \n          /1995 Relevance. Blackwell, Oxford."
+            "refid": "ref54",
+            "title": "Sperber, Dan, Wilson, Deirdre, /1995 Relevance. Blackwell, Oxford.1986,"
         },
         {
-            "authors": "Sperber, Uchida, , ",
-            "source": "Relevance Theory: Applications and Implications",
-            "title": ", Dan, Wilson, Deirdre,\n          \n          .\n          \n          . In: Carston,\n          \n          , S. (Eds.),\n          \n          . John Benjamins, Amsterdam, pp.\n          \n          --\n          \n          ."
+            "refid": "ref55",
+            "title": "Sperber, Uchida,R., Dan, Wilson, Deirdre, In: Carston, , S. (Eds.), John Benjamins, Amsterdam, pp. -- .1998, Irony and relevance: a reply to Drs. Seto, Hamamoto and Yamanashi, Relevance Theory: Applications and Implications , 283-293"
         },
         {
-            "authors": "Spotorno, , ",
-            "source": "J. Exp. Psychol. Gen",
-            "title": ", Nicola, Noveck, Ira A.,\n          \n          . When is irony effortful?\n          \n          .\n          \n          (\n          \n          ),\n          \n          --\n          \n          . http://dx.doi.org/10.1037/a0036630"
+            "refid": "ref56",
+            "title": "Spotorno, Nicola, Noveck, Ira A., When is irony effortful? ( ), -- http://dx.doi.org/10.1037/a00366302014, J. Exp. Psychol. Gen 143 (4) , 1649-1665"
         },
         {
-            "authors": "Stalnaker, Unger, , ",
-            "source": "Semantics and Philosophy",
-            "title": ", Robert,\n          \n          .\n          \n          . In: Munitz,\n          \n          , P. (Eds.),\n          \n          . New York University Press, New York, pp.\n          \n          --\n          \n          ."
+            "refid": "ref57",
+            "title": "Stalnaker, Unger,M., Robert, In: Munitz, , P. (Eds.), New York University Press, New York, pp. -- .1974, Pragmatic presuppositions, Semantics and Philosophy , 197-213"
         },
         {
-            "authors": "Wilson, , ",
-            "source": "Lingua",
-            "title": ", Deirdre,\n          \n          .\n          \n          \n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/j.lingua.\n          \n          .\n          \n          .001"
+            "refid": "ref58",
+            "title": "Wilson, Deirdre, , -- http://dx.doi.org/10.1016/j.lingua. .0012006, The pragmatics of verbal irony: echo or pretence?, Lingua 116, 05, 1722-1743"
         },
         {
-            "authors": "Wilson, , ",
-            "source": "Lingua",
-            "title": ", Deirdre, Sperber, Dan,\n          \n          .\n          \n          .\n          \n          \n          ,\n          \n          --\n          \n          . http://dx.doi.org/10.1016/\n          \n          -\n          \n          (\n          \n          )\n          \n          -E"
+            "refid": "ref59",
+            "title": "Wilson, Deirdre, Sperber, Dan, , -- http://dx.doi.org/10.1016/ - ( ) -E1992, On verbal irony, Lingua 87 (92) , 53, 0024, 90025, 76, 3841"
         },
         {
-            "authors": "Wilson, , ",
-            "source": null,
-            "title": ", Deirdre, Sperber, Dan,\n          \n          . Meaning and Relevance. Cambridge University Press, Cambridge."
+            "refid": "ref60",
+            "title": "Wilson, Deirdre, Sperber, Dan, Meaning and Relevance. Cambridge University Press, Cambridge.2012,"
         }
     ],
     "journal": "Journal of Pragmatics",

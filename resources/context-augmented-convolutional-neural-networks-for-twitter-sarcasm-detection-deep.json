@@ -51,67 +51,52 @@
     ],
     "clean-refs": [
         {
-            "authors": "",
-            "source": [
-                "Proceedings of Third Italian Conference on Computational Linguistics",
-                "Final Workshop (EVALITA"
-            ],
-            "title": "2016.\n          \n          . In Pierpaolo Basile, Anna Corazza, Franco Cutugno, Simonetta Montemagni, Malvina Nissim, Viviana Patti, Giovanni Semeraro, and Rachele Sprugnoli, editors,\n          \n          (CLiC-it\n          \n          ) &\n          \n          .\n          \n          \n          )."
+            "refid": "ref1",
+            "title": "2016. In Pierpaolo Basile, Anna Corazza, Franco Cutugno, Simonetta Montemagni, Malvina Nissim, Viviana Patti, Giovanni Semeraro, and Rachele Sprugnoli, editors, (CLiC-it ) & ).2016, Overview of the EVALITA 2016 SENTiment POLarity Classification Task Fifth Evaluation Campaign of Natural Language Processing and Speech Tools for Italian Associazione Italiana di Linguistica Computazionale (AILC)., Proceedings of Third Italian Conference on Computational Linguistics, Final Workshop (EVALITA,"
         },
         {
-            "authors": "Castellucci, Basili, , ",
-            "source": "In Fourth International Workshop EVALITA",
-            "title": ", Danilo Croce, Diego De Cao, and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          ."
+            "refid": "ref2",
+            "title": "CastellucciGiuseppe, BasiliRoberto, Danilo Croce, Diego De Cao, and .2014, A multiple kernel approach for twitter sentiment analysis in italian, In Fourth International Workshop EVALITA"
         },
         {
-            "authors": "Castellucci, Basili, , ",
-            "source": "In Proc. of 20th NLDB",
-            "title": ", Danilo Croce, and\n          \n          . 2015a.\n          \n          .\n          \n          , volume\n          \n          . Springer."
+            "refid": "ref3",
+            "title": "CastellucciGiuseppe, BasiliRoberto, Danilo Croce, and 2015a. , volume Springer.Acquiring a large scale polarity lexicon through unsupervised distributional methods, In Proc. of 20th NLDB 9103"
         },
         {
-            "authors": "Castellucci, Basili, , ",
-            "source": "IJCoL",
-            "title": ", Andrea Vanzo, Danilo Croce, and\n          \n          . 2015b.\n          \n          .\n          \n          vol.\n          \n          , n. 1\n          \n          ., page\n          \n          ."
+            "refid": "ref4",
+            "title": "CastellucciGiuseppe, BasiliRoberto, Andrea Vanzo, Danilo Croce, and 2015b. vol. , n. 1 ., page Context-aware models for twitter sentiment analysis : Emerging Topics at the 1st CLiC-It Conf, IJCoL 1, 69,"
         },
         {
-            "authors": "Croce, Basili, , ",
-            "source": "Proceedings of SocialNLP@ IJCAI",
-            "title": ", Giuseppe Castellucci, and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref5",
+            "title": "CroceDanilo, BasiliRoberto, Giuseppe Castellucci, and , .2016, Injecting sentiment information in context-aware convolutional neural networks, Proceedings of SocialNLP@ IJCAI"
         },
         {
-            "authors": "Go, Huang, , ",
-            "source": "CS224N Project Report",
-            "title": ", Richa Bhayani, and\n          \n          .\n          \n          .\n          \n          .\n          \n          , Stanford."
+            "refid": "ref6",
+            "title": "GoAlec, HuangLei, Richa Bhayani, and , Stanford.2009, Twitter sentiment classification using distant supervision, CS224N Project Report"
         },
         {
-            "authors": "Hinton, Salakhutdinov, , ",
-            "source": "CoRR, abs/1207",
-            "title": ", Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .0580."
+            "refid": "ref7",
+            "title": "HintonGeoffrey, SalakhutdinovRuslan, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and .0580.2012, Improving neural networks by preventing co-adaptation of feature detectors, CoRR, abs/1207"
         },
         {
-            "authors": "Kim, , ",
-            "source": "In Proceedings EMNLP",
-            "title": ".\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          , Doha, Qatar, October. Association for Computational Linguistics."
+            "refid": "ref8",
+            "title": "KimYoon, , pages - , Doha, Qatar, October. Association for Computational Linguistics.2014, Convolutional neural networks for sentence classification, In Proceedings EMNLP , 1746-1751"
         },
         {
-            "authors": "Landauer, Dumais, , ",
-            "source": "Psychological Review",
-            "title": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          ,\n          \n          ."
+            "refid": "ref9",
+            "title": "LandauerTom, DumaisSue, and , .1997, A solution to plato's problem: The latent semantic analysis theory of acquisition, induction and representation of knowledge, Psychological Review 104"
         },
         {
-            "authors": "Y. LeCun, Bengio, Haffner, , ",
-            "source": "Proc. of the IEEE",
-            "title": ".\n          \n          .\n          \n          .\n          \n          ,\n          \n          (\n          \n          ), Nov."
+            "refid": "ref10",
+            "title": "Y. LeCun, L. Bottou,Y., Bengio, andP., Haffner, , ( ), Nov.1998, Gradient-based learning applied to document recognition, Proc. of the IEEE 86 (11)"
         },
         {
-            "authors": "Mikolov, Dean, , ",
-            "source": "CoRR, abs/1310",
-            "title": ", Ilya Sutskever, Kai Chen, Greg Corrado, and\n          \n          .\n          \n          .\n          \n          .\n          \n          .4546."
+            "refid": "ref11",
+            "title": "MikolovTomas, DeanJeffrey, Ilya Sutskever, Kai Chen, Greg Corrado, and .4546.2013, Distributed representations of words and phrases and their compositionality, CoRR, abs/1310"
         },
         {
-            "authors": "Severyn, Moschitti, , ",
-            "source": "In Proc. of the SIGIR",
-            "title": "and\n          \n          .\n          \n          .\n          \n          .\n          \n          \n          , pages\n          \n          -\n          \n          , New York, NY, USA. ACM."
+            "refid": "ref12",
+            "title": "SeverynAliaksei, MoschittiAlessandro, and , pages - , New York, NY, USA. ACM.2015, Twitter sentiment analysis with deep convolutional neural networks, In Proc. of the SIGIR , 959-962"
         }
     ],
     "journal": null,

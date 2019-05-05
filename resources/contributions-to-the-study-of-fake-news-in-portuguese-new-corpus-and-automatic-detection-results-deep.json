@@ -115,124 +115,100 @@
     ],
     "clean-refs": [
         {
-            "authors": "Appling, Briscoe, Hutto, , ",
-            "source": "In: Proceedings of the 24th International Conference on World Wide Web",
-            "title": "1.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref1",
+            "title": "Appling,D.S., Briscoe,E.J., Hutto,C.J.:, 1. , , pp. { ( )2015, Discriminative models for predicting deception strategies, In: Proceedings of the 24th International Conference on World Wide Web 947 (952)"
         },
         {
-            "authors": "Filho, Pardo, T.A., S.M.:, , ",
-            "source": "In: Proceedings of the 9th Brazilian Symposium in Information and Human Language Technology",
-            "title": "2.\n          \n          ,\n          \n          ,\n          \n          , Alu sio,\n          \n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref2",
+            "title": "FilhoBalage, Pardo,P.P., T.A., S.M.:, 2. , , , Alu sio, pp. { ( )2013, An evaluation of the brazilian portuguese liwc dictionary for sentiment analysis, In: Proceedings of the 9th Brazilian Symposium in Information and Human Language Technology 215 (219)"
         },
         {
-            "authors": "Charles, Bond, DePaulo, , ",
-            "source": "Personality and Social Psychology Review",
-            "title": "3.\n          \n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref3",
+            "title": "CharlesF., Bond,J., DePaulo,B.M.:, 3. , ( ), { ( )2006, Accuracy of deception judgments, Personality and Social Psychology Review 10, 214, (3) , 234"
         },
         {
-            "authors": "Clem, , ",
-            "source": "Journal of the Society of Christian Ethics",
-            "title": "4.\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref4",
+            "title": "Clem,S., 4. : ( ), { ( )2017, Post-truth and vices opposed to truth, Journal of the Society of Christian Ethics 37, 97, (2) , 116"
         },
         {
-            "authors": "Conroy, Rubin, Chen, , ",
-            "source": "In: Proceedings of the 78th ASIS&T Annual",
-            "title": "5.\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          Meeting:\n          \n          . pp.\n          \n          :\n          \n          {\n          \n          :\n          \n          (\n          \n          )"
+            "refid": "ref5",
+            "title": "Conroy,N.J., Rubin,V.L., Chen,Y., 5. , , : Meeting: pp. : { : ( )2015, Automatic deception detection: Methods for nding fake news Information Science with Impact: Research in and for the Community, In: Proceedings of the 78th ASIS&T Annual 82 (1, 82, 4, )"
         },
         {
-            "authors": "Cortes, Vapnik, , ",
-            "source": "Machine Learning",
-            "title": "6.\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref6",
+            "title": "Cortes,C., Vapnik,V., 6. , : ( ), { ( )1995, Support-vector networks, Machine Learning 20, 273, (3) , 297"
         },
         {
-            "authors": "Duran, Hall, McCarthy, McNamara, , ",
-            "source": "Applied Psycholinguistics",
-            "title": "7.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref7",
+            "title": "Duran,N.D., Hall,C., McCarthy,P.M., McNamara,D.S.:, 7. , , , ( ), { ( )2010, The linguistic correlates of conversational deceprion: comparing natural language processing technologies, Applied Psycholinguistics 31, 439, (3) , 462"
         },
         {
-            "authors": "Ferreira, Vlachos, , ",
-            "source": "In: Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
-            "title": "8.\n          \n          ,\n          \n          :\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          .\n          \n          \n          )"
+            "refid": "ref8",
+            "title": "Ferreira,W., Vlachos,A., 8. , : pp. { )2016, Emergent: a novel data-set for stance classi cation Association for Computational Linguistics (, In: Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies 1163 , 1168"
         },
         {
-            "authors": "Fonseca, , ",
-            "source": "In: Proceedings of the NAACL-HLT Workshop on Vector Space Modeling for NLP",
-            "title": "9.\n          \n          , Alu sio, S.M.\n          \n          .\n          \n          (\n          \n          )"
+            "refid": "ref9",
+            "title": "Fonseca,E.R., 9. , Alu sio, S.M. ( )2015, : A deep architecture for non-projective dependency parsing, In: Proceedings of the NAACL-HLT Workshop on Vector Space Modeling for NLP"
         },
         {
-            "authors": "George, Keane, , ",
-            "source": "In: Paper presented at the deception detection symposium, 39th Annual Hawaii International Conference on System Sciences",
-            "title": "10.\n          \n          ,\n          \n          :\n          \n          .\n          \n          (\n          \n          )"
+            "refid": "ref10",
+            "title": "George,J.F., Keane,B.T., 10. , : ( )2006, Deception detection by third party observers, In: Paper presented at the deception detection symposium, 39th Annual Hawaii International Conference on System Sciences"
         },
         {
-            "authors": "Gimenes, Cordeiro, Rodrigues-Jr, , ",
-            "source": "Information Sciences",
-            "title": "11.\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          ,\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref11",
+            "title": "Gimenes,G., Cordeiro,R.L., Rodrigues-Jr,J.F., 11. , , : , { ( )2017, Orfel: E cient detection of defamation or illegitimate promotion in online recommendation, Information Sciences 379, 274, 287"
         },
         {
-            "authors": "Hauch, Blandn-Gitlin, Masip, Sporer, , ",
-            "source": "Personality and Social Psychology Review",
-            "title": "12.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref12",
+            "title": "Hauch,V., Blandn-Gitlin,I., Masip,J., Sporer,S.L., 12. , , , : ( ), { ( )2015, Are computers e ective lie detectors? a meta-analysis of linguistic cues to deception, Personality and Social Psychology Review 19, 307, (4) , 342"
         },
         {
-            "authors": "Musskopf, newsd4faef2281aa, , ",
-            "source": null,
-            "title": "13.\n          \n          , I.:\n          \n          . https://medium.com/datascience-brigade/\n          \n          \n          (\n          \n          )"
+            "refid": "ref13",
+            "title": "Musskopf, newsd4faef2281aa, 13. , I.: https://medium.com/datascience-brigade/ ( )September 2017, A ci^encia da detecc~ao de fake news a-ci%C3%AAncia-da-detec%C3%A7%C3%A3o-de-fake-,"
         },
         {
-            "authors": "Perez-Rosas, Kleinberg, Lefevre, Mihalcea, , ",
-            "source": "CoRR abs/1708",
-            "title": "14.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          .07104 (\n          \n          )"
+            "refid": "ref14",
+            "title": "Perez-Rosas,V., Kleinberg,B., Lefevre,A., Mihalcea,R., 14. , , , : .07104 ( )2017, Automatic detection of fake news, CoRR abs/1708"
         },
         {
-            "authors": "Perez-Rosas, Mihalcea, , ",
-            "source": "In: Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics",
-            "title": "15.\n          \n          ,\n          \n          , R.:\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref15",
+            "title": "Perez-Rosas,V., Mihalcea, 15. , , R.: pp. { ( )2014, Cross-cultural deception detection, In: Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics 440 (445)"
         },
         {
-            "authors": "Perez-Rosas, Mihalcea, , ",
-            "source": "In: Proceedings of the Conference on Empirical Methods in Natural Language Processing",
-            "title": "16.\n          \n          ,\n          \n          , R.:\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref16",
+            "title": "Perez-Rosas,V., Mihalcea, 16. , , R.: pp. { ( )2015, Experiments in open domain deception detection, In: Proceedings of the Conference on Empirical Methods in Natural Language Processing 1120 (1125)"
         },
         {
-            "authors": "Rubin, Chen, Conroy, , ",
-            "source": "Proceedings of the Association for Information Science and Technology",
-            "title": "17.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ), 1{\n          \n          (\n          \n          )"
+            "refid": "ref17",
+            "title": "Rubin,V.L., Chen,Y., Conroy,N.J.:, 17. , , ( ), 1{ ( )2015, Deception detection for news: Three types of fakes, Proceedings of the Association for Information Science and Technology 52 (1, 4, )"
         },
         {
-            "authors": "Rubin, Conroy, Chen, Cornwell, , ",
-            "source": "In: Proceedings of 15th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
-            "title": "18.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          . pp.\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref18",
+            "title": "Rubin,V.L., Conroy,N.J., Chen,Y., Cornwell,S., 18. , , , : pp. { ( )2016, Fake news or truth? using satirical cues to detect potentially misleading news, In: Proceedings of 15th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies 7 (17)"
         },
         {
-            "authors": "Salton, McGill, , ",
-            "source": null,
-            "title": "19.\n          \n          ,\n          \n          :\n          \n          ., New York, NY, USA (\n          \n          )"
+            "refid": "ref19",
+            "title": "Salton,G., McGill,M.J., 19. , : ., New York, NY, USA ( )1986, Introduction to Modern Information Retrieval. McGrawHill, Inc,"
         },
         {
-            "authors": "Vosoughi, Roy, Aral, , ",
-            "source": "Science",
-            "title": "20.\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref20",
+            "title": "Vosoughi,S., Roy,D., Aral,S.:, 20. , , ( ), { ( )2018, The spread of true and false news online, Science 359, 1146, (6380) , 1151"
         },
         {
-            "authors": "Wang, , ",
-            "source": "In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics",
-            "title": "21.\n          \n          , W.Y.:\n          \n          .\n          \n          . Vancouver, BC, Canada (\n          \n          )"
+            "refid": "ref21",
+            "title": "Wang, 21. , W.Y.: Vancouver, BC, Canada ( )2017, \\liar, liar pants on re\": A new benchmark dataset for fake news detection, In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics"
         },
         {
-            "authors": "Zhou, Burgoon, Twitchell, Qin, Nunamaker, , ",
-            "source": "Journal of Management Information Systems",
-            "title": "22.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          \n          .\n          \n          \n          (\n          \n          ),\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref22",
+            "title": "Zhou,L., Burgoon,J., Twitchell,D., Qin,T., NunamakerJr.,J.:, 22. , , , , ( ), { ( )2004, A comparison of classi cation methods for predicting deception in computer-mediated communication, Journal of Management Information Systems 20, 139, (4) , 165"
         },
         {
-            "authors": "Zhou, Twitchell, Qin, Burgoon, Nunamaker, , ",
-            "source": "In: Proceedings of the 36th Annual Hawaii International Conference on System Sciences",
-            "title": "23.\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          ,\n          \n          :\n          \n          .\n          \n          ,\n          \n          (\n          \n          )"
+            "refid": "ref23",
+            "title": "Zhou,L., Twitchell,D.P., Qin,T., Burgoon,J.K., Nunamaker,J.F., 23. , , , , : , ( )2003, An exploratory study into deception detection in text-based computer-mediated communication, In: Proceedings of the 36th Annual Hawaii International Conference on System Sciences"
         },
         {
-            "authors": "Zhou, Zhang, , ",
-            "source": "Communications of the ACM - Enterprise Information Integration: and other tools for merging data 51(9)",
-            "title": "24.\n          \n          ,\n          \n          , D.:\n          \n          .\n          \n          ,\n          \n          {\n          \n          (\n          \n          )"
+            "refid": "ref24",
+            "title": "Zhou,L., Zhang, 24. , , D.: , { ( )2008, Following linguistic footprints: Automatic deception detection in online communication, Communications of the ACM - Enterprise Information Integration: and other tools for merging data 51(9) 119 , 122"
         }
     ],
     "journal": null,
