@@ -12,6 +12,7 @@ pylint = "*"
 requests = "*"
 libbmc = "*"
 lxml = "*"
+jupyter = "*"
 
 [requires]
 python_version = "3.7"
