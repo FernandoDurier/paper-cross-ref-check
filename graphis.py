@@ -34,9 +34,10 @@ def graphPapers(papers):
             ptuple=(vertrixes.index(ptitle), vertrixes.index(rtitle))
             jgraphdict={"source":vertrixes.index(ptitle), "target":vertrixes.index(rtitle)}
             if vertrixes.index(ptitle) not in jvertrixes:
-                jvertrixes[vertrixes.index(ptitle)] = {'color': 0xffaaaa, 'size': 3.0}
+                #"%06x" % random.randint(0, 0xFFFFFF)
+                jvertrixes[vertrixes.index(ptitle)] = {'color':"C6180C", 'size': 3.0, 'title': ptitle}
             if vertrixes.index(rtitle) not in jvertrixes:
-                jvertrixes[vertrixes.index(rtitle)] = {'color': 0x2222ff, 'size': 1.50}
+                jvertrixes[vertrixes.index(rtitle)] = {'color':"370CC6", 'size': 1.50, 'title': rtitle}
             if jgraphdict not in jedges:
                 jedges.append(jgraphdict)
             if ptuple not in edges:
