@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>jgraph</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/build/jgraph.min.js"></script>
+    </head>
+    <body>
+        <div class="graph"></div>
+        <div class="description">
+            <h1>les misérables co-occurrence</h1>
+            <p>
+                The graph shown was inspired by this <a href="http://bl.ocks.org/mbostock/4062045">d3.js example</a>.
+                I like the simple solid-color aesthetic of d3, and I wanted to replicate it in three dimensions. Here's my attempt.
+            </p>
+            <p>
+                If you don't like the <a id="basic">basic</a> shading, jgraph
+                also supports <a id="phong">phong</a>, <a id="lambert">lambert</a>, and <a id="toon">toon</a>.
+            </p>
+        </div>
+
+        <a href="https://github.com/patrickfuller/jgraph"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+        <script type="text/javascript">
+            jgraph.create('.graph', {directed: false});
+            $.getJSON('miserables.json', function (graph) {
+                jgraph.draw(graph);
+            });
+
+            $('#toon').click(function () { jgraph.setShader('toon'); });
+            $('#basic').click(function () { jgraph.setShader('basic'); });
+            $('#phong').click(function () { jgraph.setShader('phong'); });
+            $('#lambert').click(function () { jgraph.setShader('lambert'); });
+        </script>
+    </body>
+</html>

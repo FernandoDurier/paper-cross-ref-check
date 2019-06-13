@@ -1,0 +1,24 @@
+{
+  "name": "paper-explorer",
+  "version": "1.0.0",
+  "description": "This project is for paper correference visualization. Using Python, bash script and in near future ... javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoDurier/paper-cross-ref-check.git"
+  },
+  "author": "Fernando Durier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FernandoDurier/paper-cross-ref-check/issues"
+  },
+  "homepage": "https://github.com/FernandoDurier/paper-cross-ref-check#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jgraph": "^0.2.0",
+    "jsdom": "^15.0.0"
+  }
+}

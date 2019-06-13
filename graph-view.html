@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>jgraph</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="./node_modules/jgraph/js/jquery-1.11.1.min.js"></script>
+        <script src="./node_modules/jgraph/js/jgraph.js"></script>
+    </head>
+    <body>
+        <div class="graph"></div>
+        <div class="label"></div>
+        <div class="description">
+            <h1>paper references</h1>
+        </div>
+        
+        <script type="text/javascript">
+
+            // Create and draw, making sure to disable layout optimization
+            jgraph.create('.graph',
+                          {runOptimization: false,
+                           defaultNodeColor: 0x6a9fb5,
+                           edgeSize: 0.1,
+                           z: 150});
+            $.getJSON('/Users/fernandodurier/Desktop/sarcasm-paper-review/cross-ref-jgraph.json', function (graph) {
+                
+                jgraph.draw(graph);
+            });
+
+            // Show name of node on hover
+            var onEnter, onExit, $d, hovered;
+            $d = $('.label');
+            $d.hide();
+            hovered = jgraph.makeMaterial(0xb7ecff);
+            onEnter = function (node) {
+                $d.html('<p><b>' + node.name + '</b></p>');
+                $d.show();
+                node.defaultMaterial = node.material;
+                node.material = hovered;
+            };
+            onExit = function (node) {
+                $d.empty();
+                $d.hide();
+                node.material = node.defaultMaterial;
+            };
+            jgraph.onNodeHover(onEnter, onExit);
+
+            // Move the text showing name along with the mouse
+            $(document).mousemove(function (event) {
+                $d.css({ left: event.pageX + 10, top: event.pageY + 10 });
+            });
+
+            // Pop up a github window if a node is clicked
+            jgraph.onNodeClick(function (node) {
+                window.open(node.path);
+            });
+        </script>
+    </body>
+</html>

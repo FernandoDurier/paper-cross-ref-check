@@ -33,9 +33,9 @@ def graphPapers(papers):
             ptuple=(vertrixes.index(ptitle), vertrixes.index(rtitle))
             jgraphdict={"source":vertrixes.index(ptitle), "target":vertrixes.index(rtitle)}
             if vertrixes.index(ptitle) not in jvertrixes:
-                jvertrixes[vertrixes.index(ptitle)] = {'color': 0xffaaaa, 'size': 3.0}
+                jvertrixes[vertrixes.index(ptitle)] = {'name':ptitle,'path':p['path'],'color': 0xffaaaa, 'size': 3.0}
             if vertrixes.index(rtitle) not in jvertrixes:
-                jvertrixes[vertrixes.index(rtitle)] = {'color': 0x2222ff, 'size': 1.50}
+                jvertrixes[vertrixes.index(rtitle)] = {'name':rtitle,'path':p['path'],'color': 0x2222ff, 'size': 1.50}
             if jgraphdict not in jedges:
                 jedges.append(jgraphdict)
             if ptuple not in edges:
@@ -47,7 +47,7 @@ def graphPapers(papers):
     print("N_Edges: ", len(edges))
     print("Jvertrixes:", jvertrixes)
     print("Jedges:", jedges)
-    return {"edges_array":edges, "vertrix_array":vertrixes,"jvertrixes":jvertrixes,"jedges":jedges}
+    return {"edges_array":edges, "vertrix_array":vertrixes,"nodes":jvertrixes,"edges":jedges}
 
 for root, dirs, files in os.walk(paperdirectory, topdown=False):
    for name in files:
@@ -59,8 +59,8 @@ for root, dirs, files in os.walk(paperdirectory, topdown=False):
 gf = graphPapers(data)
 
 import jgraph
-jgraph.draw(gf['edges_array'])
+jgraph.draw(gf)
 
 # with open(paperdirectory+'/cross-ref-jgraph.json', 'w') as outfile:  
-#         json.dump(gf, outfile, indent=4)
+#          json.dump(gf, outfile, indent=4)
 
